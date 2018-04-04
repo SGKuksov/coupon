@@ -1,0 +1,16 @@
+mixin subscribe()
+  .subscribe
+
+    h2.subscribe__title Подпишитесь <br>на лучшие предложения
+
+    form.subscribe__form(action="")
+      input.subscribe__name(type="text" name="name" placeholder="Введите имя")
+      input.subscribe__email(type="email" name="email" placeholder="Введите email")
+      input.subscribe__submit.btn(type="submit" value="Подписаться")
+
+    p.subscribe__about Нажимая кнопку "Подписаться", вы даете согласие на &nbsp;
+      a.subscribe__link(href="#" title="обработку персональных данных") обработку персональных данных
+
+    a.subscribe__close(href="#" title="Закрыть")
+
+

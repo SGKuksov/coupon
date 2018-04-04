@@ -1,0 +1,18 @@
+mixin main-nav()
+
+  -
+    var menu = {
+      'Новые <br>предложения': '/offers.html',
+      'Каталог <br>заведений': '/places.html'
+    };
+
+  nav.main-nav.page-header__nav
+    ul.main-nav__list
+      li.main-nav__item
+        svg.main-nav__sale-icon
+          use(xlink:href="img/sprite-svg.svg#main-nav__sale")
+        a.main-nav__link(href="#", title="Новые предложения") Новые <br>предложения
+      li.main-nav__item
+        svg.main-nav__places-icon
+          use(xlink:href="img/sprite-svg.svg#main-nav__places")
+        a.main-nav__link(href="#", title="Каталог заведений") Каталог <br>заведений

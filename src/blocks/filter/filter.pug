@@ -1,0 +1,33 @@
+mixin filter()
+
+  -
+    var sort_list = [
+      'Популярности',
+      'Рейтингу',
+      'Стоимости',
+      'Названию'
+    ];
+
+
+  .filter
+    .filter__view
+      span.filter__desc Вид:
+      a.filter__left-btn.btn(href="#")
+        svg.filter__by_plitka
+          use(xlink:href="img/sprite-svg.svg#filter__by_plitka")
+        span Плиткой
+      a.filter__right-btn.btn(href="#")
+        svg.filter__on_map
+          use(xlink:href="img/sprite-svg.svg#filter__on_map")
+        span На карте
+
+    .filter__sort
+      span.filter__desc Сортировать по:
+      select.filter__select.custom-select(name="label")
+        each val in sort_list
+          option.filter__option(value= val)= val
+
+    a.filter__near(href="#")
+      span Искать поблизости
+      svg.filter__search_by_place
+        use(xlink:href="img/sprite-svg.svg#filter__search_by_place")

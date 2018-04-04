@@ -1,0 +1,39 @@
+.extra-food {
+  background-color: #ffffff;
+  background-image: url(../img/extra-food__bg.jpg);
+  // background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding-left: 18px;
+  padding-top: 19px;
+  padding-bottom: 20px;
+  padding-right: 18px;
+  margin-bottom: 19px;
+  height: 130px;
+  display: none;
+
+  @media (min-width: $screen-md) {
+    display: block;
+  }
+
+  &__title {
+    top: 13px;
+    left: 17px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+  }
+
+  &__link {
+    font-size: 12px;
+    padding: 6px 13px 6px 13px;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    display: inline-block;
+    left: 17px;
+    bottom: 47px;
+  }
+}

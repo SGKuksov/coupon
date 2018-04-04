@@ -1,0 +1,23 @@
+mixin top-panel-edit(admin)
+
+  if (admin)
+    -
+      var addcategory = [
+        'Аквапарк',
+        'Активный отдых',
+        'Аттракционы',
+        'Аэротрубы',
+        'Бани и сауны'
+      ];
+
+    .top-panel-edit
+      form.top-panel-edit__form(action="")
+        select.top-panel-edit__select.custom-select(name="label")
+          each val in addcategory
+            option.top-panel-edit__option(value= val)= val
+
+        input.top-panel-edit__submit.btn(type="submit" value="Добавить")
+        button.top-panel-edit__save.btn(type="submit")
+          svg.top-panel-edit__icon(fill="#f00")
+            use(xlink:href="img/sprite-svg.svg#top-panel-edit__save")
+          span Сохранить

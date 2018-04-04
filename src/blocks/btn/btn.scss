@@ -1,0 +1,39 @@
+.btn {
+  display: inline-block;
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fefefe;
+  padding: 6px 16px 7px;
+  background-color: #ff0000;
+  border: none;
+  border-radius: 4px;
+
+  &:hover {
+    color: #fefefe;
+    font-weight: bold;
+  }
+
+  &--gray {
+    padding-top: 15px;
+    padding-bottom: 14px;
+    padding-left: 43px;
+    padding-right: 41px;
+    color: #787878;
+    font-weight: normal;
+    background-color: #a1a1a1;
+
+    @media (min-width: $screen-md) {
+      margin-top: 8px;
+    }
+
+    @media (min-width: $screen-lg) {
+      margin-top: 17px;
+    }
+
+    &:hover {
+      color: #787878;
+      font-weight: normal;
+    }
+  }
+}

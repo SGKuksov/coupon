@@ -1,0 +1,16 @@
+.main-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 18px;
+  margin-left: -4px;
+  margin-right: -4px;
+
+  @media (min-width: $screen-md) {
+    padding-bottom: 16px;
+  }
+
+  @media (min-width: $screen-lg) {
+    padding-bottom: 40px;
+  }
+}

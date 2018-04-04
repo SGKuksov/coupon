@@ -1,0 +1,35 @@
+mixin top-panel(title, subtitle, admin, rss)
+
+  .top-panel
+    h1.top-panel__title=title
+    p.top-panel__subtitle=subtitle
+
+    if (!rss)
+      .top-panel__inner
+        .top-panel__labels
+          +label('Фитнес-центры', admin)
+          +label('Подарки', admin)
+          +label('Барбершопы', admin)
+
+        .top-panel__btn-wrap
+          a.top-panel__btn(href="#", title="Места и заведения")
+            svg.top-panel__btn-star
+              use(xlink:href="img/sprite-svg.svg#top-panel__star")
+            span Места и заведения
+
+        .top-panel__coupon
+          img.top-panel__coupon-img(src="img/top-panel__bg.png", alt="coupon")
+
+    if (rss)
+      .top-panel__wrap
+        .top-panel__labels
+          +label('Фитнес-центры', admin)
+          +label('Подарки', admin)
+          +label('Барбершопы', admin)
+
+        a.top-panel__btn.top-panel__btn--gray(href="#", title="Подписаться на обновления")
+          svg.top-panel__btn-star
+            use(xlink:href="img/sprite-svg.svg#top-panel__rss")
+          span Подписаться на обновления
+
+

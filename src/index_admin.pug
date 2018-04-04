@@ -1,0 +1,24 @@
+extends templates/layout.pug
+
+block meta
+  title Home
+  meta(name='description', content='')
+
+//- block append head
+  //- link(rel="stylesheet", href="style.min.css")
+
+block page-header
+  +page-header("Админ")
+
+block extra-blocks
+  +extra-food()
+  +extra-places()
+
+block top-panel
+  +top-panel("Все купоны со скидками в одном месте", "Популярные категории", true, false)
+
+block append top-panel-edit
+  +top-panel-edit("Админ")
+
+//- block append page-bottom
+  //- script(src='some.js')

@@ -1,0 +1,24 @@
+mixin extra-places()
+
+  -
+    var extra_places = {
+      'Быстро "У Наташи"': '#',
+      'Ресторан авторской кухни': '#',
+      'Студия хатха-йоги': '#',
+      'Центр эстетической медицины': '#',
+      'Быстро "У Маши"': '#',
+      'Ресторан авторской кухни на холмах Грузии': '#'
+    };
+
+  .extra-places
+    h2.extra-places__title Места поблизости
+      svg.extra-places__icon(fill="#f00")
+        use(xlink:href="img/sprite-svg.svg#extra-places__location")
+
+    ul.extra-places__list
+      each val, key in extra_places
+        li.extra-places__item
+          a.extra-places__link(href=val, title=key)
+            .extra-places__pic-wrap
+              img.extra-places__pic(src="img/extra-places__photo1.jpg", alt=key)
+            span.extra-places__text=key

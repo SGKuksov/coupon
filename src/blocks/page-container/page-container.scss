@@ -1,0 +1,28 @@
+.page-container {
+  margin: 0 auto;
+  flex: 1 0 auto;
+
+  padding-top: 17px;
+  padding-bottom: 75px;
+  display: flex;
+  min-height: 80vh;
+  min-height: calc(100vh - 250px - 121px);
+
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  @media (min-width: $screen-md) {
+    padding-left: 0;
+    padding-right: 0;
+    width: 984px;
+    padding-top: 15px;
+    padding-bottom: 22px;
+  }
+
+  @media (min-width: $screen-lg) {
+    min-width: 1260px;
+    padding-top: 17px;
+    padding-bottom: 75px;
+  }
+}

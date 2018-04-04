@@ -1,0 +1,202 @@
+.top-panel {
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  width: 100%;
+  padding-left: 11px;
+  padding-top: 7px;
+  padding-bottom: 8px;
+  padding-right: 74px;
+  margin-bottom: 9px;
+  position: relative;
+
+  @media (min-width: $screen-md) {
+    padding-left: 20px;
+    padding-top: 17px;
+    padding-bottom: 17px;
+    padding-right: 20px;
+    margin-bottom: 15px;
+  }
+
+  @media (min-width: $screen-lg) {
+    padding-left: 20px;
+    padding-top: 17px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    margin-bottom: 15px;
+  }
+
+  &__title {
+    font-size: 20px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 15px;
+    }
+
+    @media (min-width: $screen-lg) {
+      font-size: 28px;
+    }
+  }
+
+  &__subtitle {
+    display: none;
+
+    @media (min-width: $screen-md) {
+      display: block;
+      font-size: 12px;
+    }
+
+    @media (min-width: $screen-lg) {
+      font-size: 14px;
+      font-weight: bold;
+    }
+  }
+
+  &__labels {
+    margin-left: -1px;
+    display: none;
+
+    @media (min-width: $screen-md) {
+      // display: inline-flex;
+      display: block;
+      align-items: center;
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $screen-lg) {
+      // margin-bottom: 11px;
+    }
+  }
+
+  &__btn-wrap {
+
+    @media (min-width: $screen-sm) {
+      display: none;
+    }
+    @media (min-width: $screen-md) {
+      display: inline-block;
+    }
+    @media (min-width: $screen-lg) {
+      display: block;
+      margin-top: 11px;
+    }
+  }
+
+  &__inner {
+
+    @media (min-width: $screen-sm) {
+      display: none;
+    }
+    @media (min-width: $screen-md) {
+      display: flex;
+    }
+    @media (min-width: $screen-lg) {
+      display: inline-block;
+      // display: flex;
+      // flex-wrap: wrap;
+      // align-items: flex-end;
+      // justify-content: space-between;
+    }
+  }
+
+  &__wrap {
+
+    @media (min-width: $screen-sm) {
+      display: none;
+    }
+    @media (min-width: $screen-md) {
+      display: inline-block;
+    }
+    @media (min-width: $screen-lg) {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      justify-content: space-between;
+    }
+  }
+
+  &__btn {
+    display: none;
+    // padding: 4px 15px 6px 15px;
+    border: 1px solid #f00;
+    border-radius: 4px;
+    color: #f00;
+
+    @media (min-width: $screen-md) {
+      display: inline-block;
+      line-height: 22px;
+      height: 22px;
+      font-size: 12px;
+    }
+
+    @media (min-width: $screen-lg) {
+      height: 30px;
+      line-height: 30px;
+      font-size: 14px;
+    }
+
+    span {
+      padding-left: 9px;
+      padding-right: 11px;
+
+    }
+
+    &:hover {
+      color: #f00;
+    }
+
+    &--gray {
+      border: 1px solid #dedede;
+      color: #787878;
+
+      &:hover {
+        color: #787878;
+      }
+    }
+  }
+
+  .top-panel__btn-star {
+    width: 16px;
+    height: 15px;
+
+    @media (min-width: $screen-md) {
+      width: 12px;
+      height: 10px;
+      margin-left: 12px;
+
+    }
+
+    @media (min-width: $screen-lg) {
+      width: 16px;
+      height: 15px;
+    }
+  }
+
+  &__coupon {
+    overflow: hidden;
+    width: 94px;
+    height: 51px;
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+
+    @media (min-width: $screen-md) {
+      width: 116px;
+      height: 63px;
+    }
+
+    @media (min-width: $screen-md) {
+      width: 116px;
+      height: 63px;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: 175px;
+      height: 95px;
+    }
+  }
+
+  &__coupon-img {
+    width: 100%;
+  }
+}

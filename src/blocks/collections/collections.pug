@@ -1,0 +1,21 @@
+mixin collections()
+
+  -
+    var collections = {
+      '8 марта': '#',
+      '23 февраля': '#',
+      'Новый год': '#',
+      '1 сентября': '#',
+      'Подарки': '#'
+    };
+
+  .collections
+    h2.collections__title Подборки
+
+    ul.collections__list
+      each val, key in collections
+        li.collections__item
+          a.collections__link(href=val, title=key)= key
+
+    a.collections__link.collections__link--red(href="") Все подборки
+

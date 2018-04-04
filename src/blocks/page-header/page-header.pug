@@ -1,0 +1,62 @@
+mixin page-header(name)
+  header.page-header
+    .page-header__container
+      //- modal-location
+      +modal-location()
+
+      .page-header__menu
+        .menu-btn
+          span
+          span
+          span
+        button.page-header__search-icon
+          svg.page-header__submit-icon
+            use(xlink:href="img/sprite-svg.svg#page-header__submit-icon")
+
+      .page-header__logo-wrap
+        .page-header__location
+          svg.page-header__location-icon
+            use(xlink:href="img/sprite-svg.svg#page-header__location")
+          span.page-header__location-info Город
+          a.page-header__location-city(href="#") Москва
+        .page-header__logo
+          img.page-header__logo-img(src="img/page-header__logo-img.svg", alt="hot kupon")
+
+      form.page-header__search
+        input.page-header__input(type="text")
+        button.page-header__submit(type="submit")
+          svg.page-header__submit-icon
+            use(xlink:href="img/sprite-svg.svg#page-header__submit-icon")
+
+      +main-nav()
+
+      .page-header__socials.socials
+        +socials()
+
+      .page-header__btn
+        a.btn(href="#") Подписаться
+
+      if (name == "Константин")
+        .page-header__login
+          a.page-header__login-link(href="#", title="Константин")
+            span.page-header__login-name Константин
+            .page-header__avatar-wrap
+              img.page-header__avatar(src="http://via.placeholder.com/26x26", alt="Константин")
+            svg.page-header__login-dropdown
+              use(xlink:href="img/sprite-svg.svg#page-header__login-dropdown")
+      else if (name == "Админ")
+        .page-header__login
+          a.page-header__login-link(href="#", title="Админ")
+            span.page-header__login-name Админ
+            .page-header__avatar-wrap
+              img.page-header__avatar(src="img/page-header__avatar-admin.svg", alt="Админ")
+            svg.page-header__login-dropdown
+              use(xlink:href="img/sprite-svg.svg#page-header__login-dropdown")
+      else
+        .page-header__login
+          a.page-header__login-link(href="#", title="")
+            span.page-header__login-name Войти
+            .page-header__avatar-wrap
+              img.page-header__avatar(src="http://via.placeholder.com/26x26", alt="")
+
+

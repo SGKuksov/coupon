@@ -1,0 +1,32 @@
+mixin side-nav()
+
+  -
+    var category = {
+      'Развлечения': true,
+      'Еда': false,
+      'Красота': false,
+      'Здоровье': false,
+      'Путешествия': false
+    };
+
+  -
+    var subcategory = {
+      'Аквапарк': 4,
+      'Активный отдых': 19,
+      'Аттракционы': 6,
+      'Аэротрубы': 2,
+      'Бани и сауны': 1
+    };
+
+  nav.side-nav
+    .pushy-content
+      ul.side-nav__list
+        each val, key in category
+          li(class=val ? 'side-nav__item pushy-submenu pushy-submenu-open' : 'side-nav__item pushy-submenu')
+            a.side-nav__link(href="#", title=key)=key
+
+            ul.side-nav__sublist
+              each val, key in subcategory
+                li.side-nav__subitem.pushy-link
+                  a.side-nav__sublink(href="#", title=key)=key
+                  span.side-nav__count=val

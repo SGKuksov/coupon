@@ -1,0 +1,77 @@
+// Это диспетчер подключений, тут не должно быть ничего, кроме импортов
+
+// bootstrap
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+// @import "node_modules/bootstrap/scss/root";
+@import "node_modules/bootstrap/scss/reboot";
+// @import "node_modules/bootstrap/scss/type";
+// @import "node_modules/bootstrap/scss/images";
+// @import "node_modules/bootstrap/scss/code";
+// @import "node_modules/bootstrap/scss/grid";
+// @import "node_modules/bootstrap/scss/tables";
+// @import "node_modules/bootstrap/scss/forms";
+// @import "node_modules/bootstrap/scss/buttons";
+// @import "node_modules/bootstrap/scss/transitions";
+// @import "node_modules/bootstrap/scss/dropdown";
+// @import "node_modules/bootstrap/scss/button-group";
+// @import "node_modules/bootstrap/scss/input-group";
+@import "node_modules/bootstrap/scss/custom-forms";
+// @import "node_modules/bootstrap/scss/nav";
+// @import "node_modules/bootstrap/scss/navbar";
+// @import "node_modules/bootstrap/scss/card";
+// @import "node_modules/bootstrap/scss/breadcrumb";
+// @import "node_modules/bootstrap/scss/pagination";
+// @import "node_modules/bootstrap/scss/badge";
+// @import "node_modules/bootstrap/scss/jumbotron";
+// @import "node_modules/bootstrap/scss/alert";
+// @import "node_modules/bootstrap/scss/progress";
+// @import "node_modules/bootstrap/scss/media";
+// @import "node_modules/bootstrap/scss/list-group";
+// @import "node_modules/bootstrap/scss/close";
+@import "node_modules/bootstrap/scss/modal";
+// @import "node_modules/bootstrap/scss/tooltip";
+// @import "node_modules/bootstrap/scss/popover";
+// @import "node_modules/bootstrap/scss/carousel";
+// @import "node_modules/bootstrap/scss/utilities";
+// @import "node_modules/bootstrap/scss/print";
+
+// Глобальные подключения
+@import 'variables';
+@import 'fonts';
+@import 'global';
+
+// pushy
+@import "pushy";
+
+// Растровый спрайт: примеси-генераторы правил
+@import 'src/blocks/sprite-png/sprite-png';
+@include sprites($spritesheet-sprites); // Генератор селекторов для всех картинок спрайта
+
+// БЭМ-блоки. Один БЭМ-блок = 1 файл. ВСЕГДА.
+@import 'src/blocks/main-nav/main-nav';
+@import 'src/blocks/page-container/page-container';
+@import 'src/blocks/page-header/page-header';
+@import 'src/blocks/page-footer/page-footer';
+@import 'src/blocks/logo/logo';
+@import 'src/blocks/socials/socials';
+@import 'src/blocks/btn/btn';
+@import 'src/blocks/sidebar/sidebar';
+@import 'src/blocks/side-nav/side-nav';
+@import 'src/blocks/collections/collections';
+@import 'src/blocks/extra-food/extra-food';
+@import 'src/blocks/extra-places/extra-places';
+@import 'src/blocks/popular-places/popular-places';
+@import 'src/blocks/main/main';
+@import 'src/blocks/top-panel/top-panel';
+@import 'src/blocks/top-panel-edit/top-panel-edit';
+@import 'src/blocks/label/label';
+@import 'src/blocks/bread/bread';
+@import 'src/blocks/filter/filter';
+@import 'src/blocks/main-content/main-content';
+@import 'src/blocks/card/card';
+@import 'src/blocks/advert/advert';
+@import 'src/blocks/subscribe/subscribe';
+@import 'src/blocks/about/about';
+@import 'src/blocks/modal-location/modal-location';

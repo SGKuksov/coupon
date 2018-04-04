@@ -1,0 +1,20 @@
+mixin card(title, category, dealer, place, sale, price)
+  .card
+    .card__img-wrap
+      img.card__img(src="http://via.placeholder.com/336x231", alt=title)
+
+    span.card__sale до&nbsp;
+      span=sale
+    span.card__price от&nbsp;
+      span=price
+
+    //- h2.card__title
+    a.card__link(href="#" title=title)=title
+
+    .card__meta
+      a.card__category(href="#" title=category)=category
+      a.card__dealer(href="#" title=dealer)
+        svg.card__dealer-link
+          use(xlink:href="img/sprite-svg.svg#card__dealer-link")
+        span=dealer
+      a.card__place(href="#" title=place)=place

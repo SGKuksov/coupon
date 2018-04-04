@@ -1,0 +1,64 @@
+.advert {
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  margin-left: 4px;
+  margin-right: 4px;
+  margin-bottom: 11px;
+  position: relative;
+
+  height: 300px;
+  width: 300px;
+
+  @media (min-width: $screen-md) {
+    width: 245px;
+    height: 246px;
+  }
+
+  @media (min-width: $screen-lg) {
+    width: 336px;
+    height: 330px;
+  }
+
+  &__img-wrap {
+    border-radius: 10px;
+    overflow: hidden;
+
+    height: 300px;
+    width: 300px;
+
+    @media (min-width: $screen-md) {
+      width: 245px;
+      height: 246px;
+    }
+
+    @media (min-width: $screen-lg) {
+      height: 330px;
+      width: 336px;
+    }
+  }
+
+  &__img {
+    height: 100%;
+  }
+
+  &__title {}
+
+  &__link {
+    position: absolute;
+    bottom: 75px;
+    left: 15px;
+    font-size: 20px;
+    color: #fff;
+  }
+
+  &__info {
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+    font-size: 12px;
+    padding: 6px 13px 7px 13px;
+    border: 1px solid #969696;
+    border-radius: 4px;
+  }
+}

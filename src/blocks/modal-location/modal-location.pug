@@ -1,0 +1,39 @@
+mixin modal-location()
+
+  -
+    var city_list = {
+      'А':['Александров', 'Арзамас', 'Армавир', 'Арзамас'],
+      'Б':['Барнаул', 'Белозерск', 'Бердск', 'Бийск', 'Брянск'],
+      'В':['Видное', 'Владивосток', 'Владикавказ', 'Владимир', 'Волгоград', 'Вологда', 'Воронеж', 'Выборг'],
+      'Е':['Ейск', 'Екатеринбург', 'Енисейск', 'Ермолино', 'Ессентуки'],
+      'З':['Заволжье', 'Закаменск', 'Звенигород', 'Зеленогорск', 'Зерноград'],
+      'К':['Казань', 'Калининград', 'Калуга', 'Каменногорск', 'Кемерово', 'Кингисепп', 'Киров'],
+      'Н':['Нижнекамск','Нижний Новгород', 'Николаевск-на-Амуре', 'Новороссийск', 'Новоузенск', 'Новочеркасск', 'Норильск'],
+      'С':['Самара','Санкт-Петербург','Ставрополь','Суздаль'],
+      'Ш':['Шлиссельбург']
+    };
+
+  #myModal.modal.fade.modal-location(tabindex='-1', role='dialog',  aria-labelledby='exampleModalCenterTitle', aria-hidden='true')
+    .modal-dialog.modal-dialog-centered(role='document')
+      .modal-content.modal-location__content
+        .modal-header.modal-location__header
+          h5.modal-title.modal-location__title Выберите город
+          button.close.modal-location__close(type='button', data-dismiss='modal', aria-label='Close')
+            //- span(aria-hidden='true') ×
+            svg.modal-location__close-icon(aria-hidden='true')
+              use(xlink:href="img/sprite-svg.svg#modal__close-icon")
+
+        .modal-body.modal-location__body
+          ul.modal-location__city-char-list
+            each val, key in city_list
+              li.modal-location__city-char=key
+                ul.modal-location__city-list
+                  each val in city_list[key]
+                    li.modal-location__city-item
+                      a.modal-location__city-link(href="#", title)=val
+
+        .modal-footer.modal-location__footer
+          form.modal-location__search
+            label.modal-location__label Или укажите город
+            input.modal-location__input(type="text", placeholder="Название города...")
+            button.modal-location__btn.btn(type='button') Это мой город

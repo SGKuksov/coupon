@@ -1,0 +1,55 @@
+// pushy
+html, body{
+  overflow-x: hidden;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+
+*,
+*:after,
+*:before {
+  outline: none;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  background-color: #f0f0f0;
+  color: $light-gray;
+  font-family: Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 14px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: $light-gray;
+  font-weight: normal;
+
+  &:hover {
+    text-decoration: none;
+    color: $light-gray;
+    font-weight: normal;
+  }
+}
+
+ul {
+  padding: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+h1, h2, h3, h4 ,h5, h6 {
+  font-weight: normal;
+}
+
+select {
+  width: auto !important;
+}

@@ -1,0 +1,15 @@
+.logo {
+  width: 110px;
+  height: 23px;
+
+  @media (min-width: $screen-lg) {
+    width: 150px;
+    height: 31px;
+  }
+
+  &__img {
+    width: 100%;
+    width: 110px;
+    height: 23px;
+  }
+}

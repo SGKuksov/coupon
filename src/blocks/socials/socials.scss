@@ -1,0 +1,21 @@
+.socials {
+
+  &__list {
+    display: flex;
+    list-style: none;
+    margin-right: 18px;
+  }
+
+  &__item {
+    margin-left: 10px;
+  }
+
+  &__link {
+    display: inline-block;
+  }
+
+  &__icon {
+    width: 26px;
+    height: 26px;
+  }
+}

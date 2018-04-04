@@ -1,0 +1,12 @@
+.sidebar {
+  // display: none;
+
+  @media (min-width: $screen-md) {
+    display: block;
+    width: 214px;
+    margin-right: 18px;
+
+    flex-basis: 214px;
+    flex-shrink: 0;
+  }
+}

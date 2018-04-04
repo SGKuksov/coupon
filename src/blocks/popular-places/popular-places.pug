@@ -1,0 +1,29 @@
+mixin popular-places()
+
+  .popular-places
+    h2.popular-places__title Популярные места
+      svg.popular-places__icon(fill="#f00")
+        use(xlink:href="img/sprite-svg.svg#popular-places__fire-icon")
+
+    ul.popular-places__list
+      li.popular-places__item
+        a.popular-places__link(href=val, title=key)
+          .popular-places__pic-wrap
+            img.popular-places__pic(src="http://via.placeholder.com/130x60", alt=key)
+      li.popular-places__item
+        a.popular-places__link(href=val, title=key)
+          .popular-places__pic-wrap
+            img.popular-places__pic(src="http://via.placeholder.com/130x60", alt=key)
+      li.popular-places__item
+        a.popular-places__link(href=val, title=key)
+          .popular-places__pic-wrap
+            img.popular-places__pic(src="http://via.placeholder.com/130x60", alt=key)
+      li.popular-places__item
+        a.popular-places__link(href=val, title=key)
+          .popular-places__pic-wrap
+            img.popular-places__pic(src="http://via.placeholder.com/130x60", alt=key)
+      li.popular-places__item
+        a.popular-places__link(href=val, title=key)
+          .popular-places__pic-wrap
+            img.popular-places__pic(src="http://via.placeholder.com/130x60", alt=key)
+

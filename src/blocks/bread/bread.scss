@@ -1,0 +1,34 @@
+.bread {
+
+  &__list {
+    display: flex;
+    margin-bottom: 10px;
+  }
+
+  &__item {
+
+    span {
+      margin-left: 15px;
+      position: relative;
+      font-size: 14px;
+
+      &:before {
+        content: "/";
+        position: absolute;
+        left: -9px;
+      }
+    }
+  }
+
+  &__link,
+  &__item span {
+    color: #969696;
+    font-weight: bold;
+    font-size: 14px;
+
+    &:hover {
+      color: #969696;
+      font-weight: bold;
+    }
+  }
+}
