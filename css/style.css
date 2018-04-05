@@ -989,21 +989,21 @@ select {
 }
 
 .chrome {
-  background-image: url(../img/sprite-04448888285807422.png);
+  background-image: url(../img/sprite-037891526088442684.png);
   background-position: 0px 0px;
   width: 64px;
   height: 64px;
 }
 
 .github-logo {
-  background-image: url(../img/sprite-04448888285807422.png);
+  background-image: url(../img/sprite-037891526088442684.png);
   background-position: -68px 0px;
   width: 64px;
   height: 64px;
 }
 
 .placeholder {
-  background-image: url(../img/sprite-04448888285807422.png);
+  background-image: url(../img/sprite-037891526088442684.png);
   background-position: 0px -68px;
   width: 64px;
   height: 64px;
@@ -1717,6 +1717,17 @@ select {
   font-size: 20px;
 }
 
+.top-panel__dealer-logo {
+  width: 200px;
+  height: 50px;
+  margin-bottom: 5px;
+}
+
+.top-panel__dealer-logo-caption {
+  font-size: 14px;
+  font-weight: normal;
+}
+
 .top-panel__subtitle {
   display: none;
 }
@@ -1999,17 +2010,29 @@ select {
 }
 
 .main-content {
+  padding-top: 18px;
+  margin-left: -4px;
+  margin-right: -4px;
+}
+
+.main-content__inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.main-content__btn-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-top: 18px;
-  margin-left: -4px;
-  margin-right: -4px;
 }
 
 .card {
@@ -2056,62 +2079,6 @@ select {
   width: 100%;
 }
 
-.card__link {
-  display: inline-block;
-  font-weight: 700;
-  color: #323232;
-  font-size: 14px;
-  margin-bottom: 12px;
-}
-
-.card__link:hover {
-  font-weight: 700;
-  color: #323232;
-  font-size: 14px;
-}
-
-.card__category {
-  font-size: 12px;
-  padding: 6px 13px 7px 13px;
-  border: 1px solid #969696;
-  border-radius: 4px;
-}
-
-.card__dealer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 12px;
-  padding: 6px 13px 7px 13px;
-}
-
-.card__dealer-link {
-  width: 14px;
-  height: 14px;
-  margin-right: 5px;
-}
-
-.card__meta {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.card__place {
-  font-size: 12px;
-  display: none;
-}
-
 .card__sale {
   position: absolute;
   border-radius: 20px;
@@ -2143,6 +2110,77 @@ select {
 
 .card__price span {
   font-weight: 700;
+}
+
+.card__title {
+  display: block;
+  font-size: 1.5em;
+  font-size: 14px;
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+}
+
+.card__link {
+  display: inline-block;
+  font-weight: 700;
+  color: #323232;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.card__link:hover {
+  font-weight: 700;
+  color: #323232;
+  font-size: 14px;
+}
+
+.card__meta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card__category {
+  font-size: 12px;
+  padding: 6px 13px 7px 13px;
+  border: 1px solid #969696;
+  border-radius: 4px;
+}
+
+.card__dealer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 12px;
+  padding: 6px 13px 7px 13px;
+}
+
+.card__dealer--in-category {
+  padding: 6px 0 7px 0;
+}
+
+.card__dealer-link {
+  width: 14px;
+  height: 14px;
+  margin-right: 5px;
+}
+
+.card__place {
+  display: none;
+  font-size: 12px;
+  padding: 6px 0 7px 0;
 }
 
 .advert {
@@ -2559,6 +2597,15 @@ select {
   .top-panel__wrap {
     display: none;
   }
+  .card__category {
+    display: none;
+  }
+  .card__dealer {
+    display: none;
+  }
+  .card__place {
+    display: inline-block;
+  }
 }
 
 @media (min-width: 992px) {
@@ -2853,15 +2900,6 @@ select {
     width: 245px;
     height: 145px;
   }
-  .card__category {
-    display: none;
-  }
-  .card__dealer {
-    display: none;
-  }
-  .card__place {
-    display: inline-block;
-  }
   .advert {
     width: 245px;
     height: 246px;
@@ -3067,13 +3105,25 @@ select {
   .card__category {
     display: inline-block;
   }
+  .card__category--in-category {
+    display: none;
+  }
   .card__dealer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
+  .card__dealer--in-site {
+    display: none;
+  }
   .card__place {
     display: none;
+  }
+  .card__place--in-category {
+    display: inline-block;
+  }
+  .card__place--in-site {
+    display: inline-block;
   }
   .advert {
     width: 336px;
