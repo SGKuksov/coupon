@@ -1,0 +1,104 @@
+mixin main-content-category()
+  .main-content
+    .main-content__inner
+
+      -
+        var title1 = "Скидка до 50% на первое посещение бассейна"
+        var title2 = "Скидка до 30% на первое посещение бассейна"
+        var sale1 = "50%"
+        var sale2 = "30%"
+        var price1 = "400 руб."
+        var price2 = "Бесплатно!"
+
+        var category1 = "Фитнес-центры"
+        var category2 = "Фитнес-центры"
+        var dealer1 = "Frendi"
+        var dealer2 = "Frendi"
+        var place1 = "Аквапарк «Родео Драйв»"
+        var place2 = "Аквапарк «Родео Драйв»"
+
+      .card
+        .card__img-wrap
+          img.card__img(src="http://via.placeholder.com/336x231", alt=title1)
+
+        span.card__sale до&nbsp;
+          span=sale1
+        span.card__price от&nbsp;
+          span=price1
+
+        h2.card__title
+          a.card__link(href="#" title=title1)=title1
+
+        .card__meta
+          a.card__category.card__category--in-category(href="#" title=category1)=category1
+          a.card__dealer.card__dealer--in-category(href="#" title=dealer1)
+            svg.card__dealer-link
+              use(xlink:href="img/sprite-svg.svg#card__dealer-link")
+            span=dealer1
+          a.card__place.card__place--in-category(href="#" title=place1)=place1
+
+      .card
+        .card__img-wrap
+          img.card__img(src="http://via.placeholder.com/336x231", alt=title2)
+
+        span.card__sale до&nbsp;
+          span=sale2
+        span.card__price от&nbsp;
+          span=price2
+
+        h2.card__title
+          a.card__link(href="#" title=title2)=title2
+
+        .card__meta
+          a.card__category.card__category--in-category(href="#" title=category2)=category2
+          a.card__dealer.card__dealer--in-category(href="#" title=dealer2)
+            svg.card__dealer-link
+              use(xlink:href="img/sprite-svg.svg#card__dealer-link")
+            span=dealer2
+          a.card__place.card__place--in-category(href="#" title=place2)=place2
+
+      +advert()
+      +subscribe()
+
+      .card
+        .card__img-wrap
+          img.card__img(src="http://via.placeholder.com/336x231", alt=title1)
+
+        span.card__sale до&nbsp;
+          span=sale1
+        span.card__price от&nbsp;
+          span=price1
+
+        h2.card__title
+          a.card__link(href="#" title=title1)=title1
+
+        .card__meta
+          a.card__category.card__category--in-category(href="#" title=category1)=category1
+          a.card__dealer.card__dealer--in-category(href="#" title=dealer1)
+            svg.card__dealer-link
+              use(xlink:href="img/sprite-svg.svg#card__dealer-link")
+            span=dealer1
+          a.card__place.card__place--in-category(href="#" title=place1)=place1
+
+      .card
+        .card__img-wrap
+          img.card__img(src="http://via.placeholder.com/336x231", alt=title2)
+
+        span.card__sale до&nbsp;
+          span=sale2
+        span.card__price от&nbsp;
+          span=price2
+
+        h2.card__title
+          a.card__link(href="#" title=title2)=title2
+
+        .card__meta
+          a.card__category.card__category--in-category(href="#" title=category2)=category2
+          a.card__dealer.card__dealer--in-category(href="#" title=dealer2)
+            svg.card__dealer-link
+              use(xlink:href="img/sprite-svg.svg#card__dealer-link")
+            span=dealer2
+          a.card__place.card__place--in-category(href="#" title=place2)=place2
+
+    .main-content__btn-block
+      a.main-content__btn.btn.btn--gray(href="#") Показать еще...

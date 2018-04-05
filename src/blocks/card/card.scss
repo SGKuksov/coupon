@@ -12,6 +12,7 @@
   position: relative;
   height: 300px;
   width: 300px;
+
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -50,6 +51,38 @@
 
   &__img {
     width: 100%;
+  }
+
+  &__sale {
+    position: absolute;
+    border-radius: 20px;
+    background-color: #f00;
+    color: #fff;
+    font-weight: normal;
+    padding: 5px 15px 8px;
+    right: 15px;
+    bottom: 85px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+
+    span {
+      font-weight: 700;
+    }
+  }
+
+  &__price {
+    position: absolute;
+    border-radius: 0 0 5px 5px;
+    background-color: rgba(49, 49, 49, 0.8);
+    color: #fff;
+    font-weight: normal;
+    font-weight: 700;
+    padding: 5px 15px 10px;
+    left: 14px;
+    top: 0;
+
+    span {
+      font-weight: 700;
+    }
   }
 
   &__title {
@@ -100,12 +133,14 @@
     border: 1px solid #969696;
     border-radius: 4px;
 
-    @media (min-width: $screen-md) {
-      display: none;
+    @media (min-width: $screen-sm) {display: none;}
+    @media (min-width: $screen-lg) {display: inline-block;}
+
+    &--in-category {
+      @media (min-width: $screen-lg) {display: none;}
     }
-    @media (min-width: $screen-lg) {
-      display: inline-block;
-    }
+
+    &--in-site {}
   }
 
   &__dealer {
@@ -114,11 +149,15 @@
     font-size: 12px;
     padding: 6px 13px 7px 13px;
 
-    @media (min-width: $screen-md) {
-      display: none;
+    @media (min-width: $screen-sm) {display: none;}
+    @media (min-width: $screen-lg) {display: flex;}
+
+    &--in-category {
+      padding: 6px 0 7px 0;
     }
-    @media (min-width: $screen-lg) {
-      display: flex;
+
+    &--in-site {
+      @media (min-width: $screen-lg) {display: none;}
     }
   }
 
@@ -129,46 +168,19 @@
   }
 
   &__place {
-    font-size: 12px;
     display: none;
+    font-size: 12px;
+    padding: 6px 0 7px 0;
 
-    @media (min-width: $screen-md) {
-      display: inline-block;
+    @media (min-width: $screen-sm) {display: inline-block;}
+    @media (min-width: $screen-lg) {display: none;}
+
+    &--in-category {
+      @media (min-width: $screen-lg) {display: inline-block;}
     }
-    @media (min-width: $screen-lg) {
-      display: none;
-    }
-  }
 
-  &__sale {
-    position: absolute;
-    border-radius: 20px;
-    background-color: #f00;
-    color: #fff;
-    font-weight: normal;
-    padding: 5px 15px 8px;
-    right: 15px;
-    bottom: 85px;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-
-    span {
-      font-weight: 700;
-    }
-  }
-
-  &__price {
-    position: absolute;
-    border-radius: 0 0 5px 5px;
-    background-color: rgba(49, 49, 49, 0.8);
-    color: #fff;
-    font-weight: normal;
-    font-weight: 700;
-    padding: 5px 15px 10px;
-    left: 14px;
-    top: 0;
-
-    span {
-      font-weight: 700;
+    &--in-site {
+      @media (min-width: $screen-lg) {display: inline-block;}
     }
   }
 }
