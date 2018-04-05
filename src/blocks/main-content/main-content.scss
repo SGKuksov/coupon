@@ -1,7 +1,4 @@
 .main-content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   padding-top: 18px;
   margin-left: -4px;
   margin-right: -4px;
@@ -13,4 +10,17 @@
   @media (min-width: $screen-lg) {
     padding-bottom: 40px;
   }
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  &__btn-block {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__btn {}
 }

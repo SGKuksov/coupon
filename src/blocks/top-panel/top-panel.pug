@@ -1,8 +1,15 @@
-mixin top-panel(title, subtitle, admin, rss)
+mixin top-panel(subtitle, title, admin, rss, dealer_logo)
 
   .top-panel
-    h1.top-panel__title=title
-    p.top-panel__subtitle=subtitle
+    if (dealer_logo)
+      .top-panel__dealer-logo
+        img.top-panel__dealer-logo-img(src="http://via.placeholder.com/50x200", alt=subtitle, title=subtitle)
+      h1.top-panel__dealer-logo-caption=subtitle
+      p.top-panel__subtitle=title
+
+    if (!dealer_logo)
+      h1.top-panel__title=subtitle
+      p.top-panel__subtitle=title
 
     if (!rss)
       .top-panel__inner

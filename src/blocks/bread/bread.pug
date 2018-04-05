@@ -1,8 +1,8 @@
-mixin bread()
+mixin bread(type)
 
   .bread
     ul.bread__list
       li.bread__item
         a.bread__link Купоны в г. Москва
       li.bread__item
-        span Спорт и отдых
+        span=type
