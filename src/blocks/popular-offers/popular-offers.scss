@@ -1,4 +1,4 @@
-.popular-places {
+.popular-offers {
   background-color: #ffffff;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   border-radius: 10px;
@@ -34,22 +34,41 @@
   }
 
   &__link {
-    display: flex;
+    display: inline-block !important;
     align-items: center;
     margin-bottom: 28px;
-    height: 60px;
-    width: 130px;
-    overflow: hidden;
-    flex-shrink: 0;
-    margin-right: 8px;
+    font-size: 0;
   }
 
   &__pic-wrap {
-
-  }
+    overflow: hidden;
+    display: inline-block;
+    height: 46px;
+    width: 46px;
+    border-radius: 6px;
+    border: 1px solid #979797;  }
 
   &__pic {
     width: 100%;
   }
 
+  &__info {
+    margin-left: 9px;
+    display: inline-block;
+    width: 70%;
+    height: 46px;
+    overflow: hidden;
+  }
+
+  &__text {
+    display: block;
+    font-size: 14px;
+    color: #969696;
+  }
+
+  &__price {
+    display: block;
+    font-size: 14px;
+    color: #000;
+  }
 }

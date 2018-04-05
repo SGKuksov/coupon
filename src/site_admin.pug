@@ -1,0 +1,26 @@
+extends templates/layout.pug
+
+block meta
+  title Site
+  meta(name='description', content='')
+
+//- block append head
+  //- link(rel="stylesheet", href="style.min.css")
+
+block page-header
+  +page-header("Админ")
+
+block extra-blocks
+  +popular-offers()
+
+block bread
+  +bread()
+
+block top-panel
+  +top-panel("Спорт и отдых", "Популярное в данной категории", true, true)
+
+block append top-panel-edit
+  +top-panel-edit("Админ")
+
+//- block append page-bottom
+  //- script(src='some.js')

@@ -1,0 +1,25 @@
+mixin popular-offers()
+
+  -
+    var popular_offers = {
+      'Скидка до 50% на первое посещение бассейна': '500р',
+      'Первое посещение бассейна в подарок': 'Бесплатно!',
+      'Гонконгские вафли + кофе всего за 100р': '100р',
+      'Скидка до 50% на первое посещение': '500р',
+      'Первое посещение бассейна в подарок на холмах Грузии': 'Бесплатно!'
+    };
+
+  .popular-offers
+    h2.popular-offers__title Популярные предложения
+      svg.popular-offers__icon(fill="#f00")
+        use(xlink:href="img/sprite-svg.svg#popular-offers__fire-icon")
+
+    ul.popular-offers__list
+      each val, key in popular_offers
+        li.popular-offers__item
+          a.popular-offers__link(href="#" title=key)
+            .popular-offers__pic-wrap
+              img.popular-offers__pic(src="http://via.placeholder.com/46x46" alt=key height= 46 width=46)
+            .popular-offers__info
+              span.popular-offers__text=val
+              span.popular-offers__price=key
