@@ -989,21 +989,21 @@ select {
 }
 
 .chrome {
-  background-image: url(../img/sprite-0059723965448909455.png);
+  background-image: url(../img/sprite-04448888285807422.png);
   background-position: 0px 0px;
   width: 64px;
   height: 64px;
 }
 
 .github-logo {
-  background-image: url(../img/sprite-0059723965448909455.png);
+  background-image: url(../img/sprite-04448888285807422.png);
   background-position: -68px 0px;
   width: 64px;
   height: 64px;
 }
 
 .placeholder {
-  background-image: url(../img/sprite-0059723965448909455.png);
+  background-image: url(../img/sprite-04448888285807422.png);
   background-position: 0px -68px;
   width: 64px;
   height: 64px;
@@ -1599,9 +1599,6 @@ select {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 28px;
-}
-
-.popular-places__pic-wrap {
   height: 60px;
   width: 130px;
   overflow: hidden;
@@ -1612,6 +1609,88 @@ select {
 
 .popular-places__pic {
   width: 100%;
+}
+
+.popular-offers {
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding-left: 16px;
+  padding-top: 16px;
+  padding-bottom: 15px;
+  padding-right: 11px;
+  margin-bottom: 19px;
+  display: none;
+}
+
+.popular-offers__title {
+  color: #323232;
+  line-height: 14px;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.popular-offers__icon {
+  margin-left: 15px;
+  height: 14px;
+  width: 14px;
+}
+
+.popular-offers__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.popular-offers__link {
+  display: inline-block !important;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 28px;
+  font-size: 0;
+}
+
+.popular-offers__pic-wrap {
+  overflow: hidden;
+  display: inline-block;
+  height: 46px;
+  width: 46px;
+  border-radius: 6px;
+  border: 1px solid #979797;
+}
+
+.popular-offers__pic {
+  width: 100%;
+}
+
+.popular-offers__info {
+  margin-left: 9px;
+  display: inline-block;
+  width: 70%;
+  height: 46px;
+  overflow: hidden;
+}
+
+.popular-offers__text {
+  display: block;
+  font-size: 14px;
+  color: #969696;
+}
+
+.popular-offers__price {
+  display: block;
+  font-size: 14px;
+  color: #000;
 }
 
 .main {
@@ -2662,6 +2741,9 @@ select {
     display: block;
   }
   .popular-places {
+    display: block;
+  }
+  .popular-offers {
     display: block;
   }
   .main__container {
