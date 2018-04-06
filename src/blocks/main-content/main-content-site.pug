@@ -3,21 +3,21 @@ mixin main-content-site()
     .main-content__inner
 
       -
-        var title1 = "Скидка до 50% на первое посещение бассейна"
-        var title2 = "Скидка до 30% на первое посещение бассейна"
+        var title1 = "Скидка дот 50% на первое посещение бассейна Скидка до 50% на первое посещение бассейна Скидка до 50%"
+        var title2 = "Скидка дот 50% на первое посещение бассейна Скидка до 50% на первое посещение бассейна Скидка до 50%"
         var sale1 = "50%"
         var sale2 = "30%"
         var price1 = "400 руб."
         var price2 = "Бесплатно!"
 
-        var category1 = "Фитнес-центры"
-        var category2 = "Фитнес-центры"
+        var category1 = "Фитнес-цент-рыhплgюс"
+        var category2 = "Фитнес-цент-рыhплgюс"
         var dealer1 = "Frendi"
         var dealer2 = "Frendi"
-        var place1 = "Аквапарк «Родео Драйв»"
-        var place2 = "Аквапарк «Родео Драйв»"
+        var place1 = "Аквапарк «Родео Драйв» Коомета"
+        var place2 = "Аквапарк «Родео Драйв» Коомета"
 
-      .card
+      .card.card--long-title
         .card__img-wrap
           img.card__img(src="http://via.placeholder.com/336x231", alt=title1)
 
@@ -27,7 +27,7 @@ mixin main-content-site()
           span=price1
 
         //- h2.card__title
-        a.card__link(href="#" title=title1)=title1
+        a.card__link.card__link--long-title(href="#" title=title1)=title1
 
         .card__meta
           a.card__category.card__category--in-site(href="#" title=category1)=category1
@@ -37,7 +37,7 @@ mixin main-content-site()
             span=dealer1
           a.card__place.card__place--in-site(href="#" title=place1)=place1
 
-      .card
+      .card.card--long-title
         .card__img-wrap
           img.card__img(src="http://via.placeholder.com/336x231", alt=title2)
 
@@ -46,8 +46,8 @@ mixin main-content-site()
         span.card__price от&nbsp;
           span=price2
 
-        h2.card__title
-          a.card__link(href="#" title=title2)=title2
+        //- h2.card__title
+        a.card__link.card__link--long-title(href="#" title=title2)=title2
 
         .card__meta
           a.card__category.card__category--in-site(href="#" title=category2)=category2
@@ -60,7 +60,7 @@ mixin main-content-site()
       +advert()
       +subscribe()
 
-      .card
+      .card.card--long-title
         .card__img-wrap
           img.card__img(src="http://via.placeholder.com/336x231", alt=title1)
 
@@ -69,8 +69,8 @@ mixin main-content-site()
         span.card__price от&nbsp;
           span=price1
 
-        h2.card__title
-          a.card__link(href="#" title=title1)=title1
+        //- h2.card__title
+        a.card__link.card__link--long-title(href="#" title=title1)=title1
 
         .card__meta
           a.card__category.card__category--in-site(href="#" title=category1)=category1
@@ -80,7 +80,7 @@ mixin main-content-site()
             span=dealer1
           a.card__place.card__place--in-site(href="#" title=place1)=place1
 
-      .card
+      .card.card--long-title
         .card__img-wrap
           img.card__img(src="http://via.placeholder.com/336x231", alt=title2)
 
@@ -89,8 +89,8 @@ mixin main-content-site()
         span.card__price от&nbsp;
           span=price2
 
-        h2.card__title
-          a.card__link(href="#" title=title2)=title2
+        //- h2.card__title
+        a.card__link.card__link--long-title(href="#" title=title2)=title2
 
         .card__meta
           a.card__category.card__category--in-site(href="#" title=category2)=category2
