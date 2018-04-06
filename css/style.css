@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *::before,
 *::after {
@@ -2995,21 +2996,21 @@ a.ui-button:active,
 }
 
 .chrome {
-  background-image: url(../img/sprite-07814323011595607.png);
+  background-image: url(../img/sprite-04343337999910655.png);
   background-position: 0px 0px;
   width: 64px;
   height: 64px;
 }
 
 .github-logo {
-  background-image: url(../img/sprite-07814323011595607.png);
+  background-image: url(../img/sprite-04343337999910655.png);
   background-position: -68px 0px;
   width: 64px;
   height: 64px;
 }
 
 .placeholder {
-  background-image: url(../img/sprite-07814323011595607.png);
+  background-image: url(../img/sprite-04343337999910655.png);
   background-position: 0px -68px;
   width: 64px;
   height: 64px;
@@ -3194,13 +3195,14 @@ a.ui-button:active,
   width: 26px;
   overflow: hidden;
   border-radius: 50%;
-  margin-left: 5px;
+  margin-left: 10px;
   margin-right: 5px;
 }
 
 .page-header__avatar-wrap--border {
   border: 1px solid #b6b6b6;
   border-radius: 50%;
+  padding: 3px;
 }
 
 .page-header__login-dropdown {
@@ -4076,6 +4078,11 @@ a.ui-button:active,
           justify-content: space-between;
 }
 
+.card--long-title {
+  /* Длинные заголовки */
+  height: 330px !important;
+}
+
 .card__img-wrap {
   margin-left: -18px;
   margin-top: -19px;
@@ -4098,10 +4105,10 @@ a.ui-button:active,
   color: #fff;
   font-weight: normal;
   padding: 5px 15px 8px;
-  right: 15px;
-  bottom: 85px;
   -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  right: 15px;
+  top: 184px;
 }
 
 .card__sale span {
@@ -4125,13 +4132,8 @@ a.ui-button:active,
 }
 
 .card__title {
-  display: block;
-  font-size: 1.5em;
   font-size: 14px;
-  -webkit-margin-before: 0em;
-  -webkit-margin-after: 0em;
-  -webkit-margin-start: 0px;
-  -webkit-margin-end: 0px;
+  margin: 0;
 }
 
 .card__link {
@@ -4139,6 +4141,12 @@ a.ui-button:active,
   font-weight: 700;
   color: #323232;
   font-size: 14px;
+  height: 32px;
+  overflow: hidden;
+}
+
+.card__link--long-title {
+  height: 50px;
 }
 
 .card__link:hover {
@@ -4158,6 +4166,9 @@ a.ui-button:active,
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .card__category {
@@ -4165,6 +4176,15 @@ a.ui-button:active,
   padding: 6px 13px 7px 13px;
   border: 1px solid #969696;
   border-radius: 4px;
+  white-space: nowrap;
+}
+
+.card__category--in-category {
+  display: none !important;
+}
+
+.card__category--in-site {
+  margin-right: 5px;
 }
 
 .card__dealer {
@@ -4179,7 +4199,14 @@ a.ui-button:active,
 }
 
 .card__dealer--in-category {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
   padding: 6px 0 7px 0;
+}
+
+.card__dealer--in-site {
+  display: none !important;
 }
 
 .card__dealer-link {
@@ -4192,6 +4219,15 @@ a.ui-button:active,
   display: none;
   font-size: 12px;
   padding: 6px 0 7px 0;
+}
+
+.card__place--in-category {
+  display: inline-block;
+}
+
+.card__place--in-site {
+  max-width: 145px;
+  display: inline-block;
 }
 
 .advert {
@@ -4573,6 +4609,11 @@ a.ui-button:active,
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    width: 87px;
+    text-align: right;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   .page-header__login-dropdown {
     display: -webkit-box;
@@ -4607,15 +4648,6 @@ a.ui-button:active,
   }
   .top-panel__wrap {
     display: none;
-  }
-  .card__category {
-    display: none;
-  }
-  .card__dealer {
-    display: none;
-  }
-  .card__place {
-    display: inline-block;
   }
 }
 
@@ -4907,9 +4939,21 @@ a.ui-button:active,
     width: 245px;
     height: 246px;
   }
+  .card--long-title {
+    height: 250px !important;
+  }
   .card__img-wrap {
     width: 245px;
     height: 145px;
+  }
+  .card__sale {
+    top: 128px;
+  }
+  .card__dealer {
+    display: none;
+  }
+  .card__place--in-site {
+    display: none;
   }
   .advert {
     width: 245px;
@@ -5114,29 +5158,20 @@ a.ui-button:active,
     width: 336px;
     height: 330px;
   }
+  .card--long-title {
+    height: 350px !important;
+  }
   .card__img-wrap {
     width: 336px;
     height: 231px;
   }
-  .card__category {
-    display: inline-block;
-  }
-  .card__category--in-category {
-    display: none;
+  .card__sale {
+    top: 216px;
   }
   .card__dealer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-  }
-  .card__dealer--in-site {
-    display: none;
-  }
-  .card__place {
-    display: none;
-  }
-  .card__place--in-category {
-    display: inline-block;
   }
   .card__place--in-site {
     display: inline-block;
