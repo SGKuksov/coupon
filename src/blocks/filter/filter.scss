@@ -3,6 +3,13 @@
   align-items: center;
   position: relative;
   flex-wrap: wrap;
+  align-items: baseline;
+
+  &__view {
+    order: 0;
+    font-size: 0;
+    margin-right: 34px;
+  }
 
   &__desc {
     display: block;
@@ -15,20 +22,32 @@
     }
   }
 
-  &__left-btn {
+  &__btn {
     border: 1px solid #a3a3a3;
-    border-radius: 4px 0 0 4px;
     background-color: #fff;
-    color: #787878;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px 0 18px;
     font-weight: normal;
-    padding: 6px 10px 7px 18px;
-    // height: 30px;
-    display: inline-flex;
-    align-items: center;
-    line-height: 1;
+    color: #787878;
+    opacity: 0.5;
 
-    @media (min-width: $screen-md) {
-      height: auto;
+    &:hover {
+      color: #787878;
+      font-weight: normal;
+    }
+
+    &--active {
+      opacity: 1;
+    }
+
+    &--left {
+    border-radius: 4px 0 0 4px;
+    }
+
+    &--right {
+      border-left: none;
+      border-radius: 0 4px 4px 0;
     }
 
     & span {
@@ -38,52 +57,12 @@
         display: inline;
         margin-left: 10px;
       }
-    }
-
-    &:hover {
-      color: #787878;
-      font-weight: normal;
     }
   }
 
   &__by_plitka {
     width: 14px;
     height: 12px;
-  }
-
-  &__right-btn {
-    border: 1px solid #a3a3a3;
-    border-radius: 0 4px 4px 0;
-    background-color: #fff;
-    opacity: 0.5;
-    color: #787878;
-    font-weight: normal;
-    margin-right: 34px;
-    padding: 4px 10px 7px 18px;
-    line-height: 1;
-    display: inline-flex;
-    align-items: center;
-    // height: 30px;
-
-    @media (min-width: $screen-md) {
-      height: auto;
-      padding: 5px 10px 7px 18px;
-      align-items: baseline;
-    }
-
-    & span {
-      display: none;
-
-      @media (min-width: $screen-md) {
-        display: inline;
-        margin-left: 10px;
-      }
-    }
-
-    &:hover {
-      color: #787878;
-      font-weight: normal;
-    }
   }
 
   &__on_map {
@@ -93,7 +72,6 @@
 
   &__select {
     border: 1px solid #a3a3a3;
-
     border-radius: 4px;
     color: #787878;
     font-size: 14px;
@@ -103,8 +81,7 @@
     height: auto;
     line-height: 1;
 
-    @media (min-width: $screen-md) {
-    }
+    @media (min-width: $screen-md) {}
 
     @media (min-width: $screen-lg) {
       padding: 7px 98px 8px 14px;
@@ -136,11 +113,6 @@
     @media (min-width: $screen-md) {
       order: 0;
     }
-  }
-
-  &__view {
-    order: 0;
-    font-size: 0;
   }
 
   &__search_by_place {

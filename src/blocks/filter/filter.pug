@@ -8,15 +8,14 @@ mixin filter()
       'Названию'
     ];
 
-
   .filter
     .filter__view
       span.filter__desc Вид:
-      a.filter__left-btn.btn(href="#")
+      a.filter__btn.filter__btn--left.filter__btn--active.btn(href="#")
         svg.filter__by_plitka
           use(xlink:href="img/sprite-svg.svg#filter__by_plitka")
         span Плиткой
-      a.filter__right-btn.btn(href="#")
+      a.filter__btn.filter__btn--right.btn(href="#")
         svg.filter__on_map
           use(xlink:href="img/sprite-svg.svg#filter__on_map")
         span На карте
