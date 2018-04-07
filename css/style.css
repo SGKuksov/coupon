@@ -2996,21 +2996,21 @@ a.ui-button:active,
 }
 
 .chrome {
-  background-image: url(../img/sprite-04343337999910655.png);
+  background-image: url(../img/sprite-04942007931958856.png);
   background-position: 0px 0px;
   width: 64px;
   height: 64px;
 }
 
 .github-logo {
-  background-image: url(../img/sprite-04343337999910655.png);
+  background-image: url(../img/sprite-04942007931958856.png);
   background-position: -68px 0px;
   width: 64px;
   height: 64px;
 }
 
 .placeholder {
-  background-image: url(../img/sprite-04343337999910655.png);
+  background-image: url(../img/sprite-04942007931958856.png);
   background-position: 0px -68px;
   width: 64px;
   height: 64px;
@@ -3639,6 +3639,10 @@ a.ui-button:active,
   font-size: 14px;
   font-weight: 700;
   margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 1;
 }
 
 .popular-offers__icon {
@@ -3914,6 +3918,17 @@ a.ui-button:active,
   position: relative;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.filter__view {
+  -webkit-box-ordinal-group: 1;
+      -ms-flex-order: 0;
+          order: 0;
+  font-size: 0;
+  margin-right: 34px;
 }
 
 .filter__desc {
@@ -3922,61 +3937,42 @@ a.ui-button:active,
   font-size: 14px;
 }
 
-.filter__left-btn {
+.filter__btn {
   border: 1px solid #a3a3a3;
-  border-radius: 4px 0 0 4px;
   background-color: #fff;
-  color: #787878;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 10px 0 18px;
   font-weight: normal;
-  padding: 6px 10px 7px 18px;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  line-height: 1;
+  color: #787878;
+  opacity: 0.5;
 }
 
-.filter__left-btn span {
+.filter__btn:hover {
+  color: #787878;
+  font-weight: normal;
+}
+
+.filter__btn--active {
+  opacity: 1;
+}
+
+.filter__btn--left {
+  border-radius: 4px 0 0 4px;
+}
+
+.filter__btn--right {
+  border-left: none;
+  border-radius: 0 4px 4px 0;
+}
+
+.filter__btn span {
   display: none;
-}
-
-.filter__left-btn:hover {
-  color: #787878;
-  font-weight: normal;
 }
 
 .filter__by_plitka {
   width: 14px;
   height: 12px;
-}
-
-.filter__right-btn {
-  border: 1px solid #a3a3a3;
-  border-radius: 0 4px 4px 0;
-  background-color: #fff;
-  opacity: 0.5;
-  color: #787878;
-  font-weight: normal;
-  margin-right: 34px;
-  padding: 4px 10px 7px 18px;
-  line-height: 1;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.filter__right-btn span {
-  display: none;
-}
-
-.filter__right-btn:hover {
-  color: #787878;
-  font-weight: normal;
 }
 
 .filter__on_map {
@@ -4009,13 +4005,6 @@ a.ui-button:active,
   -webkit-box-ordinal-group: 0;
       -ms-flex-order: -1;
           order: -1;
-}
-
-.filter__view {
-  -webkit-box-ordinal-group: 1;
-      -ms-flex-order: 0;
-          order: 0;
-  font-size: 0;
 }
 
 .filter__search_by_place {
@@ -4900,21 +4889,7 @@ a.ui-button:active,
     display: inline;
     margin-right: 10px;
   }
-  .filter__left-btn {
-    height: auto;
-  }
-  .filter__left-btn span {
-    display: inline;
-    margin-left: 10px;
-  }
-  .filter__right-btn {
-    height: auto;
-    padding: 5px 10px 7px 18px;
-    -webkit-box-align: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline;
-  }
-  .filter__right-btn span {
+  .filter__btn span {
     display: inline;
     margin-left: 10px;
   }
