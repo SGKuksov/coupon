@@ -26,5 +26,35 @@
     justify-content: center;
   }
 
-  &__btn {}
+  &__btn {
+    line-height: 43px;
+    height: 54px;
+    padding-left: 43px;
+    padding-right: 41px;
+    color: #787878;
+    font-weight: normal;
+    background-color: #e9e9e9;
+    border-radius: 6px;
+
+    &:hover {
+      background-color: #f3f1f1;
+    }
+
+    &:active {
+      background-color: #dcdcdc;
+    }
+
+    @media (min-width: $screen-md) {
+      margin-top: 8px;
+    }
+
+    @media (min-width: $screen-lg) {
+      margin-top: 17px;
+    }
+
+    &:hover {
+      color: #787878;
+      font-weight: normal;
+    }
+  }
 }

@@ -42,8 +42,9 @@
     font-weight: normal;
 
     &:hover {
-      color: #787878;
+      color: #fff;
       font-weight: normal;
+      background-color: #e30101;
     }
   }
 
@@ -57,8 +58,14 @@
     font-weight: normal;
 
     &:hover {
-      color: #787878;
+      color: #fff;
+      fill: #fff;
       font-weight: normal;
+      background-color: #e30101;
+
+      svg {
+        fill: #fff;
+      }
     }
   }
 
@@ -66,5 +73,6 @@
     margin-right: 10px;
     width: 14px;
     height: 14px;
+    fill: #a3a3a3;
   }
 }

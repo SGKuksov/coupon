@@ -15,6 +15,14 @@
     padding-right: 15px;
   }
 
+  &:hover {
+    background-color: #e30101;
+  }
+
+  &:hover a {
+    color: #fff;
+  }
+
   &__title {
 
     @media (min-width: $screen-md) {
