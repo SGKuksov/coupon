@@ -2996,21 +2996,21 @@ a.ui-button:active,
 }
 
 .chrome {
-  background-image: url(../img/sprite-04942007931958856.png);
+  background-image: url(../img/sprite-05904281778783804.png);
   background-position: 0px 0px;
   width: 64px;
   height: 64px;
 }
 
 .github-logo {
-  background-image: url(../img/sprite-04942007931958856.png);
+  background-image: url(../img/sprite-05904281778783804.png);
   background-position: -68px 0px;
   width: 64px;
   height: 64px;
 }
 
 .placeholder {
-  background-image: url(../img/sprite-04942007931958856.png);
+  background-image: url(../img/sprite-05904281778783804.png);
   background-position: 0px -68px;
   width: 64px;
   height: 64px;
@@ -3354,6 +3354,10 @@ a.ui-button:active,
   height: 26px;
 }
 
+.socials__fb, .socials__vk, .socials__socials {
+  fill: #B6B6B6;
+}
+
 .btn {
   display: inline-block;
   font-family: Arial;
@@ -3369,21 +3373,6 @@ a.ui-button:active,
 .btn:hover {
   color: #fefefe;
   font-weight: bold;
-}
-
-.btn--gray {
-  padding-top: 15px;
-  padding-bottom: 14px;
-  padding-left: 43px;
-  padding-right: 41px;
-  color: #787878;
-  font-weight: normal;
-  background-color: #a1a1a1;
-}
-
-.btn--gray:hover {
-  color: #787878;
-  font-weight: normal;
 }
 
 .side-nav {
@@ -3835,8 +3824,9 @@ a.ui-button:active,
 }
 
 .top-panel-edit__submit:hover {
-  color: #787878;
+  color: #fff;
   font-weight: normal;
+  background-color: #e30101;
 }
 
 .top-panel-edit__save {
@@ -3850,30 +3840,45 @@ a.ui-button:active,
 }
 
 .top-panel-edit__save:hover {
-  color: #787878;
+  color: #fff;
+  fill: #fff;
   font-weight: normal;
+  background-color: #e30101;
+}
+
+.top-panel-edit__save:hover svg {
+  fill: #fff;
 }
 
 .top-panel-edit__icon {
   margin-right: 10px;
   width: 14px;
   height: 14px;
+  fill: #a3a3a3;
 }
 
 .label {
   border: 1px solid #969696;
   border-radius: 4px;
   margin-right: 5px;
-  display: inline-block;
-  color: #787878;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.label:hover {
+  background-color: #e30101;
+}
+
+.label:hover a {
+  color: #fff;
 }
 
 .label__remove-icon {
-  position: relative;
-  left: 8px;
-  top: 3px;
-  height: 19px;
-  width: 19px;
+  margin-left: 8px;
 }
 
 .bread__list {
@@ -4036,6 +4041,30 @@ a.ui-button:active,
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.main-content__btn {
+  line-height: 43px;
+  height: 54px;
+  padding-left: 43px;
+  padding-right: 41px;
+  color: #787878;
+  font-weight: normal;
+  background-color: #e9e9e9;
+  border-radius: 6px;
+}
+
+.main-content__btn:hover {
+  background-color: #f3f1f1;
+}
+
+.main-content__btn:active {
+  background-color: #dcdcdc;
+}
+
+.main-content__btn:hover {
+  color: #787878;
+  font-weight: normal;
 }
 
 .card {
@@ -4794,9 +4823,6 @@ a.ui-button:active,
             align-items: flex-end;
     margin-top: 0;
   }
-  .btn--gray {
-    margin-top: 8px;
-  }
   .sidebar {
     display: block;
     width: 214px;
@@ -4880,10 +4906,18 @@ a.ui-button:active,
     height: 63px;
   }
   .label {
-    line-height: 22px;
-    height: 22px;
     padding-left: 12px;
     padding-right: 12px;
+  }
+  .label__title {
+    line-height: 22px;
+    height: 22px;
+    font-size: 12px;
+    color: #787878;
+  }
+  .label__remove-icon {
+    height: 15px;
+    width: 15px;
   }
   .filter__desc {
     display: inline;
@@ -4909,6 +4943,9 @@ a.ui-button:active,
   }
   .main-content {
     padding-bottom: 16px;
+  }
+  .main-content__btn {
+    margin-top: 8px;
   }
   .card {
     width: 245px;
@@ -5054,9 +5091,6 @@ a.ui-button:active,
     width: 150px;
     height: 31px;
   }
-  .btn--gray {
-    margin-top: 17px;
-  }
   .top-panel {
     padding-left: 20px;
     padding-top: 17px;
@@ -5113,10 +5147,18 @@ a.ui-button:active,
     margin-bottom: 20px;
   }
   .label {
-    line-height: 30px;
-    height: 30px;
     padding-left: 15px;
     padding-right: 15px;
+  }
+  .label__title {
+    line-height: 30px;
+    height: 30px;
+    font-size: 14px;
+    color: #787878;
+  }
+  .label__remove-icon {
+    height: 19px;
+    width: 19px;
   }
   .filter__select {
     padding: 7px 98px 8px 14px;
@@ -5128,6 +5170,9 @@ a.ui-button:active,
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+  }
+  .main-content__btn {
+    margin-top: 17px;
   }
   .card {
     width: 336px;
