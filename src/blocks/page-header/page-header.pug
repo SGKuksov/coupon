@@ -39,7 +39,8 @@ mixin page-header(name)
       if (name == "Константин")
         .page-header__login
           a.page-header__login-link(href="#", title="Константин")
-            span.page-header__login-name Константин
+            span.page-header__login-name
+              | Константин
             .page-header__avatar-wrap
               img.page-header__avatar(src="http://via.placeholder.com/26x26", alt="Константин")
             svg.page-header__login-dropdown
@@ -47,7 +48,8 @@ mixin page-header(name)
       else if (name == "Админ")
         .page-header__login
           a.page-header__login-link(href="#", title="Админ")
-            span.page-header__login-name Админ
+            span.page-header__login-name
+              | Админ
             .page-header__avatar-wrap
               img.page-header__avatar(src="img/page-header__avatar-admin.svg", alt="Админ")
             svg.page-header__login-dropdown
@@ -55,7 +57,8 @@ mixin page-header(name)
       else
         .page-header__login
           a.page-header__login-link(href="#", title="Регистрация")
-            span.page-header__login-name Регистрация
+            span.page-header__login-name
+              | Регистрация
             .page-header__avatar-wrap.page-header__avatar-wrap--border
               img.page-header__avatar(src="img/page-header__register.svg", alt="Регистрация")
 

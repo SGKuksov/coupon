@@ -22,7 +22,8 @@ mixin top-panel(subtitle, title, admin, rss, dealer_logo)
           a.top-panel__btn(href="#", title="Места и заведения")
             svg.top-panel__btn-star
               use(xlink:href="img/sprite-svg.svg#top-panel__star")
-            span Места и заведения
+            span
+              | Места и заведения
 
         .top-panel__coupon
           img.top-panel__coupon-img(src="img/top-panel__bg.png", alt="coupon")
@@ -37,6 +38,7 @@ mixin top-panel(subtitle, title, admin, rss, dealer_logo)
         a.top-panel__btn.top-panel__btn--gray(href="#", title="Подписаться на обновления")
           svg.top-panel__btn-star
             use(xlink:href="img/sprite-svg.svg#top-panel__rss")
-          span Подписаться на обновления
+          span
+           | Подписаться на обновления
 
 

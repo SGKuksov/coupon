@@ -6,15 +6,11 @@ mixin page-footer()
       'Вопросы и ответы': '#',
       'Сотрудничество': '#'
     };
-
-  -
     var footer_nav2 = {
       'Реклама на сайте': '#',
       'Контакты': '#',
       'Соцсети': '#'
     };
-
-  -
     var footer_nav3 = {
       'Пользовательское соглашение': '#',
       'Политика конфиденциальности': '#'
@@ -41,6 +37,7 @@ mixin page-footer()
             li.page-footer__nav-item
               a.page-footer__nav-link(href=val, title=key)= key
 
-    p.page-footer__copy (c) HotKupon.ru <br>Все сайты скидок
+    p.page-footer__copy
+      | &copy; HotKupon.ru <br>Все сайты скидок
 
 
