@@ -1,7 +1,6 @@
 .modal-location {
 
   .modal-dialog {
-    // width: 997px;
     max-width: 997px;
     height: 568px;
   }
@@ -32,6 +31,15 @@
     border-radius: 50%;
     border: 1px solid #f0f0f0;
     padding: 0px 0px !important ;
+    margin: -0.9rem -0.8rem 0rem auto !important;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+
+    span {
+      display: inline-block;
+      padding: 8px 7px 0px;
+      line-height: 5px;
+      height: 21px;
+    }
 
     // &:after {
     //   content: "";
@@ -56,15 +64,6 @@
     //   left: 11px;
     //   top: 7px;
     // }
-    //
-  }
-
-  &__close-icon {
-    width: 27px;
-    height: 27px;
-    border-radius: 50%;
-    border: 1px solid #f0f0f0;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   }
 
   &__body {
@@ -78,8 +77,6 @@
   &__city-char-list {
     display: flex;
     flex-direction: column;
-    // flex-wrap: wrap;
-
   }
 
   &__city-char {

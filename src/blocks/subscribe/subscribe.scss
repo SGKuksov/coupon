@@ -79,11 +79,6 @@
     @media (min-width: $screen-lg) {
       margin-bottom: 12px;
     }
-
-    &::-webkit-input-placeholder {color:#969696;}
-    &::-moz-placeholder          {color:#969696;}/* Firefox 19+ */
-    &:-moz-placeholder           {color:#969696;}/* Firefox 18- */
-    &:-ms-input-placeholder      {color:#969696;}
   }
 
   &__email {
@@ -100,11 +95,6 @@
     @media (min-width: $screen-lg) {
       margin-bottom: 12px;
     }
-
-    &::-webkit-input-placeholder {color:#969696;}
-    &::-moz-placeholder          {color:#969696;}/* Firefox 19+ */
-    &:-moz-placeholder           {color:#969696;}/* Firefox 18- */
-    &:-ms-input-placeholder      {color:#969696;}
   }
 
   &__submit {
@@ -115,7 +105,6 @@
     color: #fefefe;
     padding: 10px 25px 7px 25px;
     border-radius: 4px;
-    @media (min-width: $screen-md) {}
 
     @media (min-width: $screen-lg) {
       margin-bottom: 18px;
@@ -136,29 +125,12 @@
 
   &__close {
     position: absolute;
-    right: 25px;
-    top: 10px;
+    right: 10px;
+    top: 6px;
 
-    &:after {
-      content: "";
-      height: 1px;
-      width: 10px;
-      background-color: #979797;
-      position: absolute;
-      transform: rotate(45deg);
-      left: 2.5px;
-      top: 7px;
-    }
-
-    &:before {
-      content: "";
-      height: 10px;
-      width: 1px;
-      background-color: #979797;
-      position: absolute;
-      transform: rotate(45deg);
-      left: 7px;
-      top: 3px;
+    & span {
+      font-size: 20px;
+      color: #979797;
     }
   }
 }
