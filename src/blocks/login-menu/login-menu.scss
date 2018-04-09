@@ -1,0 +1,47 @@
+.login-menu {
+  border-radius: 4px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  p
+
+  &__item {
+    font-size: 14px;
+    color: #787878;
+    display: block;
+    width: 100%;
+    line-height: 20px;
+    height: 27px;
+    clear: both;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+
+    &:hover {
+      color: #787878;
+      background-color: #efecec;
+    }
+
+    &:active {
+      color: #787878;
+      background-color: #efecec;
+    }
+  }
+
+  &__log-out-item {
+    margin-top: 10px;
+    margin-bottom: 3px;
+    position: relative;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+
+    &:before {
+      position: absolute;
+      content: "";
+      top: -5px;
+      left: 0;
+      height: 1px;
+      width: 100%;
+      border-bottom: 1px solid #d8d8d8;
+    }
+  }
+}

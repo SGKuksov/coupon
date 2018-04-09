@@ -18,7 +18,7 @@ mixin page-header(name)
           svg.page-header__location-icon
             use(xlink:href="img/sprite-svg.svg#page-header__location")
           span.page-header__location-info Город
-          a.page-header__location-city(href="#") Москва
+          a.page-header__location-city#callModalLocation(href="#") Москва
         .page-header__logo
           img.page-header__logo-img(src="img/page-header__logo-img.svg", alt="hot kupon")
 
@@ -38,28 +38,62 @@ mixin page-header(name)
 
       if (name == "Константин")
         .page-header__login
-          a.page-header__login-link(href="#", title="Константин")
+          a.page-header__login-link#dropdownMenuLink(href="#", title="Константин" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
             span.page-header__login-name
               | Константин
             .page-header__avatar-wrap
               img.page-header__avatar(src="http://via.placeholder.com/26x26", alt="Константин")
             svg.page-header__login-dropdown
               use(xlink:href="img/sprite-svg.svg#page-header__login-dropdown")
+
+            //- dropdown
+            .dropdown-menu.page-header__login-menu.login-menu#pageHeaderLoginMenu(aria-labelledby="dropdownMenuLink")
+              a.dropdown-item.login-menu__item(href="#")
+                | Настройки
+              a.dropdown-item.login-menu__item(href="#")
+                | Подписки
+              a.dropdown-item.login-menu__item(href="#")
+                | Избранное
+              a.dropdown-item.login-menu__item(href="#")
+                | Ваши отзывы
+              a.dropdown-item.login-menu__item(href="#")
+                | Выйти
+                svg.page-header__log_out(width="14px" height="13px")
+                  use(xlink:href="img/sprite-svg.svg#page-header__log_out")
+
       else if (name == "Админ")
         .page-header__login
-          a.page-header__login-link(href="#", title="Админ")
+          a.page-header__login-link#dropdownMenuLink(href="#", title="Админ" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
             span.page-header__login-name
               | Админ
-            .page-header__avatar-wrap
+            .page-header__avatar-wrap.page-header__avatar-wrap--red-border
               img.page-header__avatar(src="img/page-header__avatar-admin.svg", alt="Админ")
+              //- svg.page-header__avatar-admin(width="14" height="14")
+              //-   use(xlink:href="img/sprite-svg.svg#page-header__avatar-admin")
+
             svg.page-header__login-dropdown
               use(xlink:href="img/sprite-svg.svg#page-header__login-dropdown")
+
+            //- dropdown
+            .dropdown-menu.page-header__login-menu.login-menu#pageHeaderLoginMenu(aria-labelledby="dropdownMenuLink")
+              a.dropdown-item.login-menu__item(href="#")
+                | Настройки
+              a.dropdown-item.login-menu__item(href="#")
+                | Подписки
+              a.dropdown-item.login-menu__item(href="#")
+                | Избранное
+              a.dropdown-item.login-menu__item(href="#")
+                | Ваши отзывы
+              a.dropdown-item.login-menu__item.login-menu__log-out-item(href="#")
+                | Выйти
+                svg.page-header__log_out(width="14px" height="13px")
+                  use(xlink:href="img/sprite-svg.svg#page-header__log_out")
+
       else
         .page-header__login
-          a.page-header__login-link(href="#", title="Регистрация")
+          a.page-header__login-link#dropdownMenuLink(href="#" title="Регистрация" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
             span.page-header__login-name
               | Регистрация
-            .page-header__avatar-wrap.page-header__avatar-wrap--border
-              img.page-header__avatar(src="img/page-header__register.svg", alt="Регистрация")
-
-
+            .page-header__avatar-wrap.page-header__avatar-wrap--gray-border
+              svg.page-header__log_in(width="26" height="26")
+                use(xlink:href="img/sprite-svg.svg#page-header__log_in")

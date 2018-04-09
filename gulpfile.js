@@ -60,8 +60,8 @@ let images = [
 let jsList = [
   './node_modules/jquery/dist/jquery.min.js',
   './node_modules/jquery-migrate/dist/jquery-migrate.min.js',
-  dirs.source + '/js/jquery-ui.min.js',
-  './node_modules/bootstrap/dist/js/bootstrap.min.js',
+  // dirs.source + '/js/jquery-ui.min.js',
+  './node_modules/bootstrap/dist/js/bootstrap.bundle.js',
   './node_modules/svg4everybody/dist/svg4everybody.js',
   './node_modules/object-fit-images/dist/ofi.js',
   dirs.source + '/js/pushy.min.js',

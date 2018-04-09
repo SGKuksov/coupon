@@ -121,6 +121,10 @@
       margin-left: 10px;
     }
 
+    &:hover {
+      color: #ff0101;
+    }
+
     &:after {
       content: "";
       position: absolute;
@@ -253,7 +257,7 @@
   }
 
   &__avatar {
-    // width: 100%;
+    width: 100%;
   }
 
   &__avatar-wrap {
@@ -264,10 +268,14 @@
     margin-left: 10px;
     margin-right: 5px;
 
-    &--border {
-      border: 1px solid #b6b6b6;
-      border-radius: 50%;
-      padding: 3px;
+    &--red-border {
+      border: 1px solid #ff0000;
+    }
+
+    &--gray-border {
+      // border: 1px solid #b6b6b6;
+      // padding-top: 5px;
+      // padding-left: 3px;
     }
   }
 
@@ -279,6 +287,12 @@
       display: flex;
       align-items: center;
     }
+  }
+
+  &__login-menu {
+    left: 50% !important;
+    top: 32px !important;
+    transform: translateX(-50%) !important;
   }
 
   &__menu {

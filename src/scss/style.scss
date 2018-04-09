@@ -45,7 +45,7 @@
 // pushy
 @import "pushy";
 // jquery-ui
-@import "jquery-ui";
+// @import "jquery-ui";
 
 // Растровый спрайт: примеси-генераторы правил
 @import 'src/blocks/sprite-png/sprite-png';
@@ -78,3 +78,4 @@
 @import 'src/blocks/subscribe/subscribe';
 @import 'src/blocks/about/about';
 @import 'src/blocks/modal-location/modal-location';
+@import 'src/blocks/login-menu/login-menu';

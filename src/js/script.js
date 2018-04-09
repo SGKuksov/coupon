@@ -1,15 +1,21 @@
 svg4everybody(); // иницализация полифила для IE
 
 $(document).ready(function(){
-  // весь ваш код c jQuery
+
   //при нажатию на любую кнопку, имеющую класс .btn
-  $(".btn").click(function() {
+  $("#callModalLocation").click(function() {
     //открыть модальное окно с id="myModal"
-    $("#myModal").modal('show');
+    $("#modalLocation").modal('show');
   });
 
   $(".subscribe .subscribe__close").click(function() {
+    // скрывает окно подписки
     $(this).parent().hide();
+  });
+
+  $("#dropdownMenuLink").click(function() {
+    // правка стилей выпадающего окна
+    $("#pageHeaderLoginMenu").addClass("");
   });
 
 
