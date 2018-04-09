@@ -11,6 +11,12 @@
 
   &:hover {
     color: #fefefe;
+    background-color: #ff3d3d;
     font-weight: bold;
+  }
+
+  &:active {
+    color: #fefefe;
+    background-color: #e30101;
   }
 }

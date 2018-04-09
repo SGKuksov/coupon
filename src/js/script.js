@@ -13,9 +13,10 @@ $(document).ready(function(){
     $(this).parent().hide();
   });
 
-  $("#dropdownMenuLink").click(function() {
-    // правка стилей выпадающего окна
-    $("#pageHeaderLoginMenu").addClass("");
+  $(".filter__btn").click(function() {
+    // кнопка переключения
+    $(".filter__btn").removeClass("filter__btn--active");
+    $(this).addClass("filter__btn--active");
   });
 
 

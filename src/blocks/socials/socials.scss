@@ -19,9 +19,15 @@
     height: 26px;
   }
 
-  &__fb,
-  &__vk,
-  &__socials {
-     fill: #B6B6B6;
+  svg {
+   fill: #B6B6B6;
+
+   &:hover {
+    fill: #bebebe;
+   }
+
+   &:active {
+    fill: #999999;
+   }
   }
 }

@@ -35,6 +35,8 @@
     &:hover {
       color: #787878;
       font-weight: normal;
+      background-color: #fff;
+
     }
 
     &--active {
@@ -46,7 +48,7 @@
     }
 
     &--right {
-      border-left: none;
+      margin-left: -1px;
       border-radius: 0 4px 4px 0;
     }
 
