@@ -7,6 +7,13 @@ mixin filter()
       'Стоимости',
       'Названию'
     ];
+    var metro_station = {
+      "Akadem":"Академическая",
+      "Admiral":"Адмиралтейская",
+      "Baltiy":"Балтийская",
+      "Vladim":"Владимирская",
+      "Grazd":"Гражданский проспект"
+    };
 
   .filter
     .filter__view
@@ -26,7 +33,44 @@ mixin filter()
         each val in sort_list
           option.filter__option(value= val)= val
 
-    a.filter__near(href="#")
-      span Искать поблизости
+    a.filter__near(href="#", title="Искать поблизости" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+      span
+        | Искать поблизости
       svg.filter__search_by_place
         use(xlink:href="img/sprite-svg.svg#filter__search_by_place")
+
+    .dropdown
+      button#dropdownMenu2.btn-secondary(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+        | Dropdown
+      form.dropdown-menu.p-4
+        .form-group
+          label(for="exampleDropdownFormEmail2") Email address
+          input#exampleDropdownFormEmail2.form-control(type="email" placeholder="email@example.com")
+        .form-group
+          label(for="exampleDropdownFormPassword2") Password
+          input#exampleDropdownFormPassword2.form-control(type="password" placeholder="Password")
+        .form-check
+          input#dropdownCheck2.form-check-input(type="checkbox")
+          label.form-check-label(for="dropdownCheck2")
+            | Remember me
+        button.btn.btn-primary(type="submit") Sign in
+
+    .dropdown.show
+      a#dropdownMenuLink.btn.btn-secondary.dropdown-toggle(href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+        | Dropdown link
+      .dropdown-menu
+        form.px-4.py-3
+          .form-group
+            input#exampleDropdownFormEmail1.form-control(type="email" placeholder="email@example.com")
+            button.page-header__submit(type="submit")
+              svg.page-header__submit-icon
+                use(xlink:href="img/sprite-svg.svg#page-header__submit-icon")
+          .dropdown-divider
+          .form-check
+            each val, key in metro_station
+              input.form-check-input(type="checkbox", name="dest", value=val, id=key)
+              label.form-check-label(for=key)=val
+
+        a.dropdown-item(href="#") New around here? Sign up
+        a.dropdown-item(href="#") Forgot password?
+

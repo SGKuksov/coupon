@@ -95,6 +95,7 @@
   &__near {
     width: 100%;
     text-align: right;
+    position: relative;
 
     @media (min-width: $screen-md) {
       width: auto;
