@@ -17,7 +17,7 @@
 <body>
   <header class="page-header">
     <div class="page-header__container">
-      <div class="modal fade modal-location" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal fade modal-location" id="modalLocation" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content modal-location__content">
             <div class="modal-header modal-location__header">
@@ -120,7 +120,7 @@
         <div class="page-header__location">
           <svg class="page-header__location-icon">
             <use xlink:href="img/sprite-svg.svg#page-header__location"></use>
-          </svg><span class="page-header__location-info">Город</span><a class="page-header__location-city" href="#">Москва</a></div>
+          </svg><span class="page-header__location-info">Город</span><a class="page-header__location-city" id="callModalLocation" href="#">Москва</a></div>
         <div class="page-header__logo"><img class="page-header__logo-img" src="img/page-header__logo-img.svg" alt="hot kupon" /></div>
       </div>
       <form class="page-header__search"><input class="page-header__input" type="text" /><button class="page-header__submit" type="submit"><svg class="page-header__submit-icon"><use xlink:href="img/sprite-svg.svg#page-header__submit-icon"></use></svg></button></form>
@@ -153,7 +153,7 @@
         </ul>
       </div>
       <div class="page-header__btn"><a class="btn" href="#">Подписаться</a></div>
-      <div class="page-header__login"><a class="page-header__login-link" href="#" title="Регистрация"><span class="page-header__login-name">Регистрация</span><div class="page-header__avatar-wrap page-header__avatar-wrap--border"><img class="page-header__avatar" src="img/page-header__register.svg" alt="Регистрация"/></div></a></div>
+      <div class="page-header__login"><a class="page-header__login-link" id="dropdownMenuLink" href="#" title="Регистрация" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="page-header__login-name">Регистрация</span><div class="page-header__avatar-wrap page-header__avatar-wrap--gray-border"><svg class="page-header__log_in" width="26" height="26"><use xlink:href="img/sprite-svg.svg#page-header__log_in"></use></svg></div></a></div>
     </div>
   </header>
   <div class="page-container">
