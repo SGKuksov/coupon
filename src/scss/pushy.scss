@@ -12,7 +12,7 @@ $menu_width: 235px !default;
     width: $menu_width;
     height: 100%;
     top: 50px;
-    z-index: 9998;
+    z-index: 900;
     // background: #ffffff;
     overflow: auto;
     -webkit-overflow-scrolling: touch; /* enables momentum scrolling in iOS overflow elements */
@@ -142,6 +142,7 @@ $menu_width: 235px !default;
 
 .pushy-open-left,
 .pushy-open-right{
+
     .site-overlay{
         display: block;
         position: fixed;
@@ -149,14 +150,14 @@ $menu_width: 235px !default;
         right: 0;
         bottom: 0;
         left: 0;
-        z-index: 9997;
+        z-index: 899;
         background-color: rgba(0,0,0,0.5);
         -webkit-animation: fade 500ms;
         animation: fade 500ms;
 
-        @media (min-width: $screen-md) {
-          display: none;
-        }
+        // @media (min-width: $screen-md) {
+        //   display: none;
+        // }
     }
 }
 
