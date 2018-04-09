@@ -964,7 +964,7 @@ select {
   width: 235px;
   height: 100%;
   top: 50px;
-  z-index: 9998;
+  z-index: 900;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
   /* enables momentum scrolling in iOS overflow elements */
@@ -1051,7 +1051,7 @@ select {
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 9997;
+  z-index: 899;
   background-color: rgba(0, 0, 0, 0.5);
   -webkit-animation: fade 500ms;
   animation: fade 500ms;
@@ -1083,8 +1083,8 @@ select {
 
 .pushy-submenu ul {
   padding-left: 15px;
-  -webkit-transition: max-height 0.2s ease-in-out, visibility 0.2s ease-in-out;
-  transition: max-height 0.2s ease-in-out, visibility 0.2s ease-in-out;
+  -webkit-transition: max-height 0.2s ease-in-out, visibility 0.2s ease-in-out;
+  transition: max-height 0.2s ease-in-out, visibility 0.2s ease-in-out;
 }
 
 .pushy-submenu ul .pushy-link {
@@ -2315,6 +2315,7 @@ select {
 .filter__near {
   width: 100%;
   text-align: right;
+  position: relative;
 }
 
 .filter__near span {
@@ -2912,6 +2913,23 @@ select {
   border-bottom: 1px solid #d8d8d8;
 }
 
+.overlay {
+  display: none;
+}
+
+.overlay--show {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 899;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-animation: fade 500ms;
+  animation: fade 500ms;
+}
+
 @media (min-width: 576px) {
   .modal-dialog {
     max-width: 500px;
@@ -3015,10 +3033,6 @@ select {
   .pushy-open-right .push {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
-  }
-  .pushy-open-left .site-overlay,
-  .pushy-open-right .site-overlay {
-    display: none;
   }
   .page-container {
     padding-left: 0;

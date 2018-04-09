@@ -258,6 +258,7 @@
     </aside>
     <main class="main">
       <div class="site-overlay"></div>
+      <div class="overlay"></div>
       <div class="main__container" id="container">
         <div class="top-panel">
           <h1 class="top-panel__title">Все купоны со скидками в одном месте</h1>
@@ -309,7 +310,22 @@
                 <use xlink:href="img/sprite-svg.svg#filter__on_map"></use>
               </svg><span>На карте</span></a>
           </div>
-          <div class="filter__sort"><span class="filter__desc">Сортировать по:</span><select class="filter__select custom-select" name="label"><option class="filter__option" value="Популярности">Популярности</option><option class="filter__option" value="Рейтингу">Рейтингу</option><option class="filter__option" value="Стоимости">Стоимости</option><option class="filter__option" value="Названию">Названию</option></select></div><a class="filter__near" href="#"><span>Искать поблизости</span><svg class="filter__search_by_place"><use xlink:href="img/sprite-svg.svg#filter__search_by_place"></use></svg></a></div>
+          <div class="filter__sort"><span class="filter__desc">Сортировать по:</span><select class="filter__select custom-select" name="label"><option class="filter__option" value="Популярности">Популярности</option><option class="filter__option" value="Рейтингу">Рейтингу</option><option class="filter__option" value="Стоимости">Стоимости</option><option class="filter__option" value="Названию">Названию</option></select></div><a class="filter__near" href="#" title="Искать поблизости" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Искать поблизости</span><svg class="filter__search_by_place"><use xlink:href="img/sprite-svg.svg#filter__search_by_place"></use></svg></a>
+          <div class="dropdown"><button class="btn-secondary" id="dropdownMenu2" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
+            <form class="dropdown-menu p-4">
+              <div class="form-group"><label for="exampleDropdownFormEmail2">Email address</label><input class="form-control" id="exampleDropdownFormEmail2" type="email" placeholder="email@example.com" /></div>
+              <div class="form-group"><label for="exampleDropdownFormPassword2">Password</label><input class="form-control" id="exampleDropdownFormPassword2" type="password" placeholder="Password" /></div>
+              <div class="form-check"><input class="form-check-input" id="dropdownCheck2" type="checkbox" /><label class="form-check-label" for="dropdownCheck2">Remember me</label></div><button class="btn btn-primary" type="submit">Sign in</button></form>
+          </div>
+          <div class="dropdown show"><a class="btn btn-secondary dropdown-toggle" id="dropdownMenuLink" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown link</a>
+            <div class="dropdown-menu">
+              <form class="px-4 py-3">
+                <div class="form-group"><input class="form-control" id="exampleDropdownFormEmail1" type="email" placeholder="email@example.com" /><button class="page-header__submit" type="submit"><svg class="page-header__submit-icon"><use xlink:href="img/sprite-svg.svg#page-header__submit-icon"></use></svg></button></div>
+                <div class="dropdown-divider"></div>
+                <div class="form-check"><input class="form-check-input" type="checkbox" name="dest" value="Академическая" id="Akadem" /><label class="form-check-label" for="Akadem">Академическая</label><input class="form-check-input" type="checkbox" name="dest" value="Адмиралтейская" id="Admiral" /><label class="form-check-label" for="Admiral">Адмиралтейская</label><input class="form-check-input" type="checkbox" name="dest" value="Балтийская" id="Baltiy" /><label class="form-check-label" for="Baltiy">Балтийская</label><input class="form-check-input" type="checkbox" name="dest" value="Владимирская" id="Vladim" /><label class="form-check-label" for="Vladim">Владимирская</label><input class="form-check-input" type="checkbox" name="dest" value="Гражданский проспект" id="Grazd" /><label class="form-check-label" for="Grazd">Гражданский проспект</label></div>
+              </form><a class="dropdown-item" href="#">New around here? Sign up</a><a class="dropdown-item" href="#">Forgot password?</a></div>
+          </div>
+        </div>
         <div class="main-content">
           <div class="main-content__inner">
             <div class="card">
