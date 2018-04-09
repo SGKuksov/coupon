@@ -1357,6 +1357,11 @@ select {
   display: none;
 }
 
+.page-header__btn:hover {
+  color: #fefefe;
+  font-weight: bold;
+}
+
 .page-header__login-link {
   color: #787878;
 }
@@ -1538,8 +1543,16 @@ select {
   height: 26px;
 }
 
-.socials__fb, .socials__vk, .socials__socials {
+.socials svg {
   fill: #B6B6B6;
+}
+
+.socials svg:hover {
+  fill: #bebebe;
+}
+
+.socials svg:active {
+  fill: #999999;
 }
 
 .btn {
@@ -1556,7 +1569,13 @@ select {
 
 .btn:hover {
   color: #fefefe;
+  background-color: #ff3d3d;
   font-weight: bold;
+}
+
+.btn:active {
+  color: #fefefe;
+  background-color: #e30101;
 }
 
 .side-nav {
@@ -1935,22 +1954,62 @@ select {
   color: #f00;
 }
 
-.top-panel__btn span {
-  padding-left: 9px;
-  padding-right: 11px;
+.top-panel__btn svg {
+  fill: #ff0000;
 }
 
 .top-panel__btn:hover {
-  color: #f00;
+  color: #fefefe;
+  background-color: #e30101;
+  border: 1px solid #e30101;
 }
 
-.top-panel__btn--gray {
+.top-panel__btn:hover svg {
+  fill: #fefefe;
+}
+
+.top-panel__btn:active {
+  color: #fefefe;
+  background-color: #e30101;
+}
+
+.top-panel__btn:active svg {
+  fill: #fefefe;
+}
+
+.top-panel__btn span {
+  padding-left: 9px;
+  padding-right: 11px;
+  line-height: 1;
+}
+
+.top-panel__btn--rss {
   border: 1px solid #dedede;
   color: #787878;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.top-panel__btn--gray:hover {
+.top-panel__btn--rss svg {
+  fill: #b5b5b5;
+}
+
+.top-panel__btn--rss:hover {
   color: #787878;
+  border: 1px solid #969696;
+}
+
+.top-panel__btn--rss:active {
+  border: 1px solid #dedede;
+  color: #5fb600;
+}
+
+.top-panel__btn--rss:active svg {
+  fill: #5fb600;
 }
 
 .top-panel .top-panel__btn-star {
@@ -2140,6 +2199,7 @@ select {
 .filter__btn:hover {
   color: #787878;
   font-weight: normal;
+  background-color: #fff;
 }
 
 .filter__btn--active {
@@ -2151,7 +2211,7 @@ select {
 }
 
 .filter__btn--right {
-  border-left: none;
+  margin-left: -1px;
   border-radius: 0 4px 4px 0;
 }
 
