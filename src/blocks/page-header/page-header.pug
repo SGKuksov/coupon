@@ -22,11 +22,13 @@ mixin page-header(name)
         .page-header__logo
           img.page-header__logo-img(src="img/page-header__logo-img.svg", alt="hot kupon")
 
-      form.page-header__search
-        input.page-header__input(type="text")
+      form.page-header__search(action="")
+        input.page-header__input(type="text" name="header_search" autocomplete="on")
         button.page-header__submit(type="submit")
           svg.page-header__submit-icon
             use(xlink:href="img/sprite-svg.svg#page-header__submit-icon")
+        button.page-header__cancel
+          | Отмена
 
       +main-nav()
 
@@ -47,7 +49,6 @@ mixin page-header(name)
             svg.page-header__login-dropdown
               use(xlink:href="img/sprite-svg.svg#page-header__login-dropdown")
 
-            //- dropdown
             .dropdown-menu.page-header__login-menu.login-menu#pageHeaderLoginMenu(aria-labelledby="dropdownMenuLink")
               a.dropdown-item.login-menu__item(href="#")
                 | Настройки
@@ -57,7 +58,7 @@ mixin page-header(name)
                 | Избранное
               a.dropdown-item.login-menu__item(href="#")
                 | Ваши отзывы
-              a.dropdown-item.login-menu__item(href="#")
+              a.dropdown-item.login-menu__item.login-menu__log-out-item(href="#")
                 | Выйти
                 svg.page-header__log_out(width="14px" height="13px")
                   use(xlink:href="img/sprite-svg.svg#page-header__log_out")
@@ -71,11 +72,9 @@ mixin page-header(name)
               img.page-header__avatar(src="img/page-header__avatar-admin.svg", alt="Админ")
               //- svg.page-header__avatar-admin(width="14" height="14")
               //-   use(xlink:href="img/sprite-svg.svg#page-header__avatar-admin")
-
             svg.page-header__login-dropdown
               use(xlink:href="img/sprite-svg.svg#page-header__login-dropdown")
 
-            //- dropdown
             .dropdown-menu.page-header__login-menu.login-menu#pageHeaderLoginMenu(aria-labelledby="dropdownMenuLink")
               a.dropdown-item.login-menu__item(href="#")
                 | Настройки
