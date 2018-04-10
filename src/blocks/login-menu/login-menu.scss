@@ -3,16 +3,21 @@
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 
   &__item {
-    font-size: 14px;
+    font-size: 18px;
     color: #787878;
     display: block;
     width: 100%;
-    line-height: 20px;
+    line-height: 24px;
     height: 27px;
     clear: both;
     white-space: nowrap;
     background-color: transparent;
     border: 0;
+
+    @media (min-width: $screen-md) {
+      font-size: 14px;
+      line-height: 20px;
+    }
 
     &:hover {
       color: #787878;

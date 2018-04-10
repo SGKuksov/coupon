@@ -28,19 +28,6 @@
     height: 330px;
   }
 
-  &--long-title {
-    /* Длинные заголовки */
-      height: 330px !important;
-
-    @media (min-width: $screen-md) {
-      height: 250px !important;
-    }
-
-    @media (min-width: $screen-lg) {
-      height: 350px !important;
-    }
-  }
-
   &__img-wrap {
     margin-left: -18px;
     margin-top: -19px;
@@ -118,12 +105,6 @@
     font-size: 14px;
     height: 32px;
     overflow: hidden;
-
-    &--long-title {
-
-      height: 50px;
-      @media (min-width: $screen-lg) {}
-    }
 
     &:hover {
       font-weight: 700;

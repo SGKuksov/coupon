@@ -1,0 +1,33 @@
+mixin modals()
+
+  #selectCityModal.modal.modals(tabindex='-1', role='dialog',  aria-labelledby='exampleModalCenterTitle', aria-hidden='true')
+    .modal-dialog.modal-dialog-centered(role='document')
+      .modal-content.modals__content
+        .modal-header.modals__header
+          h5.modal-title.modals__title
+            | Выбран ваш город ?
+          a.close.modals__close(href="", data-dismiss='modal', aria-label='Close')
+            span(aria-hidden='true') ×
+
+        .modal-body.modals__body
+          button.modals__btn
+            | Да
+          button.modals__btn.modals__btn--gray
+            | Нет
+
+
+
+
+  #myModal.modal.modals(tabindex='-1', role='dialog',  aria-labelledby='exampleModalCenterTitle', aria-hidden='true')
+    .modal-dialog.modal-dialog-centered(role='document')
+      .modal-content.modals__content
+        .modal-header.modals__header
+          h5.modal-title.modals__title
+            | Выбран ваш город
+          a.close.modals__close(href="", data-dismiss='modal', aria-label='Close')
+            span(aria-hidden='true') ×
+
+        .modal-body.modals__body
+
+        .modal-footer.modals__footer
+
