@@ -272,8 +272,8 @@
                 </a>
               </div>
             </div>
-            <a class="top-panel__btn top-panel__btn--rss" href="#" title="Подписаться на обновления">
-              <svg class="top-panel__btn-star">
+            <a class="top-panel__rss" href="#" title="Подписаться на обновления">
+              <svg class="top-panel__btn-rss">
                 <use xlink:href="img/sprite-svg.svg#top-panel__rss"></use>
               </svg><span>Подписаться на обновления</span></a>
           </div>
@@ -282,30 +282,30 @@
           <form class="top-panel-edit__form" action=""><select class="top-panel-edit__select custom-select" name="label"><option class="top-panel-edit__option" value="Аквапарк">Аквапарк</option><option class="top-panel-edit__option" value="Активный отдых">Активный отдых</option><option class="top-panel-edit__option" value="Аттракционы">Аттракционы</option><option class="top-panel-edit__option" value="Аэротрубы">Аэротрубы</option><option class="top-panel-edit__option" value="Бани и сауны">Бани и сауны</option></select><input class="top-panel-edit__submit btn" type="submit" value="Добавить" /><button class="top-panel-edit__save btn" type="submit"><svg class="top-panel-edit__icon" fill="#f00"><use xlink:href="img/sprite-svg.svg#top-panel-edit__save"></use></svg><span>Сохранить</span></button></form>
         </div>
         <div class="filter">
-          <div class="filter__view"><span class="filter__desc">Вид:</span>
-            <a class="filter__btn filter__btn--left filter__btn--active btn" href="#">
-              <svg class="filter__by_plitka">
-                <use xlink:href="img/sprite-svg.svg#filter__by_plitka"></use>
-              </svg><span>Плиткой</span></a>
-            <a class="filter__btn filter__btn--right btn" href="#">
-              <svg class="filter__on_map">
-                <use xlink:href="img/sprite-svg.svg#filter__on_map"></use>
-              </svg><span>На карте</span></a>
+          <div class="filter__settings">
+            <div class="filter__view"><span class="filter__desc">Вид:</span>
+              <a class="filter__btn filter__btn--left filter__btn--active btn" href="#">
+                <svg class="filter__by_plitka">
+                  <use xlink:href="img/sprite-svg.svg#filter__by_plitka"></use>
+                </svg><span>Плиткой</span></a>
+              <a class="filter__btn filter__btn--right btn" href="#">
+                <svg class="filter__on_map">
+                  <use xlink:href="img/sprite-svg.svg#filter__on_map"></use>
+                </svg><span>На карте</span></a>
+            </div>
+            <div class="filter__sort"><span class="filter__desc">Сортировать по:</span><select class="filter__select custom-select" name="label"><option class="filter__option" value="Популярности">Популярности</option><option class="filter__option" value="Рейтингу">Рейтингу</option><option class="filter__option" value="Стоимости">Стоимости</option><option class="filter__option" value="Названию">Названию</option></select></div>
           </div>
-          <div class="filter__sort"><span class="filter__desc">Сортировать по:</span><select class="filter__select custom-select" name="label"><option class="filter__option" value="Популярности">Популярности</option><option class="filter__option" value="Рейтингу">Рейтингу</option><option class="filter__option" value="Стоимости">Стоимости</option><option class="filter__option" value="Названию">Названию</option></select></div><a class="filter__near" href="#" title="Искать поблизости" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Искать поблизости</span><svg class="filter__search_by_place"><use xlink:href="img/sprite-svg.svg#filter__search_by_place"></use></svg></a>
-          <div class="dropdown"><button class="btn-secondary" id="dropdownMenu2" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
-            <form class="dropdown-menu p-4">
-              <div class="form-group"><label for="exampleDropdownFormEmail2">Email address</label><input class="form-control" id="exampleDropdownFormEmail2" type="email" placeholder="email@example.com" /></div>
-              <div class="form-group"><label for="exampleDropdownFormPassword2">Password</label><input class="form-control" id="exampleDropdownFormPassword2" type="password" placeholder="Password" /></div>
-              <div class="form-check"><input class="form-check-input" id="dropdownCheck2" type="checkbox" /><label class="form-check-label" for="dropdownCheck2">Remember me</label></div><button class="btn btn-primary" type="submit">Sign in</button></form>
-          </div>
-          <div class="dropdown show"><a class="btn btn-secondary dropdown-toggle" id="dropdownMenuLink" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown link</a>
-            <div class="dropdown-menu">
-              <form class="px-4 py-3">
-                <div class="form-group"><input class="form-control" id="exampleDropdownFormEmail1" type="email" placeholder="email@example.com" /><button class="page-header__submit" type="submit"><svg class="page-header__submit-icon"><use xlink:href="img/sprite-svg.svg#page-header__submit-icon"></use></svg></button></div>
-                <div class="dropdown-divider"></div>
-                <div class="form-check"><input class="form-check-input" type="checkbox" name="dest" value="Академическая" id="Akadem" /><label class="form-check-label" for="Akadem">Академическая</label><input class="form-check-input" type="checkbox" name="dest" value="Адмиралтейская" id="Admiral" /><label class="form-check-label" for="Admiral">Адмиралтейская</label><input class="form-check-input" type="checkbox" name="dest" value="Балтийская" id="Baltiy" /><label class="form-check-label" for="Baltiy">Балтийская</label><input class="form-check-input" type="checkbox" name="dest" value="Владимирская" id="Vladim" /><label class="form-check-label" for="Vladim">Владимирская</label><input class="form-check-input" type="checkbox" name="dest" value="Гражданский проспект" id="Grazd" /><label class="form-check-label" for="Grazd">Гражданский проспект</label></div>
-              </form><a class="dropdown-item" href="#">New around here? Sign up</a><a class="dropdown-item" href="#">Forgot password?</a></div>
+          <div class="dropdown show filter__near filter-near"><a class="filter-near__link" id="filterNearLink" href="#" title="Искать поблизости" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Искать поблизости</span><svg class="filter__search_by_place"><use xlink:href="img/sprite-svg.svg#filter__search_by_place"></use></svg></a>
+            <form class="dropdown-menu dropdown-menu-right filter-near__dropdown" action="">
+              <div class="form-group filter-near__search-group"><input class="filter-near__search form-control" type="text" placeholder="Поиск по адресу" /><button class="filter-near__submit" type="submit"><svg class="filter-near__submit-icon"><use xlink:href="img/sprite-svg.svg#page-header__submit-icon"></use></svg></button></div>
+              <div class="form-check filter-near__check-list"><span class="filter-near__check-title">Метро</span>
+                <div class="filter-near__check-item"><input class="form-check-input filter-near__check-input" type="checkbox" name="dest" value="Академическая" id="Akadem" /><label class="form-check-label filter-near__check-input" for="Akadem">Академическая</label></div>
+                <div class="filter-near__check-item"><input class="form-check-input filter-near__check-input" type="checkbox" name="dest" value="Адмиралтейская" id="Admiral" /><label class="form-check-label filter-near__check-input" for="Admiral">Адмиралтейская</label></div>
+                <div class="filter-near__check-item"><input class="form-check-input filter-near__check-input" type="checkbox" name="dest" value="Балтийская" id="Baltiy" /><label class="form-check-label filter-near__check-input" for="Baltiy">Балтийская</label></div>
+                <div class="filter-near__check-item"><input class="form-check-input filter-near__check-input" type="checkbox" name="dest" value="Владимирская" id="Vladim" /><label class="form-check-label filter-near__check-input" for="Vladim">Владимирская</label></div>
+                <div class="filter-near__check-item"><input class="form-check-input filter-near__check-input" type="checkbox" name="dest" value="Гражданский проспект" id="Grazd" /><label class="form-check-label filter-near__check-input" for="Grazd">Гражданский проспект</label></div>
+              </div>
+            </form>
           </div>
         </div>
         <div class="main-content">
