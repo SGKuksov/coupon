@@ -16,61 +16,43 @@ mixin filter()
     };
 
   .filter
-    .filter__view
-      span.filter__desc Вид:
-      a.filter__btn.filter__btn--left.filter__btn--active.btn(href="#")
-        svg.filter__by_plitka
-          use(xlink:href="img/sprite-svg.svg#filter__by_plitka")
-        span Плиткой
-      a.filter__btn.filter__btn--right.btn(href="#")
-        svg.filter__on_map
-          use(xlink:href="img/sprite-svg.svg#filter__on_map")
-        span На карте
+    .filter__settings
+      .filter__view
+        span.filter__desc Вид:
+        a.filter__btn.filter__btn--left.filter__btn--active.btn(href="#")
+          svg.filter__by_plitka
+            use(xlink:href="img/sprite-svg.svg#filter__by_plitka")
+          span Плиткой
+        a.filter__btn.filter__btn--right.btn(href="#")
+          svg.filter__on_map
+            use(xlink:href="img/sprite-svg.svg#filter__on_map")
+          span На карте
+      .filter__sort
+        span.filter__desc Сортировать по:
+        select.filter__select.custom-select(name="label")
+          each val in sort_list
+            option.filter__option(value= val)= val
 
-    .filter__sort
-      span.filter__desc Сортировать по:
-      select.filter__select.custom-select(name="label")
-        each val in sort_list
-          option.filter__option(value= val)= val
+    .dropdown.show.filter__near.filter-near
+      a.filter-near__link#filterNearLink(href="#" title="Искать поблизости" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+        span
+          | Искать поблизости
+        svg.filter__search_by_place
+          use(xlink:href="img/sprite-svg.svg#filter__search_by_place")
 
-    a.filter__near(href="#", title="Искать поблизости" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
-      span
-        | Искать поблизости
-      svg.filter__search_by_place
-        use(xlink:href="img/sprite-svg.svg#filter__search_by_place")
+      form.dropdown-menu.dropdown-menu-right.filter-near__dropdown(action="")
+        .form-group.filter-near__search-group
+          input.filter-near__search.form-control(type="text" placeholder="Поиск по адресу")
+          button.filter-near__submit(type="submit")
+            svg.filter-near__submit-icon
+              use(xlink:href="img/sprite-svg.svg#page-header__submit-icon")
+        .form-check.filter-near__check-list
+          span.filter-near__check-title
+            | Метро
+          each val, key in metro_station
+            .filter-near__check-item
+              input.form-check-input.filter-near__check-input(type="checkbox", name="dest", value=val, id=key)
+              label.form-check-label.filter-near__check-label(for=key)=val
 
-    .dropdown
-      button#dropdownMenu2.btn-secondary(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
-        | Dropdown
-      form.dropdown-menu.p-4
-        .form-group
-          label(for="exampleDropdownFormEmail2") Email address
-          input#exampleDropdownFormEmail2.form-control(type="email" placeholder="email@example.com")
-        .form-group
-          label(for="exampleDropdownFormPassword2") Password
-          input#exampleDropdownFormPassword2.form-control(type="password" placeholder="Password")
-        .form-check
-          input#dropdownCheck2.form-check-input(type="checkbox")
-          label.form-check-label(for="dropdownCheck2")
-            | Remember me
-        button.btn.btn-primary(type="submit") Sign in
 
-    .dropdown.show
-      a#dropdownMenuLink.btn.btn-secondary.dropdown-toggle(href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
-        | Dropdown link
-      .dropdown-menu
-        form.px-4.py-3
-          .form-group
-            input#exampleDropdownFormEmail1.form-control(type="email" placeholder="email@example.com")
-            button.page-header__submit(type="submit")
-              svg.page-header__submit-icon
-                use(xlink:href="img/sprite-svg.svg#page-header__submit-icon")
-          .dropdown-divider
-          .form-check
-            each val, key in metro_station
-              input.form-check-input(type="checkbox", name="dest", value=val, id=key)
-              label.form-check-label(for=key)=val
-
-        a.dropdown-item(href="#") New around here? Sign up
-        a.dropdown-item(href="#") Forgot password?
 

@@ -3,7 +3,7 @@ mixin top-panel(subtitle, title, admin, rss, dealer_logo)
   .top-panel
     if (dealer_logo)
       .top-panel__dealer-logo
-        img.top-panel__dealer-logo-img(src="http://via.placeholder.com/200x50", alt=subtitle, title=subtitle)
+        img.top-panel__dealer-logo-img(src="img/top-panel__dealer-logo.png", alt=subtitle, title=subtitle)
       h1.top-panel__dealer-logo-caption=subtitle
       p.top-panel__subtitle=title
 
@@ -19,7 +19,7 @@ mixin top-panel(subtitle, title, admin, rss, dealer_logo)
           +label('Барбершопы', admin)
 
         .top-panel__btn-wrap
-          a.top-panel__btn(href="#", title="Места и заведения")
+          a.top-panel__star(href="#", title="Места и заведения")
             svg.top-panel__btn-star
               use(xlink:href="img/sprite-svg.svg#top-panel__star")
             span
@@ -35,8 +35,8 @@ mixin top-panel(subtitle, title, admin, rss, dealer_logo)
           +label('Подарки', admin)
           +label('Барбершопы', admin)
 
-        a.top-panel__btn.top-panel__btn--rss(href="#", title="Подписаться на обновления")
-          svg.top-panel__btn-star
+        a.top-panel__rss(href="#", title="Подписаться на обновления")
+          svg.top-panel__btn-rss
             use(xlink:href="img/sprite-svg.svg#top-panel__rss")
           span
            | Подписаться на обновления
