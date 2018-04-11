@@ -1,7 +1,9 @@
 .socials {
+  justify-content: center;
 
   &__list {
     display: flex;
+    justify-content: center;
     list-style: none;
     margin-right: 18px;
   }

@@ -1,36 +1,101 @@
 mixin modals()
 
   #selectCityModal.modal.fade.modals(tabindex='-1', role='dialog',  aria-labelledby='exampleModalCenterTitle', aria-hidden='true')
-    .modal-dialog.modal-dialog-centered(role='document')
+    .modal-dialog.modal-dialog-centered.modals__dialog.modals__dialog--sm(role='document')
       .modal-content.modals__content
         .modal-header.modals__header
           h5.modal-title.modals__title
             | Выбран ваш город ?
-          a.close.modals__close(href="", data-dismiss='modal', aria-label='Close')
+          a.close.modals__close(href="#", data-dismiss='modal', aria-label='Close')
             span(aria-hidden='true') ×
 
         .modal-body.modals__body
-          .page-header__location
-            +location()
+          .page-header__location.location
+            svg.location__icon
+              use(xlink:href="img/sprite-svg.svg#page-header__location")
+            span.location__info Город
+            a.location__city#callModalLocation(href="#") Москва
           .modals__btn-block
             button.modals__btn#modals__btn-apply
               | Да
             button.modals__btn.modals__btn--gray#modalsBtnCancel
               | Нет
 
-
-
-
-  #myModal.modal.fade.modals(tabindex='-1', role='dialog',  aria-labelledby='exampleModalCenterTitle', aria-hidden='true')
-    .modal-dialog.modal-dialog-centered(role='document')
+  #ratingModal.modal.fade.modals(tabindex='-1', role='dialog',  aria-labelledby='exampleModalCenterTitle', aria-hidden='true')
+    .modal-dialog.modal-dialog-centered.modals__dialog.modals__dialog--md(role='document')
       .modal-content.modals__content
         .modal-header.modals__header
           h5.modal-title.modals__title
-            | Выбран ваш город
-          a.close.modals__close(href="", data-dismiss='modal', aria-label='Close')
+            | Спасибо за вашу оценку!
+          a.close.modals__close(href="#", data-dismiss='modal', aria-label='Close')
             span(aria-hidden='true') ×
 
         .modal-body.modals__body
+          p.modals__text
+            | Вы можете поделиться данным купоном со своими друзьями в социальных сетях!
+          .socials
+            +socials()
+          .modals__btn-block
+            button.modals__btn.modals__btn-close(data-dismiss='modal', aria-label='Close')
+              | Закрыть
 
-        .modal-footer.modals__footer
+  #reviewModal.modal.fade.modals(tabindex='-1', role='dialog',  aria-labelledby='exampleModalCenterTitle', aria-hidden='true')
+    .modal-dialog.modal-dialog-centered.modals__dialog.modals__dialog--md(role='document')
+      .modal-content.modals__content
+        .modal-header.modals__header
+          h5.modal-title.modals__title
+            | Спасибо за ваш отзыв!
+          a.close.modals__close(href="#", data-dismiss='modal', aria-label='Close')
+            span(aria-hidden='true') ×
+
+        .modal-body.modals__body
+          p.modals__text
+            | Вы можете поделиться данным купоном со своими друзьями в социальных сетях!
+          .socials
+            +socials()
+          .modals__btn-block
+            button.modals__btn.modals__btn-close(data-dismiss='modal', aria-label='Close')
+              | Закрыть
+
+  #errorModal.modal.fade.modals(tabindex='-1', role='dialog',  aria-labelledby='exampleModalCenterTitle', aria-hidden='true')
+    .modal-dialog.modal-dialog-centered.modals__dialog.modals__dialog--md(role='document')
+      .modal-content.modals__content
+        .modal-header.modals__header
+          h5.modal-title.modals__title
+            | Купон не сработал?
+          a.close.modals__close(href="#", data-dismiss='modal', aria-label='Close')
+            span(aria-hidden='true') ×
+
+        form.modal-body.modals__body
+          p.modals__text
+            | Нашли ошибку? Расскажите нам!
+          label.modals__label(for="conditions")
+            input.modals__radio(id="conditions" type="radio" name="error")
+            |  Ошибка в условиях
+          label.modals__label(for="disconts")
+            input.modals__radio(id="disconts" type="radio" name="error")
+            |  Не удалось получить скидку
+          label.modals__label(for="other")
+            input.modals__radio(id="other" type="radio" name="error")
+            |  Другое
+          textarea.modals__textarea(name="msg")
+          .modals__btn-block
+            button.modals__btn.modals__btn-input( type="submit")
+              | Отправить
+
+
+  //- #myModal.modal.fade.modals(tabindex='-1', role='dialog',  aria-labelledby='exampleModalCenterTitle', aria-hidden='true')
+  //-   .modal-dialog.modal-dialog-centered(role='document')
+  //-     .modal-content.modals__content
+  //-       .modal-header.modals__header
+  //-         h5.modal-title.modals__title
+  //-           | Выбран ваш город
+  //-         a.close.modals__close(href="", data-dismiss='modal', aria-label='Close')
+  //-           span(aria-hidden='true') ×
+
+  //-       .modal-body.modals__body
+
+  //-       .modal-footer.modals__footer
+
+
 

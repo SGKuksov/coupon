@@ -2,20 +2,62 @@ svg4everybody(); // иницализация полифила для IE
 
 $(document).ready(function(){
 
-  //при нажатию на любую кнопку, имеющую класс .btn
-  $("#callModalLocation").click(function() {
-    var doc_w = $(document).width();
+  // Обрезание многострочного текста
+  (function($) {
+    var truncate = function(el) {
+        var text = el.text(),
+            height = el.height(),
+            clone = el.clone();
 
-    if (doc_w >= 1024 ) {
-      //открыть модальное окно с id="myModal"
-      $("#selectCityModal").modal('show');
-    }
-  });
+    clone.css({
+            position: 'absolute',
+            visibility: 'hidden',
+            height: 'auto'
+        });
+        el.after(clone);
 
+        var l = text.length - 1;
+        for (; l >= 0 && clone.height() > height; --l) {
+            clone.text(text.substring(0, l) + '...');
+        }
+
+        el.text(clone.text());
+        clone.remove();
+    };
+
+    $.fn.truncateText = function() {
+        return this.each(function () {
+            truncate($(this));
+        });
+    };
+  }(jQuery));
+
+  // вызов обрезания текста
+  $('.card__link').truncateText();
+  $('.card__place').truncateText();
+
+  //вызов малого модального окна при клике на город
   $("#modalsBtnCancel").click(function() {
     $("#selectCityModal").modal('hide');
     $("#modalLocation").modal('show');
   });
+
+  //вызов большого модального окна выбора города при клике на "НЕТ"
+  $("#callModalLocation").click(function() {
+    var doc_w = $(document).width();
+
+    if (doc_w >= 1024 ) {
+      $("#selectCityModal").modal('show');
+    }
+  });
+
+  $(".btn").click(function() {
+    $("#errorModal").modal('show');
+  });
+
+  // $(".btn").click(function() {
+  //   $("#ratingModal").modal('show');
+  // });
 
   $(".subscribe__close").click(function() {
     // скрытие блока подписки
@@ -35,10 +77,10 @@ $(document).ready(function(){
     $(".page-header__cancel").addClass("page-header__cancel--show");
     $(".page-header__submit").addClass("page-header__submit--show");
     $(".overlay").addClass("overlay--show").removeClass("site-overlay");
-  });
 
-  $(".page-header__cancel").click(function() {
-    // показ строки поиска
+    $(".page-header__menu").toggle();
+    $(".page-header__logo-wrap").toggle();
+    $(".page-header__login").toggle();
 
   });
 
@@ -46,13 +88,17 @@ $(document).ready(function(){
   var pageHeaderCancel = $(".page-header__cancel");
 
   $(document).mouseup(function (e){
-    if ((!pageHeaderSearch.is(e.target) && pageHeaderSearch.has(e.target).length === 0) || pageHeaderCancel.is(e.target)) {
+    if (!pageHeaderSearch.is(e.target) && pageHeaderSearch.has(e.target).length === 0) {
       $(".overlay").removeClass("overlay--show");
       $("form.page-header__search").removeClass("page-header__search--show").parent().parent().css("padding", "8px");
       $(".page-header__input").attr({"placeholder": "", "autofocus":""})
       $(".page-header__cancel").removeClass("page-header__cancel--show");
       $(".page-header__submit").removeClass("page-header__submit--show");
       $(".overlay").removeClass("overlay--show").addClass("site-overlay").hide();
+
+      $(".page-header__menu").show();
+      $(".page-header__logo-wrap").show();
+      $(".page-header__login").show();
 ;
     }
   });

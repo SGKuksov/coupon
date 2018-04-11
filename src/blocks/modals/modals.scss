@@ -1,7 +1,14 @@
 .modals {
 
-  .modal-dialog {
-    max-width: 250px;
+  &__dialog {
+
+    &--sm {
+      max-width: 250px !important;
+    }
+
+    &--md{
+      max-width: 300px !important;
+    }
   }
 
   &__content {
@@ -16,7 +23,7 @@
   }
 
   &__title {
-    color: #787878;
+    color: #323232;
     font-weight: bold;
     font-size: 14px;
     display: inline-block;
@@ -46,17 +53,22 @@
   &__body {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     line-height: 1;
-    padding-top: 17px;
-    padding-bottom: 17px;
-    padding-left: 33px;
-    padding-right: 33px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 14px;
+    padding-right: 14px;
+    text-align: center;
+
   }
 
-  &__btn-blocks {
+  &__btn-block {
+    margin-top: 23px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-self: stretch;
   }
 
   &__city-char-list {
@@ -142,5 +154,42 @@
         font-weight: normal;
       }
     }
+  }
+
+  &__btn-close {
+    padding-left: 44px;
+    padding-right: 44px;
+  }
+
+  &__btn-input {
+    padding-left: 35px;
+    padding-right: 35px;
+    border: 1px solid #ff0303;
+    color: #ff0303;
+
+    &:hover {
+      color: #ff0303;
+      border: 1px solid #ff0303;
+    }
+  }
+
+  &__textarea {
+    width: 255px;
+    min-height: 88px;
+    resize: none;
+    border: 1px solid #dedede;
+    border-radius: 4px;
+    margin-top: 15px;
+    padding: 10px;
+  }
+
+  &__radio {
+    margin-right: 20px;
+  }
+
+  &__label {
+    align-self: flex-start;
+    padding-left: 25px;
+    line-height: 20px;
   }
 }
