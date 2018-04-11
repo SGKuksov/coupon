@@ -1135,6 +1135,8 @@ select {
   max-height: 0;
   overflow: hidden;
   visibility: hidden;
+  -webkit-transition: 0.4s ease-out;
+  transition: 0.4s ease-out;
 }
 
 .pushy-submenu-closed .pushy-link {
@@ -1148,6 +1150,8 @@ select {
 .pushy-submenu-open ul {
   max-height: 1000px;
   visibility: visible;
+  -webkit-transition: 0.6s ease-out;
+  transition: 0.6s ease-out;
 }
 
 .pushy-submenu-open .pushy-link {
@@ -1166,21 +1170,21 @@ select {
 }
 
 .chrome {
-  background-image: url(../img/sprite-0958219619572213.png);
+  background-image: url(../img/sprite-036223973646016816.png);
   background-position: 0px 0px;
   width: 64px;
   height: 64px;
 }
 
 .github-logo {
-  background-image: url(../img/sprite-0958219619572213.png);
+  background-image: url(../img/sprite-036223973646016816.png);
   background-position: -68px 0px;
   width: 64px;
   height: 64px;
 }
 
 .placeholder {
-  background-image: url(../img/sprite-0958219619572213.png);
+  background-image: url(../img/sprite-036223973646016816.png);
   background-position: 0px -68px;
   width: 64px;
   height: 64px;
@@ -2971,7 +2975,32 @@ select {
 
 .modal-location__city-link:hover {
   font-weight: bold;
-  color: #969696;
+  color: #ffffff;
+  padding: 10px;
+  background-color: #ff0000;
+  border-radius: 4px;
+  width: 100%;
+  margin-left: -10px;
+}
+
+.modal-location__city-link:active {
+  font-weight: bold;
+  color: #ffffff;
+  padding: 10px;
+  background-color: #ff0000;
+  border-radius: 4px;
+  width: 100%;
+  margin-left: -10px;
+}
+
+.modal-location__city-link--active {
+  font-weight: bold;
+  color: #ffffff;
+  padding: 10px;
+  background-color: #ff0000;
+  border-radius: 4px;
+  width: 100%;
+  margin-left: -10px;
 }
 
 .modal-location__footer {
