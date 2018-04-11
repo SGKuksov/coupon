@@ -33,6 +33,11 @@ mixin side-nav()
 
   nav.side-nav
     .pushy-content
+      .side-nav__location
+        svg.side-nav__location-icon
+          use(xlink:href="img/sprite-svg.svg#page-header__location")
+        span.side-nav__location-info Город
+        a.side-nav__location-city#callModalLocation(href="#") Москва
       ul.side-nav__list
         each val, key in category
           li(class=val ? 'side-nav__item pushy-submenu pushy-submenu-open' : 'side-nav__item pushy-submenu')
