@@ -1,6 +1,6 @@
 mixin modals()
 
-  #selectCityModal.modal.modals(tabindex='-1', role='dialog',  aria-labelledby='exampleModalCenterTitle', aria-hidden='true')
+  #selectCityModal.modal.fade.modals(tabindex='-1', role='dialog',  aria-labelledby='exampleModalCenterTitle', aria-hidden='true')
     .modal-dialog.modal-dialog-centered(role='document')
       .modal-content.modals__content
         .modal-header.modals__header
@@ -10,15 +10,18 @@ mixin modals()
             span(aria-hidden='true') ×
 
         .modal-body.modals__body
-          button.modals__btn
-            | Да
-          button.modals__btn.modals__btn--gray
-            | Нет
+          .page-header__location
+            +location()
+          .modals__btn-block
+            button.modals__btn#modals__btn-apply
+              | Да
+            button.modals__btn.modals__btn--gray#modalsBtnCancel
+              | Нет
 
 
 
 
-  #myModal.modal.modals(tabindex='-1', role='dialog',  aria-labelledby='exampleModalCenterTitle', aria-hidden='true')
+  #myModal.modal.fade.modals(tabindex='-1', role='dialog',  aria-labelledby='exampleModalCenterTitle', aria-hidden='true')
     .modal-dialog.modal-dialog-centered(role='document')
       .modal-content.modals__content
         .modal-header.modals__header

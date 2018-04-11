@@ -3,16 +3,6 @@ svg4everybody(); // иницализация полифила для IE
 $(document).ready(function(){
 
   //при нажатию на любую кнопку, имеющую класс .btn
-  // $("#callModalLocation").click(function() {
-  //   var doc_w = $(document).width();
-
-  //   if (doc_w >= 1024 ) {
-  //     //открыть модальное окно с id="myModal"
-  //     $("#modalLocation").modal('show');
-  //   }
-  // });
-
-  //при нажатию на любую кнопку, имеющую класс .btn
   $("#callModalLocation").click(function() {
     var doc_w = $(document).width();
 
@@ -20,6 +10,11 @@ $(document).ready(function(){
       //открыть модальное окно с id="myModal"
       $("#selectCityModal").modal('show');
     }
+  });
+
+  $("#modalsBtnCancel").click(function() {
+    $("#selectCityModal").modal('hide');
+    $("#modalLocation").modal('show');
   });
 
   $(".subscribe__close").click(function() {

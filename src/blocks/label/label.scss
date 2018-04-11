@@ -4,6 +4,7 @@
   margin-right: 5px;
   display: inline-flex;
   align-items: center;
+  position: relative;
 
   @media (min-width: $screen-md) {
     padding-left: 12px;
@@ -12,15 +13,15 @@
 
   @media (min-width: $screen-lg) {
     padding-left: 15px;
-    padding-right: 15px;
+    padding-right: 40px;
   }
 
   &:hover {
-    border: 1px solid #555555;
+    border: 1px solid #7c7c7c;
   }
 
   &:hover a {
-    color: #555555;
+    color: #7c7c7c;
   }
 
   &__title {
@@ -31,12 +32,19 @@
       font-size: 12px;
       color: #787878;
     }
+
     @media (min-width: $screen-lg) {
       line-height: 30px;
       height: 30px;
       font-size: 14px;
       color: #787878;
     }
+  }
+
+  &__remove {
+    position: absolute;
+    right: 10px;
+    padding-top: 1px;
   }
 
   &__remove-icon {

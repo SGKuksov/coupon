@@ -2,8 +2,7 @@ mixin label(category, admin)
   .label
     a.label__title(href="#", title=category)=category
 
-    if (admin)
-      a.label__remove(href="#", title="Убрать")
-        svg.label__remove-icon
-          use(xlink:href="img/sprite-svg.svg#close_icon")
-
+      if (admin)
+        a.label__remove(href="#", title="Убрать")
+          svg.label__remove-icon
+            use(xlink:href="img/sprite-svg.svg#close_icon")

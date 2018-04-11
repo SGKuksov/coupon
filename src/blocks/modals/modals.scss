@@ -1,8 +1,7 @@
 .modals {
 
   .modal-dialog {
-    width: 350px;
-    /* height: 100px; */
+    max-width: 250px;
   }
 
   &__content {
@@ -17,9 +16,9 @@
   }
 
   &__title {
-    color: #323232;
+    color: #787878;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 14px;
     display: inline-block;
   }
 
@@ -36,8 +35,9 @@
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 
     span {
+      font-size: 25px;
       display: inline-block;
-      padding: 8px 7px 0px;
+      padding: 8px 5px 0;
       line-height: 5px;
       height: 21px;
     }
@@ -45,11 +45,18 @@
 
   &__body {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     line-height: 1;
-    padding-top: 45px;
-    padding-left: 45px;
-    padding-right: 45px;
+    padding-top: 17px;
+    padding-bottom: 17px;
+    padding-left: 33px;
+    padding-right: 33px;
+  }
+
+  &__btn-blocks {
+    display: flex;
+    justify-content: space-between;
   }
 
   &__city-char-list {
@@ -113,13 +120,13 @@
 
   &__btn {
     border-radius: 4px;
-    border: 1px solid #dedede;
+    border: 1px solid #eeeeee;
     color: #787878;
     background-color: #fff;
-    padding-left: 40px;
-    padding-right: 40px;
-    line-height: 40px;
-    height: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+    line-height: 32px;
+    height: 32px;
     font-weight: normal;
 
     &:hover {
@@ -128,7 +135,7 @@
     }
 
     &--gray {
-      background-color: #555555;
+      background-color: #eeeeee;
 
       &:hover {
         color: #787878;

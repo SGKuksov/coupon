@@ -11,11 +11,8 @@ mixin page-header(name)
             use(xlink:href="img/sprite-svg.svg#page-header__submit-icon")
 
       .page-header__logo-wrap
-        .page-header__location
-          svg.page-header__location-icon
-            use(xlink:href="img/sprite-svg.svg#page-header__location")
-          span.page-header__location-info Город
-          a.page-header__location-city#callModalLocation(href="#") Москва
+        .page-header__location.location
+          +location()
         .page-header__logo
           img.page-header__logo-img(src="img/page-header__logo-img.svg", alt="hot kupon")
 
