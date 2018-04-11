@@ -127,11 +127,11 @@ $menu_width: 235px !default;
 #container,
 .pushy,
 .push{
-    transition: transform .2s cubic-bezier(.16, .68, .43, .99);
+    transition: transform .5s cubic-bezier(.16, .68, .43, .99);
 }
 
 .pushy-content{
-    transition: visibility .2s cubic-bezier(.16, .68, .43, .99);
+    transition: visibility .5s cubic-bezier(.16, .68, .43, .99);
 }
 
 /* Site Overlay */
