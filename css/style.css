@@ -2001,6 +2001,7 @@ select {
           box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   width: 100%;
+  min-height: 63px;
   padding-left: 11px;
   padding-top: 7px;
   padding-bottom: 8px;
@@ -2013,7 +2014,6 @@ select {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  min-height: 63px;
 }
 
 .top-panel__title {
@@ -2128,6 +2128,24 @@ select {
 }
 
 .top-panel__rss:active svg {
+  fill: #5fb600;
+}
+
+.top-panel__rss--active {
+  border: 1px solid #dedede;
+  color: #5fb600;
+}
+
+.top-panel__rss--active svg {
+  fill: #5fb600;
+}
+
+.top-panel__rss--active:hover {
+  border: 1px solid #969696;
+  color: #5fb600;
+}
+
+.top-panel__rss--active:hover svg {
   fill: #5fb600;
 }
 
