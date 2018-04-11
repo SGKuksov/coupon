@@ -60,10 +60,16 @@ $(document).ready(function(){
     $(this).parent().hide();
   });
 
+  // кнопка переключения
   $(".filter__btn").click(function() {
-    // кнопка переключения
     $(".filter__btn").removeClass("filter__btn--active");
     $(this).addClass("filter__btn--active");
+  });
+
+  // кнопка переключения
+  $(".modal-location__city-link").click(function() {
+    $(".modal-location__city-link").removeClass("modal-location__city-link--active");
+    $(this).addClass("modal-location__city-link--active");
   });
 
   $(".page-header__search-icon").click(function() {

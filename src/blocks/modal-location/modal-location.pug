@@ -31,7 +31,7 @@ mixin modal-location()
                 ul.modal-location__city-list
                   each val in city_list[key]
                     li.modal-location__city-item
-                      a.modal-location__city-link(href="#", title)=val
+                      a.modal-location__city-link(href="#", title=val)=val
 
         .modal-footer.modal-location__footer
           form.modal-location__search
