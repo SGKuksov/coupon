@@ -73,6 +73,10 @@
   &__list {
     list-style: none;
     padding-top: 15px;
+
+    @media (min-width: $screen-md) {
+      padding-top: 0;
+    }
   }
 
   &__item {
