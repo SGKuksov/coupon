@@ -58,13 +58,15 @@ let images = [
 
 // Cписок обрабатываемых файлов в указанной последовательности
 let jsList = [
-  './node_modules/jquery/dist/jquery.min.js',
-  './node_modules/jquery-migrate/dist/jquery-migrate.min.js',
+  dirs.source + '/js/jquery.min.js',
+  dirs.source + '/js/jquery-migrate.min.js',
   // dirs.source + '/js/jquery-ui.min.js',
-  './node_modules/bootstrap/dist/js/bootstrap.bundle.js',
-  './node_modules/svg4everybody/dist/svg4everybody.js',
-  './node_modules/object-fit-images/dist/ofi.js',
+  dirs.source + '/js/bootstrap.bundle.min.js',
+  dirs.source + '/js/svg4everybody.min.js',
+  dirs.source + '/js/ofi.min.js',
   dirs.source + '/js/pushy.min.js',
+  dirs.source + '/js/truncate.js',
+  dirs.source + '/js/auto-search.js',
   dirs.source + '/js/script.js'
 ];
 
@@ -224,27 +226,41 @@ gulp.task('clean', function () {
   ]);
 });
 
-// Конкатенация и углификация Javascript
-gulp.task('js', function () {
+
+// Копирование Javascript
+gulp.task('copy:js', function () {
   if(jsList.length) {
     return gulp.src(jsList)
       .pipe(plumber({ errorHandler: onError }))             // не останавливаем автоматику при ошибках
-      .pipe(concat('script.min.js'))                        // конкатенируем все файлы в один с указанным именем
-      .pipe(uglify())                                       // сжимаем
-      .pipe(gulp.dest(dirs.build + '/js'));                 // записываем
-  }
-  else {
-    console.log('Javascript не обрабатывается');
-    callback();
+
+      .pipe(gulp.dest(dirs.build + '/js'));
+  } else {
+      console.log('Javascript не обрабатывается');
+      callback();
   }
 });
+
+// Конкатенация и углификация Javascript
+// gulp.task('js', function () {
+//   if(jsList.length) {
+//     return gulp.src(jsList)
+//       .pipe(plumber({ errorHandler: onError }))             // не останавливаем автоматику при ошибках
+//       .pipe(concat('script.min.js'))                        // конкатенируем все файлы в один с указанным именем
+//       .pipe(uglify())                                       // сжимаем
+//       .pipe(gulp.dest(dirs.build + '/js'));                 // записываем
+//   }
+//   else {
+//     console.log('Javascript не обрабатывается');
+//     callback();
+//   }
+// });
 
 // Сборка всего
 gulp.task('build', function (callback) {
   gulpSequence(
     'clean',
     ['sprite:svg', 'sprite:png'],
-    ['style', 'js', 'copy:img', 'copy:fonts'],
+    ['style', 'copy:js', 'copy:img', 'copy:fonts'],
     // 'styleguide',
     'pug',
     callback
@@ -302,7 +318,7 @@ gulp.task('watch:img', ['copy:img'], reload);
 gulp.task('watch:fonts', ['copy:fonts'], reload);
 gulp.task('watch:sprite:svg', ['sprite:svg'], reload);
 gulp.task('watch:sprite:png', ['sprite:png'], reload);
-gulp.task('watch:js', ['js'], reload);
+gulp.task('watch:js', ['copy:js'], reload);
 
 // Отправка в GH pages (ветку gh-pages репозитория)
 gulp.task('deploy', function() {
