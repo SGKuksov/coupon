@@ -35,5 +35,9 @@
     display: inline-block;
     left: 17px;
     bottom: 47px;
+
+    &:hover {
+      color: #ffffff;
+    }
   }
 }

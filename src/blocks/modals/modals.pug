@@ -10,11 +10,11 @@ mixin modals()
             span(aria-hidden='true') ×
 
         .modal-body.modals__body
-          .page-header__location.location
-            svg.location__icon
+          .modals__location
+            svg.modals__location-icon
               use(xlink:href="img/sprite-svg.svg#page-header__location")
-            span.location__info Город
-            a.location__city#callModalLocation(href="#") Москва
+            span.modals__location-info Город
+            a.modals__location-city#callModalLocation(href="#") Москва
           .modals__btn-block
             button.modals__btn#modals__btn-apply
               | Да

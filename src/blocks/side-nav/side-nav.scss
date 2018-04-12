@@ -2,13 +2,15 @@
   background-color: #ffffff;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   padding-left: 18px;
-  padding-top: 19px;
+  padding-top: 69px;
   padding-bottom: 20px;
   padding-right: 18px;
+
 
   @media (min-width: $screen-md) {
     border-radius: 10px;
     margin-bottom: 19px;
+    padding-top: 19px;
   }
 
   &__location {
@@ -21,7 +23,7 @@
       content: "";
       position: absolute;
       left: 0px;
-      top: 48px;
+      top: 98px;
       width: 100%;
       height: 1px;
       border-bottom: 1px solid #d8d8d8;
@@ -101,8 +103,8 @@
       font-weight: 700;
 
       @media (min-width: $screen-md) {
-      font-size: 14px;
-    }
+        font-size: 14px;
+      }
     }
   }
 

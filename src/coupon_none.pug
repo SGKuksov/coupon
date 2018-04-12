@@ -1,0 +1,17 @@
+extends templates/coupon_layout.pug
+
+block meta
+  title Coupon page
+  meta(name='description', content='')
+
+//- block append head
+  //- link(rel="stylesheet", href="style.min.css")
+
+block page-header
+  +page-header()
+
+block extra-blocks
+  +extra-food()
+
+//- block append page-bottom
+  //- script(src='some.js')

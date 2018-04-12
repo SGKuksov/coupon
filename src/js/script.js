@@ -45,18 +45,13 @@ $(document).ready(function(){
 
   //вызов большого модального окна выбора города при клике на "НЕТ"
   $("#callModalLocation").click(function() {
-
     if (doc_w >= 1024 ) {
       $("#selectCityModal").modal('show');
     }
   });
 
-  $(".btn").click(function() {
-    // $("#errorModal").modal('show');
-  });
-
+  // скрытие блока подписки
   $(".subscribe__close").click(function() {
-    // скрытие блока подписки
     $(this).parent().hide();
   });
 
@@ -66,10 +61,15 @@ $(document).ready(function(){
     $(this).addClass("filter__btn--active");
   });
 
-  // кнопка переключения
-  $(".modal-location__city-link").click(function() {
-    $(".modal-location__city-link").removeClass("modal-location__city-link--active");
-    $(this).addClass("modal-location__city-link--active");
+  // rss
+  $(".top-panel__rss").click(function() {
+    var rss = $(this);
+
+    if ( rss.hasClass("top-panel__rss--active") ) {
+      rss.removeClass("top-panel__rss--active");
+    } else {
+      rss.addClass("top-panel__rss--active");
+    }
   });
 
   $(".page-header__search-icon").click(function() {
@@ -125,16 +125,6 @@ $(document).ready(function(){
     }
   });
 
-  // rss
-  $(".top-panel__rss").click(function() {
-    var rss = $(this);
-
-    if ( rss.hasClass("top-panel__rss--active") ) {
-      rss.removeClass("top-panel__rss--active");
-    } else {
-      rss.addClass("top-panel__rss--active");
-    }
-  });
 
 
 
