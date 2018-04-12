@@ -962,7 +962,7 @@ select {
   position: fixed;
   width: 235px;
   height: 100%;
-  top: 50px;
+  top: 0;
   z-index: 900;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
@@ -1135,8 +1135,8 @@ select {
   max-height: 0;
   overflow: hidden;
   visibility: hidden;
-  -webkit-transition: 0.4s ease-out;
-  transition: 0.4s ease-out;
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
 }
 
 .pushy-submenu-closed .pushy-link {
@@ -1170,21 +1170,21 @@ select {
 }
 
 .chrome {
-  background-image: url(../img/sprite-036223973646016816.png);
+  background-image: url(../img/sprite-06863079531971934.png);
   background-position: 0px 0px;
   width: 64px;
   height: 64px;
 }
 
 .github-logo {
-  background-image: url(../img/sprite-036223973646016816.png);
+  background-image: url(../img/sprite-06863079531971934.png);
   background-position: -68px 0px;
   width: 64px;
   height: 64px;
 }
 
 .placeholder {
-  background-image: url(../img/sprite-036223973646016816.png);
+  background-image: url(../img/sprite-06863079531971934.png);
   background-position: 0px -68px;
   width: 64px;
   height: 64px;
@@ -1704,7 +1704,7 @@ select {
   -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   padding-left: 18px;
-  padding-top: 19px;
+  padding-top: 69px;
   padding-bottom: 20px;
   padding-right: 18px;
 }
@@ -1723,7 +1723,7 @@ select {
   content: "";
   position: absolute;
   left: 0px;
-  top: 48px;
+  top: 98px;
   width: 100%;
   height: 1px;
   border-bottom: 1px solid #d8d8d8;
@@ -1804,23 +1804,35 @@ select {
   background-color: #ffffff;
   -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
+  position: relative;
   padding-left: 18px;
   padding-top: 19px;
   padding-bottom: 20px;
   padding-right: 18px;
-  margin-bottom: 19px;
-  display: none;
+}
+
+.collections:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px solid #d8d8d8;
 }
 
 .collections__title {
-  font-size: 14px;
+  font-size: 18px;
   font-weight: bold;
   color: #323232;
 }
 
+.collections__item {
+  padding-top: 10px;
+}
+
 .collections__link {
-  font-size: 14px;
+  font-size: 18px;
   line-height: 24px;
 }
 
@@ -1866,6 +1878,10 @@ select {
   display: inline-block;
   left: 17px;
   bottom: 47px;
+}
+
+.extra-food__link:hover {
+  color: #ffffff;
 }
 
 .extra-places {
@@ -2975,32 +2991,7 @@ select {
 
 .modal-location__city-link:hover {
   font-weight: bold;
-  color: #ffffff;
-  padding: 10px;
-  background-color: #ff0000;
-  border-radius: 4px;
-  width: 100%;
-  margin-left: -10px;
-}
-
-.modal-location__city-link:active {
-  font-weight: bold;
-  color: #ffffff;
-  padding: 10px;
-  background-color: #ff0000;
-  border-radius: 4px;
-  width: 100%;
-  margin-left: -10px;
-}
-
-.modal-location__city-link--active {
-  font-weight: bold;
-  color: #ffffff;
-  padding: 10px;
-  background-color: #ff0000;
-  border-radius: 4px;
-  width: 100%;
-  margin-left: -10px;
+  color: #969696;
 }
 
 .modal-location__footer {
@@ -3458,6 +3449,49 @@ select {
   line-height: 20px;
 }
 
+.modals__location {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modals__location-icon {
+  display: inline-block;
+  width: 11px;
+  height: 16px;
+}
+
+.modals__location-info {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.modals__location-city {
+  color: #ff0101;
+  position: relative;
+  margin-left: 10px;
+}
+
+.modals__location-city:hover {
+  color: #ff0101;
+}
+
+.modals__location-city:after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px dotted #d0021b;
+}
+
 @media (min-width: 576px) {
   .modal-dialog {
     max-width: 500px;
@@ -3715,6 +3749,7 @@ select {
   .side-nav {
     border-radius: 10px;
     margin-bottom: 19px;
+    padding-top: 19px;
   }
   .side-nav__location {
     display: none;
@@ -3739,7 +3774,24 @@ select {
     font-size: 14px;
   }
   .collections {
-    display: block;
+    border-radius: 10px;
+    margin-bottom: 19px;
+  }
+  .collections:before {
+    display: none;
+  }
+  .collections__title {
+    padding-top: 0;
+    font-size: 14px;
+  }
+  .collections__item {
+    padding-top: 0;
+  }
+  .collections__link {
+    font-size: 14px;
+  }
+  .collections__link--red:hover {
+    font-size: 14px;
   }
   .extra-food {
     display: block;
