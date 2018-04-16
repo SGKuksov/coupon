@@ -1,0 +1,43 @@
+mixin tag-panel(title, subtitle, admin, is_place)
+
+  .tag-panel
+    .tag-panel__header
+      .tag-panel__labels
+        +label('Фитнес-центры', admin)
+        +label('Подарки', admin)
+        +label('Барбершопы', admin)
+
+    .tag-panel__body
+      .tag-panel__info
+        .tag-panel__rating.rating
+          +rating(true)
+        h1.tag-panel__title=title
+        p.tag-panel__subtitle=subtitle
+
+      if (!is_place)
+        .tag-panel__btn-wrap
+          .tag-panel__sold
+            svg.tag-panel__coupon-sold-icon
+              use(xlink:href="img/sprite-svg.svg#top-panel__rss")
+            span.tag-panel__sold-count
+             | 95
+            span.tag-panel__sold-title
+             | купонов уже получено
+          a.tag-panel__rss(href="#", title="Подписаться на обновления")
+            svg.tag-panel__btn-rss
+              use(xlink:href="img/sprite-svg.svg#top-panel__rss")
+            span
+             | Добавить в избранное
+
+      if (is_place)
+        .tag-panel__footer
+          a.tag-panel__rss(href="#", title="Подписаться на обновления")
+            svg.tag-panel__btn-rss
+              use(xlink:href="img/sprite-svg.svg#top-panel__rss")
+            span
+             | Подписаться на обновления
+          a.tag-panel__rss(href="#", title="Подписаться на обновления")
+            svg.tag-panel__btn-rss
+              use(xlink:href="img/sprite-svg.svg#top-panel__rss")
+            span
+             | Добавить в избранное

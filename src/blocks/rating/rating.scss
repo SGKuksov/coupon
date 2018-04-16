@@ -1,0 +1,24 @@
+.rating {
+
+  &__star {
+
+  }
+
+  &__star-icon {
+    width: 14px;
+    height: 14px;
+    overflow: hidden;
+  }
+
+  &__score {
+    font-size: 14px;
+    font-weight: 700;
+    color: #969696;
+  }
+
+  &__count {
+    font-size: 14px;
+    color: #969696;
+  }
+}
+

@@ -1,0 +1,21 @@
+mixin rating(has_score)
+
+  span.rating__star
+    svg.rating__star-icon
+      use(xlink:href="img/sprite-svg.svg#top-panel__rss")
+  span.rating__star
+    svg.rating__star-icon
+      use(xlink:href="img/sprite-svg.svg#top-panel__rss")
+  span.rating__star
+    svg.rating__star-icon
+      use(xlink:href="img/sprite-svg.svg#top-panel__rss")
+  span.rating__star
+    svg.rating__star-icon
+      use(xlink:href="img/sprite-svg.svg#top-panel__rss")
+  span.rating__star
+    svg.rating__star-icon
+      use(xlink:href="img/sprite-svg.svg#top-panel__rss")
+
+  if (has_score)
+    span.rating__score 4,52
+    span.rating__count (24 голоса)

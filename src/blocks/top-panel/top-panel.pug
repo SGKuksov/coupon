@@ -11,6 +11,19 @@ mixin top-panel(subtitle, title, admin, rss, dealer_logo)
       h1.top-panel__title=subtitle
       p.top-panel__subtitle=title
 
+    if (rss)
+      .top-panel__wrap
+        .top-panel__labels
+          +label('Фитнес-центры', admin)
+          +label('Подарки', admin)
+          +label('Барбершопы', admin)
+
+        a.top-panel__rss(href="#", title="Подписаться на обновления")
+          svg.top-panel__btn-rss
+            use(xlink:href="img/sprite-svg.svg#top-panel__rss")
+          span
+           | Подписаться на обновления
+
     if (!rss)
       .top-panel__inner
         .top-panel__labels
@@ -27,18 +40,5 @@ mixin top-panel(subtitle, title, admin, rss, dealer_logo)
 
         .top-panel__coupon
           img.top-panel__coupon-img(src="img/top-panel__bg.png", alt="coupon")
-
-    if (rss)
-      .top-panel__wrap
-        .top-panel__labels
-          +label('Фитнес-центры', admin)
-          +label('Подарки', admin)
-          +label('Барбершопы', admin)
-
-        a.top-panel__rss(href="#", title="Подписаться на обновления")
-          svg.top-panel__btn-rss
-            use(xlink:href="img/sprite-svg.svg#top-panel__rss")
-          span
-           | Подписаться на обновления
 
 

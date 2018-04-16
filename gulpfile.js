@@ -74,8 +74,6 @@ let jsList = [
 // var overviewPath = dirs.source + '/scss/styleguide.md'; //путь до описания стайлгайда
 // var scssRoot = dirs.source + '/scss/style.scss'; // путь до главного sass-файла
 
-
-
 // Компиляция и обработка стилей
 gulp.task('style', function () {
   return gulp.src(dirs.source + '/scss/style.scss')        // какой файл компилировать
@@ -225,7 +223,6 @@ gulp.task('clean', function () {
     dirs.source + '/blocks/sprite-png/img',
   ]);
 });
-
 
 // Копирование Javascript
 gulp.task('copy:js', function () {

@@ -13,5 +13,15 @@ block page-header
 block extra-blocks
   +extra-food()
 
+block tag-panel
+  +tag-panel("Купон на бесплатное посещение бассейна", "При покупке любого абонемента - одно занятие бесплатно!", true, false, false)
+
+block coupon
+  +coupon(true)
+
+block coupon-gallery
+  +coupon-gallery("Здесь так же проходят другие акции")
+  +coupon-gallery("Похожие предложения")
+
 //- block append page-bottom
   //- script(src='some.js')

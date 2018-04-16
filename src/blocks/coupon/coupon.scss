@@ -1,0 +1,41 @@
+.coupon {
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  width: 100%;
+  display: none;
+
+  @media (min-width: $screen-md) {
+    display: block;
+  }
+
+  &__title {
+    font-size: 28px;
+    padding-bottom: 15px;
+    padding-left: 28px;
+    padding-top: 19px;
+    padding-right: 28px;
+    border-bottom: 1px solid #dcdcdc;
+  }
+
+  &__inner {
+
+    @media (min-width: $screen-md) {
+      padding-bottom: 50px;
+      padding-left: 35px;
+      padding-top: 44px;
+      padding-right: 32px;
+    }
+
+    @media (min-width: $screen-lg) {
+      padding-bottom: 98px;
+      padding-left: 36px;
+      padding-top: 49px;
+      padding-right: 36px;
+    }
+  }
+
+  &__text {
+
+  }
+}

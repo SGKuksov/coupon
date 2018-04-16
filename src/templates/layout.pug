@@ -31,17 +31,19 @@ html(class="no-js  page", lang="ru")
         .site-overlay
         .overlay
         .main__container#container
+          //- контент
           block bread
           block top-panel
-            +top-panel("Все купоны со скидками в одном месте", admin)
+            +top-panel()
           block top-panel-edit
-            +top-panel-edit(admin)
+            +top-panel-edit()
           +filter()
           block main-content
           +about()
 
     +page-footer()
-    //- modal-location
+
+    //- модальные окна
     +modal-location()
     +modals()
 

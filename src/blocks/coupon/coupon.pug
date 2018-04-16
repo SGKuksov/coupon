@@ -1,0 +1,79 @@
+mixin coupon(admin)
+  .coupon
+    .coupon__header
+      span.coupon__tab
+        | Условия
+      span.coupon__tab
+        | Отзывы 3
+      span.coupon__tab
+        | Адреса
+
+      if (admin)
+        label.coupon__label
+          | Отображение на сайте
+          input.coupon__checkbox(type="checkbox")
+
+    .coupon__body
+      .coupon__info.clearfix
+        .coupon__img-wrap
+          img.coupon__img(src="http://via.placeholder.com/336x231", alt="photo")
+        p.coupon__text
+          | Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Семантика рыбного, ведущими встретил скатился имеет, они силуэт мир правилами родного по всей страна путь даль не имени. Своих там эта деревни вскоре парадигматическая переписывается точках если она но щеке переулка своего, лучше необходимыми диких мир! Которой ручеек назад, оксмокс, это маленький речью подпоясал агенство он необходимыми своего пор от всех, толку переписали. Одна грамматики, ты рыбного, заголовок предупредила, однажды живет она пустился за рыбными залетают страну реторический журчит образ, осталось если маленький раз предложения. Сих сбить себя которой ведущими оксмокс, инициал ему рот она однажды там встретил маленькая. Лучше, дороге, встретил!
+
+        if (admin)
+          a.coupon__edit(href="#", title="Подписаться на обновления")
+            svg.coupon__edit-icon
+              use(xlink:href="img/sprite-svg.svg#top-panel__rss")
+            span
+             | Редактировать
+
+      .coupon__aside
+        .coupon__take-block
+          span.coupon__take-price
+            | Бесплатно
+          a.coupon__take-btn.btn(href="#", title="Получить купон")
+            | Получить купон
+          .coupon__take-review
+            h3.coupon__take-review-title
+              | Купон сработал?
+            .coupon__take-score
+              svg.coupon__take-score-icon
+                use(xlink:href="img/sprite-svg.svg#top-panel__rss")
+              span.coupon__take-score-count
+               | 12
+            .coupon__take-score
+              svg.coupon__take-score-icon
+                use(xlink:href="img/sprite-svg.svg#top-panel__rss")
+              span.coupon__take-score-count
+               | 0
+            a.coupon__take-review-btn.coupon__take-review-btn--green(href="#", title="Получить купон")
+            a.coupon__take-review-btn.coupon__take-review-btn--red(href="#", title="Получить купон")
+
+        h3.coupon__get-rating
+          | Оцените купон
+        .coupon__get-rating.rating
+          +rating()
+
+        .coupon__contacts
+          h3.coupon__contacts-title
+            | Контактная информация
+          a.coupon__contacts-place(href="#", title="Аквапарк «Родео Драйв»")
+            | Аквапарк «Родео Драйв»
+          .coupon__contacts-rating.rating
+            +rating()
+          span.coupon__contacts-phone
+            | Телефон:
+          a(href="tel:+78121234567")
+            | +7 (812) 123-45-67
+          span.coupon__contacts-timetable-title
+            | Время работы:
+          span.coupon__contacts-timetable
+            | Пн-Вс: 08:00-22:00
+
+        .coupon__sharing
+          h3.coupon__sharing-title
+            | Понравилась акция?
+          p.coupon__sharing-desc
+            | Расскажите о ней своим друзьям!
+          .coupon__sharing-socials.socials
+            +socials()

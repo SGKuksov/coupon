@@ -31,10 +31,19 @@ html(class="no-js  page", lang="ru")
         .site-overlay
         .overlay
         .main__container#container
-        //- контент
+
+          //- контент
+          block tag-panel
+            +tag-panel()
+
+          block coupon
+            +coupon()
+
+          block coupon-gallery
 
     +page-footer()
-    //- modal-location
+
+    //- модальные окна
     +modal-location()
     +modals()
 

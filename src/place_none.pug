@@ -1,0 +1,24 @@
+extends templates/coupon_layout.pug
+
+block meta
+  title Coupon page
+  meta(name='description', content='')
+
+//- block append head
+  //- link(rel="stylesheet", href="style.min.css")
+
+block page-header
+  +page-header()
+
+block extra-blocks
+  +extra-food()
+
+block tag-panel
+  +tag-panel("Все акции, купоны и скидки сети итальянских ресторанов Il Patio", "При покупке любого абонемента - одно занятие бесплатно!", false, true, false)
+
+block coupon-gallery
+  +coupon-gallery("Текущие акции")
+  +coupon-gallery("Прошедшие акции")
+
+//- block append page-bottom
+  //- script(src='some.js')
