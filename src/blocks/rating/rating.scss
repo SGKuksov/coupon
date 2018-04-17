@@ -1,6 +1,15 @@
 .rating {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+
+  @media (min-width: $screen-md) {
+    align-items: center;
+    flex-direction: row;
+  }
+
+  &__stars-wrap {
+
+  }
 
   &__star {
     margin-right: 3px;
@@ -11,12 +20,29 @@
     height: 14px;
   }
 
+  &__label {
+    order: -1;
+  }
+
+  &__label {
+    margin-bottom: 3px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 0;
+    }
+  }
+
   &__score {
     font-size: 14px;
     font-weight: 700;
     color: #969696;
-    margin-left: 12px;
-    margin-right: 5px;
+    margin-bottom: 3px;
+
+    @media (min-width: $screen-md) {
+      margin-left: 12px;
+      margin-right: 5px;
+      margin-bottom: 0;
+    }
   }
 
   &__count {

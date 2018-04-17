@@ -49,6 +49,10 @@
   }
 
   &__body {
+    padding-left: 14px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-right: 14px;
     display: flex;
     justify-content: space-between;
     position: relative;
@@ -96,10 +100,11 @@
   &__btn-wrap {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: flex-end;
 
     @media (min-width: $screen-md) {
+      justify-content: flex-end;
       justify-content: space-between;
     }
   }
