@@ -224,17 +224,23 @@
             <div class="tag-panel__btn-wrap">
               <div class="tag-panel__sold">
                 <svg class="tag-panel__coupon-sold-icon">
-                  <use xlink:href="img/sprite-svg.svg#top-panel__rss"></use>
+                  <use xlink:href="img/sprite-svg.svg#tag-panel__coupon-sold-icon"></use>
                 </svg><span class="tag-panel__sold-count">95</span><span class="tag-panel__sold-title">купонов уже получено</span></div>
               <a class="tag-panel__rss" href="#" title="Подписаться на обновления">
                 <svg class="tag-panel__btn-rss">
-                  <use xlink:href="img/sprite-svg.svg#top-panel__rss"></use>
+                  <use xlink:href="img/sprite-svg.svg#tag-panel__favorite-icon"></use>
                 </svg><span>Добавить в избранное</span></a>
             </div>
           </div>
         </div>
         <div class="coupon">
-          <div class="coupon__header"><span class="coupon__tab">Условия</span><span class="coupon__tab">Отзывы 3</span><span class="coupon__tab">Адреса</span></div>
+          <nav class="coupon__header">
+            <ul class="nav nav-tabs">
+              <li class="coupon__tab nav-item"><a class="nav-link active" href="#">Условия</a></li>
+              <li class="coupon__tab nav-item"><a class="nav-link" href="#">Отзывы&nbsp;<span class="coupon__tab-count" id="couponTabCount">3</span></a></li>
+              <li class="coupon__tab nav-item"><a class="nav-link" href="#">Адреса</a></li>
+            </ul>
+          </nav>
           <div class="coupon__body">
             <div class="coupon__info clearfix">
               <div class="coupon__img-wrap"><img class="coupon__img" src="http://via.placeholder.com/336x231" alt="photo" /></div>
@@ -244,8 +250,14 @@
               <div class="coupon__take-block"><span class="coupon__take-price">Бесплатно</span><a class="coupon__take-btn btn" href="#" title="Получить купон">Получить купон</a>
                 <div class="coupon__take-review">
                   <h3 class="coupon__take-review-title">Купон сработал?</h3>
-                  <div class="coupon__take-score"></div>
-                  <div class="coupon__take-score"></div><a class="coupon__take-review-btn coupon__take-review-btn--green" href="#" title="Получить купон"></a><a class="coupon__take-review-btn coupon__take-review-btn--red" href="#" title="Получить купон"></a></div>
+                  <div class="coupon__take-score">
+                    <svg class="coupon__take-score-icon">
+                      <use xlink:href="img/sprite-svg.svg#top-panel__rss"></use>
+                    </svg><span class="coupon__take-score-count">12</span></div>
+                  <div class="coupon__take-score">
+                    <svg class="coupon__take-score-icon">
+                      <use xlink:href="img/sprite-svg.svg#top-panel__rss"></use>
+                    </svg><span class="coupon__take-score-count">0</span></div><a class="coupon__take-review-btn coupon__take-review-btn--green" href="#" title="Получить купон"></a><a class="coupon__take-review-btn coupon__take-review-btn--red" href="#" title="Получить купон"></a></div>
               </div>
               <h3 class="coupon__get-rating">Оцените купон</h3>
               <div class="coupon__get-rating rating"><span class="rating__star"><svg class="rating__star-icon"><use xlink:href="img/sprite-svg.svg#top-panel__rss"></use></svg></span><span class="rating__star"><svg class="rating__star-icon"><use xlink:href="img/sprite-svg.svg#top-panel__rss"></use></svg></span><span class="rating__star"><svg class="rating__star-icon"><use xlink:href="img/sprite-svg.svg#top-panel__rss"></use></svg></span><span class="rating__star"><svg class="rating__star-icon"><use xlink:href="img/sprite-svg.svg#top-panel__rss"></use></svg></span><span class="rating__star"><svg class="rating__star-icon"><use xlink:href="img/sprite-svg.svg#top-panel__rss"></use></svg></span></div>
