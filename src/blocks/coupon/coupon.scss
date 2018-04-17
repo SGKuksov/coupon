@@ -22,7 +22,9 @@
     border-bottom: 1px solid #dcdcdc;
   }
 
-  &__nav-tabs {}
+  &__nav-tabs {
+    border-bottom: none;
+  }
 
   &__tab-link {
     color: #787878 !important;
@@ -237,7 +239,6 @@
   }
 
   &__take-btn {
-
     font-size: 14px;
     font-weight: bold;
     display: block;
@@ -261,9 +262,7 @@
     }
   }
 
-  &__take-review {
-
-  }
+  &__take-review {}
 
   &__take-review-title {
     font-size: 14px;
