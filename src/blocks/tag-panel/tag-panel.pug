@@ -18,14 +18,14 @@ mixin tag-panel(title, subtitle, admin, is_place)
         .tag-panel__btn-wrap
           .tag-panel__sold
             svg.tag-panel__coupon-sold-icon
-              use(xlink:href="img/sprite-svg.svg#top-panel__rss")
+              use(xlink:href="img/sprite-svg.svg#tag-panel__coupon-sold-icon")
             span.tag-panel__sold-count
              | 95
             span.tag-panel__sold-title
              | купонов уже получено
           a.tag-panel__rss(href="#", title="Подписаться на обновления")
             svg.tag-panel__btn-rss
-              use(xlink:href="img/sprite-svg.svg#top-panel__rss")
+              use(xlink:href="img/sprite-svg.svg#tag-panel__favorite-icon")
             span
              | Добавить в избранное
 
@@ -38,6 +38,6 @@ mixin tag-panel(title, subtitle, admin, is_place)
              | Подписаться на обновления
           a.tag-panel__rss(href="#", title="Подписаться на обновления")
             svg.tag-panel__btn-rss
-              use(xlink:href="img/sprite-svg.svg#top-panel__rss")
+              use(xlink:href="img/sprite-svg.svg#tag-panel__favorite-icon")
             span
              | Добавить в избранное

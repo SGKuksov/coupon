@@ -1,12 +1,18 @@
 mixin coupon(admin)
   .coupon
-    .coupon__header
-      span.coupon__tab
-        | Условия
-      span.coupon__tab
-        | Отзывы 3
-      span.coupon__tab
-        | Адреса
+    nav.coupon__header
+      ul.nav.nav-tabs
+        li.coupon__tab.nav-item
+          a.nav-link.active(href="#")
+            | Условия
+        li.coupon__tab.nav-item
+          a.nav-link(href="#")
+            | Отзывы&nbsp;
+            span.coupon__tab-count#couponTabCount
+              | 3
+        li.coupon__tab.nav-item
+          a.nav-link(href="#")
+            | Адреса
 
       if (admin)
         label.coupon__label

@@ -1,19 +1,22 @@
 .rating {
+  display: flex;
+  align-items: center;
 
   &__star {
-
+    margin-right: 3px;
   }
 
   &__star-icon {
     width: 14px;
     height: 14px;
-    overflow: hidden;
   }
 
   &__score {
     font-size: 14px;
     font-weight: 700;
     color: #969696;
+    margin-left: 12px;
+    margin-right: 5px;
   }
 
   &__count {
