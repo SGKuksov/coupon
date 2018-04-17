@@ -1,8 +1,17 @@
 .coupon {
   background-color: #ffffff;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-  width: 100%;
+  // width: 100%;
+  margin-left: -10px;
+  margin-right: -10px;
+  margin-bottom: -50px;
+
+  @media (min-width: $screen-md) {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    border-radius: 10px;
+  }
 
   &__header {
     display: flex;
@@ -20,6 +29,7 @@
     background-color: transparent !important;
     border: none !important;
     padding-top: 0;
+    line-height: 19px;
   }
 
   &__tab-link:hover {
@@ -37,27 +47,38 @@
     border-bottom: 3px solid #f00 !important;
   }
 
-  &__label {
-    display: flex !important;
+  &__editor-label {
+    display: none !important;
     align-items: center;
+
+    @media (min-width: $screen-md) {
+      display: flex !important;
+    }
   }
 
-  &__label-title {
+  &__editor-label-title {
     margin-right: 10px;
   }
 
   &__body {
-    padding-top: 20px;
-    padding-left: 21px;
-    padding-right: 25px;
-    padding-bottom: 42px;
-
     display: flex;
+    flex-direction: column;
+
+    @media (min-width: $screen-md) {
+      flex-direction: row;
+      padding-top: 20px;
+      padding-left: 21px;
+      padding-right: 25px;
+      padding-bottom: 42px;
+    }
   }
 
   &__info {
-    padding-right: 30px;
     flex: 1;
+
+    @media (min-width: $screen-md) {
+      padding-right: 30px;
+    }
   }
 
   &__info:after {
@@ -69,14 +90,17 @@
   }
 
   &__img-wrap {
-    overflow: hidden;
-    width: 336px;
+    width: 320px;
     height: 230px;
     overflow: hidden;
-    border-radius: 4px;
-    float: left;
-    margin-right: 22px;
-    margin-bottom: 22px;
+
+    @media (min-width: $screen-md) {
+      border-radius: 4px;
+      margin-bottom: 22px;
+      margin-right: 22px;
+      width: 336px;
+      float: left;
+    }
   }
 
   &__img {
@@ -87,40 +111,44 @@
   &__text {
     color: #323232;
     font-size: 14px;
+    padding-left: 30px;
+    padding-right: 25px;
+    margin-bottom: 40px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 1rem;
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 
-  &__edit {
+  &__edit-btn {
     border-radius: 4px;
     border: 1px solid #dedede;
     color: #787878;
-    padding-left: 8px;
-    padding-right: 8px;
-    line-height: 34;
-    height: 34px;
     font-size: 14px;
+    line-height: 34px;
+    height: 34px;
+    padding-left: 20px;
+    padding-right: 17px;
+    display: none;
 
-    display: inline-flex;
     align-items: center;
+    margin-bottom: 15px;
 
     svg {
       fill: #b5b5b5;
     }
 
     @media (min-width: $screen-md) {
-      line-height: 34px;
-      height: 34px;
-      padding-left: 20px;
-      padding-right: 17px;
+      margin-bottom: 0;
+      display: inline-flex;
     }
 
     span {
-      display: none;
+      display: inline-flex;
       padding-left: 9px;
       line-height: 1;
-
-      @media (min-width: $screen-md) {
-        display: inline-flex;
-      }
     }
 
     &:hover {
@@ -143,42 +171,94 @@
     }
   }
 
-  &__edit-icon {
+  &__edit-btn-icon {
     width: 16px;
     height: 15px;
   }
 
   &__aside {
-    width: 330px;
-    padding-left: 30px;
+    position: relative;
+
+    @media (min-width: $screen-md) {
+      width: 330px;
+      padding-left: 30px;
+    }
+
+    &:before {
+
+      @media (min-width: $screen-md) {
+        content: "";
+        width: 1px;
+        height: 202px;
+        background-color: #dcdcdc;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
   }
 
   &__take-block {
-    background-color: #eeeeee;
-    border-radius: 6px;
-    padding-left: 21px;
-    padding-right: 21px;
-    padding-top: 24px;
-    padding-bottom: 22px;
     margin-bottom: 28px;
+    padding-left: 30px;
+    padding-right: 25px;
+
+    @media (min-width: $screen-md) {
+      border-radius: 6px;
+      background-color: #eeeeee;
+      padding-left: 21px;
+      padding-right: 21px;
+      padding-top: 24px;
+      padding-bottom: 22px;
+    }
   }
 
   &__take-price {
     font-size: 20px;
     font-weight: bold;
-    display: block;
     margin-bottom: 11px;
     color: #323232;
+    display: none;
+
+    @media (min-width: $screen-md) {
+      padding: 0;
+      display: block;
+    }
+
+    &--on-top {
+      display: block;
+      padding-left: 30px;
+      padding-right: 25px;
+
+      @media (min-width: $screen-md) {
+        display: none;
+      }
+    }
   }
 
   &__take-btn {
+
     font-size: 14px;
     font-weight: bold;
-    width: 100%;
+    display: block;
     text-align: center;
     line-height: 30px;
     height: 41px;
     margin-bottom: 17px;
+
+    @media (min-width: $screen-md) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    &--on-top {
+      margin-left: 30px;
+      margin-right: 25px;
+
+      @media (min-width: $screen-md) {
+        display: none;
+      }
+    }
   }
 
   &__take-review {
@@ -251,14 +331,18 @@
     padding-top: 12px;
     padding-bottom: 14px;
     padding-left: 19px;
-
     margin-bottom: 23px;
+    margin-left: 12px;
+    margin-right: 19px;
+
+    @media (min-width: $screen-md) {
+
+    }
 
     & .rating {
       margin-right: 24px;
     }
   }
-
 
   &__get-rating-title {
     color: #323232;
@@ -267,7 +351,13 @@
   }
 
   &__contacts {
+    padding-left: 30px;
+    padding-right: 25px;
 
+    @media (min-width: $screen-md) {
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 
   &__contacts-title {
@@ -333,6 +423,15 @@
 
   &__sharing {
     margin-top: 22px;
+    margin-bottom: 31px;
+    padding-left: 30px;
+    padding-right: 25px;
+
+    @media (min-width: $screen-md) {
+      padding-left: 0;
+      padding-right: 0;
+      margin-bottom: 0;
+    }
   }
 
   &__sharing-title {
@@ -354,6 +453,4 @@
       margin-left: -10px;
     }
   }
-
-
 }

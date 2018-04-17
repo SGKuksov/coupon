@@ -15,8 +15,8 @@ mixin coupon(admin)
             | Адреса
 
       if (admin)
-        label.el-switch.coupon__label
-          span.coupon__label-title
+        label.el-switch.coupon__editor-label
+          span.coupon__editor-label-title
             | Отображение на сайте
           input(type="checkbox" name="switch")
           span.el-switch-style
@@ -25,12 +25,18 @@ mixin coupon(admin)
       .coupon__info
         .coupon__img-wrap
           img.coupon__img(src="http://via.placeholder.com/336x231", alt="photo")
+
+        span.coupon__take-price.coupon__take-price--on-top
+          | Бесплатно
+        a.coupon__take-btn.coupon__take-btn--on-top.btn(href="#", title="Получить купон")
+          | Получить купон
+
         p.coupon__text
           | Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Семантика рыбного, ведущими встретил скатился имеет, они силуэт мир правилами родного по всей страна путь даль не имени. Своих там эта деревни вскоре парадигматическая переписывается точках если она но щеке переулка своего, лучше необходимыми диких мир! Которой ручеек назад, оксмокс, это маленький речью подпоясал агенство он необходимыми своего пор от всех, толку переписали. Одна грамматики, ты рыбного, заголовок предупредила, однажды живет она пустился за рыбными залетают страну реторический журчит образ, осталось если маленький раз предложения. Сих сбить себя которой ведущими оксмокс, инициал ему рот она однажды там встретил маленькая. Лучше, дороге, встретил!
 
         if (admin)
-          a.coupon__edit(href="#", title="Подписаться на обновления")
-            svg.coupon__edit-icon
+          a.coupon__edit-btn(href="#", title="Подписаться на обновления")
+            svg.coupon__edit-btn-icon
               use(xlink:href="img/sprite-svg.svg#top-panel__rss")
             span
              | Редактировать
@@ -61,13 +67,11 @@ mixin coupon(admin)
                 | Да
               a.coupon__take-review-btn.coupon__take-review-btn--red(href="#", title="Нет")
                 | Нет
-
         .coupon__get-rating
           h3.coupon__get-rating-title
             | Оцените купон
           .rating
             +rating()
-
         .coupon__contacts
           h3.coupon__contacts-title
             | Контактная информация
@@ -83,10 +87,8 @@ mixin coupon(admin)
             | Время работы:
           span.coupon__contacts-timetable
             | Пн-Вс: 08:00-22:00
-
-        a.coupon__address-btn(href="#")
-          | Посмотреть адреса
-
+          a.coupon__address-btn(href="#")
+            | Посмотреть адреса
         .coupon__sharing
           h3.coupon__sharing-title
             | Понравилась акция?
