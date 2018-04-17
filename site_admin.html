@@ -70,7 +70,7 @@
               <use xlink:href="img/sprite-svg.svg#page-header__location"></use>
             </svg><span class="side-nav__location-info">Город</span><a class="side-nav__location-city" id="callModalLocation" href="#">Москва</a></div>
           <ul class="side-nav__list">
-            <li class="side-nav__item pushy-submenu pushy-submenu-open"><a class="side-nav__link" href="#" title="Развлечения">Развлечения</a>
+            <li class="side-nav__item pushy-submenu pushy-submenu-open"><a class="side-nav__link" href="#" title="Развлечения">Развлечения</a><button class="side-nav__toggle" href="#"></button>
               <ul class="side-nav__sublist">
                 <li class="side-nav__subitem pushy-link"><a class="side-nav__sublink" href="#" title="Аквапарк">Аквапарк</a><span class="side-nav__count">4</span></li>
                 <li class="side-nav__subitem pushy-link"><a class="side-nav__sublink" href="#" title="Активный отдых">Активный отдых</a><span class="side-nav__count">19</span></li>
@@ -94,7 +94,7 @@
                 <li class="side-nav__subitem pushy-link"><a class="side-nav__sublink" href="#" title="Бани и сауны3">Бани и сауны3</a><span class="side-nav__count">1</span></li>
               </ul>
             </li>
-            <li class="side-nav__item pushy-submenu"><a class="side-nav__link" href="#" title="Еда">Еда</a>
+            <li class="side-nav__item pushy-submenu"><a class="side-nav__link" href="#" title="Еда">Еда</a><button class="side-nav__toggle" href="#"></button>
               <ul class="side-nav__sublist">
                 <li class="side-nav__subitem pushy-link"><a class="side-nav__sublink" href="#" title="Аквапарк">Аквапарк</a><span class="side-nav__count">4</span></li>
                 <li class="side-nav__subitem pushy-link"><a class="side-nav__sublink" href="#" title="Активный отдых">Активный отдых</a><span class="side-nav__count">19</span></li>
@@ -118,7 +118,7 @@
                 <li class="side-nav__subitem pushy-link"><a class="side-nav__sublink" href="#" title="Бани и сауны3">Бани и сауны3</a><span class="side-nav__count">1</span></li>
               </ul>
             </li>
-            <li class="side-nav__item pushy-submenu"><a class="side-nav__link" href="#" title="Красота">Красота</a>
+            <li class="side-nav__item pushy-submenu"><a class="side-nav__link" href="#" title="Красота">Красота</a><button class="side-nav__toggle" href="#"></button>
               <ul class="side-nav__sublist">
                 <li class="side-nav__subitem pushy-link"><a class="side-nav__sublink" href="#" title="Аквапарк">Аквапарк</a><span class="side-nav__count">4</span></li>
                 <li class="side-nav__subitem pushy-link"><a class="side-nav__sublink" href="#" title="Активный отдых">Активный отдых</a><span class="side-nav__count">19</span></li>
@@ -142,7 +142,7 @@
                 <li class="side-nav__subitem pushy-link"><a class="side-nav__sublink" href="#" title="Бани и сауны3">Бани и сауны3</a><span class="side-nav__count">1</span></li>
               </ul>
             </li>
-            <li class="side-nav__item pushy-submenu"><a class="side-nav__link" href="#" title="Здоровье">Здоровье</a>
+            <li class="side-nav__item pushy-submenu"><a class="side-nav__link" href="#" title="Здоровье">Здоровье</a><button class="side-nav__toggle" href="#"></button>
               <ul class="side-nav__sublist">
                 <li class="side-nav__subitem pushy-link"><a class="side-nav__sublink" href="#" title="Аквапарк">Аквапарк</a><span class="side-nav__count">4</span></li>
                 <li class="side-nav__subitem pushy-link"><a class="side-nav__sublink" href="#" title="Активный отдых">Активный отдых</a><span class="side-nav__count">19</span></li>
@@ -166,7 +166,7 @@
                 <li class="side-nav__subitem pushy-link"><a class="side-nav__sublink" href="#" title="Бани и сауны3">Бани и сауны3</a><span class="side-nav__count">1</span></li>
               </ul>
             </li>
-            <li class="side-nav__item pushy-submenu"><a class="side-nav__link" href="#" title="Путешествия">Путешествия</a>
+            <li class="side-nav__item pushy-submenu"><a class="side-nav__link" href="#" title="Путешествия">Путешествия</a><button class="side-nav__toggle" href="#"></button>
               <ul class="side-nav__sublist">
                 <li class="side-nav__subitem pushy-link"><a class="side-nav__sublink" href="#" title="Аквапарк">Аквапарк</a><span class="side-nav__count">4</span></li>
                 <li class="side-nav__subitem pushy-link"><a class="side-nav__sublink" href="#" title="Активный отдых">Активный отдых</a><span class="side-nav__count">19</span></li>
@@ -551,7 +551,10 @@
         <div class="modal-header modals__header">
           <h5 class="modal-title modals__title">Купон не сработал?</h5><a class="close modals__close" href="#" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></a></div>
         <form class="modal-body modals__body">
-          <p class="modals__text">Нашли ошибку? Расскажите нам!</p><label class="modals__label" for="conditions"><input class="modals__radio" id="conditions" type="radio" name="error"/> Ошибка в условиях</label><label class="modals__label" for="disconts"><input class="modals__radio" id="disconts" type="radio" name="error"/> Не удалось получить скидку</label><label class="modals__label" for="other"><input class="modals__radio" id="other" type="radio" name="error"/> Другое</label><textarea class="modals__textarea" name="msg"></textarea>
+          <p class="modals__text">Нашли ошибку? Расскажите нам!</p>
+          <div class="el-radio"><input class="modals__radio" id="r-conditions" type="radio" name="error" value="option1" checked="" /><label class="el-radio-style" for="r-conditions"></label><span class="modals__label">Ошибка в условиях</span></div>
+          <div class="el-radio"><input class="modals__radio" id="r-disconts" type="radio" name="error" value="option2" checked="" /><label class="el-radio-style" for="r-disconts"></label><span class="modals__label">Не удалось получить скидку</span></div>
+          <div class="el-radio"><input class="modals__radio" id="r-other" type="radio" name="error" value="option3" checked="" /><label class="el-radio-style" for="r-other"></label><span class="modals__label">Другое</span></div><textarea class="modals__textarea" name="msg"></textarea>
           <div class="modals__btn-block"><button class="modals__btn modals__btn-input" type="submit">Отправить</button></div>
         </form>
       </div>

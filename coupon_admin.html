@@ -70,7 +70,7 @@
               <use xlink:href="img/sprite-svg.svg#page-header__location"></use>
             </svg><span class="side-nav__location-info">Город</span><a class="side-nav__location-city" id="callModalLocation" href="#">Москва</a></div>
           <ul class="side-nav__list">
-            <li class="side-nav__item pushy-submenu pushy-submenu-open"><a class="side-nav__link" href="#" title="Развлечения">Развлечения</a>
+            <li class="side-nav__item pushy-submenu pushy-submenu-open"><a class="side-nav__link" href="#" title="Развлечения">Развлечения</a><button class="side-nav__toggle" href="#"></button>
               <ul class="side-nav__sublist">
                 <li class="side-nav__subitem pushy-link"><a class="side-nav__sublink" href="#" title="Аквапарк">Аквапарк</a><span class="side-nav__count">4</span></li>
                 <li class="side-nav__subitem pushy-link"><a class="side-nav__sublink" href="#" title="Активный отдых">Активный отдых</a><span class="side-nav__count">19</span></li>
@@ -94,7 +94,7 @@
                 <li class="side-nav__subitem pushy-link"><a class="side-nav__sublink" href="#" title="Бани и сауны3">Бани и сауны3</a><span class="side-nav__count">1</span></li>
               </ul>
             </li>
-            <li class="side-nav__item pushy-submenu"><a class="side-nav__link" href="#" title="Еда">Еда</a>
+            <li class="side-nav__item pushy-submenu"><a class="side-nav__link" href="#" title="Еда">Еда</a><button class="side-nav__toggle" href="#"></button>
               <ul class="side-nav__sublist">
                 <li class="side-nav__subitem pushy-link"><a class="side-nav__sublink" href="#" title="Аквапарк">Аквапарк</a><span class="side-nav__count">4</span></li>
                 <li class="side-nav__subitem pushy-link"><a class="side-nav__sublink" href="#" title="Активный отдых">Активный отдых</a><span class="side-nav__count">19</span></li>
@@ -118,7 +118,7 @@
                 <li class="side-nav__subitem pushy-link"><a class="side-nav__sublink" href="#" title="Бани и сауны3">Бани и сауны3</a><span class="side-nav__count">1</span></li>
               </ul>
             </li>
-            <li class="side-nav__item pushy-submenu"><a class="side-nav__link" href="#" title="Красота">Красота</a>
+            <li class="side-nav__item pushy-submenu"><a class="side-nav__link" href="#" title="Красота">Красота</a><button class="side-nav__toggle" href="#"></button>
               <ul class="side-nav__sublist">
                 <li class="side-nav__subitem pushy-link"><a class="side-nav__sublink" href="#" title="Аквапарк">Аквапарк</a><span class="side-nav__count">4</span></li>
                 <li class="side-nav__subitem pushy-link"><a class="side-nav__sublink" href="#" title="Активный отдых">Активный отдых</a><span class="side-nav__count">19</span></li>
@@ -142,7 +142,7 @@
                 <li class="side-nav__subitem pushy-link"><a class="side-nav__sublink" href="#" title="Бани и сауны3">Бани и сауны3</a><span class="side-nav__count">1</span></li>
               </ul>
             </li>
-            <li class="side-nav__item pushy-submenu"><a class="side-nav__link" href="#" title="Здоровье">Здоровье</a>
+            <li class="side-nav__item pushy-submenu"><a class="side-nav__link" href="#" title="Здоровье">Здоровье</a><button class="side-nav__toggle" href="#"></button>
               <ul class="side-nav__sublist">
                 <li class="side-nav__subitem pushy-link"><a class="side-nav__sublink" href="#" title="Аквапарк">Аквапарк</a><span class="side-nav__count">4</span></li>
                 <li class="side-nav__subitem pushy-link"><a class="side-nav__sublink" href="#" title="Активный отдых">Активный отдых</a><span class="side-nav__count">19</span></li>
@@ -166,7 +166,7 @@
                 <li class="side-nav__subitem pushy-link"><a class="side-nav__sublink" href="#" title="Бани и сауны3">Бани и сауны3</a><span class="side-nav__count">1</span></li>
               </ul>
             </li>
-            <li class="side-nav__item pushy-submenu"><a class="side-nav__link" href="#" title="Путешествия">Путешествия</a>
+            <li class="side-nav__item pushy-submenu"><a class="side-nav__link" href="#" title="Путешествия">Путешествия</a><button class="side-nav__toggle" href="#"></button>
               <ul class="side-nav__sublist">
                 <li class="side-nav__subitem pushy-link"><a class="side-nav__sublink" href="#" title="Аквапарк">Аквапарк</a><span class="side-nav__count">4</span></li>
                 <li class="side-nav__subitem pushy-link"><a class="side-nav__sublink" href="#" title="Активный отдых">Активный отдых</a><span class="side-nav__count">19</span></li>
@@ -243,17 +243,17 @@
         </div>
         <div class="coupon">
           <nav class="coupon__header">
-            <ul class="nav nav-tabs">
-              <li class="coupon__tab nav-item"><a class="nav-link active" href="#">Условия</a></li>
-              <li class="coupon__tab nav-item"><a class="nav-link" href="#">Отзывы&nbsp;<span class="coupon__tab-count" id="couponTabCount">3</span></a></li>
-              <li class="coupon__tab nav-item"><a class="nav-link" href="#">Адреса</a></li>
-            </ul><label class="coupon__label">Отображение на сайте<input class="coupon__checkbox" type="checkbox"/></label></nav>
+            <ul class="nav nav-tabs coupon__nav-tabs">
+              <li class="nav-item coupon__tab"><a class="nav-link active coupon__tab-link" href="#">Условия</a></li>
+              <li class="nav-item coupon__tab"><a class="nav-link coupon__tab-link" href="#">Отзывы&nbsp;<span class="coupon__tab-count" id="couponTabCount">3</span></a></li>
+              <li class="nav-item coupon__tab"><a class="nav-link coupon__tab-link" href="#">Адреса</a></li>
+            </ul><label class="el-switch coupon__editor-label"><span class="coupon__editor-label-title">Отображение на сайте</span><input type="checkbox" name="switch"/><span class="el-switch-style"></span></label></nav>
           <div class="coupon__body">
-            <div class="coupon__info clearfix">
-              <div class="coupon__img-wrap"><img class="coupon__img" src="http://via.placeholder.com/336x231" alt="photo" /></div>
+            <div class="coupon__info">
+              <div class="coupon__img-wrap"><img class="coupon__img" src="http://via.placeholder.com/336x231" alt="photo" /></div><span class="coupon__take-price coupon__take-price--on-top">Бесплатно</span><a class="coupon__take-btn coupon__take-btn--on-top btn" href="#" title="Получить купон">Получить купон</a>
               <p class="coupon__text">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Семантика рыбного, ведущими встретил скатился имеет, они силуэт мир правилами родного по всей страна путь даль не имени. Своих там эта деревни вскоре парадигматическая переписывается точках если она но щеке переулка своего, лучше необходимыми диких мир! Которой ручеек назад, оксмокс, это маленький речью подпоясал агенство он необходимыми своего пор от всех, толку переписали. Одна грамматики, ты рыбного, заголовок предупредила, однажды живет она пустился за рыбными залетают страну реторический журчит образ, осталось если маленький раз предложения. Сих сбить себя которой ведущими оксмокс, инициал ему рот она однажды там встретил маленькая. Лучше, дороге, встретил!</p>
-              <a class="coupon__edit" href="#" title="Подписаться на обновления">
-                <svg class="coupon__edit-icon">
+              <a class="coupon__edit-btn" href="#" title="Подписаться на обновления">
+                <svg class="coupon__edit-btn-icon">
                   <use xlink:href="img/sprite-svg.svg#top-panel__rss"></use>
                 </svg><span>Редактировать</span></a>
             </div>
@@ -261,24 +261,30 @@
               <div class="coupon__take-block"><span class="coupon__take-price">Бесплатно</span><a class="coupon__take-btn btn" href="#" title="Получить купон">Получить купон</a>
                 <div class="coupon__take-review">
                   <h3 class="coupon__take-review-title">Купон сработал?</h3>
-                  <div class="coupon__take-score">
-                    <svg class="coupon__take-score-icon">
-                      <use xlink:href="img/sprite-svg.svg#top-panel__rss"></use>
-                    </svg><span class="coupon__take-score-count">12</span></div>
-                  <div class="coupon__take-score">
-                    <svg class="coupon__take-score-icon">
-                      <use xlink:href="img/sprite-svg.svg#top-panel__rss"></use>
-                    </svg><span class="coupon__take-score-count">0</span></div><a class="coupon__take-review-btn coupon__take-review-btn--green" href="#" title="Получить купон"></a><a class="coupon__take-review-btn coupon__take-review-btn--red" href="#" title="Получить купон"></a></div>
+                  <div class="coupon__take-score-wrap">
+                    <div class="coupon__take-score">
+                      <svg class="coupon__take-score-icon">
+                        <use xlink:href="img/sprite-svg.svg#top-panel__rss"></use>
+                      </svg><span class="coupon__take-score-count">12</span></div>
+                    <div class="coupon__take-score">
+                      <svg class="coupon__take-score-icon">
+                        <use xlink:href="img/sprite-svg.svg#top-panel__rss"></use>
+                      </svg><span class="coupon__take-score-count">0</span></div>
+                  </div>
+                  <div class="coupon__take-review-btn-wrap"><a class="coupon__take-review-btn coupon__take-review-btn--green" href="#" title="Да">Да</a><a class="coupon__take-review-btn coupon__take-review-btn--red" href="#" title="Нет">Нет</a></div>
+                </div>
               </div>
-              <h3 class="coupon__get-rating">Оцените купон</h3>
-              <div class="coupon__get-rating rating">
-                <div class="rating__stars"><span class="rating__star"><svg class="rating__star-icon"><use xlink:href="img/sprite-svg.svg#top-panel__rss"></use></svg></span><span class="rating__star"><svg class="rating__star-icon"><use xlink:href="img/sprite-svg.svg#top-panel__rss"></use></svg></span><span class="rating__star"><svg class="rating__star-icon"><use xlink:href="img/sprite-svg.svg#top-panel__rss"></use></svg></span><span class="rating__star"><svg class="rating__star-icon"><use xlink:href="img/sprite-svg.svg#top-panel__rss"></use></svg></span><span class="rating__star"><svg class="rating__star-icon"><use xlink:href="img/sprite-svg.svg#top-panel__rss"></use></svg></span></div>
+              <div class="coupon__get-rating">
+                <h3 class="coupon__get-rating-title">Оцените купон</h3>
+                <div class="rating">
+                  <div class="rating__stars"><span class="rating__star"><svg class="rating__star-icon"><use xlink:href="img/sprite-svg.svg#top-panel__rss"></use></svg></span><span class="rating__star"><svg class="rating__star-icon"><use xlink:href="img/sprite-svg.svg#top-panel__rss"></use></svg></span><span class="rating__star"><svg class="rating__star-icon"><use xlink:href="img/sprite-svg.svg#top-panel__rss"></use></svg></span><span class="rating__star"><svg class="rating__star-icon"><use xlink:href="img/sprite-svg.svg#top-panel__rss"></use></svg></span><span class="rating__star"><svg class="rating__star-icon"><use xlink:href="img/sprite-svg.svg#top-panel__rss"></use></svg></span></div>
+                </div>
               </div>
               <div class="coupon__contacts">
                 <h3 class="coupon__contacts-title">Контактная информация</h3><a class="coupon__contacts-place" href="#" title="Аквапарк «Родео Драйв»">Аквапарк «Родео Драйв»</a>
                 <div class="coupon__contacts-rating rating">
                   <div class="rating__stars"><span class="rating__star"><svg class="rating__star-icon"><use xlink:href="img/sprite-svg.svg#top-panel__rss"></use></svg></span><span class="rating__star"><svg class="rating__star-icon"><use xlink:href="img/sprite-svg.svg#top-panel__rss"></use></svg></span><span class="rating__star"><svg class="rating__star-icon"><use xlink:href="img/sprite-svg.svg#top-panel__rss"></use></svg></span><span class="rating__star"><svg class="rating__star-icon"><use xlink:href="img/sprite-svg.svg#top-panel__rss"></use></svg></span><span class="rating__star"><svg class="rating__star-icon"><use xlink:href="img/sprite-svg.svg#top-panel__rss"></use></svg></span></div>
-                </div><span class="coupon__contacts-phone">Телефон:</span><a href="tel:+78121234567">+7 (812) 123-45-67</a><span class="coupon__contacts-timetable-title">Время работы:</span><span class="coupon__contacts-timetable">Пн-Вс: 08:00-22:00</span></div>
+                </div><span class="coupon__contacts-phone-title">Телефон:</span><a class="coupon__contacts-phone" href="tel:+78121234567">+7 (812) 123-45-67</a><span class="coupon__contacts-timetable-title">Время работы:</span><span class="coupon__contacts-timetable">Пн-Вс: 08:00-22:00</span><a class="coupon__address-btn" href="#">Посмотреть адреса</a></div>
               <div class="coupon__sharing">
                 <h3 class="coupon__sharing-title">Понравилась акция?</h3>
                 <p class="coupon__sharing-desc">Расскажите о ней своим друзьям!</p>
@@ -501,7 +507,10 @@
         <div class="modal-header modals__header">
           <h5 class="modal-title modals__title">Купон не сработал?</h5><a class="close modals__close" href="#" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></a></div>
         <form class="modal-body modals__body">
-          <p class="modals__text">Нашли ошибку? Расскажите нам!</p><label class="modals__label" for="conditions"><input class="modals__radio" id="conditions" type="radio" name="error"/> Ошибка в условиях</label><label class="modals__label" for="disconts"><input class="modals__radio" id="disconts" type="radio" name="error"/> Не удалось получить скидку</label><label class="modals__label" for="other"><input class="modals__radio" id="other" type="radio" name="error"/> Другое</label><textarea class="modals__textarea" name="msg"></textarea>
+          <p class="modals__text">Нашли ошибку? Расскажите нам!</p>
+          <div class="el-radio"><input class="modals__radio" id="r-conditions" type="radio" name="error" value="option1" checked="" /><label class="el-radio-style" for="r-conditions"></label><span class="modals__label">Ошибка в условиях</span></div>
+          <div class="el-radio"><input class="modals__radio" id="r-disconts" type="radio" name="error" value="option2" checked="" /><label class="el-radio-style" for="r-disconts"></label><span class="modals__label">Не удалось получить скидку</span></div>
+          <div class="el-radio"><input class="modals__radio" id="r-other" type="radio" name="error" value="option3" checked="" /><label class="el-radio-style" for="r-other"></label><span class="modals__label">Другое</span></div><textarea class="modals__textarea" name="msg"></textarea>
           <div class="modals__btn-block"><button class="modals__btn modals__btn-input" type="submit">Отправить</button></div>
         </form>
       </div>
