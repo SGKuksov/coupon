@@ -69,15 +69,21 @@ mixin modals()
         form.modal-body.modals__body
           p.modals__text
             | Нашли ошибку? Расскажите нам!
-          label.modals__label(for="conditions")
-            input.modals__radio(id="conditions" type="radio" name="error")
-            |  Ошибка в условиях
-          label.modals__label(for="disconts")
-            input.modals__radio(id="disconts" type="radio" name="error")
-            |  Не удалось получить скидку
-          label.modals__label(for="other")
-            input.modals__radio(id="other" type="radio" name="error")
-            |  Другое
+          .el-radio
+            input#r-conditions.modals__radio(type="radio" name="error" value="option1" checked="")
+            label.el-radio-style(for="r-conditions")
+            span.modals__label
+              | Ошибка в условиях
+          .el-radio
+            input#r-disconts.modals__radio(type="radio" name="error" value="option2" checked="")
+            label.el-radio-style(for="r-disconts")
+            span.modals__label
+              | Не удалось получить скидку
+          .el-radio
+            input#r-other.modals__radio(type="radio" name="error" value="option3" checked="")
+            label.el-radio-style(for="r-other")
+            span.modals__label
+              | Другое
           textarea.modals__textarea(name="msg")
           .modals__btn-block
             button.modals__btn.modals__btn-input( type="submit")

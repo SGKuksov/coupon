@@ -1,26 +1,28 @@
 mixin coupon(admin)
   .coupon
     nav.coupon__header
-      ul.nav.nav-tabs
-        li.coupon__tab.nav-item
-          a.nav-link.active(href="#")
+      ul.nav.nav-tabs.coupon__nav-tabs
+        li.nav-item.coupon__tab
+          a.nav-link.active.coupon__tab-link(href="#")
             | Условия
-        li.coupon__tab.nav-item
-          a.nav-link(href="#")
+        li.nav-item.coupon__tab
+          a.nav-link.coupon__tab-link(href="#")
             | Отзывы&nbsp;
             span.coupon__tab-count#couponTabCount
               | 3
-        li.coupon__tab.nav-item
-          a.nav-link(href="#")
+        li.nav-item.coupon__tab
+          a.nav-link.coupon__tab-link(href="#")
             | Адреса
 
       if (admin)
-        label.coupon__label
-          | Отображение на сайте
-          input.coupon__checkbox(type="checkbox")
+        label.el-switch.coupon__label
+          span.coupon__label-title
+            | Отображение на сайте
+          input(type="checkbox" name="switch")
+          span.el-switch-style
 
     .coupon__body
-      .coupon__info.clearfix
+      .coupon__info
         .coupon__img-wrap
           img.coupon__img(src="http://via.placeholder.com/336x231", alt="photo")
         p.coupon__text
@@ -42,23 +44,29 @@ mixin coupon(admin)
           .coupon__take-review
             h3.coupon__take-review-title
               | Купон сработал?
-            .coupon__take-score
-              svg.coupon__take-score-icon
-                use(xlink:href="img/sprite-svg.svg#top-panel__rss")
-              span.coupon__take-score-count
-               | 12
-            .coupon__take-score
-              svg.coupon__take-score-icon
-                use(xlink:href="img/sprite-svg.svg#top-panel__rss")
-              span.coupon__take-score-count
-               | 0
-            a.coupon__take-review-btn.coupon__take-review-btn--green(href="#", title="Получить купон")
-            a.coupon__take-review-btn.coupon__take-review-btn--red(href="#", title="Получить купон")
 
-        h3.coupon__get-rating
-          | Оцените купон
-        .coupon__get-rating.rating
-          +rating()
+            .coupon__take-score-wrap
+              .coupon__take-score
+                svg.coupon__take-score-icon
+                  use(xlink:href="img/sprite-svg.svg#top-panel__rss")
+                span.coupon__take-score-count
+                 | 12
+              .coupon__take-score
+                svg.coupon__take-score-icon
+                  use(xlink:href="img/sprite-svg.svg#top-panel__rss")
+                span.coupon__take-score-count
+                 | 0
+            .coupon__take-review-btn-wrap
+              a.coupon__take-review-btn.coupon__take-review-btn--green(href="#", title="Да")
+                | Да
+              a.coupon__take-review-btn.coupon__take-review-btn--red(href="#", title="Нет")
+                | Нет
+
+        .coupon__get-rating
+          h3.coupon__get-rating-title
+            | Оцените купон
+          .rating
+            +rating()
 
         .coupon__contacts
           h3.coupon__contacts-title
@@ -67,14 +75,17 @@ mixin coupon(admin)
             | Аквапарк «Родео Драйв»
           .coupon__contacts-rating.rating
             +rating()
-          span.coupon__contacts-phone
+          span.coupon__contacts-phone-title
             | Телефон:
-          a(href="tel:+78121234567")
+          a.coupon__contacts-phone(href="tel:+78121234567")
             | +7 (812) 123-45-67
           span.coupon__contacts-timetable-title
             | Время работы:
           span.coupon__contacts-timetable
             | Пн-Вс: 08:00-22:00
+
+        a.coupon__address-btn(href="#")
+          | Посмотреть адреса
 
         .coupon__sharing
           h3.coupon__sharing-title
