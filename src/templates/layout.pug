@@ -23,7 +23,10 @@ html(class="no-js  page", lang="ru")
 
     .page-container
       aside.sidebar.pushy.pushy-left
-        +side-nav()
+
+        block side-nav
+          +side-nav(is_index)
+
         +collections()
         block extra-blocks
 
