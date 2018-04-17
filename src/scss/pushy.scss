@@ -22,7 +22,7 @@ $menu_width: 235px !default;
     }
 
     a{
-        display: flex;
+        // display: flex;
         // color: #b3b3b1;
         // padding: 15px 30px;
         text-decoration: none;
@@ -201,15 +201,19 @@ $menu_width: 235px !default;
 
     /* Submenu Icon */
 
-    > a,
+    // > a,
     > button {
-        position: relative;
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        padding: 0;
     }
 
-    > a::after,
+    // > a::after,
     > button::after {
         content: '';
-        display: block;
+        // display: block;
+        display: inline-block;
         height: 9px;
         width: 15px;
         width: 8px;
@@ -259,7 +263,7 @@ $menu_width: 235px !default;
 
     /* Submenu Icon */
 
-    a::after,
+    // a::after,
     button::after{
         border-color: #f00;
         -webkit-transform: translateY(-50%) rotate(-45deg);

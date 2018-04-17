@@ -38,10 +38,12 @@ mixin side-nav()
           use(xlink:href="img/sprite-svg.svg#page-header__location")
         span.side-nav__location-info Город
         a.side-nav__location-city#callModalLocation(href="#") Москва
+
       ul.side-nav__list
         each val, key in category
           li(class=val ? 'side-nav__item pushy-submenu pushy-submenu-open' : 'side-nav__item pushy-submenu')
             a.side-nav__link(href="#", title=key)=key
+            button.side-nav__toggle(href="#")
 
             ul.side-nav__sublist
               each val, key in subcategory

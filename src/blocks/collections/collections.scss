@@ -38,20 +38,16 @@
 
   &__list {}
 
-  &__item {
-    padding-top: 10px;
-
-    @media (min-width: $screen-md) {
-      padding-top: 0;
-    }
-  }
+  &__item {}
 
   &__link {
     font-size: 18px;
     line-height: 24px;
+    padding-top: 10px;
 
     @media (min-width: $screen-md) {
       font-size: 14px;
+      padding-top: 0;
     }
 
     &--red {
