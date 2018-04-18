@@ -2498,11 +2498,19 @@ select {
   position: relative;
 }
 
+.tag-panel__info {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+}
+
 .tag-panel__rating {
   margin-bottom: 7px;
 }
 
 .tag-panel__title {
+  position: relative;
+  z-index: 1;
   font-size: 20px;
   margin-bottom: 7px;
   color: #323232;
@@ -2528,6 +2536,9 @@ select {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  position: absolute;
+  right: 15px;
+  top: 15px;
 }
 
 .tag-panel__sold {
@@ -2545,6 +2556,24 @@ select {
   margin-right: 5px;
 }
 
+.tag-panel__footer {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
 .tag-panel__rss {
   border-radius: 4px;
   border: 1px solid #dedede;
@@ -2554,6 +2583,8 @@ select {
   line-height: 34;
   height: 34px;
   font-size: 14px;
+  margin-left: 10px;
+  white-space: nowrap;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -2606,6 +2637,71 @@ select {
 }
 
 .tag-panel__rss--active:hover svg {
+  fill: #5fb600;
+}
+
+.tag-panel__footer-rss {
+  border-radius: 4px;
+  border: 1px solid #dedede;
+  color: #787878;
+  padding-left: 8px;
+  padding-right: 8px;
+  line-height: 34;
+  height: 34px;
+  font-size: 14px;
+  margin-left: 10px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tag-panel__footer-rss svg {
+  fill: #b5b5b5;
+}
+
+.tag-panel__footer-rss span {
+  display: none;
+  padding-left: 9px;
+  line-height: 1;
+}
+
+.tag-panel__footer-rss:hover {
+  color: #787878;
+  border: 1px solid #969696;
+  background-color: #fff;
+}
+
+.tag-panel__footer-rss:hover svg {
+  fill: #b5b5b5;
+}
+
+.tag-panel__footer-rss:active {
+  border: 1px solid #dedede;
+  color: #5fb600;
+}
+
+.tag-panel__footer-rss:active svg {
+  fill: #5fb600;
+}
+
+.tag-panel__footer-rss--active {
+  border: 1px solid #dedede;
+  color: #5fb600;
+}
+
+.tag-panel__footer-rss--active svg {
+  fill: #5fb600;
+}
+
+.tag-panel__footer-rss--active:hover {
+  border: 1px solid #969696;
+  color: #5fb600;
+}
+
+.tag-panel__footer-rss--active:hover svg {
   fill: #5fb600;
 }
 
@@ -4157,7 +4253,7 @@ select {
 }
 
 .coupon__contacts-phone-title {
-  display: block;
+  display: inline-block;
   color: #323232;
 }
 
@@ -4986,6 +5082,24 @@ label.el-checkbox {
   .top-panel__btn-wrap {
     display: none;
   }
+  .tag-panel {
+    width: auto;
+    display: block;
+    margin-bottom: 15px;
+  }
+  .tag-panel__footer {
+    position: static;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .coupon {
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
   .coupon__take-btn {
     display: inline-block;
     padding-left: 40px;
@@ -5305,11 +5419,6 @@ label.el-checkbox {
     width: 116px;
     height: 63px;
   }
-  .tag-panel {
-    width: auto;
-    display: block;
-    margin-bottom: 15px;
-  }
   .tag-panel__header {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -5328,6 +5437,9 @@ label.el-checkbox {
         -ms-flex-align: center;
             align-items: center;
     margin-bottom: 0;
+  }
+  .tag-panel__btn-wrap {
+    position: static;
   }
   .tag-panel__btn-wrap {
     -webkit-box-pack: end;
@@ -5355,6 +5467,12 @@ label.el-checkbox {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
+  }
+  .tag-panel__footer-rss {
+    line-height: 34px;
+    height: 34px;
+    padding-left: 8px;
+    padding-right: 8px;
   }
   .label {
     padding-left: 12px;
@@ -5470,8 +5588,6 @@ label.el-checkbox {
     line-height: 20px;
   }
   .coupon {
-    margin-bottom: 20px;
-    border-radius: 10px;
     width: 754px;
   }
   .coupon__editor-label {
@@ -5831,8 +5947,18 @@ label.el-checkbox {
     padding-bottom: 19px;
     padding-right: 19px;
   }
+  .tag-panel__info {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
   .tag-panel__title {
     font-size: 28px;
+  }
+  .tag-panel__footer-rss span {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
   }
   .top-panel-edit {
     display: block;
