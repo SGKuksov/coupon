@@ -1,7 +1,6 @@
 .page-container {
   margin: 0 auto;
   flex: 1 0 auto;
-
   padding-top: 17px;
   padding-bottom: 75px;
   display: flex;
@@ -9,8 +8,6 @@
   min-height: calc(100vh - 250px - 121px);
 
   width: 100%;
-  padding-left: 10px;
-  padding-right: 10px;
 
   @media (min-width: $screen-md) {
     padding-left: 0;
@@ -21,7 +18,7 @@
   }
 
   @media (min-width: $screen-lg) {
-    min-width: 1260px;
+    width: 1260px;
     padding-top: 17px;
     padding-bottom: 75px;
   }

@@ -2,12 +2,14 @@
   background-color: #ffffff;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   border-radius: 10px;
-  width: 100%;
+  width: 300px;
+  margin: 0 auto;
   min-height: 63px;
   margin-bottom: 9px;
   position: relative;
 
   @media (min-width: $screen-md) {
+    width: auto;
     display: block;
     margin-bottom: 15px;
   }

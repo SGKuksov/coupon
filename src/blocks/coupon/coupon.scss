@@ -1,16 +1,17 @@
 .coupon {
   background-color: #ffffff;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-  // width: 100%;
-  margin-left: -10px;
-  margin-right: -10px;
   margin-bottom: -50px;
+  width: 100%;
 
   @media (min-width: $screen-md) {
-    margin-left: 0;
-    margin-right: 0;
-    margin-bottom: 0;
+    margin-bottom: 20px;
     border-radius: 10px;
+    width: 754px;
+  }
+
+  @media (min-width: $screen-lg) {
+    width: 1024px;
   }
 
   &__header {

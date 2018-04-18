@@ -99,4 +99,12 @@ $(document).ready(function(){
     }
   });
 
+  // слайдер купонов
+  $('.coupon-gallery__inner').slick({
+    infinite: false,
+    slidesToShow: 3,
+    slidesToScroll: 2,
+    variableWidth: true
+  });
+
 });

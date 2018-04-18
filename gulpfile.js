@@ -65,6 +65,7 @@ let jsList = [
   dirs.source + '/js/svg4everybody.min.js',
   dirs.source + '/js/ofi.min.js',
   dirs.source + '/js/pushy.min.js',
+  dirs.source + '/js/slick.min.js',
   dirs.source + '/js/truncate.js',
   dirs.source + '/js/auto-search.js',
   dirs.source + '/js/script.js'

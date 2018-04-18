@@ -1,7 +1,7 @@
 mixin coupon-gallery(title)
   .coupon-gallery
     h2.coupon-gallery__title=title
-    .coupon-gallery__inner
+    .coupon-gallery__inner#couponGallery
 
       -
         var title1 = "Скидка до 50% на первое посещение бассейна"
@@ -18,7 +18,7 @@ mixin coupon-gallery(title)
         var place1 = "Аквапарк «Родео Драйв»"
         var place2 = "Аквапарк «Родео Драйв»"
 
-      .card
+      .coupon-gallery__card.card
         .card__img-wrap
           img.card__img(src="http://via.placeholder.com/336x231", alt=title1)
 
@@ -37,8 +37,7 @@ mixin coupon-gallery(title)
               use(xlink:href="img/sprite-svg.svg#card__dealer-link")
             span=dealer1
           a.card__place.card__place--in-category(href="#" title=place1)=place1
-
-      .card
+      .coupon-gallery__card.card
         .card__img-wrap
           img.card__img(src="http://via.placeholder.com/336x231", alt=title2)
 
@@ -57,8 +56,7 @@ mixin coupon-gallery(title)
               use(xlink:href="img/sprite-svg.svg#card__dealer-link")
             span=dealer2
           a.card__place.card__place--in-category(href="#" title=place2)=place2
-
-      .card
+      .coupon-gallery__card.card
         .card__img-wrap
           img.card__img(src="http://via.placeholder.com/336x231", alt=title1)
 
@@ -77,8 +75,7 @@ mixin coupon-gallery(title)
               use(xlink:href="img/sprite-svg.svg#card__dealer-link")
             span=dealer1
           a.card__place.card__place--in-category(href="#" title=place1)=place1
-
-      //- .card
+      .coupon-gallery__card.card
         .card__img-wrap
           img.card__img(src="http://via.placeholder.com/336x231", alt=title2)
 
@@ -97,7 +94,5 @@ mixin coupon-gallery(title)
               use(xlink:href="img/sprite-svg.svg#card__dealer-link")
             span=dealer2
           a.card__place.card__place--in-category(href="#" title=place2)=place2
-
-    //- .main-content__btn-block
-      a.main-content__btn.btn(href="#")
-        | Показать еще...
+      a.coupon-gallery__btn.main-content__btn.btn(href="#")
+        | Поиск в <br>других <br>категориях

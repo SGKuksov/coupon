@@ -15,7 +15,7 @@
   margin-bottom: 11px;
   position: relative;
   height: 300px;
-  width: 300px;
+  width: 300px !important;
 
   display: flex;
   flex-wrap: wrap;
@@ -23,12 +23,12 @@
   justify-content: space-between;
 
   @media (min-width: $screen-md) {
-    width: 245px;
+    width: 245px !important;
     height: 246px;
   }
 
   @media (min-width: $screen-lg) {
-    width: 336px;
+    width: 336px !important;
     height: 330px;
   }
 
