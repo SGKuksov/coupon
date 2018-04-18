@@ -18,6 +18,11 @@
     overflow: hidden;
     display: inline-block;
     margin-right: 16px;
+    margin-top: 17px;
+
+    @media (min-width: $screen-md) {
+      margin-top: 0;
+    }
   }
   &__photo {
     min-height: 1px;
@@ -25,11 +30,20 @@
   }
   &__content {
     flex: 1;
+    display: flex;
+    flex-direction: column;
 
+    @media (min-width: $screen-md) {
+    }
   }
   &__header {
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
+
+    @media (min-width: $screen-md) {
+      flex-direction: row;
+    }
   }
   &__title {
     font-size: 14px;
@@ -39,6 +53,8 @@
   &__date {
     color: #787878;
     font-size: 14px;
+    order: -1;
+    margin-bottom: .5rem;
   }
   &__rating {
     margin-bottom: 16px;

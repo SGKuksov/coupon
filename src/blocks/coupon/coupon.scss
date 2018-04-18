@@ -247,13 +247,20 @@
   &__take-btn {
     font-size: 14px;
     font-weight: bold;
-    display: block;
     text-align: center;
     line-height: 30px;
     height: 41px;
     margin-bottom: 17px;
+    display: block;
+
+    @media (min-width: $screen-sm) {
+      display: inline-block;
+      padding-left: 40px;
+      padding-right: 40px;
+    }
 
     @media (min-width: $screen-md) {
+      display: block;
       margin-left: 0;
       margin-right: 0;
     }
@@ -414,7 +421,7 @@
     margin-bottom: 19px;
   }
 
-  &__address-btn {
+  &__place-btn {
     font-size: 14px;
     color: #787878;
     border-radius: 4px;
@@ -445,11 +452,9 @@
     font-size: 14px;
     margin-bottom: 10px;
   }
-
   &__sharing-desc {
     font-size: 14px;
   }
-
   &__sharing-socials {
     text-align: left;
 
@@ -458,7 +463,6 @@
       margin-left: -10px;
     }
   }
-
   &__review-tab {
 
     @media (min-width: $screen-md) {
@@ -467,19 +471,18 @@
       padding-right: 25px;
     }
   }
-
   &__comment-block {
-    padding-left: 13px;
     flex: 1;
-  }
-  &__comment {
+    padding-left: 17px;
+    padding-right: 17px;
 
+    @media (min-width: $screen-md) {
+      padding-left: 13px;
+    }
   }
-
+  &__comment {}
   &__rating-block {
-    width: 230px;
-    margin-left: 34px;
-
+    order: -1;
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 16px;
@@ -487,6 +490,16 @@
     background-color: #eeeeee;
     align-self: flex-start;
     border-radius: 6px;
+    margin: 0 auto;
+    width: 290px;
+    margin-top: 10px;
+
+    @media (min-width: $screen-md) {
+      width: 230px;
+      margin-top: 0;
+      margin-left: 34px;
+      order: 0;
+    }
   }
   &__rating-block-title {
     display: block;
@@ -497,33 +510,50 @@
   }
   &__rating {
     margin-bottom: 8px;
+    flex-direction: row !important;
+
+    @media (min-width: $screen-md) {
+      flex-direction: column;
+    }
   }
   &__rating-count {
     color: #787878;
     font-size: 14px;
     margin-left: 10px;
   }
-
   &__footer {
+    padding-top: 18px;
+    padding-left: 22px;
+    padding-right: 22px;
+    padding-bottom: 17px;
+
     border-top: 1px solid #dcdcdc;
-
-    @media (min-width: $screen-md) {
-      padding-top: 18px;
-      padding-left: 22px;
-      padding-right: 22px;
-      padding-bottom: 17px;
-    }
+    display: flex;
+    flex-direction: column;
   }
-
   &__footer-title {
     font-size: 20px;
     font-weight: bold;
     color: #323232;
+    margin: 0;
   }
   &__footer-inner {
     display: flex;
+    flex-direction: column;
     align-items: flex-start;
     padding-top: 22px;
+
+    @media (min-width: $screen-md) {
+      flex-direction: row;
+    }
+  }
+  &__footer-rating-block {
+    display: flex;
+    flex-direction: row;
+
+    @media (min-width: $screen-md) {
+
+    }
   }
   &__footer-rating-title {
     font-size: 14px;
@@ -539,16 +569,23 @@
   }
   &__footer-textarea {
     border-radius: 4px;
-    width: 454px;
-    min-height: 88px;
+    width: 280px;
     border: 1px solid #dedede;
     margin-bottom: 14px;
-    margin-left: 58px;
     resize: none;
+    margin-top: 17px;
+    min-height: 106px;
+
+    @media (min-width: $screen-md) {
+      min-height: 88px;
+      margin-left: 58px;
+      margin-top: 0;
+      width: 454px;
+    }
   }
   &__footer-submit {
     height: 32px;
-    line-height: 25px;
+    line-height: 20px;
     padding-left: 18px;
     padding-right: 18px;
     border-radius: 4px;
@@ -569,17 +606,21 @@
     position: relative;
   }
   &__address-block {
-    position: absolute;
-    left: 18px;
-    top: 18px;
-    width: 242px;
+    width: 100%;
     background-color: #ffffff;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-    border-radius: 6px;
     padding-top: 15px;
     padding-bottom: 15px;
     padding-left: 13px;
     padding-right: 13px;
+
+    @media (min-width: $screen-md) {
+      position: absolute;
+      left: 18px;
+      top: 18px;
+      width: 242px;
+      border-radius: 6px;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    }
   }
   &__address-img-wrap {
     width: 212px;
@@ -587,16 +628,25 @@
     overflow: hidden;
     border-radius: 4px;
     margin-bottom: 14px;
+    display: none;
+
+    @media (min-width: $screen-md) {
+      display: block;
+    }
   }
   &__address-img {
     min-height: 1px;
     width: 100%;
   }
   &__address-title {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: bold;
     color: #323232;
     margin-bottom: 10px;
+
+    @media (min-width: $screen-md) {
+      font-size: 12px;
+    }
   }
   &__address-btn {
     color: #fff;
@@ -618,10 +668,21 @@
     height: 14px;
   }
   &__address-meta-desc {
-    font-size: 12px;
+    font-size: 14px;
     color: #323232;
     display: inline-block;
     margin-left: 10px;
-  }
 
+    @media (min-width: $screen-md) {
+      font-size: 12px;
+
+    }
+  }
+  &__address-map {
+    height: 288px;
+
+    @media (min-width: $screen-md) {
+      height: 560px;
+    }
+  }
 }
