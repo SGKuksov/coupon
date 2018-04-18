@@ -1262,21 +1262,21 @@ select {
 }
 
 .chrome {
-  background-image: url(../img/sprite-09214868571101693.png);
+  background-image: url(../img/sprite-03559305244023654.png);
   background-position: 0px 0px;
   width: 64px;
   height: 64px;
 }
 
 .github-logo {
-  background-image: url(../img/sprite-09214868571101693.png);
+  background-image: url(../img/sprite-03559305244023654.png);
   background-position: -68px 0px;
   width: 64px;
   height: 64px;
 }
 
 .placeholder {
-  background-image: url(../img/sprite-09214868571101693.png);
+  background-image: url(../img/sprite-03559305244023654.png);
   background-position: 0px -68px;
   width: 64px;
   height: 64px;
@@ -3764,6 +3764,10 @@ select {
   border-bottom: 1px solid #dcdcdc;
 }
 
+.coupon__nav-tabs {
+  border-bottom: none;
+}
+
 .coupon__tab-link {
   color: #787878 !important;
   background-color: transparent !important;
@@ -4114,6 +4118,188 @@ select {
   margin-left: -10px;
 }
 
+.coupon__comment-block {
+  padding-left: 13px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.coupon__rating-block {
+  width: 230px;
+  margin-left: 34px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 16px;
+  padding-bottom: 20px;
+  background-color: #eeeeee;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  border-radius: 6px;
+}
+
+.coupon__rating-block-title {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  color: #323232;
+  margin-bottom: 11px;
+}
+
+.coupon__rating {
+  margin-bottom: 8px;
+}
+
+.coupon__rating-count {
+  color: #787878;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.coupon__footer {
+  border-top: 1px solid #dcdcdc;
+}
+
+.coupon__footer-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #323232;
+}
+
+.coupon__footer-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-top: 22px;
+}
+
+.coupon__footer-rating-title {
+  font-size: 14px;
+  color: #323232;
+}
+
+.coupon__footer-rating {
+  margin-left: 15px;
+}
+
+.coupon__footer-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.coupon__footer-textarea {
+  border-radius: 4px;
+  width: 454px;
+  min-height: 88px;
+  border: 1px solid #dedede;
+  margin-bottom: 14px;
+  margin-left: 58px;
+  resize: none;
+}
+
+.coupon__footer-submit {
+  height: 32px;
+  line-height: 25px;
+  padding-left: 18px;
+  padding-right: 18px;
+  border-radius: 4px;
+  border: 1px solid #dedede;
+  color: #4d4d4d;
+  background-color: transparent;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.coupon__footer-submit:hover {
+  background-color: inherit;
+  color: #4d4d4d;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.coupon__address-tab {
+  position: relative;
+}
+
+.coupon__address-block {
+  position: absolute;
+  left: 18px;
+  top: 18px;
+  width: 242px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 13px;
+  padding-right: 13px;
+}
+
+.coupon__address-img-wrap {
+  width: 212px;
+  height: 88px;
+  overflow: hidden;
+  border-radius: 4px;
+  margin-bottom: 14px;
+}
+
+.coupon__address-img {
+  min-height: 1px;
+  width: 100%;
+}
+
+.coupon__address-title {
+  font-size: 12px;
+  font-weight: bold;
+  color: #323232;
+  margin-bottom: 10px;
+}
+
+.coupon__address-btn {
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 17px;
+  width: 100%;
+  height: 32px;
+  line-height: 18px;
+  text-align: center;
+}
+
+.coupon__address-meta {
+  margin-bottom: 9px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.coupon__address-meta-icon {
+  width: 14px;
+  height: 14px;
+}
+
+.coupon__address-meta-desc {
+  font-size: 12px;
+  color: #323232;
+  display: inline-block;
+  margin-left: 10px;
+}
+
 .coupon-gallery {
   background-color: #ffffff;
   -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
@@ -4386,6 +4572,76 @@ label.el-checkbox {
 
 .el-switch > input[type="checkbox"]:checked[disabled] + .el-switch-style {
   background-color: #b0d7f5;
+}
+
+.coupon-comment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding-top: 20px;
+}
+
+.coupon-comment p {
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.coupon-comment:last-child p {
+  border-bottom: none;
+}
+
+.coupon-comment__photo-wrap {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: inline-block;
+  margin-right: 16px;
+}
+
+.coupon-comment__photo {
+  min-height: 1px;
+  width: 100%;
+}
+
+.coupon-comment__content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.coupon-comment__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.coupon-comment__title {
+  font-size: 14px;
+  font-weight: bold;
+  color: #323232;
+}
+
+.coupon-comment__date {
+  color: #787878;
+  font-size: 14px;
+}
+
+.coupon-comment__rating {
+  margin-bottom: 16px;
+}
+
+.coupon-comment__text {
+  color: #787878;
+  font-size: 14px;
+  padding-bottom: 18px;
+  margin: 0;
 }
 
 @media (min-width: 480px) {
@@ -4967,6 +5223,8 @@ label.el-checkbox {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+  }
+  .coupon__description-tab {
     padding-top: 20px;
     padding-left: 21px;
     padding-right: 25px;
@@ -5036,6 +5294,17 @@ label.el-checkbox {
     padding-left: 0;
     padding-right: 0;
     margin-bottom: 0;
+  }
+  .coupon__review-tab {
+    padding-top: 20px;
+    padding-left: 21px;
+    padding-right: 25px;
+  }
+  .coupon__footer {
+    padding-top: 18px;
+    padding-left: 22px;
+    padding-right: 22px;
+    padding-bottom: 17px;
   }
   .coupon-gallery {
     display: block;

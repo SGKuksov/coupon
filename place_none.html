@@ -238,65 +238,131 @@
         </div>
         <div class="coupon">
           <nav class="coupon__header">
-            <ul class="nav nav-tabs coupon__nav-tabs">
-              <li class="nav-item coupon__tab"><a class="nav-link active coupon__tab-link" href="#">Условия</a></li>
-              <li class="nav-item coupon__tab"><a class="nav-link coupon__tab-link" href="#">Отзывы&nbsp;<span class="coupon__tab-count" id="couponTabCount">3</span></a></li>
-              <li class="nav-item coupon__tab"><a class="nav-link coupon__tab-link" href="#">Адреса</a></li>
+            <ul class="nav nav-tabs coupon__nav-tabs" role="tablist">
+              <li class="nav-item coupon__tab"><a class="nav-link coupon__tab-link active" data-toggle="tab" href="#description" role="tab" aria-controls="description" aria-selected="true">Условия</a></li>
+              <li class="nav-item coupon__tab"><a class="nav-link coupon__tab-link" data-toggle="tab" href="#review" role="tab" aria-controls="review" aria-selected="true">Отзывы&nbsp;<span class="coupon__tab-count" id="couponTabCount">3</span></a></li>
+              <li class="nav-item coupon__tab"><a class="nav-link coupon__tab-link" data-toggle="tab" href="#address" role="tab" aria-controls="address" aria-selected="true">Адреса</a></li>
             </ul>
           </nav>
-          <div class="coupon__body">
-            <div class="coupon__info">
-              <div class="coupon__img-wrap"><img class="coupon__img" src="http://via.placeholder.com/336x231" alt="photo" /></div><span class="coupon__take-price coupon__take-price--on-top">Бесплатно</span><a class="coupon__take-btn coupon__take-btn--on-top btn" href="#" title="Получить купон">Получить купон</a>
-              <p class="coupon__text">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Семантика рыбного, ведущими встретил скатился имеет, они силуэт мир правилами родного по всей страна путь даль не имени. Своих там эта деревни вскоре парадигматическая переписывается точках если она но щеке переулка своего, лучше необходимыми диких мир! Которой ручеек назад, оксмокс, это маленький речью подпоясал агенство он необходимыми своего пор от всех, толку переписали. Одна грамматики, ты рыбного, заголовок предупредила, однажды живет она пустился за рыбными залетают страну реторический журчит образ, осталось если маленький раз предложения. Сих сбить себя которой ведущими оксмокс, инициал ему рот она однажды там встретил маленькая. Лучше, дороге, встретил!</p>
-            </div>
-            <div class="coupon__aside">
-              <div class="coupon__take-block"><span class="coupon__take-price">Бесплатно</span><a class="coupon__take-btn btn" href="#" title="Получить купон">Получить купон</a>
-                <div class="coupon__take-review">
-                  <h3 class="coupon__take-review-title">Купон сработал?</h3>
-                  <div class="coupon__take-score-wrap">
-                    <div class="coupon__take-score">
-                      <svg class="coupon__take-score-icon">
-                        <use xlink:href="img/sprite-svg.svg#top-panel__rss"></use>
-                      </svg><span class="coupon__take-score-count">12</span></div>
-                    <div class="coupon__take-score">
-                      <svg class="coupon__take-score-icon">
-                        <use xlink:href="img/sprite-svg.svg#top-panel__rss"></use>
-                      </svg><span class="coupon__take-score-count">0</span></div>
+          <div class="tab-content">
+            <div class="tab-pane" id="description" role="tabpanel" aria-labelledby="description-tab">
+              <div class="coupon__body coupon__description-tab">
+                <div class="coupon__info">
+                  <div class="coupon__img-wrap"><img class="coupon__img" src="http://via.placeholder.com/336x231" alt="photo" /></div><span class="coupon__take-price coupon__take-price--on-top">Бесплатно</span><a class="coupon__take-btn coupon__take-btn--on-top btn" href="#" title="Получить купон">Получить купон</a>
+                  <p class="coupon__text">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Семантика рыбного, ведущими встретил скатился имеет, они силуэт мир правилами родного по всей страна путь даль не имени. Своих там эта деревни вскоре парадигматическая переписывается точках если она но щеке переулка своего, лучше необходимыми диких мир! Которой ручеек назад, оксмокс, это маленький речью подпоясал агенство он необходимыми своего пор от всех, толку переписали. Одна грамматики, ты рыбного, заголовок предупредила, однажды живет она пустился за рыбными залетают страну реторический журчит образ, осталось если маленький раз предложения. Сих сбить себя которой ведущими оксмокс, инициал ему рот она однажды там встретил маленькая. Лучше, дороге, встретил!</p>
+                </div>
+                <div class="coupon__aside">
+                  <div class="coupon__take-block"><span class="coupon__take-price">Бесплатно</span><a class="coupon__take-btn btn" href="#" title="Получить купон">Получить купон</a>
+                    <div class="coupon__take-review">
+                      <h3 class="coupon__take-review-title">Купон сработал?</h3>
+                      <div class="coupon__take-score-wrap">
+                        <div class="coupon__take-score">
+                          <svg class="coupon__take-score-icon">
+                            <use xlink:href="img/sprite-svg.svg#top-panel__rss"></use>
+                          </svg><span class="coupon__take-score-count">12</span></div>
+                        <div class="coupon__take-score">
+                          <svg class="coupon__take-score-icon">
+                            <use xlink:href="img/sprite-svg.svg#top-panel__rss"></use>
+                          </svg><span class="coupon__take-score-count">0</span></div>
+                      </div>
+                      <div class="coupon__take-review-btn-wrap"><a class="coupon__take-review-btn coupon__take-review-btn--green" href="#" title="Да">Да</a><a class="coupon__take-review-btn coupon__take-review-btn--red" href="#" title="Нет">Нет</a></div>
+                    </div>
                   </div>
-                  <div class="coupon__take-review-btn-wrap"><a class="coupon__take-review-btn coupon__take-review-btn--green" href="#" title="Да">Да</a><a class="coupon__take-review-btn coupon__take-review-btn--red" href="#" title="Нет">Нет</a></div>
+                  <div class="coupon__get-rating">
+                    <h3 class="coupon__get-rating-title">Оцените купон</h3>
+                    <div class="rating">
+                      <div class="rating__stars"><span class="rating__star"><svg class="rating__star-icon"><use xlink:href="img/sprite-svg.svg#top-panel__rss"></use></svg></span><span class="rating__star"><svg class="rating__star-icon"><use xlink:href="img/sprite-svg.svg#top-panel__rss"></use></svg></span><span class="rating__star"><svg class="rating__star-icon"><use xlink:href="img/sprite-svg.svg#top-panel__rss"></use></svg></span><span class="rating__star"><svg class="rating__star-icon"><use xlink:href="img/sprite-svg.svg#top-panel__rss"></use></svg></span><span class="rating__star"><svg class="rating__star-icon"><use xlink:href="img/sprite-svg.svg#top-panel__rss"></use></svg></span></div>
+                    </div>
+                  </div>
+                  <div class="coupon__contacts">
+                    <h3 class="coupon__contacts-title">Контактная информация</h3><a class="coupon__contacts-place" href="#" title="Аквапарк «Родео Драйв»">Аквапарк «Родео Драйв»</a>
+                    <div class="coupon__contacts-rating rating">
+                      <div class="rating__stars"><span class="rating__star"><svg class="rating__star-icon"><use xlink:href="img/sprite-svg.svg#top-panel__rss"></use></svg></span><span class="rating__star"><svg class="rating__star-icon"><use xlink:href="img/sprite-svg.svg#top-panel__rss"></use></svg></span><span class="rating__star"><svg class="rating__star-icon"><use xlink:href="img/sprite-svg.svg#top-panel__rss"></use></svg></span><span class="rating__star"><svg class="rating__star-icon"><use xlink:href="img/sprite-svg.svg#top-panel__rss"></use></svg></span><span class="rating__star"><svg class="rating__star-icon"><use xlink:href="img/sprite-svg.svg#top-panel__rss"></use></svg></span></div>
+                    </div><span class="coupon__contacts-phone-title">Телефон:</span><a class="coupon__contacts-phone" href="tel:+78121234567">+7 (812) 123-45-67</a><span class="coupon__contacts-timetable-title">Время работы:</span><span class="coupon__contacts-timetable">Пн-Вс: 08:00-22:00</span><a class="coupon__address-btn" href="#">Посмотреть адреса</a></div>
+                  <div class="coupon__sharing">
+                    <h3 class="coupon__sharing-title">Понравилась акция?</h3>
+                    <p class="coupon__sharing-desc">Расскажите о ней своим друзьям!</p>
+                    <div class="coupon__sharing-socials socials">
+                      <ul class="socials__list">
+                        <li class="socials__item">
+                          <svg class="socials__icon">
+                            <use xlink:href="img/sprite-svg.svg#socials__fb"></use>
+                          </svg><a class="socials__link" href="#"></a></li>
+                        <li class="socials__item">
+                          <svg class="socials__icon">
+                            <use xlink:href="img/sprite-svg.svg#socials__inst"></use>
+                          </svg><a class="socials__link" href="#"></a></li>
+                        <li class="socials__item socials__item-fb">
+                          <svg class="socials__icon">
+                            <use xlink:href="img/sprite-svg.svg#socials__vk"></use>
+                          </svg><a class="socials__link" href="#"></a></li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="coupon__get-rating">
-                <h3 class="coupon__get-rating-title">Оцените купон</h3>
-                <div class="rating">
-                  <div class="rating__stars"><span class="rating__star"><svg class="rating__star-icon"><use xlink:href="img/sprite-svg.svg#top-panel__rss"></use></svg></span><span class="rating__star"><svg class="rating__star-icon"><use xlink:href="img/sprite-svg.svg#top-panel__rss"></use></svg></span><span class="rating__star"><svg class="rating__star-icon"><use xlink:href="img/sprite-svg.svg#top-panel__rss"></use></svg></span><span class="rating__star"><svg class="rating__star-icon"><use xlink:href="img/sprite-svg.svg#top-panel__rss"></use></svg></span><span class="rating__star"><svg class="rating__star-icon"><use xlink:href="img/sprite-svg.svg#top-panel__rss"></use></svg></span></div>
+            </div>
+            <div class="tab-pane" id="review" role="tabpanel" aria-labelledby="review-tab">
+              <div class="coupon__body coupon__review-tab">
+                <div class="coupon__comment-block">
+                  <article class="coupon__comment coupon-comment">
+                    <div class="coupon-comment__photo-wrap"><img class="coupon-comment__photo" src="http://via.placeholder.com/46x46" alt="photo" /></div>
+                    <div class="coupon-comment__content">
+                      <div class="coupon-comment__header">
+                        <h3 class="coupon-comment__title">Константин Константинопольский</h3><time class="coupon-comment__date" data="">2 августа 2017 12:24</time></div>
+                      <div class="coupon-comment__rating rating">
+                        <div class="rating__stars"><span class="rating__star"><svg class="rating__star-icon"><use xlink:href="img/sprite-svg.svg#top-panel__rss"></use></svg></span><span class="rating__star"><svg class="rating__star-icon"><use xlink:href="img/sprite-svg.svg#top-panel__rss"></use></svg></span><span class="rating__star"><svg class="rating__star-icon"><use xlink:href="img/sprite-svg.svg#top-panel__rss"></use></svg></span><span class="rating__star"><svg class="rating__star-icon"><use xlink:href="img/sprite-svg.svg#top-panel__rss"></use></svg></span><span class="rating__star"><svg class="rating__star-icon"><use xlink:href="img/sprite-svg.svg#top-panel__rss"></use></svg></span></div>
+                      </div>
+                      <p class="coupon-comment__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aspernatur quo vero est dolore, optio recusandae, vel quisquam beatae illo distinctio tempora blanditiis ad quos molestias. In porro dolorum veritatis!</p>
+                    </div>
+                  </article>
+                  <article class="coupon__comment coupon-comment">
+                    <div class="coupon-comment__photo-wrap"><img class="coupon-comment__photo" src="http://via.placeholder.com/46x46" alt="photo" /></div>
+                    <div class="coupon-comment__content">
+                      <div class="coupon-comment__header">
+                        <h3 class="coupon-comment__title">Константин Константинопольский</h3><time class="coupon-comment__date" data="">2 августа 2017 12:24</time></div>
+                      <div class="coupon-comment__rating rating">
+                        <div class="rating__stars"><span class="rating__star"><svg class="rating__star-icon"><use xlink:href="img/sprite-svg.svg#top-panel__rss"></use></svg></span><span class="rating__star"><svg class="rating__star-icon"><use xlink:href="img/sprite-svg.svg#top-panel__rss"></use></svg></span><span class="rating__star"><svg class="rating__star-icon"><use xlink:href="img/sprite-svg.svg#top-panel__rss"></use></svg></span><span class="rating__star"><svg class="rating__star-icon"><use xlink:href="img/sprite-svg.svg#top-panel__rss"></use></svg></span><span class="rating__star"><svg class="rating__star-icon"><use xlink:href="img/sprite-svg.svg#top-panel__rss"></use></svg></span></div>
+                      </div>
+                      <p class="coupon-comment__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aspernatur quo vero est dolore, optio recusandae, vel quisquam beatae illo distinctio tempora blanditiis ad quos molestias. In porro dolorum veritatis!</p>
+                    </div>
+                  </article>
+                </div>
+                <div class="coupon__rating-block"><span class="coupon__rating-block-title">Оценки пользователей</span>
+                  <div class="coupon__rating rating">
+                    <div class="rating__stars"><span class="rating__star"><svg class="rating__star-icon"><use xlink:href="img/sprite-svg.svg#top-panel__rss"></use></svg></span><span class="rating__star"><svg class="rating__star-icon"><use xlink:href="img/sprite-svg.svg#top-panel__rss"></use></svg></span><span class="rating__star"><svg class="rating__star-icon"><use xlink:href="img/sprite-svg.svg#top-panel__rss"></use></svg></span><span class="rating__star"><svg class="rating__star-icon"><use xlink:href="img/sprite-svg.svg#top-panel__rss"></use></svg></span><span class="rating__star"><svg class="rating__star-icon"><use xlink:href="img/sprite-svg.svg#top-panel__rss"></use></svg></span></div><span class="coupon__rating-count">80%</span></div>
+                  <div class="coupon__rating rating">
+                    <div class="rating__stars"><span class="rating__star"><svg class="rating__star-icon"><use xlink:href="img/sprite-svg.svg#top-panel__rss"></use></svg></span><span class="rating__star"><svg class="rating__star-icon"><use xlink:href="img/sprite-svg.svg#top-panel__rss"></use></svg></span><span class="rating__star"><svg class="rating__star-icon"><use xlink:href="img/sprite-svg.svg#top-panel__rss"></use></svg></span><span class="rating__star"><svg class="rating__star-icon"><use xlink:href="img/sprite-svg.svg#top-panel__rss"></use></svg></span><span class="rating__star"><svg class="rating__star-icon"><use xlink:href="img/sprite-svg.svg#top-panel__rss"></use></svg></span></div><span class="coupon__rating-count">20%</span></div>
                 </div>
               </div>
-              <div class="coupon__contacts">
-                <h3 class="coupon__contacts-title">Контактная информация</h3><a class="coupon__contacts-place" href="#" title="Аквапарк «Родео Драйв»">Аквапарк «Родео Драйв»</a>
-                <div class="coupon__contacts-rating rating">
-                  <div class="rating__stars"><span class="rating__star"><svg class="rating__star-icon"><use xlink:href="img/sprite-svg.svg#top-panel__rss"></use></svg></span><span class="rating__star"><svg class="rating__star-icon"><use xlink:href="img/sprite-svg.svg#top-panel__rss"></use></svg></span><span class="rating__star"><svg class="rating__star-icon"><use xlink:href="img/sprite-svg.svg#top-panel__rss"></use></svg></span><span class="rating__star"><svg class="rating__star-icon"><use xlink:href="img/sprite-svg.svg#top-panel__rss"></use></svg></span><span class="rating__star"><svg class="rating__star-icon"><use xlink:href="img/sprite-svg.svg#top-panel__rss"></use></svg></span></div>
-                </div><span class="coupon__contacts-phone-title">Телефон:</span><a class="coupon__contacts-phone" href="tel:+78121234567">+7 (812) 123-45-67</a><span class="coupon__contacts-timetable-title">Время работы:</span><span class="coupon__contacts-timetable">Пн-Вс: 08:00-22:00</span><a class="coupon__address-btn" href="#">Посмотреть адреса</a></div>
-              <div class="coupon__sharing">
-                <h3 class="coupon__sharing-title">Понравилась акция?</h3>
-                <p class="coupon__sharing-desc">Расскажите о ней своим друзьям!</p>
-                <div class="coupon__sharing-socials socials">
-                  <ul class="socials__list">
-                    <li class="socials__item">
-                      <svg class="socials__icon">
-                        <use xlink:href="img/sprite-svg.svg#socials__fb"></use>
-                      </svg><a class="socials__link" href="#"></a></li>
-                    <li class="socials__item">
-                      <svg class="socials__icon">
-                        <use xlink:href="img/sprite-svg.svg#socials__inst"></use>
-                      </svg><a class="socials__link" href="#"></a></li>
-                    <li class="socials__item socials__item-fb">
-                      <svg class="socials__icon">
-                        <use xlink:href="img/sprite-svg.svg#socials__vk"></use>
-                      </svg><a class="socials__link" href="#"></a></li>
-                  </ul>
+              <div class="coupon__footer">
+                <h2 class="coupon__footer-title">Оставить отзыв</h2>
+                <div class="coupon__footer-inner"><span class="coupon__footer-rating-title">Ваша оценка</span>
+                  <div class="coupon__footer-rating rating">
+                    <div class="rating__stars"><span class="rating__star"><svg class="rating__star-icon"><use xlink:href="img/sprite-svg.svg#top-panel__rss"></use></svg></span><span class="rating__star"><svg class="rating__star-icon"><use xlink:href="img/sprite-svg.svg#top-panel__rss"></use></svg></span><span class="rating__star"><svg class="rating__star-icon"><use xlink:href="img/sprite-svg.svg#top-panel__rss"></use></svg></span><span class="rating__star"><svg class="rating__star-icon"><use xlink:href="img/sprite-svg.svg#top-panel__rss"></use></svg></span><span class="rating__star"><svg class="rating__star-icon"><use xlink:href="img/sprite-svg.svg#top-panel__rss"></use></svg></span></div>
+                  </div>
+                  <form class="coupon__footer-form" action=""><textarea class="coupon__footer-textarea" type="text" name="msg"></textarea><button class="coupon__footer-submit btn" type="submit">Добавить отзыв</button></form>
                 </div>
               </div>
+            </div>
+            <div class="tab-pane active" id="address" role="tabpanel" aria-labelledby="address-tab">
+              <div class="coupon__body coupon__address-tab">
+                <div class="coupon__address-block">
+                  <div class="coupon__address-img-wrap"><img class="coupon__address-img" src="http://via.placeholder.com/212x88" alt="img" /></div>
+                  <h2 class="coupon__address-title">Итальянский ресторан Il Patio</h2><a class="btn coupon__address-btn" href="#">Подробнее о месте</a>
+                  <div class="coupon__address-meta">
+                    <svg class="coupon__address-meta-icon">
+                      <use xlink:href="img/sprite-svg.svg#top-panel__rss"></use>
+                    </svg><span class="coupon__address-meta-desc">Пн-Вс, 08:00-22:00</span></div>
+                  <div class="coupon__address-meta">
+                    <svg class="coupon__address-meta-icon">
+                      <use xlink:href="img/sprite-svg.svg#top-panel__rss"></use>
+                    </svg><span class="coupon__address-meta-desc">+7 (812) 123-45-67</span></div>
+                  <div class="coupon__address-meta">
+                    <svg class="coupon__address-meta-icon">
+                      <use xlink:href="img/sprite-svg.svg#top-panel__rss"></use>
+                    </svg><span class="coupon__address-meta-desc">пр. Культуры, 1, Москва</span></div>
+                </div><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9747.689600920134!2d4.91255678933055!3d52.35369267652723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c60979f6a4ff25%3A0x517a3c162d50d486!2zVHJhbnN2YWFsYnV1cnQsINCQ0LzRgdGC0LXRgNC00LDQvA!5e0!3m2!1sru!2snl!4v1524023866674" width="100%" height="560" frameborder="0" style="border:0" allowfullscreen=""></iframe></div>
             </div>
           </div>
         </div>
