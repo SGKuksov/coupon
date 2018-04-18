@@ -1,4 +1,4 @@
-mixin coupon(admin)
+mixin coupon(admin, is_space)
   .coupon
     nav.coupon__header
       ul.nav.nav-tabs.coupon__nav-tabs(role="tablist")
@@ -43,14 +43,16 @@ mixin coupon(admin)
                 span
                  | Редактировать
           .coupon__aside
-            .coupon__take-block
-              span.coupon__take-price
-                | Бесплатно
-              a.coupon__take-btn.btn(href="#", title="Получить купон")
-                | Получить купон
-              .coupon__take-review
-                h3.coupon__take-review-title
-                  | Купон сработал?
+
+            if (!is_space)
+              .coupon__take-block
+                span.coupon__take-price
+                  | Бесплатно
+                a.coupon__take-btn.btn(href="#", title="Получить купон")
+                  | Получить купон
+                .coupon__take-review
+                  h3.coupon__take-review-title
+                    | Купон сработал?
 
                 .coupon__take-score-wrap
                   .coupon__take-score
@@ -68,6 +70,7 @@ mixin coupon(admin)
                     | Да
                   a.coupon__take-review-btn.coupon__take-review-btn--red(href="#", title="Нет")
                     | Нет
+
             .coupon__get-rating
               h3.coupon__get-rating-title
                 | Оцените купон
@@ -76,10 +79,12 @@ mixin coupon(admin)
             .coupon__contacts
               h3.coupon__contacts-title
                 | Контактная информация
-              a.coupon__contacts-place(href="#", title="Аквапарк «Родео Драйв»")
-                | Аквапарк «Родео Драйв»
-              .coupon__contacts-rating.rating
-                +rating()
+
+              if (!is_space)
+                a.coupon__contacts-place(href="#", title="Аквапарк «Родео Драйв»")
+                  | Аквапарк «Родео Драйв»
+                .coupon__contacts-rating.rating
+                  +rating()
               span.coupon__contacts-phone-title
                 | Телефон:
               a.coupon__contacts-phone(href="tel:+78121234567")
@@ -173,7 +178,7 @@ mixin coupon(admin)
             .coupon__address-meta
               svg.coupon__address-meta-icon
                 use(xlink:href="img/sprite-svg.svg#top-panel__rss")
-              span.coupon__address-meta-desc
+              a.coupon__address-meta-desc(href="tel:+78121234567")
                 | +7 (812) 123-45-67
             .coupon__address-meta
               svg.coupon__address-meta-icon

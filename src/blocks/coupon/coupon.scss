@@ -4,9 +4,12 @@
   margin-bottom: -50px;
   width: 100%;
 
-  @media (min-width: $screen-md) {
+  @media (min-width: $screen-sm) {
     margin-bottom: 20px;
     border-radius: 10px;
+  }
+
+  @media (min-width: $screen-md) {
     width: 754px;
   }
 
@@ -402,7 +405,7 @@
   }
 
   &__contacts-phone-title {
-    display: block;
+    display: inline-block;
     color: #323232;
   }
 

@@ -8,7 +8,7 @@
   margin-bottom: 9px;
   position: relative;
 
-  @media (min-width: $screen-md) {
+  @media (min-width: $screen-sm) {
     width: auto;
     display: block;
     margin-bottom: 15px;
@@ -73,13 +73,21 @@
     }
   }
 
-  &__info {}
+  &__info {
+    flex: 3;
+
+    @media (min-width: $screen-lg) {
+      flex: 1;
+    }
+  }
 
   &__rating {
     margin-bottom: 7px;
   }
 
   &__title {
+    position: relative;
+    z-index: 1;
     font-size: 20px;
     margin-bottom: 7px;
     color: #323232;
@@ -100,6 +108,13 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-end;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+
+    @media (min-width: $screen-md) {
+      position: static;
+    }
 
     @media (min-width: $screen-md) {
       justify-content: flex-end;
@@ -130,7 +145,19 @@
 
   }
   &__footer {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    flex: 2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
 
+    @media (min-width: $screen-sm) {
+      position: static;
+      align-items: flex-end;
+      flex: 1;
+    }
   }
 
   &__rss {
@@ -142,7 +169,8 @@
     line-height: 34;
     height: 34px;
     font-size: 14px;
-
+    margin-left: 10px;
+    white-space: nowrap;
     display: inline-flex;
     align-items: center;
 
@@ -165,6 +193,81 @@
       line-height: 1;
 
       @media (min-width: $screen-md) {
+        display: inline-flex;
+      }
+    }
+
+    &:hover {
+      color: #787878;
+      border: 1px solid #969696;
+      background-color: #fff;
+
+      svg {
+        fill: #b5b5b5;
+      }
+    }
+
+    &:active {
+      border: 1px solid #dedede;
+      color: #5fb600;
+
+      svg {
+        fill: #5fb600;
+      }
+    }
+
+    &--active {
+      border: 1px solid #dedede;
+      color: #5fb600;
+
+      svg {
+        fill: #5fb600;
+      }
+
+      &:hover {
+        border: 1px solid #969696;
+        color: #5fb600;
+
+        svg {
+          fill: #5fb600;
+        }
+      }
+    }
+  }
+
+  &__footer-rss {
+    border-radius: 4px;
+    border: 1px solid #dedede;
+    color: #787878;
+    padding-left: 8px;
+    padding-right: 8px;
+    line-height: 34;
+    height: 34px;
+    font-size: 14px;
+    margin-left: 10px;
+
+    display: inline-flex;
+    align-items: center;
+
+    svg {
+      fill: #b5b5b5;
+    }
+
+    @media (min-width: $screen-md) {
+      line-height: 34px;
+      height: 34px;
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+
+    @media (min-width: $screen-lg) {}
+
+    span {
+      display: none;
+      padding-left: 9px;
+      line-height: 1;
+
+      @media (min-width: $screen-lg) {
         display: inline-flex;
       }
     }
