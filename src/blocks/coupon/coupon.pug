@@ -22,8 +22,8 @@ mixin coupon(admin)
           span.el-switch-style
 
     .tab-content
-      #description.tab-pane.active(role="tabpanel" aria-labelledby="description-tab")
-        .coupon__body
+      #description.tab-pane(role="tabpanel" aria-labelledby="description-tab")
+        .coupon__body.coupon__description-tab
           .coupon__info
             .coupon__img-wrap
               img.coupon__img(src="http://via.placeholder.com/336x231", alt="photo")
@@ -99,7 +99,83 @@ mixin coupon(admin)
                 +socials()
 
       #review.tab-pane(role="tabpanel" aria-labelledby="review-tab")
-        .coupon__body
+        .coupon__body.coupon__review-tab
+          .coupon__comment-block
+            article.coupon__comment.coupon-comment
+              .coupon-comment__photo-wrap
+                img.coupon-comment__photo(src="http://via.placeholder.com/46x46", alt="photo")
+              .coupon-comment__content
+                .coupon-comment__header
+                  h3.coupon-comment__title
+                    | Константин Константинопольский
+                  time.coupon-comment__date(data="")
+                    | 2 августа 2017 12:24
+                .coupon-comment__rating.rating
+                  +rating()
+                p.coupon-comment__text
+                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aspernatur quo vero est dolore, optio recusandae, vel quisquam beatae illo distinctio tempora blanditiis ad quos molestias. In porro dolorum veritatis!
+            article.coupon__comment.coupon-comment
+              .coupon-comment__photo-wrap
+                img.coupon-comment__photo(src="http://via.placeholder.com/46x46", alt="photo")
+              .coupon-comment__content
+                .coupon-comment__header
+                  h3.coupon-comment__title
+                    | Константин Константинопольский
+                  time.coupon-comment__date(data="")
+                    | 2 августа 2017 12:24
+                .coupon-comment__rating.rating
+                  +rating()
+                p.coupon-comment__text
+                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aspernatur quo vero est dolore, optio recusandae, vel quisquam beatae illo distinctio tempora blanditiis ad quos molestias. In porro dolorum veritatis!
 
-      #address.tab-pane(role="tabpanel" aria-labelledby="address-tab")
-        .coupon__body
+          .coupon__rating-block
+            span.coupon__rating-block-title
+              | Оценки пользователей
+            .coupon__rating.rating
+              +rating()
+              span.coupon__rating-count
+                | 80%
+
+            .coupon__rating.rating
+              +rating()
+              span.coupon__rating-count
+                | 20%
+        .coupon__footer
+          h2.coupon__footer-title
+            | Оставить отзыв
+          .coupon__footer-inner
+            span.coupon__footer-rating-title
+              | Ваша оценка
+            .coupon__footer-rating.rating
+              +rating()
+            form.coupon__footer-form(action="")
+              textarea.coupon__footer-textarea(type="text" name="msg")
+              button.coupon__footer-submit.btn(type="submit")
+                | Добавить отзыв
+
+      #address.tab-pane.active(role="tabpanel" aria-labelledby="address-tab")
+        .coupon__body.coupon__address-tab
+          .coupon__address-block
+            .coupon__address-img-wrap
+              img.coupon__address-img(src="http://via.placeholder.com/212x88", alt="img")
+            h2.coupon__address-title
+              | Итальянский ресторан Il Patio
+            a.btn.coupon__address-btn(href="#")
+              | Подробнее о месте
+            .coupon__address-meta
+              svg.coupon__address-meta-icon
+                use(xlink:href="img/sprite-svg.svg#top-panel__rss")
+              span.coupon__address-meta-desc
+                | Пн-Вс, 08:00-22:00
+            .coupon__address-meta
+              svg.coupon__address-meta-icon
+                use(xlink:href="img/sprite-svg.svg#top-panel__rss")
+              span.coupon__address-meta-desc
+                | +7 (812) 123-45-67
+            .coupon__address-meta
+              svg.coupon__address-meta-icon
+                use(xlink:href="img/sprite-svg.svg#top-panel__rss")
+              span.coupon__address-meta-desc
+                | пр. Культуры, 1, Москва
+
+          iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9747.689600920134!2d4.91255678933055!3d52.35369267652723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c60979f6a4ff25%3A0x517a3c162d50d486!2zVHJhbnN2YWFsYnV1cnQsINCQ0LzRgdGC0LXRgNC00LDQvA!5e0!3m2!1sru!2snl!4v1524023866674" width="100%" height="560" frameborder="0" style="border:0" allowfullscreen="")
