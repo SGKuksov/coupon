@@ -12,7 +12,7 @@ mixin popular-offers()
   .popular-offers
     h2.popular-offers__title
       | Популярные <br/>предложения
-      svg.popular-places__icon(fill="#f00")
+      svg.popular-places__icon(fill="#f00" width="14" height="15")
         use(xlink:href="img/sprite-svg.svg#popular-places__fire-icon")
 
     ul.popular-offers__list
@@ -20,7 +20,7 @@ mixin popular-offers()
         li.popular-offers__item
           a.popular-offers__link(href="#" title=key)
             .popular-offers__pic-wrap
-              img.popular-offers__pic(src="http://via.placeholder.com/46x46" alt=key height= 46 width=46)
+              img.popular-offers__pic(width="46" height="46" src="http://via.placeholder.com/46x46" alt=key)
             .popular-offers__info
               span.popular-offers__text=val
               span.popular-offers__price=key

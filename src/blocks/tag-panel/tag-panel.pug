@@ -17,14 +17,14 @@ mixin tag-panel(title, subtitle, admin, is_place)
       if (!is_place)
         .tag-panel__btn-wrap
           .tag-panel__sold
-            svg.tag-panel__coupon-sold-icon
+            svg.tag-panel__coupon-sold-icon(width="26" height="26")
               use(xlink:href="img/sprite-svg.svg#tag-panel__coupon-sold-icon")
             span.tag-panel__sold-count
              | 95
             span.tag-panel__sold-title
              | купонов уже получено
           a.tag-panel__rss(href="#", title="Подписаться на обновления")
-            svg.tag-panel__btn-rss
+            svg.tag-panel__btn-rss(width="16" height="14")
               use(xlink:href="img/sprite-svg.svg#tag-panel__favorite-icon")
             span
              | Добавить в избранное
@@ -32,12 +32,12 @@ mixin tag-panel(title, subtitle, admin, is_place)
       if (is_place)
         .tag-panel__footer
           a.tag-panel__footer-rss(href="#", title="Подписаться на обновления")
-            svg.tag-panel__btn-rss
+            svg.tag-panel__btn-rss(width="14" height="14")
               use(xlink:href="img/sprite-svg.svg#top-panel__rss")
             span
              | Подписаться на обновления
           a.tag-panel__rss(href="#", title="Подписаться на обновления")
-            svg.tag-panel__btn-rss
+            svg.tag-panel__btn-rss(width="16" height="14")
               use(xlink:href="img/sprite-svg.svg#tag-panel__favorite-icon")
             span
              | Добавить в избранное

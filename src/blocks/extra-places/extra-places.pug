@@ -13,7 +13,7 @@ mixin extra-places()
   .extra-places
     h2.extra-places__title
       | Места поблизости
-      svg.extra-places__icon(fill="#f00")
+      svg.extra-places__icon(fill="#f00" width="13" height="17")
         use(xlink:href="img/sprite-svg.svg#extra-places__location")
 
     ul.extra-places__list
@@ -21,5 +21,5 @@ mixin extra-places()
         li.extra-places__item
           a.extra-places__link(href=val, title=key)
             .extra-places__pic-wrap
-              img.extra-places__pic(src="img/extra-places__photo1.jpg", alt=key)
+              img.extra-places__pic(width="46" height="46" src="img/extra-places__photo1.jpg", alt=key)
             span.extra-places__text=key
