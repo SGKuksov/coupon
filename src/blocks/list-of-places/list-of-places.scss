@@ -1,0 +1,146 @@
+.side-nav {
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  padding-left: 18px;
+  padding-top: 69px;
+  padding-bottom: 20px;
+  padding-right: 18px;
+
+
+  @media (min-width: $screen-md) {
+    border-radius: 10px;
+    margin-bottom: 19px;
+    padding-top: 19px;
+  }
+
+  &__location {
+    display: flex;
+    align-items: center;
+    padding-bottom: 12px;
+
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0px;
+      top: 98px;
+      width: 100%;
+      height: 1px;
+      border-bottom: 1px solid #d8d8d8;
+    }
+
+
+    @media (min-width: $screen-md) {
+      display: none;
+    }
+  }
+
+  &__location-icon {
+    width: 11px;
+    height: 16px;
+  }
+
+  &__location-info {
+    margin-left: 5px;
+    margin-right: 10px;
+  }
+
+  &__location-city {
+    color: #ff0101;
+    position: relative;
+
+    @media (min-width: $screen-md) {
+      margin-left: 19px;
+    }
+
+    @media (min-width: $screen-lg) {
+      margin-left: 10px;
+    }
+
+    &:hover {
+      color: #ff0101;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      border-bottom: 1px dotted #d0021b;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    padding-top: 15px;
+
+    @media (min-width: $screen-md) {
+      padding-top: 0;
+    }
+  }
+
+  &__item {
+    line-height: 24px;
+    position: relative;
+  }
+
+  &__link {
+    font-size: 18px;
+
+    color: #323232;
+    font-weight: 700;
+    // display: block;
+    position: relative;
+
+    @media (min-width: $screen-md) {
+      font-size: 14px;
+    }
+
+    &:hover {
+      font-size: 18px;
+      color: #ff0000;
+      font-weight: 700;
+
+      @media (min-width: $screen-md) {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__toggle {
+    width: 10px;
+    position: absolute;
+    right: 0;
+    top: 5px;
+  }
+
+  &__sublist {
+    list-style: none;
+  }
+
+  &__subitem {
+    line-height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (min-width: $screen-md) {
+      line-height: 24px;
+      font-size: 14px;
+    }
+  }
+
+  &__sublink {
+    font-size: 18px;
+    color: #969696;
+
+    @media (min-width: $screen-md) {
+      font-size: 14px;
+    }
+  }
+
+  &__count {
+  }
+}

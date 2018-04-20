@@ -1,0 +1,66 @@
+mixin side-nav(is_index)
+
+  -
+    var category = {
+      'Развлечения': true,
+      'Еда': false,
+      'Красота': false,
+      'Здоровье': false,
+      'Путешествия': false
+    };
+    var subcategory = {
+      'Аквапарк': 4,
+      'Активный отдых': 19,
+      'Аттракционы': 6,
+      'Аэротрубы': 2,
+      'Бани и сауны': 1,
+      'Аквапарк1': 4,
+      'Активный отдых1': 19,
+      'Аттракционы1': 6,
+      'Аэротрубы1': 2,
+      'Бани и сауны1': 1,
+      'Аквапарк3': 4,
+      'Активный отдых3': 19,
+      'Аттракционы4': 6,
+      'Аэротрубы4': 2,
+      'Бани и сауны4': 1,
+      'Аквапарк6': 4,
+      'Активный отдых6': 19,
+      'Аттракционы5': 6,
+      'Аэротрубы33': 2,
+      'Бани и сауны3': 1
+    };
+
+  nav.side-nav
+    .pushy-content
+      .side-nav__location
+        svg.side-nav__location-icon(width="11" height="16")
+          use(xlink:href="img/sprite-svg.svg#page-header__location")
+        span.side-nav__location-info Город
+        a.side-nav__location-city#callModalLocation(href="#") Москва
+
+      if (is_index)
+        ul.side-nav__list
+          each val, key in category
+            li.side-nav__item.pushy-submenu
+              a.side-nav__link(href="#", title=key)=key
+              button.side-nav__toggle(href="#")
+
+              ul.side-nav__sublist
+                each val, key in subcategory
+                  li.side-nav__subitem.pushy-link
+                    a.side-nav__sublink(href="#", title=key)=key
+                    span.side-nav__count=val
+
+      if (!is_index)
+        ul.side-nav__list
+          each val, key in category
+            li(class=val ? 'side-nav__item pushy-submenu pushy-submenu-open' : 'side-nav__item pushy-submenu')
+              a.side-nav__link(href="#", title=key)=key
+              button.side-nav__toggle(href="#")
+
+              ul.side-nav__sublist
+                each val, key in subcategory
+                  li.side-nav__subitem.pushy-link
+                    a.side-nav__sublink(href="#", title=key)=key
+                    span.side-nav__count=val

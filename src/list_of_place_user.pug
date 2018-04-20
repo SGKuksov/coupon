@@ -1,0 +1,26 @@
+extends templates/layout.pug
+
+block meta
+  title Category
+  meta(name='description', content='')
+
+//- block append head
+  //- link(rel="stylesheet", href="style.min.css")
+
+block page-header
+  +page-header("Константин")
+
+block extra-blocks
+  +extra-food()
+
+block bread
+  +bread("Спорт и отдых")
+
+block top-panel
+  +top-panel("Спорт и отдых", "Популярное в данной категории", false, true, false)
+
+//- block main-content
+
+
+//- block append page-bottom
+  //- script(src='some.js')
