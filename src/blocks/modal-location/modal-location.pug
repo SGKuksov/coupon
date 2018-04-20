@@ -27,7 +27,8 @@ mixin modal-location()
         .modal-body.modal-location__body
           ul.modal-location__city-char-list
             each val, key in city_list
-              li.modal-location__city-char=key
+              li.modal-location__city-char-item
+                span.modal-location__city-char=key
                 ul.modal-location__city-list
                   each val in city_list[key]
                     li.modal-location__city-item

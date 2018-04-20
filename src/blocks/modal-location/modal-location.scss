@@ -43,37 +43,42 @@
   }
 
   &__body {
-    column-count: 5;
-    column-gap: 3px;
     padding-top: 45px;
     padding-left: 45px;
     padding-right: 45px;
   }
 
   &__city-char-list {
+    column-count: 5;
+    column-gap: 3px;
+  }
+
+  &__city-char-item {
     display: flex;
-    flex-direction: column;
+
   }
 
   &__city-char {
     font-size: 14px;
     color: #d1d1d1;
     font-weight: bold;
-    display: flex;
+    line-height: 30px;
   }
 
   &__city-list {
     padding-left: 14px;
+    vertical-align: top;
   }
 
   &__city-item {
-    padding-bottom: 15px;
+
   }
 
   &__city-link {
     font-size: 14px;
     font-weight: bold;
     color: #969696;
+    line-height: 30px;
 
     &:hover {
       font-weight: bold;

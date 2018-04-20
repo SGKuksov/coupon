@@ -1,7 +1,7 @@
 extends templates/layout.pug
 
 block meta
-  title Category
+  title List of places
   meta(name='description', content='')
 
 //- block append head
@@ -19,7 +19,8 @@ block bread
 block top-panel
   +top-panel("Спорт и отдых", "Популярное в данной категории", false, true, false)
 
-//- block main-content
+block main-content
+  +list-of-places()
 
 
 //- block append page-bottom
