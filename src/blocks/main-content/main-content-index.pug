@@ -100,5 +100,9 @@ mixin main-content-index()
             span=dealer2
           a.card__place(href="#" title=place2)=place2
 
-    .main-content__btn-block
+    //- .main-content__btn-block
       a.main-content__btn.btn(href="#") Показать еще...
+
+    .main-content__pagination-block
+      .main-content__pagination
+        +pagination()

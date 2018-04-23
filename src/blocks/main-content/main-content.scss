@@ -57,4 +57,9 @@
       font-weight: normal;
     }
   }
+
+  &__pagination {
+    display: flex;
+    justify-content: center;
+  }
 }

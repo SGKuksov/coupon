@@ -1,29 +1,29 @@
 extends templates/layout.pug
 
 block meta
-  title Category
+  title Places Category
   meta(name='description', content='')
 
 //- block append head
   //- link(rel="stylesheet", href="style.min.css")
 
 block page-header
-  +page-header("Админ")
+  +page-header("Константин")
+
+block side-nav
+  +side-nav()
 
 block extra-blocks
-  +popular-places()
+  +extra-food()
 
 block bread
-  +bread(false)
+  +bread(true)
 
 block top-panel
-  +top-panel("Спорт и отдых", "Популярное в данной категории", true, true, false)
-
-block append top-panel-edit
-  +top-panel-edit("Админ")
+  +top-panel("Все купоны со скидками в одном месте", "Популярные категории", false, false, false)
 
 block main-content
-  +main-content-category()
+  +main-content-index()
 
 //- block append page-bottom
   //- script(src='some.js')

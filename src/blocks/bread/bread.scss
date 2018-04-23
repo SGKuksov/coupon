@@ -5,18 +5,15 @@
     margin-bottom: 10px;
   }
 
-  &__item {
+  &__link {
+    margin-right: 15px;
+    position: relative;
+    font-size: 14px;
 
-    span {
-      margin-left: 15px;
-      position: relative;
-      font-size: 14px;
-
-      &:before {
-        content: "/";
-        position: absolute;
-        left: -9px;
-      }
+    &:after {
+      content: "/";
+      position: absolute;
+      right: -9px;
     }
   }
 

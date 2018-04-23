@@ -56,13 +56,15 @@ html(lang="ru")
           a(href="list_of_place_user.html" target="_blank") Страница списка мест от пользователя
         li
           a(href="list_of_place_none.html" target="_blank") Страница списка мест без авторизации
+        li
           hr
+          a(href="places_category_admin.html" target="_blank") Страница категории каталога мест от админа
+        li
+          a(href="places_category_user.html" target="_blank") Страница категории каталога мест от пользователя
+        li
+          a(href="places_category_none.html" target="_blank") Страница категории каталога мест без авторизации
 
     style.
-      h1 {
-        display: inline-block;
-        width: 100%;
-      }
       nav {
         margin-left: 10px;
         margin-right: 10px;
@@ -72,8 +74,15 @@ html(lang="ru")
         box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
         border-radius: 10px;
       }
-      ol {
+      h1 {
         display: inline-block;
+        width: 100%;
+      }
+      ol {
+        column-count: 2;
+        column-gap: 40px;
+        display: inline-block;
+        margin-left: 40px;
       }
       li {
         text-decoration: underline;

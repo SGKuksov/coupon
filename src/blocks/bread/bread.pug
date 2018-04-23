@@ -1,9 +1,27 @@
-mixin bread(type)
+mixin bread(is_places_category)
 
-  .bread
-    ul.bread__list
-      li.bread__item
-        a.bread__link(href="#")
-          | Купоны в г. Москва
-      li.bread__item
-        span=type
+  if (!is_places_category)
+    .bread
+      ul.bread__list
+        li.bread__item
+          a.bread__link(href="#")
+            | Купоны в г. Москва
+        li.bread__item
+          span
+            | Спорт и отдых
+
+  if (is_places_category)
+    .bread
+      ul.bread__list
+        li.bread__item
+          a.bread__link(href="#")
+            | Заведения в г. Москва
+        li.bread__item
+          a.bread__link(href="#")
+            | Спорт и отдых
+        li.bread__item
+          a.bread__link(href="#")
+            | SPA-центры
+        li.bread__item
+          span
+            | Уход за телом
