@@ -1375,25 +1375,71 @@ img {
   display: none;
 }
 
-.chrome {
-  background-image: url(../img/sprite-08002098489801879.png);
+div.vote-wrap {
+  overflow: hidden;
+}
+
+div.vote-block {
+  position: relative;
+}
+
+div.vote-hover {
+  float: left;
+  cursor: pointer;
+}
+
+div.vote-stars {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-image: url("../img/sprite-02559127368214036.png");
+  height: 22px;
+  width: 22px;
+}
+
+div.vote-active {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-image: url("../img/sprite-02559127368214036.png");
+  background-position: 26px 0;
+  height: 22px;
+  width: 22px;
+}
+
+div.vote-result {
+  color: #ccc;
+  font-size: 14px;
+  margin-top: 12px;
+  padding-left: 190px;
+}
+
+div.vote-success {
+  clear: both;
+  color: #ccc;
+  font-size: 14px;
+  margin: 10px 0 0 10px;
+}
+
+.rating__star-empty {
+  background-image: url(../img/sprite-02559127368214036.png);
   background-position: 0px 0px;
-  width: 64px;
-  height: 64px;
+  width: 22px;
+  height: 22px;
 }
 
-.github-logo {
-  background-image: url(../img/sprite-08002098489801879.png);
-  background-position: -68px 0px;
-  width: 64px;
-  height: 64px;
+.rating__star-fill {
+  background-image: url(../img/sprite-02559127368214036.png);
+  background-position: -26px 0px;
+  width: 22px;
+  height: 22px;
 }
 
-.placeholder {
-  background-image: url(../img/sprite-08002098489801879.png);
-  background-position: 0px -68px;
-  width: 64px;
-  height: 64px;
+.rating__star-hover {
+  background-image: url(../img/sprite-02559127368214036.png);
+  background-position: 0px -26px;
+  width: 22px;
+  height: 22px;
 }
 
 .main-nav {
@@ -2330,10 +2376,8 @@ img {
   width: 100%;
   min-height: 63px;
   padding-left: 11px;
-  padding-top: 7px;
   padding-bottom: 8px;
   padding-right: 13px;
-  margin-bottom: 9px;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2342,13 +2386,18 @@ img {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 300px;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin: 0 auto;
+  padding-top: 7px;
+  margin-bottom: 15px;
 }
 
 .top-panel__title {
   font-size: 20px;
   color: #323232;
+}
+
+.top-panel__title--is-place {
+  width: 75%;
 }
 
 .top-panel__dealer-logo {
@@ -2861,6 +2910,10 @@ img {
   margin-left: 8px;
 }
 
+.bread--is-place {
+  display: none;
+}
+
 .bread__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2904,6 +2957,8 @@ img {
           flex-direction: column;
   padding-left: 10px;
   padding-right: 10px;
+  width: 300px;
+  margin: 0 auto;
 }
 
 .filter__settings {
@@ -3119,15 +3174,11 @@ img {
   margin-left: -18px;
   margin-top: -19px;
   margin-right: -18px;
-  margin-bottom: 12px;
   border-radius: 10px 10px 0 0;
   overflow: hidden;
   width: 300px;
   height: 200px;
-}
-
-.card__img {
-  width: 100%;
+  margin-bottom: 5px;
 }
 
 .card__sale {
@@ -3262,6 +3313,74 @@ img {
 .card__place--in-site {
   max-width: 145px;
   display: inline-block;
+}
+
+.card_places {
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding-left: 18px;
+  padding-top: 19px;
+  padding-bottom: 10px;
+  padding-right: 18px;
+  margin-left: 4px;
+  margin-right: 4px;
+  margin-bottom: 11px;
+  position: relative;
+  height: 300px;
+  width: 300px !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.card_places__img-wrap {
+  margin-left: -18px;
+  margin-top: -19px;
+  margin-right: -18px;
+  margin-bottom: 5px;
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+  width: 300px;
+  height: 152px;
+}
+
+.card_places__title {
+  font-size: 14px;
+  margin: 0;
+}
+
+.card_places__link {
+  display: inline-block;
+  font-weight: 700;
+  color: #323232;
+  font-size: 14px;
+  height: 32px;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+.card_places__link:hover {
+  font-weight: 700;
+  color: #323232;
+  font-size: 14px;
+}
+
+.card_places__category {
+  display: none;
 }
 
 .advert {
@@ -3754,6 +3873,16 @@ img {
   background-color: rgba(0, 0, 0, 0.5);
   -webkit-animation: fade 500ms;
   animation: fade 500ms;
+}
+
+.modals__dialog {
+  margin: 70px !important;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .modals__dialog--sm {
@@ -5649,6 +5778,9 @@ label.el-checkbox {
   .top-panel__title {
     margin-bottom: 15px;
   }
+  .top-panel__title--is-place {
+    width: auto;
+  }
   .top-panel__dealer-logo-caption {
     display: block;
   }
@@ -5779,6 +5911,7 @@ label.el-checkbox {
     width: 15px;
   }
   .filter {
+    width: 100%;
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
@@ -5838,6 +5971,14 @@ label.el-checkbox {
   }
   .card__place--in-site {
     display: none;
+  }
+  .card_places {
+    width: 245px !important;
+    height: 246px;
+  }
+  .card_places__img-wrap {
+    width: 245px;
+    height: 129px;
   }
   .advert {
     width: 245px;
@@ -6287,6 +6428,9 @@ label.el-checkbox {
     height: 19px;
     width: 19px;
   }
+  .bread--is-place {
+    display: block;
+  }
   .filter__select {
     padding: 7px 98px 8px 14px;
   }
@@ -6308,6 +6452,7 @@ label.el-checkbox {
   .card__img-wrap {
     width: 336px;
     height: 231px;
+    margin-bottom: 12px;
   }
   .card__sale {
     top: 216px;
@@ -6319,6 +6464,26 @@ label.el-checkbox {
   }
   .card__place--in-site {
     display: inline-block;
+  }
+  .card_places {
+    width: 336px !important;
+    height: 330px;
+  }
+  .card_places__img-wrap {
+    margin-bottom: 12px;
+    width: 336px;
+    height: 172px;
+  }
+  .card_places__link {
+    margin-bottom: 10px;
+  }
+  .card_places__category {
+    display: inline-block;
+    font-size: 14px;
+    padding: 6px 13px 7px 13px;
+    border: 1px solid #969696;
+    border-radius: 4px;
+    white-space: nowrap;
   }
   .advert {
     width: 336px;

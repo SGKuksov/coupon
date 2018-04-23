@@ -218,7 +218,7 @@
       <div class="site-overlay"></div>
       <div class="overlay"></div>
       <div class="main__container" id="container">
-        <div class="bread">
+        <div class="bread bread--is-place">
           <ul class="bread__list">
             <li class="bread__item"><a class="bread__link" href="#">Заведения в г. Москва</a></li>
             <li class="bread__item"><a class="bread__link" href="#">Спорт и отдых</a></li>
@@ -227,21 +227,9 @@
           </ul>
         </div>
         <div class="top-panel">
-          <h1 class="top-panel__title">Все купоны со скидками в одном месте</h1>
-          <p class="top-panel__subtitle">Популярные категории</p>
+          <h1 class="top-panel__title">Все места<br> в вашем городе</h1>
           <div class="top-panel__inner">
-            <div class="top-panel__labels">
-              <div class="label"><a class="label__title" href="#" title="Фитнес-центры">Фитнес-центры</a></div>
-              <div class="label"><a class="label__title" href="#" title="Подарки">Подарки</a></div>
-              <div class="label"><a class="label__title" href="#" title="Барбершопы">Барбершопы</a></div>
-            </div>
-            <div class="top-panel__btn-wrap">
-              <a class="top-panel__star" href="#" title="Места и заведения">
-                <svg class="top-panel__btn-star" width="16" height="15">
-                  <use xlink:href="img/sprite-svg.svg#top-panel__star"></use>
-                </svg><span>Места и заведения</span></a>
-            </div>
-            <div class="top-panel__coupon"><img class="top-panel__coupon-img" width="175" height="95" src="img/top-panel__bg.png" alt="coupon" /></div>
+            <div class="top-panel__waypoint"><img class="top-panel__waypoint-img" width="128" height="97" src="img/top-panel__waypoint.png" alt="waypoint" /></div>
           </div>
         </div>
         <div class="filter">
@@ -249,7 +237,7 @@
             <div class="filter__view"><span class="filter__desc">Вид:</span>
               <a class="filter__btn filter__btn--left filter__btn--active btn" href="#">
                 <svg class="filter__by_plitka" width="14" height="12">
-                  <use xlink:href="img/sprite-svg.svg#filter__by_list"></use>
+                  <use xlink:href="img/sprite-svg.svg#filter__by_plitka"></use>
                 </svg><span>Плиткой</span></a>
               <a class="filter__btn filter__btn--right btn" href="#">
                 <svg class="filter__on_map" width="16" height="14">
@@ -273,44 +261,52 @@
         </div>
         <div class="main-content">
           <div class="main-content__inner">
-            <div class="card">
-              <div class="card__img-wrap"><img class="card__img" width="336" height="231" src="http://via.placeholder.com/336x231" alt="Скидка до 50% на первое посещение бассейна" /></div><span class="card__sale">до&nbsp;<span>50%</span></span><span class="card__price">от&nbsp;<span>400 руб.</span></span><a class="card__link" href="#" title="Скидка до 50% на первое посещение бассейна">Скидка до 50% на первое посещение бассейна</a>
-              <div class="card__meta"><a class="card__category" href="#" title="Фитнес-центры">Фитнес-центры</a>
-                <a class="card__dealer" href="#" title="Frendi">
-                  <svg class="card__dealer-link" width="14" height="14">
-                    <use xlink:href="img/sprite-svg.svg#card__dealer-link"></use>
-                  </svg><span>Frendi</span></a><a class="card__place" href="#" title="Аквапарк «Родео Драйв»">Аквапарк «Родео Драйв»</a></div>
-            </div>
-            <div class="card">
-              <div class="card__img-wrap"><img class="card__img" width="336" height="231" src="http://via.placeholder.com/336x231" alt="Скидка до 30% на первое посещение бассейна" /></div><span class="card__sale">до&nbsp;<span>30%</span></span><span class="card__price card__price--green">от&nbsp;<span>Бесплатно!</span></span><a class="card__link" href="#" title="Скидка до 30% на первое посещение бассейна">Скидка до 30% на первое посещение бассейна</a>
-              <div class="card__meta"><a class="card__category" href="#" title="Фитнес-центры">Фитнес-центры</a>
-                <a class="card__dealer" href="#" title="Frendi">
-                  <svg class="card__dealer-link" width="14" height="14">
-                    <use xlink:href="img/sprite-svg.svg#card__dealer-link"></use>
-                  </svg><span>Frendi</span></a><a class="card__place" href="#" title="Аквапарк «Родео Драйв»">Аквапарк «Родео Драйв»</a></div>
-            </div>
+            <div class="card_places card_places--long-title">
+              <div class="card_places__img-wrap"><img class="card_places__img" width="336" height="231" src="http://via.placeholder.com/336x231" alt="Санкт-Петербургский Дельфинарий и Аквапарк «Родео Драйв»" /></div><a class="card_places__link card_places__link--long-title" href="#" title="Санкт-Петербургский Дельфинарий и Аквапарк «Родео Драйв»">Санкт-Петербургский Дельфинарий и Аквапарк «Родео Драйв»</a>
+              <div class="coupon__address-meta">
+                <svg class="coupon__address-meta-icon" width="14" height="14">
+                  <use xlink:href="img/sprite-svg.svg#coupon__address-clock-icon"></use>
+                </svg><span class="coupon__address-meta-desc">Пн-Вс, 08:00-22:00</span></div>
+              <div class="coupon__address-meta">
+                <svg class="coupon__address-meta-icon" width="13" height="18">
+                  <use xlink:href="img/sprite-svg.svg#coupon__address-map-icon"></use>
+                </svg><span class="coupon__address-meta-desc">Коммунистическая ул., 1, Мытищи, Московск…</span></div><a class="card_places__category card_places__category--in-site" href="#" title="Подробнее о месте">Подробнее о месте</a></div>
+            <div class="card_places card_places--long-title">
+              <div class="card_places__img-wrap"><img class="card_places__img" width="336" height="231" src="http://via.placeholder.com/336x231" alt="Санкт-Петербургский Дельфинарий и Аквапарк «Родео Драйв»" /></div><a class="card_places__link card_places__link--long-title" href="#" title="Санкт-Петербургский Дельфинарий и Аквапарк «Родео Драйв»">Санкт-Петербургский Дельфинарий и Аквапарк «Родео Драйв»</a>
+              <div class="coupon__address-meta">
+                <svg class="coupon__address-meta-icon" width="14" height="14">
+                  <use xlink:href="img/sprite-svg.svg#coupon__address-clock-icon"></use>
+                </svg><span class="coupon__address-meta-desc">Пн-Вс, 08:00-22:00</span></div>
+              <div class="coupon__address-meta">
+                <svg class="coupon__address-meta-icon" width="13" height="18">
+                  <use xlink:href="img/sprite-svg.svg#coupon__address-map-icon"></use>
+                </svg><span class="coupon__address-meta-desc">Коммунистическая ул., 1, Мытищи, Московск…</span></div><a class="card_places__category card_places__category--in-site" href="#" title="Подробнее о месте">Подробнее о месте</a></div>
             <div class="advert">
               <div class="advert__img-wrap"><img class="advert__img" width="336" height="330" src="http://via.placeholder.com/336x330" alt="Реклама" /></div><a class="advert__link" href="#" title="Скидки до 50% на билеты до барселоны">Скидки до 50% <br> на билеты <br> до барселоны</a><span class="advert__info">Реклама</span></div>
             <div class="subscribe">
               <h2 class="subscribe__title">Подпишитесь <br>на лучшие предложения</h2>
               <form class="subscribe__form" action=""><input class="subscribe__name" type="text" name="name" placeholder="Введите имя" /><input class="subscribe__email" type="email" name="email" placeholder="Введите email" /><input class="subscribe__submit btn" type="submit" value="Подписаться" /></form>
               <p class="subscribe__about">Нажимая кнопку "Подписаться", вы даете согласие на&nbsp;<a class="subscribe__link" href="#" title="обработку персональных данных">обработку персональных данных</a></p><a class="subscribe__close" href="#" title="Закрыть"><span>×</span></a></div>
-            <div class="card">
-              <div class="card__img-wrap"><img class="card__img" width="336" height="231" src="http://via.placeholder.com/336x231" alt="Скидка до 50% на первое посещение бассейна" /></div><span class="card__sale">до&nbsp;<span>50%</span></span><span class="card__price">от&nbsp;<span>400 руб.</span></span><a class="card__link" href="#" title="Скидка до 50% на первое посещение бассейна">Скидка до 50% на первое посещение бассейна</a>
-              <div class="card__meta"><a class="card__category" href="#" title="Фитнес-центры">Фитнес-центры</a>
-                <a class="card__dealer" href="#" title="Frendi">
-                  <svg class="card__dealer-link" width="14" height="14">
-                    <use xlink:href="img/sprite-svg.svg#card__dealer-link"></use>
-                  </svg><span>Frendi</span></a><a class="card__place" href="#" title="Аквапарк «Родео Драйв»">Аквапарк «Родео Драйв»</a></div>
-            </div>
-            <div class="card">
-              <div class="card__img-wrap"><img class="card__img" width="336" height="231" src="http://via.placeholder.com/336x231" alt="Скидка до 30% на первое посещение бассейна" /></div><span class="card__sale">до&nbsp;<span>30%</span></span><span class="card__price card__price--green">от&nbsp;<span>Бесплатно!</span></span><a class="card__link" href="#" title="Скидка до 30% на первое посещение бассейна">Скидка до 30% на первое посещение бассейна</a>
-              <div class="card__meta"><a class="card__category" href="#" title="Фитнес-центры">Фитнес-центры</a>
-                <a class="card__dealer" href="#" title="Frendi">
-                  <svg class="card__dealer-link" width="14" height="14">
-                    <use xlink:href="img/sprite-svg.svg#card__dealer-link"></use>
-                  </svg><span>Frendi</span></a><a class="card__place" href="#" title="Аквапарк «Родео Драйв»">Аквапарк «Родео Драйв»</a></div>
-            </div>
+            <div class="card_places card_places--long-title">
+              <div class="card_places__img-wrap"><img class="card_places__img" width="336" height="231" src="http://via.placeholder.com/336x231" alt="Санкт-Петербургский Дельфинарий и Аквапарк «Родео Драйв»" /></div><a class="card_places__link card_places__link--long-title" href="#" title="Санкт-Петербургский Дельфинарий и Аквапарк «Родео Драйв»">Санкт-Петербургский Дельфинарий и Аквапарк «Родео Драйв»</a>
+              <div class="coupon__address-meta">
+                <svg class="coupon__address-meta-icon" width="14" height="14">
+                  <use xlink:href="img/sprite-svg.svg#coupon__address-clock-icon"></use>
+                </svg><span class="coupon__address-meta-desc">Пн-Вс, 08:00-22:00</span></div>
+              <div class="coupon__address-meta">
+                <svg class="coupon__address-meta-icon" width="13" height="18">
+                  <use xlink:href="img/sprite-svg.svg#coupon__address-map-icon"></use>
+                </svg><span class="coupon__address-meta-desc">Коммунистическая ул., 1, Мытищи, Московск…</span></div><a class="card_places__category card_places__category--in-site" href="#" title="Подробнее о месте">Подробнее о месте</a></div>
+            <div class="card_places card_places--long-title">
+              <div class="card_places__img-wrap"><img class="card_places__img" width="336" height="231" src="http://via.placeholder.com/336x231" alt="Санкт-Петербургский Дельфинарий и Аквапарк «Родео Драйв»" /></div><a class="card_places__link card_places__link--long-title" href="#" title="Санкт-Петербургский Дельфинарий и Аквапарк «Родео Драйв»">Санкт-Петербургский Дельфинарий и Аквапарк «Родео Драйв»</a>
+              <div class="coupon__address-meta">
+                <svg class="coupon__address-meta-icon" width="14" height="14">
+                  <use xlink:href="img/sprite-svg.svg#coupon__address-clock-icon"></use>
+                </svg><span class="coupon__address-meta-desc">Пн-Вс, 08:00-22:00</span></div>
+              <div class="coupon__address-meta">
+                <svg class="coupon__address-meta-icon" width="13" height="18">
+                  <use xlink:href="img/sprite-svg.svg#coupon__address-map-icon"></use>
+                </svg><span class="coupon__address-meta-desc">Коммунистическая ул., 1, Мытищи, Московск…</span></div><a class="card_places__category card_places__category--in-site" href="#" title="Подробнее о месте">Подробнее о месте</a></div>
           </div>
           <div class="main-content__pagination-block">
             <div class="main-content__pagination">
@@ -571,6 +567,7 @@
   <script src="js/slick.min.js"></script>
   <script src="js/truncate.js"></script>
   <script src="js/auto-search.js"></script>
+  <script src="js/jquery.rating-2.0.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 

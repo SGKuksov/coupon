@@ -16,10 +16,16 @@ $(document).ready(function(){
     $("#modalLocation").modal('show');
   });
 
+  if (doc_w >= 1024 ) {
+    // вызов малого модального при открытии страницы
+  setTimeout($("#selectCityModal").modal('show'), 10000);
+  }
+
+
+
   //вызов большого модального окна выбора города при клике на "НЕТ"
   $(".callModalLocation").click(function() {
-    if (doc_w >= 1024 ) {
-      // $("#selectCityModal").modal('show');
+
       $("#modalLocation").modal('show');
     }
   });
@@ -106,5 +112,16 @@ $(document).ready(function(){
     slidesToScroll: 2,
     variableWidth: true
   });
+
+  // рейтинг
+  // $('#rating_1').rating({
+  //   fx: 'full',
+  //   image: 'img/sprite-02559127368214036.png',
+  //   loader: 'img/ajax-loader.gif',
+  //   url: 'rating.php',
+  //   callback: function(responce){
+  //     this.vote_success.fadeOut(2000);
+  //   }
+  // });
 
 });
