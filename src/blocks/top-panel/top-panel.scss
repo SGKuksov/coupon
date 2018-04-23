@@ -146,7 +146,6 @@
 
     &:hover {
       color: #fefefe;
-      // background-color: #ff3d3d;
       background-color: #e30101;
       border: 1px solid #e30101;
 
@@ -277,16 +276,11 @@
 
   &__coupon {
     overflow: hidden;
-    width: 94px;
-    height: 51px;
     position: absolute;
     bottom: 0;
     right: 10px;
-
-    @media (min-width: $screen-md) {
-      width: 116px;
-      height: 63px;
-    }
+    width: 94px;
+    height: 51px;
 
     @media (min-width: $screen-md) {
       width: 116px;
@@ -299,7 +293,26 @@
     }
   }
 
-  &__coupon-img {
+  &__waypoint {
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    width: 73px;
+    height: 54px;
+
+    @media (min-width: $screen-md) {
+      width: 128px;
+      height: 90px;
+    }
+
+    @media (min-width: $screen-lg) {
+      height: 97px;
+    }
+  }
+
+  &__coupon-img,
+  &__waypoint-img {
     width: 100%;
     min-height: 1px;
   }

@@ -1,6 +1,6 @@
 mixin modals()
 
-  #selectCityModal.modal.fade.modals(tabindex='-1', role='dialog',  aria-labelledby='exampleModalCenterTitle', aria-hidden='true')
+  #selectCityModal.modal.fade.modals(tabindex='-1', role='dialog', aria-hidden='true')
     .modal-dialog.modal-dialog-centered.modals__dialog.modals__dialog--sm(role='document')
       .modal-content.modals__content
         .modal-header.modals__header
@@ -14,14 +14,14 @@ mixin modals()
             svg.modals__location-icon(width="15" height="15")
               use(xlink:href="img/sprite-svg.svg#page-header__location")
             span.modals__location-info Город
-            a.modals__location-city#callModalLocation(href="#") Москва
+            a.modals__location-city.callModalLocation(href="#") Москва
           .modals__btn-block
             button.modals__btn#modals__btn-apply
               | Да
             button.modals__btn.modals__btn--gray#modalsBtnCancel
               | Нет
 
-  #ratingModal.modal.fade.modals(tabindex='-1', role='dialog',  aria-labelledby='exampleModalCenterTitle', aria-hidden='true')
+  #ratingModal.modal.fade.modals(tabindex='-1', role='dialog', aria-hidden='true')
     .modal-dialog.modal-dialog-centered.modals__dialog.modals__dialog--md(role='document')
       .modal-content.modals__content
         .modal-header.modals__header
@@ -39,7 +39,7 @@ mixin modals()
             button.modals__btn.modals__btn-close(data-dismiss='modal', aria-label='Close')
               | Закрыть
 
-  #reviewModal.modal.fade.modals(tabindex='-1', role='dialog',  aria-labelledby='exampleModalCenterTitle', aria-hidden='true')
+  #reviewModal.modal.fade.modals(tabindex='-1', role='dialog', aria-hidden='true')
     .modal-dialog.modal-dialog-centered.modals__dialog.modals__dialog--md(role='document')
       .modal-content.modals__content
         .modal-header.modals__header
@@ -57,7 +57,7 @@ mixin modals()
             button.modals__btn.modals__btn-close(data-dismiss='modal', aria-label='Close')
               | Закрыть
 
-  #errorModal.modal.fade.modals(tabindex='-1', role='dialog',  aria-labelledby='exampleModalCenterTitle', aria-hidden='true')
+  #errorModal.modal.fade.modals(tabindex='-1', role='dialog', aria-hidden='true')
     .modal-dialog.modal-dialog-centered.modals__dialog.modals__dialog--md(role='document')
       .modal-content.modals__content
         .modal-header.modals__header
@@ -86,11 +86,10 @@ mixin modals()
               | Другое
           textarea.modals__textarea(name="msg")
           .modals__btn-block
-            button.modals__btn.modals__btn-input( type="submit")
+            button.modals__btn.modals__btn-input(type="submit")
               | Отправить
 
-
-  //- #myModal.modal.fade.modals(tabindex='-1', role='dialog',  aria-labelledby='exampleModalCenterTitle', aria-hidden='true')
+  //- #myModal.modal.fade.modals(tabindex='-1', role='dialog', aria-hidden='true')
   //-   .modal-dialog.modal-dialog-centered(role='document')
   //-     .modal-content.modals__content
   //-       .modal-header.modals__header
@@ -102,6 +101,3 @@ mixin modals()
   //-       .modal-body.modals__body
 
   //-       .modal-footer.modals__footer
-
-
-

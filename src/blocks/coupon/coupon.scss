@@ -3,6 +3,7 @@
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   margin-bottom: -50px;
   width: 100%;
+  overflow: hidden;
 
   @media (min-width: $screen-sm) {
     margin-bottom: 20px;
@@ -684,6 +685,8 @@
   }
   &__address-map {
     height: 288px;
+    width: 100%;
+    border: none;
 
     @media (min-width: $screen-md) {
       height: 560px;

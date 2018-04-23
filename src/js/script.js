@@ -17,7 +17,7 @@ $(document).ready(function(){
   });
 
   //вызов большого модального окна выбора города при клике на "НЕТ"
-  $("#callModalLocation").click(function() {
+  $(".callModalLocation").click(function() {
     if (doc_w >= 1024 ) {
       // $("#selectCityModal").modal('show');
       $("#modalLocation").modal('show');

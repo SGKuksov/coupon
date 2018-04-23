@@ -37,14 +37,14 @@ mixin side-nav(is_index)
         svg.side-nav__location-icon(width="11" height="16")
           use(xlink:href="img/sprite-svg.svg#page-header__location")
         span.side-nav__location-info Город
-        a.side-nav__location-city#callModalLocation(href="#") Москва
+        a.side-nav__location-city.callModalLocation(href="#") Москва
 
       if (is_index)
         ul.side-nav__list
           each val, key in category
             li.side-nav__item.pushy-submenu
               a.side-nav__link(href="#", title=key)=key
-              button.side-nav__toggle(href="#")
+              button.side-nav__toggle
 
               ul.side-nav__sublist
                 each val, key in subcategory
@@ -57,7 +57,7 @@ mixin side-nav(is_index)
           each val, key in category
             li(class=val ? 'side-nav__item pushy-submenu pushy-submenu-open' : 'side-nav__item pushy-submenu')
               a.side-nav__link(href="#", title=key)=key
-              button.side-nav__toggle(href="#")
+              button.side-nav__toggle
 
               ul.side-nav__sublist
                 each val, key in subcategory
