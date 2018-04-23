@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *::before,
 *::after {
@@ -1048,6 +1049,17 @@ select {
   width: auto !important;
 }
 
+img {
+  width: 100%;
+  /* Ширина изображений */
+  height: 100%;
+  /* Высота изображении */
+  -o-object-fit: cover;
+     font-family: "object-fit:cover";
+     object-fit: cover;
+  /* Вписываем фотографию в область */
+}
+
 /*! Pushy - v1.1.0 - 2017-1-30
 * Pushy is a responsive off-canvas navigation menu using CSS transforms & transitions.
 * https://github.com/christophery/pushy/
@@ -1364,21 +1376,21 @@ select {
 }
 
 .chrome {
-  background-image: url(../img/sprite-07725116439460675.png);
+  background-image: url(../img/sprite-08002098489801879.png);
   background-position: 0px 0px;
   width: 64px;
   height: 64px;
 }
 
 .github-logo {
-  background-image: url(../img/sprite-07725116439460675.png);
+  background-image: url(../img/sprite-08002098489801879.png);
   background-position: -68px 0px;
   width: 64px;
   height: 64px;
 }
 
 .placeholder {
-  background-image: url(../img/sprite-07725116439460675.png);
+  background-image: url(../img/sprite-08002098489801879.png);
   background-position: 0px -68px;
   width: 64px;
   height: 64px;
@@ -2002,6 +2014,27 @@ select {
   color: #969696;
 }
 
+.side-nav__sublink:hover {
+  color: #f00;
+}
+
+.side-nav__sublink:hover + span {
+  color: #f00;
+}
+
+.side-nav__sublink--active {
+  color: #f00;
+}
+
+.side-nav__sublink--active + span {
+  color: #f00;
+}
+
+.side-nav__count {
+  font-size: 14px;
+  color: #969696;
+}
+
 .collections {
   background-color: #ffffff;
   -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
@@ -2308,6 +2341,9 @@ select {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  width: 300px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .top-panel__title {
@@ -2470,7 +2506,10 @@ select {
 
 .top-panel__coupon-img, .top-panel__waypoint-img {
   width: 100%;
-  min-height: 1px;
+  height: 100%;
+  -o-object-fit: cover;
+     font-family: "object-fit:cover";
+     object-fit: cover;
 }
 
 .tag-panel {
@@ -2829,16 +2868,16 @@ select {
   margin-bottom: 10px;
 }
 
-.bread__item span {
-  margin-left: 15px;
+.bread__link {
+  margin-right: 15px;
   position: relative;
   font-size: 14px;
 }
 
-.bread__item span:before {
+.bread__link:after {
   content: "/";
   position: absolute;
-  left: -9px;
+  right: -9px;
 }
 
 .bread__link,
@@ -2863,6 +2902,8 @@ select {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .filter__settings {
@@ -2886,6 +2927,11 @@ select {
   display: block;
   margin-bottom: 10px;
   font-size: 14px;
+}
+
+.filter__desc--is_places {
+  display: inline-block;
+  margin-right: 10px;
 }
 
 .filter__btn {
@@ -2922,9 +2968,19 @@ select {
   display: none;
 }
 
+.filter__btn-title {
+  display: inline !important;
+  margin-left: 10px;
+}
+
 .filter__by_plitka {
   width: 14px;
   height: 12px;
+}
+
+.filter__by_list {
+  width: 15px;
+  height: 11px;
 }
 
 .filter__on_map {
@@ -3015,6 +3071,15 @@ select {
 .main-content__btn:hover {
   color: #787878;
   font-weight: normal;
+}
+
+.main-content__pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .wrap {
@@ -5017,8 +5082,8 @@ label.el-checkbox {
   padding-top: 18px;
   padding-bottom: 16px;
   padding-left: 47px;
-  padding-right: 91px;
   display: block;
+  border-bottom: 1px solid #dcdcdc;
 }
 
 .list-of-places__title {
@@ -5068,6 +5133,13 @@ label.el-checkbox {
   color: #323232;
 }
 
+.list-of-places__subcategory-count {
+  font-size: 14px;
+  color: #323232;
+  line-height: 20px;
+  padding-left: 3px;
+}
+
 .list-of-places__footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5111,6 +5183,93 @@ label.el-checkbox {
 .list-of-places__btn:hover {
   color: #787878;
   font-weight: normal;
+}
+
+.pagination {
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  border: 1px solid #c9c8c8;
+  margin-top: 38px;
+}
+
+.pagination__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.pagination__item {
+  height: 32px;
+  border-right: 1px solid #c9c8c8;
+}
+
+.pagination__item:last-child {
+  border-right: none;
+}
+
+.pagination__item-prev {
+  position: relative;
+  height: 32px;
+}
+
+.pagination__item-prev .pagination__link {
+  width: 32px;
+}
+
+.pagination__item-prev:after {
+  position: absolute;
+  content: "";
+  border-left: 1px solid #969696;
+  border-bottom: 1px solid #969696;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  height: 8px;
+  width: 8px;
+  left: 14px;
+  top: 12px;
+}
+
+.pagination__item-next {
+  position: relative;
+  height: 32px;
+}
+
+.pagination__item-next .pagination__link {
+  width: 32px;
+}
+
+.pagination__item-next:after {
+  position: absolute;
+  content: "";
+  border-right: 1px solid #969696;
+  border-top: 1px solid #969696;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  height: 8px;
+  width: 8px;
+  right: 14px;
+  top: 12px;
+}
+
+.pagination__link {
+  display: inline-block;
+  color: #787878;
+  font-size: 14px;
+  padding-left: 12px;
+  padding-right: 12px;
+  line-height: 32px;
+  height: 32px;
+}
+
+.pagination__link:hover {
+  background-color: #f0eded;
+}
+
+.pagination__link--active {
+  color: #fff !important;
+  background-color: #f00;
 }
 
 @media (min-width: 480px) {
@@ -5193,6 +5352,11 @@ label.el-checkbox {
   .main__container {
     padding: 0px 67px;
   }
+  .top-panel {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
   .top-panel__inner {
     display: none;
   }
@@ -5224,6 +5388,12 @@ label.el-checkbox {
   }
   .list-of-places {
     border-radius: 10px;
+  }
+  .list-of-places__category-list {
+    -webkit-column-count: 2;
+            column-count: 2;
+    -webkit-column-gap: 3px;
+            column-gap: 3px;
   }
 }
 
@@ -5619,6 +5789,7 @@ label.el-checkbox {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    padding: 0;
   }
   .filter__settings {
     width: auto;
@@ -5899,12 +6070,6 @@ label.el-checkbox {
     padding-top: 40px;
     margin-top: 28px;
     margin-bottom: 38px;
-  }
-  .list-of-places__category-list {
-    -webkit-column-count: 2;
-            column-count: 2;
-    -webkit-column-gap: 3px;
-            column-gap: 3px;
   }
 }
 

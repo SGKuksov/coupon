@@ -37,17 +37,14 @@
       <li>
         <hr/><a href="list_of_place_admin.html" target="_blank">Страница списка мест от админа</a></li>
       <li><a href="list_of_place_user.html" target="_blank">Страница списка мест от пользователя</a></li>
-      <li><a href="list_of_place_none.html" target="_blank">Страница списка мест без авторизации</a>
-        <hr/>
-      </li>
+      <li><a href="list_of_place_none.html" target="_blank">Страница списка мест без авторизации</a></li>
+      <li>
+        <hr/><a href="places_category_admin.html" target="_blank">Страница категории каталога мест от админа</a></li>
+      <li><a href="places_category_user.html" target="_blank">Страница категории каталога мест от пользователя</a></li>
+      <li><a href="places_category_none.html" target="_blank">Страница категории каталога мест без авторизации</a></li>
     </ol>
   </nav>
   <style>
-    h1 {
-      display: inline-block;
-      width: 100%;
-    }
-
     nav {
       margin-left: 10px;
       margin-right: 10px;
@@ -58,8 +55,16 @@
       border-radius: 10px;
     }
 
-    ol {
+    h1 {
       display: inline-block;
+      width: 100%;
+    }
+
+    ol {
+      column-count: 2;
+      column-gap: 40px;
+      display: inline-block;
+      margin-left: 40px;
     }
 
     li {
