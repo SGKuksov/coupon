@@ -1,6 +1,10 @@
 .modals {
 
   &__dialog {
+    margin: 70px !important;
+    align-items: flex-start;
+    justify-content: flex-start;
+
 
     &--sm {
       max-width: 250px !important;

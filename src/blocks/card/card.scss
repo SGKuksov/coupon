@@ -36,11 +36,11 @@
     margin-left: -18px;
     margin-top: -19px;
     margin-right: -18px;
-    margin-bottom: 12px;
     border-radius: 10px 10px 0 0;
     overflow: hidden;
     width: 300px;
     height: 200px;
+    margin-bottom: 5px;
 
     @media (min-width: $screen-md) {
       width: 245px;
@@ -50,11 +50,8 @@
     @media (min-width: $screen-lg) {
       width: 336px;
       height: 231px;
+      margin-bottom: 12px;
     }
-  }
-
-  &__img {
-    width: 100%;
   }
 
   &__sale {

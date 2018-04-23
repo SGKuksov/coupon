@@ -5,17 +5,16 @@
   width: 100%;
   min-height: 63px;
   padding-left: 11px;
-  padding-top: 7px;
   padding-bottom: 8px;
   padding-right: 13px;
-  margin-bottom: 9px;
   position: relative;
   display: flex;
   justify-content: space-between;
 
   width: 300px;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin: 0 auto;
+  padding-top: 7px;
+  margin-bottom: 15px;
 
   @media (min-width: $screen-sm) {
     width: 100%;
@@ -51,6 +50,14 @@
 
     @media (min-width: $screen-lg) {
       font-size: 28px;
+    }
+
+    &--is-place {
+      width: 75%;
+
+      @media (min-width: $screen-md) {
+        width: auto;
+      }
     }
   }
 

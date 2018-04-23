@@ -5,7 +5,11 @@
   padding-left: 10px;
   padding-right: 10px;
 
+  width: 300px;
+  margin: 0 auto;
+
   @media (min-width: $screen-md) {
+    width: 100%;
     align-items: baseline;
     justify-content: space-between;
     flex-direction: row;

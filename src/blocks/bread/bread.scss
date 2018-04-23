@@ -1,5 +1,13 @@
 .bread {
 
+  &--is-place {
+    display: none;
+
+    @media (min-width: $screen-lg) {
+      display: block;
+    }
+  }
+
   &__list {
     display: flex;
     margin-bottom: 10px;
@@ -28,4 +36,6 @@
       font-weight: bold;
     }
   }
+
+  // width: 75%;
 }

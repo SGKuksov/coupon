@@ -1,51 +1,67 @@
-mixin top-panel(subtitle, title, admin, rss, dealer_logo, is_list_of_places)
+mixin top-panel(subtitle, title, admin, rss, dealer_logo, is_list_of_places, is_places_category)
 
   .top-panel
-    if (!is_list_of_places)
-      if (dealer_logo)
-        .top-panel__dealer-logo
-          img.top-panel__dealer-logo-img(width="180" height="42" src="img/top-panel__dealer-logo.png", alt=subtitle, title=subtitle)
-        h1.top-panel__dealer-logo-caption=subtitle
-        p.top-panel__subtitle=title
 
-      if (!dealer_logo)
-        h1.top-panel__title=subtitle
-        p.top-panel__subtitle=title
+    if (!is_places_category)
+      if (!is_list_of_places)
+        if (dealer_logo)
+          .top-panel__dealer-logo
+            img.top-panel__dealer-logo-img(width="180" height="42" src="img/top-panel__dealer-logo.png", alt=subtitle, title=subtitle)
+          h1.top-panel__dealer-logo-caption=subtitle
+          p.top-panel__subtitle=title
 
-      if (rss)
-        .top-panel__wrap
-          .top-panel__labels
-            +label('Фитнес-центры', admin)
-            +label('Подарки', admin)
-            +label('Барбершопы', admin)
+        if (!dealer_logo)
+          h1.top-panel__title=subtitle
+          p.top-panel__subtitle=title
 
-          a.top-panel__rss(href="#", title="Подписаться на обновления")
-            svg.top-panel__btn-rss(width="14" height="14")
-              use(xlink:href="img/sprite-svg.svg#top-panel__rss")
-            span
-             | Подписаться на обновления
+        if (rss)
+          .top-panel__wrap
+            .top-panel__labels
+              +label('Фитнес-центры', admin)
+              +label('Подарки', admin)
+              +label('Барбершопы', admin)
 
-      if (!rss)
-        .top-panel__inner
-          .top-panel__labels
-            +label('Фитнес-центры', admin)
-            +label('Подарки', admin)
-            +label('Барбершопы', admin)
-
-          .top-panel__btn-wrap
-            a.top-panel__star(href="#", title="Места и заведения")
-              svg.top-panel__btn-star(width="16" height="15")
-                use(xlink:href="img/sprite-svg.svg#top-panel__star")
+            a.top-panel__rss(href="#", title="Подписаться на обновления")
+              svg.top-panel__btn-rss(width="14" height="14")
+                use(xlink:href="img/sprite-svg.svg#top-panel__rss")
               span
-                | Места и заведения
+               | Подписаться на обновления
 
-          .top-panel__coupon
-            img.top-panel__coupon-img(width="175" height="95" src="img/top-panel__bg.png", alt="coupon")
+        if (!rss)
+          .top-panel__inner
+            .top-panel__labels
+              +label('Фитнес-центры', admin)
+              +label('Подарки', admin)
+              +label('Барбершопы', admin)
+
+            .top-panel__btn-wrap
+              a.top-panel__star(href="#", title="Места и заведения")
+                svg.top-panel__btn-star(width="16" height="15")
+                  use(xlink:href="img/sprite-svg.svg#top-panel__star")
+                span
+                  | Места и заведения
+
+            .top-panel__coupon
+              img.top-panel__coupon-img(width="175" height="95" src="img/top-panel__bg.png", alt="coupon")
 
     if (is_list_of_places)
       h1.top-panel__title
         | Все места<br> в вашем городе
 
       .top-panel__inner
+        .top-panel__waypoint
+          img.top-panel__waypoint-img(width="128" height="97" src="img/top-panel__waypoint.png", alt="waypoint")
+
+    if (is_places_category)
+      h1.top-panel__title.top-panel__title--is-place
+        | Все места раздела «Спорт и отдых»
+      p.top-panel__subtitle Популярное в данное категории
+
+      .top-panel__inner
+        .top-panel__labels
+          +label('Фитнес-центры', admin)
+          +label('Подарки', admin)
+          +label('Барбершопы', admin)
+
         .top-panel__waypoint
           img.top-panel__waypoint-img(width="128" height="97" src="img/top-panel__waypoint.png", alt="waypoint")

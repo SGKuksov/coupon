@@ -20,13 +20,13 @@ block bread
   +bread(true)
 
 block top-panel
-  +top-panel("Все купоны со скидками в одном месте", "Популярные категории", true, false, false)
+  +top-panel("Все купоны со скидками в одном месте", "Популярные категории", true, false, false, false, true)
 
 block append top-panel-edit
   +top-panel-edit("Админ")
 
 block main-content
-  +main-content-index()
+  +main-content-places-category()
 
 //- block append page-bottom
   //- script(src='some.js')

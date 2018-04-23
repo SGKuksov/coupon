@@ -39,7 +39,7 @@ mixin coupon(admin, is_space)
             if (admin)
               a.coupon__edit-btn(href="#", title="Подписаться на обновления")
                 svg.coupon__edit-btn-icon(width="15" height="16")
-                  use(xlink:href="img/sprite-svg.svg#top-panel__rss")
+                  use(xlink:href="img/sprite-svg.svg#coupon__edit-btn-icon")
                 span
                   | Редактировать
           .coupon__aside
@@ -57,12 +57,12 @@ mixin coupon(admin, is_space)
                 .coupon__take-score-wrap
                   .coupon__take-score
                     svg.coupon__take-score-icon(width="15" height="10")
-                      use(xlink:href="img/sprite-svg.svg#top-panel__rss")
+                      use(xlink:href="img/sprite-svg.svg#coupon__take-score-yes")
                     span.coupon__take-score-count
                      | 12
                   .coupon__take-score
                     svg.coupon__take-score-icon(width="12" height="12")
-                      use(xlink:href="img/sprite-svg.svg#top-panel__rss")
+                      use(xlink:href="img/sprite-svg.svg#coupon__take-score-no")
                     span.coupon__take-score-count
                      | 0
                 .coupon__take-review-btn-wrap
@@ -173,16 +173,16 @@ mixin coupon(admin, is_space)
               | Подробнее о месте
             .coupon__address-meta
               svg.coupon__address-meta-icon(width="14" height="14")
-                use(xlink:href="img/sprite-svg.svg#top-panel__rss")
+                use(xlink:href="img/sprite-svg.svg#coupon__address-clock-icon")
               span.coupon__address-meta-desc
                 | Пн-Вс, 08:00-22:00
             .coupon__address-meta
               svg.coupon__address-meta-icon(width="14" height="14")
-                use(xlink:href="img/sprite-svg.svg#top-panel__rss")
+                use(xlink:href="img/sprite-svg.svg#coupon__address-phone-icon")
               a.coupon__address-meta-desc(href="tel:+78121234567")
                 | +7 (812) 123-45-67
             .coupon__address-meta
               svg.coupon__address-meta-icon(width="13" height="18")
-                use(xlink:href="img/sprite-svg.svg#top-panel__rss")
+                use(xlink:href="img/sprite-svg.svg#coupon__address-map-icon")
               span.coupon__address-meta-desc
                 | пр. Культуры, 1, Москва

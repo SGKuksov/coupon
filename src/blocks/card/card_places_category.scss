@@ -1,0 +1,91 @@
+.card_places {
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding-left: 18px;
+  padding-top: 19px;
+  padding-bottom: 10px;
+  padding-right: 18px;
+  margin-left: 4px;
+  margin-right: 4px;
+  margin-bottom: 11px;
+  position: relative;
+  height: 300px;
+  width: 300px !important;
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  @media (min-width: $screen-md) {
+    width: 245px !important;
+    height: 246px;
+  }
+
+  @media (min-width: $screen-lg) {
+    width: 336px !important;
+    height: 330px;
+  }
+
+  &__img-wrap {
+    margin-left: -18px;
+    margin-top: -19px;
+    margin-right: -18px;
+    margin-bottom: 5px;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+    width: 300px;
+    height: 152px;
+
+    @media (min-width: $screen-md) {
+      width: 245px;
+      height: 129px;
+    }
+
+    @media (min-width: $screen-lg) {
+      margin-bottom: 12px;
+      width: 336px;
+      height: 172px;
+    }
+  }
+
+  &__title {
+    font-size: 14px;
+    margin: 0;
+  }
+
+  &__link {
+    display: inline-block;
+    font-weight: 700;
+    color: #323232;
+    font-size: 14px;
+    height: 32px;
+    overflow: hidden;
+    margin-bottom: 5px;
+
+    @media (min-width: $screen-lg) {
+      margin-bottom: 10px;
+    }
+
+    &:hover {
+      font-weight: 700;
+      color: #323232;
+      font-size: 14px;
+    }
+  }
+
+  &__category {
+    display: none;
+
+    @media (min-width: $screen-lg) {
+      display: inline-block;
+      font-size: 14px;
+      padding: 6px 13px 7px 13px;
+      border: 1px solid #969696;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+  }
+}

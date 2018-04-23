@@ -3,21 +3,31 @@ mixin rating(has_score)
   .rating__stars
     span.rating__star
       svg.rating__star-icon(width="17" height="17")
-        use(xlink:href="img/sprite-svg.svg#top-panel__rss")
+        use(xlink:href="img/sprite-svg.svg#rating__star-fill")
     span.rating__star
       svg.rating__star-icon(width="17" height="17")
-        use(xlink:href="img/sprite-svg.svg#top-panel__rss")
+        use(xlink:href="img/sprite-svg.svg#rating__star-fill")
     span.rating__star
       svg.rating__star-icon(width="17" height="17")
-        use(xlink:href="img/sprite-svg.svg#top-panel__rss")
+        use(xlink:href="img/sprite-svg.svg#rating__star-fill")
     span.rating__star
       svg.rating__star-icon(width="17" height="17")
-        use(xlink:href="img/sprite-svg.svg#top-panel__rss")
+        use(xlink:href="img/sprite-svg.svg#rating__star-fill")
     span.rating__star
       svg.rating__star-icon(width="17" height="17")
-        use(xlink:href="img/sprite-svg.svg#top-panel__rss")
+        use(xlink:href="img/sprite-svg.svg#rating__star-empty")
 
   if (has_score)
     .rating__label
       span.rating__score 4,52
       span.rating__count (24 голоса)
+
+  //- #rating_1
+  //-   .vote-wrap
+  //-     .vote-hover(style="padding: 0px 4px; height: 22px; width: 160px;")
+  //-       .vote-block
+  //-         .vote-stars
+  //-         .vote-active
+  //-     .vote-result
+  //-     .vote-success
+

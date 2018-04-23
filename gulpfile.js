@@ -68,6 +68,7 @@ let jsList = [
   dirs.source + '/js/slick.min.js',
   dirs.source + '/js/truncate.js',
   dirs.source + '/js/auto-search.js',
+  dirs.source + '/js/jquery.rating-2.0.min.js',
   dirs.source + '/js/script.js'
 ];
 

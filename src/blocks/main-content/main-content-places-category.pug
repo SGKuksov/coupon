@@ -1,0 +1,89 @@
+mixin main-content-places-category()
+  .main-content
+    .main-content__inner
+
+      -
+        var title = "Санкт-Петербургский Дельфинарий и Аквапарк «Родео Драйв»"
+        var category = "Подробнее о месте"
+
+      .card_places.card_places--long-title
+        .card_places__img-wrap
+          img.card_places__img(width="336" height="231" src="http://via.placeholder.com/336x231", alt=title)
+
+        //- h2.card_places__title
+        a.card_places__link.card_places__link--long-title(href="#" title=title)=title
+        .coupon__address-meta
+          svg.coupon__address-meta-icon(width="14" height="14")
+            use(xlink:href="img/sprite-svg.svg#coupon__address-clock-icon")
+          span.coupon__address-meta-desc
+            | Пн-Вс, 08:00-22:00
+        .coupon__address-meta
+          svg.coupon__address-meta-icon(width="13" height="18")
+            use(xlink:href="img/sprite-svg.svg#coupon__address-map-icon")
+          span.coupon__address-meta-desc
+            | Коммунистическая ул., 1, Мытищи, Московск…
+        a.card_places__category.card_places__category--in-site(href="#" title=category)=category
+
+      .card_places.card_places--long-title
+        .card_places__img-wrap
+          img.card_places__img(width="336" height="231" src="http://via.placeholder.com/336x231", alt=title)
+
+        //- h2.card_places__title
+        a.card_places__link.card_places__link--long-title(href="#" title=title)=title
+        .coupon__address-meta
+          svg.coupon__address-meta-icon(width="14" height="14")
+            use(xlink:href="img/sprite-svg.svg#coupon__address-clock-icon")
+          span.coupon__address-meta-desc
+            | Пн-Вс, 08:00-22:00
+        .coupon__address-meta
+          svg.coupon__address-meta-icon(width="13" height="18")
+            use(xlink:href="img/sprite-svg.svg#coupon__address-map-icon")
+          span.coupon__address-meta-desc
+            | Коммунистическая ул., 1, Мытищи, Московск…
+        a.card_places__category.card_places__category--in-site(href="#" title=category)=category
+
+      +advert("Реклама")
+      +subscribe()
+
+      .card_places.card_places--long-title
+        .card_places__img-wrap
+          img.card_places__img(width="336" height="231" src="http://via.placeholder.com/336x231", alt=title)
+
+        //- h2.card_places__title
+        a.card_places__link.card_places__link--long-title(href="#" title=title)=title
+        .coupon__address-meta
+          svg.coupon__address-meta-icon(width="14" height="14")
+            use(xlink:href="img/sprite-svg.svg#coupon__address-clock-icon")
+          span.coupon__address-meta-desc
+            | Пн-Вс, 08:00-22:00
+        .coupon__address-meta
+          svg.coupon__address-meta-icon(width="13" height="18")
+            use(xlink:href="img/sprite-svg.svg#coupon__address-map-icon")
+          span.coupon__address-meta-desc
+            | Коммунистическая ул., 1, Мытищи, Московск…
+        a.card_places__category.card_places__category--in-site(href="#" title=category)=category
+
+      .card_places.card_places--long-title
+        .card_places__img-wrap
+          img.card_places__img(width="336" height="231" src="http://via.placeholder.com/336x231", alt=title)
+
+        //- h2.card_places__title
+        a.card_places__link.card_places__link--long-title(href="#" title=title)=title
+        .coupon__address-meta
+          svg.coupon__address-meta-icon(width="14" height="14")
+            use(xlink:href="img/sprite-svg.svg#coupon__address-clock-icon")
+          span.coupon__address-meta-desc
+            | Пн-Вс, 08:00-22:00
+        .coupon__address-meta
+          svg.coupon__address-meta-icon(width="13" height="18")
+            use(xlink:href="img/sprite-svg.svg#coupon__address-map-icon")
+          span.coupon__address-meta-desc
+            | Коммунистическая ул., 1, Мытищи, Московск…
+        a.card_places__category.card_places__category--in-site(href="#" title=category)=category
+
+    //- .main-content__btn-block
+      a.main-content__btn.btn(href="#") Показать еще...
+
+    .main-content__pagination-block
+      .main-content__pagination
+        +pagination()
