@@ -1,4 +1,4 @@
-mixin side-nav(is_index)
+mixin side-nav(is_index, is_places_category)
 
   -
     var category = {
@@ -30,6 +30,9 @@ mixin side-nav(is_index)
       'Аэротрубы33': 2,
       'Бани и сауны3': 1
     };
+    var subcategory_active = {
+      'Активный отдых1': true
+    };
 
   nav.side-nav
     .pushy-content
@@ -49,10 +52,10 @@ mixin side-nav(is_index)
               ul.side-nav__sublist
                 each val, key in subcategory
                   li.side-nav__subitem.pushy-link
-                    a.side-nav__sublink(href="#", title=key)=key
+                    a.side-nav__sublink(href="", title=key)=key
                     span.side-nav__count=val
 
-      if (!is_index)
+      if (!is_index && !is_places_category)
         ul.side-nav__list
           each val, key in category
             li(class=val ? 'side-nav__item pushy-submenu pushy-submenu-open' : 'side-nav__item pushy-submenu')
@@ -62,5 +65,19 @@ mixin side-nav(is_index)
               ul.side-nav__sublist
                 each val, key in subcategory
                   li.side-nav__subitem.pushy-link
-                    a.side-nav__sublink(href="#", title=key)=key
+                    a.side-nav__sublink(href="", title=key)=key
                     span.side-nav__count=val
+
+      if (is_places_category)
+        ul.side-nav__list
+          each val, key in category
+            li(class=val ? 'side-nav__item pushy-submenu pushy-submenu-open' : 'side-nav__item pushy-submenu')
+              a.side-nav__link(href="#", title=key)=key
+              button.side-nav__toggle
+
+              ul.side-nav__sublist
+                each val, key in subcategory
+                  each val1, key1 in subcategory_active
+                    li.side-nav__subitem.pushy-link
+                      a(class=key === key1 ? 'side-nav__sublink side-nav__sublink--active' : 'side-nav__sublink', href="", title=key)=key
+                      span.side-nav__count=val

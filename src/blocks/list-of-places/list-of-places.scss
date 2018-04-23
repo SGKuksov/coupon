@@ -12,9 +12,8 @@
     padding-top: 18px;
     padding-bottom: 16px;
     padding-left: 47px;
-    padding-right: 91px;
-
     display: block;
+    border-bottom: 1px solid #dcdcdc;
 
     @media (min-width: $screen-md) {
       display: none;
@@ -52,7 +51,7 @@
 
   &__category-list {
 
-    @media (min-width: $screen-md) {
+    @media (min-width: $screen-sm) {
       column-count: 2;
       column-gap: 3px;
     }
@@ -94,6 +93,13 @@
     &:hover {
       color: #323232;
     }
+  }
+
+  &__subcategory-count {
+    font-size: 14px;
+    color: #323232;
+    line-height: 20px;
+    padding-left: 3px;
   }
 
   &__footer {

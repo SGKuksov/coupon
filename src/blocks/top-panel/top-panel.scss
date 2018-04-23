@@ -4,16 +4,25 @@
   border-radius: 10px;
   width: 100%;
   min-height: 63px;
-
   padding-left: 11px;
   padding-top: 7px;
   padding-bottom: 8px;
   padding-right: 13px;
   margin-bottom: 9px;
   position: relative;
-
   display: flex;
   justify-content: space-between;
+
+  width: 300px;
+  margin-left: 10px;
+  margin-right: 10px;
+
+  @media (min-width: $screen-sm) {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
 
   @media (min-width: $screen-md) {
     display: block;
@@ -314,6 +323,7 @@
   &__coupon-img,
   &__waypoint-img {
     width: 100%;
-    min-height: 1px;
+    height: 100%;
+    object-fit: cover;
   }
 }

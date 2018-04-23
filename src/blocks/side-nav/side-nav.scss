@@ -88,10 +88,8 @@
 
   &__link {
     font-size: 18px;
-
     color: #323232;
     font-weight: 700;
-    // display: block;
     position: relative;
 
     @media (min-width: $screen-md) {
@@ -139,8 +137,26 @@
     @media (min-width: $screen-md) {
       font-size: 14px;
     }
+
+    &:hover {
+      color: #f00;
+
+      & + span {
+        color: #f00;
+      }
+    }
+
+    &--active {
+      color: #f00;
+
+      & + span {
+        color: #f00;
+      }
+    }
   }
 
   &__count {
+    font-size: 14px;
+    color: #969696;
   }
 }

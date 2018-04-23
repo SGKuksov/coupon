@@ -2,11 +2,14 @@
   display: flex;
   position: relative;
   flex-direction: column;
+  padding-left: 10px;
+  padding-right: 10px;
 
   @media (min-width: $screen-md) {
     align-items: baseline;
     justify-content: space-between;
     flex-direction: row;
+    padding: 0;
   }
 
   &__settings {
@@ -36,6 +39,11 @@
 
     @media (min-width: $screen-md) {
       display: inline;
+      margin-right: 10px;
+    }
+
+    &--is_places {
+      display: inline-block;
       margin-right: 10px;
     }
   }
@@ -80,9 +88,19 @@
     }
   }
 
+  &__btn-title {
+    display: inline !important;
+    margin-left: 10px;
+  }
+
   &__by_plitka {
     width: 14px;
     height: 12px;
+  }
+
+  &__by_list {
+    width: 15px;
+    height: 11px;
   }
 
   &__on_map {

@@ -53,3 +53,9 @@ h1, h2, h3, h4 ,h5, h6 {
 select {
   width: auto !important;
 }
+
+img {
+  width: 100%; /* Ширина изображений */
+  height: 100%; /* Высота изображении */
+  object-fit: cover; /* Вписываем фотографию в область */
+}
