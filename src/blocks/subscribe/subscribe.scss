@@ -13,10 +13,8 @@
   align-items: center;
   justify-content: space-between;
   position: relative;
-
   height: 300px;
   width: 300px;
-
   padding-left: 18px;
   padding-top: 18px;
   padding-bottom: 18px;
@@ -45,7 +43,6 @@
     margin-bottom: 20px;
     color: #2a2929;
     font-weight: 700;
-
     margin-bottom: 0;
 
     @media (min-width: $screen-md) {

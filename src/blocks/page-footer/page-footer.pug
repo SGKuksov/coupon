@@ -18,8 +18,9 @@ mixin page-footer()
 
   footer.page-footer
     .page-footer__container
-      .page-footer__logo
-        img.page-footer__logo(width="150" height="31" src="img/page-footer__logo-img.svg", alt="hot kupon")
+      .page-footer__leftcol
+        .page-footer__logo
+          img.page-footer__logo-img(width="150" height="31" src="img/page-footer__logo-img.svg", alt="hot kupon")
 
       nav.page-footer__nav
         ul.page-footer__nav-list
@@ -37,7 +38,6 @@ mixin page-footer()
             li.page-footer__nav-item
               a.page-footer__nav-link(href=val, title=key)= key
 
-    p.page-footer__copy
-      | &copy; HotKupon.ru <br>Все сайты скидок
-
-
+    .page-footer__copy
+      p.page-footer__copy-text
+        | &copy; HotKupon.ru <br>Все сайты скидок

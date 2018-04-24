@@ -1,16 +1,15 @@
-mixin bread(is_places_category)
+mixin bread(is_places_category, bread)
 
-  if (!is_places_category)
+  if (is_places_category)
     .bread
       ul.bread__list
         li.bread__item
           a.bread__link(href="#")
             | Купоны в г. Москва
         li.bread__item
-          span
-            | Спорт и отдых
+          span=bread
 
-  if (is_places_category)
+  if (!is_places_category)
     .bread.bread--is-place
       ul.bread__list
         li.bread__item

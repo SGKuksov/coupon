@@ -10,7 +10,7 @@ $(document).ready(function(){
   // подключение автопоиск
   // $('#superSearch').autoSearch();
 
-  //вызов малого модального окна при клике на город
+  //вызов большого модального окна при клике на город
   $("#modalsBtnCancel").click(function() {
     $("#selectCityModal").modal('hide');
     $("#modalLocation").modal('show');
@@ -21,13 +21,9 @@ $(document).ready(function(){
   setTimeout($("#selectCityModal").modal('show'), 10000);
   }
 
-
-
   //вызов большого модального окна выбора города при клике на "НЕТ"
   $(".callModalLocation").click(function() {
-
       $("#modalLocation").modal('show');
-    }
   });
 
   // скрытие блока подписки
@@ -123,5 +119,17 @@ $(document).ready(function(){
   //     this.vote_success.fadeOut(2000);
   //   }
   // });
+
+  // $("#placeGallery").slick({
+  //   infinite: false,
+  //   slidesToShow: 3,
+  //   slidesToScroll: 2,
+  //   variableWidth: true
+  // });
+
+  // лайтбокс
+  $("#placeGallery").click(function() {
+    // $("#modalLocation").modal('show');
+  });
 
 });

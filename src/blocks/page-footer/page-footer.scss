@@ -4,7 +4,6 @@
   flex-wrap: wrap;
   flex: 0 0 auto;
   flex-direction: column;
-
   background-color: #ffffff;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   width: 100%;
@@ -13,7 +12,6 @@
 
   @media (min-width: $screen-md) {
     justify-content: center;
-    flex-direction: row;
     min-height: 250px;
     padding-top: 36px;
     padding-bottom: 29px;
@@ -38,7 +36,7 @@
     }
   }
 
-  &__logo {
+  &__leftcol {
     align-self: center;
     margin-bottom: 28px;
 
@@ -66,6 +64,10 @@
       width: 150px;
       height: 31px;
     }
+  }
+
+  &__logo-img {
+    object-fit: cover;
   }
 
   &__nav {
@@ -111,13 +113,16 @@
   &__copy {
     align-items: center;
     margin-bottom: 0;
-
     margin-top: 37px;
 
     @media (min-width: $screen-md) {
       align-items: flex-end;
-      margin-top: 0;
+      margin-top: 85px;
     }
+
+  }
+
+  &__copy-text {
 
     & br {
       @media (min-width: $screen-sm) {

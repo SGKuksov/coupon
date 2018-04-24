@@ -16,7 +16,7 @@ mixin modals()
             span.modals__location-info Город
             a.modals__location-city.callModalLocation(href="#") Москва
           .modals__btn-block
-            button.modals__btn#modals__btn-apply
+            button.modals__btn#modals__btn-apply(data-dismiss='modal', aria-label='Close')
               | Да
             button.modals__btn.modals__btn--gray#modalsBtnCancel
               | Нет
