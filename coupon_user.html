@@ -259,7 +259,7 @@
             <div class="tab-pane active" id="description" role="tabpanel">
               <div class="coupon__body coupon__description-tab">
                 <div class="coupon__info">
-                  <div class="coupon__img-wrap"><img class="coupon__img" src="http://via.placeholder.com/336x231" alt="photo" width="336" height="231" /></div><span class="coupon__take-price coupon__take-price--on-top">Бесплатно</span><a class="coupon__take-btn coupon__take-btn--on-top btn" href="#" title="Получить купон">Получить купон</a>
+                  <div class="coupon__img-wrap" href="#"><img class="coupon__img" src="http://via.placeholder.com/336x231" alt="photo" width="336" height="231" /></div><span class="coupon__take-price coupon__take-price--on-top">Бесплатно</span><a class="coupon__take-btn coupon__take-btn--on-top btn" href="#" title="Получить купон">Получить купон</a><span class="coupon__sale">до&nbsp;<span>50%</span></span>
                   <p class="coupon__text">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Семантика рыбного, ведущими встретил скатился имеет, они силуэт мир правилами родного по всей страна путь даль не имени. Своих там эта деревни вскоре парадигматическая переписывается точках если она но щеке переулка своего, лучше необходимыми диких мир! Которой ручеек назад, оксмокс, это маленький речью подпоясал агенство он необходимыми своего пор от всех, толку переписали. Одна грамматики, ты рыбного, заголовок предупредила, однажды живет она пустился за рыбными залетают страну реторический журчит образ, осталось если маленький раз предложения. Сих сбить себя которой ведущими оксмокс, инициал ему рот она однажды там встретил маленькая. Лучше, дороге, встретил!</p>
                 </div>
                 <div class="coupon__aside">
@@ -466,7 +466,9 @@
   </div>
   <footer class="page-footer">
     <div class="page-footer__container">
-      <div class="page-footer__logo"><img class="page-footer__logo" width="150" height="31" src="img/page-footer__logo-img.svg" alt="hot kupon" /></div>
+      <div class="page-footer__leftcol">
+        <div class="page-footer__logo"><img class="page-footer__logo-img" width="150" height="31" src="img/page-footer__logo-img.svg" alt="hot kupon" /></div>
+      </div>
       <nav class="page-footer__nav">
         <ul class="page-footer__nav-list">
           <li class="page-footer__nav-item"><a class="page-footer__nav-link" href="#" title="О проекте">О проекте</a></li>
@@ -484,7 +486,9 @@
         </ul>
       </nav>
     </div>
-    <p class="page-footer__copy">&copy; HotKupon.ru <br>Все сайты скидок</p>
+    <div class="page-footer__copy">
+      <p class="page-footer__copy-text">&copy; HotKupon.ru <br>Все сайты скидок</p>
+    </div>
   </footer>
   <div class="modal fade modal-location" id="modalLocation" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -593,7 +597,7 @@
             <svg class="modals__location-icon" width="15" height="15">
               <use xlink:href="img/sprite-svg.svg#page-header__location"></use>
             </svg><span class="modals__location-info">Город</span><a class="modals__location-city callModalLocation" href="#">Москва</a></div>
-          <div class="modals__btn-block"><button class="modals__btn" id="modals__btn-apply">Да</button><button class="modals__btn modals__btn--gray" id="modalsBtnCancel">Нет</button></div>
+          <div class="modals__btn-block"><button class="modals__btn" id="modals__btn-apply" data-dismiss="modal" aria-label="Close">Да</button><button class="modals__btn modals__btn--gray" id="modalsBtnCancel">Нет</button></div>
         </div>
       </div>
     </div>

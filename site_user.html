@@ -255,12 +255,10 @@
       <div class="site-overlay"></div>
       <div class="overlay"></div>
       <div class="main__container" id="container">
-        <div class="bread bread--is-place">
+        <div class="bread">
           <ul class="bread__list">
-            <li class="bread__item"><a class="bread__link" href="#">Заведения в г. Москва</a></li>
-            <li class="bread__item"><a class="bread__link" href="#">Спорт и отдых</a></li>
-            <li class="bread__item"><a class="bread__link" href="#">SPA-центры</a></li>
-            <li class="bread__item"><span>Уход за телом</span></li>
+            <li class="bread__item"><a class="bread__link" href="#">Купоны в г. Москва</a></li>
+            <li class="bread__item"><span></span></li>
           </ul>
         </div>
         <div class="top-panel">
@@ -376,7 +374,9 @@
   </div>
   <footer class="page-footer">
     <div class="page-footer__container">
-      <div class="page-footer__logo"><img class="page-footer__logo" width="150" height="31" src="img/page-footer__logo-img.svg" alt="hot kupon" /></div>
+      <div class="page-footer__leftcol">
+        <div class="page-footer__logo"><img class="page-footer__logo-img" width="150" height="31" src="img/page-footer__logo-img.svg" alt="hot kupon" /></div>
+      </div>
       <nav class="page-footer__nav">
         <ul class="page-footer__nav-list">
           <li class="page-footer__nav-item"><a class="page-footer__nav-link" href="#" title="О проекте">О проекте</a></li>
@@ -394,7 +394,9 @@
         </ul>
       </nav>
     </div>
-    <p class="page-footer__copy">&copy; HotKupon.ru <br>Все сайты скидок</p>
+    <div class="page-footer__copy">
+      <p class="page-footer__copy-text">&copy; HotKupon.ru <br>Все сайты скидок</p>
+    </div>
   </footer>
   <div class="modal fade modal-location" id="modalLocation" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -503,7 +505,7 @@
             <svg class="modals__location-icon" width="15" height="15">
               <use xlink:href="img/sprite-svg.svg#page-header__location"></use>
             </svg><span class="modals__location-info">Город</span><a class="modals__location-city callModalLocation" href="#">Москва</a></div>
-          <div class="modals__btn-block"><button class="modals__btn" id="modals__btn-apply">Да</button><button class="modals__btn modals__btn--gray" id="modalsBtnCancel">Нет</button></div>
+          <div class="modals__btn-block"><button class="modals__btn" id="modals__btn-apply" data-dismiss="modal" aria-label="Close">Да</button><button class="modals__btn modals__btn--gray" id="modalsBtnCancel">Нет</button></div>
         </div>
       </div>
     </div>
