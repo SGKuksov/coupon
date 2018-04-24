@@ -14,8 +14,13 @@
   padding-top: 7px;
   margin-bottom: 15px;
 
-  @media (min-width: $screen-sm) {
+  @media (min-width: 380px) {
     width: 100%;
+    margin-left: 30px;
+    margin-right: 20px;
+  }
+
+  @media (min-width: $screen-sm) {
     margin-left: 0;
     margin-right: 0;
   }
@@ -26,7 +31,6 @@
     padding-top: 17px;
     padding-bottom: 17px;
     padding-right: 20px;
-    margin-bottom: 15px;
   }
 
   @media (min-width: $screen-lg) {
@@ -34,7 +38,6 @@
     padding-top: 17px;
     padding-bottom: 20px;
     padding-right: 20px;
-    margin-bottom: 15px;
   }
 
   &__title {

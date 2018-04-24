@@ -28,28 +28,24 @@ mixin coupon(admin, is_space)
             if (!is_space)
               .coupon__img-wrap(href="#")
                 img.coupon__img(src="http://via.placeholder.com/336x231", alt="photo" width="336" height="231")
+                span.coupon__sale
+                  | до&nbsp;
+                  span
+                    | 50%
 
             if (is_space)
-              a.coupon__img-wrap#placeGallery(href="#")
+              .coupon__img-wrap#placeGallery(href="#")
                 img.coupon__img(src="http://via.placeholder.com/336x231", alt="photo" width="336" height="231")
+                span.coupon__gallery
+                  svg.coupon__gallery-icon(width="18" height="14")
+                    use(xlink:href="img/sprite-svg.svg#coupon__gallery")
+                  span
+                    | 19 фото
 
             span.coupon__take-price.coupon__take-price--on-top
               | Бесплатно
             a.coupon__take-btn.coupon__take-btn--on-top.btn(href="#", title="Получить купон")
               | Получить купон
-
-            if (!is_space)
-              span.coupon__sale
-                | до&nbsp;
-                span
-                  | 50%
-
-            if (is_space)
-              span.coupon__gallery
-                svg.coupon__gallery-icon(width="18" height="14")
-                  use(xlink:href="img/sprite-svg.svg#coupon__gallery")
-                span
-                  | 19 фото
 
             p.coupon__text
               | Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Семантика рыбного, ведущими встретил скатился имеет, они силуэт мир правилами родного по всей страна путь даль не имени. Своих там эта деревни вскоре парадигматическая переписывается точках если она но щеке переулка своего, лучше необходимыми диких мир! Которой ручеек назад, оксмокс, это маленький речью подпоясал агенство он необходимыми своего пор от всех, толку переписали. Одна грамматики, ты рыбного, заголовок предупредила, однажды живет она пустился за рыбными залетают страну реторический журчит образ, осталось если маленький раз предложения. Сих сбить себя которой ведущими оксмокс, инициал ему рот она однажды там встретил маленькая. Лучше, дороге, встретил!
