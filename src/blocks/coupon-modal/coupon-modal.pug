@@ -4,91 +4,82 @@ mixin coupon-modal()
     .modal-dialog.modal-dialog-centered(role='document')
       .modal-content.coupon-modal__content
         .modal-header.coupon-modal__header
-          .tag-panel__header
-            .tag-panel__labels
-              +label('Фитнес-центры')
-              +label('Подарки')
-              +label('Барбершопы')
+          .coupon-modal__labels
+            +label('Фитнес-центры')
+            +label('Подарки')
+            +label('Барбершопы')
 
-          .tag-panel__body
-            .tag-panel__info
-              .tag-panel__rating.rating
-                +rating(true)
-              h1.tag-panel__title
-                | Купон на бесплатное посещение бассейна
-              p.tag-panel__subtitle
-                | При покупке любого абонемента - одно занятие бесплатно!
+          .coupon-modal__inner
+            .coupon-modal__rating.rating
+              +rating()
+            h1.coupon-modal__title
+              | Купон на бесплатное посещение бассейна
+            p.coupon-modal__subtitle
+              | При покупке любого абонемента - одно занятие бесплатно!
 
-            .tag-panel__btn-wrap
-              .tag-panel__sold
-                svg.tag-panel__coupon-sold-icon(width="26" height="26")
-                  use(xlink:href="img/sprite-svg.svg#tag-panel__coupon-sold-icon")
-                span.tag-panel__sold-count
-                 | 95
-                span.tag-panel__sold-title
-                 | купонов уже получено
-              a.tag-panel__rss(href="#", title="Добавить в избранное")
-                svg.tag-panel__btn-rss(width="16" height="14")
-                  use(xlink:href="img/sprite-svg.svg#tag-panel__favorite-icon")
-                span
-                 | Добавить в избранное
+          .coupon-modal__btn-wrap
+            a.coupon-modal__btn(href="#", title="Добавить в избранное")
+              svg.coupon-modal__btn-icon(width="16" height="14")
+                use(xlink:href="img/sprite-svg.svg#tag-panel__favorite-icon")
+              span
+               | Добавить в избранное
 
-              a.tag-panel__rss(href="#", title="Оставить отзыв")
-                span
-                 | Оставить отзыв
+            a.coupon-modal__btn(href="#", title="Оставить отзыв")
+              span
+               | Оставить отзыв
 
-              a.tag-panel__rss(href="#", title="Подписаться на обновления")
-                span
-                 | Добавить в избранное
+            a.coupon-modal__link(href="#", title="Подписаться на обновления")
+              span.coupon-modal__link-title
+               | Отзывы
+              span.coupon-modal__link-count
+               | 16
 
-          a.close.coupon-modal__close(href="", data-dismiss='modal', aria-label='Close')
-            span(aria-hidden='true')
-              | Закрыть
+          a.close.coupon-modal__close(href="#", data-dismiss='modal', aria-label='Close')
+            | Закрыть
 
-        .modal-body.coupon-modal__body.coupon__body
-          .coupon__info
-            .coupon__img-wrap
-              img.coupon__img(src="http://via.placeholder.com/336x231", alt="photo" width="336" height="231")
-              span.coupon__sale
-                | до&nbsp;
-                span
-                  | 50%
+        .modal-body
+          .coupon-modal__body
 
-            span.coupon__take-price.coupon__take-price--on-top
-              | Бесплатно
-            a.coupon__take-btn.coupon__take-btn--on-top.btn(href="#", title="Получить купон")
-              | Получить купон
+            .coupon-modal__info
+              .coupon-modal__img-wrap
+                img.coupon-modal__img(src="http://via.placeholder.com/336x231", alt="photo" width="336" height="231")
+                span.coupon-modal__sale
+                  | до&nbsp;
+                  span
+                    | 50%
 
-            p.coupon__text
-              | Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Семантика рыбного, ведущими встретил скатился имеет, они силуэт мир правилами родного по всей страна путь даль не имени. Своих там эта деревни вскоре парадигматическая переписывается точках если она но щеке переулка своего, лучше необходимыми диких мир! Которой ручеек назад, оксмокс, это маленький речью подпоясал агенство он необходимыми своего пор от всех, толку переписали. Одна грамматики, ты рыбного, заголовок предупредила, однажды живет она пустился за рыбными залетают страну реторический журчит образ, осталось если маленький раз предложения. Сих сбить себя которой ведущими оксмокс, инициал ему рот она однажды там встретил маленькая. Лучше, дороге, встретил!
-
-          .coupon__aside
-            .coupon__take-block
-              span.coupon__take-price
-                | Бесплатно
-              a.coupon__take-btn.btn(href="#", title="Получить купон")
-                | Получить купон
-              .coupon__take-review
-                h3.coupon__take-review-title
-                  | Купон сработал?
-
-              .coupon__take-score-wrap
-                .coupon__take-score
-                  svg.coupon__take-score-icon(width="15" height="10")
-                    use(xlink:href="img/sprite-svg.svg#coupon__take-score-yes")
-                  span.coupon__take-score-count
-                   | 12
-                .coupon__take-score
-                  svg.coupon__take-score-icon(width="12" height="12")
-                    use(xlink:href="img/sprite-svg.svg#coupon__take-score-no")
-                  span.coupon__take-score-count
-                   | 0
-              .coupon__take-review-btn-wrap
-                a.coupon__take-review-btn.coupon__take-review-btn--green(href="#", title="Да")
-                  | Да
-                a.coupon__take-review-btn.coupon__take-review-btn--red(href="#", title="Нет")
-                  | Нет
+              p.coupon-modal__text
+                | Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Семантика рыбного, ведущими встретил скатился имеет, они силуэт мир правилами родного по всей страна путь даль не имени. Своих там эта деревни вскоре парадигматическая переписывается точках если она но щеке переулка своего, лучше необходимыми диких мир! Которой ручеек назад, оксмокс, это маленький речью подпоясал агенство он необходимыми своего пор от всех, толку переписали. Одна грамматики, ты рыбного, заголовок предупредила, однажды живет она пустился за рыбными залетают страну реторический журчит образ, осталось если маленький раз предложения. Сих сбить себя которой ведущими оксмокс, инициал ему рот она однажды там встретил маленькая. Лучше, дороге, встретил!
 
           .coupon-modal__btn-block
-            a.coupon-modal__btn.btn(href="#")
+            a.coupon-modal__gray-btn.btn(href="#")
               | Показать полностью
+
+            .coupon-modal__aside
+                .coupon-modal__take-block
+                  span.coupon-modal__take-price
+                    | Бесплатно
+                  a.coupon-modal__take-btn.btn(href="#", title="Получить купон")
+                    | Получить купон
+                  .coupon-modal__take-review
+                    h3.coupon-modal__take-review-title
+                      | Купон сработал?
+
+                  .coupon-modal__take-score-wrap
+                    .coupon-modal__take-score
+                      svg.coupon-modal__take-score-icon(width="15" height="10")
+                        use(xlink:href="img/sprite-svg.svg#coupon__take-score-yes")
+                      span.coupon-modal__take-score-count
+                       | 12
+                    .coupon-modal__take-score
+                      svg.coupon-modal__take-score-icon(width="12" height="12")
+                        use(xlink:href="img/sprite-svg.svg#coupon__take-score-no")
+                      span.coupon-modal__take-score-count
+                       | 0
+                  .coupon-modal__take-review-btn-wrap
+                    a.coupon-modal__take-review-btn.coupon-modal__take-review-btn--green(href="#", title="Да")
+                      | Да
+                    a.coupon-modal__take-review-btn.coupon-modal__take-review-btn--red(href="#", title="Нет")
+                      | Нет
+
+

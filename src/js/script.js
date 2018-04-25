@@ -153,6 +153,7 @@ $(document).ready(function(){
   });
   $(".modals-panel__couponModal").click(function() {
     $("#couponModal").modal("show");
+    $('.coupon-modal__text').truncateText();
   });
 
 });

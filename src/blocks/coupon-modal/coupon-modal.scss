@@ -7,20 +7,226 @@
 
   &__content {
     height: 100%;
+    position: relative;
   }
 
   &__header {
-    display: block;
-    text-align: center;
+    display: flex;
     position: relative;
+    // padding-left: 19px;
+    // padding-top: 13px;
+    // padding-bottom: 13px;
+    // padding-right: 19px;
+    justify-content: space-between;
+    flex-direction: column;
+
+    @media (min-width: $screen-lg) {
+      padding-left: 19px;
+      padding-top: 19px;
+      padding-bottom: 16px;
+      padding-right: 19px;
+    }
+  }
+
+  &__labels {
+    margin-left: -1px;
+    display: none;
+
+    @media (min-width: $screen-md) {
+      display: block;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__inner {
+    flex: 3;
+
+    @media (min-width: $screen-lg) {
+      flex: 1;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__rating {
+    margin-bottom: 7px;
+  }
+
+  &__title {
+    position: relative;
+    z-index: 1;
+    font-size: 20px;
+    margin-bottom: 7px;
+    color: #323232;
+
+    @media (min-width: $screen-lg) {
+      font-size: 28px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__subtitle {
+    margin: 0;
+    font-weight: normal;
+    font-size: 14px;
+  }
+
+  &__btn-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+
+    @media (min-width: $screen-md) {
+      position: static;
+    }
+
+    @media (min-width: $screen-md) {
+      justify-content: space-between;
+      flex-direction: row;
+    }
+  }
+
+  &__sold {
+    display: none;
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__coupon-sold-icon {
+    width: 26px;
+    height: 26px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  &__sold-count {
+    margin-right: 5px;
+  }
+  &__sold-title {
+
+  }
+
+  &__btn {
+    border-radius: 4px;
+    border: 1px solid #dedede;
+    color: #787878;
+    padding-left: 8px;
+    padding-right: 8px;
+    line-height: 34;
+    height: 34px;
+    font-size: 14px;
+    margin-right: 10px;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+
+    svg {
+      fill: #b5b5b5;
+      margin-right: 9px;
+    }
+
+    @media (min-width: $screen-md) {
+      line-height: 34px;
+      height: 34px;
+      padding-left: 20px;
+      padding-right: 17px;
+    }
+
+    @media (min-width: $screen-lg) {}
+
+    span {
+      display: none;
+      line-height: 1;
+
+      @media (min-width: $screen-md) {
+        display: inline-flex;
+      }
+    }
+
+    &:hover {
+      color: #787878;
+      border: 1px solid #969696;
+      background-color: #fff;
+
+      svg {
+        fill: #b5b5b5;
+      }
+    }
+
+    &:active {
+      border: 1px solid #dedede;
+      color: #5fb600;
+
+      svg {
+        fill: #5fb600;
+      }
+    }
+
+    &--active {
+      border: 1px solid #dedede;
+      color: #5fb600;
+
+      svg {
+        fill: #5fb600;
+      }
+
+      &:hover {
+        border: 1px solid #969696;
+        color: #5fb600;
+
+        svg {
+          fill: #5fb600;
+        }
+      }
+    }
+  }
+
+  &__link {
+    padding-left: 8px;
+    padding-right: 8px;
+    line-height: 34;
+    height: 34px;
+    font-size: 14px;
+    margin-right: 10px;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+
+    .coupon-modal__link-title,
+    .coupon-modal__link-count {
+      display: none;
+      line-height: 1;
+      text-decoration: underline;
+
+      @media (min-width: $screen-md) {
+        display: inline-block;
+      }
+    }
+
+    .coupon-modal__link-count {
+      text-decoration: none;
+      padding-left: 9px;
+    }
+  }
+
+  & &__btn-icon {
+    width: 16px;
+    height: 15px;
   }
 
   &__close {
     border-radius: 4px;
     color: #4d4d4d;
     background-color: #eeeeee;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 0 15px !important;
+    margin: 0 !important;
     line-height: 34px;
     height: 34px;
     font-weight: normal;
@@ -35,9 +241,222 @@
   }
 
   &__body {
-    padding-top: 45px;
-    padding-left: 45px;
-    padding-right: 45px;
+    display: flex;
+  }
+
+  &__info {
+    flex: 1;
+    height: 230px;
+  }
+
+  &__info:after {
+    content:'';
+    display:block;
+    height:0;
+    clear:both;
+    visibility:hidden;
+  }
+
+  &__img-wrap {
+    width: 320px;
+    height: 230px;
+    overflow: hidden;
+    margin-bottom: 12px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    float: left;
+
+    @media (min-width: 380px) {
+      margin-left: 30px;
+      margin-right: auto;
+    }
+
+    @media (min-width: $screen-md) {
+      border-radius: 4px;
+      margin-bottom: 22px;
+      margin-right: 22px;
+      margin-left: 0;
+      width: 336px;
+    }
+  }
+
+  &__img {
+    min-height: 1px;
+    width: 100%;
+  }
+
+  &__sale {
+    position: absolute;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    background-color: #f00;
+    color: #fff;
+    font-weight: normal;
+    padding-left: 15px;
+    padding-right: 15px;
+    line-height: 25px;
+    height: 25px;
+
+    left: 15px;
+    top: 190px;
+
+    span {
+      font-weight: 700;
+      color: #fff;
+    }
+  }
+
+  &__text {
+    color: #323232;
+    font-size: 14px;
+    padding-left: 30px;
+    padding-right: 25px;
+    margin-bottom: 40px;
+    overflow: hidden;
+    height: 210px;
+    width: auto;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 1rem;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  &__aside {
+    position: relative;
+    width: 300px;
+    margin-left: 30px;
+  }
+
+  &__take-block {
+    margin-bottom: 28px;
+    padding-left: 30px;
+    padding-right: 25px;
+
+    @media (min-width: $screen-md) {
+      border-radius: 6px;
+      background-color: #eeeeee;
+      padding-left: 21px;
+      padding-right: 21px;
+      padding-top: 24px;
+      padding-bottom: 22px;
+    }
+  }
+
+  &__take-price {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 11px;
+    color: #323232;
+    display: none;
+
+    @media (min-width: $screen-md) {
+      padding: 0;
+      display: block;
+    }
+
+    &--on-top {
+      display: block;
+      padding-left: 30px;
+      padding-right: 25px;
+
+      @media (min-width: $screen-md) {
+        display: none;
+      }
+    }
+  }
+
+  &__take-btn {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 30px;
+    height: 41px;
+    margin-bottom: 17px;
+    display: block;
+
+    @media (min-width: $screen-sm) {
+      display: inline-block;
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+
+    @media (min-width: $screen-md) {
+      display: block;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    &--on-top {
+      margin-left: 30px;
+      margin-right: 25px;
+
+      @media (min-width: $screen-md) {
+        display: none;
+      }
+    }
+  }
+
+  &__take-review {}
+
+  &__take-review-title {
+    font-size: 14px;
+    color: #969696;
+    margin-bottom: 10px;
+  }
+
+  &__take-review-btn {
+    display: inline-block;
+    font-size: 14px;
+    height: 34px;
+    line-height: 34px;
+    padding-left: 23px;
+    padding-right: 23px;
+    border-radius: 4px;
+    margin-right: 6px;
+    color: #323232;
+
+    &:hover {
+      color: #323232;
+    }
+
+    &:active {
+      color: #323232;
+    }
+
+    &--green {
+      background-color: #c4e9c4;
+
+    }
+    &--red {
+      background-color: #f7c4c4;
+    }
+  }
+
+  &__take-review-btn-wrap {}
+
+  &__take-score-wrap {
+    display: flex;
+    margin-bottom: 10px;
+  }
+
+  &__take-score {
+    font-size: 14px;
+    display: inline-block;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+  &__take-score-icon {
+    width: 16px;
+    height: 15px;
+    margin-right: 7px;
+  }
+
+  &__take-score-count {
+    color: #969696;
   }
 
   &__btn-block {
@@ -45,7 +464,7 @@
     justify-content: center;
   }
 
-  &__btn {
+  &__gray-btn {
     border-radius: 4px;
     color: #787878;
     background-color: #eeeeee;
@@ -61,3 +480,4 @@
     }
   }
 }
+
