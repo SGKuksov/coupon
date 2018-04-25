@@ -1,5 +1,22 @@
 mixin modals()
 
+  .modals-panel
+    a.close.modals__close.modals-panel__close(href="#", data-dismiss='modal', aria-label='Close')
+      span(aria-hidden='true') ×
+
+    button.btn.modals-panel__selectCityModal
+      | #selectCityModal
+    button.btn.modals-panel__ratingModal
+      | #ratingModal
+    button.btn.modals-panel__reviewModal
+      | #reviewModal
+    button.btn.modals-panel__errorModal
+      | #errorModal
+    button.btn.modals-panel__modalLocation
+      | #modalLocation
+    button.btn.modals-panel__couponModal
+      | #couponModal
+
   #selectCityModal.modal.fade.modals(tabindex='-1', role='dialog', aria-hidden='true')
     .modal-dialog.modal-dialog-centered.modals__dialog.modals__dialog--sm(role='document')
       .modal-content.modals__content

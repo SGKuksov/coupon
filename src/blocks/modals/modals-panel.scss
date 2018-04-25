@@ -1,0 +1,21 @@
+.modals-panel {
+  position: absolute;
+  width: 200px;
+  height: 250px;
+  padding: 10px;
+  z-index: 1000;
+  border: 1px solid #787878;
+  background-color: #fff;
+  top: 10%;
+  right: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-around;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+
+  button {
+    text-align: left;
+  }
+}

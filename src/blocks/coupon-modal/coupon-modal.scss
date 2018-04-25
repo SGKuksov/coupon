@@ -1,0 +1,63 @@
+.coupon-modal {
+
+  .modal-dialog {
+    max-width: 997px;
+    height: 568px;
+  }
+
+  &__content {
+    height: 100%;
+  }
+
+  &__header {
+    display: block;
+    text-align: center;
+    position: relative;
+  }
+
+  &__close {
+    border-radius: 4px;
+    color: #4d4d4d;
+    background-color: #eeeeee;
+    padding-left: 15px;
+    padding-right: 15px;
+    line-height: 34px;
+    height: 34px;
+    font-weight: normal;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+
+    &:hover {
+      color: #4d4d4d;
+      font-weight: normal;
+    }
+  }
+
+  &__body {
+    padding-top: 45px;
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  &__btn-block {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__btn {
+    border-radius: 4px;
+    color: #787878;
+    background-color: #eeeeee;
+    padding-left: 15px;
+    padding-right: 15px;
+    line-height: 32px;
+    height: 32px;
+    font-weight: normal;
+
+    &:hover {
+      color: #787878;
+      font-weight: normal;
+    }
+  }
+}

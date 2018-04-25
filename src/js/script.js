@@ -63,7 +63,6 @@ $(document).ready(function(){
     }
   });
 
-
   $(document).mouseup(function (e){
     var pageHeaderSearch = $(".page-header__search");
     var pageHeaderCancel = $(".page-header__cancel");
@@ -130,6 +129,30 @@ $(document).ready(function(){
   // лайтбокс
   $("#placeGallery").click(function() {
     // $("#modalLocation").modal('show');
+  });
+
+  // modals-panel
+  $(".modals-panel__close").click(function() {
+    $(this).parent().hide();
+  });
+
+  $(".modals-panel__selectCityModal").click(function() {
+    $("#selectCityModal").modal("show");
+  });
+  $(".modals-panel__ratingModal").click(function() {
+    $("#ratingModal").modal("show");
+  });
+  $(".modals-panel__reviewModal").click(function() {
+    $("#reviewModal").modal("show");
+  });
+  $(".modals-panel__errorModal").click(function() {
+    $("#errorModal").modal("show");
+  });
+  $(".modals-panel__modalLocation").click(function() {
+    $("#modalLocation").modal("show");
+  });
+  $(".modals-panel__couponModal").click(function() {
+    $("#couponModal").modal("show");
   });
 
 });
