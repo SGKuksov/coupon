@@ -2,7 +2,6 @@
 
   .modal-dialog {
     max-width: 997px;
-    height: 568px;
   }
 
   &__content {
@@ -13,30 +12,19 @@
   &__header {
     display: flex;
     position: relative;
-    // padding-left: 19px;
-    // padding-top: 13px;
-    // padding-bottom: 13px;
-    // padding-right: 19px;
     justify-content: space-between;
     flex-direction: column;
-
-    @media (min-width: $screen-lg) {
-      padding-left: 19px;
-      padding-top: 19px;
-      padding-bottom: 16px;
-      padding-right: 19px;
-    }
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-top: 20px;
   }
 
   &__labels {
     margin-left: -1px;
-    display: none;
-
-    @media (min-width: $screen-md) {
-      display: block;
-      align-items: center;
-      margin-bottom: 20px;
-    }
+    display: block;
+    align-items: center;
+    margin-bottom: 20px;
   }
 
   &__inner {
@@ -90,64 +78,28 @@
     }
   }
 
-  &__sold {
-    display: none;
-
-    @media (min-width: $screen-md) {
-      display: flex;
-      align-items: center;
-    }
-  }
-
-  &__coupon-sold-icon {
-    width: 26px;
-    height: 26px;
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-
-  &__sold-count {
-    margin-right: 5px;
-  }
-  &__sold-title {
-
-  }
-
   &__btn {
     border-radius: 4px;
     border: 1px solid #dedede;
     color: #787878;
-    padding-left: 8px;
-    padding-right: 8px;
-    line-height: 34;
-    height: 34px;
     font-size: 14px;
     margin-right: 10px;
     white-space: nowrap;
     display: inline-flex;
     align-items: center;
+    line-height: 34px;
+    height: 34px;
+    padding-left: 20px;
+    padding-right: 17px;
 
     svg {
       fill: #b5b5b5;
       margin-right: 9px;
     }
 
-    @media (min-width: $screen-md) {
-      line-height: 34px;
-      height: 34px;
-      padding-left: 20px;
-      padding-right: 17px;
-    }
-
-    @media (min-width: $screen-lg) {}
-
     span {
-      display: none;
       line-height: 1;
-
-      @media (min-width: $screen-md) {
-        display: inline-flex;
-      }
+      display: inline-flex;
     }
 
     &:hover {
@@ -242,6 +194,16 @@
 
   &__body {
     display: flex;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    padding-top: 20px;
+  }
+
+  &__main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
   }
 
   &__info {
@@ -462,6 +424,7 @@
   &__btn-block {
     display: flex;
     justify-content: center;
+    margin-top: 24px;
   }
 
   &__gray-btn {
