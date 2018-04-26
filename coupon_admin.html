@@ -516,7 +516,14 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content modal-location__content">
         <div class="modal-header modal-location__header">
-          <h5 class="modal-title modal-location__title">Выберите город</h5><a class="close modal-location__close" href="" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></a></div>
+          <h5 class="modal-title modal-location__title">Выберите город</h5>
+          <a class="close modal-location__close" href="" data-dismiss="modal" aria-label="Close">
+            <svg class="modals__location-icon" width="14" height="14">
+              <use xlink:href="img/sprite-svg.svg#modals__close"></use>
+            </svg>
+          </a>
+          <form class="modal-location__header-search"><input class="modal-location__header-input" type="text" placeholder="Название города..." /></form>
+        </div>
         <div class="modal-body modal-location__body">
           <ul class="modal-location__city-char-list">
             <li class="modal-location__city-char-item"><span class="modal-location__city-char">А</span>
@@ -629,45 +636,55 @@
             <a class="coupon-modal__btn" href="#" title="Добавить в избранное">
               <svg class="coupon-modal__btn-icon" width="16" height="14">
                 <use xlink:href="img/sprite-svg.svg#tag-panel__favorite-icon"></use>
-              </svg><span>Добавить в избранное</span></a><a class="coupon-modal__btn" href="#" title="Оставить отзыв"><span>Оставить отзыв</span></a><a class="coupon-modal__link" href="#" title="Подписаться на обновления"><span class="coupon-modal__link-title">Отзывы</span><span class="coupon-modal__link-count">16</span></a></div><a class="close coupon-modal__close" href="#" data-dismiss="modal" aria-label="Close">Закрыть</a></div>
-        <div class="modal-body">
-          <div class="coupon-modal__body">
+              </svg><span>Добавить в избранное</span></a><a class="coupon-modal__btn" href="#" title="Оставить отзыв"><span>Оставить отзыв</span></a><a class="coupon-modal__link" href="#" title="Отзывы"><span class="coupon-modal__link-title">Отзывы</span><span class="coupon-modal__link-count">16</span></a></div><a class="close coupon-modal__close" href="#" data-dismiss="modal" aria-label="Close">Закрыть</a></div>
+        <div class="modal-body coupon-modal__body">
+          <div class="coupon-modal__main">
             <div class="coupon-modal__info">
               <div class="coupon-modal__img-wrap"><img class="coupon-modal__img" src="http://via.placeholder.com/336x231" alt="photo" width="336" height="231" /><span class="coupon-modal__sale">до&nbsp;<span>50%</span></span>
               </div>
               <p class="coupon-modal__text">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Семантика рыбного, ведущими встретил скатился имеет, они силуэт мир правилами родного по всей страна путь даль не имени. Своих там эта деревни вскоре парадигматическая переписывается точках если она но щеке переулка своего, лучше необходимыми диких мир! Которой ручеек назад, оксмокс, это маленький речью подпоясал агенство он необходимыми своего пор от всех, толку переписали. Одна грамматики, ты рыбного, заголовок предупредила, однажды живет она пустился за рыбными залетают страну реторический журчит образ, осталось если маленький раз предложения. Сих сбить себя которой ведущими оксмокс, инициал ему рот она однажды там встретил маленькая. Лучше, дороге, встретил!</p>
             </div>
+            <div class="coupon-modal__btn-block"><a class="coupon-modal__gray-btn btn" href="#">Показать полностью</a></div>
           </div>
-          <div class="coupon-modal__btn-block"><a class="coupon-modal__gray-btn btn" href="#">Показать полностью</a>
-            <div class="coupon-modal__aside">
-              <div class="coupon-modal__take-block"><span class="coupon-modal__take-price">Бесплатно</span><a class="coupon-modal__take-btn btn" href="#" title="Получить купон">Получить купон</a>
-                <div class="coupon-modal__take-review">
-                  <h3 class="coupon-modal__take-review-title">Купон сработал?</h3>
-                </div>
-                <div class="coupon-modal__take-score-wrap">
-                  <div class="coupon-modal__take-score">
-                    <svg class="coupon-modal__take-score-icon" width="15" height="10">
-                      <use xlink:href="img/sprite-svg.svg#coupon__take-score-yes"></use>
-                    </svg><span class="coupon-modal__take-score-count">12</span></div>
-                  <div class="coupon-modal__take-score">
-                    <svg class="coupon-modal__take-score-icon" width="12" height="12">
-                      <use xlink:href="img/sprite-svg.svg#coupon__take-score-no"></use>
-                    </svg><span class="coupon-modal__take-score-count">0</span></div>
-                </div>
-                <div class="coupon-modal__take-review-btn-wrap"><a class="coupon-modal__take-review-btn coupon-modal__take-review-btn--green" href="#" title="Да">Да</a><a class="coupon-modal__take-review-btn coupon-modal__take-review-btn--red" href="#" title="Нет">Нет</a></div>
+          <div class="coupon-modal__aside">
+            <div class="coupon-modal__take-block"><span class="coupon-modal__take-price">Бесплатно</span><a class="coupon-modal__take-btn btn" href="#" title="Получить купон">Получить купон</a>
+              <div class="coupon-modal__take-review">
+                <h3 class="coupon-modal__take-review-title">Купон сработал?</h3>
               </div>
+              <div class="coupon-modal__take-score-wrap">
+                <div class="coupon-modal__take-score">
+                  <svg class="coupon-modal__take-score-icon" width="15" height="10">
+                    <use xlink:href="img/sprite-svg.svg#coupon__take-score-yes"></use>
+                  </svg><span class="coupon-modal__take-score-count">12</span></div>
+                <div class="coupon-modal__take-score">
+                  <svg class="coupon-modal__take-score-icon" width="12" height="12">
+                    <use xlink:href="img/sprite-svg.svg#coupon__take-score-no"></use>
+                  </svg><span class="coupon-modal__take-score-count">0</span></div>
+              </div>
+              <div class="coupon-modal__take-review-btn-wrap"><a class="coupon-modal__take-review-btn coupon-modal__take-review-btn--green" href="#" title="Да">Да</a><a class="coupon-modal__take-review-btn coupon-modal__take-review-btn--red" href="#" title="Нет">Нет</a></div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="modals-panel"><a class="close modals__close modals-panel__close" href="#" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></a><button class="btn modals-panel__selectCityModal">#selectCityModal</button><button class="btn modals-panel__ratingModal">#ratingModal</button><button class="btn modals-panel__reviewModal">#reviewModal</button><button class="btn modals-panel__errorModal">#errorModal</button><button class="btn modals-panel__modalLocation">#modalLocation</button><button class="btn modals-panel__couponModal">#couponModal</button></div>
+  <div class="modals-panel">
+    <a class="close modals__close modals-panel__close" href="#" data-dismiss="modal" aria-label="Close" style="top: 10px;right: 1px;line-height: 0;background-color: #fff;border-radius: 50px;margin: -10px -15px!important;padding: 4px 7px !important;border: 1px solid #323232;">
+      <svg class="modals__location-icon" width="14" height="14">
+        <use xlink:href="img/sprite-svg.svg#modals__close"></use>
+      </svg>
+    </a><button class="btn modals-panel__selectCityModal">#selectCityModal</button><button class="btn modals-panel__ratingModal">#ratingModal</button><button class="btn modals-panel__reviewModal">#reviewModal</button><button class="btn modals-panel__errorModal">#errorModal</button><button class="btn modals-panel__modalLocation">#modalLocation</button><button class="btn modals-panel__couponModal">#couponModal</button></div>
   <div class="modal fade modals" id="selectCityModal" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modals__dialog modals__dialog--sm" role="document">
+    <div class="modal-dialog modal-dialog-centered modals__dialog modals__dialog--md" role="document">
       <div class="modal-content modals__content">
         <div class="modal-header modals__header">
-          <h5 class="modal-title modals__title">Выбран ваш город ?</h5><a class="close modals__close" href="#" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></a></div>
+          <h5 class="modal-title modals__title">Выбран ваш город ?</h5>
+          <a class="close modals__close" href="#" data-dismiss="modal" aria-label="Close">
+            <svg class="modals__location-icon" width="14" height="14">
+              <use xlink:href="img/sprite-svg.svg#modals__close"></use>
+            </svg>
+          </a>
+        </div>
         <div class="modal-body modals__body">
           <div class="modals__location">
             <svg class="modals__location-icon" width="15" height="15">
@@ -682,10 +699,16 @@
     <div class="modal-dialog modal-dialog-centered modals__dialog modals__dialog--md" role="document">
       <div class="modal-content modals__content">
         <div class="modal-header modals__header">
-          <h5 class="modal-title modals__title">Спасибо за вашу оценку!</h5><a class="close modals__close" href="#" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></a></div>
+          <h5 class="modal-title modals__title">Спасибо за вашу оценку!</h5>
+          <a class="close modals__close" href="#" data-dismiss="modal" aria-label="Close">
+            <svg class="modals__location-icon" width="14" height="14">
+              <use xlink:href="img/sprite-svg.svg#modals__close"></use>
+            </svg>
+          </a>
+        </div>
         <div class="modal-body modals__body">
           <p class="modals__text">Вы можете поделиться данным купоном со своими друзьями в социальных сетях!</p>
-          <div class="socials">
+          <div class="socials modals__socials">
             <ul class="socials__list">
               <li class="socials__item">
                 <a class="socials__link" href="#" title="facebook">
@@ -719,10 +742,16 @@
     <div class="modal-dialog modal-dialog-centered modals__dialog modals__dialog--md" role="document">
       <div class="modal-content modals__content">
         <div class="modal-header modals__header">
-          <h5 class="modal-title modals__title">Спасибо за ваш отзыв!</h5><a class="close modals__close" href="#" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></a></div>
+          <h5 class="modal-title modals__title">Спасибо за ваш отзыв!</h5>
+          <a class="close modals__close" href="#" data-dismiss="modal" aria-label="Close">
+            <svg class="modals__location-icon" width="14" height="14">
+              <use xlink:href="img/sprite-svg.svg#modals__close"></use>
+            </svg>
+          </a>
+        </div>
         <div class="modal-body modals__body">
           <p class="modals__text">Вы можете поделиться данным купоном со своими друзьями в социальных сетях!</p>
-          <div class="socials">
+          <div class="socials modals__socials">
             <ul class="socials__list">
               <li class="socials__item">
                 <a class="socials__link" href="#" title="facebook">
@@ -756,12 +785,18 @@
     <div class="modal-dialog modal-dialog-centered modals__dialog modals__dialog--md" role="document">
       <div class="modal-content modals__content">
         <div class="modal-header modals__header">
-          <h5 class="modal-title modals__title">Купон не сработал?</h5><a class="close modals__close" href="#" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></a></div>
-        <form class="modal-body modals__body">
+          <h5 class="modal-title modals__title">Купон не сработал?</h5>
+          <a class="close modals__close" href="#" data-dismiss="modal" aria-label="Close">
+            <svg class="modals__location-icon" width="14" height="14">
+              <use xlink:href="img/sprite-svg.svg#modals__close"></use>
+            </svg>
+          </a>
+        </div>
+        <form class="modal-body modals__body" action="">
           <p class="modals__text">Нашли ошибку? Расскажите нам!</p>
-          <div class="el-radio"><input class="modals__radio" id="r-conditions" type="radio" name="error" value="option1" checked="" /><label class="el-radio-style" for="r-conditions"></label><span class="modals__label">Ошибка в условиях</span></div>
-          <div class="el-radio"><input class="modals__radio" id="r-disconts" type="radio" name="error" value="option2" checked="" /><label class="el-radio-style" for="r-disconts"></label><span class="modals__label">Не удалось получить скидку</span></div>
-          <div class="el-radio"><input class="modals__radio" id="r-other" type="radio" name="error" value="option3" checked="" /><label class="el-radio-style" for="r-other"></label><span class="modals__label">Другое</span></div><textarea class="modals__textarea" name="msg"></textarea>
+          <div class="el-radio modals__radio"><input class="modals__radio-inpit" id="r-conditions" type="radio" name="error" value="option1" checked="" /><label class="el-radio-style" for="r-conditions"></label><span class="modals__label">Ошибка в условиях</span></div>
+          <div class="el-radio modals__radio"><input class="modals__radio-inpit" id="r-disconts" type="radio" name="error" value="option2" checked="" /><label class="el-radio-style" for="r-disconts"></label><span class="modals__label">Не удалось получить скидку</span></div>
+          <div class="el-radio modals__radio"><input class="modals__radio-inpit" id="r-other" type="radio" name="error" value="option3" checked="" /><label class="el-radio-style" for="r-other"></label><span class="modals__label">Другое</span></div><textarea class="modals__textarea" name="msg"></textarea>
           <div class="modals__btn-block"><button class="modals__btn modals__btn-input" type="submit">Отправить</button></div>
         </form>
       </div>

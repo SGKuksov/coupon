@@ -18,7 +18,7 @@ $(document).ready(function(){
 
   if (doc_w >= 1024 ) {
     // вызов малого модального при открытии страницы
-  setTimeout($("#selectCityModal").modal('show'), 10000);
+    // setTimeout($("#selectCityModal").modal('show'), 10000);
   }
 
   //вызов большого модального окна выбора города при клике на "НЕТ"
