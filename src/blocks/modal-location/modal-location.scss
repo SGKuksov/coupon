@@ -1,18 +1,39 @@
 .modal-location {
+  z-index: 2000;
+
 
   .modal-dialog {
-    max-width: 997px;
-    height: 568px;
+    margin: 0;
+
+    @media (min-width: $screen-md) {
+      max-width: 997px;
+      height: 568px;
+      margin: 1.75rem auto;
+    }
   }
 
   &__content {
-    height: 100%;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 0;
+    border: none;
+
+    @media (min-width: $screen-md) {
+      height: 100%;
+      position: static;
+      border-radius: 6px;
+      border: 1px solid rgba(0,0,0,.2);
+    }
   }
 
   &__header {
     display: block;
     text-align: center;
     position: relative;
+    padding: 17px;
   }
 
   &__title {
@@ -23,22 +44,25 @@
   }
 
   &__close {
+    margin: 0 !important;
+    padding: 0 !important;
     display: inline-block;
     position: absolute;
-    right: 0;
-    top: 0;
-    background-color: #fff;
-    border-radius: 50%;
-    border: 1px solid #f0f0f0;
-    padding: 0px 0px !important ;
-    margin: -0.9rem -0.8rem 0rem auto !important;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
 
-    span {
-      display: inline-block;
-      padding: 8px 7px 0px;
-      line-height: 5px;
-      height: 21px;
+
+    @media (min-width: $screen-md) {
+      min-height: 0;
+      top: 0;
+      right: 0;
+      background-color: #fff;
+      border-radius: 50%;
+      border: 1px solid #f0f0f0;
+      padding: 0px 0px !important ;
+      margin: -0.9rem -0.8rem 0rem auto !important;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
     }
   }
 
@@ -49,8 +73,12 @@
   }
 
   &__city-char-list {
-    column-count: 5;
-    column-gap: 3px;
+
+
+    @media (min-width: $screen-md) {
+      column-count: 5;
+      column-gap: 3px;
+    }
   }
 
   &__city-char-item {
@@ -59,10 +87,16 @@
   }
 
   &__city-char {
-    font-size: 14px;
-    color: #d1d1d1;
-    font-weight: bold;
-    line-height: 30px;
+    display: none;
+
+
+    @media (min-width: $screen-md) {
+      display: inline;
+      font-size: 14px;
+      color: #d1d1d1;
+      font-weight: bold;
+      line-height: 30px;
+    }
   }
 
   &__city-list {
@@ -94,6 +128,10 @@
 
   &__search {
 
+  }
+
+  &__header-search {
+    display: none;
   }
 
   &__label {
