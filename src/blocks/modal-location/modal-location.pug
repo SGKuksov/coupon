@@ -20,9 +20,8 @@ mixin modal-location()
           h5.modal-title.modal-location__title
             | Выберите город
           a.close.modal-location__close(href="", data-dismiss='modal', aria-label='Close')
-            span(aria-hidden='true') ×
-            //- svg.modal-location__close-icon(aria-hidden='true')
-            //-   use(xlink:href="img/sprite-svg.svg#modal__close-icon")
+            svg.modals__location-icon(width="14" height="14")
+              use(xlink:href="img/sprite-svg.svg#modals__close")
 
         .modal-body.modal-location__body
           ul.modal-location__city-char-list

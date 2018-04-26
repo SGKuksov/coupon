@@ -1,8 +1,9 @@
 mixin modals()
 
   .modals-panel
-    a.close.modals__close.modals-panel__close(href="#", data-dismiss='modal', aria-label='Close')
-      span(aria-hidden='true') ×
+    a.close.modals__close.modals-panel__close(href="#", data-dismiss='modal', aria-label='Close', style="top: 10px;right: 1px;line-height: 0;background-color: #fff;border-radius: 50px;margin: -10px -15px!important;padding: 4px 7px !important;border: 1px solid #323232;")
+      svg.modals__location-icon(width="14" height="14")
+        use(xlink:href="img/sprite-svg.svg#modals__close")
 
     button.btn.modals-panel__selectCityModal
       | #selectCityModal
@@ -18,13 +19,14 @@ mixin modals()
       | #couponModal
 
   #selectCityModal.modal.fade.modals(tabindex='-1', role='dialog', aria-hidden='true')
-    .modal-dialog.modal-dialog-centered.modals__dialog.modals__dialog--sm(role='document')
+    .modal-dialog.modal-dialog-centered.modals__dialog.modals__dialog--md(role='document')
       .modal-content.modals__content
         .modal-header.modals__header
           h5.modal-title.modals__title
             | Выбран ваш город ?
           a.close.modals__close(href="#", data-dismiss='modal', aria-label='Close')
-            span(aria-hidden='true') ×
+            svg.modals__location-icon(width="14" height="14")
+              use(xlink:href="img/sprite-svg.svg#modals__close")
 
         .modal-body.modals__body
           .modals__location
@@ -45,12 +47,13 @@ mixin modals()
           h5.modal-title.modals__title
             | Спасибо за вашу оценку!
           a.close.modals__close(href="#", data-dismiss='modal', aria-label='Close')
-            span(aria-hidden='true') ×
+            svg.modals__location-icon(width="14" height="14")
+              use(xlink:href="img/sprite-svg.svg#modals__close")
 
         .modal-body.modals__body
           p.modals__text
             | Вы можете поделиться данным купоном со своими друзьями в социальных сетях!
-          .socials
+          .socials.modals__socials
             +socials()
           .modals__btn-block
             button.modals__btn.modals__btn-close(data-dismiss='modal', aria-label='Close')
@@ -63,12 +66,13 @@ mixin modals()
           h5.modal-title.modals__title
             | Спасибо за ваш отзыв!
           a.close.modals__close(href="#", data-dismiss='modal', aria-label='Close')
-            span(aria-hidden='true') ×
+            svg.modals__location-icon(width="14" height="14")
+              use(xlink:href="img/sprite-svg.svg#modals__close")
 
         .modal-body.modals__body
           p.modals__text
             | Вы можете поделиться данным купоном со своими друзьями в социальных сетях!
-          .socials
+          .socials.modals__socials
             +socials()
           .modals__btn-block
             button.modals__btn.modals__btn-close(data-dismiss='modal', aria-label='Close')
@@ -81,23 +85,24 @@ mixin modals()
           h5.modal-title.modals__title
             | Купон не сработал?
           a.close.modals__close(href="#", data-dismiss='modal', aria-label='Close')
-            span(aria-hidden='true') ×
+            svg.modals__location-icon(width="14" height="14")
+              use(xlink:href="img/sprite-svg.svg#modals__close")
 
-        form.modal-body.modals__body
+        form.modal-body.modals__body(action="")
           p.modals__text
             | Нашли ошибку? Расскажите нам!
-          .el-radio
-            input#r-conditions.modals__radio(type="radio" name="error" value="option1" checked="")
+          .el-radio.modals__radio
+            input#r-conditions.modals__radio-inpit(type="radio" name="error" value="option1" checked="")
             label.el-radio-style(for="r-conditions")
             span.modals__label
               | Ошибка в условиях
-          .el-radio
-            input#r-disconts.modals__radio(type="radio" name="error" value="option2" checked="")
+          .el-radio.modals__radio
+            input#r-disconts.modals__radio-inpit(type="radio" name="error" value="option2" checked="")
             label.el-radio-style(for="r-disconts")
             span.modals__label
               | Не удалось получить скидку
-          .el-radio
-            input#r-other.modals__radio(type="radio" name="error" value="option3" checked="")
+          .el-radio.modals__radio
+            input#r-other.modals__radio-inpit(type="radio" name="error" value="option3" checked="")
             label.el-radio-style(for="r-other")
             span.modals__label
               | Другое
@@ -113,7 +118,8 @@ mixin modals()
   //-         h5.modal-title.modals__title
   //-           | Выбран ваш город
   //-         a.close.modals__close(href="", data-dismiss='modal', aria-label='Close')
-  //-           span(aria-hidden='true') ×
+  //-           svg.modals__location-icon(width="14" height="14")
+              use(xlink:href="img/sprite-svg.svg#modals__close")
 
   //-       .modal-body.modals__body
 

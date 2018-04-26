@@ -1,9 +1,10 @@
 .modals {
 
+  &__select-city {
+    width: 300px;
+  }
+
   &__dialog {
-    margin: 70px !important;
-    align-items: flex-start;
-    justify-content: flex-start;
 
 
     &--sm {
@@ -17,6 +18,7 @@
 
   &__content {
     height: 100%;
+    border-radius: 6px;
   }
 
   &__header {
@@ -24,6 +26,11 @@
     text-align: center;
     position: relative;
     line-height: 1;
+    padding: 5px;
+
+    @media (min-width: $screen-md) {
+      padding: 13px;
+    }
   }
 
   &__title {
@@ -35,15 +42,25 @@
 
   &__close {
     display: inline-block;
-    position: absolute;
-    right: 0;
-    top: 0;
     background-color: #fff;
-    border-radius: 50%;
-    border: 1px solid #f0f0f0;
-    padding: 0px 0px !important ;
-    margin: -0.9rem -0.8rem 0rem auto !important;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    right: 7px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 !important;
+    margin: 0 !important;
+
+    @media (min-width: $screen-md) {
+      right: 0;
+      top: 0;
+      transform: translateY(0);
+      line-height: 0;
+      border-radius: 50%;
+      border: 1px solid #f0f0f0;
+      padding: 4px 7px !important ;
+      margin: -0.9rem -0.8rem 0rem auto !important;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    }
 
     span {
       font-size: 25px;
@@ -62,16 +79,25 @@
     line-height: 1;
     padding-top: 20px;
     padding-bottom: 20px;
-    padding-left: 14px;
-    padding-right: 14px;
+    padding-left: 20px;
+    padding-right: 20px;
     text-align: center;
   }
 
+  &__socials {
+    margin-bottom: 25px;
+  }
+
   &__btn-block {
-    margin-top: 23px;
+    width: 181px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-around;
     align-self: stretch;
+
+    @media (min-width: $screen-md) {
+      margin-top: 0;
+    }
   }
 
   &__city-char-list {
@@ -184,22 +210,36 @@
     border-radius: 4px;
     margin-top: 15px;
     padding: 10px;
+    margin-bottom: 19px;
   }
 
   &__radio {
+    display: flex;
+    align-self: baseline;
+    margin-left: 15px;
+  }
+
+  &__radio-input {
     margin-right: 20px;
   }
 
   &__label {
     align-self: flex-start;
-    padding-left: 25px;
+    padding-left: 20px;
     line-height: 20px;
+    font-size: 14px;
+    font-weight: normal;
   }
 
   &__location {
     justify-content: center;
-    display: flex;
     align-items: center;
+    display: flex;
+    margin-bottom: 23px;
+
+    @media (min-width: $screen-md) {
+      display: none;
+    }
   }
 
   &__location-icon {
