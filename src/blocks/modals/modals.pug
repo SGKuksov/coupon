@@ -26,7 +26,7 @@ mixin modals()
     button.btn.modals-panel__warnDelModal
       | #warnDelModal
 
-  #selectCityModal.modal.fade.modals(tabindex='-1', role='dialog', aria-hidden='true')
+  //- #selectCityModal.modal.fade.modals(tabindex='-1', role='dialog', aria-hidden='true')
     .modal-dialog.modal-dialog-centered.modals__dialog.modals__dialog--md
       .modal-content.modals__content
         .modal-header.modals__header
@@ -48,7 +48,7 @@ mixin modals()
             button.modals__btn.modals__btn--gray#modalsBtnCancel
               | Нет
 
-  #ratingModal.modal.fade.modals(tabindex='-1', role='dialog', aria-hidden='true')
+  //- #ratingModal.modal.fade.modals(tabindex='-1', role='dialog', aria-hidden='true')
     .modal-dialog.modal-dialog-centered.modals__dialog.modals__dialog--md
       .modal-content.modals__content
         .modal-header.modals__header
@@ -67,7 +67,7 @@ mixin modals()
             button.modals__btn.modals__btn-close(data-dismiss='modal', aria-label='Close')
               | Закрыть
 
-  #reviewModal.modal.fade.modals(tabindex='-1', role='dialog', aria-hidden='true')
+  //- #reviewModal.modal.fade.modals(tabindex='-1', role='dialog', aria-hidden='true')
     .modal-dialog.modal-dialog-centered.modals__dialog.modals__dialog--md
       .modal-content.modals__content
         .modal-header.modals__header
@@ -86,7 +86,7 @@ mixin modals()
             button.modals__btn.modals__btn-close(data-dismiss='modal', aria-label='Close')
               | Закрыть
 
-  #errorModal.modal.fade.modals(tabindex='-1', role='dialog', aria-hidden='true')
+  //- #errorModal.modal.fade.modals(tabindex='-1', role='dialog', aria-hidden='true')
     .modal-dialog.modal-dialog-centered.modals__dialog.modals__dialog--md
       .modal-content.modals__content
         .modal-header.modals__header
@@ -119,7 +119,7 @@ mixin modals()
             button.modals__btn.modals__btn-input(type="submit")
               | Отправить
 
-  #registerModal.modal.fade.modals(tabindex='-1', role='dialog', aria-hidden='true')
+  //- #registerModal.modal.fade.modals(tabindex='-1', role='dialog', aria-hidden='true')
     .modal-dialog.modal-dialog-centered.modals__dialog.modals__dialog--widescreen
       .modal-content.modals__content.modals__content--widescreen
         .modal-header.modals__header.modals__header--widescreen
@@ -167,7 +167,7 @@ mixin modals()
               span
                 | Вконтакте
 
-  #autorizModal.modal.fade.modals(tabindex='-1', role='dialog', aria-hidden='true')
+  //- #autorizModal.modal.fade.modals(tabindex='-1', role='dialog', aria-hidden='true')
     .modal-dialog.modal-dialog-centered.modals__dialog.modals__dialog--widescreen
       .modal-content.modals__content.modals__content--widescreen
         .modal-header.modals__header.modals__header--widescreen
@@ -216,7 +216,7 @@ mixin modals()
               span
                 | Вконтакте
 
-  #warnAutorModal.modal.fade.modals(tabindex='-1', role='dialog', aria-hidden='true')
+  //- #warnAutorModal.modal.fade.modals(tabindex='-1', role='dialog', aria-hidden='true')
     .modal-dialog.modal-dialog-centered.modals__dialog.modals__dialog--md
       .modal-content.modals__content
         .modal-header.modals__header
@@ -228,12 +228,12 @@ mixin modals()
 
         .modal-body.modals__body
           .modals__btn-block
-            button.modals__btn
+            button#callAutorizModal.modals__btn
               | Войти
-            button.modals__btn.modals__btn--gray
+            button#callRegisterModal.modals__btn.modals__btn--gray
               | Регистрация
 
-  #warnDelModal.modal.fade.modals(tabindex='-1', role='dialog', aria-hidden='true')
+  //- #warnDelModal.modal.fade.modals(tabindex='-1', role='dialog', aria-hidden='true')
     .modal-dialog.modal-dialog-centered.modals__dialog.modals__dialog--md
       .modal-content.modals__content
         .modal-header.modals__header

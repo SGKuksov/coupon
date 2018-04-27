@@ -131,11 +131,16 @@
   }
 
   &__btn-block {
-    width: 200px;
+    width: 240px;
     margin: 0 auto;
     display: flex;
     justify-content: space-around;
     align-self: stretch;
+
+    &--column {
+      flex-direction: column;
+      align-items: center;
+    }
 
     @media (min-width: $screen-md) {
       margin-top: 0;
