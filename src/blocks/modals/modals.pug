@@ -120,9 +120,9 @@ mixin modals()
               | Отправить
 
   #registerModal.modal.fade.modals(tabindex='-1', role='dialog', aria-hidden='true')
-    .modal-dialog.modal-dialog-centered.modals__dialog.modals__dialog--md
-      .modal-content.modals__content
-        .modal-header.modals__header
+    .modal-dialog.modal-dialog-centered.modals__dialog.modals__dialog--widescreen
+      .modal-content.modals__content.modals__content--widescreen
+        .modal-header.modals__header.modals__header--widescreen
           h5.modal-title.modals__title
             | Регистрация
           a.close.modals__close(href="#", data-dismiss='modal', aria-label='Close')
@@ -146,31 +146,31 @@ mixin modals()
               | Пароль
             input#pass.modals__input-pass(type="password" name="pass" required)
 
-          .modals__btn-block
-            button.btn(type="submit")
+          .modals__input-btn-block
+            button.modals__input-btn.btn(type="submit")
               | Регистрация
 
         .modal-body.modals__footer
           p.modals__text
-            | Зарегистрироваться через соцсети
+            | Зарегистрироваться через<br> соцсети
 
-          .modals__btn-block
+          .modals__input-btn-block
             button.modals__btn
               svg.modals__fb-icon(width="14" height="14")
                 use(xlink:href="img/sprite-svg.svg#modals__fb")
               span
                 | Facebook
 
-            button.modals__btn.modals__btn--gray
+            button.modals__btn
               svg.modals__vk-icon(width="20" height="10")
                 use(xlink:href="img/sprite-svg.svg#modals__vk")
               span
                 | Вконтакте
 
   #autorizModal.modal.fade.modals(tabindex='-1', role='dialog', aria-hidden='true')
-    .modal-dialog.modal-dialog-centered.modals__dialog.modals__dialog--md
-      .modal-content.modals__content
-        .modal-header.modals__header
+    .modal-dialog.modal-dialog-centered.modals__dialog.modals__dialog--widescreen
+      .modal-content.modals__content.modals__content--widescreen
+        .modal-header.modals__header.modals__header--widescreen
           h5.modal-title.modals__title
             | Авторизация
           a.close.modals__close(href="#", data-dismiss='modal', aria-label='Close')
@@ -190,10 +190,10 @@ mixin modals()
             input#pass.modals__input-pass(type="password" name="pass" required)
 
           .modals__btn-block
-            button.modals__btn.modals__btn-input(type="submit")
+            button.modals__input-btn.btn(type="submit")
               | Войти
 
-            span.modals__text
+            p.modals__text
               | или
 
             button.modals__btn.modals__btn--gray(type="submit")
@@ -203,14 +203,14 @@ mixin modals()
           p.modals__text
             | Авторизация через
 
-          .modals__btn-block
+          .modals__input-btn-block
             button.modals__btn
               svg.modals__fb-icon(width="14" height="14")
                 use(xlink:href="img/sprite-svg.svg#modals__fb")
               span
                 | Facebook
 
-            button.modals__btn.modals__btn--gray
+            button.modals__btn
               svg.modals__vk-icon(width="20" height="10")
                 use(xlink:href="img/sprite-svg.svg#modals__vk")
               span
