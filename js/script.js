@@ -8,7 +8,8 @@ $(document).ready(function(){
   $('.card__place').truncateText();
 
   // подключение автопоиск
-  // $('#superSearch').autoSearch();
+  $('#pageHeaderSearch').autoSearch();
+  $('.modal-location__input').autoSearch();
 
   //вызов большого модального окна при клике на город
   $("#modalsBtnCancel").click(function() {
@@ -50,6 +51,7 @@ $(document).ready(function(){
 
   $(".page-header__search-icon").click(function() {
     // показ строки поиска
+    doc_w = $(document).width();
     if (doc_w <= 768 ) {
       $("form.page-header__search").addClass("page-header__search--show").parent().parent().css("padding", 0);
       $(".page-header__input").attr({"placeholder": "Поиск", "autofocus":""})
@@ -66,9 +68,11 @@ $(document).ready(function(){
   $(document).mouseup(function (e){
     var pageHeaderSearch = $(".page-header__search");
     var pageHeaderCancel = $(".page-header__cancel");
+
+    doc_w = $(document).width();
     if (doc_w <= 768 ) {
 
-      if (!pageHeaderSearch.is(e.target) && pageHeaderSearch.has(e.target).length === 0) {
+      if ((!pageHeaderSearch.is(e.target) && pageHeaderSearch.has(e.target).length === 0) || (pageHeaderCancel.is(e.target))) {
         $(".overlay").removeClass("overlay--show");
         $("form.page-header__search").removeClass("page-header__search--show").parent().parent().css("padding", "8px");
         $(".page-header__input").attr({"placeholder": "", "autofocus":""})
@@ -85,7 +89,8 @@ $(document).ready(function(){
   });
 
   $(".page-header__cancel--show").click(function() {
-    if (doc_w <= 768 ) {
+    doc_w = $(document).width();
+    if (doc_w <= 768) {
 
       $(".overlay").removeClass("site-overlay");
       $("form.page-header__search").removeClass("page-header__search--show").parent().parent().css("padding", "8px");
@@ -153,7 +158,20 @@ $(document).ready(function(){
   });
   $(".modals-panel__couponModal").click(function() {
     $("#couponModal").modal("show");
-    $('.coupon-modal__text').truncateText();
   });
-
+  $(".modals-panel__registerModal").click(function() {
+    $("#registerModal").modal("show");
+  });
+  $(".modals-panel__autorizModal").click(function() {
+    $("#autorizModal").modal("show");
+  });
+  $(".modals-panel__autorizModal").click(function() {
+    $("#autorizModal").modal("show");
+  });
+  $(".modals-panel__warnAutorModal").click(function() {
+    $("#warnAutorModal").modal("show");
+  });
+  $(".modals-panel__warnDelModal").click(function() {
+    $("#warnDelModal").modal("show");
+  });
 });

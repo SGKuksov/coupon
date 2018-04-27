@@ -5,9 +5,11 @@
          input.wrap('<div class="searchHolder"></div>');
          input.parent().append('<div class="autoFillBar"></div>');
          var autoFillBar = input.next();
+
          input.on('focus', function() {
              searchCheck();
          });
+
          input.on('keyup', function(e) {
              if (e.keyCode == 40) {
                  if (autoFillBar.find('.active').length == 0) {
@@ -45,7 +47,7 @@
          });
 
          function searchCheck() {
-             if (input.val().length >= 2) {
+             if (input.val().length >= 0) {
                  // тут нужно будет описать ajax-запрос к бэкэнду, который вернет результаты поиска
                  var data = {};
                  data.action = 'search';

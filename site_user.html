@@ -26,7 +26,7 @@
           </svg><span class="page-header__location-info">Город</span><a class="page-header__location-city callModalLocation" href="#">Москва</a></div>
         <div class="page-header__logo"><img class="page-header__logo-img" width="150" height="31" src="img/page-header__logo-img.svg" alt="hot kupon" /></div>
       </div>
-      <form class="page-header__search" action=""><input class="page-header__input" type="text" name="header_search" autocomplete="on" /><button class="page-header__submit" type="submit"><svg class="page-header__submit-icon" width="14" height="14"><use xlink:href="img/sprite-svg.svg#page-header__submit-icon"></use></svg></button><button class="page-header__cancel">Отмена</button></form>
+      <form class="page-header__search" action=""><input class="page-header__input" id="pageHeaderSearch" type="text" name="header_search" autocomplete="off" /><button class="page-header__submit" type="submit"><svg class="page-header__submit-icon" width="14" height="14"><use xlink:href="img/sprite-svg.svg#page-header__submit-icon"></use></svg></button><button class="page-header__cancel">Отмена</button></form>
       <nav class="main-nav page-header__nav">
         <ul class="main-nav__list">
           <li class="main-nav__item">
@@ -554,39 +554,39 @@
     </div>
   </div>
   <div class="modals-panel">
-    <a class="close modals__close modals-panel__close" href="#" data-dismiss="modal" aria-label="Close" style="top: 0;right: 0;line-height: 0;background-color: #fff;border-radius: 50px;margin: -10px -15px!important;padding: 4px 7px !important;border: 1px solid #323232;">
-      <svg class="modals__location-icon" width="14" height="14">
+    <a class="close modals__close modals-panel__close" href="#" data-dismiss="modal" aria-label="Close" style="top: 0;right: 0;line-height: 0;background-color: #fff;border-radius: 50px;margin: -15px -15px!important;padding: 6px !important;border: 1px solid #323232;">
+      <svg class="modals__close-icon" width="14" height="14">
         <use xlink:href="img/sprite-svg.svg#modals__close"></use>
       </svg>
-    </a><button class="btn modals-panel__selectCityModal">#selectCityModal</button><button class="btn modals-panel__ratingModal">#ratingModal</button><button class="btn modals-panel__reviewModal">#reviewModal</button><button class="btn modals-panel__errorModal">#errorModal</button><button class="btn modals-panel__modalLocation">#modalLocation</button><button class="btn modals-panel__couponModal">#couponModal</button></div>
+    </a><button class="btn modals-panel__selectCityModal">#selectCityModal</button><button class="btn modals-panel__ratingModal">#ratingModal</button><button class="btn modals-panel__reviewModal">#reviewModal</button><button class="btn modals-panel__errorModal">#errorModal</button><button class="btn modals-panel__modalLocation">#modalLocation</button><button class="btn modals-panel__couponModal">#couponModal</button><button class="btn modals-panel__registerModal">#registerModal</button><button class="btn modals-panel__autorizModal">#autorizModal</button><button class="btn modals-panel__warnAutorModal">#warnAutorModal</button><button class="btn modals-panel__warnDelModal">#warnDelModal</button></div>
   <div class="modal fade modals" id="selectCityModal" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modals__dialog modals__dialog--md" role="document">
+    <div class="modal-dialog modal-dialog-centered modals__dialog modals__dialog--md">
       <div class="modal-content modals__content">
         <div class="modal-header modals__header">
           <h5 class="modal-title modals__title">Выбран ваш город ?</h5>
           <a class="close modals__close" href="#" data-dismiss="modal" aria-label="Close">
-            <svg class="modals__location-icon" width="14" height="14">
+            <svg class="modals__close-icon" width="14" height="14">
               <use xlink:href="img/sprite-svg.svg#modals__close"></use>
             </svg>
           </a>
         </div>
         <div class="modal-body modals__body">
           <div class="modals__location">
-            <svg class="modals__location-icon" width="15" height="15">
+            <svg class="modals__location-icon" width="11" height="16">
               <use xlink:href="img/sprite-svg.svg#page-header__location"></use>
             </svg><span class="modals__location-info">Город</span><a class="modals__location-city callModalLocation" href="#">Москва</a></div>
-          <div class="modals__btn-block"><button class="modals__btn" id="modals__btn-apply" data-dismiss="modal" aria-label="Close">Да</button><button class="modals__btn modals__btn--gray" id="modalsBtnCancel">Нет</button></div>
+          <div class="modals__btn-block"><button class="modals__btn" data-dismiss="modal" aria-label="Close">Да</button><button class="modals__btn modals__btn--gray" id="modalsBtnCancel">Нет</button></div>
         </div>
       </div>
     </div>
   </div>
   <div class="modal fade modals" id="ratingModal" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modals__dialog modals__dialog--md" role="document">
+    <div class="modal-dialog modal-dialog-centered modals__dialog modals__dialog--md">
       <div class="modal-content modals__content">
         <div class="modal-header modals__header">
           <h5 class="modal-title modals__title">Спасибо за вашу оценку!</h5>
           <a class="close modals__close" href="#" data-dismiss="modal" aria-label="Close">
-            <svg class="modals__location-icon" width="14" height="14">
+            <svg class="modals__close-icon" width="14" height="14">
               <use xlink:href="img/sprite-svg.svg#modals__close"></use>
             </svg>
           </a>
@@ -624,12 +624,12 @@
     </div>
   </div>
   <div class="modal fade modals" id="reviewModal" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modals__dialog modals__dialog--md" role="document">
+    <div class="modal-dialog modal-dialog-centered modals__dialog modals__dialog--md">
       <div class="modal-content modals__content">
         <div class="modal-header modals__header">
           <h5 class="modal-title modals__title">Спасибо за ваш отзыв!</h5>
           <a class="close modals__close" href="#" data-dismiss="modal" aria-label="Close">
-            <svg class="modals__location-icon" width="14" height="14">
+            <svg class="modals__close-icon" width="14" height="14">
               <use xlink:href="img/sprite-svg.svg#modals__close"></use>
             </svg>
           </a>
@@ -667,23 +667,104 @@
     </div>
   </div>
   <div class="modal fade modals" id="errorModal" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modals__dialog modals__dialog--md" role="document">
+    <div class="modal-dialog modal-dialog-centered modals__dialog modals__dialog--md">
       <div class="modal-content modals__content">
         <div class="modal-header modals__header">
           <h5 class="modal-title modals__title">Купон не сработал?</h5>
           <a class="close modals__close" href="#" data-dismiss="modal" aria-label="Close">
-            <svg class="modals__location-icon" width="14" height="14">
+            <svg class="modals__close-icon" width="14" height="14">
               <use xlink:href="img/sprite-svg.svg#modals__close"></use>
             </svg>
           </a>
         </div>
         <form class="modal-body modals__body" action="">
           <p class="modals__text">Нашли ошибку? Расскажите нам!</p>
-          <div class="el-radio modals__radio"><input class="modals__radio-inpit" id="r-conditions" type="radio" name="error" value="option1" checked="" /><label class="el-radio-style" for="r-conditions"></label><span class="modals__label">Ошибка в условиях</span></div>
-          <div class="el-radio modals__radio"><input class="modals__radio-inpit" id="r-disconts" type="radio" name="error" value="option2" checked="" /><label class="el-radio-style" for="r-disconts"></label><span class="modals__label">Не удалось получить скидку</span></div>
-          <div class="el-radio modals__radio"><input class="modals__radio-inpit" id="r-other" type="radio" name="error" value="option3" checked="" /><label class="el-radio-style" for="r-other"></label><span class="modals__label">Другое</span></div><textarea class="modals__textarea" name="msg"></textarea>
+          <div class="el-radio modals__radio"><input class="modals__radio-input" id="r-conditions" type="radio" name="error" value="option1" checked="" /><label class="el-radio-style" for="r-conditions"></label><label class="modals__label" for="r-conditions">Ошибка в условиях</label></div>
+          <div class="el-radio modals__radio"><input class="modals__radio-input" id="r-disconts" type="radio" name="error" value="option2" checked="" /><label class="el-radio-style" for="r-disconts"></label><label class="modals__label" for="r-disconts">Не удалось получить скидку</label></div>
+          <div class="el-radio modals__radio"><input class="modals__radio-input" id="r-other" type="radio" name="error" value="option3" checked="" /><label class="el-radio-style" for="r-other"></label><label class="modals__label" for="r-other">Другое</label></div><textarea class="modals__textarea" name="msg"></textarea>
           <div class="modals__btn-block"><button class="modals__btn modals__btn-input" type="submit">Отправить</button></div>
         </form>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade modals" id="registerModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modals__dialog modals__dialog--md">
+      <div class="modal-content modals__content">
+        <div class="modal-header modals__header">
+          <h5 class="modal-title modals__title">Регистрация</h5>
+          <a class="close modals__close" href="#" data-dismiss="modal" aria-label="Close">
+            <svg class="modals__close-icon" width="14" height="14">
+              <use xlink:href="img/sprite-svg.svg#modals__close"></use>
+            </svg>
+          </a>
+        </div>
+        <form class="modal-body modals__body" action="">
+          <div class="modals__input-block"><label class="modals__input-label" for="mail">Электронная почта</label><input class="modals__input-txt" id="mail" type="email" name="mail" required="required" /></div>
+          <div class="modals__input-block"><label class="modals__input-label" for="login">Логин</label><input class="modals__input-txt" id="login" type="text" name="login" required="required" /></div>
+          <div class="modals__input-block"><label class="modals__input-label" for="pass">Пароль</label><input class="modals__input-pass" id="pass" type="password" name="pass" required="required" /></div>
+          <div class="modals__btn-block"><button class="btn" type="submit">Регистрация</button></div>
+        </form>
+        <div class="modal-body modals__footer">
+          <p class="modals__text">Зарегистрироваться через соцсети</p>
+          <div class="modals__btn-block"><button class="modals__btn"><svg class="modals__fb-icon" width="14" height="14"><use xlink:href="img/sprite-svg.svg#modals__fb"></use></svg><span>Facebook</span></button><button class="modals__btn modals__btn--gray"><svg class="modals__vk-icon" width="20" height="10"><use xlink:href="img/sprite-svg.svg#modals__vk"></use></svg><span>Вконтакте</span></button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade modals" id="autorizModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modals__dialog modals__dialog--md">
+      <div class="modal-content modals__content">
+        <div class="modal-header modals__header">
+          <h5 class="modal-title modals__title">Авторизация</h5>
+          <a class="close modals__close" href="#" data-dismiss="modal" aria-label="Close">
+            <svg class="modals__close-icon" width="14" height="14">
+              <use xlink:href="img/sprite-svg.svg#modals__close"></use>
+            </svg>
+          </a>
+        </div>
+        <form class="modal-body modals__body" action="">
+          <div class="modals__input-block"><label class="modals__input-label" for="login">Логин</label><input class="modals__input-txt" id="login" type="text" name="login" required="required" /></div>
+          <div class="modals__input-block"><label class="modals__input-label" for="pass">Пароль</label><input class="modals__input-pass" id="pass" type="password" name="pass" required="required" /></div>
+          <div class="modals__btn-block"><button class="modals__btn modals__btn-input" type="submit">Войти</button><span class="modals__text">или</span><button class="modals__btn modals__btn--gray" type="submit">Зарегистрироваться</button></div>
+        </form>
+        <div class="modal-body modals__footer">
+          <p class="modals__text">Авторизация через</p>
+          <div class="modals__btn-block"><button class="modals__btn"><svg class="modals__fb-icon" width="14" height="14"><use xlink:href="img/sprite-svg.svg#modals__fb"></use></svg><span>Facebook</span></button><button class="modals__btn modals__btn--gray"><svg class="modals__vk-icon" width="20" height="10"><use xlink:href="img/sprite-svg.svg#modals__vk"></use></svg><span>Вконтакте</span></button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade modals" id="warnAutorModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modals__dialog modals__dialog--md">
+      <div class="modal-content modals__content">
+        <div class="modal-header modals__header">
+          <h5 class="modal-title modals__title">Для продолжения вам необходимо авторизоваться</h5>
+          <a class="close modals__close" href="#" data-dismiss="modal" aria-label="Close">
+            <svg class="modals__close-icon" width="14" height="14">
+              <use xlink:href="img/sprite-svg.svg#modals__close"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="modal-body modals__body">
+          <div class="modals__btn-block"><button class="modals__btn">Войти</button><button class="modals__btn modals__btn--gray">Регистрация</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade modals" id="warnDelModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modals__dialog modals__dialog--md">
+      <div class="modal-content modals__content">
+        <div class="modal-header modals__header">
+          <h5 class="modal-title modals__title">Вы уверены, что хотите удалить данный купон из избранного ?</h5>
+          <a class="close modals__close" href="#" data-dismiss="modal" aria-label="Close">
+            <svg class="modals__close-icon" width="14" height="14">
+              <use xlink:href="img/sprite-svg.svg#modals__close"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="modal-body modals__body">
+          <div class="modals__btn-block"><button class="modals__btn">Да</button><button class="modals__btn modals__btn--gray" data-dismiss="modal" aria-label="Close">Отмена</button></div>
+        </div>
       </div>
     </div>
   </div>
