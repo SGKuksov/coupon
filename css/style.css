@@ -1463,21 +1463,21 @@ div.vote-success {
 }
 
 .rating__star-empty {
-  background-image: url(../img/sprite-00826852752315399.png);
+  background-image: url(../img/sprite-03287758934896532.png);
   background-position: 0px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-fill {
-  background-image: url(../img/sprite-00826852752315399.png);
+  background-image: url(../img/sprite-03287758934896532.png);
   background-position: -26px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-hover {
-  background-image: url(../img/sprite-00826852752315399.png);
+  background-image: url(../img/sprite-03287758934896532.png);
   background-position: 0px -26px;
   width: 22px;
   height: 22px;
@@ -3954,21 +3954,28 @@ div.vote-success {
   animation: fade 500ms;
 }
 
-.modals__select-city {
-  width: 300px;
-}
-
-.modals__dialog--sm {
-  max-width: 250px !important;
-}
-
 .modals__dialog--md {
   max-width: 300px !important;
+}
+
+.modals__dialog--widescreen {
+  margin: 0;
+  width: 320px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  top: 50px;
+  right: 0;
 }
 
 .modals__content {
   height: 100%;
   border-radius: 6px;
+}
+
+.modals__content--widescreen {
+  border-radius: 0;
+  border: none;
 }
 
 .modals__header {
@@ -3977,6 +3984,12 @@ div.vote-success {
   position: relative;
   line-height: 1;
   padding: 5px;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.modals__header--widescreen {
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .modals__title {
@@ -4032,6 +4045,9 @@ div.vote-success {
   padding-left: 20px;
   padding-right: 20px;
   text-align: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .modals__socials {
@@ -4039,7 +4055,7 @@ div.vote-success {
 }
 
 .modals__btn-block {
-  width: 181px;
+  width: 200px;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4054,26 +4070,70 @@ div.vote-success {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-top: 23px;
-  padding-bottom: 27px;
+  text-align: center;
+  padding: 16px;
+  padding-top: 11px;
+  padding-bottom: 15px;
+  border-top: 1px solid #d8d8d8;
 }
 
 .modals__input-block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  margin-bottom: 13px;
 }
 
 .modals__input-label {
   color: #323232;
   font-size: 14px;
+  line-height: 18px;
   font-weight: normal;
-  width: 30%;
   text-align: left;
+  width: 30%;
+  margin-bottom: 0;
 }
 
 .modals__input-txt, .modals__input-pass {
-  width: 70%;
+  width: 60%;
+  font-size: 14px;
+  height: 32px;
+  line-height: 32px;
+  color: #969696;
+  background-color: #eeeeee;
+  border: 1px solid #dedede;
+  border-radius: 4px;
+  padding: 6px 10px 8px 10px;
+}
+
+.modals__input-txt:focus, .modals__input-pass:focus {
+  background-color: #fff;
+}
+
+.modals__input-btn-block {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.modals__input-btn {
+  font-weight: bold;
+  line-height: 23px;
+  height: 32px;
+  width: 100%;
 }
 
 .modals__input {
@@ -4087,14 +4147,18 @@ div.vote-success {
   padding: 6px 10px 8px 10px;
 }
 
+.modals__input:focus {
+  background-color: #fff;
+}
+
 .modals__btn {
   border-radius: 4px;
   border: 1px solid #eeeeee;
   color: #787878;
   background-color: #fff;
-  padding-left: 30px;
-  padding-right: 30px;
-  line-height: 32px;
+  padding-left: 22px;
+  padding-right: 22px;
+  line-height: 29px;
   height: 32px;
   font-weight: normal;
   display: -webkit-box;
@@ -4103,6 +4167,10 @@ div.vote-success {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.modals__btn span {
+  margin-left: 10px;
 }
 
 .modals__btn:hover {
@@ -4134,6 +4202,11 @@ div.vote-success {
 .modals__btn-input:hover {
   color: #ff0303;
   border: 1px solid #ff0303;
+}
+
+.modals__text {
+  width: 100%;
+  margin-top: 1rem;
 }
 
 .modals__textarea {
@@ -6720,6 +6793,20 @@ label.el-checkbox {
     font-size: 14px;
     line-height: 20px;
   }
+  .modals__dialog--widescreen {
+    margin: 1.75rem auto;
+    top: 0;
+    width: auto;
+    max-width: 300px;
+    position: static;
+  }
+  .modals__content--widescreen {
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+  }
+  .modals__header--widescreen {
+    padding: 0;
+  }
   .modals__header {
     padding: 13px;
   }
@@ -6736,8 +6823,17 @@ label.el-checkbox {
     -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
             box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
   }
+  .modals__body {
+    -webkit-box-flex: 1;
+        -ms-flex: auto;
+            flex: auto;
+  }
   .modals__btn-block {
     margin-top: 0;
+  }
+  .modals__btn {
+    padding-left: 15px;
+    padding-right: 15px;
   }
   .modals__location {
     display: none;
