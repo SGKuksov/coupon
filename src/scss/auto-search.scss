@@ -1,0 +1,39 @@
+.searchHolder {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: visible;
+  position: relative;
+}
+.autoFillBar {
+  display: none;
+  background: #fff;
+  width: 100%;
+  height: 180px;
+  position: absolute;
+  top: 40px;
+  z-index: 9;
+  border-radius: 4px;
+  overflow: auto;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+.autoFillBar .item {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 18px;
+  padding-right: 18px;
+  text-align: left;
+  color: #787878;
+  transition: .2s;
+  cursor: pointer;
+  font-size: 14px;
+}
+.autoFillBar .item:hover, .autoFillBar .item.active {
+  // background: #e5e3f9;
+  transition: .2s;
+}
+
+.highlighted {
+  // background: #ffe47d;
+}

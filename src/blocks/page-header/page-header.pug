@@ -20,7 +20,7 @@ mixin page-header(name)
           img.page-header__logo-img(width="150" height="31" src="img/page-header__logo-img.svg", alt="hot kupon")
 
       form.page-header__search(action="")
-        input.page-header__input(type="text" name="header_search" autocomplete="on")
+        input#pageHeaderSearch.page-header__input(type="text" name="header_search" autocomplete="off")
         button.page-header__submit(type="submit")
           svg.page-header__submit-icon(width="14" height="14")
             use(xlink:href="img/sprite-svg.svg#page-header__submit-icon")

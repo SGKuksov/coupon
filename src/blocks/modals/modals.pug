@@ -1,8 +1,8 @@
 mixin modals()
 
   .modals-panel
-    a.close.modals__close.modals-panel__close(href="#", data-dismiss='modal', aria-label='Close', style="top: 0;right: 0;line-height: 0;background-color: #fff;border-radius: 50px;margin: -10px -15px!important;padding: 4px 7px !important;border: 1px solid #323232;")
-      svg.modals__location-icon(width="14" height="14")
+    a.close.modals__close.modals-panel__close(href="#", data-dismiss='modal', aria-label='Close', style="top: 0;right: 0;line-height: 0;background-color: #fff;border-radius: 50px;margin: -15px -15px!important;padding: 6px !important;border: 1px solid #323232;")
+      svg.modals__close-icon(width="14" height="14")
         use(xlink:href="img/sprite-svg.svg#modals__close")
 
     button.btn.modals-panel__selectCityModal
@@ -17,37 +17,45 @@ mixin modals()
       | #modalLocation
     button.btn.modals-panel__couponModal
       | #couponModal
+    button.btn.modals-panel__registerModal
+      | #registerModal
+    button.btn.modals-panel__autorizModal
+      | #autorizModal
+    button.btn.modals-panel__warnAutorModal
+      | #warnAutorModal
+    button.btn.modals-panel__warnDelModal
+      | #warnDelModal
 
   #selectCityModal.modal.fade.modals(tabindex='-1', role='dialog', aria-hidden='true')
-    .modal-dialog.modal-dialog-centered.modals__dialog.modals__dialog--md(role='document')
+    .modal-dialog.modal-dialog-centered.modals__dialog.modals__dialog--md
       .modal-content.modals__content
         .modal-header.modals__header
           h5.modal-title.modals__title
             | Выбран ваш город ?
           a.close.modals__close(href="#", data-dismiss='modal', aria-label='Close')
-            svg.modals__location-icon(width="14" height="14")
+            svg.modals__close-icon(width="14" height="14")
               use(xlink:href="img/sprite-svg.svg#modals__close")
 
         .modal-body.modals__body
           .modals__location
-            svg.modals__location-icon(width="15" height="15")
+            svg.modals__location-icon(width="11" height="16")
               use(xlink:href="img/sprite-svg.svg#page-header__location")
             span.modals__location-info Город
             a.modals__location-city.callModalLocation(href="#") Москва
           .modals__btn-block
-            button.modals__btn#modals__btn-apply(data-dismiss='modal', aria-label='Close')
+            button.modals__btn(data-dismiss='modal', aria-label='Close')
               | Да
             button.modals__btn.modals__btn--gray#modalsBtnCancel
               | Нет
 
   #ratingModal.modal.fade.modals(tabindex='-1', role='dialog', aria-hidden='true')
-    .modal-dialog.modal-dialog-centered.modals__dialog.modals__dialog--md(role='document')
+    .modal-dialog.modal-dialog-centered.modals__dialog.modals__dialog--md
       .modal-content.modals__content
         .modal-header.modals__header
           h5.modal-title.modals__title
             | Спасибо за вашу оценку!
           a.close.modals__close(href="#", data-dismiss='modal', aria-label='Close')
-            svg.modals__location-icon(width="14" height="14")
+            svg.modals__close-icon(width="14" height="14")
               use(xlink:href="img/sprite-svg.svg#modals__close")
 
         .modal-body.modals__body
@@ -60,13 +68,13 @@ mixin modals()
               | Закрыть
 
   #reviewModal.modal.fade.modals(tabindex='-1', role='dialog', aria-hidden='true')
-    .modal-dialog.modal-dialog-centered.modals__dialog.modals__dialog--md(role='document')
+    .modal-dialog.modal-dialog-centered.modals__dialog.modals__dialog--md
       .modal-content.modals__content
         .modal-header.modals__header
           h5.modal-title.modals__title
             | Спасибо за ваш отзыв!
           a.close.modals__close(href="#", data-dismiss='modal', aria-label='Close')
-            svg.modals__location-icon(width="14" height="14")
+            svg.modals__close-icon(width="14" height="14")
               use(xlink:href="img/sprite-svg.svg#modals__close")
 
         .modal-body.modals__body
@@ -79,48 +87,166 @@ mixin modals()
               | Закрыть
 
   #errorModal.modal.fade.modals(tabindex='-1', role='dialog', aria-hidden='true')
-    .modal-dialog.modal-dialog-centered.modals__dialog.modals__dialog--md(role='document')
+    .modal-dialog.modal-dialog-centered.modals__dialog.modals__dialog--md
       .modal-content.modals__content
         .modal-header.modals__header
           h5.modal-title.modals__title
             | Купон не сработал?
           a.close.modals__close(href="#", data-dismiss='modal', aria-label='Close')
-            svg.modals__location-icon(width="14" height="14")
+            svg.modals__close-icon(width="14" height="14")
               use(xlink:href="img/sprite-svg.svg#modals__close")
 
         form.modal-body.modals__body(action="")
           p.modals__text
             | Нашли ошибку? Расскажите нам!
           .el-radio.modals__radio
-            input#r-conditions.modals__radio-inpit(type="radio" name="error" value="option1" checked="")
+            input#r-conditions.modals__radio-input(type="radio" name="error" value="option1" checked="")
             label.el-radio-style(for="r-conditions")
-            span.modals__label
+            label.modals__label(for="r-conditions")
               | Ошибка в условиях
           .el-radio.modals__radio
-            input#r-disconts.modals__radio-inpit(type="radio" name="error" value="option2" checked="")
+            input#r-disconts.modals__radio-input(type="radio" name="error" value="option2" checked="")
             label.el-radio-style(for="r-disconts")
-            span.modals__label
+            label.modals__label(for="r-disconts")
               | Не удалось получить скидку
           .el-radio.modals__radio
-            input#r-other.modals__radio-inpit(type="radio" name="error" value="option3" checked="")
+            input#r-other.modals__radio-input(type="radio" name="error" value="option3" checked="")
             label.el-radio-style(for="r-other")
-            span.modals__label
+            label.modals__label(for="r-other")
               | Другое
           textarea.modals__textarea(name="msg")
           .modals__btn-block
             button.modals__btn.modals__btn-input(type="submit")
               | Отправить
 
-  //- #myModal.modal.fade.modals(tabindex='-1', role='dialog', aria-hidden='true')
-  //-   .modal-dialog.modal-dialog-centered(role='document')
-  //-     .modal-content.modals__content
-  //-       .modal-header.modals__header
-  //-         h5.modal-title.modals__title
-  //-           | Выбран ваш город
-  //-         a.close.modals__close(href="", data-dismiss='modal', aria-label='Close')
-  //-           svg.modals__location-icon(width="14" height="14")
+  #registerModal.modal.fade.modals(tabindex='-1', role='dialog', aria-hidden='true')
+    .modal-dialog.modal-dialog-centered.modals__dialog.modals__dialog--md
+      .modal-content.modals__content
+        .modal-header.modals__header
+          h5.modal-title.modals__title
+            | Регистрация
+          a.close.modals__close(href="#", data-dismiss='modal', aria-label='Close')
+            svg.modals__close-icon(width="14" height="14")
               use(xlink:href="img/sprite-svg.svg#modals__close")
 
-  //-       .modal-body.modals__body
+        form.modal-body.modals__body(action="")
 
-  //-       .modal-footer.modals__footer
+          .modals__input-block
+            label.modals__input-label(for="mail")
+              | Электронная почта
+            input#mail.modals__input-txt(type="email" name="mail" required)
+
+          .modals__input-block
+            label.modals__input-label(for="login")
+              | Логин
+            input#login.modals__input-txt(type="text" name="login" required)
+
+          .modals__input-block
+            label.modals__input-label(for="pass")
+              | Пароль
+            input#pass.modals__input-pass(type="password" name="pass" required)
+
+          .modals__btn-block
+            button.btn(type="submit")
+              | Регистрация
+
+        .modal-body.modals__footer
+          p.modals__text
+            | Зарегистрироваться через соцсети
+
+          .modals__btn-block
+            button.modals__btn
+              svg.modals__fb-icon(width="14" height="14")
+                use(xlink:href="img/sprite-svg.svg#modals__fb")
+              span
+                | Facebook
+
+            button.modals__btn.modals__btn--gray
+              svg.modals__vk-icon(width="20" height="10")
+                use(xlink:href="img/sprite-svg.svg#modals__vk")
+              span
+                | Вконтакте
+
+  #autorizModal.modal.fade.modals(tabindex='-1', role='dialog', aria-hidden='true')
+    .modal-dialog.modal-dialog-centered.modals__dialog.modals__dialog--md
+      .modal-content.modals__content
+        .modal-header.modals__header
+          h5.modal-title.modals__title
+            | Авторизация
+          a.close.modals__close(href="#", data-dismiss='modal', aria-label='Close')
+            svg.modals__close-icon(width="14" height="14")
+              use(xlink:href="img/sprite-svg.svg#modals__close")
+
+        form.modal-body.modals__body(action="")
+
+          .modals__input-block
+            label.modals__input-label(for="login")
+              | Логин
+            input#login.modals__input-txt(type="text" name="login" required)
+
+          .modals__input-block
+            label.modals__input-label(for="pass")
+              | Пароль
+            input#pass.modals__input-pass(type="password" name="pass" required)
+
+          .modals__btn-block
+            button.modals__btn.modals__btn-input(type="submit")
+              | Войти
+
+            span.modals__text
+              | или
+
+            button.modals__btn.modals__btn--gray(type="submit")
+              | Зарегистрироваться
+
+        .modal-body.modals__footer
+          p.modals__text
+            | Авторизация через
+
+          .modals__btn-block
+            button.modals__btn
+              svg.modals__fb-icon(width="14" height="14")
+                use(xlink:href="img/sprite-svg.svg#modals__fb")
+              span
+                | Facebook
+
+            button.modals__btn.modals__btn--gray
+              svg.modals__vk-icon(width="20" height="10")
+                use(xlink:href="img/sprite-svg.svg#modals__vk")
+              span
+                | Вконтакте
+
+  #warnAutorModal.modal.fade.modals(tabindex='-1', role='dialog', aria-hidden='true')
+    .modal-dialog.modal-dialog-centered.modals__dialog.modals__dialog--md
+      .modal-content.modals__content
+        .modal-header.modals__header
+          h5.modal-title.modals__title
+            | Для продолжения вам необходимо авторизоваться
+          a.close.modals__close(href="#", data-dismiss='modal', aria-label='Close')
+            svg.modals__close-icon(width="14" height="14")
+              use(xlink:href="img/sprite-svg.svg#modals__close")
+
+        .modal-body.modals__body
+          .modals__btn-block
+            button.modals__btn
+              | Войти
+            button.modals__btn.modals__btn--gray
+              | Регистрация
+
+  #warnDelModal.modal.fade.modals(tabindex='-1', role='dialog', aria-hidden='true')
+    .modal-dialog.modal-dialog-centered.modals__dialog.modals__dialog--md
+      .modal-content.modals__content
+        .modal-header.modals__header
+          h5.modal-title.modals__title
+            | Вы уверены, что хотите удалить данный купон из избранного ?
+          a.close.modals__close(href="#", data-dismiss='modal', aria-label='Close')
+            svg.modals__close-icon(width="14" height="14")
+              use(xlink:href="img/sprite-svg.svg#modals__close")
+
+        .modal-body.modals__body
+          .modals__btn-block
+            button.modals__btn
+              | Да
+            button.modals__btn.modals__btn--gray(data-dismiss='modal', aria-label='Close')
+              | Отмена
+
