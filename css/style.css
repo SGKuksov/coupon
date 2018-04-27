@@ -1463,21 +1463,21 @@ div.vote-success {
 }
 
 .rating__star-empty {
-  background-image: url(../img/sprite-03287758934896532.png);
+  background-image: url(../img/sprite-03067582533344495.png);
   background-position: 0px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-fill {
-  background-image: url(../img/sprite-03287758934896532.png);
+  background-image: url(../img/sprite-03067582533344495.png);
   background-position: -26px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-hover {
-  background-image: url(../img/sprite-03287758934896532.png);
+  background-image: url(../img/sprite-03067582533344495.png);
   background-position: 0px -26px;
   width: 22px;
   height: 22px;
@@ -4055,7 +4055,7 @@ div.vote-success {
 }
 
 .modals__btn-block {
-  width: 200px;
+  width: 240px;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4064,6 +4064,16 @@ div.vote-success {
       justify-content: space-around;
   -ms-flex-item-align: stretch;
       align-self: stretch;
+}
+
+.modals__btn-block--column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .modals__footer {
