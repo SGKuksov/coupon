@@ -1,12 +1,15 @@
 .coupon-modal {
 
   .modal-dialog {
+    top: 50px;
     max-width: 997px;
+    height: 536px;
+    margin: 1.75rem auto;
   }
 
   &__content {
-    height: 100%;
     position: relative;
+    border-radius: 6px;
   }
 
   &__header {
@@ -198,6 +201,7 @@
     padding-right: 20px;
     padding-bottom: 30px;
     padding-top: 20px;
+    align-items: flex-start;
   }
 
   &__main {
@@ -207,7 +211,6 @@
   }
 
   &__info {
-    flex: 1;
     height: 230px;
   }
 
@@ -223,7 +226,6 @@
     width: 320px;
     height: 230px;
     overflow: hidden;
-    margin-bottom: 12px;
     position: relative;
     margin-left: auto;
     margin-right: auto;
@@ -236,7 +238,6 @@
 
     @media (min-width: $screen-md) {
       border-radius: 4px;
-      margin-bottom: 22px;
       margin-right: 22px;
       margin-left: 0;
       width: 336px;
@@ -293,7 +294,6 @@
   }
 
   &__take-block {
-    margin-bottom: 28px;
     padding-left: 30px;
     padding-right: 25px;
 
@@ -318,16 +318,6 @@
       padding: 0;
       display: block;
     }
-
-    &--on-top {
-      display: block;
-      padding-left: 30px;
-      padding-right: 25px;
-
-      @media (min-width: $screen-md) {
-        display: none;
-      }
-    }
   }
 
   &__take-btn {
@@ -349,15 +339,6 @@
       display: block;
       margin-left: 0;
       margin-right: 0;
-    }
-
-    &--on-top {
-      margin-left: 30px;
-      margin-right: 25px;
-
-      @media (min-width: $screen-md) {
-        display: none;
-      }
     }
   }
 
@@ -433,13 +414,19 @@
     background-color: #eeeeee;
     padding-left: 15px;
     padding-right: 15px;
-    line-height: 32px;
+    line-height: 23px;
     height: 32px;
     font-weight: normal;
 
     &:hover {
       color: #787878;
       font-weight: normal;
+      background-color: #f3f1f1;
+    }
+
+    &:active {
+      color: #787878;
+      background-color: #dcdcdc;
     }
   }
 }

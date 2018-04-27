@@ -20,10 +20,8 @@ mixin modal-location()
           h5.modal-title.modal-location__title
             | Выберите город
           a.close.modal-location__close(href="", data-dismiss='modal', aria-label='Close')
-            svg.modals__location-icon(width="14" height="14")
+            svg.modal-location__close-icon(width="14" height="14")
               use(xlink:href="img/sprite-svg.svg#modals__close")
-          form.modal-location__header-search
-            input.modal-location__header-input(type="text", placeholder="Название города...")
 
         .modal-body.modal-location__body
           ul.modal-location__city-char-list

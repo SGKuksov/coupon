@@ -3,27 +3,23 @@
 
 
   .modal-dialog {
+    max-width: 768px;
     margin: 0;
+    top: 50px;
 
     @media (min-width: $screen-md) {
       max-width: 997px;
       height: 568px;
       margin: 1.75rem auto;
+      top: 0;
     }
   }
 
   &__content {
-    position: absolute;
-    top: 50px;
-    left: 0;
-    right: 0;
-    bottom: 0;
     border-radius: 0;
     border: none;
 
     @media (min-width: $screen-md) {
-      height: 100%;
-      position: static;
       border-radius: 6px;
       border: 1px solid rgba(0,0,0,.2);
     }
@@ -34,13 +30,25 @@
     text-align: center;
     position: relative;
     padding: 17px;
+    padding-bottom: 53px;
+    background-color: #fff;
+    border-bottom: 1px solid #d8d8d8;
+
+    @media (min-width: $screen-md) {
+      border-radius: 6px 6px 0 0;
+      padding-bottom: 17px;
+    }
   }
 
   &__title {
     color: #323232;
     font-weight: bold;
-    font-size: 20px;
     display: inline-block;
+    font-size: 14px;
+
+    @media (min-width: $screen-md) {
+      font-size: 20px;
+    }
   }
 
   &__close {
@@ -49,31 +57,47 @@
     display: inline-block;
     position: absolute;
     right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-
+    top: 20px;
 
     @media (min-width: $screen-md) {
+      width: 27px;
+      height: 27px;
       min-height: 0;
       top: 0;
       right: 0;
       background-color: #fff;
       border-radius: 50%;
       border: 1px solid #f0f0f0;
-      padding: 0px 0px !important ;
+      padding: 6px !important;
       margin: -0.9rem -0.8rem 0rem auto !important;
       box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
     }
   }
 
+  &__close-icon {
+    width: 14px;
+    height: 14px;
+  }
+
   &__body {
-    padding-top: 45px;
-    padding-left: 45px;
-    padding-right: 45px;
+    background-color: #fff;
+    overflow-y: auto;
+    padding: 0;
+
+    @media (min-width: $screen-md) {
+      padding-top: 40px;
+      padding-left: 45px;
+      padding-right: 45px;
+      padding-bottom: 20px;
+    }
   }
 
   &__city-char-list {
 
+    @media (min-width: $screen-sm) {
+      column-count: 2;
+      column-gap: 0;
+    }
 
     @media (min-width: $screen-md) {
       column-count: 5;
@@ -100,12 +124,23 @@
   }
 
   &__city-list {
-    padding-left: 14px;
     vertical-align: top;
+    width: 100%;
+
+    @media (min-width: $screen-md) {
+      padding-left: 14px;
+    }
   }
 
   &__city-item {
+    padding-left: 16px;
+    padding-right: 16px;
+    line-height: 34px;
+    border-bottom: 1px solid #d8d8d8;
 
+    @media (min-width: $screen-md) {
+      border: none;
+    }
   }
 
   &__city-link {
@@ -122,12 +157,27 @@
 
   &__footer {
     justify-content: center;
-    padding-top: 23px;
-    padding-bottom: 27px;
+    padding: 0;
+    background-color: #fff;
+
+    @media (min-width: $screen-md) {
+      padding-top: 23px;
+      padding-bottom: 27px;
+      border-radius: 0 0 6px 6px;
+    }
   }
 
   &__search {
+    position: absolute;
+    top: 43px;
+    width: 100%;
+    padding-left: 17px;
+    padding-right: 17px;
 
+    @media (min-width: $screen-md) {
+      position: static;
+      width: auto;
+    }
   }
 
   &__header-search {
@@ -138,12 +188,15 @@
     font-weight: bold;
     font-size: 14px;
     color: #323232;
-    display: block;
+    display: none;
+
+    @media (min-width: $screen-md) {
+      display: block;
+    }
   }
 
   &__input {
     font-size: 14px;
-    width: 462px;
     height: 32px;
     line-height: 32px;
     color: #969696;
@@ -151,20 +204,35 @@
     border: 1px solid #dedede;
     border-radius: 4px;
     padding: 6px 15px 8px 15px;
-    margin-right: 15px;
+    width: 100%;
+
+    @media (min-width: $screen-md) {
+      width: 462px;
+      margin-right: 15px;
+    }
   }
 
   &__btn {
-    border-radius: 4px;
-    border: 1px solid #dedede;
-    color: #787878;
-    background-color: #fff;
-    padding: 6px 15px 8px 15px;
-    font-weight: normal;
+    display: none;
 
-    &:hover {
+    @media (min-width: $screen-md) {
+      display: inline-block;
+      border-radius: 4px;
+      border: 1px solid #dedede;
       color: #787878;
+      background-color: #fff;
+      padding: 6px 15px 8px 15px;
       font-weight: normal;
+
+      &:hover {
+        color: #787878;
+        font-weight: normal;
+      }
+
+      &:active {
+        color: #787878;
+        background-color: #fff;
+      }
     }
   }
 }

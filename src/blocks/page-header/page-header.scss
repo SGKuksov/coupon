@@ -10,6 +10,7 @@
   padding-bottom: 8px;
   padding-left: 8px;
   padding-right: 8px;
+  position: fixed;
 
   @media (min-width: $screen-md) {
     padding-left: 0;
@@ -17,6 +18,7 @@
   }
 
   @media (min-width: $screen-lg) {
+    position: static;
     min-height: 110px;
     padding-top: 19px;
     padding-bottom: 20px;
