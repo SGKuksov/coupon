@@ -388,6 +388,7 @@ $(document).ready(function(){
     $("#modalLocation").modal("show");
   });
   $(".modals-panel__couponModal").click(function() {
+    $('.coupon-modal__text').truncateText();
     $("#couponModal").modal("show");
   });
 

@@ -26,8 +26,8 @@ mixin coupon(admin, is_space)
         .coupon__body.coupon__description-tab
           .coupon__info
             if (!is_space)
-              .coupon__img-wrap(href="#")
-                img.coupon__img(src="http://via.placeholder.com/336x231", alt="photo" width="336" height="231")
+              .coupon__img-wrap
+                img.coupon__img(src="img/card__photo.jpg", alt="photo" width="336" height="231")
                 span.coupon__sale
                   | до&nbsp;
                   span
@@ -35,7 +35,7 @@ mixin coupon(admin, is_space)
 
             if (is_space)
               .coupon__img-wrap#placeGallery(href="#")
-                img.coupon__img(src="http://via.placeholder.com/336x231", alt="photo" width="336" height="231")
+                img.coupon__img(src="img/card__photo.jpg", alt="photo" width="336" height="231")
                 span.coupon__gallery
                   svg.coupon__gallery-icon(width="18" height="14")
                     use(xlink:href="img/sprite-svg.svg#coupon__gallery")

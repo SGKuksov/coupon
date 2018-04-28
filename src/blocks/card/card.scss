@@ -32,6 +32,16 @@
     height: 330px;
   }
 
+  &--gray-img img {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: gray;
+    -webkit-filter: grayscale(1);
+  }
+
   &__img-wrap {
     margin-left: -18px;
     margin-top: -19px;

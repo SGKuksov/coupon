@@ -1,4 +1,4 @@
-mixin coupon-gallery(title)
+mixin coupon-gallery(title, color)
   .coupon-gallery
     h2.coupon-gallery__title=title
     .coupon-gallery__inner
@@ -18,81 +18,180 @@ mixin coupon-gallery(title)
         var place1 = "Аквапарк «Родео Драйв»"
         var place2 = "Аквапарк «Родео Драйв»"
 
-      .coupon-gallery__card.card
-        .card__img-wrap
-          img.card__img(width="336" height="231" src="http://via.placeholder.com/336x231", alt=title1)
 
-        span.card__sale до&nbsp;
-          span=sale1
-        span.card__price от&nbsp;
-          span=price1
+      if (!color)
+        .coupon-gallery__card.card
+          .card__img-wrap
+            img.card__img(width="336" height="231" src="img/card__photo.jpg", alt=title1)
 
-        //- h2.card__title
-        a.card__link(href="#" title=title1)=title1
+          span.card__sale до&nbsp;
+            span=sale1
+          span.card__price от&nbsp;
+            span=price1
 
-        .card__meta
-          a.card__category.card__category--in-category(href="#" title=category1)=category1
-          a.card__dealer.card__dealer--in-category(href="#" title=dealer1)
-            svg.card__dealer-link(width="14" height="14")
-              use(xlink:href="img/sprite-svg.svg#card__dealer-link")
-            span=dealer1
-          a.card__place.card__place--in-category(href="#" title=place1)=place1
-      .coupon-gallery__card.card
-        .card__img-wrap
-          img.card__img(width="336" height="231" src="http://via.placeholder.com/336x231", alt=title2)
+          //- h2.card__title
+          a.card__link(href="#" title=title1)=title1
 
-        span.card__sale до&nbsp;
-          span=sale2
-        span.card__price.card__price--green от&nbsp;
-          span=price2
+          .card__meta
+            a.card__category.card__category--in-category(href="#" title=category1)=category1
+            a.card__dealer.card__dealer--in-category(href="#" title=dealer1)
+              svg.card__dealer-link(width="14" height="14")
+                use(xlink:href="img/sprite-svg.svg#card__dealer-link")
+              span=dealer1
+            a.card__place.card__place--in-category(href="#" title=place1)=place1
 
-        //- h2.card__title
-        a.card__link(href="#" title=title2)=title2
+      if (color)
+        .coupon-gallery__card.card.card--gray-img
+          .card__img-wrap
+            img.card__img(width="336" height="231" src="img/card__photo.jpg", alt=title1)
 
-        .card__meta
-          a.card__category.card__category--in-category(href="#" title=category2)=category2
-          a.card__dealer.card__dealer--in-category(href="#" title=dealer2)
-            svg.card__dealer-link(width="14" height="14")
-              use(xlink:href="img/sprite-svg.svg#card__dealer-link")
-            span=dealer2
-          a.card__place.card__place--in-category(href="#" title=place2)=place2
-      .coupon-gallery__card.card
-        .card__img-wrap
-          img.card__img(width="336" height="231" src="http://via.placeholder.com/336x231", alt=title1)
+          span.card__sale до&nbsp;
+            span=sale1
+          span.card__price от&nbsp;
+            span=price1
 
-        span.card__sale до&nbsp;
-          span=sale1
-        span.card__price от&nbsp;
-          span=price1
+          //- h2.card__title
+          a.card__link(href="#" title=title1)=title1
 
-        //- h2.card__title
-        a.card__link(href="#" title=title1)=title1
+          .card__meta
+            a.card__category.card__category--in-category(href="#" title=category1)=category1
+            a.card__dealer.card__dealer--in-category(href="#" title=dealer1)
+              svg.card__dealer-link(width="14" height="14")
+                use(xlink:href="img/sprite-svg.svg#card__dealer-link")
+              span=dealer1
+            a.card__place.card__place--in-category(href="#" title=place1)=place1
 
-        .card__meta
-          a.card__category.card__category--in-category(href="#" title=category1)=category1
-          a.card__dealer.card__dealer--in-category(href="#" title=dealer1)
-            svg.card__dealer-link(width="14" height="14")
-              use(xlink:href="img/sprite-svg.svg#card__dealer-link")
-            span=dealer1
-          a.card__place.card__place--in-category(href="#" title=place1)=place1
-      .coupon-gallery__card.card
-        .card__img-wrap
-          img.card__img(width="336" height="231" src="http://via.placeholder.com/336x231", alt=title2)
 
-        span.card__sale до&nbsp;
-          span=sale2
-        span.card__price.card__price--green от&nbsp;
-          span=price2
+      if (!color)
+        .coupon-gallery__card.card
+          .card__img-wrap
+            img.card__img(width="336" height="231" src="img/card__photo.jpg", alt=title1)
 
-        //- h2.card__title
-        a.card__link(href="#" title=title2)=title2
+          span.card__sale до&nbsp;
+            span=sale1
+          span.card__price от&nbsp;
+            span=price1
 
-        .card__meta
-          a.card__category.card__category--in-category(href="#" title=category2)=category2
-          a.card__dealer.card__dealer--in-category(href="#" title=dealer2)
-            svg.card__dealer-link(width="14" height="14")
-              use(xlink:href="img/sprite-svg.svg#card__dealer-link")
-            span=dealer2
-          a.card__place.card__place--in-category(href="#" title=place2)=place2
+          //- h2.card__title
+          a.card__link(href="#" title=title1)=title1
+
+          .card__meta
+            a.card__category.card__category--in-category(href="#" title=category1)=category1
+            a.card__dealer.card__dealer--in-category(href="#" title=dealer1)
+              svg.card__dealer-link(width="14" height="14")
+                use(xlink:href="img/sprite-svg.svg#card__dealer-link")
+              span=dealer1
+            a.card__place.card__place--in-category(href="#" title=place1)=place1
+
+      if (color)
+        .coupon-gallery__card.card.card--gray-img
+          .card__img-wrap
+            img.card__img(width="336" height="231" src="img/card__photo.jpg", alt=title2)
+
+          span.card__sale до&nbsp;
+            span=sale2
+          span.card__price.card__price--green от&nbsp;
+            span=price2
+
+          //- h2.card__title
+          a.card__link(href="#" title=title2)=title2
+
+          .card__meta
+            a.card__category.card__category--in-category(href="#" title=category2)=category2
+            a.card__dealer.card__dealer--in-category(href="#" title=dealer2)
+              svg.card__dealer-link(width="14" height="14")
+                use(xlink:href="img/sprite-svg.svg#card__dealer-link")
+              span=dealer2
+            a.card__place.card__place--in-category(href="#" title=place2)=place2
+
+
+      if (!color)
+        .coupon-gallery__card.card
+          .card__img-wrap
+            img.card__img(width="336" height="231" src="img/card__photo.jpg", alt=title1)
+
+          span.card__sale до&nbsp;
+            span=sale1
+          span.card__price от&nbsp;
+            span=price1
+
+          //- h2.card__title
+          a.card__link(href="#" title=title1)=title1
+
+          .card__meta
+            a.card__category.card__category--in-category(href="#" title=category1)=category1
+            a.card__dealer.card__dealer--in-category(href="#" title=dealer1)
+              svg.card__dealer-link(width="14" height="14")
+                use(xlink:href="img/sprite-svg.svg#card__dealer-link")
+              span=dealer1
+            a.card__place.card__place--in-category(href="#" title=place1)=place1
+
+      if (color)
+        .coupon-gallery__card.card.card--gray-img
+          .card__img-wrap
+            img.card__img(width="336" height="231" src="img/card__photo.jpg", alt=title1)
+
+          span.card__sale до&nbsp;
+            span=sale1
+          span.card__price от&nbsp;
+            span=price1
+
+          //- h2.card__title
+          a.card__link(href="#" title=title1)=title1
+
+          .card__meta
+            a.card__category.card__category--in-category(href="#" title=category1)=category1
+            a.card__dealer.card__dealer--in-category(href="#" title=dealer1)
+              svg.card__dealer-link(width="14" height="14")
+                use(xlink:href="img/sprite-svg.svg#card__dealer-link")
+              span=dealer1
+            a.card__place.card__place--in-category(href="#" title=place1)=place1
+
+      if (!color)
+        .coupon-gallery__card.card
+          .card__img-wrap
+            img.card__img(width="336" height="231" src="img/card__photo.jpg", alt=title1)
+
+          span.card__sale до&nbsp;
+            span=sale1
+          span.card__price от&nbsp;
+            span=price1
+
+          //- h2.card__title
+          a.card__link(href="#" title=title1)=title1
+
+          .card__meta
+            a.card__category.card__category--in-category(href="#" title=category1)=category1
+            a.card__dealer.card__dealer--in-category(href="#" title=dealer1)
+              svg.card__dealer-link(width="14" height="14")
+                use(xlink:href="img/sprite-svg.svg#card__dealer-link")
+              span=dealer1
+            a.card__place.card__place--in-category(href="#" title=place1)=place1
+
+      if (color)
+        .coupon-gallery__card.card.card--gray-img
+          .card__img-wrap
+            img.card__img(width="336" height="231" src="img/card__photo.jpg", alt=title2)
+
+          span.card__sale до&nbsp;
+            span=sale2
+          span.card__price.card__price--green от&nbsp;
+            span=price2
+
+          //- h2.card__title
+          a.card__link(href="#" title=title2)=title2
+
+          .card__meta
+            a.card__category.card__category--in-category(href="#" title=category2)=category2
+            a.card__dealer.card__dealer--in-category(href="#" title=dealer2)
+              svg.card__dealer-link(width="14" height="14")
+                use(xlink:href="img/sprite-svg.svg#card__dealer-link")
+              span=dealer2
+            a.card__place.card__place--in-category(href="#" title=place2)=place2
+
+
       a.coupon-gallery__btn.main-content__btn.btn(href="#")
         | Поиск в <br>других <br>категориях
+
+
+
