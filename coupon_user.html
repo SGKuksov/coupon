@@ -249,14 +249,14 @@
         </div>
         <div class="coupon">
           <nav class="coupon__header">
-            <ul class="nav nav-tabs coupon__nav-tabs" role="tablist">
-              <li class="nav-item coupon__tab"><a class="nav-link coupon__tab-link active" data-toggle="tab" href="#description" role="tab" aria-controls="description" aria-selected="true">Условия</a></li>
-              <li class="nav-item coupon__tab"><a class="nav-link coupon__tab-link" data-toggle="tab" href="#review" role="tab" aria-controls="review" aria-selected="true">Отзывы&nbsp;<span class="coupon__tab-count" id="couponTabCount">3</span></a></li>
-              <li class="nav-item coupon__tab"><a class="nav-link coupon__tab-link" data-toggle="tab" href="#address" role="tab" aria-controls="address" aria-selected="true">Адреса</a></li>
+            <ul class="nav coupon__nav-tabs" role="tablist">
+              <li class="nav-item coupon__tab"><a class="nav-link coupon__tab-link active" id="descriptionTab" data-toggle="tab" href="#description" role="tab" aria-controls="description" aria-selected="true">Условия</a></li>
+              <li class="nav-item coupon__tab"><a class="nav-link coupon__tab-link" id="reviewTab" data-toggle="tab" href="#review" role="tab" aria-controls="review" aria-selected="false">Отзывы&nbsp;<span class="coupon__tab-count" id="couponTabCount">3</span></a></li>
+              <li class="nav-item coupon__tab"><a class="nav-link coupon__tab-link" id="addressTab" data-toggle="tab" href="#address" role="tab" aria-controls="address" aria-selected="false">Адреса</a></li>
             </ul>
           </nav>
           <div class="tab-content">
-            <div class="tab-pane active" id="description" role="tabpanel">
+            <div class="tab-pane fade active" id="description" role="tabpanel" aria-labelledby="descriptionTab">
               <div class="coupon__body coupon__description-tab">
                 <div class="coupon__info">
                   <div class="coupon__img-wrap"><img class="coupon__img" src="img/card__photo.jpg" alt="photo" width="336" height="231" /><span class="coupon__sale">до&nbsp;<span>50%</span></span>
@@ -323,7 +323,7 @@
                 </div>
               </div>
             </div>
-            <div class="tab-pane" id="review" role="tabpanel">
+            <div class="tab-pane fade" id="review" role="tabpanel" aria-labelledby="reviewTab">
               <div class="coupon__body coupon__review-tab">
                 <div class="coupon__comment-block">
                   <article class="coupon__comment coupon-comment">
@@ -368,7 +368,7 @@
                 </div>
               </div>
             </div>
-            <div class="tab-pane" id="address" role="tabpanel">
+            <div class="tab-pane fade" id="address" role="tabpanel" aria-labelledby="addressTab">
               <div class="coupon__body coupon__address-tab"><iframe class="coupon__address-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9747.689600920134!2d4.91255678933055!3d52.35369267652723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c60979f6a4ff25%3A0x517a3c162d50d486!2zVHJhbnN2YWFsYnV1cnQsINCQ0LzRgdGC0LXRgNC00LDQvA!5e0!3m2!1sru!2snl!4v1524023866674" allowfullscreen=""></iframe>
                 <div class="coupon__address-block">
                   <div class="coupon__address-img-wrap"><img class="coupon__address-img" src="http://via.placeholder.com/212x88" alt="img" width="212" height="88" /></div><span class="coupon__address-info"></span>

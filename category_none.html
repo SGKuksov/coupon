@@ -252,14 +252,20 @@
         <div class="filter">
           <div class="filter__settings">
             <div class="filter__view"><span class="filter__desc">Вид:</span>
-              <a class="filter__btn filter__btn--left filter__btn--active btn" href="#">
-                <svg class="filter__by_plitka" width="14" height="12">
-                  <use xlink:href="img/sprite-svg.svg#filter__by_plitka"></use>
-                </svg><span>Плиткой</span></a>
-              <a class="filter__btn filter__btn--right btn" href="#">
-                <svg class="filter__on_map" width="16" height="14">
-                  <use xlink:href="img/sprite-svg.svg#filter__on_map"></use>
-                </svg><span>На карте</span></a>
+              <ul class="nav filter__tabs" role="tablist">
+                <li class="nav-item">
+                  <a class="filter__btn filter__btn--left btn nav-link active" id="byPlitkaTab" data-toggle="tab" href="#byPlitka" role="tab" aria-controls="byPlitka" aria-selected="true">
+                    <svg class="filter__by_plitka" width="14" height="12">
+                      <use xlink:href="img/sprite-svg.svg#filter__by_plitka"></use>
+                    </svg><span>Плиткой</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="filter__btn filter__btn--right btn nav-link" id="onMapTab" data-toggle="tab" href="#onMap" role="tab" aria-controls="onMap" aria-selected="false">
+                    <svg class="filter__on_map" width="16" height="14">
+                      <use xlink:href="img/sprite-svg.svg#filter__on_map"></use>
+                    </svg><span>На карте</span></a>
+                </li>
+              </ul>
             </div>
             <div class="filter__sort"><span class="filter__desc">Сортировать по:</span><select class="filter__select custom-select" name="label"><option class="filter__option" value="Популярности">Популярности</option><option class="filter__option" value="Рейтингу">Рейтингу</option><option class="filter__option" value="Стоимости">Стоимости</option><option class="filter__option" value="Названию">Названию</option></select></div>
           </div>
