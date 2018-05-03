@@ -1,0 +1,22 @@
+<svg width="18" height="18" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="Canvas" fill="none">
+<g id="Group 9">
+<g id="Oval">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M 9 18C 13.9706 18 18 13.9706 18 9C 18 4.02944 13.9706 0 9 0C 4.02944 0 0 4.02944 0 9C 0 13.9706 4.02944 18 9 18Z" fill="#CDCDCD"/>
+</g>
+<g id="Page 1">
+<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="5" y="5" width="8" height="8">
+<g id="Clip 2">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M 0 0L 8 0L 8 8L 0 8L 0 0Z" transform="translate(5 5)" fill="white"/>
+</g>
+</mask>
+<g mask="url(#mask0)">
+<g id="Fill 1">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M 4.65582 4.00005L 7.86418 0.791718C 8.04527 0.610629 8.04527 0.317178 7.86418 0.136089C 7.68345 -0.0453631 7.38927 -0.0453631 7.20855 0.136089L 4.00018 3.34442L 0.791818 0.136089C 0.610727 -0.0453631 0.316909 -0.0453631 0.135818 0.136089C -0.0452727 0.317178 -0.0452727 0.610629 0.135818 0.791718L 3.34455 4.00005L 0.135818 7.20837C -0.0452727 7.38946 -0.0452727 7.68291 0.135818 7.864C 0.226364 7.95455 0.345273 8 0.463818 8C 0.582364 8 0.701273 7.95455 0.791818 7.864L 4.00018 4.65567L 7.20855 7.864C 7.29909 7.95455 7.41764 8 7.53618 8C 7.65509 8 7.77364 7.95455 7.86418 7.864C 8.04527 7.68291 8.04527 7.38946 7.86418 7.20837L 4.65582 4.00005Z" transform="translate(5 5)" fill="#515151"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+</svg>
+

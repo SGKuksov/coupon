@@ -18,20 +18,24 @@ mixin filter(is_places_category)
   .filter
     if (!is_places_category)
       .filter__settings
+
         .filter__view
           span.filter__desc
             | Вид:
-          a.filter__btn.filter__btn--left.filter__btn--active.btn(href="#")
-            svg.filter__by_plitka(width="14" height="12")
-              use(xlink:href="img/sprite-svg.svg#filter__by_plitka")
-            span
-              | Плиткой
+          ul.nav.filter__tabs(role="tablist")
+            li.nav-item
+              a#byPlitkaTab.filter__btn.filter__btn--left.btn.nav-link.active(data-toggle="tab" href="#byPlitka" role="tab" aria-controls="byPlitka" aria-selected="true")
+                svg.filter__by_plitka(width="14" height="12")
+                  use(xlink:href="img/sprite-svg.svg#filter__by_plitka")
+                span
+                  | Плиткой
 
-          a.filter__btn.filter__btn--right.btn(href="#")
-            svg.filter__on_map(width="16" height="14")
-              use(xlink:href="img/sprite-svg.svg#filter__on_map")
-            span
-              | На карте
+            li.nav-item
+              a#onMapTab.filter__btn.filter__btn--right.btn.nav-link(data-toggle="tab" href="#onMap" role="tab" aria-controls="onMap" aria-selected="false")
+                svg.filter__on_map(width="16" height="14")
+                  use(xlink:href="img/sprite-svg.svg#filter__on_map")
+                span
+                  | На карте
 
         .filter__sort
           span.filter__desc

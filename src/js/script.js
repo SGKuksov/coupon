@@ -256,12 +256,6 @@ $(document).ready(function(){
     $(this).parent().hide();
   });
 
-  // кнопка переключения
-  $(".filter__btn").click(function() {
-    $(".filter__btn").removeClass("filter__btn--active");
-    $(this).addClass("filter__btn--active");
-  });
-
   // rss
   $(".top-panel__rss").click(function() {
     var rss = $(this);
@@ -307,7 +301,6 @@ $(document).ready(function(){
         $(".page-header__menu").show();
         $(".page-header__logo-wrap").show();
         $(".page-header__login").show();
-  ;
       }
     }
   });
@@ -315,7 +308,6 @@ $(document).ready(function(){
   $(".page-header__cancel--show").click(function() {
     doc_w = $(document).width();
     if (doc_w <= 768) {
-
       $(".overlay").removeClass("site-overlay");
       $("form.page-header__search").removeClass("page-header__search--show").parent().parent().css("padding", "8px");
       $(".page-header__input").attr({"placeholder": "", "autofocus":""})

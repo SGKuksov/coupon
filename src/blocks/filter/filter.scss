@@ -4,11 +4,13 @@
   flex-direction: column;
   padding-left: 10px;
   padding-right: 10px;
-
   width: 300px;
   margin: 0 auto;
 
-  @media (min-width: $screen-md) {
+
+
+  @media (min-width: $screen-sm) {
+    align-items: baseline;
     width: 100%;
     align-items: baseline;
     justify-content: space-between;
@@ -20,9 +22,11 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
 
-    @media (min-width: $screen-md) {
+    @media (min-width: $screen-sm) {
       width: auto;
+      align-items: baseline;
       justify-content: flex-start;
     }
   }
@@ -31,8 +35,21 @@
     order: 0;
     font-size: 0;
 
-    @media (min-width: $screen-md) {
+    @media (min-width: $screen-sm) {
       margin-right: 34px;
+    }
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      align-items: baseline;
+    }
+
+    span {
+      display: none;
+
+      @media (min-width: $screen-sm) {
+        display: block;
+      }
     }
   }
 
@@ -41,15 +58,22 @@
     margin-bottom: 10px;
     font-size: 14px;
 
+    @media (min-width: $screen-sm) {
+      margin-right: 10px;
+    }
+
     @media (min-width: $screen-md) {
       display: inline;
-      margin-right: 10px;
     }
 
     &--is_places {
       display: inline-block;
       margin-right: 10px;
     }
+  }
+
+  &__tabs {
+    display: flex;
   }
 
   &__btn {
@@ -66,10 +90,15 @@
       color: #787878;
       font-weight: normal;
       background-color: #fff;
-
     }
 
-    &--active {
+    &:focus {}
+
+    &:active {
+      background-color: #fff;
+    }
+
+    &.active {
       opacity: 1;
     }
 
@@ -85,7 +114,7 @@
     & span {
       display: none;
 
-      @media (min-width: $screen-md) {
+      @media (min-width: $screen-sm) {
         display: inline;
         margin-left: 10px;
       }
@@ -115,7 +144,7 @@
   &__sort {
     order: -1;
 
-    @media (min-width: $screen-md) {
+    @media (min-width: $screen-sm) {
       order: 0;
     }
   }
@@ -130,8 +159,6 @@
     padding: 6px 24px 7px 14px;
     height: auto;
     line-height: 1;
-
-    @media (min-width: $screen-md) {}
 
     @media (min-width: $screen-lg) {
       padding: 7px 98px 8px 14px;

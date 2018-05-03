@@ -1,17 +1,17 @@
 mixin coupon(admin, is_space)
   .coupon
     nav.coupon__header
-      ul.nav.nav-tabs.coupon__nav-tabs(role="tablist")
+      ul.nav.coupon__nav-tabs(role="tablist")
         li.nav-item.coupon__tab
-          a.nav-link.coupon__tab-link.active(data-toggle="tab" href="#description" role="tab" aria-controls="description" aria-selected="true")
+          a#descriptionTab.nav-link.coupon__tab-link.active(data-toggle="tab" href="#description" role="tab" aria-controls="description" aria-selected="true")
             | Условия
         li.nav-item.coupon__tab
-          a.nav-link.coupon__tab-link(data-toggle="tab" href="#review" role="tab" aria-controls="review" aria-selected="true")
+          a#reviewTab.nav-link.coupon__tab-link(data-toggle="tab" href="#review" role="tab" aria-controls="review" aria-selected="false")
             | Отзывы&nbsp;
             span.coupon__tab-count#couponTabCount
               | 3
         li.nav-item.coupon__tab
-          a.nav-link.coupon__tab-link(data-toggle="tab" href="#address" role="tab" aria-controls="address" aria-selected="true")
+          a#addressTab.nav-link.coupon__tab-link(data-toggle="tab" href="#address" role="tab" aria-controls="address" aria-selected="false")
             | Адреса
 
       if (admin)
@@ -22,7 +22,7 @@ mixin coupon(admin, is_space)
           span.el-switch-style
 
     .tab-content
-      #description.tab-pane.active(role="tabpanel")
+      #description.tab-pane.fade.active(role="tabpanel" aria-labelledby="descriptionTab")
         .coupon__body.coupon__description-tab
           .coupon__info
             if (!is_space)
@@ -126,7 +126,7 @@ mixin coupon(admin, is_space)
               .coupon__sharing-socials.socials
                 +socials()
 
-      #review.tab-pane(role="tabpanel")
+      #review.tab-pane.fade(role="tabpanel" aria-labelledby="reviewTab")
         .coupon__body.coupon__review-tab
           .coupon__comment-block
             article.coupon__comment.coupon-comment
@@ -182,7 +182,7 @@ mixin coupon(admin, is_space)
               button.coupon__footer-submit.btn(type="submit")
                 | Добавить отзыв
 
-      #address.tab-pane(role="tabpanel")
+      #address.tab-pane.fade(role="tabpanel" aria-labelledby="addressTab")
         .coupon__body.coupon__address-tab
           iframe.coupon__address-map(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9747.689600920134!2d4.91255678933055!3d52.35369267652723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c60979f6a4ff25%3A0x517a3c162d50d486!2zVHJhbnN2YWFsYnV1cnQsINCQ0LzRgdGC0LXRgNC00LDQvA!5e0!3m2!1sru!2snl!4v1524023866674" allowfullscreen="")
 

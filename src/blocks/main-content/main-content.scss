@@ -1,5 +1,5 @@
 .main-content {
-  padding-top: 18px;
+  padding-top: 16px;
   margin-left: -4px;
   margin-right: -4px;
 
@@ -8,6 +8,7 @@
   }
 
   @media (min-width: $screen-lg) {
+    padding-top: 20px;
     padding-bottom: 40px;
   }
 
@@ -61,5 +62,135 @@
   &__pagination {
     display: flex;
     justify-content: center;
+  }
+
+  &__header {
+    padding-left: 22px;
+    padding-right: 22px;
+    padding-top: 18px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #dcdcdc;
+    background-color: #fff;
+
+    @media (min-width: $screen-sm) {
+      border-radius: 10px 10px 0 0;
+    }
+  }
+
+  &__header-title {
+    font-size: 28px;
+    font-weight: normal;
+    line-height: 32px;
+    margin-bottom: 0;
+  }
+
+  &__body {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    @media (min-width: $screen-sm) {
+      border-radius: 0 0 10px 10px;
+    }
+
+    @media (min-width: $screen-md) {
+      flex-direction: row;
+    }
+  }
+
+  &__address-tab {
+    position: relative;
+  }
+
+  &__address-block {
+    width: 100%;
+    background-color: #ffffff;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 13px;
+    padding-right: 13px;
+
+    @media (min-width: $screen-md) {
+      position: absolute;
+      left: 18px;
+      top: 18px;
+      width: 242px;
+      border-radius: 6px;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  &__address-img-wrap {
+    width: 212px;
+    height: 88px;
+    overflow: hidden;
+    border-radius: 4px;
+    margin-bottom: 14px;
+    display: none;
+
+    @media (min-width: $screen-md) {
+      display: block;
+    }
+  }
+
+  &__address-img {
+    min-height: 1px;
+    width: 100%;
+  }
+
+  &__address-title {
+    font-size: 14px;
+    font-weight: bold;
+    color: #323232;
+    margin-bottom: 10px;
+
+    @media (min-width: $screen-md) {
+      font-size: 12px;
+    }
+  }
+
+  &__address-btn {
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 17px;
+    width: 100%;
+    height: 32px;
+    line-height: 18px;
+    text-align: center;
+  }
+
+  &__address-meta {
+    margin-bottom: 9px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__address-meta-icon {
+    width: 14px;
+    height: 14px;
+  }
+
+  &__address-meta-desc {
+    font-size: 14px;
+    color: #323232;
+    display: inline-block;
+    margin-left: 10px;
+
+    @media (min-width: $screen-md) {
+      font-size: 12px;
+
+    }
+  }
+
+  &__address-map {
+    height: 288px;
+    width: 100%;
+    border: none;
+
+    @media (min-width: $screen-md) {
+      height: 560px;
+    }
   }
 }
