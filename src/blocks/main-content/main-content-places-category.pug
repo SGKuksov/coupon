@@ -1,89 +1,122 @@
 mixin main-content-places-category()
-  .main-content
-    .main-content__inner
+  .tab-content
+    .main-content#byPlitka.tab-pane.fade.active(role="tabpanel" aria-labelledby="byPlitkaTab")
+      .main-content__inner
 
-      -
-        var title = "Санкт-Петербургский Дельфинарий и Аквапарк «Родео Драйв»"
-        var category = "Подробнее о месте"
+        -
+          var title = "Санкт-Петербургский Дельфинарий и Аквапарк «Родео Драйв»"
+          var category = "Подробнее о месте"
 
-      .card_places.card_places--long-title
-        .card_places__img-wrap
-          img.card_places__img(width="336" height="231" src="img/card__photo.jpg", alt=title)
+        .card_places.card_places--long-title
+          .card_places__img-wrap
+            img.card_places__img(width="336" height="231" src="img/card__photo.jpg", alt=title)
 
-        //- h2.card_places__title
-        a.card_places__link.card_places__link--long-title(href="#" title=title)=title
-        .coupon__address-meta
-          svg.coupon__address-meta-icon(width="14" height="14")
-            use(xlink:href="img/sprite-svg.svg#coupon__address-clock-icon")
-          span.coupon__address-meta-desc
-            | Пн-Вс, 08:00-22:00
-        .coupon__address-meta
-          svg.coupon__address-meta-icon(width="13" height="18")
-            use(xlink:href="img/sprite-svg.svg#coupon__address-map-icon")
-          span.coupon__address-meta-desc
-            | Коммунистическая ул., 1, Мытищи, Московск…
-        a.card_places__category.card_places__category--in-site(href="#" title=category)=category
+          //- h2.card_places__title
+          a.card_places__link.card_places__link--long-title(href="#" title=title)=title
+          .coupon__address-meta
+            svg.coupon__address-meta-icon(width="14" height="14")
+              use(xlink:href="img/sprite-svg.svg#coupon__address-clock-icon")
+            span.coupon__address-meta-desc
+              | Пн-Вс, 08:00-22:00
+          .coupon__address-meta
+            svg.coupon__address-meta-icon(width="13" height="18")
+              use(xlink:href="img/sprite-svg.svg#coupon__address-map-icon")
+            span.coupon__address-meta-desc
+              | Коммунистическая ул., 1, Мытищи, Московск…
+          a.card_places__category.card_places__category--in-site(href="#" title=category)=category
 
-      .card_places.card_places--long-title
-        .card_places__img-wrap
-          img.card_places__img(width="336" height="231" src="img/card__photo.jpg", alt=title)
+        .card_places.card_places--long-title
+          .card_places__img-wrap
+            img.card_places__img(width="336" height="231" src="img/card__photo.jpg", alt=title)
 
-        //- h2.card_places__title
-        a.card_places__link.card_places__link--long-title(href="#" title=title)=title
-        .coupon__address-meta
-          svg.coupon__address-meta-icon(width="14" height="14")
-            use(xlink:href="img/sprite-svg.svg#coupon__address-clock-icon")
-          span.coupon__address-meta-desc
-            | Пн-Вс, 08:00-22:00
-        .coupon__address-meta
-          svg.coupon__address-meta-icon(width="13" height="18")
-            use(xlink:href="img/sprite-svg.svg#coupon__address-map-icon")
-          span.coupon__address-meta-desc
-            | Коммунистическая ул., 1, Мытищи, Московск…
-        a.card_places__category.card_places__category--in-site(href="#" title=category)=category
+          //- h2.card_places__title
+          a.card_places__link.card_places__link--long-title(href="#" title=title)=title
+          .coupon__address-meta
+            svg.coupon__address-meta-icon(width="14" height="14")
+              use(xlink:href="img/sprite-svg.svg#coupon__address-clock-icon")
+            span.coupon__address-meta-desc
+              | Пн-Вс, 08:00-22:00
+          .coupon__address-meta
+            svg.coupon__address-meta-icon(width="13" height="18")
+              use(xlink:href="img/sprite-svg.svg#coupon__address-map-icon")
+            span.coupon__address-meta-desc
+              | Коммунистическая ул., 1, Мытищи, Московск…
+          a.card_places__category.card_places__category--in-site(href="#" title=category)=category
 
-      +advert("Реклама")
-      +subscribe()
+        +advert("Реклама")
+        +subscribe()
 
-      .card_places.card_places--long-title
-        .card_places__img-wrap
-          img.card_places__img(width="336" height="231" src="img/card__photo.jpg", alt=title)
+        .card_places.card_places--long-title
+          .card_places__img-wrap
+            img.card_places__img(width="336" height="231" src="img/card__photo.jpg", alt=title)
 
-        //- h2.card_places__title
-        a.card_places__link.card_places__link--long-title(href="#" title=title)=title
-        .coupon__address-meta
-          svg.coupon__address-meta-icon(width="14" height="14")
-            use(xlink:href="img/sprite-svg.svg#coupon__address-clock-icon")
-          span.coupon__address-meta-desc
-            | Пн-Вс, 08:00-22:00
-        .coupon__address-meta
-          svg.coupon__address-meta-icon(width="13" height="18")
-            use(xlink:href="img/sprite-svg.svg#coupon__address-map-icon")
-          span.coupon__address-meta-desc
-            | Коммунистическая ул., 1, Мытищи, Московск…
-        a.card_places__category.card_places__category--in-site(href="#" title=category)=category
+          //- h2.card_places__title
+          a.card_places__link.card_places__link--long-title(href="#" title=title)=title
+          .coupon__address-meta
+            svg.coupon__address-meta-icon(width="14" height="14")
+              use(xlink:href="img/sprite-svg.svg#coupon__address-clock-icon")
+            span.coupon__address-meta-desc
+              | Пн-Вс, 08:00-22:00
+          .coupon__address-meta
+            svg.coupon__address-meta-icon(width="13" height="18")
+              use(xlink:href="img/sprite-svg.svg#coupon__address-map-icon")
+            span.coupon__address-meta-desc
+              | Коммунистическая ул., 1, Мытищи, Московск…
+          a.card_places__category.card_places__category--in-site(href="#" title=category)=category
 
-      .card_places.card_places--long-title
-        .card_places__img-wrap
-          img.card_places__img(width="336" height="231" src="img/card__photo.jpg", alt=title)
+        .card_places.card_places--long-title
+          .card_places__img-wrap
+            img.card_places__img(width="336" height="231" src="img/card__photo.jpg", alt=title)
 
-        //- h2.card_places__title
-        a.card_places__link.card_places__link--long-title(href="#" title=title)=title
-        .coupon__address-meta
-          svg.coupon__address-meta-icon(width="14" height="14")
-            use(xlink:href="img/sprite-svg.svg#coupon__address-clock-icon")
-          span.coupon__address-meta-desc
-            | Пн-Вс, 08:00-22:00
-        .coupon__address-meta
-          svg.coupon__address-meta-icon(width="13" height="18")
-            use(xlink:href="img/sprite-svg.svg#coupon__address-map-icon")
-          span.coupon__address-meta-desc
-            | Коммунистическая ул., 1, Мытищи, Московск…
-        a.card_places__category.card_places__category--in-site(href="#" title=category)=category
+          //- h2.card_places__title
+          a.card_places__link.card_places__link--long-title(href="#" title=title)=title
+          .coupon__address-meta
+            svg.coupon__address-meta-icon(width="14" height="14")
+              use(xlink:href="img/sprite-svg.svg#coupon__address-clock-icon")
+            span.coupon__address-meta-desc
+              | Пн-Вс, 08:00-22:00
+          .coupon__address-meta
+            svg.coupon__address-meta-icon(width="13" height="18")
+              use(xlink:href="img/sprite-svg.svg#coupon__address-map-icon")
+            span.coupon__address-meta-desc
+              | Коммунистическая ул., 1, Мытищи, Московск…
+          a.card_places__category.card_places__category--in-site(href="#" title=category)=category
 
-    //- .main-content__btn-block
-      a.main-content__btn.btn(href="#") Показать еще...
+      //- .main-content__btn-block
+        a.main-content__btn.btn(href="#") Показать еще...
 
-    .main-content__pagination-block
-      .main-content__pagination
-        +pagination()
+      .main-content__pagination-block
+        .main-content__pagination
+          +pagination()
+
+    .main-content#onMap.tab-pane.fade(role="tabpanel" aria-labelledby="onMapTab")
+      .main-content__header
+        h2.main-content__header-title
+          | Все купоны Москвы на карте
+
+      .main-content__body.main-content__address-tab
+        iframe.main-content__address-map(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9747.689600920134!2d4.91255678933055!3d52.35369267652723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c60979f6a4ff25%3A0x517a3c162d50d486!2zVHJhbnN2YWFsYnV1cnQsINCQ0LzRgdGC0LXRgNC00LDQvA!5e0!3m2!1sru!2snl!4v1524023866674" allowfullscreen="")
+
+        .main-content__address-block
+          .main-content__address-img-wrap
+            img.main-content__address-img(src="http://via.placeholder.com/212x88" alt="img" width="212" height="88")
+          span.main-content__address-info
+          h2.main-content__address-title
+            | Итальянский ресторан Il Patio
+          a.btn.main-content__address-btn(href="#")
+            | Подробнее о месте
+          .main-content__address-meta
+            svg.main-content__address-meta-icon(width="14" height="14")
+              use(xlink:href="img/sprite-svg.svg#coupon__address-clock-icon")
+            span.main-content__address-meta-desc
+              | Пн-Вс, 08:00-22:00
+          .main-content__address-meta
+            svg.main-content__address-meta-icon(width="14" height="14")
+              use(xlink:href="img/sprite-svg.svg#coupon__address-phone-icon")
+            a.main-content__address-meta-desc(href="tel:+78121234567")
+              | +7 (812) 123-45-67
+          .main-content__address-meta
+            svg.main-content__address-meta-icon(width="13" height="18")
+              use(xlink:href="img/sprite-svg.svg#coupon__address-map-icon")
+            span.main-content__address-meta-desc
+              | пр. Культуры, 1, Москва

@@ -1,6 +1,6 @@
 mixin main-content-index()
   .tab-content
-    .main-content#byPlitka.tab-pane.fade.active(role="tabpanel" aria-labelledby="byPlitkaTab")
+    .main-content#byPlitka.tab-pane.fade(role="tabpanel" aria-labelledby="byPlitkaTab")
       .main-content__inner
 
         -
@@ -108,7 +108,7 @@ mixin main-content-index()
         .main-content__pagination
           +pagination()
 
-    .main-content#onMap.tab-pane.fade(role="tabpanel" aria-labelledby="onMapTab")
+    .main-content#onMap.tab-pane.fade.active(role="tabpanel" aria-labelledby="onMapTab")
       .main-content__header
         h2.main-content__header-title
           | Все купоны Москвы на карте
@@ -139,4 +139,3 @@ mixin main-content-index()
               use(xlink:href="img/sprite-svg.svg#coupon__address-map-icon")
             span.main-content__address-meta-desc
               | пр. Культуры, 1, Москва
-

@@ -1,108 +1,143 @@
 mixin main-content-site()
-  .main-content
-    .main-content__inner
+  .tab-content
+    .main-content#byPlitka.tab-pane.fade.active(role="tabpanel" aria-labelledby="byPlitkaTab")
+      .main-content__inner
 
-      -
-        var title1 = "Скидка дот 50% на первое посещение бассейна Скидка до 50% на первое посещение бассейна Скидка до 50%"
-        var title2 = "Скидка дот 50% на первое посещение бассейна Скидка до 50% на первое посещение бассейна Скидка до 50%"
-        var sale1 = "50%"
-        var sale2 = "30%"
-        var price1 = "400 руб."
-        var price2 = "Бесплатно!"
+        -
+          var title1 = "Скидка дот 50% на первое посещение бассейна Скидка до 50% на первое посещение бассейна Скидка до 50%"
+          var title2 = "Скидка дот 50% на первое посещение бассейна Скидка до 50% на первое посещение бассейна Скидка до 50%"
+          var sale1 = "50%"
+          var sale2 = "30%"
+          var price1 = "400 руб."
+          var price2 = "Бесплатно!"
 
-        var category1 = "Фитнес-цент-рыhплgюс"
-        var category2 = "Фитнес-цент-рыhплgюс"
-        var dealer1 = "Frendi"
-        var dealer2 = "Frendi"
-        var place1 = "Аквапарк «Родео Драйв» Коомета"
-        var place2 = "Аквапарк «Родео Драйв» Коомета"
+          var category1 = "Фитнес-цент-рыhплgюс"
+          var category2 = "Фитнес-цент-рыhплgюс"
+          var dealer1 = "Frendi"
+          var dealer2 = "Frendi"
+          var place1 = "Аквапарк «Родео Драйв» Коомета"
+          var place2 = "Аквапарк «Родео Драйв» Коомета"
 
-      .card.card--long-title
-        .card__img-wrap
-          img.card__img(width="336" height="231" src="img/card__photo.jpg", alt=title1)
+        .card.card--long-title
+          .card__img-wrap
+            img.card__img(width="336" height="231" src="img/card__photo.jpg", alt=title1)
 
-        span.card__sale до&nbsp;
-          span=sale1
-        span.card__price от&nbsp;
-          span=price1
+          span.card__sale до&nbsp;
+            span=sale1
+          span.card__price от&nbsp;
+            span=price1
 
-        //- h2.card__title
-        a.card__link.card__link--long-title(href="#" title=title1)=title1
+          //- h2.card__title
+          a.card__link.card__link--long-title(href="#" title=title1)=title1
 
-        .card__meta
-          a.card__category.card__category--in-site(href="#" title=category1)=category1
-          a.card__dealer.card__dealer--in-site(href="#" title=dealer1)
-            svg.card__dealer-link(width="14" height="14")
-              use(xlink:href="img/sprite-svg.svg#card__dealer-link")
-            span=dealer1
-          a.card__place.card__place--in-site(href="#" title=place1)=place1
+          .card__meta
+            a.card__category.card__category--in-site(href="#" title=category1)=category1
+            a.card__dealer.card__dealer--in-site(href="#" title=dealer1)
+              svg.card__dealer-link(width="14" height="14")
+                use(xlink:href="img/sprite-svg.svg#card__dealer-link")
+              span=dealer1
+            a.card__place.card__place--in-site(href="#" title=place1)=place1
 
-      .card.card--long-title
-        .card__img-wrap
-          img.card__img(width="336" height="231" src="img/card__photo.jpg", alt=title2)
+        .card.card--long-title
+          .card__img-wrap
+            img.card__img(width="336" height="231" src="img/card__photo.jpg", alt=title2)
 
-        span.card__sale до&nbsp;
-          span=sale2
-        span.card__price.card__price--green от&nbsp;
-          span=price2
+          span.card__sale до&nbsp;
+            span=sale2
+          span.card__price.card__price--green от&nbsp;
+            span=price2
 
-        //- h2.card__title
-        a.card__link.card__link--long-title(href="#" title=title2)=title2
+          //- h2.card__title
+          a.card__link.card__link--long-title(href="#" title=title2)=title2
 
-        .card__meta
-          a.card__category.card__category--in-site(href="#" title=category2)=category2
-          a.card__dealer.card__dealer--in-site(href="#" title=dealer2)
-            svg.card__dealer-link(width="14" height="14")
-              use(xlink:href="img/sprite-svg.svg#card__dealer-link")
-            span=dealer2
-          a.card__place.card__place--in-site(href="#" title=place2)=place2
+          .card__meta
+            a.card__category.card__category--in-site(href="#" title=category2)=category2
+            a.card__dealer.card__dealer--in-site(href="#" title=dealer2)
+              svg.card__dealer-link(width="14" height="14")
+                use(xlink:href="img/sprite-svg.svg#card__dealer-link")
+              span=dealer2
+            a.card__place.card__place--in-site(href="#" title=place2)=place2
 
-      +advert("Реклама")
-      +subscribe()
+        +advert("Реклама")
+        +subscribe()
 
-      .card.card--long-title
-        .card__img-wrap
-          img.card__img(width="336" height="231" src="img/card__photo.jpg", alt=title1)
+        .card.card--long-title
+          .card__img-wrap
+            img.card__img(width="336" height="231" src="img/card__photo.jpg", alt=title1)
 
-        span.card__sale до&nbsp;
-          span=sale1
-        span.card__price от&nbsp;
-          span=price1
+          span.card__sale до&nbsp;
+            span=sale1
+          span.card__price от&nbsp;
+            span=price1
 
-        //- h2.card__title
-        a.card__link.card__link--long-title(href="#" title=title1)=title1
+          //- h2.card__title
+          a.card__link.card__link--long-title(href="#" title=title1)=title1
 
-        .card__meta
-          a.card__category.card__category--in-site(href="#" title=category1)=category1
-          a.card__dealer.card__dealer--in-site(href="#" title=dealer1)
-            svg.card__dealer-link(width="14" height="14")
-              use(xlink:href="img/sprite-svg.svg#card__dealer-link")
-            span=dealer1
-          a.card__place.card__place--in-site(href="#" title=place1)=place1
+          .card__meta
+            a.card__category.card__category--in-site(href="#" title=category1)=category1
+            a.card__dealer.card__dealer--in-site(href="#" title=dealer1)
+              svg.card__dealer-link(width="14" height="14")
+                use(xlink:href="img/sprite-svg.svg#card__dealer-link")
+              span=dealer1
+            a.card__place.card__place--in-site(href="#" title=place1)=place1
 
-      .card.card--long-title
-        .card__img-wrap
-          img.card__img(width="336" height="231" src="img/card__photo.jpg", alt=title2)
+        .card.card--long-title
+          .card__img-wrap
+            img.card__img(width="336" height="231" src="img/card__photo.jpg", alt=title2)
 
-        span.card__sale до&nbsp;
-          span=sale2
-        span.card__price.card__price--green от&nbsp;
-          span=price2
+          span.card__sale до&nbsp;
+            span=sale2
+          span.card__price.card__price--green от&nbsp;
+            span=price2
 
-        //- h2.card__title
-        a.card__link.card__link--long-title(href="#" title=title2)=title2
+          //- h2.card__title
+          a.card__link.card__link--long-title(href="#" title=title2)=title2
 
-        .card__meta
-          a.card__category.card__category--in-site(href="#" title=category2)=category2
-          a.card__dealer.card__dealer--in-site(href="#" title=dealer2)
-            svg.card__dealer-link(width="14" height="14")
-              use(xlink:href="img/sprite-svg.svg#card__dealer-link")
-            span=dealer2
-          a.card__place.card__place--in-site(href="#" title=place2)=place2
+          .card__meta
+            a.card__category.card__category--in-site(href="#" title=category2)=category2
+            a.card__dealer.card__dealer--in-site(href="#" title=dealer2)
+              svg.card__dealer-link(width="14" height="14")
+                use(xlink:href="img/sprite-svg.svg#card__dealer-link")
+              span=dealer2
+            a.card__place.card__place--in-site(href="#" title=place2)=place2
 
-    //- .main-content__btn-block
-      a.main-content__btn.btn(href="#") Показать еще...
+      //- .main-content__btn-block
+        a.main-content__btn.btn(href="#") Показать еще...
 
-    .main-content__pagination-block
-      .main-content__pagination
-        +pagination()
+      .main-content__pagination-block
+        .main-content__pagination
+          +pagination()
+
+    .main-content#onMap.tab-pane.fade(role="tabpanel" aria-labelledby="onMapTab")
+      .main-content__header
+        h2.main-content__header-title
+          | Все купоны Москвы на карте
+
+      .main-content__body.main-content__address-tab
+        iframe.main-content__address-map(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9747.689600920134!2d4.91255678933055!3d52.35369267652723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c60979f6a4ff25%3A0x517a3c162d50d486!2zVHJhbnN2YWFsYnV1cnQsINCQ0LzRgdGC0LXRgNC00LDQvA!5e0!3m2!1sru!2snl!4v1524023866674" allowfullscreen="")
+
+        .main-content__address-block
+          .main-content__address-img-wrap
+            img.main-content__address-img(src="http://via.placeholder.com/212x88" alt="img" width="212" height="88")
+          span.main-content__address-info
+          h2.main-content__address-title
+            | Итальянский ресторан Il Patio
+          a.btn.main-content__address-btn(href="#")
+            | Подробнее о месте
+          .main-content__address-meta
+            svg.main-content__address-meta-icon(width="14" height="14")
+              use(xlink:href="img/sprite-svg.svg#coupon__address-clock-icon")
+            span.main-content__address-meta-desc
+              | Пн-Вс, 08:00-22:00
+          .main-content__address-meta
+            svg.main-content__address-meta-icon(width="14" height="14")
+              use(xlink:href="img/sprite-svg.svg#coupon__address-phone-icon")
+            a.main-content__address-meta-desc(href="tel:+78121234567")
+              | +7 (812) 123-45-67
+          .main-content__address-meta
+            svg.main-content__address-meta-icon(width="13" height="18")
+              use(xlink:href="img/sprite-svg.svg#coupon__address-map-icon")
+            span.main-content__address-meta-desc
+              | пр. Культуры, 1, Москва
+
+
