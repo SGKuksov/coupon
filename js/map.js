@@ -4,31 +4,58 @@
 $(document).ready(function(){
   ymaps.ready(init);
 
-  function init () {
-      var myMap = new ymaps.Map('map', {
-              center: [55.76, 37.64],
-              zoom: 10
-          }, {
-              searchControlProvider: 'yandex#search'
-          }),
-          objectManager = new ymaps.ObjectManager({
-              // Чтобы метки начали кластеризоваться, выставляем опцию.
-              clusterize: true,
-              // ObjectManager принимает те же опции, что и кластеризатор.
-              gridSize: 32,
-              clusterDisableClickZoom: true
-          });
+var placemarks = [
+    {
+        latitude: 59.97,
+        longitude: 30.31,
+        hintContent: '<div class="map__hint">ул. Литераторов, д. 19</div>',
+        balloonContent: [
+            '<div class="map__balloon">',
+            '<img class="map__burger-img" src="img/burger.png" alt="Бургер"/>',
+            'Самые вкусные бургеры у нас! Заходите по адресу: ул. Литераторов, д. 19',
+            '</div>'
+        ]
+    },
+    {
+        latitude: 59.94,
+        longitude: 30.25,
+        hintContent: '<div class="map__hint">Малый проспект В О, д 64</div>',
+        balloonContent: [
+            '<div class="map__balloon">',
+            '<img class="map__burger-img" src="img/burger.png" alt="Бургер"/>',
+            'Самые вкусные бургеры у нас! Заходите по адресу: Малый проспект В О, д 64',
+            '</div>'
+        ]
+    },
+    {
+        latitude: 59.93,
+        longitude: 30.34,
+        hintContent: '<div class="map__hint">наб. реки Фонтанки, д. 56</div>',
+        balloonContent: [
+            '<div class="map__balloon">',
+            '<img class="map__burger-img" src="img/burger.png" alt="Бургер"/>',
+            'Самые вкусные бургеры у нас! Заходите по адресу: наб. реки Фонтанки, д. 56',
+            '</div>'
+        ]
+    }
+],
+    geoObjects= [];
 
-      // Чтобы задать опции одиночным объектам и кластерам,
-      // обратимся к дочерним коллекциям ObjectManager.
-      objectManager.objects.options.set('preset', 'islands#greenDotIcon');
-      objectManager.clusters.options.set('preset', 'islands#greenClusterIcons');
-      myMap.geoObjects.add(objectManager);
+function init() {
+    var map = new ymaps.Map('map', {
+        center: [59.94, 30.32],
+        zoom: 12,
+        controls: ['zoomControl'],
+        behaviors: ['drag']
+    });
 
-      $.ajax({
-          url: "data.json"
-      }).done(function(data) {
-          objectManager.add(data);
-      });
-  }
+    for (var i = 0; i < placemarks.length; i++) {
+            geoObjects[i] = new ymaps.Placemark([placemarks[i].latitude, placemarks[i].longitude],
+            {
+                hintContent: placemarks[i].hintContent,
+                balloonContent: placemarks[i].balloonContent.join('')
+            });
+    }
+}  
+
 });
