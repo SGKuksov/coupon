@@ -15,6 +15,7 @@ node_modules/
 *.sublime-*
 *.rar
 *.zip
+*.7z
 .idea
 .publish
 ex_files
