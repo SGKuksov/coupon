@@ -1,85 +1,5 @@
-.map {
-  position: absolute;
-  top: 100px;
-  right: 100px;
-  width: 79px;
-  height: 79px;
-  display: inline-block;
-  background-color: #fff;
-  // border: 2px solid #FF1E1E;
-  border-radius: 50%;
-
-  background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 41%, rgba(255,0,0,1) 41%,rgba(255,0,0,1) 48%,rgba(255,0,0,0) 48%,rgba(255,0,0,0) 100%);
-  /* FF3.6-15 */
-  background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 41%, rgba(255,0,0,1) 41%,rgba(255,0,0,1) 48%,rgba(255,0,0,0) 48%,rgba(255,0,0,0) 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 41%, rgba(255,0,0,1) 41%,rgba(255,0,0,1) 48%,rgba(255,0,0,0) 48%,rgba(255,0,0,0) 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-
-  &:hover {
-    width: 79px;
-    height: 79px;
-
-    background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 41%, rgba(255,0,0,1) 41%,rgba(255,0,0,1) 48%,rgba(255,0,0,0.2) 48%,rgba(255,0,0,0.2) 100%);
-    /* FF3.6-15 */
-    background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 41%, rgba(255,0,0,1) 41%,rgba(255,0,0,1) 48%,rgba(255,0,0,0.2) 48%,rgba(255,0,0,0.2) 100%);
-    /* Chrome10-25,Safari5.1-6 */
-    background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 41%, rgba(255,0,0,1) 41%,rgba(255,0,0,1) 48%,rgba(255,0,0,0.2) 48%,rgba(255,0,0,0.2) 100%);
-    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-
-    .map__count {
-      font-weight: 700;
-      color: #FF1E1E;
-    }
-  }
-
-  &:active {
-    background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 41%, rgba(255,0,0,1) 41%,rgba(255,0,0,1) 48%,rgba(255,0,0,0.2) 48%,rgba(255,0,0,0.2) 100%);
-    /* FF3.6-15 */
-    background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 41%, rgba(255,0,0,1) 41%,rgba(255,0,0,1) 48%,rgba(255,0,0,0.2) 48%,rgba(255,0,0,0.2) 100%);
-    /* Chrome10-25,Safari5.1-6 */
-    background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 41%, rgba(255,0,0,1) 41%,rgba(255,0,0,1) 48%,rgba(255,0,0,0.2) 48%,rgba(255,0,0,0.2) 100%);
-    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-
-    .map__count {
-      font-weight: 700;
-      color: #FF1E1E;
-    }
-  }
-
-  &.active {
-    background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 41%, rgba(255,0,0,1) 41%,rgba(255,0,0,1) 48%,rgba(255,0,0,0.2) 48%,rgba(255,0,0,0.2) 100%);
-    /* FF3.6-15 */
-    background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 41%, rgba(255,0,0,1) 41%,rgba(255,0,0,1) 48%,rgba(255,0,0,0.2) 48%,rgba(255,0,0,0.2) 100%);
-    /* Chrome10-25,Safari5.1-6 */
-    background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 41%, rgba(255,0,0,1) 41%,rgba(255,0,0,1) 48%,rgba(255,0,0,0.2) 48%,rgba(255,0,0,0.2) 100%);
-    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-
-    .map__count {
-      font-weight: 700;
-      color: #FF1E1E;
-    }
-  }
-
-  &__count {
-    font-family: Arial;
-    font-size: 18px;
-    font-weight: normal;
-    color: #969696;
-    line-height: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%);
-  }
-}
-
-
-.map1 {
-  position: absolute;
-  z-index: 1;
-  top: 200px;
-  right: 100px;
+.place-mark {
+  position: relative;
   width: 45px;
   height: 45px;
   display: inline-block;
@@ -107,15 +27,24 @@
       box-sizing: content-box;
     }
 
-    .map1__count {
+    .place-mark__count {
       font-weight: 700;
       color: #FF1E1E;
     }
   }
 
+  &__sale-icon {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    fill: #969696;
+  }
+
   &:active {
 
-    .map1__count {
+    .place-mark__count {
       font-weight: 700;
       color: #FF1E1E;
     }
@@ -123,7 +52,7 @@
 
   &.active {
 
-    .map1__count {
+    .place-mark__count {
       font-weight: 700;
       color: #FF1E1E;
     }
