@@ -50,6 +50,7 @@
   "dependencies": {
     "bootstrap": "^4.0.0",
     "jquery": "^3.3.1",
+    "jquery-bar-rating": "^1.2.2",
     "jquery-migrate": "^3.0.1",
     "jquery-ui": "^1.12.1",
     "object-fit-images": "^3.2.3",

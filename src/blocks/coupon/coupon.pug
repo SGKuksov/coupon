@@ -89,15 +89,13 @@ mixin coupon(admin, is_space)
               .coupon__get-rating
                 h3.coupon__get-rating-title
                   | Оцените купон
-                .rating
-                  +rating()
+                +rating()
 
             if (is_space)
               .coupon__get-rating
                 h3.coupon__get-rating-title
                   | Оцените место
-                .rating
-                  +rating()
+                +rating()
 
             .coupon__contacts
               h3.coupon__contacts-title
@@ -106,7 +104,7 @@ mixin coupon(admin, is_space)
               if (!is_space)
                 a.coupon__contacts-place(href="#", title="Аквапарк «Родео Драйв»")
                   | Аквапарк «Родео Драйв»
-                .coupon__contacts-rating.rating
+                .coupon__contacts-rating
                   +rating()
               span.coupon__contacts-phone-title
                 | Телефон:
@@ -138,7 +136,7 @@ mixin coupon(admin, is_space)
                     | Константин Константинопольский
                   time.coupon-comment__date(datetime="2017-08-02 12:24")
                     | 2 августа 2017 12:24
-                .coupon-comment__rating.rating
+                .coupon-comment__rating
                   +rating()
                 p.coupon-comment__text
                   | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aspernatur quo vero est dolore, optio recusandae, vel quisquam beatae illo distinctio tempora blanditiis ad quos molestias. In porro dolorum veritatis!
@@ -151,19 +149,19 @@ mixin coupon(admin, is_space)
                     | Валентина Константинопольский
                   time.coupon-comment__date(datetime="2017-08-02 12:24")
                     | 2 августа 2017 12:24
-                .coupon-comment__rating.rating
+                .coupon-comment__rating
                   +rating()
                 p.coupon-comment__text
                   | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aspernatur quo vero est dolore, optio recusandae, vel quisquam beatae illo distinctio tempora blanditiis ad quos molestias. In porro dolorum veritatis!
           .coupon__rating-block
             span.coupon__rating-block-title
               | Оценки пользователей
-            .coupon__rating.rating
+            .coupon__rating
               +rating()
               span.coupon__rating-count
                 | 80%
 
-            .coupon__rating.rating
+            .coupon__rating
               +rating()
               span.coupon__rating-count
                 | 20%
@@ -175,7 +173,7 @@ mixin coupon(admin, is_space)
             .coupon__footer-rating-block
               span.coupon__footer-rating-title
                 | Ваша оценка
-              .coupon__footer-rating.rating
+              .coupon__footer-rating
                 +rating()
             form.coupon__footer-form(action="")
               textarea.coupon__footer-textarea(name="msg")
@@ -184,7 +182,7 @@ mixin coupon(admin, is_space)
 
       #address.tab-pane.fade(role="tabpanel" aria-labelledby="addressTab")
         .coupon__body.coupon__address-tab
-          iframe.coupon__address-map(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9747.689600920134!2d4.91255678933055!3d52.35369267652723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c60979f6a4ff25%3A0x517a3c162d50d486!2zVHJhbnN2YWFsYnV1cnQsINCQ0LzRgdGC0LXRgNC00LDQvA!5e0!3m2!1sru!2snl!4v1524023866674" allowfullscreen="")
+          #map.coupon__address-map
 
           .coupon__address-block
             .coupon__address-img-wrap
