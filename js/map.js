@@ -17,7 +17,7 @@ $(document).ready(function(){
             zoomControl = new ymaps.control.ZoomControl({
                 options: {
                     position: {
-                        bottom: 108,
+                        bottom: 55,
                         left: 'auto',
                         right: 20,
                         top: 'auto'
