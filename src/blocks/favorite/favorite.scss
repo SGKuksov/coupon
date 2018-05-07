@@ -1,0 +1,33 @@
+.favorite {
+
+  &:active {
+    border: 1px solid #dedede;
+    color: #ff0c0c;
+
+    svg {
+      fill: #ff0101;
+      stroke: #ffffff;
+    }
+  }
+
+  &--checked {
+    border: 1px solid #dedede;
+    color: #ff0c0c;
+
+    svg {
+      fill: #ff0101;
+      stroke: #ffffff;
+    }
+
+    &:hover {
+      border: 1px solid #969696;
+      color: #ff0c0c;
+
+      svg {
+        fill: #ff0101;
+        stroke: #ffffff;
+      }
+    }
+  }
+}
+

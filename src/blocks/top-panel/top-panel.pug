@@ -21,7 +21,7 @@ mixin top-panel(subtitle, title, admin, rss, dealer_logo, is_list_of_places, is_
               +label('Подарки', admin)
               +label('Барбершопы', admin)
 
-            a.top-panel__rss(href="#", title="Подписаться на обновления")
+            a.top-panel__rss.rss(href="#", title="Подписаться на обновления")
               svg.top-panel__btn-rss(width="14" height="14")
                 use(xlink:href="img/sprite-svg.svg#top-panel__rss")
               span

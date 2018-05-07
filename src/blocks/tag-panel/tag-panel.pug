@@ -23,21 +23,21 @@ mixin tag-panel(title, subtitle, admin, is_place)
              | 95
             span.tag-panel__sold-title
              | купонов уже получено
-          a.tag-panel__rss(href="#", title="Добавить в избранное")
-            svg.tag-panel__btn-rss(width="16" height="14")
+          a.tag-panel__favorite.favorite(href="#", title="Добавить в избранное")
+            svg.tag-panel__btn-favorite(width="16" height="14")
               use(xlink:href="img/sprite-svg.svg#tag-panel__favorite-icon")
             span
              | Добавить в избранное
 
       if (is_place)
         .tag-panel__footer
-          a.tag-panel__footer-rss(href="#", title="Подписаться на обновления")
+          a.tag-panel__footer-rss.rss(href="#", title="Подписаться на обновления")
             svg.tag-panel__btn-rss(width="14" height="14")
               use(xlink:href="img/sprite-svg.svg#top-panel__rss")
             span
              | Подписаться на обновления
-          a.tag-panel__rss(href="#", title="Добавить в избранное")
-            svg.tag-panel__btn-rss(width="16" height="14")
+          a.tag-panel__favorite.favorite(href="#", title="Добавить в избранное")
+            svg.tag-panel__btn-favorite(width="16" height="14")
               use(xlink:href="img/sprite-svg.svg#tag-panel__favorite-icon")
             span
              | Добавить в избранное

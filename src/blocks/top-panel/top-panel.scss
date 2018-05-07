@@ -212,14 +212,11 @@
     padding: 9px 9px 10px 11px;
     align-items: center;
 
-    svg {
-      fill: #b5b5b5;
-    }
-
     @media (min-width: $screen-md) {
       line-height: 22px;
       height: 22px;
       font-size: 12px;
+      min-width: 224px;
     }
 
     @media (min-width: $screen-lg) {
@@ -227,6 +224,11 @@
       line-height: 30px;
       font-size: 14px;
       margin-top: 10px;
+      min-width: 248px;
+    }
+
+    svg {
+      fill: #b5b5b5;
     }
 
     span {
@@ -236,7 +238,8 @@
       line-height: 1;
 
       @media (min-width: $screen-md) {
-        display: inline-flex;
+        display: inline;
+        width: 100%;
       }
     }
 
@@ -247,33 +250,6 @@
 
       svg {
         fill: #b5b5b5;
-      }
-    }
-
-    &:active {
-      border: 1px solid #dedede;
-      color: #5fb600;
-
-      svg {
-        fill: #5fb600;
-      }
-    }
-
-    &--active {
-      border: 1px solid #dedede;
-      color: #5fb600;
-
-      svg {
-        fill: #5fb600;
-      }
-
-      &:hover {
-        border: 1px solid #969696;
-        color: #5fb600;
-
-        svg {
-          fill: #5fb600;
-        }
       }
     }
   }
@@ -292,6 +268,7 @@
     @media (min-width: $screen-lg) {
       width: 16px;
       height: 15px;
+      margin-left: 0;
     }
   }
 

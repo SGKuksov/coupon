@@ -1,0 +1,34 @@
+.rss {
+
+  &:active {
+    border: 1px solid #dedede;
+    color: #5fb600;
+
+    svg {
+      fill: #5fb600;
+    }
+  }
+
+  &--checked {
+    border: 1px solid #dedede;
+    color: #5fb600;
+
+    span {
+      text-align: center;
+    }
+
+    svg {
+      fill: #5fb600;
+    }
+
+    &:hover {
+      border: 1px solid #969696;
+      color: #5fb600;
+
+      svg {
+        fill: #5fb600;
+      }
+    }
+  }
+}
+

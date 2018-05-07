@@ -164,7 +164,8 @@
     }
   }
 
-  &__rss {
+  &__rss,
+  &__favorite {
     border-radius: 4px;
     border: 1px solid #dedede;
     color: #787878;
@@ -173,23 +174,25 @@
     line-height: 34;
     height: 34px;
     font-size: 14px;
-    margin-left: 10px;
     white-space: nowrap;
     display: inline-flex;
     align-items: center;
-
-    svg {
-      fill: #b5b5b5;
-    }
 
     @media (min-width: $screen-md) {
       line-height: 34px;
       height: 34px;
       padding-left: 20px;
       padding-right: 17px;
+      min-width: 224px;
     }
 
-    @media (min-width: $screen-lg) {}
+    @media (min-width: $screen-lg) {
+      min-width: 248px;
+    }
+
+    svg {
+      fill: #b5b5b5;
+    }
 
     span {
       display: none;
@@ -197,44 +200,35 @@
       line-height: 1;
 
       @media (min-width: $screen-md) {
-        display: inline-flex;
+        display: inline;
+        width: 100%;
       }
     }
 
     &:hover {
       color: #787878;
-      border: 1px solid #969696;
+      border: 1px solid #7c7c7c;
       background-color: #fff;
 
       svg {
         fill: #b5b5b5;
       }
     }
+  }
 
-    &:active {
-      border: 1px solid #dedede;
-      color: #5fb600;
+  &__favorite {
+    margin-left: 10px;
 
-      svg {
-        fill: #5fb600;
-      }
+    svg {
+      fill: #ffffff;
+      stroke: #b5b5b5;
     }
 
-    &--active {
-      border: 1px solid #dedede;
-      color: #5fb600;
+    &:hover {
 
       svg {
-        fill: #5fb600;
-      }
-
-      &:hover {
-        border: 1px solid #969696;
-        color: #5fb600;
-
-        svg {
-          fill: #5fb600;
-        }
+        fill: #ffffff;
+        stroke: #b5b5b5;
       }
     }
   }
@@ -248,8 +242,6 @@
     line-height: 34;
     height: 34px;
     font-size: 14px;
-    margin-left: 10px;
-
     display: inline-flex;
     align-items: center;
 
@@ -262,17 +254,21 @@
       height: 34px;
       padding-left: 8px;
       padding-right: 8px;
+      min-width: 224px;
     }
 
-    @media (min-width: $screen-lg) {}
+    @media (min-width: $screen-lg) {
+      min-width: 248px;
+    }
 
     span {
       display: none;
       padding-left: 9px;
       line-height: 1;
 
-      @media (min-width: $screen-lg) {
-        display: inline-flex;
+      @media (min-width: $screen-md) {
+        display: inline;
+        width: 100%;
       }
     }
 
@@ -285,36 +281,10 @@
         fill: #b5b5b5;
       }
     }
-
-    &:active {
-      border: 1px solid #dedede;
-      color: #5fb600;
-
-      svg {
-        fill: #5fb600;
-      }
-    }
-
-    &--active {
-      border: 1px solid #dedede;
-      color: #5fb600;
-
-      svg {
-        fill: #5fb600;
-      }
-
-      &:hover {
-        border: 1px solid #969696;
-        color: #5fb600;
-
-        svg {
-          fill: #5fb600;
-        }
-      }
-    }
   }
 
-  & &__btn-rss {
+  & &__btn-rss,
+  & &__btn-favorite {
     width: 16px;
     height: 15px;
   }
