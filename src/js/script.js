@@ -1,35 +1,59 @@
 svg4everybody(); // иницализация полифила для IE
 
 $(document).ready(function(){
-  var doc_w = $(document).width();
 
-  var selectCityModal = [
-      '<div class="modal fade modals" id="selectCityModal" tabindex="-1" role="dialog" aria-hidden="true">',
-      '<div class="modal-dialog modal-dialog-centered modals__dialog modals__dialog--md">',
-      '<div class="modal-content modals__content">',
+  // var selectCityModal = [
+  //     '<div class="modal fade modals" id="selectCityModal" tabindex="-1" role="dialog" aria-hidden="true">',
+  //     '<div class="modal-dialog modal-dialog-centered modals__dialog modals__dialog--md">',
+  //     '<div class="modal-content modals__content">',
 
-      '<div class="modal-header modals__header">',
-        '<h5 class="modal-title modals__title">Выбран ваш город ?</h5>',
-        '<a class="close modals__close" href="#" data-dismiss="modal" aria-label="Close">',
-          '<svg class="modals__close-icon" width="14" height="14"><use xlink:href="img/sprite-svg.svg#modals__close"></use></svg>',
-        '</a>',
-      '</div>',
+  //     '<div class="modal-header modals__header">',
+  //       '<h5 class="modal-title modals__title">Выбран ваш город ?</h5>',
+  //       '<a class="close modals__close" href="#" data-dismiss="modal" aria-label="Close">',
+  //         '<svg class="modals__close-icon" width="14" height="14"><use xlink:href="img/sprite-svg.svg#modals__close"></use></svg>',
+  //       '</a>',
+  //     '</div>',
 
-      '<div class="modal-body modals__body">',
-        '<div class="modals__location">',
-          '<svg class="modals__location-icon" width="11" height="16"><use xlink:href="img/sprite-svg.svg#page-header__location"></use></svg>',
-          '<span class="modals__location-info">Город</span>',
-          '<a class="modals__location-city callModalLocation" href="#">Москва</a>',
-        '</div>',
-        '<div class="modals__btn-block">',
-          '<button class="modals__btn" data-dismiss="modal" aria-label="Close">Да</button>',
-          '<button class="modals__btn modals__btn--gray" id="modalsBtnCancel">Нет</button>',
-        '</div>',
-      '</div>',
+  //     '<div class="modal-body modals__body">',
+  //       '<div class="modals__location">',
+  //         '<svg class="modals__location-icon" width="11" height="16"><use xlink:href="img/sprite-svg.svg#page-header__location"></use></svg>',
+  //         '<span class="modals__location-info">Город</span>',
+  //         '<a class="modals__location-city callModalLocation" href="#">Москва</a>',
+  //       '</div>',
+  //       '<div class="modals__btn-block">',
+  //         '<button class="modals__btn" data-dismiss="modal" aria-label="Close">Да</button>',
+  //         '<button class="modals__btn modals__btn--gray" id="modalsBtnCancel">Нет</button>',
+  //       '</div>',
+  //     '</div>',
 
-      '</div>',
-      '</div>',
-      '</div>'
+  //     '</div>',
+  //     '</div>',
+  //     '</div>'
+  //   ].join('');
+  //
+    var selectCityModal = [
+        '<div class="modal-select">',
+
+          '<div class="modal-select__header">',
+            '<h5 class="modal-select__title">Выбран ваш город ?</h5>',
+            '<a class="modal-select__close" href="#" data-dismiss="modal" aria-label="Close">',
+              '<svg class="close-icon" width="14" height="14"><use xlink:href="img/sprite-svg.svg#modals__close"></use></svg>',
+            '</a>',
+          '</div>',
+
+          '<div class="modal-select__body">',
+            '<div class="modal-select__location">',
+              '<svg class="modal-select__location-icon" width="11" height="16"><use xlink:href="img/sprite-svg.svg#page-header__location"></use></svg>',
+              '<span class="modal-select__location-info">Город</span>',
+              '<a class="modal-select__location-city callModalLocation" href="#">Москва</a>',
+            '</div>',
+            '<div class="modal-select__btn-block">',
+              '<button class="modal-select__btn btn" data-dismiss="modal" aria-label="Close">Да</button>',
+              '<button class="modal-select__btn btn btn--gray" id="modalsBtnCancel">Нет</button>',
+            '</div>',
+          '</div>',
+
+        '</div>'
     ].join('');
 
   var ratingModal = [
@@ -287,35 +311,6 @@ $(document).ready(function(){
   $('#pageHeaderSearch').autoSearch();
   $('.modal-location__input').autoSearch();
 
-  //вызов большого модального окна при клике на город
-  $("#modalsBtnCancel").click(function() {
-    $("#selectCityModal").modal('hide');
-    $("#modalLocation").modal('show');
-  });
-
-  if (doc_w >= 1024 ) {
-    // вызов малого модального при открытии страницы
-    // setTimeout($("#selectCityModal").modal('show'), 10000);
-  }
-
-  //вызов большого модального окна выбора города при клике на "НЕТ"
-  $(".callModalLocation").click(function() {
-    $("#modalLocation").modal('show');
-  });
-
-  // #callAutorizModal
-  $("#callAutorizModal").click(function() {
-    $(".modals-panel__warnAutorModal").modal('hide');
-    $("#autorizModal").modal('show');
-  });
-
-  // #callRegisterModal
-  $("#callRegisterModal").click(function() {
-    $(".modals-panel__warnAutorModal").modal('hide');
-    registerModal.appendTo("body");
-    $(".modals-panel__registerModal").modal('show');
-  });
-
   // скрытие блока подписки
   $(".subscribe__close").click(function() {
     $(this).parent().hide();
@@ -323,7 +318,6 @@ $(document).ready(function(){
 
   // rss
   $(".rss").click(function() {
-
     var subscribedText = "Вы подписаны";
     var subscribeText = "Подписаться на обновления";
 
@@ -338,7 +332,6 @@ $(document).ready(function(){
 
   // favorite
   $(".favorite").click(function() {
-
     var favoritedText = "Добавлено в избранное";
     var favoriteText = "Добавить в избранное";
 
@@ -351,9 +344,66 @@ $(document).ready(function(){
     }
   });
 
+  // вызов малого модального при открытии страницы
+  setTimeout( [
+    $(selectCityModal).appendTo("body")
+  ], 10000);
+
+
+  // скрытие modal-select
+  $(".modal-select__close").click(function() {
+    $(".modal-select").hide();
+  });
+  $(".modal-select__btn").click(function() {
+    $(".modal-select").hide();
+  });
+
+
+  //вызов большого модального окна при клике на "Нет"
+  $("#modalsBtnCancel").click(function() {
+    var doc_w = $(window).width();
+
+    if (doc_w > 768 ) {
+      $("#selectCityModal").modal('hide');
+      $("#modalLocation").modal('show');
+    }
+  });
+
+  //вызов большого модального окна выбора города при клике на городе
+  $(".callModalLocation").click(function() {
+  //   var doc_w = $(window).width();
+
+  //   if (doc_w > 768 ) {
+      $("#modalLocation").modal('show');
+  //     $("#modalLocation").removeClass('pushy pushy-left').addClass("modal fade").children().removeClass('pushy-content');
+  //   } else {
+
+  //     // боковое меню выбора города
+  //     $("#modalLocation").addClass('pushy pushy-left').removeClass("modal fade").children().addClass('pushy-content');
+  //     $("body").removeClass('pushy-open-left');
+  //     $("aside").hide();
+  //     $("#modalLocation").show();
+  //     $("body").addClass('pushy-open-left');
+  //   }
+  });
+
+  // #callAutorizModal
+  $("#callAutorizModal").click(function() {
+    $(".modals-panel__warnAutorModal").modal('hide');
+    $("#autorizModal").modal('show');
+  });
+
+  // #callRegisterModal
+  $("#callRegisterModal").click(function() {
+    $(".modals-panel__warnAutorModal").modal('hide');
+    $(registerModal).appendTo("body");
+    $(".modals-panel__registerModal").modal('show');
+  });
+
   $(".page-header__search-icon").click(function() {
     // показ строки поиска
-    doc_w = $(document).width();
+    var doc_w = $(window).width();
+
     if (doc_w <= 768 ) {
       $("form.page-header__search").addClass("page-header__search--show").parent().parent().css("padding", 0);
       $(".page-header__input").attr({"placeholder": "Поиск", "autofocus":""})
@@ -370,8 +420,8 @@ $(document).ready(function(){
   $(document).mouseup(function (e){
     var pageHeaderSearch = $(".page-header__search");
     var pageHeaderCancel = $(".page-header__cancel");
+    var doc_w = $(window).width();
 
-    doc_w = $(document).width();
     if (doc_w <= 768 ) {
 
       if ((!pageHeaderSearch.is(e.target) && pageHeaderSearch.has(e.target).length === 0) || (pageHeaderCancel.is(e.target))) {
@@ -390,7 +440,8 @@ $(document).ready(function(){
   });
 
   $(".page-header__cancel--show").click(function() {
-    doc_w = $(document).width();
+    var doc_w = $(window).width();
+
     if (doc_w <= 768) {
       $(".overlay").removeClass("site-overlay");
       $("form.page-header__search").removeClass("page-header__search--show").parent().parent().css("padding", "8px");
@@ -436,8 +487,8 @@ $(document).ready(function(){
 
   // modals
   $(".modals-panel__selectCityModal").click(function() {
-    $(selectCityModal).appendTo("body");
-    $("#selectCityModal").modal("show");
+    // $(selectCityModal).appendTo("body");
+    $(".modal-select").show();
   });
 
   $(".modals-panel__ratingModal").click(function() {

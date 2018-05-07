@@ -27,7 +27,8 @@ mixin page-header(name)
         button.page-header__cancel
           | Отмена
 
-      +main-nav()
+      .page-header__nav
+        +main-nav()
 
       .page-header__socials.socials
         +socials()

@@ -1,5 +1,6 @@
 .modal-location {
   z-index: 2000;
+  // z-index: 900;
 
   .modal-dialog {
     max-width: 768px;
@@ -76,14 +77,13 @@
   }
 
   &__close {
-    margin: 0 !important;
-    padding: 0 !important;
-    display: inline-block;
+    display: none;
     position: absolute;
-    right: 20px;
     top: 20px;
+    right: 20px;
 
     @media (min-width: $screen-md) {
+      display: inline-block;
       width: 27px;
       height: 27px;
       min-height: 0;
