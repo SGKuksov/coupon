@@ -257,13 +257,32 @@ $(document).ready(function(){
   });
 
   // rss
-  $(".top-panel__rss").click(function() {
-    var rss = $(this);
+  $(".rss").click(function() {
 
-    if ( rss.hasClass("top-panel__rss--active") ) {
-      rss.removeClass("top-panel__rss--active");
+    var subscribedText = "Вы подписаны";
+    var subscribeText = "Подписаться на обновления";
+
+    $(this).toggleClass("rss--checked");
+
+    if ( $(this).hasClass("rss--checked") ) {
+      $(this).find("span").html(subscribedText)
     } else {
-      rss.addClass("top-panel__rss--active");
+      $(this).find("span").html(subscribeText)
+    }
+  });
+
+  // favorite
+  $(".favorite").click(function() {
+
+    var favoritedText = "Добавлено в избранное";
+    var favoriteText = "Добавить в избранное";
+
+    $(this).toggleClass("favorite--checked");
+
+    if ( $(this).hasClass("favorite--checked") ) {
+      $(this).find("span").html(favoritedText)
+    } else {
+      $(this).find("span").html(favoriteText)
     }
   });
 
