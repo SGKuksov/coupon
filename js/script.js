@@ -329,23 +329,17 @@ $(document).ready(function(){
     variableWidth: true
   });
 
-  // рейтинг
-  // $('#rating_1').rating({
-  //   fx: 'full',
-  //   image: 'img/sprite-02559127368214036.png',
-  //   loader: 'img/ajax-loader.gif',
-  //   url: 'rating.php',
-  //   callback: function(responce){
-  //     this.vote_success.fadeOut(2000);
-  //   }
-  // });
+  // рейтинг на запись
+  // https://github.com/antennaio/jquery-bar-rating
+  $('.rating-bar').barrating({
+    theme: 'fontawesome-stars',
+    deselectable: false,
+    showSelectedRating: true
+    // readonly: false //только чтение
+  });
 
-  // $("#placeGallery").slick({
-  //   infinite: false,
-  //   slidesToShow: 3,
-  //   slidesToScroll: 2,
-  //   variableWidth: true
-  // });
+  // рейтинг на чтение
+  $('.rating-bar--readonly').barrating('readonly', true); //только чтение
 
   // лайтбокс
   $("#placeGallery").click(function() {

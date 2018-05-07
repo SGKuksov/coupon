@@ -1,0 +1,10 @@
+<svg width="62" height="62" viewBox="0 0 62 62" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="Canvas" fill="none">
+<g id="Group 2">
+<g id="Oval Copy 3" transform="translate(3 3)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M 28 56C 43.464 56 56 43.464 56 28C 56 12.536 43.464 0 28 0C 12.536 0 0 12.536 0 28C 0 43.464 12.536 56 28 56Z" fill="white"/>
+<path d="M 28 56C 43.464 56 56 43.464 56 28C 56 12.536 43.464 0 28 0C 12.536 0 0 12.536 0 28C 0 43.464 12.536 56 28 56Z" stroke="#FF1E1E" stroke-width="5"/>
+</g>
+</g>
+</g>
+</svg>
