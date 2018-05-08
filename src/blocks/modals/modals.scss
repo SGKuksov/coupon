@@ -2,8 +2,43 @@
 
   &__dialog {
 
-    &--md{
+    &--md {
       max-width: 300px !important;
+    }
+
+    &--lg {
+      margin: 0;
+      width: 320px;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      top: 50px;
+      right: 0;
+      border-radius: 0;
+
+      .modals__text {
+        padding: 0;
+        padding-bottom: 30px;
+        line-height: 1rem;
+      }
+
+      .modals__input-btn-block {
+        justify-content: center;
+      }
+
+      .modals__btn {
+        margin-bottom: 20px;
+      }
+
+      @media (min-width: $screen-sm) {
+        width: 470px;
+        margin: 1.75rem auto;
+        top: 0;
+        width: auto;
+        max-width: 300px;
+        position: static;
+        border-radius: 6px;
+      }
     }
 
     &--widescreen {
@@ -15,7 +50,7 @@
       top: 50px;
       right: 0;
 
-      @media (min-width: $screen-md) {
+      @media (min-width: $screen-sm) {
         margin: 1.75rem auto;
         top: 0;
         width: auto;
@@ -33,7 +68,7 @@
       border-radius: 0;
       border: none;
 
-      @media (min-width: $screen-md) {
+      @media (min-width: $screen-sm) {
         border-radius: 6px;
         border: 1px solid rgba(0,0,0,.2);
       }
@@ -111,8 +146,8 @@
   &__body {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: flex-start;
     line-height: 1;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -122,6 +157,7 @@
     flex: 1;
 
     @media (min-width: $screen-md) {
+      justify-content: center;
       flex: auto;
     }
   }
@@ -131,7 +167,7 @@
   }
 
   &__btn-block {
-    width: 240px;
+    // width: 240px;
     margin: 0 auto;
     display: flex;
     justify-content: space-around;
@@ -153,7 +189,6 @@
     padding: 16px;
     padding-top: 11px;
     padding-bottom: 15px;
-
     border-top: 1px solid #d8d8d8;
   }
 
@@ -230,10 +265,16 @@
     background-color: #fff;
     padding-left: 22px;
     padding-right: 22px;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-right: 5px;
+    margin-left: 5px;
     line-height: 29px;
     height: 32px;
     font-weight: normal;
+    min-width: 75px;
     display: flex;
+    justify-content: center;
     align-items: center;
 
     span {
@@ -250,6 +291,16 @@
 
       &:hover {
         color: #787878;
+        font-weight: normal;
+      }
+    }
+
+    &--red {
+      border: 1px solid #ff0000;
+      color: #ff0000;
+
+      &:hover {
+        color: #ff0000;
         font-weight: normal;
       }
     }
@@ -279,7 +330,14 @@
 
   &__text {
     width: 100%;
-    margin-top: 1rem;
+    margin: 0;
+    padding: 20px;
+    padding-bottom: 30px;
+  }
+
+  &__desc {
+    width: 100%;
+    margin: 10px;
   }
 
   &__textarea {
@@ -359,5 +417,10 @@
   &__vk-icon {
     width: 20px;
     height: 10px;
+  }
+
+  &__mail-icon {
+    width: 19px;
+    height: 13px;
   }
 }

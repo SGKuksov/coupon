@@ -2,35 +2,6 @@ svg4everybody(); // иницализация полифила для IE
 
 $(document).ready(function() {
 
-  // var selectCityModal = [
-  //     '<div class="modal fade modals" id="selectCityModal" tabindex="-1" role="dialog" aria-hidden="true">',
-  //     '<div class="modal-dialog modal-dialog-centered modals__dialog modals__dialog--md">',
-  //     '<div class="modal-content modals__content">',
-
-  //     '<div class="modal-header modals__header">',
-  //       '<h5 class="modal-title modals__title">Выбран ваш город ?</h5>',
-  //       '<a class="close modals__close" href="#" data-dismiss="modal" aria-label="Close">',
-  //         '<svg class="modals__close-icon" width="14" height="14"><use xlink:href="img/sprite-svg.svg#modals__close"></use></svg>',
-  //       '</a>',
-  //     '</div>',
-
-  //     '<div class="modal-body modals__body">',
-  //       '<div class="modals__location">',
-  //         '<svg class="modals__location-icon" width="11" height="16"><use xlink:href="img/sprite-svg.svg#page-header__location"></use></svg>',
-  //         '<span class="modals__location-info">Город</span>',
-  //         '<a class="modals__location-city callModalLocation" href="#">Москва</a>',
-  //       '</div>',
-  //       '<div class="modals__btn-block">',
-  //         '<button class="modals__btn" data-dismiss="modal" aria-label="Close">Да</button>',
-  //         '<button class="modals__btn modals__btn--gray" id="modalsBtnCancel">Нет</button>',
-  //       '</div>',
-  //     '</div>',
-
-  //     '</div>',
-  //     '</div>',
-  //     '</div>'
-  //   ].join('');
-
   var selectCityModal = [
     '<div class="modal-select">',
 
@@ -186,22 +157,22 @@ $(document).ready(function() {
     '<form class="modal-body modals__body" action="">',
     '<div class="modals__input-block">',
     '<label class="modals__input-label" for="mail">Электронная почта</label>',
-    '<input class="modals__input-txt" id="mail" type="email" name="mail" required="required" />',
+    '<input class="modals__input-txt" id="mail" type="email" name="mail" required="required" placeholder="personal@hotkupon.ru" />',
     '</div>',
     '<div class="modals__input-block">',
     '<label class="modals__input-label" for="login">Логин</label>',
-    '<input class="modals__input-txt" id="login" type="text" name="login" required="required" />',
+    '<input class="modals__input-txt" id="login" type="text" name="login" required="required" placeholder="harold1" />',
     '</div>',
     '<div class="modals__input-block">',
     '<label class="modals__input-label" for="pass">Пароль</label>',
-    '<input class="modals__input-pass" id="pass" type="password" name="pass" required="required" />',
+    '<input class="modals__input-pass" id="pass" type="password" name="pass" required="required" placeholder="********" />',
     '</div>',
     '<div class="modals__input-btn-block">',
     '<button class="modals__input-btn btn" type="submit">Регистрация</button>',
     '</div>',
     '</form>',
     '<div class="modal-body modals__footer">',
-    '<p class="modals__text">Зарегистрироваться через<br> соцсети</p>',
+    '<p class="modals__desc">Зарегистрироваться через<br> соцсети</p>',
     '<div class="modals__input-btn-block">',
     '<button class="modals__btn">',
     '<svg class="modals__fb-icon" width="14" height="14"><use xlink:href="img/sprite-svg.svg#modals__fb"></use></svg>',
@@ -231,20 +202,20 @@ $(document).ready(function() {
     '<form class="modal-body modals__body" action="">',
     '<div class="modals__input-block">',
     '<label class="modals__input-label" for="login">Логин</label>',
-    '<input class="modals__input-txt" id="login" type="text" name="login" required="required" />',
+    '<input class="modals__input-txt" id="login" type="text" name="login" required="required" placeholder="harold1" />',
     '</div>',
     '<div class="modals__input-block">',
     '<label class="modals__input-label" for="pass">Пароль</label>',
-    '<input class="modals__input-pass" id="pass" type="password" name="pass" required="required" />',
+    '<input class="modals__input-pass" id="pass" type="password" name="pass" required="required" placeholder="********" />',
     '</div>',
     '<div class="modals__btn-block modals__btn-block--column">',
     '<button class="modals__input-btn btn" type="submit">Войти</button>',
-    '<p class="modals__text">или</p>',
+    '<p class="modals__desc">или</p>',
     '<button class="modals__btn modals__btn--gray" type="submit">Зарегистрироваться</button>',
     '</div>',
     '</form>',
     '<div class="modal-body modals__footer">',
-    '<p class="modals__text">Авторизация через</p>',
+    '<p class="modals__desc">Авторизация через</p>',
     '<div class="modals__input-btn-block">',
     '<button class="modals__btn">',
     '<svg class="modals__fb-icon" width="14" height="14"><use xlink:href="img/sprite-svg.svg#modals__fb"></use></svg>',
@@ -303,6 +274,31 @@ $(document).ready(function() {
     '</div>'
   ].join('');
 
+  var registerAfterModal = [
+    '<div class="modal fade modals" id="registerAfterModal" tabindex="-1" role="dialog" aria-hidden="true">',
+    '<div class="modal-dialog modal-dialog-centered modals__dialog modals__dialog--lg">',
+    '<div class="modal-content modals__content">',
+    '<div class="modal-header modals__header">',
+    '<h5 class="modal-title modals__title">Спасибо за регистрацию!</h5>',
+    '<a class="close modals__close" href="#" data-dismiss="modal" aria-label="Close">',
+    '<svg class="modals__close-icon" width="14" height="14"><use xlink:href="img/sprite-svg.svg#modals__close"></use></svg>',
+    '</a>',
+    '</div>',
+    '<div class="modal-body modals__body">',
+    '<p class="modals__text">В течение 3 минут вам на почту будет выслано письмо для подтверждения регистрации, после чего вы сможете авторизоваться на сайте</p>',
+    '<div class="modals__input-btn-block">',
+    '<button class="modals__btn  modals__btn--red" data-dismiss="modal" aria-label="Close">Продолжить поиск купонов</button>',
+    '<a class="modals__btn" href="https://mail.google.com/">',
+    '<svg class="modals__fb-icon" width="19" height="13"><use xlink:href="img/sprite-svg.svg#modals__mail-icon"></use></svg>',
+    '<span>Проверить почту</span>',
+    '</a>',
+    '</div>',
+    '</div>',
+    '</div>',
+    '</div>',
+    '</div>'
+  ].join('');
+
   // вызов обрезания текста
   $('.card__link').truncateText();
   $('.card__place').truncateText();
@@ -346,9 +342,8 @@ $(document).ready(function() {
 
   // вызов малого модального при открытии страницы
   setTimeout([
-    // $(selectCityModal).appendTo("body")
+    $(selectCityModal).appendTo("body")
   ], 10000);
-
 
   // скрытие modal-select
   $(".modal-select__close").click(function() {
@@ -357,7 +352,6 @@ $(document).ready(function() {
   $(".modal-select__btn").click(function() {
     $(".modal-select").hide();
   });
-
 
   //вызов большого модального окна при клике на "Нет"
   $("#modalsBtnCancel").click(function() {
@@ -399,7 +393,7 @@ $(document).ready(function() {
   });
 
   // modals-panel
-  $('.modals-panel').hide();
+  // $('.modals-panel').hide();
 
   // #callAutorizModal
   $("#callAutorizModal").click(function() {
@@ -554,5 +548,10 @@ $(document).ready(function() {
   $(".modals-panel__warnDelModal").click(function() {
     $(warnDelModal).appendTo("body");
     $("#warnDelModal").modal("show");
+  });
+
+  $(".modals-panel__registerAfterModal").click(function() {
+    $(registerAfterModal).appendTo("body");
+    $("#registerAfterModal").modal("show");
   });
 });
