@@ -1589,21 +1589,21 @@ img {
 }
 
 .rating__star-empty {
-  background-image: url(../img/sprite-07969609278722292.png);
+  background-image: url(../img/sprite-02097016964791667.png);
   background-position: 0px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-fill {
-  background-image: url(../img/sprite-07969609278722292.png);
+  background-image: url(../img/sprite-02097016964791667.png);
   background-position: -26px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-hover {
-  background-image: url(../img/sprite-07969609278722292.png);
+  background-image: url(../img/sprite-02097016964791667.png);
   background-position: 0px -26px;
   width: 22px;
   height: 22px;
@@ -3906,6 +3906,8 @@ img {
 
 .modal-location {
   z-index: 2000;
+  width: 75%;
+  max-width: 300px;
 }
 
 .modal-location .modal-dialog {
@@ -3983,10 +3985,18 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
 }
 
 .modal-location__city-char {
-  display: none;
+  display: inline;
+  font-size: 14px;
+  color: #d1d1d1;
+  font-weight: bold;
+  line-height: 30px;
+  padding-left: 16px;
+  position: absolute;
+  left: 0;
 }
 
 .modal-location__city-list {
@@ -3995,8 +4005,6 @@ img {
 }
 
 .modal-location__city-item {
-  padding-left: 16px;
-  padding-right: 16px;
   line-height: 34px;
   border-bottom: 1px solid #d8d8d8;
 }
@@ -4006,6 +4014,9 @@ img {
   font-weight: bold;
   color: #969696;
   line-height: 30px;
+  padding-left: 40px;
+  padding-right: 16px;
+  display: block;
 }
 
 .modal-location__city-link:hover {
@@ -4027,6 +4038,9 @@ img {
   width: 100%;
   padding-left: 17px;
   padding-right: 17px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .modal-location__label {
@@ -4034,6 +4048,7 @@ img {
   font-size: 14px;
   color: #323232;
   display: none;
+  padding-bottom: 10px;
 }
 
 .modal-location__input {
@@ -4049,7 +4064,25 @@ img {
 }
 
 .modal-location__btn {
-  display: none;
+  display: inline-block;
+  border-radius: 4px;
+  border: 1px solid #dedede;
+  color: #787878;
+  background-color: #fff;
+  line-height: 17px;
+  height: 32px;
+  font-weight: normal;
+}
+
+.modal-location__btn:hover {
+  color: #787878;
+  font-weight: normal;
+  background-color: #fff;
+}
+
+.modal-location__btn:active {
+  color: #787878;
+  background-color: #fff;
 }
 
 .login-menu {
@@ -6743,12 +6776,6 @@ label.el-checkbox {
   .main-content__body {
     border-radius: 0 0 10px 10px;
   }
-  .modal-location__city-char-list {
-    -webkit-column-count: 2;
-            column-count: 2;
-    -webkit-column-gap: 0;
-            column-gap: 0;
-  }
   .coupon {
     margin-bottom: 20px;
     border-radius: 10px;
@@ -7256,6 +7283,10 @@ label.el-checkbox {
     padding-top: 44px;
     padding-right: 32px;
   }
+  .modal-location {
+    width: auto;
+    max-width: none;
+  }
   .modal-location .modal-dialog {
     max-width: 997px;
     height: 568px;
@@ -7301,17 +7332,19 @@ label.el-checkbox {
             column-gap: 3px;
   }
   .modal-location__city-char {
-    display: inline;
-    font-size: 14px;
-    color: #d1d1d1;
-    font-weight: bold;
-    line-height: 30px;
+    position: static;
   }
   .modal-location__city-list {
     padding-left: 14px;
   }
   .modal-location__city-item {
     border: none;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .modal-location__city-link {
+    border: none;
+    padding: 0;
   }
   .modal-location__footer {
     padding-top: 23px;
@@ -7321,6 +7354,7 @@ label.el-checkbox {
   .modal-location__search {
     position: static;
     width: auto;
+    display: block;
   }
   .modal-location__label {
     display: block;
@@ -7329,23 +7363,7 @@ label.el-checkbox {
     width: 462px;
   }
   .modal-location__btn {
-    display: inline-block;
-    border-radius: 4px;
-    border: 1px solid #dedede;
-    color: #787878;
-    background-color: #fff;
-    padding: 6px 15px 8px 15px;
-    font-weight: normal;
     margin-left: 15px;
-  }
-  .modal-location__btn:hover {
-    color: #787878;
-    font-weight: normal;
-    background-color: #fff;
-  }
-  .modal-location__btn:active {
-    color: #787878;
-    background-color: #fff;
   }
   .login-menu__item {
     font-size: 14px;
