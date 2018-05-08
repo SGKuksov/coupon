@@ -1,6 +1,13 @@
 .modal-location {
   z-index: 2000;
   // z-index: 900;
+  width: 75%;
+  max-width: 300px;
+
+  @media (min-width: $screen-md) {
+    width: auto;
+    max-width: none;
+  }
 
   .modal-dialog {
     max-width: 768px;
@@ -118,11 +125,6 @@
 
   &__city-char-list {
 
-    @media (min-width: $screen-sm) {
-      column-count: 2;
-      column-gap: 0;
-    }
-
     @media (min-width: $screen-md) {
       column-count: 5;
       column-gap: 3px;
@@ -131,17 +133,21 @@
 
   &__city-char-item {
     display: flex;
+    position: relative;
   }
 
   &__city-char {
-    display: none;
+    display: inline;
+    font-size: 14px;
+    color: #d1d1d1;
+    font-weight: bold;
+    line-height: 30px;
+    padding-left: 16px;
+    position: absolute;
+    left: 0;
 
     @media (min-width: $screen-md) {
-      display: inline;
-      font-size: 14px;
-      color: #d1d1d1;
-      font-weight: bold;
-      line-height: 30px;
+      position: static;
     }
   }
 
@@ -155,13 +161,13 @@
   }
 
   &__city-item {
-    padding-left: 16px;
-    padding-right: 16px;
     line-height: 34px;
     border-bottom: 1px solid #d8d8d8;
 
     @media (min-width: $screen-md) {
       border: none;
+      padding-left: 16px;
+      padding-right: 16px;
     }
   }
 
@@ -170,6 +176,14 @@
     font-weight: bold;
     color: #969696;
     line-height: 30px;
+    padding-left: 40px;
+    padding-right: 16px;
+    display: block;
+
+    @media (min-width: $screen-md) {
+      border: none;
+      padding: 0;
+    }
 
     &:hover {
       font-weight: bold;
@@ -195,10 +209,12 @@
     width: 100%;
     padding-left: 17px;
     padding-right: 17px;
+    display: flex;
 
     @media (min-width: $screen-md) {
       position: static;
       width: auto;
+      display: block;
     }
   }
 
@@ -207,6 +223,7 @@
     font-size: 14px;
     color: #323232;
     display: none;
+    padding-bottom: 10px;
 
     @media (min-width: $screen-md) {
       display: block;
@@ -230,28 +247,28 @@
   }
 
   &__btn {
-    display: none;
+    display: inline-block;
+    border-radius: 4px;
+    border: 1px solid #dedede;
+    color: #787878;
+    background-color: #fff;
+    line-height: 17px;
+    height: 32px;
+    font-weight: normal;
 
     @media (min-width: $screen-md) {
-      display: inline-block;
-      border-radius: 4px;
-      border: 1px solid #dedede;
+      margin-left: 15px;
+    }
+
+    &:hover {
+      color: #787878;
+      font-weight: normal;
+      background-color: #fff;
+    }
+
+    &:active {
       color: #787878;
       background-color: #fff;
-      padding: 6px 15px 8px 15px;
-      font-weight: normal;
-      margin-left: 15px;
-
-      &:hover {
-        color: #787878;
-        font-weight: normal;
-        background-color: #fff;
-      }
-
-      &:active {
-        color: #787878;
-        background-color: #fff;
-      }
     }
   }
 }

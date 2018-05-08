@@ -35,8 +35,8 @@ mixin modal-location()
 
         .modal-footer.modal-location__footer
           form.modal-location__search
-            label.modal-location__label
+            span.modal-location__label
               | Или укажите город
-            input.modal-location__input(type="text", placeholder="Название города...")
-            button.modal-location__btn.btn(type='button')
+            input.modal-location__input(type="text", placeholder="Название города...", name="citySelect")
+            button.modal-location__btn.btn
               | Это мой город
