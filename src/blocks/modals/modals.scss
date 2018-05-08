@@ -31,11 +31,10 @@
       }
 
       @media (min-width: $screen-sm) {
-        width: 470px;
         margin: 1.75rem auto;
         top: 0;
         width: auto;
-        max-width: 300px;
+        max-width: 470px;
         position: static;
         border-radius: 6px;
       }
