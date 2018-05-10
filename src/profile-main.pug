@@ -1,0 +1,20 @@
+extends templates/profile_layout.pug
+
+block meta
+  title Profile
+  meta(name='description', content='')
+
+//- block append head
+  //- link(rel="stylesheet", href="style.min.css")
+
+block page-header
+  +page-header("Константин")
+
+block side-nav
+  +profile-nav("Настройки")
+
+block main-content
+  +profile-main()
+
+//- block append page-bottom
+  //- script(src='some.js')

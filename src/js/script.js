@@ -340,9 +340,17 @@ $(document).ready(function() {
     }
   });
 
+  // закрытие модального окна при скролле
+  // $(window).scroll(function(e) {
+  //   var dropdowns = $('.dropdown-toggle');
+  //   $.each(dropdowns, function(i, c) {
+  //     $(c).parent().removeClass('open');
+  //   })
+  // });
+
   // вызов малого модального при открытии страницы
   setTimeout([
-    $(selectCityModal).appendTo("body")
+    $(selectCityModal).appendTo(".page-header__container")
   ], 10000);
 
   // скрытие modal-select
@@ -364,7 +372,7 @@ $(document).ready(function() {
   });
 
   //вызов большого модального окна выбора города при клике на городе
-  $(".callModalLocation").click(function( e ) {
+  $(".callModalLocation").click(function(e) {
     e.preventDefault();
     var doc_w = $(window).width();
     $("body").data("modalIsOpen", false);
@@ -393,7 +401,7 @@ $(document).ready(function() {
   });
 
   // modals-panel
-  // $('.modals-panel').hide();
+  $('.modals-panel').hide();
 
   // #callAutorizModal
   $("#callAutorizModal").click(function() {
@@ -491,6 +499,14 @@ $(document).ready(function() {
 
   // рейтинг на чтение
   $('.rating-bar--readonly').barrating('readonly', true); //только чтение
+
+  // скролл
+  $("body").scroll(function() {
+
+    $(".filter-near__dropdown").hide();
+    // $("#filterNearLink").dropdown("toggle");
+    console.log('scroll');
+  });
 
   // лайтбокс
   $("#placeGallery").click(function() {

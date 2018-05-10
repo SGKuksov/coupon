@@ -1,0 +1,20 @@
+extends templates/profile_layout.pug
+
+block meta
+  title Subscribe
+  meta(name='description', content='')
+
+//- block append head
+  //- link(rel="stylesheet", href="style.min.css")
+
+block page-header
+  +page-header("Константин")
+
+block side-nav
+  +profile-nav("Подписки")
+
+block main-content
+  +profile-subscribe()
+
+//- block append page-bottom
+  //- script(src='some.js')

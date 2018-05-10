@@ -1,0 +1,55 @@
+mixin profile-main()
+
+  .profile-main
+    form#profileData.profile-main__form(action="")
+      fieldset.profile-main__header
+        legend.profile-main__title
+          | Основные данные
+
+        label.profile-main__label(for="mail")
+          | Электронная почта
+        input#mail.profile-main__input(type="mail" placeholder="personal@hotkupon.ru" name="mail")
+        button.profile-main__btn.btn
+          svg.profile-main__mail-icon(width="17" height="13")
+            use(xlink:href="img/sprite-svg.svg#modals__mail-icon")
+          | Проверить почту
+
+        label.profile-main__label(for="name")
+          | Имя пользователя
+        input#name.profile-main__input(type="text" placeholder="testing name" name="name")
+
+
+        label.profile-main__label(for="login")
+          | Логин
+        input#login.profile-main__input(type="text" placeholder="harold1" name="login")
+
+        label.profile-main__label(for="pass")
+          | Пароль
+        input#pass.profile-main__input(type="password" name="pass" placeholder="********")
+        button.profile-main__btn.btn
+          | Сменить пароль
+
+      fieldset.profile-main__body
+        legend.profile-main__title
+          | Личные данные
+
+        label.profile-main__label(for="gender")
+          | Пол
+        select#gender.profile-main__select(name="gender")
+
+        label.profile-main__label(for="city")
+          | Город
+        select#city.profile-main__input(name="city")
+
+        label.profile-main__label(for="dd")
+          | Дата рождения
+        select#dd.profile-main__data(name="dd")
+        select#mm.profile-main__data(name="mm")
+        select#yyyy.profile-main__data(name="yyyy")
+
+        img.profile-main__profile-photo
+        input#photo.profile-main__input(type="file" name="photo" value="Загрузить фото")
+
+      .profile-main__footer
+        button.profile-main__btn.btn
+          | Сохранить

@@ -1,0 +1,49 @@
+mixin profile-nav(page)
+
+  -
+    var profileNav = {
+      'Настройки': 'profile-main.html',
+      'Подписки': 'profile-subscribe.html',
+      'Избранное': 'profile-favorite.html',
+      'Ваши отзывы': 'profile-reviews.html'
+    };
+
+  .profile-nav
+    h1.profile-nav__title
+      | Личный кабинет
+
+    ul.profile-nav__list
+      li.profile-nav__item
+        if (page == "Настройки")
+          a.profile-nav__link.profile-nav__link--active(href='profile-main.html' title='Настройки')
+            | Настройки
+        if (page !== "Настройки")
+          a.profile-nav__link(href='profile-main.html' title='Настройки')
+            | Настройки
+
+      li.profile-nav__item
+        if (page == "Подписки")
+          a.profile-nav__link.profile-nav__link--active(href='profile-subscribe.html' title='Подписки')
+            | Подписки
+        if (page !== "Подписки")
+          a.profile-nav__link(href='profile-subscribe.html' title='Подписки')
+            | Подписки
+        span.profile-nav__score 4
+
+      li.profile-nav__item
+        if (page == "Избранное")
+          a.profile-nav__link.profile-nav__link--active(href='profile-favorite.html' title='Избранное')
+            | Избранное
+        if (page !== "Избранное")
+          a.profile-nav__link(href='profile-favorite.html' title='Избранное')
+            | Избранное
+        span.profile-nav__score 19
+
+      li.profile-nav__item
+        if (page == "Ваши отзывы")
+          a.profile-nav__link.profile-nav__link--active(href='profile-reviews.html' title='Ваши отзывы')
+            | Ваши отзывы
+        if (page !== "Ваши отзывы")
+          a.profile-nav__link(href='profile-reviews.html' title='Ваши отзывы')
+            | Ваши отзывы
+        span.profile-nav__score 6

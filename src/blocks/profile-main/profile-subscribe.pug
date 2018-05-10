@@ -1,0 +1,61 @@
+mixin profile-subscribe()
+
+  .profile-main
+    form#subscriptionSettings.profile-main__form(action="")
+      fieldset.profile-main__header
+        legend.profile-main__title
+          | Подписки
+
+        span.profile-main__subtitle
+          | Место, подборка, категория
+        span.profile-main__subtitle
+          | Частота рассылки
+
+        ul.profile-main__subscription-list
+          li.profile-main__subscription-item
+            label.profile-main__label(for="subscriptionItem")
+              | Аквапарк Мореон
+            select#subscriptionItem.profile-main__select(name="subscriptionItem")
+              option
+                | Каждый день
+              option
+                | Раз в неделю
+              option
+                | Раз в месяц
+
+            button.profile-main__btn.btn
+              | Удалить
+
+      fieldset.profile-main__body
+        legend.profile-main__title
+          | Новая подписка
+
+        .profile-main__form-inner
+          label.profile-main__label(for="subscriptionInput")
+          | Место
+          input#subscriptionInput.profile-main__input(type="text" name="subscriptionInput")
+          button.profile-main__reset(type="reset")
+            svg.profile-main__reset-icon(width="14" height="14")
+              use(xlink:href="img/sprite-svg.svg#profile-main__reset-icon")
+
+        label.profile-main__label(for="subscriptionCategory")
+          | Категория/подкатегория
+        select#subscriptionCategory(name="").profile-main__select
+          option
+            | Каждый день
+          option
+            | Раз в неделю
+          option
+            | Раз в месяц
+
+        label.profile-main__label(for="gender")
+          | Категория/подкатегория
+        select#subscriptionInput.profile-main__select
+          option
+            | Каждый день
+          option
+            | Раз в неделю
+          option
+            | Раз в месяц
+
+
