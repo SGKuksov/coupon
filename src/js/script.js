@@ -401,7 +401,7 @@ $(document).ready(function() {
   });
 
   // modals-panel
-  $('.modals-panel').hide();
+  // $('.modals-panel').hide();
 
   // #callAutorizModal
   $("#callAutorizModal").click(function() {

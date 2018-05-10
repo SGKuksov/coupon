@@ -1,6 +1,6 @@
 mixin profile-subscribe()
 
-  .profile-main
+  .profile-subscribe
     form#subscriptionSettings.profile-main__form(action="")
       fieldset.profile-main__header
         legend.profile-main__title
@@ -15,7 +15,7 @@ mixin profile-subscribe()
           li.profile-main__subscription-item
             label.profile-main__label(for="subscriptionItem")
               | Аквапарк Мореон
-            select#subscriptionItem.profile-main__select(name="subscriptionItem")
+            select#subscriptionItem.profile-main__select.custom-select(name="subscriptionItem")
               option
                 | Каждый день
               option
@@ -32,7 +32,7 @@ mixin profile-subscribe()
 
         .profile-main__form-inner
           label.profile-main__label(for="subscriptionInput")
-          | Место
+            | Место
           input#subscriptionInput.profile-main__input(type="text" name="subscriptionInput")
           button.profile-main__reset(type="reset")
             svg.profile-main__reset-icon(width="14" height="14")
@@ -40,7 +40,7 @@ mixin profile-subscribe()
 
         label.profile-main__label(for="subscriptionCategory")
           | Категория/подкатегория
-        select#subscriptionCategory(name="").profile-main__select
+        select#subscriptionCategory.custom-select.profile-main__select(name="")
           option
             | Каждый день
           option
@@ -50,7 +50,7 @@ mixin profile-subscribe()
 
         label.profile-main__label(for="gender")
           | Категория/подкатегория
-        select#subscriptionInput.profile-main__select
+        select#subscriptionInput.profile-main__select.custom-select(name="")
           option
             | Каждый день
           option
