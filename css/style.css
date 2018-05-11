@@ -2014,21 +2014,21 @@ img {
 }
 
 .rating__star-empty {
-  background-image: url(../img/sprite-05374443140678855.png);
+  background-image: url(../img/sprite-05044585834346673.png);
   background-position: 0px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-fill {
-  background-image: url(../img/sprite-05374443140678855.png);
+  background-image: url(../img/sprite-05044585834346673.png);
   background-position: -26px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-hover {
-  background-image: url(../img/sprite-05374443140678855.png);
+  background-image: url(../img/sprite-05044585834346673.png);
   background-position: 0px -26px;
   width: 22px;
   height: 22px;
@@ -3471,67 +3471,6 @@ img {
   width: 14px;
   height: 14px;
   fill: #a3a3a3;
-}
-
-.favorite:active {
-  border: 1px solid #dedede;
-  color: #ff0c0c;
-}
-
-.favorite:active svg {
-  fill: #ff0101;
-  stroke: #ffffff;
-}
-
-.favorite--checked {
-  border: 1px solid #dedede;
-  color: #ff0c0c;
-}
-
-.favorite--checked svg {
-  fill: #ff0101;
-  stroke: #ffffff;
-}
-
-.favorite--checked:hover {
-  border: 1px solid #969696;
-  color: #ff0c0c;
-}
-
-.favorite--checked:hover svg {
-  fill: #ff0101;
-  stroke: #ffffff;
-}
-
-.rss:active {
-  border: 1px solid #dedede;
-  color: #5fb600;
-}
-
-.rss:active svg {
-  fill: #5fb600;
-}
-
-.rss--checked {
-  border: 1px solid #dedede;
-  color: #5fb600;
-}
-
-.rss--checked span {
-  text-align: center;
-}
-
-.rss--checked svg {
-  fill: #5fb600;
-}
-
-.rss--checked:hover {
-  border: 1px solid #969696;
-  color: #5fb600;
-}
-
-.rss--checked:hover svg {
-  fill: #5fb600;
 }
 
 .label {
@@ -6828,7 +6767,7 @@ label.el-checkbox {
   top: 15px;
 }
 
-.coupon-modal__btn {
+.coupon-modal__btn, .coupon-modal__favorite {
   border-radius: 4px;
   border: 1px solid #dedede;
   color: #787878;
@@ -6847,53 +6786,26 @@ label.el-checkbox {
   padding-right: 17px;
 }
 
-.coupon-modal__btn svg {
+.coupon-modal__btn svg, .coupon-modal__favorite svg {
   fill: #b5b5b5;
   margin-right: 9px;
 }
 
-.coupon-modal__btn span {
+.coupon-modal__btn span, .coupon-modal__favorite span {
   line-height: 1;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
 }
 
-.coupon-modal__btn:hover {
+.coupon-modal__btn:hover, .coupon-modal__favorite:hover {
   color: #787878;
   border: 1px solid #969696;
   background-color: #fff;
 }
 
-.coupon-modal__btn:hover svg {
+.coupon-modal__btn:hover svg, .coupon-modal__favorite:hover svg {
   fill: #b5b5b5;
-}
-
-.coupon-modal__btn:active {
-  border: 1px solid #dedede;
-  color: #5fb600;
-}
-
-.coupon-modal__btn:active svg {
-  fill: #5fb600;
-}
-
-.coupon-modal__btn--active {
-  border: 1px solid #dedede;
-  color: #5fb600;
-}
-
-.coupon-modal__btn--active svg {
-  fill: #5fb600;
-}
-
-.coupon-modal__btn--active:hover {
-  border: 1px solid #969696;
-  color: #5fb600;
-}
-
-.coupon-modal__btn--active:hover svg {
-  fill: #5fb600;
 }
 
 .coupon-modal__link {
@@ -7500,6 +7412,67 @@ label.el-checkbox {
 .profile-subscribe__btn:active {
   color: #787878;
   background-color: #fff;
+}
+
+.favorite:active {
+  border: 1px solid #dedede;
+  color: #ff0c0c;
+}
+
+.favorite:active svg {
+  fill: #ff0101;
+  stroke: #ffffff;
+}
+
+.favorite--checked {
+  border: 1px solid #dedede;
+  color: #ff0c0c;
+}
+
+.favorite--checked svg {
+  fill: #ff0101;
+  stroke: #ffffff;
+}
+
+.favorite--checked:hover {
+  border: 1px solid #969696;
+  color: #ff0c0c;
+}
+
+.favorite--checked:hover svg {
+  fill: #ff0101;
+  stroke: #ffffff;
+}
+
+.rss:active {
+  border: 1px solid #dedede;
+  color: #5fb600;
+}
+
+.rss:active svg {
+  fill: #5fb600;
+}
+
+.rss--checked {
+  border: 1px solid #dedede;
+  color: #5fb600;
+}
+
+.rss--checked span {
+  text-align: center;
+}
+
+.rss--checked svg {
+  fill: #5fb600;
+}
+
+.rss--checked:hover {
+  border: 1px solid #969696;
+  color: #5fb600;
+}
+
+.rss--checked:hover svg {
+  fill: #5fb600;
 }
 
 @media (min-width: 380px) {
@@ -8408,8 +8381,8 @@ label.el-checkbox {
     -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
             box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
     position: absolute;
-    top: 50px;
-    left: 10%;
+    top: 25px;
+    left: 110px;
     border-radius: 6px;
     border: 1px solid rgba(0, 0, 0, 0.2);
   }
