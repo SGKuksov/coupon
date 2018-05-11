@@ -70,14 +70,24 @@ mixin filter(is_places_category)
         .filter__view
           span.filter__desc.filter__desc--is_places
             | Вид:
-          a.filter__btn.filter__btn--left.filter__btn--active.btn(href="#")
-            svg.filter__by_list(width="15" height="11")
-              use(xlink:href="img/sprite-svg.svg#filter__by_list")
-            span.filter__btn-title
-              | Списком
+          ul.nav.filter__tabs(role="tablist")
 
-          a.filter__btn.filter__btn--right.btn(href="#")
-            svg.filter__on_map(width="16" height="14")
-              use(xlink:href="img/sprite-svg.svg#filter__on_map")
-            span.filter__btn-title
-              | На карте
+            li.nav-item
+              a#byListTab.filter__btn.filter__btn--left.btn.nav-link.active(data-toggle="tab" href="#byList" role="tab" aria-controls="byList" aria-selected="true")
+                svg.filter__by_list(width="15" height="11")
+                  use(xlink:href="img/sprite-svg.svg#filter__by_list")
+                span
+                  | Списком
+
+            li.nav-item
+              a#onMapTab.filter__btn.filter__btn--right.btn.nav-link(data-toggle="tab" href="#onMap" role="tab" aria-controls="onMap" aria-selected="false")
+                svg.filter__on_map(width="16" height="14")
+                  use(xlink:href="img/sprite-svg.svg#filter__on_map")
+                span
+                  | На карте
+
+
+
+
+
+

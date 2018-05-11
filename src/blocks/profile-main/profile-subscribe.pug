@@ -16,11 +16,11 @@ mixin profile-subscribe()
             label.profile-main__label(for="subscriptionItem")
               | Аквапарк Мореон
             select#subscriptionItem.profile-main__select.custom-select(name="subscriptionItem")
-              option
+              option(value="Каждый день")
                 | Каждый день
-              option
+              option(value="Раз в неделю")
                 | Раз в неделю
-              option
+              option(value="Раз в месяц")
                 | Раз в месяц
 
             button.profile-main__btn.btn
@@ -41,21 +41,21 @@ mixin profile-subscribe()
         label.profile-main__label(for="subscriptionCategory")
           | Категория/подкатегория
         select#subscriptionCategory.custom-select.profile-main__select(name="")
-          option
+          option(value="Каждый день")
             | Каждый день
-          option
+          option(value="Раз в неделю")
             | Раз в неделю
-          option
+          option(value="Раз в месяц")
             | Раз в месяц
 
         label.profile-main__label(for="gender")
           | Категория/подкатегория
         select#subscriptionInput.profile-main__select.custom-select(name="")
-          option
+          option(value="Каждый день")
             | Каждый день
-          option
+          option(value="Раз в неделю")
             | Раз в неделю
-          option
+          option(value="Раз в месяц")
             | Раз в месяц
 
 

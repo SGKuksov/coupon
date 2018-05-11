@@ -194,18 +194,63 @@ mixin list-of-places()
       h2.list-of-places__title
         | Выберите категорию
 
-      .filter__sort
-        select.filter__select.custom-select(name="label")
+      .list-of-places__sort
+        select.filter__select.list-of-places__select.custom-select(name="label")
           each val in category_list
             option.filter__option(value= val)= val
 
-    .list-of-places__body
-      ul.list-of-places__category-list
-        each val, key in category_item
-          li.list-of-places__category-item
-            span.list-of-places__category-title=key
-            ul.list-of-places__subcategory-list
-              each val in category_item[key]
-                li.list-of-places__subcategory-item
-                  a.list-of-places__subcategory-link(href="#", title=val)=val
-                    span.list-of-places__subcategory-count 15
+    .tab-content
+      .list-of-places__body#byList.tab-pane.fade.active(role="tabpanel" aria-labelledby="byListTab")
+        ul.list-of-places__category-list
+          each val, key in category_item
+            li.list-of-places__category-item
+              span.list-of-places__category-title=key
+              ul.list-of-places__subcategory-list
+                each val in category_item[key]
+                  li.list-of-places__subcategory-item
+                    a.list-of-places__subcategory-link(href="#", title=val)=val
+                      span.list-of-places__subcategory-count 15
+
+      .list-of-places__map#onMap.tab-pane.fade(role="tabpanel" aria-labelledby="onMapTab")
+        .list-of-places__map-header
+          a.btn.list-of-places__map-label.list-of-places__map-label--active(href="#")
+            | Фитнес-центры
+            span
+              | 34
+
+          a.btn.list-of-places__map-label(href="#")
+            | Подарки
+            span
+              | 12
+
+          a.btn.list-of-places__map-label(href="#")
+            | Барбершопы
+            span
+              | 63
+
+        .list-of-places__address-tab
+          #map.list-of-places__address-map
+
+          .list-of-places__address-block
+            .list-of-places__address-img-wrap
+              img.list-of-places__address-img(src="http://via.placeholder.com/212x88" alt="img" width="212" height="88")
+            span.list-of-places__address-info
+            h2.list-of-places__address-title
+              | Итальянский ресторан Il Patio
+            a.btn.list-of-places__address-btn(href="#")
+              | Подробнее о месте
+            .list-of-places__address-meta
+              svg.list-of-places__address-meta-icon(width="14" height="14")
+                use(xlink:href="img/sprite-svg.svg#coupon__address-clock-icon")
+              span.list-of-places__address-meta-desc
+                | Пн-Вс, 08:00-22:00
+            .list-of-places__address-meta
+              svg.list-of-places__address-meta-icon(width="14" height="14")
+                use(xlink:href="img/sprite-svg.svg#coupon__address-phone-icon")
+              a.list-of-places__address-meta-desc(href="tel:+78121234567")
+                | +7 (812) 123-45-67
+            .list-of-places__address-meta
+              svg.list-of-places__address-meta-icon(width="13" height="18")
+                use(xlink:href="img/sprite-svg.svg#coupon__address-map-icon")
+              span.list-of-places__address-meta-desc
+                | пр. Культуры, 1, Москва

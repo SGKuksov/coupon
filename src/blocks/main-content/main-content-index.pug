@@ -1,4 +1,5 @@
 mixin main-content-index()
+
   .tab-content
     .main-content#byPlitka.tab-pane.fade.active(role="tabpanel" aria-labelledby="byPlitkaTab")
       .main-content__inner
@@ -109,9 +110,6 @@ mixin main-content-index()
           +pagination()
 
     .main-content#onMap.tab-pane.fade(role="tabpanel" aria-labelledby="onMapTab")
-      .main-content__header
-        h2.main-content__header-title
-          | Все купоны Москвы на карте
 
       .main-content__body.main-content__address-tab
         #map.main-content__address-map
