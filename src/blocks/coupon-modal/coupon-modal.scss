@@ -82,7 +82,8 @@
     }
   }
 
-  &__btn {
+  &__btn,
+  &__favorite {
     border-radius: 4px;
     border: 1px solid #dedede;
     color: #787878;
@@ -113,33 +114,6 @@
 
       svg {
         fill: #b5b5b5;
-      }
-    }
-
-    &:active {
-      border: 1px solid #dedede;
-      color: #5fb600;
-
-      svg {
-        fill: #5fb600;
-      }
-    }
-
-    &--active {
-      border: 1px solid #dedede;
-      color: #5fb600;
-
-      svg {
-        fill: #5fb600;
-      }
-
-      &:hover {
-        border: 1px solid #969696;
-        color: #5fb600;
-
-        svg {
-          fill: #5fb600;
-        }
       }
     }
   }

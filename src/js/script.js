@@ -343,15 +343,17 @@ $(document).ready(function() {
   // вызов малого модального при открытии страницы
   setTimeout( function () {
     $(selectCityModal).appendTo(".page-header__container")
+
+    // скрытие modal-select
+    $(".modal-select__close").click(function() {
+      $(".modal-select").hide();
+    });
+    $(".modal-select__btn").click(function() {
+      $(".modal-select").hide();
+    });
   }, 1000);
 
-  // скрытие modal-select
-  $(".modal-select__close").click(function() {
-    $(".modal-select").hide();
-  });
-  $(".modal-select__btn").click(function() {
-    $(".modal-select").hide();
-  });
+
 
   //вызов большого модального окна при клике на "Нет"
   $("#modalsBtnCancel").click(function() {
@@ -367,6 +369,8 @@ $(document).ready(function() {
   $(".callModalLocation").click(function(e) {
     e.preventDefault();
     var doc_w = $(window).width();
+
+
     $("body").data("modalIsOpen", false);
 
     if (doc_w > 1023) {
@@ -511,6 +515,17 @@ $(document).ready(function() {
   // tabs
   $('.filter__btn').on('shown.bs.tab', function(){
     $('.list-of-places__header').toggle();
+    $('.filter__sort').toggle();
+  });
+
+  // address tab
+  $('.coupon__place-btn').click(function(){
+    var addressTab = $('#addressTab');
+    addressTab.tab('show');
+
+    var id = addressTab.attr('href'),
+        top = $(id).offset().top;
+    $('body,html').animate({scrollTop: top}, 20);
   });
 
   // лайтбокс
@@ -546,6 +561,7 @@ $(document).ready(function() {
   $(".modals-panel__modalLocation").click(function() {
     $("#modalLocation").modal("show");
   });
+
   $(".modals-panel__couponModal").click(function() {
     $('.coupon-modal__text').truncateText();
     $("#couponModal").modal("show");
