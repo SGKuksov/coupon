@@ -241,221 +241,251 @@
         <div class="filter">
           <div class="filter__settings">
             <div class="filter__view"><span class="filter__desc filter__desc--is_places">Вид:</span>
-              <a class="filter__btn filter__btn--left filter__btn--active btn" href="#">
-                <svg class="filter__by_list" width="15" height="11">
-                  <use xlink:href="img/sprite-svg.svg#filter__by_list"></use>
-                </svg><span class="filter__btn-title">Списком</span></a>
-              <a class="filter__btn filter__btn--right btn" href="#">
-                <svg class="filter__on_map" width="16" height="14">
-                  <use xlink:href="img/sprite-svg.svg#filter__on_map"></use>
-                </svg><span class="filter__btn-title">На карте</span></a>
+              <ul class="nav filter__tabs" role="tablist">
+                <li class="nav-item">
+                  <a class="filter__btn filter__btn--left btn nav-link active" id="byListTab" data-toggle="tab" href="#byList" role="tab" aria-controls="byList" aria-selected="true">
+                    <svg class="filter__by_list" width="15" height="11">
+                      <use xlink:href="img/sprite-svg.svg#filter__by_list"></use>
+                    </svg><span>Списком</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="filter__btn filter__btn--right btn nav-link" id="onMapTab" data-toggle="tab" href="#onMap" role="tab" aria-controls="onMap" aria-selected="false">
+                    <svg class="filter__on_map" width="16" height="14">
+                      <use xlink:href="img/sprite-svg.svg#filter__on_map"></use>
+                    </svg><span>На карте</span></a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
         <div class="list-of-places">
           <div class="list-of-places__header">
             <h2 class="list-of-places__title">Выберите категорию</h2>
-            <div class="filter__sort"><select class="filter__select custom-select" name="label"><option class="filter__option" value="Красота и уход">Красота и уход</option><option class="filter__option" value="Обучение">Обучение</option><option class="filter__option" value="Авто-мото">Авто-мото</option><option class="filter__option" value="Кафе и рестораны">Кафе и рестораны</option><option class="filter__option" value="Здоровье и медицина">Здоровье и медицина</option><option class="filter__option" value="Все для детей">Все для детей</option><option class="filter__option" value="Развлечения">Развлечения</option><option class="filter__option" value="Доставка блюд">Доставка блюд</option><option class="filter__option" value="Путешествия по России">Путешествия по России</option><option class="filter__option" value="Зарубежный туризм">Зарубежный туризм</option><option class="filter__option" value="Спорт и фитнес">Спорт и фитнес</option><option class="filter__option" value="Услуги">Услуги</option><option class="filter__option" value="Товары и покупки">Товары и покупки</option><option class="filter__option" value="Туризм">Туризм</option></select></div>
+            <div class="list-of-places__sort"><select class="filter__select list-of-places__select custom-select" name="label"><option class="filter__option" value="Красота и уход">Красота и уход</option><option class="filter__option" value="Обучение">Обучение</option><option class="filter__option" value="Авто-мото">Авто-мото</option><option class="filter__option" value="Кафе и рестораны">Кафе и рестораны</option><option class="filter__option" value="Здоровье и медицина">Здоровье и медицина</option><option class="filter__option" value="Все для детей">Все для детей</option><option class="filter__option" value="Развлечения">Развлечения</option><option class="filter__option" value="Доставка блюд">Доставка блюд</option><option class="filter__option" value="Путешествия по России">Путешествия по России</option><option class="filter__option" value="Зарубежный туризм">Зарубежный туризм</option><option class="filter__option" value="Спорт и фитнес">Спорт и фитнес</option><option class="filter__option" value="Услуги">Услуги</option><option class="filter__option" value="Товары и покупки">Товары и покупки</option><option class="filter__option" value="Туризм">Туризм</option></select></div>
           </div>
-          <div class="list-of-places__body">
-            <ul class="list-of-places__category-list">
-              <li class="list-of-places__category-item"><span class="list-of-places__category-title">Красота и уход</span>
-                <ul class="list-of-places__subcategory-list">
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Салоны красоты">Салоны красоты<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Барбершопы">Барбершопы<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Для мужчин">Для мужчин<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Косметика и парфюмерия">Косметика и парфюмерия<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Уход за лицом">Уход за лицом<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Маникюр и педикюр">Маникюр и педикюр<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Эпиляция">Эпиляция<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Солярий">Солярий<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="SPA">SPA<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Массаж">Массаж<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Уход за телом">Уход за телом<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Косметология">Косметология<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Лифтинг и омоложение">Лифтинг и омоложение<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Коррекция фигуры">Коррекция фигуры<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Парикмахерские услуги">Парикмахерские услуги<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Ресницы и брови">Ресницы и брови<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Пирсинг и татуировки">Пирсинг и татуировки<span class="list-of-places__subcategory-count">15</span></a></li>
-                </ul>
-              </li>
-              <li class="list-of-places__category-item"><span class="list-of-places__category-title">Обучение</span>
-                <ul class="list-of-places__subcategory-list">
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Иностранные языки">Иностранные языки<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Для школьников и студентов">Для школьников и студентов<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Онлайн-курсы">Онлайн-курсы<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Мастер-классы">Мастер-классы<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Автошколы, мотошколы">Автошколы, мотошколы<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Творчество">Творчество<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Психологические тренинги">Психологические тренинги<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Повышение квалификации">Повышение квалификации<span class="list-of-places__subcategory-count">15</span></a></li>
-                </ul>
-              </li>
-              <li class="list-of-places__category-item"><span class="list-of-places__category-title">Авто-мото</span>
-                <ul class="list-of-places__subcategory-list">
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="СТО и автосервисы">СТО и автосервисы<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Автошколы и курсы вождения">Автошколы и курсы вождения<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Прокат авто">Прокат авто<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Грузоперевозки">Грузоперевозки<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Страхование">Страхование<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Автотовары и аксессуары">Автотовары и аксессуары<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Тюнинг и доп. оборудование">Тюнинг и доп. оборудование<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Шиномонтаж и сезонное хранение">Шиномонтаж и сезонное хранение<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Автомойки, полировка, химчистка">Автомойки, полировка, химчистка<span class="list-of-places__subcategory-count">15</span></a></li>
-                </ul>
-              </li>
-              <li class="list-of-places__category-item"><span class="list-of-places__category-title">Кафе и рестораны</span>
-                <ul class="list-of-places__subcategory-list">
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Банкеты и праздники">Банкеты и праздники<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Азиатская и восточная кухни">Азиатская и восточная кухни<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Дегустации, винотеки">Дегустации, винотеки<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Европейская кухня">Европейская кухня<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Индийская кухня">Индийская кухня<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Итальянская кухня, пицца">Итальянская кухня, пицца<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Китайская кухня">Китайская кухня<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Кофе, чай, сладости">Кофе, чай, сладости<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Пиво, пабы, трактиры, бары">Пиво, пабы, трактиры, бары<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Русская и украинская кухни">Русская и украинская кухни<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Фаст фуд">Фаст фуд<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Японская кухня, суши">Японская кухня, суши<span class="list-of-places__subcategory-count">15</span></a></li>
-                </ul>
-              </li>
-              <li class="list-of-places__category-item"><span class="list-of-places__category-title">Здоровье и медицина</span>
-                <ul class="list-of-places__subcategory-list">
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Обследования и диагностика">Обследования и диагностика<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Стоматология">Стоматология<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="МРТ/Рентген">МРТ/Рентген<span class="list-of-places__subcategory-count">15</span></a></li>
-                </ul>
-              </li>
-              <li class="list-of-places__category-item"><span class="list-of-places__category-title">Все для детей</span>
-                <ul class="list-of-places__subcategory-list">
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Детские товары">Детские товары<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Обучение и развитие">Обучение и развитие<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Услуги для детей">Услуги для детей<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Развлечения для детей">Развлечения для детей<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Детские праздники">Детские праздники<span class="list-of-places__subcategory-count">15</span></a></li>
-                </ul>
-              </li>
-              <li class="list-of-places__category-item"><span class="list-of-places__category-title">Развлечения</span>
-                <ul class="list-of-places__subcategory-list">
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Квесты">Квесты<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Экскурсии и музеи">Экскурсии и музеи<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Кино">Кино<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Театры">Театры<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Концерты и шоу">Концерты и шоу<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Активный отдых">Активный отдых<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Скалолазание">Скалолазание<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Горные лыжи, сноуборд, коньки">Горные лыжи, сноуборд, коньки<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Аквапарк">Аквапарк<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Боулинг, бильярд">Боулинг, бильярд<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Пейнтбол, страйкбол, лазертаг">Пейнтбол, страйкбол, лазертаг<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Картинг, квадроциклы">Картинг, квадроциклы<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Бани и сауны">Бани и сауны<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Зоопарк и животные">Зоопарк и животные<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Конные прогулки">Конные прогулки<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Ночные клубы">Ночные клубы<span class="list-of-places__subcategory-count">15</span></a></li>
-                </ul>
-              </li>
-              <li class="list-of-places__category-item"><span class="list-of-places__category-title">Доставка блюд</span>
-                <ul class="list-of-places__subcategory-list">
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Доставка суши, роллов">Доставка суши, роллов<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Доставка пиццы">Доставка пиццы<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Пироги">Пироги<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Торты">Торты<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Доставка из кафе и ресторанов">Доставка из кафе и ресторанов<span class="list-of-places__subcategory-count">15</span></a></li>
-                </ul>
-              </li>
-              <li class="list-of-places__category-item"><span class="list-of-places__category-title">Путешествия по России</span>
-                <ul class="list-of-places__subcategory-list">
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Золотое кольцо">Золотое кольцо<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Отдых в Подмосковье">Отдых в Подмосковье<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Черное Море">Черное Море<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Абхазия">Абхазия<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Адыгея">Адыгея<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Байкал">Байкал<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Алтай">Алтай<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Другое">Другое<span class="list-of-places__subcategory-count">15</span></a></li>
-                </ul>
-              </li>
-              <li class="list-of-places__category-item"><span class="list-of-places__category-title">Зарубежный туризм</span>
-                <ul class="list-of-places__subcategory-list">
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Турция">Турция<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Тайланд">Тайланд<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Италия">Италия<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Греция">Греция<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Чехия">Чехия<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Франция">Франция<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Испания">Испания<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Тунис">Тунис<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Кипр">Кипр<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Вьетнам">Вьетнам<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Индия">Индия<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Китай">Китай<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Скандинавия">Скандинавия<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Другие страны">Другие страны<span class="list-of-places__subcategory-count">15</span></a></li>
-                </ul>
-              </li>
-              <li class="list-of-places__category-item"><span class="list-of-places__category-title">Спорт и фитнес</span>
-                <ul class="list-of-places__subcategory-list">
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Фитнес-центры">Фитнес-центры<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Йога">Йога<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Бассейны">Бассейны<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Танцы">Танцы<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Единоборства">Единоборства<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Футбол, волейбол, баскетбол">Футбол, волейбол, баскетбол<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Спортивные занятия для детей">Спортивные занятия для детей<span class="list-of-places__subcategory-count">15</span></a></li>
-                </ul>
-              </li>
-              <li class="list-of-places__category-item"><span class="list-of-places__category-title">Услуги</span>
-                <ul class="list-of-places__subcategory-list">
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Ремонт">Ремонт<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Уборка и клининг">Уборка и клининг<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Фото и видео">Фото и видео<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Юридические услуги">Юридические услуги<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Организация праздников">Организация праздников<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Доставка цветов">Доставка цветов<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Услуги для бизнеса">Услуги для бизнеса<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Визы, паспорта">Визы, паспорта<span class="list-of-places__subcategory-count">15</span></a></li>
-                </ul>
-              </li>
-              <li class="list-of-places__category-item"><span class="list-of-places__category-title">Товары и покупки</span>
-                <ul class="list-of-places__subcategory-list">
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Одежда и аксессуары">Одежда и аксессуары<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Обувь">Обувь<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Товары для дома">Товары для дома<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Постельное белье">Постельное белье<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Посуда">Посуда<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Мобильные телефоны">Мобильные телефоны<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Гаджеты">Гаджеты<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="ПК и аксессуары">ПК и аксессуары<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Бытовая техника">Бытовая техника<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Продукты, напитки">Продукты, напитки<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Подарки и сувениры">Подарки и сувениры<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Мебель">Мебель<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Очки, оправы, линзы">Очки, оправы, линзы<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Туристические товары">Туристические товары<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Товары для спорта">Товары для спорта<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Украшения и бижутерия">Украшения и бижутерия<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Часы и будильники">Часы и будильники<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Игры и игрушки">Игры и игрушки<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Табак, кальяны">Табак, кальяны<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Книги и канцтовары">Книги и канцтовары<span class="list-of-places__subcategory-count">15</span></a></li>
-                </ul>
-              </li>
-              <li class="list-of-places__category-item"><span class="list-of-places__category-title">Туризм</span>
-                <ul class="list-of-places__subcategory-list">
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Горнолыжный отдых">Горнолыжный отдых<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Дайвинг, серфинг">Дайвинг, серфинг<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Детские лагеря">Детские лагеря<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Круизы">Круизы<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Санатории, фитнес-туры">Санатории, фитнес-туры<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Коттеджи и базы отдыха">Коттеджи и базы отдыха<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Экскурсионные туры">Экскурсионные туры<span class="list-of-places__subcategory-count">15</span></a></li>
-                  <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Билеты">Билеты<span class="list-of-places__subcategory-count">15</span></a></li>
-                </ul>
-              </li>
-            </ul>
+          <div class="tab-content">
+            <div class="list-of-places__body tab-pane fade active" id="byList" role="tabpanel" aria-labelledby="byListTab">
+              <ul class="list-of-places__category-list">
+                <li class="list-of-places__category-item"><span class="list-of-places__category-title">Красота и уход</span>
+                  <ul class="list-of-places__subcategory-list">
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Салоны красоты">Салоны красоты<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Барбершопы">Барбершопы<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Для мужчин">Для мужчин<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Косметика и парфюмерия">Косметика и парфюмерия<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Уход за лицом">Уход за лицом<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Маникюр и педикюр">Маникюр и педикюр<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Эпиляция">Эпиляция<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Солярий">Солярий<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="SPA">SPA<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Массаж">Массаж<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Уход за телом">Уход за телом<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Косметология">Косметология<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Лифтинг и омоложение">Лифтинг и омоложение<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Коррекция фигуры">Коррекция фигуры<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Парикмахерские услуги">Парикмахерские услуги<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Ресницы и брови">Ресницы и брови<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Пирсинг и татуировки">Пирсинг и татуировки<span class="list-of-places__subcategory-count">15</span></a></li>
+                  </ul>
+                </li>
+                <li class="list-of-places__category-item"><span class="list-of-places__category-title">Обучение</span>
+                  <ul class="list-of-places__subcategory-list">
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Иностранные языки">Иностранные языки<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Для школьников и студентов">Для школьников и студентов<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Онлайн-курсы">Онлайн-курсы<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Мастер-классы">Мастер-классы<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Автошколы, мотошколы">Автошколы, мотошколы<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Творчество">Творчество<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Психологические тренинги">Психологические тренинги<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Повышение квалификации">Повышение квалификации<span class="list-of-places__subcategory-count">15</span></a></li>
+                  </ul>
+                </li>
+                <li class="list-of-places__category-item"><span class="list-of-places__category-title">Авто-мото</span>
+                  <ul class="list-of-places__subcategory-list">
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="СТО и автосервисы">СТО и автосервисы<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Автошколы и курсы вождения">Автошколы и курсы вождения<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Прокат авто">Прокат авто<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Грузоперевозки">Грузоперевозки<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Страхование">Страхование<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Автотовары и аксессуары">Автотовары и аксессуары<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Тюнинг и доп. оборудование">Тюнинг и доп. оборудование<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Шиномонтаж и сезонное хранение">Шиномонтаж и сезонное хранение<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Автомойки, полировка, химчистка">Автомойки, полировка, химчистка<span class="list-of-places__subcategory-count">15</span></a></li>
+                  </ul>
+                </li>
+                <li class="list-of-places__category-item"><span class="list-of-places__category-title">Кафе и рестораны</span>
+                  <ul class="list-of-places__subcategory-list">
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Банкеты и праздники">Банкеты и праздники<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Азиатская и восточная кухни">Азиатская и восточная кухни<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Дегустации, винотеки">Дегустации, винотеки<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Европейская кухня">Европейская кухня<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Индийская кухня">Индийская кухня<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Итальянская кухня, пицца">Итальянская кухня, пицца<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Китайская кухня">Китайская кухня<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Кофе, чай, сладости">Кофе, чай, сладости<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Пиво, пабы, трактиры, бары">Пиво, пабы, трактиры, бары<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Русская и украинская кухни">Русская и украинская кухни<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Фаст фуд">Фаст фуд<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Японская кухня, суши">Японская кухня, суши<span class="list-of-places__subcategory-count">15</span></a></li>
+                  </ul>
+                </li>
+                <li class="list-of-places__category-item"><span class="list-of-places__category-title">Здоровье и медицина</span>
+                  <ul class="list-of-places__subcategory-list">
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Обследования и диагностика">Обследования и диагностика<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Стоматология">Стоматология<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="МРТ/Рентген">МРТ/Рентген<span class="list-of-places__subcategory-count">15</span></a></li>
+                  </ul>
+                </li>
+                <li class="list-of-places__category-item"><span class="list-of-places__category-title">Все для детей</span>
+                  <ul class="list-of-places__subcategory-list">
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Детские товары">Детские товары<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Обучение и развитие">Обучение и развитие<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Услуги для детей">Услуги для детей<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Развлечения для детей">Развлечения для детей<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Детские праздники">Детские праздники<span class="list-of-places__subcategory-count">15</span></a></li>
+                  </ul>
+                </li>
+                <li class="list-of-places__category-item"><span class="list-of-places__category-title">Развлечения</span>
+                  <ul class="list-of-places__subcategory-list">
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Квесты">Квесты<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Экскурсии и музеи">Экскурсии и музеи<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Кино">Кино<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Театры">Театры<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Концерты и шоу">Концерты и шоу<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Активный отдых">Активный отдых<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Скалолазание">Скалолазание<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Горные лыжи, сноуборд, коньки">Горные лыжи, сноуборд, коньки<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Аквапарк">Аквапарк<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Боулинг, бильярд">Боулинг, бильярд<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Пейнтбол, страйкбол, лазертаг">Пейнтбол, страйкбол, лазертаг<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Картинг, квадроциклы">Картинг, квадроциклы<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Бани и сауны">Бани и сауны<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Зоопарк и животные">Зоопарк и животные<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Конные прогулки">Конные прогулки<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Ночные клубы">Ночные клубы<span class="list-of-places__subcategory-count">15</span></a></li>
+                  </ul>
+                </li>
+                <li class="list-of-places__category-item"><span class="list-of-places__category-title">Доставка блюд</span>
+                  <ul class="list-of-places__subcategory-list">
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Доставка суши, роллов">Доставка суши, роллов<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Доставка пиццы">Доставка пиццы<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Пироги">Пироги<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Торты">Торты<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Доставка из кафе и ресторанов">Доставка из кафе и ресторанов<span class="list-of-places__subcategory-count">15</span></a></li>
+                  </ul>
+                </li>
+                <li class="list-of-places__category-item"><span class="list-of-places__category-title">Путешествия по России</span>
+                  <ul class="list-of-places__subcategory-list">
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Золотое кольцо">Золотое кольцо<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Отдых в Подмосковье">Отдых в Подмосковье<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Черное Море">Черное Море<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Абхазия">Абхазия<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Адыгея">Адыгея<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Байкал">Байкал<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Алтай">Алтай<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Другое">Другое<span class="list-of-places__subcategory-count">15</span></a></li>
+                  </ul>
+                </li>
+                <li class="list-of-places__category-item"><span class="list-of-places__category-title">Зарубежный туризм</span>
+                  <ul class="list-of-places__subcategory-list">
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Турция">Турция<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Тайланд">Тайланд<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Италия">Италия<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Греция">Греция<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Чехия">Чехия<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Франция">Франция<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Испания">Испания<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Тунис">Тунис<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Кипр">Кипр<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Вьетнам">Вьетнам<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Индия">Индия<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Китай">Китай<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Скандинавия">Скандинавия<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Другие страны">Другие страны<span class="list-of-places__subcategory-count">15</span></a></li>
+                  </ul>
+                </li>
+                <li class="list-of-places__category-item"><span class="list-of-places__category-title">Спорт и фитнес</span>
+                  <ul class="list-of-places__subcategory-list">
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Фитнес-центры">Фитнес-центры<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Йога">Йога<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Бассейны">Бассейны<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Танцы">Танцы<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Единоборства">Единоборства<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Футбол, волейбол, баскетбол">Футбол, волейбол, баскетбол<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Спортивные занятия для детей">Спортивные занятия для детей<span class="list-of-places__subcategory-count">15</span></a></li>
+                  </ul>
+                </li>
+                <li class="list-of-places__category-item"><span class="list-of-places__category-title">Услуги</span>
+                  <ul class="list-of-places__subcategory-list">
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Ремонт">Ремонт<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Уборка и клининг">Уборка и клининг<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Фото и видео">Фото и видео<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Юридические услуги">Юридические услуги<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Организация праздников">Организация праздников<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Доставка цветов">Доставка цветов<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Услуги для бизнеса">Услуги для бизнеса<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Визы, паспорта">Визы, паспорта<span class="list-of-places__subcategory-count">15</span></a></li>
+                  </ul>
+                </li>
+                <li class="list-of-places__category-item"><span class="list-of-places__category-title">Товары и покупки</span>
+                  <ul class="list-of-places__subcategory-list">
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Одежда и аксессуары">Одежда и аксессуары<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Обувь">Обувь<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Товары для дома">Товары для дома<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Постельное белье">Постельное белье<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Посуда">Посуда<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Мобильные телефоны">Мобильные телефоны<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Гаджеты">Гаджеты<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="ПК и аксессуары">ПК и аксессуары<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Бытовая техника">Бытовая техника<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Продукты, напитки">Продукты, напитки<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Подарки и сувениры">Подарки и сувениры<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Мебель">Мебель<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Очки, оправы, линзы">Очки, оправы, линзы<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Туристические товары">Туристические товары<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Товары для спорта">Товары для спорта<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Украшения и бижутерия">Украшения и бижутерия<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Часы и будильники">Часы и будильники<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Игры и игрушки">Игры и игрушки<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Табак, кальяны">Табак, кальяны<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Книги и канцтовары">Книги и канцтовары<span class="list-of-places__subcategory-count">15</span></a></li>
+                  </ul>
+                </li>
+                <li class="list-of-places__category-item"><span class="list-of-places__category-title">Туризм</span>
+                  <ul class="list-of-places__subcategory-list">
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Горнолыжный отдых">Горнолыжный отдых<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Дайвинг, серфинг">Дайвинг, серфинг<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Детские лагеря">Детские лагеря<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Круизы">Круизы<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Санатории, фитнес-туры">Санатории, фитнес-туры<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Коттеджи и базы отдыха">Коттеджи и базы отдыха<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Экскурсионные туры">Экскурсионные туры<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Билеты">Билеты<span class="list-of-places__subcategory-count">15</span></a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="list-of-places__map tab-pane fade" id="onMap" role="tabpanel" aria-labelledby="onMapTab">
+              <div class="list-of-places__map-header"><a class="btn list-of-places__map-label list-of-places__map-label--active" href="#">Фитнес-центры<span>34</span></a><a class="btn list-of-places__map-label" href="#">Подарки<span>12</span></a><a class="btn list-of-places__map-label" href="#">Барбершопы<span>63</span></a></div>
+              <div class="list-of-places__address-tab">
+                <div class="list-of-places__address-map" id="map"></div>
+                <div class="list-of-places__address-block">
+                  <div class="list-of-places__address-img-wrap"><img class="list-of-places__address-img" src="http://via.placeholder.com/212x88" alt="img" width="212" height="88" /></div><span class="list-of-places__address-info"></span>
+                  <h2 class="list-of-places__address-title">Итальянский ресторан Il Patio</h2><a class="btn list-of-places__address-btn" href="#">Подробнее о месте</a>
+                  <div class="list-of-places__address-meta">
+                    <svg class="list-of-places__address-meta-icon" width="14" height="14">
+                      <use xlink:href="img/sprite-svg.svg#coupon__address-clock-icon"></use>
+                    </svg><span class="list-of-places__address-meta-desc">Пн-Вс, 08:00-22:00</span></div>
+                  <div class="list-of-places__address-meta">
+                    <svg class="list-of-places__address-meta-icon" width="14" height="14">
+                      <use xlink:href="img/sprite-svg.svg#coupon__address-phone-icon"></use>
+                    </svg><a class="list-of-places__address-meta-desc" href="tel:+78121234567">+7 (812) 123-45-67</a></div>
+                  <div class="list-of-places__address-meta">
+                    <svg class="list-of-places__address-meta-icon" width="13" height="18">
+                      <use xlink:href="img/sprite-svg.svg#coupon__address-map-icon"></use>
+                    </svg><span class="list-of-places__address-meta-desc">пр. Культуры, 1, Москва</span></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="about">

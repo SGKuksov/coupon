@@ -2014,21 +2014,21 @@ img {
 }
 
 .rating__star-empty {
-  background-image: url(../img/sprite-08846445748625928.png);
+  background-image: url(../img/sprite-05374443140678855.png);
   background-position: 0px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-fill {
-  background-image: url(../img/sprite-08846445748625928.png);
+  background-image: url(../img/sprite-05374443140678855.png);
   background-position: -26px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-hover {
-  background-image: url(../img/sprite-08846445748625928.png);
+  background-image: url(../img/sprite-05374443140678855.png);
   background-position: 0px -26px;
   width: 22px;
   height: 22px;
@@ -4919,8 +4919,6 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
 
 .modals__input-btn {
@@ -5827,6 +5825,7 @@ img {
   resize: none;
   margin-top: 17px;
   min-height: 106px;
+  padding: 10px;
 }
 
 .coupon__footer-submit {
@@ -6415,6 +6414,11 @@ label.el-checkbox {
   font-size: 14px;
 }
 
+.list-of-places__select {
+  background-color: #eeeeee;
+  border: 1px solid #dedede;
+}
+
 .list-of-places__body {
   padding-top: 18px;
   padding-left: 47px;
@@ -6506,6 +6510,152 @@ label.el-checkbox {
 .list-of-places__btn:hover {
   color: #787878;
   font-weight: normal;
+}
+
+.list-of-places__map {
+  border-radius: 10px;
+  position: relative;
+  background-color: #fff;
+}
+
+.list-of-places__map-header {
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-top: 18px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.list-of-places__map-label {
+  border-radius: 4px;
+  border: 1px solid #969696;
+  line-height: 18px;
+  height: 30px;
+  background-color: #fff;
+  margin-right: 14px;
+  padding-left: 17px;
+  padding-right: 17px;
+  color: #787878;
+  font-weight: normal;
+}
+
+.list-of-places__map-label span {
+  font-weight: normal;
+  color: #787878;
+}
+
+.list-of-places__map-label:hover {
+  background-color: #ff0000;
+  color: #fff;
+  font-weight: normal;
+}
+
+.list-of-places__map-label:hover span {
+  color: #fff;
+  font-weight: normal;
+}
+
+.list-of-places__map-label:active {
+  background-color: #ff0000;
+  color: #fff;
+  font-weight: normal;
+}
+
+.list-of-places__map-label:active span {
+  color: #fff;
+}
+
+.list-of-places__map-label--active {
+  background-color: #ff0000;
+  color: #fff;
+  font-weight: normal;
+}
+
+.list-of-places__map-label--active:hover {
+  background-color: #ff0000;
+}
+
+.list-of-places__map-label--active span {
+  color: #fff;
+}
+
+.list-of-places__address-tab {
+  position: relative;
+}
+
+.list-of-places__address-block {
+  width: 100%;
+  background-color: #ffffff;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 13px;
+  padding-right: 13px;
+}
+
+.list-of-places__address-img-wrap {
+  width: 212px;
+  height: 88px;
+  overflow: hidden;
+  border-radius: 4px;
+  margin-bottom: 14px;
+  display: none;
+}
+
+.list-of-places__address-img {
+  min-height: 1px;
+  width: 100%;
+}
+
+.list-of-places__address-title {
+  font-size: 14px;
+  font-weight: bold;
+  color: #323232;
+  margin-bottom: 10px;
+}
+
+.list-of-places__address-btn {
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 17px;
+  width: 100%;
+  height: 32px;
+  line-height: 18px;
+  text-align: center;
+}
+
+.list-of-places__address-meta {
+  margin-bottom: 9px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.list-of-places__address-meta-icon {
+  width: 14px;
+  height: 14px;
+}
+
+.list-of-places__address-meta-desc {
+  font-size: 14px;
+  color: #323232;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.list-of-places__address-map {
+  height: 288px;
+  width: 100%;
+  border: none;
 }
 
 .pagination {
@@ -7599,7 +7749,7 @@ label.el-checkbox {
     border-radius: 10px 10px 0 0;
   }
   .main-content__body {
-    border-radius: 0 0 10px 10px;
+    border-radius: 10px;
   }
   .modals__dialog--lg {
     margin: 1.75rem auto;
@@ -8466,6 +8616,10 @@ label.el-checkbox {
   }
   .list-of-places__header {
     display: none;
+    padding-top: 17px;
+    padding-bottom: 15px;
+    padding-left: 23px;
+    padding-right: 23px;
   }
   .list-of-places__body {
     padding-bottom: 72px;
@@ -8474,6 +8628,27 @@ label.el-checkbox {
     padding-top: 40px;
     margin-top: 28px;
     margin-bottom: 38px;
+  }
+  .list-of-places__address-block {
+    position: absolute;
+    left: 18px;
+    top: 18px;
+    width: 242px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  }
+  .list-of-places__address-img-wrap {
+    display: block;
+  }
+  .list-of-places__address-title {
+    font-size: 12px;
+  }
+  .list-of-places__address-meta-desc {
+    font-size: 12px;
+  }
+  .list-of-places__address-map {
+    height: 560px;
   }
   .coupon-modal__btn-wrap {
     position: static;
