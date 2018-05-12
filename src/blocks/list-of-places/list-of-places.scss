@@ -169,7 +169,7 @@
     padding-top: 18px;
     padding-left: 20px;
     padding-right: 20px;
-    padding-bottom: 15px;
+    // padding-bottom: 15px;
     border-bottom: 1px solid #dcdcdc;
   }
 
@@ -180,12 +180,14 @@
     height: 30px;
     background-color: #fff;
     margin-right: 14px;
-    padding-left: 17px;
-    padding-right: 17px;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-bottom: 15px;
     color: #787878;
     font-weight: normal;
 
     span {
+      padding-left: 5px;
       font-weight: normal;
       color: #787878;
     }

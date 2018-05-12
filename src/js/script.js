@@ -306,6 +306,7 @@ $(document).ready(function() {
   // подключение автопоиск
   $('#pageHeaderSearch').autoSearch();
   $('.modal-location__input').autoSearch();
+  $('.filter-near__search').autoSearch();
 
   // скрытие блока подписки
   $(".subscribe__close").click(function() {
@@ -341,7 +342,7 @@ $(document).ready(function() {
   });
 
   // вызов малого модального при открытии страницы
-  setTimeout( function () {
+  setTimeout(function() {
     $(selectCityModal).appendTo(".page-header__container")
 
     // скрытие modal-select
@@ -498,7 +499,6 @@ $(document).ready(function() {
 
   // скролл
   $("body").scroll(function() {
-
     // $(".filter-near__dropdown").hide();
     // $("#filterNearLink").dropdown("toggle");
     // console.log('scroll');
@@ -513,19 +513,29 @@ $(document).ready(function() {
   // });
 
   // tabs
-  $('.filter__btn').on('shown.bs.tab', function(){
-    $('.list-of-places__header').toggle();
-    $('.filter__sort').toggle();
+  $('#onMapTab').on('shown.bs.tab', function() {
+    if ($(document).width() >= 480) {
+      $('.list-of-places__header').show();
+      $('.filter__sort').toggle();
+    }
+  });
+  $('#byListTab').on('shown.bs.tab', function() {
+    if ($(document).width() >= 480) {
+      $('.list-of-places__header').hide();
+      $('.filter__sort').toggle();
+    }
   });
 
   // address tab
-  $('.coupon__place-btn').click(function(){
+  $('.coupon__place-btn').click(function() {
     var addressTab = $('#addressTab');
     addressTab.tab('show');
 
     var id = addressTab.attr('href'),
-        top = $(id).offset().top;
-    $('body,html').animate({scrollTop: top}, 20);
+      top = $(id).offset().top;
+    $('body,html').animate({
+      scrollTop: top
+    }, 20);
   });
 
   // лайтбокс
@@ -565,6 +575,13 @@ $(document).ready(function() {
   $(".modals-panel__couponModal").click(function() {
     $('.coupon-modal__text').truncateText();
     $("#couponModal").modal("show");
+  });
+  $(".card__img-wrap").click(function() {
+    if( $(window).width() >= 768 ) {
+    $(this).preventDefault();
+    $('.coupon-modal__text').truncateText();
+    $("#couponModal").modal("show");
+    }
   });
 
   $(".modals-panel__registerModal").click(function() {
