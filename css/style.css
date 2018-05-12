@@ -2014,21 +2014,21 @@ img {
 }
 
 .rating__star-empty {
-  background-image: url(../img/sprite-05044585834346673.png);
+  background-image: url(../img/sprite-08749290062831938.png);
   background-position: 0px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-fill {
-  background-image: url(../img/sprite-05044585834346673.png);
+  background-image: url(../img/sprite-08749290062831938.png);
   background-position: -26px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-hover {
-  background-image: url(../img/sprite-05044585834346673.png);
+  background-image: url(../img/sprite-08749290062831938.png);
   background-position: 0px -26px;
   width: 22px;
   height: 22px;
@@ -4581,7 +4581,7 @@ img {
 
 .filter-near__submit svg {
   border: none;
-  fill: #a5a5a5;
+  fill: #ff0000;
 }
 
 .filter-near__submit-icon {
@@ -6467,7 +6467,6 @@ label.el-checkbox {
   padding-top: 18px;
   padding-left: 20px;
   padding-right: 20px;
-  padding-bottom: 15px;
   border-bottom: 1px solid #dcdcdc;
 }
 
@@ -6478,13 +6477,15 @@ label.el-checkbox {
   height: 30px;
   background-color: #fff;
   margin-right: 14px;
-  padding-left: 17px;
-  padding-right: 17px;
+  padding-left: 12px;
+  padding-right: 12px;
+  margin-bottom: 15px;
   color: #787878;
   font-weight: normal;
 }
 
 .list-of-places__map-label span {
+  padding-left: 5px;
   font-weight: normal;
   color: #787878;
 }

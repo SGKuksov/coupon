@@ -11,8 +11,8 @@ $(document).ready(function(){
                 // Чтобы метки начали кластеризоваться, выставляем опцию.
                 clusterize: true,
                 // ObjectManager принимает те же опции, что и кластеризатор.
-                gridSize: 32,
-                clusterDisableClickZoom: true
+                gridSize: 32
+                // clusterDisableClickZoom: true
             }),
             zoomControl = new ymaps.control.ZoomControl({
                 options: {
