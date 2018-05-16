@@ -1741,8 +1741,8 @@ img {
 
 .pushy-submenu ul {
   padding-left: 15px;
-  -webkit-transition: max-height 0.2s ease-in-out, visibility 0.2s ease-in-out;
-  transition: max-height 0.2s ease-in-out, visibility 0.2s ease-in-out;
+  -webkit-transition: max-height 0.2s ease-in-out, visibility 0.2s ease-in-out;
+  transition: max-height 0.2s ease-in-out, visibility 0.2s ease-in-out;
 }
 
 .pushy-submenu ul .pushy-link {
@@ -2014,21 +2014,21 @@ img {
 }
 
 .rating__star-empty {
-  background-image: url(../img/sprite-0508914132237883.png);
+  background-image: url(../img/sprite-08553083946777775.png);
   background-position: 0px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-fill {
-  background-image: url(../img/sprite-0508914132237883.png);
+  background-image: url(../img/sprite-08553083946777775.png);
   background-position: -26px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-hover {
-  background-image: url(../img/sprite-0508914132237883.png);
+  background-image: url(../img/sprite-08553083946777775.png);
   background-position: 0px -26px;
   width: 22px;
   height: 22px;
