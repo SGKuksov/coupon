@@ -10,6 +10,7 @@ _arc/
 bower_components/
 node_modules/
 .vscode/
+*.code-workspace
 .DS_Store
 *.log
 *.sublime-*
