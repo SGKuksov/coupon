@@ -297,11 +297,28 @@ $(document).ready(function() {
     // $("").modal('show');
   });
 
-  // скролл
+  // filter-near скрытие блока
   $("body").scroll(function() {
-    // $(".filter-near__dropdown").hide();
-    // $("#filterNearLink").dropdown("toggle");
-    // console.log('scroll');
+
+    if ( $(".filter-near__dropdown").hasClass("show") ) {
+      $(".filter-near__dropdown").dropdown("toggle");
+    }
+
+    // if ( $(".filter-near__dropdown").hasClass("show") && $(".filter-near__search-group").find( $(".autoFillBar") ).css("display") == "none" ) {
+    //   $(".filter-near__dropdown").dropdown("toggle");
+    // }
+
+  });
+
+  // filter-near ввод значение
+  $(".filter-near__submit").click(function() {
+    var filterNearSearchValue = $(".filter-near__search").val();
+    var filterNearLink = $(".filter-near__link").find("span");
+
+    if ( filterNearSearchValue !== "" ) {
+      filterNearLink.html(filterNearSearchValue);
+      // $(".filter-near__dropdown").dropdown("toggle");
+    }
   });
 
   // закрытие модального окна при скролле

@@ -47,7 +47,7 @@
          });
 
          function searchCheck() {
-             if (input.val().length >= 0) {
+             if (input.val().length >= 2) {
                  // тут нужно будет описать ajax-запрос к бэкэнду, который вернет результаты поиска
                  var data = {};
                  data.action = 'search';
