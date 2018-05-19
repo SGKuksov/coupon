@@ -8,6 +8,30 @@ mixin collections()
       '1 сентября': '#',
       'Подарки': '#'
     };
+  -
+    var subСollections = {
+      'Подборка1': '#',
+      'Подборка2': '#',
+      'Подборка3': '#',
+      'Подборка4': '#',
+      'Подборка5': '#',
+      'Подборка6': '#',
+      'Подборка7': '#',
+      'Подборка8': '#',
+      'Подборка9': '#',
+      'Подборка10': '#',
+      'Подборка11': '#',
+      'Подборка12': '#',
+      'Подборка13': '#',
+      'Подборка14': '#',
+      'Подборка15': '#',
+      'Подборка16': '#',
+      'Подборка17': '#',
+      'Подборка18': '#',
+      'Подборка19': '#',
+      'Подборка20': '#',
+      'Подборка21': '#'
+    };
 
   .collections
     h2.collections__title Подборки
@@ -16,5 +40,10 @@ mixin collections()
       each val, key in collections
         li.collections__item
           a.collections__link(href=val, title=key)= key
+    ul.collections__list.collections__list--hide
+      each val, key in subСollections
+        li.collections__item
+          a.collections__link(href=val, title=key)= key
 
-    a.collections__link.collections__link--red(href="#") Все подборки
+    a.collections__toggle(href="#")
+      | Все подборки

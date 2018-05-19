@@ -36,7 +36,12 @@
     }
   }
 
-  &__list {}
+  &__list {
+
+    &--hide {
+      display: none;
+    }
+  }
 
   &__item {}
 
@@ -49,17 +54,27 @@
       font-size: 14px;
       padding-top: 0;
     }
+  }
 
-    &--red {
+  &__toggle {
+    font-size: 18px;
+    line-height: 24px;
+    padding-top: 10px;
+    color: #f00;
+
+    @media (min-width: $screen-md) {
+      font-size: 14px;
+      padding-top: 0;
+    }
+
+    &:hover {
       color: #f00;
 
-      &:hover {
-        color: #f00;
-
-        @media (min-width: $screen-md) {
-          font-size: 14px;
-        }
+      @media (min-width: $screen-md) {
+        font-size: 14px;
       }
     }
+
+    &--active {}
   }
 }
