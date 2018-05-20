@@ -7,9 +7,9 @@ $(document).ready(function() {
   $('.card__place').truncateText();
 
   // подключение автопоиск
-  $('#pageHeaderSearch').autoSearch();
-  $('.modal-location__input').autoSearch();
-  $('.filter-near__search').autoSearch();
+  $('#pageHeaderSearch').autoSearch(0);
+  $('.modal-location__input').autoSearch(2);
+  $('.filter-near__search').autoSearch(2);
 
   // скрытие блока подписки
   $(".subscribe__close").click(function() {
@@ -259,6 +259,7 @@ $(document).ready(function() {
     $('.coupon-modal__text').truncateText();
     $("#couponModal").modal("show");
   });
+  
   $(".card__img-wrap").click(function() {
     if( $(window).width() >= 768 ) {
     $(this).preventDefault();
