@@ -2014,21 +2014,21 @@ img {
 }
 
 .rating__star-empty {
-  background-image: url(../img/sprite-08553083946777775.png);
+  background-image: url(../img/sprite-02113241572303155.png);
   background-position: 0px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-fill {
-  background-image: url(../img/sprite-08553083946777775.png);
+  background-image: url(../img/sprite-02113241572303155.png);
   background-position: -26px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-hover {
-  background-image: url(../img/sprite-08553083946777775.png);
+  background-image: url(../img/sprite-02113241572303155.png);
   background-position: 0px -26px;
   width: 22px;
   height: 22px;
@@ -2771,17 +2771,24 @@ img {
   color: #323232;
 }
 
+.collections__list--hide {
+  display: none;
+}
+
 .collections__link {
   font-size: 18px;
   line-height: 24px;
   padding-top: 10px;
 }
 
-.collections__link--red {
+.collections__toggle {
+  font-size: 18px;
+  line-height: 24px;
+  padding-top: 10px;
   color: #f00;
 }
 
-.collections__link--red:hover {
+.collections__toggle:hover {
   color: #f00;
 }
 
@@ -3869,9 +3876,9 @@ img {
   position: relative;
   height: 300px;
   width: 300px !important;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-orient: vertical;
@@ -3949,12 +3956,16 @@ img {
 }
 
 .card__link {
+  position: relative;
   display: inline-block;
+  line-height: 1rem;
   font-weight: 700;
   color: #323232;
   font-size: 14px;
   height: 32px;
-  overflow: hidden;
+  vertical-align: top;
+  white-space: normal;
+  width: 264px;
 }
 
 .card__link:hover {
@@ -4026,7 +4037,8 @@ img {
 .card__place {
   display: none;
   font-size: 12px;
-  padding: 6px 0 7px 0;
+  height: 28px;
+  width: 90px;
 }
 
 .card__place--in-category {
@@ -4053,9 +4065,9 @@ img {
   position: relative;
   height: 300px;
   width: 300px !important;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-orient: vertical;
@@ -4514,6 +4526,11 @@ img {
 
 .filter-near__link span {
   margin-right: 15px;
+  overflow: hidden;
+  width: 300px;
+  text-align: right;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .filter-near__dropdown {
@@ -4542,12 +4559,16 @@ img {
   border-bottom: 1px solid #dcdcdc;
 }
 
+.filter-near__search-group .searchHolder {
+  width: auto;
+}
+
 .filter-near__search {
   margin-bottom: 15px;
   margin-top: 15px;
   position: relative;
   border-radius: 34px;
-  padding: 9px 15px 8px 15px;
+  padding: 9px 40px 8px 15px;
   height: 34px;
   width: 216px;
   -webkit-box-shadow: inset 0.7px 0.7px 7px rgba(0, 0, 0, 0.2);
@@ -7725,6 +7746,9 @@ label.el-checkbox {
   .main-content__body {
     border-radius: 10px;
   }
+  .filter-near__link span {
+    width: 150px;
+  }
   .modals__dialog--lg {
     margin: 1.75rem auto;
     top: 0;
@@ -7982,7 +8006,11 @@ label.el-checkbox {
     font-size: 14px;
     padding-top: 0;
   }
-  .collections__link--red:hover {
+  .collections__toggle {
+    font-size: 14px;
+    padding-top: 0;
+  }
+  .collections__toggle:hover {
     font-size: 14px;
   }
   .extra-food {
@@ -8201,6 +8229,9 @@ label.el-checkbox {
   }
   .card__sale {
     top: 128px;
+  }
+  .card__link {
+    width: 220px;
   }
   .card__dealer {
     display: none;
@@ -8952,10 +8983,16 @@ label.el-checkbox {
   .card__sale {
     top: 216px;
   }
+  .card__link {
+    width: 300px;
+  }
   .card__dealer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+  .card__place {
+    width: 135px;
   }
   .card__place--in-site {
     display: inline-block;
@@ -9014,6 +9051,9 @@ label.el-checkbox {
     padding-left: 36px;
     padding-top: 49px;
     padding-right: 36px;
+  }
+  .filter-near__link span {
+    width: 250px;
   }
   .modal-select__location-city {
     margin-left: 10px;

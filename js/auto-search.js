@@ -1,5 +1,5 @@
  (function($) {
-     $.fn.autoSearch = function() {
+     $.fn.autoSearch = function( chars ) {
          var request = '';
          var input = this;
          input.wrap('<div class="searchHolder"></div>');
@@ -47,7 +47,7 @@
          });
 
          function searchCheck() {
-             if (input.val().length >= 0) {
+             if (input.val().length >= chars) {
                  // тут нужно будет описать ajax-запрос к бэкэнду, который вернет результаты поиска
                  var data = {};
                  data.action = 'search';
