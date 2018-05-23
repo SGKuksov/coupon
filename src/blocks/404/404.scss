@@ -1,0 +1,74 @@
+.page-not-found {
+  background-color: #ffffff;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  height: 100%;
+
+  @media (min-width: $screen-sm) {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+  }
+
+  @media (min-width: $screen-md) {
+    padding-bottom: 110px;
+    padding-top: 80px;
+  }
+
+  &__title {
+    font-size: 18px;
+  }
+
+  &__slogan {
+    font-size: 64px;
+  }
+
+  &__text {
+    font-size: 14px;
+  }
+
+  &__inner {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+
+    @media (min-width: $screen-md) {
+      flex-direction: row;
+    }
+  }
+
+  &__wrap {
+    width: 228px;
+    height: 159px;
+    margin-bottom: 40px;
+    @media (min-width: $screen-md) {
+      margin-right: 60px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__btn {
+    margin-top: 40px;
+    line-height: 22px;
+    height: 34px;
+    padding-left: 15px;
+    padding-right: 15px;
+    align-self: center;
+    background-color: #fff;
+    border: 1px solid #dfdfdf;
+    border-radius: 4px;
+    color: #787878;
+
+    @media (min-width: $screen-md) {
+      margin-top: 60px;
+    }
+  }
+
+  &__info {
+    width: 260px;
+  }
+}
