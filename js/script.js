@@ -296,4 +296,5 @@ $(document).ready(function() {
   });
 
   // конец скрипта
+  $("##hideAside").hide();
 });
