@@ -1,0 +1,14 @@
+mixin warnauth-modal()
+
+  #warnAuthModal.modal.modals(tabindex="-1" role="dialog" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered.modals__dialog.modals__dialog--md
+      .modal-content.modals__content
+        .modal-header.modals__header
+          h5.modal-title.modals__title Для продолжения вам необходимо авторизоваться
+          a.close.modals__close(href="#" data-dismiss="modal" aria-label="Close")
+            svg.modals__close-icon(width="14" height="14")
+              use(xlink:href="img/sprite-svg.svg#modals__close")
+        .modal-body.modals__body
+          .modals__btn-block
+            button.callAuthModal.modals__btn Войти
+            button.callRegisterModal.modals__btn.modals__btn--gray Регистрация

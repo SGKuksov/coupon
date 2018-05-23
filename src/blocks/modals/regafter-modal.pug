@@ -1,0 +1,19 @@
+mixin regafter-modal()
+
+  #registerAfterModal.modal.modals(tabindex="-1" role="dialog" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered.modals__dialog.modals__dialog--lg
+      .modal-content.modals__content
+        .modal-header.modals__header
+          h5.modal-title.modals__title Спасибо за регистрацию!
+          a.close.modals__close(href="#" data-dismiss="modal" aria-label="Close")
+            svg.modals__close-icon(width="14" height="14")
+              use(xlink:href="img/sprite-svg.svg#modals__close")
+        .modal-body.modals__body
+          p.modals__text
+            | В течение 3 минут вам на почту будет выслано письмо для подтверждения регистрации после чего вы сможете авторизоваться на сайте
+          .modals__input-btn-block
+            button.modals__btn.modals__btn--red(data-dismiss="modal" aria-label="Close") Продолжить поиск купонов
+            a.modals__btn(href="https://mail.google.com/")
+              svg.modals__fb-icon(width="19" height="13")
+                use(xlink:href="img/sprite-svg.svg#modals__mail-icon")
+              span Проверить почту

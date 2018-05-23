@@ -38,10 +38,17 @@ html(class="no-js  page", lang="ru")
 
     +page-footer()
 
-    //- модальные окна
-    +modal-location()
-    //- +coupon-modal()
-    //- +modals()
+    block modal
+      //- модальные окна
+      +modal-select()
+      +modal-location()
+      //- +coupon-modal()
+
+      //- только для страницы купона
+      //- +error-modal()
+
+      //- удалить после отладки
+      //- +modals()
 
     block page-bottom
       script(src="js/jquery.min.js")
