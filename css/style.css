@@ -1629,6 +1629,10 @@ img {
   /* Вписываем фотографию в область */
 }
 
+button {
+  border: none;
+}
+
 /*! Pushy - v1.1.0 - 2017-1-30
 * Pushy is a responsive off-canvas navigation menu using CSS transforms & transitions.
 * https://github.com/christophery/pushy/
@@ -2014,21 +2018,21 @@ img {
 }
 
 .rating__star-empty {
-  background-image: url(../img/sprite-043282824265639364.png);
+  background-image: url(../img/sprite-011388407982788773.png);
   background-position: 0px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-fill {
-  background-image: url(../img/sprite-043282824265639364.png);
+  background-image: url(../img/sprite-011388407982788773.png);
   background-position: -26px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-hover {
-  background-image: url(../img/sprite-043282824265639364.png);
+  background-image: url(../img/sprite-011388407982788773.png);
   background-position: 0px -26px;
   width: 22px;
   height: 22px;
@@ -5078,37 +5082,6 @@ img {
 .modals__mail-icon {
   width: 19px;
   height: 13px;
-}
-
-.modals-panel {
-  position: absolute;
-  width: 200px;
-  height: 360px;
-  padding: 10px;
-  z-index: 1052;
-  border: 1px solid #787878;
-  background-color: #fff;
-  top: 10%;
-  right: 5%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-}
-
-.modals-panel button {
-  text-align: left;
 }
 
 .modal-select {

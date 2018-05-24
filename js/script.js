@@ -161,13 +161,54 @@ $(document).ready(function() {
   // address tab
   $('.coupon__place-btn').click(function() {
     var addressTab = $('#addressTab');
-    addressTab.tab('show');
 
     var id = addressTab.attr('href'),
+    top = $(id).offset().top;
+    $('body,html').animate({
+      scrollTop: top
+    }, 50);
+    addressTab.tab('show');
+  });
+
+  // reviewtab
+  $('.coupon-modal__btn').click(function() {
+    var reviewtab = $('#reviewTab');
+    reviewtab.tab('show');
+
+    var id = reviewtab.attr('href'),
         top = $(id).offset().top;
     $('body,html').animate({
       scrollTop: top
     }, 50);
+  });
+//  рпааааааааааааааааааааааааааааааа
+  var cur;
+
+  var enableTab = function(id) {
+    $('#tabs .tab').removeClass('active').eq(id).addClass('active');
+      $('#content div').removeClass('active').eq(id).addClass('active');
+  };
+
+  var params = location.search;
+  params = params.slice(1, location.search.length);
+  params = params.split('&').map(function(el) {
+    el = el.split('=');
+      if(el[0] == 'tab') cur = el[1];
+  });
+
+  switch(cur * 1) {
+      case 1:
+          enableTab(1);
+          break;
+      case 2:
+          enableTab(2);
+          break;
+      default:
+          enableTab(0);
+  }
+
+  $('#tabs .tab').click(function() {
+    enableTab($(this).index());
   });
 
   // filter-near скрытие блока
@@ -291,10 +332,16 @@ $(document).ready(function() {
   });
 
   // errorModal
-  $("#callErrorModal").click(function() {
+  $("#callErrorModal, .callErrorModal").click(function() {
     $("#errorModal").modal("show");
   });
 
+  // #ratingModal
+  // $("#ratingModal").modal("show");
+  // $("#reviewModal").modal("show");
+  // $("#warnDelModal").modal("show");
+
+
   // конец скрипта
-  $("##hideAside").hide();
+  $("#hideAside").hide();
 });
