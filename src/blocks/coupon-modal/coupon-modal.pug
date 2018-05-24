@@ -1,6 +1,6 @@
 mixin coupon-modal()
 
-  #couponModal.modal.fade.coupon-modal(tabindex='-1', role='dialog', aria-hidden='true')
+  #couponModal.modal.coupon-modal(tabindex='-1', role='dialog', aria-hidden='true')
     .modal-dialog.modal-dialog-centered(role='document')
       .modal-content.coupon-modal__content
         .modal-header.coupon-modal__header
@@ -24,11 +24,11 @@ mixin coupon-modal()
               span
                | Добавить в избранное
 
-            a.coupon-modal__btn(href="#", title="Оставить отзыв")
+            a.coupon-modal__btn(href="coupon_admin.html", title="Оставить отзыв")
               span
                | Оставить отзыв
 
-            a.coupon-modal__link(href="#", title="Отзывы")
+            a.coupon-modal__link(href="coupon_admin.html", title="Отзывы")
               span.coupon-modal__link-title
                | Отзывы
               span.coupon-modal__link-count
@@ -77,9 +77,9 @@ mixin coupon-modal()
                       span.coupon-modal__take-score-count
                        | 0
                   .coupon-modal__take-review-btn-wrap
-                    a.coupon-modal__take-review-btn.coupon-modal__take-review-btn--green(href="#", title="Да")
+                    button.coupon-modal__take-review-btn.coupon-modal__take-review-btn--green(title="Да")
                       | Да
-                    a.coupon-modal__take-review-btn.coupon-modal__take-review-btn--red(href="#", title="Нет")
+                    button.coupon-modal__take-review-btn.coupon-modal__take-review-btn--red.callErrorModal(title="Нет")
                       | Нет
 
 
