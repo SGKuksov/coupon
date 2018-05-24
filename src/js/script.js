@@ -2,311 +2,14 @@ svg4everybody(); // иницализация полифила для IE
 
 $(document).ready(function() {
 
-  var selectCityModal = [
-    '<div class="modal-select">',
-
-    '<div class="modal-select__header">',
-    '<h5 class="modal-select__title">Выбран ваш город ?</h5>',
-    '<a class="modal-select__close" href="#" data-dismiss="modal" aria-label="Close">',
-    '<svg class="close-icon" width="14" height="14"><use xlink:href="img/sprite-svg.svg#modals__close"></use></svg>',
-    '</a>',
-    '</div>',
-
-    '<div class="modal-select__body">',
-    '<div class="modal-select__location">',
-    '<svg class="modal-select__location-icon" width="11" height="16"><use xlink:href="img/sprite-svg.svg#page-header__location"></use></svg>',
-    '<span class="modal-select__location-info">Город</span>',
-    '<a class="modal-select__location-city callModalLocation" href="#">Москва</a>',
-    '</div>',
-    '<div class="modal-select__btn-block">',
-    '<button class="modal-select__btn btn" data-dismiss="modal" aria-label="Close">Да</button>',
-    '<button class="modal-select__btn btn btn--gray" id="modalsBtnCancel">Нет</button>',
-    '</div>',
-    '</div>',
-
-    '</div>'
-  ].join('');
-
-  var ratingModal = [
-    '<div class="modal fade modals" id="ratingModal" tabindex="-1" role="dialog" aria-hidden="true">',
-    '<div class="modal-dialog modal-dialog-centered modals__dialog modals__dialog--md">',
-    '<div class="modal-content modals__content">',
-    '<div class="modal-header modals__header">',
-    '<h5 class="modal-title modals__title">Спасибо за вашу оценку!</h5>',
-    '<a class="close modals__close" href="#" data-dismiss="modal" aria-label="Close">',
-    '<svg class="modals__close-icon" width="14" height="14"><use xlink:href="img/sprite-svg.svg#modals__close"></use></svg>',
-    '</a>',
-    '</div>',
-    '<div class="modal-body modals__body">',
-    '<p class="modals__text">Вы можете поделиться данным купоном со своими друзьями в социальных сетях!</p>',
-    '<div class="socials modals__socials">',
-    '<ul class="socials__list">',
-    '<li class="socials__item">',
-    '<a class="socials__link" href="#" title="facebook">',
-    '<svg class="socials__icon" width="26" height="26"><use xlink:href="img/sprite-svg.svg#socials__fb"></use></svg>',
-    '</a>',
-    '</li>',
-    '<li class="socials__item">',
-    '<a class="socials__link" href="#" title="instagram">',
-    '<svg class="socials__icon" width="26" height="26"><use xlink:href="img/sprite-svg.svg#socials__inst"></use></svg>',
-    '</a>',
-    '</li>',
-    '<li class="socials__item socials__item-fb">',
-    '<a class="socials__link" href="#" title="vkontakte">',
-    '<svg class="socials__icon" width="26" height="26"><use xlink:href="img/sprite-svg.svg#socials__vk"></use></svg>',
-    '</a>',
-    '</li>',
-    '</ul>',
-    '</div>',
-    '<div class="modals__btn-block">',
-    '<button class="modals__btn modals__btn-close" data-dismiss="modal" aria-label="Close">Закрыть</button>',
-    '</div>',
-    '</div>',
-    '</div>',
-    '</div>',
-    '</div>'
-  ].join('');
-
-  var reviewModal = [
-    '<div class="modal fade modals" id="reviewModal" tabindex="-1" role="dialog" aria-hidden="true">',
-    '<div class="modal-dialog modal-dialog-centered modals__dialog modals__dialog--md">',
-    '<div class="modal-content modals__content">',
-    '<div class="modal-header modals__header">',
-    '<h5 class="modal-title modals__title">Спасибо за ваш отзыв!</h5>',
-    '<a class="close modals__close" href="#" data-dismiss="modal" aria-label="Close">',
-    '<svg class="modals__close-icon" width="14" height="14"><use xlink:href="img/sprite-svg.svg#modals__close"></use></svg>',
-    '</a>',
-    '</div>',
-    '<div class="modal-body modals__body">',
-    '<p class="modals__text">Вы можете поделиться данным купоном со своими друзьями в социальных сетях!</p>',
-    '<div class="socials modals__socials">',
-    '<ul class="socials__list">',
-    '<li class="socials__item">',
-    '<a class="socials__link" href="#" title="facebook">',
-    '<svg class="socials__icon" width="26" height="26"><use xlink:href="img/sprite-svg.svg#socials__fb"></use></svg>',
-    '</a>',
-    '</li>',
-    '<li class="socials__item">',
-    '<a class="socials__link" href="#" title="instagram">',
-    '<svg class="socials__icon" width="26" height="26"><use xlink:href="img/sprite-svg.svg#socials__inst"></use></svg>',
-    '</a>',
-    '</li>',
-    '<li class="socials__item socials__item-fb">',
-    '<a class="socials__link" href="#" title="vkontakte">',
-    '<svg class="socials__icon" width="26" height="26"><use xlink:href="img/sprite-svg.svg#socials__vk"></use></svg>',
-    '</a>',
-    '</li>',
-    '</ul>',
-    '</div>',
-    '<div class="modals__btn-block">',
-    '<button class="modals__btn modals__btn-close" data-dismiss="modal" aria-label="Close">Закрыть</button>',
-    '</div>',
-    '</div>',
-    '</div>',
-    '</div>',
-    '</div>'
-  ].join('');
-
-  var errorModal = [
-    '<div class="modal fade modals" id="errorModal" tabindex="-1" role="dialog" aria-hidden="true">',
-    '<div class="modal-dialog modal-dialog-centered modals__dialog modals__dialog--md">',
-    '<div class="modal-content modals__content">',
-    '<div class="modal-header modals__header">',
-    '<h5 class="modal-title modals__title">Купон не сработал?</h5>',
-    '<a class="close modals__close" href="#" data-dismiss="modal" aria-label="Close">',
-    '<svg class="modals__close-icon" width="14" height="14"><use xlink:href="img/sprite-svg.svg#modals__close"></use></svg>',
-    '</a>',
-    '</div>',
-    '<form class="modal-body modals__body" action="">',
-    '<p class="modals__text">Нашли ошибку? Расскажите нам!</p>',
-    '<div class="el-radio modals__radio">',
-    '<input class="modals__radio-input" id="r-conditions" type="radio" name="error" value="option1" checked="" />',
-    '<label class="el-radio-style" for="r-conditions"></label>',
-    '<label class="modals__label" for="r-conditions">Ошибка в условиях</label>',
-    '</div>',
-    '<div class="el-radio modals__radio">',
-    '<input class="modals__radio-input" id="r-disconts" type="radio" name="error" value="option2" checked="" />',
-    '<label class="el-radio-style" for="r-disconts"></label>',
-    '<label class="modals__label" for="r-disconts">Не удалось получить скидку</label>',
-    '</div>',
-    '<div class="el-radio modals__radio">',
-    '<input class="modals__radio-input" id="r-other" type="radio" name="error" value="option3" checked="" />',
-    '<label class="el-radio-style" for="r-other"></label>',
-    '<label class="modals__label" for="r-other">Другое</label>',
-    '</div>',
-    '<textarea class="modals__textarea" name="msg"></textarea>',
-    '<div class="modals__btn-block">',
-    '<button class="modals__btn modals__btn-input" type="submit">Отправить</button>',
-    '</div>',
-    '</form>',
-    '</div>',
-    '</div>',
-    '</div>'
-  ].join('');
-
-  var registerModal = [
-    '<div class="modal fade modals" id="registerModal" tabindex="-1" role="dialog" aria-hidden="true">',
-    '<div class="modal-dialog modal-dialog-centered modals__dialog modals__dialog--widescreen">',
-    '<div class="modal-content modals__content modals__content--widescreen">',
-    '<div class="modal-header modals__header modals__header--widescreen">',
-    '<h5 class="modal-title modals__title">Регистрация</h5>',
-    '<a class="close modals__close" href="#" data-dismiss="modal" aria-label="Close">',
-    '<svg class="modals__close-icon" width="14" height="14"><use xlink:href="img/sprite-svg.svg#modals__close"></use></svg>',
-    '</a>',
-    '</div>',
-    '<form class="modal-body modals__body" action="">',
-    '<div class="modals__input-block">',
-    '<label class="modals__input-label" for="mail">Электронная почта</label>',
-    '<input class="modals__input-txt" id="mail" type="email" name="mail" required="required" placeholder="personal@hotkupon.ru" />',
-    '</div>',
-    '<div class="modals__input-block">',
-    '<label class="modals__input-label" for="login">Логин</label>',
-    '<input class="modals__input-txt" id="login" type="text" name="login" required="required" placeholder="harold1" />',
-    '</div>',
-    '<div class="modals__input-block">',
-    '<label class="modals__input-label" for="pass">Пароль</label>',
-    '<input class="modals__input-pass" id="pass" type="password" name="pass" required="required" placeholder="********" />',
-    '</div>',
-    '<div class="modals__input-btn-block">',
-    '<button class="modals__input-btn btn" type="submit">Регистрация</button>',
-    '</div>',
-    '</form>',
-    '<div class="modal-body modals__footer">',
-    '<p class="modals__desc">Зарегистрироваться через<br> соцсети</p>',
-    '<div class="modals__input-btn-block">',
-    '<button class="modals__btn">',
-    '<svg class="modals__fb-icon" width="14" height="14"><use xlink:href="img/sprite-svg.svg#modals__fb"></use></svg>',
-    '<span>Facebook</span>',
-    '</button>',
-    '<button class="modals__btn">',
-    '<svg class="modals__vk-icon" width="20" height="10"><use xlink:href="img/sprite-svg.svg#modals__vk"></use></svg>',
-    '<span>Вконтакте</span>',
-    '</button>',
-    '</div>',
-    '</div>',
-    '</div>',
-    '</div>',
-    '</div>'
-  ].join('');
-
-  var autorizModal = [
-    '<div class="modal fade modals" id="autorizModal" tabindex="-1" role="dialog" aria-hidden="true">',
-    '<div class="modal-dialog modal-dialog-centered modals__dialog modals__dialog--widescreen">',
-    '<div class="modal-content modals__content modals__content--widescreen">',
-    '<div class="modal-header modals__header modals__header--widescreen">',
-    '<h5 class="modal-title modals__title">Авторизация</h5>',
-    '<a class="close modals__close" href="#" data-dismiss="modal" aria-label="Close">',
-    '<svg class="modals__close-icon" width="14" height="14"><use xlink:href="img/sprite-svg.svg#modals__close"></use></svg>',
-    '</a>',
-    '</div>',
-    '<form class="modal-body modals__body" action="">',
-    '<div class="modals__input-block">',
-    '<label class="modals__input-label" for="login">Логин</label>',
-    '<input class="modals__input-txt" id="login" type="text" name="login" required="required" placeholder="harold1" />',
-    '</div>',
-    '<div class="modals__input-block">',
-    '<label class="modals__input-label" for="pass">Пароль</label>',
-    '<input class="modals__input-pass" id="pass" type="password" name="pass" required="required" placeholder="********" />',
-    '</div>',
-    '<div class="modals__btn-block modals__btn-block--column">',
-    '<button class="modals__input-btn btn" type="submit">Войти</button>',
-    '<p class="modals__desc">или</p>',
-    '<button class="modals__btn modals__btn--gray" type="submit">Зарегистрироваться</button>',
-    '</div>',
-    '</form>',
-    '<div class="modal-body modals__footer">',
-    '<p class="modals__desc">Авторизация через</p>',
-    '<div class="modals__input-btn-block">',
-    '<button class="modals__btn">',
-    '<svg class="modals__fb-icon" width="14" height="14"><use xlink:href="img/sprite-svg.svg#modals__fb"></use></svg>',
-    '<span>Facebook</span>',
-    '</button>',
-    '<button class="modals__btn">',
-    '<svg class="modals__vk-icon" width="20" height="10"><use xlink:href="img/sprite-svg.svg#modals__vk"></use></svg>',
-    '<span>Вконтакте</span>',
-    '</button>',
-    '</div>',
-    '</div>',
-    '</div>',
-    '</div>',
-    '</div>'
-  ].join('');
-
-  var warnAutorModal = [
-    '<div class="modal fade modals" id="warnAutorModal" tabindex="-1" role="dialog" aria-hidden="true">',
-    '<div class="modal-dialog modal-dialog-centered modals__dialog modals__dialog--md">',
-    '<div class="modal-content modals__content">',
-    '<div class="modal-header modals__header">',
-    '<h5 class="modal-title modals__title">Для продолжения вам необходимо авторизоваться</h5>',
-    '<a class="close modals__close" href="#" data-dismiss="modal" aria-label="Close">',
-    '<svg class="modals__close-icon" width="14" height="14"><use xlink:href="img/sprite-svg.svg#modals__close"></use></svg>',
-    '</a>',
-    '</div>',
-    '<div class="modal-body modals__body">',
-    '<div class="modals__btn-block">',
-    '<button class="modals__btn" id="callAutorizModal">Войти</button>',
-    '<button class="modals__btn modals__btn--gray" id="callRegisterModal">Регистрация</button>',
-    '</div>',
-    '</div>',
-    '</div>',
-    '</div>',
-    '</div>'
-  ].join('');
-
-  var warnDelModal = [
-    '<div class="modal fade modals" id="warnDelModal" tabindex="-1" role="dialog" aria-hidden="true">',
-    '<div class="modal-dialog modal-dialog-centered modals__dialog modals__dialog--md">',
-    '<div class="modal-content modals__content">',
-    '<div class="modal-header modals__header">',
-    '<h5 class="modal-title modals__title">Вы уверены, что хотите удалить данный купон из избранного ?</h5>',
-    '<a class="close modals__close" href="#" data-dismiss="modal" aria-label="Close">',
-    '<svg class="modals__close-icon" width="14" height="14"><use xlink:href="img/sprite-svg.svg#modals__close"></use></svg>',
-    '</a>',
-    '</div>',
-    '<div class="modal-body modals__body">',
-    '<div class="modals__btn-block">',
-    '<button class="modals__btn">Да</button>',
-    '<button class="modals__btn modals__btn--gray" data-dismiss="modal" aria-label="Close">Отмена</button>',
-    '</div>',
-    '</div>',
-    '</div>',
-    '</div>',
-    '</div>'
-  ].join('');
-
-  var registerAfterModal = [
-    '<div class="modal fade modals" id="registerAfterModal" tabindex="-1" role="dialog" aria-hidden="true">',
-    '<div class="modal-dialog modal-dialog-centered modals__dialog modals__dialog--lg">',
-    '<div class="modal-content modals__content">',
-    '<div class="modal-header modals__header">',
-    '<h5 class="modal-title modals__title">Спасибо за регистрацию!</h5>',
-    '<a class="close modals__close" href="#" data-dismiss="modal" aria-label="Close">',
-    '<svg class="modals__close-icon" width="14" height="14"><use xlink:href="img/sprite-svg.svg#modals__close"></use></svg>',
-    '</a>',
-    '</div>',
-    '<div class="modal-body modals__body">',
-    '<p class="modals__text">В течение 3 минут вам на почту будет выслано письмо для подтверждения регистрации, после чего вы сможете авторизоваться на сайте</p>',
-    '<div class="modals__input-btn-block">',
-    '<button class="modals__btn  modals__btn--red" data-dismiss="modal" aria-label="Close">Продолжить поиск купонов</button>',
-    '<a class="modals__btn" href="https://mail.google.com/">',
-    '<svg class="modals__fb-icon" width="19" height="13"><use xlink:href="img/sprite-svg.svg#modals__mail-icon"></use></svg>',
-    '<span>Проверить почту</span>',
-    '</a>',
-    '</div>',
-    '</div>',
-    '</div>',
-    '</div>',
-    '</div>'
-  ].join('');
-
   // вызов обрезания текста
   $('.card__link').truncateText();
   $('.card__place').truncateText();
 
   // подключение автопоиск
-  $('#pageHeaderSearch').autoSearch();
-  $('.modal-location__input').autoSearch();
-  $('.filter-near__search').autoSearch();
+  $('#pageHeaderSearch').autoSearch(0);
+  $('.modal-location__input').autoSearch(2);
+  $('.filter-near__search').autoSearch(2);
 
   // скрытие блока подписки
   $(".subscribe__close").click(function() {
@@ -341,76 +44,11 @@ $(document).ready(function() {
     }
   });
 
-  // вызов малого модального при открытии страницы
-  setTimeout(function() {
-    $(selectCityModal).appendTo(".page-header__container")
-
-    // скрытие modal-select
-    $(".modal-select__close").click(function() {
-      $(".modal-select").hide();
-    });
-    $(".modal-select__btn").click(function() {
-      $(".modal-select").hide();
-    });
-  }, 1000);
-
-
-
-  //вызов большого модального окна при клике на "Нет"
-  $("#modalsBtnCancel").click(function() {
-    // var doc_w = $(window).width();
-
-    // if (doc_w > 768 ) {
-    $("#selectCityModal").modal('hide');
-    $("#modalLocation").modal('show');
-    // }
-  });
-
-  //вызов большого модального окна выбора города при клике на городе
-  $(".callModalLocation").click(function(e) {
-    e.preventDefault();
-    var doc_w = $(window).width();
-
-
-    $("body").data("modalIsOpen", false);
-
-    if (doc_w > 1023) {
-      $("#modalLocation").modal('show');
-      $("#modalLocation").removeClass('pushy pushy-left').addClass("modal fade").children().removeClass('pushy-content').css("z-index", 2000);
-      $("aside").show();
-      $(".modal-location__btn").html("Это мой город");
-    } else {
-
-      // боковое меню выбора города
-      $("#modalLocation").addClass('pushy pushy-left').removeClass("modal fade").children().addClass('pushy-content');
-      $("body").removeClass('pushy-open-left');
-      $("aside").hide();
-      $("#modalLocation").show().css("z-index", 1050);
-      $("body").addClass('pushy-open-left');
-      $(".modal-location__btn").html("Найти");
-    }
-  });
-
+  // открытие и закрытие меню
   $(".menu-btn").click(function(event) {
     $("aside").show();
     $("#modalLocation").removeClass('pushy pushy-left').addClass("modal fade").children().removeClass('pushy-content');
     $("#modalLocation").css("z-index", 2000);
-  });
-
-  // modals-panel
-  // $('.modals-panel').hide();
-
-  // #callAutorizModal
-  $("#callAutorizModal").click(function() {
-    $(".modals-panel__warnAutorModal").modal('hide');
-    $("#autorizModal").modal('show');
-  });
-
-  // #callRegisterModal
-  $("#callRegisterModal").click(function() {
-    $(".modals-panel__warnAutorModal").modal('hide');
-    $(registerModal).appendTo("body");
-    $(".modals-panel__registerModal").modal('show');
   });
 
   $(".page-header__search-icon").click(function() {
@@ -433,6 +71,7 @@ $(document).ready(function() {
     }
   });
 
+  // показ строки поиска в мобильном меню
   $(document).mouseup(function(e) {
     var pageHeaderSearch = $(".page-header__search");
     var pageHeaderCancel = $(".page-header__cancel");
@@ -458,6 +97,7 @@ $(document).ready(function() {
     }
   });
 
+  // скрытие строки поиска в мобильном меню
   $(".page-header__cancel--show").click(function() {
     var doc_w = $(window).width();
 
@@ -467,7 +107,7 @@ $(document).ready(function() {
       $(".page-header__input").attr({
         "placeholder": "",
         "autofocus": ""
-      })
+      });
       $(".page-header__cancel").removeClass("page-header__cancel--show");
       $(".page-header__submit").removeClass("page-header__submit--show");
       $(".overlay").removeClass("overlay--show").addClass("site-overlay").hide();
@@ -486,6 +126,11 @@ $(document).ready(function() {
     variableWidth: true
   });
 
+  // лайтбокс
+  $("#placeGallery").click(function() {
+    // $("").modal('show');
+  });
+
   // рейтинг на запись
   // https://github.com/antennaio/jquery-bar-rating
   $('.rating-bar').barrating({
@@ -497,28 +142,15 @@ $(document).ready(function() {
   // рейтинг на чтение
   $('.rating-bar--readonly').barrating('readonly', true); //только чтение
 
-  // скролл
-  $("body").scroll(function() {
-    // $(".filter-near__dropdown").hide();
-    // $("#filterNearLink").dropdown("toggle");
-    // console.log('scroll');
-  });
-
-  // закрытие модального окна при скролле
-  // $(window).scroll(function(e) {
-  //   var dropdowns = $('.dropdown-toggle');
-  //   $.each(dropdowns, function(i, c) {
-  //     $(c).parent().removeClass('open');
-  //   })
-  // });
-
-  // tabs
+  // #onMapTab
   $('#onMapTab').on('shown.bs.tab', function() {
     if ($(document).width() >= 480) {
       $('.list-of-places__header').show();
       $('.filter__sort').toggle();
     }
   });
+
+  // #byListTab
   $('#byListTab').on('shown.bs.tab', function() {
     if ($(document).width() >= 480) {
       $('.list-of-places__header').hide();
@@ -532,80 +164,137 @@ $(document).ready(function() {
     addressTab.tab('show');
 
     var id = addressTab.attr('href'),
-      top = $(id).offset().top;
+        top = $(id).offset().top;
     $('body,html').animate({
       scrollTop: top
-    }, 20);
+    }, 50);
   });
 
-  // лайтбокс
-  $("#placeGallery").click(function() {
-    // $("").modal('show');
+  // filter-near скрытие блока
+  $("body").scroll(function() {
+
+    if ( $(".filter-near__dropdown").hasClass("show") ) {
+      $(".filter-near__dropdown").dropdown("toggle");
+    }
+
+    // Скрытие выпадающего меню при скролле.
+    // Работает нестабильно
+    // if ( $(".filter-near__dropdown").hasClass("show") && $(".filter-near__search-group").find( $(".autoFillBar") ).css("display") == "none" ) {
+    //   $(".filter-near__dropdown").dropdown("toggle");
+    // }
   });
 
-  // modals-panel
-  $(".modals-panel__close").click(function() {
-    $(this).parent().hide();
-  });
+  // filter-near ввод значение
+  $(".filter-near__submit").click(function() {
+    var filterNearSearchValue = $(".filter-near__search").val();
+    var filterNearLink = $(".filter-near__link").find("span");
 
-  // modals
-  $(".modals-panel__selectCityModal").click(function() {
-    // $(selectCityModal).appendTo("body");
-    $(".modal-select").show();
-  });
-
-  $(".modals-panel__ratingModal").click(function() {
-    $(ratingModal).appendTo("body");
-    $("#ratingModal").modal("show");
-  });
-  $(".modals-panel__reviewModal").click(function() {
-    $(reviewModal).appendTo("body");
-    $("#reviewModal").modal("show");
-  });
-
-  $(".modals-panel__errorModal").click(function() {
-    $(errorModal).appendTo("body");
-    $("#errorModal").modal("show");
-  });
-
-  $(".modals-panel__modalLocation").click(function() {
-    $("#modalLocation").modal("show");
-  });
-
-  $(".modals-panel__couponModal").click(function() {
-    $('.coupon-modal__text').truncateText();
-    $("#couponModal").modal("show");
-  });
-  $(".card__img-wrap").click(function() {
-    if( $(window).width() >= 768 ) {
-    $(this).preventDefault();
-    $('.coupon-modal__text').truncateText();
-    $("#couponModal").modal("show");
+    if ( filterNearSearchValue !== "" ) {
+      filterNearLink.html(filterNearSearchValue);
     }
   });
 
-  $(".modals-panel__registerModal").click(function() {
-    $(registerModal).appendTo("body");
-    $("#registerModal").modal("show");
+  // collections
+  $(".collections__toggle").html("Все подборки");
+
+  $(".collections__toggle").click(function(e) {
+    e.preventDefault();
+
+    if ($(this).hasClass("collections__toggle--active")) {
+      $(this).html("Свернуть").addClass("collections__toggle--active");
+      $(".collections__list--hide").slideToggle();
+    } else {
+      $(this).html("Все подборки").removeClass("collections__toggle--active");
+      $(".collections__list--hide").slideToggle();
+    }
   });
 
-  $(".modals-panel__autorizModal").click(function() {
-    $(autorizModal).appendTo("body");
+  // вызов modal-select при открытии страницы
+  setTimeout(function() {
+    var doc_w = $(window).width();
+
+    if (doc_w >=768) {
+      $("#modalSelect").show();
+    }
+  }, 1000);
+
+  // скрытие modal-select
+  $(".modal-select__close").click(function() {
+    $("#modalSelect").hide();
+  });
+  $(".modal-select__btn").click(function() {
+    $("#modalSelect").hide();
+  });
+
+  //вызов большого модального окна при клике на "Нет"
+  $("#modalsBtnCancel").click(function() {
+    // var doc_w = $(window).width();
+
+    // if (doc_w > 768 ) {
+    $("#selectCityModal").modal('hide');
+    $("#modalLocation").modal('show');
+    // }
+  });
+
+  //вызов большого модального окна выбора города при клике на городе
+  $(".callModalLocation").click(function(e) {
+    e.preventDefault();
+    var doc_w = $(window).width();
+
+    $("body").data("modalIsOpen", false);
+
+    if (doc_w > 1023) {
+      $("#modalLocation").modal('show');
+      $("#modalLocation").removeClass('pushy pushy-left').addClass("modal fade").children().removeClass('pushy-content').css("z-index", 2000);
+      $("aside").show();
+      $(".modal-location__btn").html("Это мой город");
+    } else {
+
+      // боковое меню выбора города
+      $("#modalLocation").addClass('pushy pushy-left').removeClass("modal fade").children().addClass('pushy-content');
+      $("body").removeClass('pushy-open-left');
+      $("aside").hide();
+      $("#modalLocation").show().css("z-index", 1050);
+      $("body").addClass('pushy-open-left');
+      $(".modal-location__btn").html("Найти");
+    }
+  });
+
+  // вызов купона по клику на фото
+  $(".card__img-wrap").click(function() {
+    $("#couponModal").modal("show");
+  });
+
+  // вызов окна авторизации по иконке в шапке
+  $("#callAuthModal, .callAuthModal").click(function() {
+    $("#warnAuthModal").modal("hide");
+    $("#registerModal").modal("hide");
     $("#autorizModal").modal("show");
   });
 
-  $(".modals-panel__warnAutorModal").click(function() {
-    $(warnAutorModal).appendTo("body");
-    $("#warnAutorModal").modal("show");
+  // вызов окна регистрации по клику на регистрация в модальном окне
+  $("#callRegisterModal, .callRegisterModal").click(function() {
+    $("#warnAuthModal").modal("hide");
+    $("#autorizModal").modal("hide");
+    $("#registerModal").modal("show");
   });
 
-  $(".modals-panel__warnDelModal").click(function() {
-    $(warnDelModal).appendTo("body");
-    $("#warnDelModal").modal("show");
-  });
-
-  $(".modals-panel__registerAfterModal").click(function() {
-    $(registerAfterModal).appendTo("body");
+  // вызов окна после регистрации по клику на регистрация в модальном окне
+  $("#callRegisterAfterModal").click(function() {
+    $("#registerModal").modal("hide");
     $("#registerAfterModal").modal("show");
   });
+
+  // warnAuthModal
+  $(".modals-panel__warnAutorModal").click(function() {
+    $("#warnAuthModal").modal("show");
+  });
+
+  // errorModal
+  $("#callErrorModal").click(function() {
+    $("#errorModal").modal("show");
+  });
+
+  // конец скрипта
+  $("##hideAside").hide();
 });

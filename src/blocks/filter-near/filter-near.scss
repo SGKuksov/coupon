@@ -6,6 +6,18 @@
 
     span {
       margin-right: 15px;
+      overflow: hidden;
+      width: 300px;
+      text-align: right;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+
+      @media (min-width: $screen-sm) {
+        width: 150px;
+      }
+      @media (min-width: $screen-lg) {
+        width: 250px;
+      }
     }
   }
 
@@ -26,6 +38,10 @@
     align-items: center;
     height: 70px;
     border-bottom: 1px solid #dcdcdc;
+
+    .searchHolder {
+      width: auto;
+    }
   }
 
   &__search {
@@ -33,7 +49,7 @@
     margin-top: 15px;
     position: relative;
     border-radius: 34px;
-    padding: 9px 15px 8px 15px;
+    padding: 9px 40px 8px 15px;
     height: 34px;
     width: 216px;
     box-shadow: inset 0.7px 0.7px 7px rgba(0, 0, 0, 0.2);

@@ -80,9 +80,9 @@ mixin coupon(admin, is_space)
                     span.coupon__take-score-count
                      | 0
                 .coupon__take-review-btn-wrap
-                  a.coupon__take-review-btn.coupon__take-review-btn--green(href="#", title="Да")
+                  button.coupon__take-review-btn.coupon__take-review-btn--green(title="Да")
                     | Да
-                  a.coupon__take-review-btn.coupon__take-review-btn--red(href="#", title="Нет")
+                  button#callErrorModal.coupon__take-review-btn.coupon__take-review-btn--red(title="Нет")
                     | Нет
 
             if (!is_space)
@@ -114,7 +114,7 @@ mixin coupon(admin, is_space)
                 | Время работы:
               span.coupon__contacts-timetable
                 | Пн-Вс: 08:00-22:00
-              a.coupon__place-btn(href="#address")
+              a.coupon__place-btn(href="#addressTab")
                 | Посмотреть адреса
             .coupon__sharing
               h3.coupon__sharing-title

@@ -5,7 +5,7 @@ mixin main-content-index()
       .main-content__inner
 
         -
-          var title1 = "Скидка до 50% на первое посещение бассейна"
+          var title1 = "Скидка до 50% на первое посещение бассейна Скидка до 50% на первое посещение бассейна"
           var title2 = "Скидка до 30% на первое посещение бассейна"
           var sale1 = "50%"
           var sale2 = "30%"
@@ -20,7 +20,7 @@ mixin main-content-index()
           var place2 = "Аквапарк «Родео Драйв»"
 
         .card
-          a.card__img-wrap(href="coupon_admin.html")
+          a.card__img-wrap(href="#")
             img.card__img(width="336" height="231" src="img/card__photo.jpg", alt=title1)
 
           span.card__sale до&nbsp;
@@ -28,18 +28,18 @@ mixin main-content-index()
           span.card__price от&nbsp;
             span=price1
 
-          a.card__link(href="#" title=title1)=title1
+          a.card__link(href="coupon_admin.html" title=title1)=title1
 
           .card__meta
-            a.card__category(href="#" title=category1)=category1
-            a.card__dealer(href="#" title=dealer1)
+            a.card__category(href="category_admin.html" title=category1)=category1
+            a.card__dealer(href="site_admin.html" title=dealer1)
               svg.card__dealer-link(width="14" height="14")
                 use(xlink:href="img/sprite-svg.svg#card__dealer-link")
               span=dealer1
-            a.card__place(href="#" title=place1)=place1
+            a.card__place(href="place_admin.html" title=place1)=place1
 
         .card
-          a.card__img-wrap(href="coupon_admin.html")
+          a.card__img-wrap(href="#")
             img.card__img(width="336" height="231" src="img/card__photo.jpg", alt=title2)
 
           span.card__sale до&nbsp;
@@ -47,21 +47,21 @@ mixin main-content-index()
           span.card__price.card__price--green от&nbsp;
             span=price2
 
-          a.card__link(href="#" title=title2)=title2
+          a.card__link(href="coupon_admin.html" title=title2)=title2
 
           .card__meta
-            a.card__category(href="#" title=category2)=category2
-            a.card__dealer(href="#" title=dealer2)
+            a.card__category(href="category_admin.html" title=category2)=category2
+            a.card__dealer(href="site_admin.html" title=dealer2)
               svg.card__dealer-link(width="14" height="14")
                 use(xlink:href="img/sprite-svg.svg#card__dealer-link")
               span=dealer2
-            a.card__place(href="#" title=place2)=place2
+            a.card__place(href="place_admin.html" title=place2)=place2
 
         +advert("Реклама")
         +subscribe()
 
         .card
-          a.card__img-wrap(href="coupon_admin.html")
+          a.card__img-wrap(href="#")
             img.card__img(width="336" height="231" src="img/card__photo.jpg", alt=title1)
 
           span.card__sale до&nbsp;
@@ -69,18 +69,18 @@ mixin main-content-index()
           span.card__price от&nbsp;
             span=price1
 
-          a.card__link(href="#" title=title1)=title1
+          a.card__link(href="coupon_admin.html" title=title1)=title1
 
           .card__meta
-            a.card__category(href="#" title=category1)=category1
-            a.card__dealer(href="#" title=dealer1)
+            a.card__category(href="category_admin.html" title=category1)=category1
+            a.card__dealer(href="site_admin.html" title=dealer1)
               svg.card__dealer-link(width="14" height="14")
                 use(xlink:href="img/sprite-svg.svg#card__dealer-link")
               span=dealer1
-            a.card__place(href="#" title=place1)=place1
+            a.card__place(href="place_admin.html" title=place1)=place1
 
         .card
-          a.card__img-wrap(href="coupon_admin.html")
+          a.card__img-wrap(href="#")
             img.card__img(width="336" height="231" src="img/card__photo.jpg", alt=title2)
 
           span.card__sale до&nbsp;
@@ -88,15 +88,15 @@ mixin main-content-index()
           span.card__price.card__price--green от&nbsp;
             span=price2
 
-          a.card__link(href="#" title=title2)=title2
+          a.card__link(href="coupon_admin.html" title=title2)=title2
 
           .card__meta
-            a.card__category(href="#" title=category2)=category2
-            a.card__dealer(href="#" title=dealer2)
+            a.card__category(href="category_admin.html" title=category2)=category2
+            a.card__dealer(href="site_admin.html" title=dealer2)
               svg.card__dealer-link(width="14" height="14")
                 use(xlink:href="img/sprite-svg.svg#card__dealer-link")
               span=dealer2
-            a.card__place(href="#" title=place2)=place2
+            a.card__place(href="place_admin.html" title=place2)=place2
 
       .main-content__btn-block
         a.main-content__btn.btn(href="#") Показать еще...

@@ -115,12 +115,26 @@
   }
 
   &__link {
+    position: relative;
     display: inline-block;
+    line-height: 1rem;
     font-weight: 700;
     color: #323232;
     font-size: 14px;
     height: 32px;
-    overflow: hidden;
+    vertical-align: top;
+    white-space: normal;
+    // overflow: hidden;
+
+    width: 264px;
+
+    @media (min-width: $screen-md) {
+      width: 220px;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: 300px;
+    }
 
     &:hover {
       font-weight: 700;
@@ -185,7 +199,13 @@
   &__place {
     display: none;
     font-size: 12px;
-    padding: 6px 0 7px 0;
+    height: 28px;
+
+    width: 90px;
+
+    @media (min-width: $screen-lg) {
+      width: 135px;
+    }
 
     &--in-category {
       display: inline-block;

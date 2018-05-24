@@ -43,10 +43,17 @@ html(class="no-js  page", lang="ru")
 
     +page-footer()
 
-    //- модальные окна
-    +modal-location()
-    +coupon-modal()
-    +modals()
+    block modal
+      //- модальные окна
+      +modal-select()
+      +modal-location()
+      +coupon-modal()
+
+      //- только для страницы купона
+      +error-modal()
+
+      //- удалить после отладки
+      //- +modals()
 
     block page-bottom
       script(src="js/jquery.min.js")
@@ -61,6 +68,7 @@ html(class="no-js  page", lang="ru")
       script(src="js/truncate.js")
       script(src="js/auto-search.js")
       script(src="js/jquery.barrating.min.js")
+      script(src="js/modals.js")
       script(src="js/script.js")
       script(src="js/map.js")
       //- script(src="js/script.min.js")

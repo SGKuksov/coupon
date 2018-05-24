@@ -1,0 +1,29 @@
+mixin error-modal()
+
+  #errorModal.modal.modals(tabindex="-1" role="dialog" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered.modals__dialog.modals__dialog--md
+      .modal-content.modals__content
+        .modal-header.modals__header
+          h5.modal-title.modals__title Купон не сработал?
+          a.close.modals__close(href="#" data-dismiss="modal" aria-label="Close")
+            svg.modals__close-icon(width="14" height="14")
+              use(xlink:href="img/sprite-svg.svg#modals__close")
+        form.modal-body.modals__body(action="")
+          p.modals__text Нашли ошибку? Расскажите нам!
+          .el-radio.modals__radio
+            input#r-conditions.modals__radio-input(type="radio" name="error" value="option1" checked="")
+            label.el-radio-style(for="r-conditions")
+            label.modals__label(for="r-conditions") Ошибка в условиях
+          .el-radio.modals__radio
+            input#r-disconts.modals__radio-input(type="radio" name="error" value="option2" checked="")
+            label.el-radio-style(for="r-disconts")
+            label.modals__label(for="r-disconts") Не удалось получить скидку
+          .el-radio.modals__radio
+            input#r-other.modals__radio-input(type="radio" name="error" value="option3" checked="")
+            label.el-radio-style(for="r-other")
+            label.modals__label(for="r-other") Другое
+          textarea.modals__textarea(name="msg")
+          .modals__btn-block
+            button.modals__btn.modals__btn-input(type="submit") Отправить
+
+

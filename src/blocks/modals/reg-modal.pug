@@ -1,0 +1,36 @@
+mixin reg-modal()
+
+  #registerModal.modal.modals(tabindex="-1" role="dialog" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered.modals__dialog.modals__dialog--widescreen
+      .modal-content.modals__content.modals__content--widescreen
+        .modal-header.modals__header.modals__header--widescreen
+          h5.modal-title.modals__title Регистрация
+          a.close.modals__close(href="#" data-dismiss="modal" aria-label="Close")
+            svg.modals__close-icon(width="14" height="14")
+              use(xlink:href="img/sprite-svg.svg#modals__close")
+        form.modal-body.modals__body(action="")
+          .modals__input-block
+            label.modals__input-label(for="mail") Электронная почта
+            input#mail.modals__input-txt(type="email" name="mail" required="required" placeholder="personal@hotkupon.ru")
+          .modals__input-block
+            label.modals__input-label(for="login") Логин
+            input#login.modals__input-txt(type="text" name="login" required="required" placeholder="harold1")
+          .modals__input-block
+            label.modals__input-label(for="pass") Пароль
+            input#pass.modals__input-pass(type="password" name="pass" required="required" placeholder="********")
+          .modals__input-btn-block
+            button.modals__input-btn.btn#callRegisterAfterModal(type="submit") Регистрация
+        .modal-body.modals__footer
+          p.modals__desc
+            | Зарегистрироваться через
+            br
+            |  соцсети
+          .modals__input-btn-block
+            button.modals__btn
+              svg.modals__fb-icon(width="14" height="14")
+                use(xlink:href="img/sprite-svg.svg#modals__fb")
+              span Facebook
+            button.modals__btn
+              svg.modals__vk-icon(width="20" height="10")
+                use(xlink:href="img/sprite-svg.svg#modals__vk")
+              span Вконтакте

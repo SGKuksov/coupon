@@ -1,7 +1,7 @@
 extends templates/coupon_layout.pug
 
 block meta
-  title Coupon page
+  title Place page
   meta(name='description', content='')
 
 //- block append head
@@ -22,6 +22,12 @@ block coupon
 block coupon-gallery
   +coupon-gallery("Текущие акции")
   +coupon-gallery("Прошедшие акции", true)
+
+block append modal
+  +auth-modal()
+  +reg-modal()
+  +regafter-modal()
+  +warnauth-modal()
 
 //- block append page-bottom
   //- script(src='some.js')

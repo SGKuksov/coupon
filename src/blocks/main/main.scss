@@ -2,6 +2,7 @@
   flex: 1;
 
   &__container {
+    height: 100%;
 
     @media (min-width: $screen-sm) {
       padding: 0px 67px;
