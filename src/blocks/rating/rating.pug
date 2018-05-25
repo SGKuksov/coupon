@@ -1,4 +1,4 @@
-mixin rating(readonly)
+mixin rating(readonly, score)
 
   if (!readonly)
     .stars.stars-example-fontawesome.rating
@@ -32,29 +32,8 @@ mixin rating(readonly)
           option(value="3") 3
           option(value="4") 4
           option(value="5") 5
-      .rating__label
-        span.title.current-rating
-          span.value.rating__score 4,52
-          span.rating__count (24 голоса)
-
-  //- .rating__stars
-    span.rating__star
-      svg.rating__star-icon(width="17" height="17")
-        use(xlink:href="img/sprite-svg.svg#rating__star-fill")
-    span.rating__star
-      svg.rating__star-icon(width="17" height="17")
-        use(xlink:href="img/sprite-svg.svg#rating__star-fill")
-    span.rating__star
-      svg.rating__star-icon(width="17" height="17")
-        use(xlink:href="img/sprite-svg.svg#rating__star-fill")
-    span.rating__star
-      svg.rating__star-icon(width="17" height="17")
-        use(xlink:href="img/sprite-svg.svg#rating__star-fill")
-    span.rating__star
-      svg.rating__star-icon(width="17" height="17")
-        use(xlink:href="img/sprite-svg.svg#rating__star-empty")
-
-  //- if (has_score)
-    .rating__label
-      span.rating__score 4,52
-      span.rating__count (24 голоса)
+      if (score)
+        .rating__label
+          span.title.current-rating
+            span.value.rating__score 4,52
+            span.rating__count (24 голоса)

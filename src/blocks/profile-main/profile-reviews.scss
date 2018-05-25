@@ -1,3 +1,83 @@
 .profile-reviews {
+  padding: 20px;
+  border: none;
+  padding-bottom: 45px;
+
+  &__title {
+    margin-bottom: 15px;
+  }
+  &__inner {
+    padding-left: 35px;
+  }
+}
+
+.review {
+  max-width: 730px;
+  position: relative;
+  padding-bottom: 25px;
+  padding-top: 20px;
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 640px;
+    height: 1px;
+    background-color: #dcdcdc;
+  }
+
+  &:last-child {
+    &:after {
+      content: "";
+      background-color: transparent;
+    }
+  }
+
+  &__data {
+    display: inline-block;
+    padding-bottom: 5px;
+  }
+  &__rating {}
+  &__head {
+    background-color: #f0f0f0;
+    padding: 5px 15px;
+    display: block;
+    position: relative;
+    margin-bottom: 25px;
+
+    &:after {
+      content: "";
+      width: 9px;
+      height: 9px;
+      display: inline-block;
+      border-bottom: 1px solid #d8d8d8;
+      border-right: 1px solid #d8d8d8;
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      transform: rotate(-45deg);
+    }
+  }
+  &__subject {
+    display: block;
+    color: #969696;
+    line-height: 16px;
+  }
+  &__title {
+    display: block;
+    font-weight: 700;
+    color: #323232;
+    line-height: 16px;
+  }
+  &__body {}
+  &__text {
+    padding: 0;
+    margin: 0;
+    max-width: 680px;
+    font-size: 14px;
+    color: #323232;
+  }
 
 }
