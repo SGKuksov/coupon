@@ -2018,21 +2018,21 @@ button {
 }
 
 .rating__star-empty {
-  background-image: url(../img/sprite-011388407982788773.png);
+  background-image: url(../img/sprite-04494415179912179.png);
   background-position: 0px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-fill {
-  background-image: url(../img/sprite-011388407982788773.png);
+  background-image: url(../img/sprite-04494415179912179.png);
   background-position: -26px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-hover {
-  background-image: url(../img/sprite-011388407982788773.png);
+  background-image: url(../img/sprite-04494415179912179.png);
   background-position: 0px -26px;
   width: 22px;
   height: 22px;
@@ -5555,7 +5555,7 @@ button {
 .coupon__contacts-title {
   color: #323232;
   font-weight: bold;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 
 .coupon__contacts-place {
@@ -5580,19 +5580,39 @@ button {
   margin-bottom: 10px;
 }
 
-.coupon__contacts-phone-title {
-  display: inline-block;
+.coupon__contacts-phone-title, .coupon__contacts-cite-title {
+  display: block;
   color: #323232;
+  margin-top: 7px;
 }
 
-.coupon__contacts-phone {
+.coupon__contacts-phone, .coupon__contacts-cite {
   display: block;
   color: #969696;
+}
+
+.coupon__contacts-phone:last-child, .coupon__contacts-cite:last-child {
   margin-bottom: 7px;
 }
 
+.coupon__contacts-cite {
+  color: #ff0000;
+  border-bottom: 1px dotted transparent;
+}
+
+.coupon__contacts-cite:hover {
+  color: #ff0000;
+  border-bottom: 1px dotted #ff0000;
+}
+
+.coupon__contacts-cite:visited {
+  color: #551e99;
+}
+
 .coupon__contacts-timetable-title {
+  margin-top: 7px;
   color: #323232;
+  display: block;
 }
 
 .coupon__contacts-timetable {
@@ -5621,6 +5641,7 @@ button {
 }
 
 .coupon__sharing-title {
+  display: block;
   color: #323232;
   font-weight: bold;
   font-size: 14px;
