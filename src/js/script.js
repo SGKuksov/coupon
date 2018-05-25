@@ -129,7 +129,26 @@ $(document).ready(function() {
 
   // лайтбокс
   $("#placeGallery").click(function() {
-    // $("").modal('show');
+    $("#lightboxModal").modal('show');
+  });
+
+  $('.slider-for').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    // arrows: false ,
+    prevArrow: '<button type="button" class="lightbox-modal__prev"></button>',
+    nextArrow: '<button type="button" class="lightbox-modal__next"></button>',
+    // fade: true,
+    asNavFor: '.slider-nav'
+  });
+  $('.slider-nav').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    asNavFor: '.slider-for',
+    arrows: false,
+    // dots: true,
+    // centerMode: true,
+    focusOnSelect: true
   });
 
   // рейтинг на запись

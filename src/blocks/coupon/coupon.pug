@@ -1,4 +1,5 @@
 mixin coupon(admin, is_space)
+
   .coupon
     nav.coupon__header
       ul.nav.coupon__nav-tabs(role="tablist")
@@ -109,21 +110,22 @@ mixin coupon(admin, is_space)
 
               span.coupon__contacts-phone-title
                 | Телефон:
-              a.coupon__contacts-phone(href="tel:+78121234567")
-                | +7 (812) 123-45-67
-              a.coupon__contacts-phone(href="tel:+78121234567")
-                | +7 (812) 123-45-67
-              a.coupon__contacts-phone(href="tel:+78121234567")
-                | +7 (812) 123-45-67
+              span.coupon__contacts-phone
+                | +7 (812) 123-45-67<br />
+                | +7 (812) 123-45-67<br />
+                | +7 (812) 123-45-67<br />
 
               span.coupon__contacts-cite-title
                 | Сайт:
               a.coupon__contacts-cite(href="mycite.com")
                 | mycite.com
+              <br />
               a.coupon__contacts-cite(href="mycite.com")
                 | mycite.com
+              <br />
               a.coupon__contacts-cite(href="mycite.com")
                 | mycite.com
+              <br />
 
               span.coupon__contacts-timetable-title
                 | Время работы:

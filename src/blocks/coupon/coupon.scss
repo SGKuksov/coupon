@@ -102,8 +102,13 @@
     clear:both;
     visibility:hidden;
   }
+  #placeGallery {
+    cursor: pointer;
+  }
 
   &__img-wrap {
+
+
     width: 320px;
     height: 230px;
     overflow: hidden;
@@ -474,7 +479,7 @@
 
   &__contacts-phone,
   &__contacts-cite {
-    display: block;
+    display: inline-block;
     color: #969696;
 
     &:last-child {
