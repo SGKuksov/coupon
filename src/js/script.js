@@ -5,6 +5,7 @@ $(document).ready(function() {
   // вызов обрезания текста
   $('.card__link').truncateText();
   $('.card__place').truncateText();
+  // $('.card__category').truncateText();
 
   // подключение автопоиск
   $('#pageHeaderSearch').autoSearch(0);

@@ -440,7 +440,7 @@
   &__contacts-title {
     color: #323232;
     font-weight: bold;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
   }
 
   &__contacts-place {
@@ -465,19 +465,40 @@
     margin-bottom: 10px;
   }
 
-  &__contacts-phone-title {
-    display: inline-block;
+  &__contacts-phone-title,
+  &__contacts-cite-title {
+    display: block;
     color: #323232;
+    margin-top: 7px;
   }
 
-  &__contacts-phone {
+  &__contacts-phone,
+  &__contacts-cite {
     display: block;
     color: #969696;
-    margin-bottom: 7px;
+
+    &:last-child {
+      margin-bottom: 7px;
+    }
+  }
+
+  &__contacts-cite {
+    color: #ff0000;
+    border-bottom: 1px dotted transparent;
+
+    &:hover {
+      color: #ff0000;
+      border-bottom: 1px dotted #ff0000;
+    }
+    &:visited {
+      color: #551e99;
+    }
   }
 
   &__contacts-timetable-title {
+    margin-top: 7px;
     color: #323232;
+    display: block;
   }
 
   &__contacts-timetable {
@@ -512,6 +533,7 @@
   }
 
   &__sharing-title {
+    display: block;
     color: #323232;
     font-weight: bold;
     font-size: 14px;
