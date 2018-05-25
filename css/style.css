@@ -1745,8 +1745,8 @@ button {
 
 .pushy-submenu ul {
   padding-left: 15px;
-  -webkit-transition: max-height 0.2s ease-in-out, visibility 0.2s ease-in-out;
-  transition: max-height 0.2s ease-in-out, visibility 0.2s ease-in-out;
+  -webkit-transition: max-height 0.2s ease-in-out, visibility 0.2s ease-in-out;
+  transition: max-height 0.2s ease-in-out, visibility 0.2s ease-in-out;
 }
 
 .pushy-submenu ul .pushy-link {
@@ -2018,21 +2018,21 @@ button {
 }
 
 .rating__star-empty {
-  background-image: url(../img/sprite-06304017078708253.png);
+  background-image: url(../img/sprite-08032464987316419.png);
   background-position: 0px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-fill {
-  background-image: url(../img/sprite-06304017078708253.png);
+  background-image: url(../img/sprite-08032464987316419.png);
   background-position: -26px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-hover {
-  background-image: url(../img/sprite-06304017078708253.png);
+  background-image: url(../img/sprite-08032464987316419.png);
   background-position: 0px -26px;
   width: 22px;
   height: 22px;
@@ -7439,6 +7439,92 @@ label.el-checkbox {
 .profile-subscribe__btn:active {
   color: #787878;
   background-color: #fff;
+}
+
+.profile-reviews {
+  padding: 20px;
+  border: none;
+  padding-bottom: 45px;
+}
+
+.profile-reviews__title {
+  margin-bottom: 15px;
+}
+
+.profile-reviews__inner {
+  padding-left: 35px;
+}
+
+.review {
+  max-width: 730px;
+  position: relative;
+  padding-bottom: 25px;
+  padding-top: 20px;
+}
+
+.review:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 640px;
+  height: 1px;
+  background-color: #dcdcdc;
+}
+
+.review:last-child:after {
+  content: "";
+  background-color: transparent;
+}
+
+.review__data {
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.review__head {
+  background-color: #f0f0f0;
+  padding: 5px 15px;
+  display: block;
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.review__head:after {
+  content: "";
+  width: 9px;
+  height: 9px;
+  display: inline-block;
+  border-bottom: 1px solid #d8d8d8;
+  border-right: 1px solid #d8d8d8;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.review__subject {
+  display: block;
+  color: #969696;
+  line-height: 16px;
+}
+
+.review__title {
+  display: block;
+  font-weight: 700;
+  color: #323232;
+  line-height: 16px;
+}
+
+.review__text {
+  padding: 0;
+  margin: 0;
+  max-width: 680px;
+  font-size: 14px;
+  color: #323232;
 }
 
 .favorite:active {
