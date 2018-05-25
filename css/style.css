@@ -1745,8 +1745,8 @@ button {
 
 .pushy-submenu ul {
   padding-left: 15px;
-  -webkit-transition: max-height 0.2s ease-in-out, visibility 0.2s ease-in-out;
-  transition: max-height 0.2s ease-in-out, visibility 0.2s ease-in-out;
+  -webkit-transition: max-height 0.2s ease-in-out, visibility 0.2s ease-in-out;
+  transition: max-height 0.2s ease-in-out, visibility 0.2s ease-in-out;
 }
 
 .pushy-submenu ul .pushy-link {
@@ -2018,21 +2018,21 @@ button {
 }
 
 .rating__star-empty {
-  background-image: url(../img/sprite-04494415179912179.png);
+  background-image: url(../img/sprite-06304017078708253.png);
   background-position: 0px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-fill {
-  background-image: url(../img/sprite-04494415179912179.png);
+  background-image: url(../img/sprite-06304017078708253.png);
   background-position: -26px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-hover {
-  background-image: url(../img/sprite-04494415179912179.png);
+  background-image: url(../img/sprite-06304017078708253.png);
   background-position: 0px -26px;
   width: 22px;
   height: 22px;
@@ -5289,6 +5289,10 @@ button {
   visibility: hidden;
 }
 
+.coupon #placeGallery {
+  cursor: pointer;
+}
+
 .coupon__img-wrap {
   width: 320px;
   height: 230px;
@@ -5587,7 +5591,7 @@ button {
 }
 
 .coupon__contacts-phone, .coupon__contacts-cite {
-  display: block;
+  display: inline-block;
   color: #969696;
 }
 
@@ -7566,6 +7570,66 @@ label.el-checkbox {
 
 .page-not-found__info {
   width: 260px;
+}
+
+.lightbox-modal__content {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+
+.lightbox-modal__body {
+  padding: 0;
+}
+
+.lightbox-modal__prev {
+  position: relative;
+  z-index: 1;
+}
+
+.lightbox-modal__prev:after {
+  content: "";
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  top: 50%;
+}
+
+.lightbox-modal__prev:focus {
+  outline: 0;
+}
+
+.lightbox-modal__next {
+  z-index: 1;
+  position: relative;
+}
+
+.lightbox-modal__next:after {
+  content: "";
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  top: 50%;
+}
+
+.lightbox-modal__next:focus {
+  outline: 0;
+}
+
+.lightbox-modal__bigslide {
+  height: 400px;
+  width: 700px;
+}
+
+.lightbox-modal__smallslide {
+  height: 200px;
+  width: 200px;
 }
 
 @media (min-width: 380px) {
