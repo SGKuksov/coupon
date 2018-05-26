@@ -2018,21 +2018,21 @@ button {
 }
 
 .rating__star-empty {
-  background-image: url(../img/sprite-014616263849116007.png);
+  background-image: url(../img/sprite-03342928902665179.png);
   background-position: 0px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-fill {
-  background-image: url(../img/sprite-014616263849116007.png);
+  background-image: url(../img/sprite-03342928902665179.png);
   background-position: -26px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-hover {
-  background-image: url(../img/sprite-014616263849116007.png);
+  background-image: url(../img/sprite-03342928902665179.png);
   background-position: 0px -26px;
   width: 22px;
   height: 22px;
@@ -2895,10 +2895,10 @@ button {
   -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   border-radius: 10px;
-  padding-left: 16px;
+  padding-left: 24px;
   padding-top: 16px;
   padding-bottom: 15px;
-  padding-right: 11px;
+  padding-right: 24px;
   margin-bottom: 19px;
   display: none;
 }
@@ -2918,32 +2918,16 @@ button {
 }
 
 .popular-places__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  text-align: center;
+}
+
+.popular-places__item {
+  display: inline-block;
 }
 
 .popular-places__link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-bottom: 28px;
-  height: 60px;
-  width: 130px;
-  overflow: hidden;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  margin-right: 8px;
+  display: inline-block;
+  margin-bottom: 10px;
 }
 
 .popular-places__pic {
@@ -3078,13 +3062,14 @@ button {
 }
 
 .top-panel__dealer-logo {
-  width: 180px;
-  height: 42px;
+  max-width: 300px;
+  max-height: 50px;
   margin-bottom: 5px;
 }
 
 .top-panel__dealer-logo-img {
-  width: 100%;
+  width: auto;
+  height: auto;
 }
 
 .top-panel__dealer-logo-caption {
