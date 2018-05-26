@@ -23,6 +23,9 @@ mixin error-modal()
             label.el-radio-style(for="r-other")
             label.modals__label(for="r-other") Другое
           textarea.modals__textarea(name="msg")
+          .modals__rating
+            label.modals__label.modals__label--bold(for="r-other") Оцените купон
+            +rating(false, false)
           .modals__btn-block
             button.modals__btn.modals__btn-input(type="submit") Отправить
 

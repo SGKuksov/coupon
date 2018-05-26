@@ -4,6 +4,7 @@ mixin rating(readonly, score)
     .stars.stars-example-fontawesome.rating
       .br-wrapper.br-theme-fontawesome-stars
         select#ratingBar.rating-bar(name="rating" autocomplete="off" style="display: none;")
+          option(value="")
           option(value="1") 1
           option(value="2") 2
           option(value="3") 3
@@ -22,11 +23,11 @@ mixin rating(readonly, score)
         | Your rating:
         span.value
 
-
   if (readonly)
     .stars.stars-example-fontawesome.rating
       .br-wrapper.br-theme-fontawesome-stars
         select.rating-bar.rating-bar--readonly(name="rating" autocomplete="off" style="display: none;")
+          option(value="")
           option(value="1") 1
           option(value="2") 2
           option(value="3") 3

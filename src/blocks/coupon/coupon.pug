@@ -90,13 +90,13 @@ mixin coupon(admin, is_space)
               .coupon__get-rating
                 h3.coupon__get-rating-title
                   | Оцените купон
-                +rating()
+                +rating(false, false)
 
             if (is_space)
               .coupon__get-rating
                 h3.coupon__get-rating-title
                   | Оцените место
-                +rating()
+                +rating(false, false)
 
             .coupon__contacts
               h3.coupon__contacts-title
@@ -106,7 +106,7 @@ mixin coupon(admin, is_space)
                 a.coupon__contacts-place(href="#", title="Аквапарк «Родео Драйв»")
                   | Аквапарк «Родео Драйв»
                 .coupon__contacts-rating
-                  +rating()
+                  +rating(true, false)
 
               span.coupon__contacts-phone-title
                 | Телефон:
@@ -155,7 +155,7 @@ mixin coupon(admin, is_space)
                   time.coupon-comment__date(datetime="2017-08-02 12:24")
                     | 2 августа 2017 12:24
                 .coupon-comment__rating
-                  +rating()
+                  +rating(true, false)
                 p.coupon-comment__text
                   | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aspernatur quo vero est dolore, optio recusandae, vel quisquam beatae illo distinctio tempora blanditiis ad quos molestias. In porro dolorum veritatis!
             article.coupon__comment.coupon-comment
@@ -168,19 +168,19 @@ mixin coupon(admin, is_space)
                   time.coupon-comment__date(datetime="2017-08-02 12:24")
                     | 2 августа 2017 12:24
                 .coupon-comment__rating
-                  +rating()
+                  +rating(true, false)
                 p.coupon-comment__text
                   | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aspernatur quo vero est dolore, optio recusandae, vel quisquam beatae illo distinctio tempora blanditiis ad quos molestias. In porro dolorum veritatis!
           .coupon__rating-block
             span.coupon__rating-block-title
               | Оценки пользователей
             .coupon__rating
-              +rating()
+              +rating(true, false)
               span.coupon__rating-count
                 | 80%
 
             .coupon__rating
-              +rating()
+              +rating(true, false)
               span.coupon__rating-count
                 | 20%
 
@@ -192,7 +192,7 @@ mixin coupon(admin, is_space)
               span.coupon__footer-rating-title
                 | Ваша оценка
               .coupon__footer-rating
-                +rating()
+                +rating(false, false)
             form.coupon__footer-form(action="")
               textarea.coupon__footer-textarea(name="msg")
               button.coupon__footer-submit.btn(type="submit")
