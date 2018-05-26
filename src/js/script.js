@@ -5,7 +5,6 @@ $(document).ready(function() {
   // вызов обрезания текста
   $('.card__link').truncateText();
   $('.card__place').truncateText();
-  // $('.card__category').truncateText();
 
   // подключение автопоиск
   $('#pageHeaderSearch').autoSearch(0);
@@ -256,18 +255,34 @@ $(document).ready(function() {
     }
   });
 
-  // collections
+  // Скрытый элементы списка collections
   $(".collections__toggle").html("Все подборки");
 
   $(".collections__toggle").click(function(e) {
     e.preventDefault();
 
-    if ($(this).hasClass("collections__toggle--active")) {
+    if ( !$(this).hasClass("collections__toggle--active") ) {
+
       $(this).html("Свернуть").addClass("collections__toggle--active");
       $(".collections__list--hide").slideToggle();
     } else {
       $(this).html("Все подборки").removeClass("collections__toggle--active");
       $(".collections__list--hide").slideToggle();
+    }
+  });
+
+  // Скрытый блок текста coupon
+  $(".coupon__toggle").html("Читать далее");
+
+  $(".coupon__toggle").click(function(e) {
+    e.preventDefault();
+
+    if ( !$(this).hasClass("coupon__toggle--active") ) {
+      $(this).html("Свернуть").addClass("coupon__toggle--active");
+      $(".coupon__text--hide").slideToggle();
+    } else {
+      $(this).html("Читать далее").removeClass("coupon__toggle--active");
+      $(".coupon__text--hide").slideToggle();
     }
   });
 
@@ -324,7 +339,18 @@ $(document).ready(function() {
 
   // вызов купона по клику на фото
   $(".card__img-wrap").click(function() {
-    $("#couponModal").modal("show");
+    var modal = $("#couponModal");
+    modal.modal("show");
+    modal.find('.coupon-modal__text').truncateText();
+  });
+
+  // скрытие окна при изменении ширины
+  $(window).resize(function() {
+    var doc_w = $(window).width();
+
+    if (doc_w <= 992) {
+      $("#couponModal").modal("hide");
+    }
   });
 
   // вызов окна авторизации по иконке в шапке

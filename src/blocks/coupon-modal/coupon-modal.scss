@@ -187,6 +187,7 @@
 
   &__info {
     height: 230px;
+    max-width: 625px;
   }
 
   &__info:after {
@@ -249,13 +250,12 @@
     font-size: 14px;
     padding-left: 30px;
     padding-right: 25px;
-    margin-bottom: 40px;
+    margin: 0;
     overflow: hidden;
-    height: 210px;
+    height: 240px;
     width: auto;
 
     @media (min-width: $screen-md) {
-      margin-bottom: 1rem;
       padding-left: 0;
       padding-right: 0;
     }
@@ -346,9 +346,22 @@
     &--green {
       background-color: #c4e9c4;
 
+      &:hover {
+        background-color: #adcfad;
+      }
+      &:active {
+        background-color: #adcfad;
+      }
     }
     &--red {
       background-color: #f7c4c4;
+
+      &:hover {
+        background-color: #dda9a9;
+      }
+      &:active {
+        background-color: #dda9a9;
+      }
     }
   }
 
