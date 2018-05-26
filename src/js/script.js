@@ -1,10 +1,28 @@
 svg4everybody(); // иницализация полифила для IE
 
+(function($) {
+  var spliter = function(el) {
+      var str = el.html();
+
+      str = str.split(",").join("<br />\n");
+      el.html(str);
+  };
+
+  $.fn.splitText = function() {
+      return this.each(function () {
+          spliter($(this));
+      });
+  };
+}(jQuery));
+
 $(document).ready(function() {
 
   // вызов обрезания текста
   $('.card__link').truncateText();
   $('.card__place').truncateText();
+
+  // Подстановка разметки в номера телефонов
+  $(".coupon__contacts-phone").splitText();
 
   // подключение автопоиск
   $('#pageHeaderSearch').autoSearch(0);
@@ -387,7 +405,6 @@ $(document).ready(function() {
   // $("#ratingModal").modal("show");
   // $("#reviewModal").modal("show");
   // $("#warnDelModal").modal("show");
-
 
   // конец скрипта
   $("#hideAside").hide();
