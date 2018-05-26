@@ -2018,21 +2018,21 @@ button {
 }
 
 .rating__star-empty {
-  background-image: url(../img/sprite-05620317975204223.png);
+  background-image: url(../img/sprite-014616263849116007.png);
   background-position: 0px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-fill {
-  background-image: url(../img/sprite-05620317975204223.png);
+  background-image: url(../img/sprite-014616263849116007.png);
   background-position: -26px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-hover {
-  background-image: url(../img/sprite-05620317975204223.png);
+  background-image: url(../img/sprite-014616263849116007.png);
   background-position: 0px -26px;
   width: 22px;
   height: 22px;
@@ -5390,9 +5390,38 @@ button {
   margin-bottom: 40px;
 }
 
+.coupon__text--hide {
+  display: none;
+}
+
+.coupon__toggle {
+  position: relative;
+  font-size: 14px;
+  line-height: 34px;
+  height: 34px;
+  padding-left: 20px;
+  padding-right: 17px;
+  font-weight: bold;
+  color: #9b9b9b;
+  margin-left: 7px;
+  border-radius: 4px;
+  vertical-align: bottom;
+  display: inline-block;
+  min-width: 130px;
+}
+
+.coupon__toggle:hover {
+  background-color: #f3f1f1;
+}
+
+.coupon__toggle:active {
+  background-color: #dcdcdc;
+}
+
 .coupon__edit-btn {
   border-radius: 4px;
   border: 1px solid #dedede;
+  background-color: #fff;
   color: #787878;
   font-size: 14px;
   line-height: 34px;
@@ -5400,6 +5429,7 @@ button {
   padding-left: 20px;
   padding-right: 17px;
   display: none;
+  margin-left: 20px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -5430,11 +5460,6 @@ button {
 
 .coupon__edit-btn:active {
   border: 1px solid #dedede;
-  color: #5fb600;
-}
-
-.coupon__edit-btn:active svg {
-  fill: #5fb600;
 }
 
 .coupon__edit-btn-icon {
@@ -5514,8 +5539,24 @@ button {
   background-color: #c4e9c4;
 }
 
+.coupon__take-review-btn--green:hover {
+  background-color: #adcfad;
+}
+
+.coupon__take-review-btn--green:active {
+  background-color: #adcfad;
+}
+
 .coupon__take-review-btn--red {
   background-color: #f7c4c4;
+}
+
+.coupon__take-review-btn--red:hover {
+  background-color: #dda9a9;
+}
+
+.coupon__take-review-btn--red:active {
+  background-color: #dda9a9;
 }
 
 .coupon__take-score-wrap {
@@ -6933,6 +6974,7 @@ label.el-checkbox {
 
 .coupon-modal__info {
   height: 230px;
+  max-width: 625px;
 }
 
 .coupon-modal__info:after {
@@ -6984,9 +7026,9 @@ label.el-checkbox {
   font-size: 14px;
   padding-left: 30px;
   padding-right: 25px;
-  margin-bottom: 40px;
+  margin: 0;
   overflow: hidden;
-  height: 210px;
+  height: 240px;
   width: auto;
 }
 
@@ -7049,8 +7091,24 @@ label.el-checkbox {
   background-color: #c4e9c4;
 }
 
+.coupon-modal__take-review-btn--green:hover {
+  background-color: #adcfad;
+}
+
+.coupon-modal__take-review-btn--green:active {
+  background-color: #adcfad;
+}
+
 .coupon-modal__take-review-btn--red {
   background-color: #f7c4c4;
+}
+
+.coupon-modal__take-review-btn--red:hover {
+  background-color: #dda9a9;
+}
+
+.coupon-modal__take-review-btn--red:active {
+  background-color: #dda9a9;
 }
 
 .coupon-modal__take-score-wrap {
@@ -8727,9 +8785,8 @@ label.el-checkbox {
   }
   .coupon__edit-btn {
     margin-bottom: 0;
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
+    display: inline-block;
+    vertical-align: bottom;
   }
   .coupon__aside {
     width: 330px;
@@ -8931,7 +8988,6 @@ label.el-checkbox {
     width: 336px;
   }
   .coupon-modal__text {
-    margin-bottom: 1rem;
     padding-left: 0;
     padding-right: 0;
   }
