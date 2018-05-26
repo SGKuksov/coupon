@@ -2018,21 +2018,21 @@ button {
 }
 
 .rating__star-empty {
-  background-image: url(../img/sprite-08032464987316419.png);
+  background-image: url(../img/sprite-05620317975204223.png);
   background-position: 0px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-fill {
-  background-image: url(../img/sprite-08032464987316419.png);
+  background-image: url(../img/sprite-05620317975204223.png);
   background-position: -26px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-hover {
-  background-image: url(../img/sprite-08032464987316419.png);
+  background-image: url(../img/sprite-05620317975204223.png);
   background-position: 0px -26px;
   width: 22px;
   height: 22px;
@@ -4839,6 +4839,19 @@ button {
   border-top: 1px solid #d8d8d8;
 }
 
+.modals__rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
 .modals__input-block {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5023,6 +5036,11 @@ button {
   line-height: 20px;
   font-size: 14px;
   font-weight: normal;
+}
+
+.modals__label--bold {
+  font-weight: 700;
+  padding-left: 0;
 }
 
 .modals__location {
@@ -7214,8 +7232,8 @@ label.el-checkbox {
   background-color: #ffffff;
   -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
   width: 100%;
+  margin-top: -15px;
 }
 
 .profile-main__inner,
@@ -7464,10 +7482,12 @@ label.el-checkbox {
 
 .review:after {
   content: "";
+  display: block;
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 640px;
+  max-width: 640px;
+  width: 100%;
   height: 1px;
   background-color: #dcdcdc;
 }
@@ -7753,6 +7773,13 @@ label.el-checkbox {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+  .profile-main,
+  .profile-favorite,
+  .profile-reviews,
+  .profile-subscribe {
+    border-radius: 10px;
+    margin-top: 0;
   }
 }
 

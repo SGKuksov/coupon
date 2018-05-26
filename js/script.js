@@ -156,11 +156,12 @@ $(document).ready(function() {
   $('.rating-bar').barrating({
     theme: 'fontawesome-stars',
     deselectable: false,
-    showSelectedRating: true
+    showSelectedRating: true,
+    allowEmpty: null
   });
 
   // рейтинг на чтение
-  $('.rating-bar--readonly').barrating('readonly', true); //только чтение
+  $('.rating-bar--readonly').barrating('readonly', true).barrating('set', 4); //только чтение
 
   // #onMapTab
   $('#onMapTab').on('shown.bs.tab', function() {
