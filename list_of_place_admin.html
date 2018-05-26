@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no, maximum-scale=1">
   <meta name="robots" content="noindex, nofollow">
-  <title>Place page</title>
+  <title>List of places</title>
   <meta name="description" content="">
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
@@ -255,252 +255,269 @@
       <div class="site-overlay"></div>
       <div class="overlay"></div>
       <div class="main__container" id="container">
-        <div class="tag-panel">
-          <div class="tag-panel__header">
-            <div class="tag-panel__labels">
-              <div class="label"><a class="label__title" href="#" title="Фитнес-центры">Фитнес-центры</a>
-                <a class="label__remove" href="#" title="Убрать">
-                  <svg class="label__remove-icon" width="18" height="18">
-                    <use xlink:href="img/sprite-svg.svg#label__remove"></use>
-                  </svg>
-                </a>
-              </div>
-              <div class="label"><a class="label__title" href="#" title="Подарки">Подарки</a>
-                <a class="label__remove" href="#" title="Убрать">
-                  <svg class="label__remove-icon" width="18" height="18">
-                    <use xlink:href="img/sprite-svg.svg#label__remove"></use>
-                  </svg>
-                </a>
-              </div>
-              <div class="label"><a class="label__title" href="#" title="Барбершопы">Барбершопы</a>
-                <a class="label__remove" href="#" title="Убрать">
-                  <svg class="label__remove-icon" width="18" height="18">
-                    <use xlink:href="img/sprite-svg.svg#label__remove"></use>
-                  </svg>
-                </a>
-              </div>
-            </div>
+        <div class="top-panel">
+          <h1 class="top-panel__title">Все места<br> в вашем городе</h1>
+          <div class="top-panel__inner">
+            <div class="top-panel__waypoint"><img class="top-panel__waypoint-img" width="128" height="97" src="img/top-panel__waypoint.png" alt="waypoint" /></div>
           </div>
-          <div class="tag-panel__body">
-            <div class="tag-panel__info">
-              <div class="tag-panel__rating">
-                <div class="stars stars-example-fontawesome rating">
-                  <div class="br-wrapper br-theme-fontawesome-stars"><select class="rating-bar rating-bar--readonly" name="rating" autocomplete="off" style="display: none;"><option value=""></option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></div>
-                  <div class="rating__label"><span class="title current-rating"><span class="value rating__score">4,52</span><span class="rating__count">(24 голоса)</span></span>
-                  </div>
-                </div>
-              </div>
-              <h1 class="tag-panel__title">Все акции, купоны и скидки сети итальянских ресторанов Il Patio</h1>
-              <p class="tag-panel__subtitle">При покупке любого абонемента - одно занятие бесплатно!</p>
-            </div>
-            <div class="tag-panel__footer">
-              <a class="tag-panel__footer-rss rss" href="#" title="Подписаться на обновления">
-                <svg class="tag-panel__btn-rss" width="14" height="14">
-                  <use xlink:href="img/sprite-svg.svg#top-panel__rss"></use>
-                </svg><span>Подписаться на обновления</span></a>
-              <a class="tag-panel__favorite favorite" href="#" title="Добавить в избранное">
-                <svg class="tag-panel__btn-favorite" width="16" height="14">
-                  <use xlink:href="img/sprite-svg.svg#tag-panel__favorite-icon"></use>
-                </svg><span>Добавить в избранное</span></a>
+        </div>
+        <div class="filter">
+          <div class="filter__settings">
+            <div class="filter__view"><span class="filter__desc filter__desc--is_places">Вид:</span>
+              <ul class="nav filter__tabs" role="tablist">
+                <li class="nav-item">
+                  <a class="filter__btn filter__btn--left btn nav-link active" id="byListTab" data-toggle="tab" href="#byList" role="tab" aria-controls="byList" aria-selected="true">
+                    <svg class="filter__by_list" width="15" height="11">
+                      <use xlink:href="img/sprite-svg.svg#filter__by_list"></use>
+                    </svg><span>Списком</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="filter__btn filter__btn--right btn nav-link" id="onMapTab" data-toggle="tab" href="#onMap" role="tab" aria-controls="onMap" aria-selected="false">
+                    <svg class="filter__on_map" width="16" height="14">
+                      <use xlink:href="img/sprite-svg.svg#filter__on_map"></use>
+                    </svg><span>На карте</span></a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
-        <div class="coupon">
-          <nav class="coupon__header">
-            <ul class="nav coupon__nav-tabs" role="tablist">
-              <li class="nav-item coupon__tab"><a class="nav-link coupon__tab-link active" id="descriptionTab" data-toggle="tab" href="#description" role="tab" aria-controls="description" aria-selected="true">Условия</a></li>
-              <li class="nav-item coupon__tab"><a class="nav-link coupon__tab-link" id="reviewTab" data-toggle="tab" href="#review" role="tab" aria-controls="review" aria-selected="false">Отзывы&nbsp;<span class="coupon__tab-count" id="couponTabCount">3</span></a></li>
-              <li class="nav-item coupon__tab"><a class="nav-link coupon__tab-link" id="addressTab" data-toggle="tab" href="#address" role="tab" aria-controls="address" aria-selected="false">Адреса</a></li>
-            </ul><label class="el-switch coupon__editor-label"><span class="coupon__editor-label-title">Отображение на сайте</span><input type="checkbox" name="switch"/><span class="el-switch-style"></span></label></nav>
+        <div class="list-of-places">
+          <div class="list-of-places__header">
+            <h2 class="list-of-places__title">Выберите категорию</h2>
+            <div class="list-of-places__sort"><select class="filter__select list-of-places__select custom-select" name="label"><option class="filter__option" value="Красота и уход">Красота и уход</option><option class="filter__option" value="Обучение">Обучение</option><option class="filter__option" value="Авто-мото">Авто-мото</option><option class="filter__option" value="Кафе и рестораны">Кафе и рестораны</option><option class="filter__option" value="Здоровье и медицина">Здоровье и медицина</option><option class="filter__option" value="Все для детей">Все для детей</option><option class="filter__option" value="Развлечения">Развлечения</option><option class="filter__option" value="Доставка блюд">Доставка блюд</option><option class="filter__option" value="Путешествия по России">Путешествия по России</option><option class="filter__option" value="Зарубежный туризм">Зарубежный туризм</option><option class="filter__option" value="Спорт и фитнес">Спорт и фитнес</option><option class="filter__option" value="Услуги">Услуги</option><option class="filter__option" value="Товары и покупки">Товары и покупки</option><option class="filter__option" value="Туризм">Туризм</option></select></div>
+          </div>
           <div class="tab-content">
-            <div class="tab-pane fade active" id="description" role="tabpanel" aria-labelledby="descriptionTab">
-              <div class="coupon__body coupon__description-tab">
-                <div class="coupon__info">
-                  <div class="coupon__img-wrap" id="placeGallery" href="#"><img class="coupon__img" src="img/card__photo.jpg" alt="photo" width="336" height="231" /><span class="coupon__gallery"><svg class="coupon__gallery-icon" width="18" height="14"><use xlink:href="img/sprite-svg.svg#coupon__gallery"></use></svg><span>19 фото</span></span>
-                  </div><span class="coupon__take-price coupon__take-price--on-top">Бесплатно</span><a class="coupon__take-btn coupon__take-btn--on-top btn" href="#" title="Получить купон">Получить купон</a>
-                  <p class="coupon__text">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Семантика рыбного, ведущими встретил скатился имеет, они силуэт мир правилами родного по всей страна путь даль не имени. Своих там эта деревни вскоре парадигматическая переписывается точках если она но щеке переулка своего, лучше необходимыми диких мир! Которой ручеек назад, оксмокс, это маленький речью подпоясал агенство он необходимыми своего пор от всех, толку переписали. Одна грамматики, ты рыбного, заголовок предупредила, однажды живет она пустился за рыбными залетают страну реторический журчит образ, осталось если маленький раз предложения. Сих сбить себя которой ведущими оксмокс, инициал ему рот она однажды там встретил маленькая. Лучше, дороге, встретил!<span class="coupon__text coupon__text--hide"> Далеко--далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Семантика рыбного, ведущими встретил скатился имеет, они силуэт мир правилами родного по всей страна путь даль не имени. Своих там эта деревни вскоре парадигматическая переписывается точках если она но щеке переулка своего, лучше необходимыми диких мир! Которой ручеек назад, оксмокс, это маленький речью подпоясал агенство он необходимыми своего пор от всех, толку переписали. Одна грамматики, ты рыбного, заголовок предупредила, однажды живет она пустился за рыбными залетают страну реторический журчит образ, осталось если маленький раз предложения. Сих сбить себя которой ведущими оксмокс, инициал ему рот она однажды там встретил маленькая. Лучше, дороге, встретил! Далеко--далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Семантика рыбного, ведущими встретил скатился имеет, они силуэт мир правилами родного по всей страна путь даль не имени. Своих там эта деревни вскоре парадигматическая переписывается точках если она но щеке переулка своего, лучше необходимыми диких мир! Которой ручеек назад, оксмокс, это маленький речью подпоясал агенство он необходимыми своего пор от всех, толку переписали. Одна грамматики, ты рыбного, заголовок предупредила, однажды живет она пустился за рыбными залетают страну реторический журчит образ, осталось если маленький раз предложения. Сих сбить себя которой ведущими оксмокс, инициал ему рот она однажды там встретил маленькая. Лучше, дороге, встретил! Далеко--далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Семантика рыбного, ведущими встретил скатился имеет, они силуэт мир правилами родного по всей страна путь даль не имени. Своих там эта деревни вскоре парадигматическая переписывается точках если она но щеке переулка своего, лучше необходимыми диких мир! Которой ручеек назад, оксмокс, это маленький речью подпоясал агенство он необходимыми своего пор от всех, толку переписали. Одна грамматики, ты рыбного, заголовок предупредила, однажды живет она пустился за рыбными залетают страну реторический журчит образ, осталось если маленький раз предложения. Сих сбить себя которой ведущими оксмокс, инициал ему рот она однажды там встретил маленькая. Лучше, дороге, встретил! Далеко--далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Семантика рыбного, ведущими встретил скатился имеет, они силуэт мир правилами родного по всей страна путь даль не имени. Своих там эта деревни вскоре парадигматическая переписывается точках если она но щеке переулка своего, лучше необходимыми диких мир! Которой ручеек назад, оксмокс, это маленький речью подпоясал агенство он необходимыми своего пор от всех, толку переписали. Одна грамматики, ты рыбного, заголовок предупредила, однажды живет она пустился за рыбными залетают страну реторический журчит образ, осталось если маленький раз предложения. Сих сбить себя которой ведущими оксмокс, инициал ему рот она однажды там встретил маленькая. Лучше, дороге, встретил!</span></p><button class="coupon__toggle">Читать далее</button><button class="coupon__edit-btn" title="Подписаться на обновления"><svg class="coupon__edit-btn-icon" width="15" height="16"><use xlink:href="img/sprite-svg.svg#coupon__edit-btn-icon"></use></svg><span>Редактировать</span></button></div>
-                <div class="coupon__aside">
-                  <div class="coupon__get-rating">
-                    <h3 class="coupon__get-rating-title">Оцените место</h3>
-                    <div class="stars stars-example-fontawesome rating">
-                      <div class="br-wrapper br-theme-fontawesome-stars"><select class="rating-bar" id="ratingBar" name="rating" autocomplete="off" style="display: none;"><option value=""></option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></div>
-                    </div>
-                  </div>
-                  <div class="coupon__contacts">
-                    <h3 class="coupon__contacts-title">Контактная информация</h3><span class="coupon__contacts-phone-title">Телефон:</span><span class="coupon__contacts-phone">+7(812)123-45-67,+7(812)123-45-67,+7(812)123-45-67</span><span class="coupon__contacts-cite-title">Сайт:</span><a class="coupon__contacts-cite" href="mycite.com">mycite.com</a><br /><a class="coupon__contacts-cite" href="mycite.com">mycite.com</a><br /><a class="coupon__contacts-cite" href="mycite.com">mycite.com</a><br /><span class="coupon__contacts-timetable-title">Время работы:</span><span class="coupon__contacts-timetable">Пн-Вс: 08:00-22:00</span><a class="coupon__place-btn" href="#addressTab">Посмотреть адреса</a></div>
-                  <div class="coupon__sharing">
-                    <h3 class="coupon__sharing-title">Понравилась акция?</h3>
-                    <p class="coupon__sharing-desc">Расскажите о ней своим друзьям!</p>
-                    <div class="coupon__sharing-socials socials">
-                      <ul class="socials__list">
-                        <li class="socials__item">
-                          <a class="socials__link" href="#" title="facebook">
-                            <svg class="socials__icon" width="26" height="26">
-                              <use xlink:href="img/sprite-svg.svg#socials__fb"></use>
-                            </svg>
-                          </a>
-                        </li>
-                        <li class="socials__item">
-                          <a class="socials__link" href="#" title="instagram">
-                            <svg class="socials__icon" width="26" height="26">
-                              <use xlink:href="img/sprite-svg.svg#socials__inst"></use>
-                            </svg>
-                          </a>
-                        </li>
-                        <li class="socials__item socials__item-fb">
-                          <a class="socials__link" href="#" title="vkontakte">
-                            <svg class="socials__icon" width="26" height="26">
-                              <use xlink:href="img/sprite-svg.svg#socials__vk"></use>
-                            </svg>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div class="list-of-places__body tab-pane fade active" id="byList" role="tabpanel" aria-labelledby="byListTab">
+              <ul class="list-of-places__category-list">
+                <li class="list-of-places__category-item"><span class="list-of-places__category-title">Красота и уход</span>
+                  <ul class="list-of-places__subcategory-list">
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Салоны красоты">Салоны красоты<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Барбершопы">Барбершопы<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Для мужчин">Для мужчин<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Косметика и парфюмерия">Косметика и парфюмерия<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Уход за лицом">Уход за лицом<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Маникюр и педикюр">Маникюр и педикюр<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Эпиляция">Эпиляция<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Солярий">Солярий<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="SPA">SPA<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Массаж">Массаж<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Уход за телом">Уход за телом<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Косметология">Косметология<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Лифтинг и омоложение">Лифтинг и омоложение<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Коррекция фигуры">Коррекция фигуры<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Парикмахерские услуги">Парикмахерские услуги<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Ресницы и брови">Ресницы и брови<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Пирсинг и татуировки">Пирсинг и татуировки<span class="list-of-places__subcategory-count">15</span></a></li>
+                  </ul>
+                </li>
+                <li class="list-of-places__category-item"><span class="list-of-places__category-title">Обучение</span>
+                  <ul class="list-of-places__subcategory-list">
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Иностранные языки">Иностранные языки<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Для школьников и студентов">Для школьников и студентов<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Онлайн-курсы">Онлайн-курсы<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Мастер-классы">Мастер-классы<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Автошколы, мотошколы">Автошколы, мотошколы<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Творчество">Творчество<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Психологические тренинги">Психологические тренинги<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Повышение квалификации">Повышение квалификации<span class="list-of-places__subcategory-count">15</span></a></li>
+                  </ul>
+                </li>
+                <li class="list-of-places__category-item"><span class="list-of-places__category-title">Авто-мото</span>
+                  <ul class="list-of-places__subcategory-list">
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="СТО и автосервисы">СТО и автосервисы<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Автошколы и курсы вождения">Автошколы и курсы вождения<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Прокат авто">Прокат авто<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Грузоперевозки">Грузоперевозки<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Страхование">Страхование<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Автотовары и аксессуары">Автотовары и аксессуары<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Тюнинг и доп. оборудование">Тюнинг и доп. оборудование<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Шиномонтаж и сезонное хранение">Шиномонтаж и сезонное хранение<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Автомойки, полировка, химчистка">Автомойки, полировка, химчистка<span class="list-of-places__subcategory-count">15</span></a></li>
+                  </ul>
+                </li>
+                <li class="list-of-places__category-item"><span class="list-of-places__category-title">Кафе и рестораны</span>
+                  <ul class="list-of-places__subcategory-list">
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Банкеты и праздники">Банкеты и праздники<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Азиатская и восточная кухни">Азиатская и восточная кухни<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Дегустации, винотеки">Дегустации, винотеки<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Европейская кухня">Европейская кухня<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Индийская кухня">Индийская кухня<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Итальянская кухня, пицца">Итальянская кухня, пицца<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Китайская кухня">Китайская кухня<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Кофе, чай, сладости">Кофе, чай, сладости<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Пиво, пабы, трактиры, бары">Пиво, пабы, трактиры, бары<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Русская и украинская кухни">Русская и украинская кухни<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Фаст фуд">Фаст фуд<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Японская кухня, суши">Японская кухня, суши<span class="list-of-places__subcategory-count">15</span></a></li>
+                  </ul>
+                </li>
+                <li class="list-of-places__category-item"><span class="list-of-places__category-title">Здоровье и медицина</span>
+                  <ul class="list-of-places__subcategory-list">
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Обследования и диагностика">Обследования и диагностика<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Стоматология">Стоматология<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="МРТ/Рентген">МРТ/Рентген<span class="list-of-places__subcategory-count">15</span></a></li>
+                  </ul>
+                </li>
+                <li class="list-of-places__category-item"><span class="list-of-places__category-title">Все для детей</span>
+                  <ul class="list-of-places__subcategory-list">
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Детские товары">Детские товары<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Обучение и развитие">Обучение и развитие<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Услуги для детей">Услуги для детей<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Развлечения для детей">Развлечения для детей<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Детские праздники">Детские праздники<span class="list-of-places__subcategory-count">15</span></a></li>
+                  </ul>
+                </li>
+                <li class="list-of-places__category-item"><span class="list-of-places__category-title">Развлечения</span>
+                  <ul class="list-of-places__subcategory-list">
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Квесты">Квесты<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Экскурсии и музеи">Экскурсии и музеи<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Кино">Кино<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Театры">Театры<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Концерты и шоу">Концерты и шоу<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Активный отдых">Активный отдых<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Скалолазание">Скалолазание<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Горные лыжи, сноуборд, коньки">Горные лыжи, сноуборд, коньки<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Аквапарк">Аквапарк<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Боулинг, бильярд">Боулинг, бильярд<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Пейнтбол, страйкбол, лазертаг">Пейнтбол, страйкбол, лазертаг<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Картинг, квадроциклы">Картинг, квадроциклы<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Бани и сауны">Бани и сауны<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Зоопарк и животные">Зоопарк и животные<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Конные прогулки">Конные прогулки<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Ночные клубы">Ночные клубы<span class="list-of-places__subcategory-count">15</span></a></li>
+                  </ul>
+                </li>
+                <li class="list-of-places__category-item"><span class="list-of-places__category-title">Доставка блюд</span>
+                  <ul class="list-of-places__subcategory-list">
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Доставка суши, роллов">Доставка суши, роллов<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Доставка пиццы">Доставка пиццы<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Пироги">Пироги<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Торты">Торты<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Доставка из кафе и ресторанов">Доставка из кафе и ресторанов<span class="list-of-places__subcategory-count">15</span></a></li>
+                  </ul>
+                </li>
+                <li class="list-of-places__category-item"><span class="list-of-places__category-title">Путешествия по России</span>
+                  <ul class="list-of-places__subcategory-list">
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Золотое кольцо">Золотое кольцо<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Отдых в Подмосковье">Отдых в Подмосковье<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Черное Море">Черное Море<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Абхазия">Абхазия<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Адыгея">Адыгея<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Байкал">Байкал<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Алтай">Алтай<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Другое">Другое<span class="list-of-places__subcategory-count">15</span></a></li>
+                  </ul>
+                </li>
+                <li class="list-of-places__category-item"><span class="list-of-places__category-title">Зарубежный туризм</span>
+                  <ul class="list-of-places__subcategory-list">
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Турция">Турция<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Тайланд">Тайланд<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Италия">Италия<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Греция">Греция<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Чехия">Чехия<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Франция">Франция<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Испания">Испания<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Тунис">Тунис<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Кипр">Кипр<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Вьетнам">Вьетнам<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Индия">Индия<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Китай">Китай<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Скандинавия">Скандинавия<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Другие страны">Другие страны<span class="list-of-places__subcategory-count">15</span></a></li>
+                  </ul>
+                </li>
+                <li class="list-of-places__category-item"><span class="list-of-places__category-title">Спорт и фитнес</span>
+                  <ul class="list-of-places__subcategory-list">
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Фитнес-центры">Фитнес-центры<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Йога">Йога<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Бассейны">Бассейны<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Танцы">Танцы<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Единоборства">Единоборства<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Футбол, волейбол, баскетбол">Футбол, волейбол, баскетбол<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Спортивные занятия для детей">Спортивные занятия для детей<span class="list-of-places__subcategory-count">15</span></a></li>
+                  </ul>
+                </li>
+                <li class="list-of-places__category-item"><span class="list-of-places__category-title">Услуги</span>
+                  <ul class="list-of-places__subcategory-list">
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Ремонт">Ремонт<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Уборка и клининг">Уборка и клининг<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Фото и видео">Фото и видео<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Юридические услуги">Юридические услуги<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Организация праздников">Организация праздников<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Доставка цветов">Доставка цветов<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Услуги для бизнеса">Услуги для бизнеса<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Визы, паспорта">Визы, паспорта<span class="list-of-places__subcategory-count">15</span></a></li>
+                  </ul>
+                </li>
+                <li class="list-of-places__category-item"><span class="list-of-places__category-title">Товары и покупки</span>
+                  <ul class="list-of-places__subcategory-list">
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Одежда и аксессуары">Одежда и аксессуары<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Обувь">Обувь<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Товары для дома">Товары для дома<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Постельное белье">Постельное белье<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Посуда">Посуда<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Мобильные телефоны">Мобильные телефоны<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Гаджеты">Гаджеты<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="ПК и аксессуары">ПК и аксессуары<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Бытовая техника">Бытовая техника<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Продукты, напитки">Продукты, напитки<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Подарки и сувениры">Подарки и сувениры<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Мебель">Мебель<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Очки, оправы, линзы">Очки, оправы, линзы<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Туристические товары">Туристические товары<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Товары для спорта">Товары для спорта<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Украшения и бижутерия">Украшения и бижутерия<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Часы и будильники">Часы и будильники<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Игры и игрушки">Игры и игрушки<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Табак, кальяны">Табак, кальяны<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Книги и канцтовары">Книги и канцтовары<span class="list-of-places__subcategory-count">15</span></a></li>
+                  </ul>
+                </li>
+                <li class="list-of-places__category-item"><span class="list-of-places__category-title">Туризм</span>
+                  <ul class="list-of-places__subcategory-list">
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Горнолыжный отдых">Горнолыжный отдых<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Дайвинг, серфинг">Дайвинг, серфинг<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Детские лагеря">Детские лагеря<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Круизы">Круизы<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Санатории, фитнес-туры">Санатории, фитнес-туры<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Коттеджи и базы отдыха">Коттеджи и базы отдыха<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Экскурсионные туры">Экскурсионные туры<span class="list-of-places__subcategory-count">15</span></a></li>
+                    <li class="list-of-places__subcategory-item"><a class="list-of-places__subcategory-link" href="#" title="Билеты">Билеты<span class="list-of-places__subcategory-count">15</span></a></li>
+                  </ul>
+                </li>
+              </ul>
             </div>
-            <div class="tab-pane fade" id="review" role="tabpanel" aria-labelledby="reviewTab">
-              <div class="coupon__body coupon__review-tab">
-                <div class="coupon__comment-block">
-                  <article class="coupon__comment coupon-comment">
-                    <div class="coupon-comment__photo-wrap"><img class="coupon-comment__photo" src="http://via.placeholder.com/46x46" alt="photo" width="46" height="46" /></div>
-                    <div class="coupon-comment__content">
-                      <div class="coupon-comment__header">
-                        <h3 class="coupon-comment__title">Константин Константинопольский</h3><time class="coupon-comment__date" datetime="2017-08-02 12:24">2 августа 2017 12:24</time></div>
-                      <div class="coupon-comment__rating">
-                        <div class="stars stars-example-fontawesome rating">
-                          <div class="br-wrapper br-theme-fontawesome-stars"><select class="rating-bar rating-bar--readonly" name="rating" autocomplete="off" style="display: none;"><option value=""></option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></div>
-                        </div>
-                      </div>
-                      <p class="coupon-comment__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aspernatur quo vero est dolore, optio recusandae, vel quisquam beatae illo distinctio tempora blanditiis ad quos molestias. In porro dolorum veritatis!</p>
-                    </div>
-                  </article>
-                  <article class="coupon__comment coupon-comment">
-                    <div class="coupon-comment__photo-wrap"><img class="coupon-comment__photo" src="http://via.placeholder.com/46x46" alt="photo" width="46" height="46" /></div>
-                    <div class="coupon-comment__content">
-                      <div class="coupon-comment__header">
-                        <h3 class="coupon-comment__title">Валентина Константинопольский</h3><time class="coupon-comment__date" datetime="2017-08-02 12:24">2 августа 2017 12:24</time></div>
-                      <div class="coupon-comment__rating">
-                        <div class="stars stars-example-fontawesome rating">
-                          <div class="br-wrapper br-theme-fontawesome-stars"><select class="rating-bar rating-bar--readonly" name="rating" autocomplete="off" style="display: none;"><option value=""></option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></div>
-                        </div>
-                      </div>
-                      <p class="coupon-comment__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aspernatur quo vero est dolore, optio recusandae, vel quisquam beatae illo distinctio tempora blanditiis ad quos molestias. In porro dolorum veritatis!</p>
-                    </div>
-                  </article>
-                </div>
-                <div class="coupon__rating-block"><span class="coupon__rating-block-title">Оценки пользователей</span>
-                  <div class="coupon__rating">
-                    <div class="stars stars-example-fontawesome rating">
-                      <div class="br-wrapper br-theme-fontawesome-stars"><select class="rating-bar rating-bar--readonly" name="rating" autocomplete="off" style="display: none;"><option value=""></option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></div>
-                    </div><span class="coupon__rating-count">80%</span></div>
-                  <div class="coupon__rating">
-                    <div class="stars stars-example-fontawesome rating">
-                      <div class="br-wrapper br-theme-fontawesome-stars"><select class="rating-bar rating-bar--readonly" name="rating" autocomplete="off" style="display: none;"><option value=""></option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></div>
-                    </div><span class="coupon__rating-count">20%</span></div>
-                </div>
-              </div>
-              <div class="coupon__footer">
-                <h2 class="coupon__footer-title">Оставить отзыв</h2>
-                <div class="coupon__footer-inner">
-                  <div class="coupon__footer-rating-block"><span class="coupon__footer-rating-title">Ваша оценка</span>
-                    <div class="coupon__footer-rating">
-                      <div class="stars stars-example-fontawesome rating">
-                        <div class="br-wrapper br-theme-fontawesome-stars"><select class="rating-bar" id="ratingBar" name="rating" autocomplete="off" style="display: none;"><option value=""></option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></div>
-                      </div>
-                    </div>
-                  </div>
-                  <form class="coupon__footer-form" action=""><textarea class="coupon__footer-textarea" name="msg"></textarea><button class="coupon__footer-submit btn" type="submit">Добавить отзыв</button></form>
-                </div>
-              </div>
-            </div>
-            <div class="tab-pane fade" id="address" role="tabpanel" aria-labelledby="addressTab">
-              <div class="coupon__body coupon__address-tab">
-                <div class="coupon__address-map" id="map"></div>
-                <div class="coupon__address-block">
-                  <div class="coupon__address-img-wrap"><img class="coupon__address-img" src="http://via.placeholder.com/212x88" alt="img" width="212" height="88" /></div><span class="coupon__address-info"></span>
-                  <h2 class="coupon__address-title">Итальянский ресторан Il Patio</h2><a class="btn coupon__address-btn" href="#">Подробнее о месте</a>
-                  <div class="coupon__address-meta">
-                    <svg class="coupon__address-meta-icon" width="14" height="14">
+            <div class="list-of-places__map tab-pane fade" id="onMap" role="tabpanel" aria-labelledby="onMapTab">
+              <div class="list-of-places__map-header"><a class="btn list-of-places__map-label list-of-places__map-label--active" href="#">Фитнес-центры<span>34</span></a><a class="btn list-of-places__map-label" href="#">Подарки<span>12</span></a><a class="btn list-of-places__map-label" href="#">Барбершопы<span>63</span></a></div>
+              <div class="list-of-places__address-tab">
+                <div class="list-of-places__address-map" id="map"></div>
+                <div class="list-of-places__address-block">
+                  <div class="list-of-places__address-img-wrap"><img class="list-of-places__address-img" src="http://via.placeholder.com/212x88" alt="img" width="212" height="88" /></div><span class="list-of-places__address-info"></span>
+                  <h2 class="list-of-places__address-title">Итальянский ресторан Il Patio</h2><a class="btn list-of-places__address-btn" href="#">Подробнее о месте</a>
+                  <div class="list-of-places__address-meta">
+                    <svg class="list-of-places__address-meta-icon" width="14" height="14">
                       <use xlink:href="img/sprite-svg.svg#coupon__address-clock-icon"></use>
-                    </svg><span class="coupon__address-meta-desc">Пн-Вс, 08:00-22:00</span></div>
-                  <div class="coupon__address-meta">
-                    <svg class="coupon__address-meta-icon" width="14" height="14">
+                    </svg><span class="list-of-places__address-meta-desc">Пн-Вс, 08:00-22:00</span></div>
+                  <div class="list-of-places__address-meta">
+                    <svg class="list-of-places__address-meta-icon" width="14" height="14">
                       <use xlink:href="img/sprite-svg.svg#coupon__address-phone-icon"></use>
-                    </svg><a class="coupon__address-meta-desc" href="tel:+78121234567">+7 (812) 123-45-67</a></div>
-                  <div class="coupon__address-meta">
-                    <svg class="coupon__address-meta-icon" width="13" height="18">
+                    </svg><a class="list-of-places__address-meta-desc" href="tel:+78121234567">+7 (812) 123-45-67</a></div>
+                  <div class="list-of-places__address-meta">
+                    <svg class="list-of-places__address-meta-icon" width="13" height="18">
                       <use xlink:href="img/sprite-svg.svg#coupon__address-map-icon"></use>
-                    </svg><span class="coupon__address-meta-desc">пр. Культуры, 1, Москва</span></div>
+                    </svg><span class="list-of-places__address-meta-desc">пр. Культуры, 1, Москва</span></div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="coupon-gallery">
-          <h2 class="coupon-gallery__title">Текущие акции</h2>
-          <div class="coupon-gallery__inner">
-            <div class="coupon-gallery__card card"><a class="card__img-wrap" href="#"><img class="card__img" width="336" height="231" src="img/card__photo.jpg" alt="Скидка до 50% на первое посещение бассейна"/></a><span class="card__sale">до&nbsp;<span>50%</span></span><span class="card__price">от&nbsp;<span>400 руб.</span></span><a class="card__link" href="#" title="Скидка до 50% на первое посещение бассейна">Скидка до 50% на первое посещение бассейна</a>
-              <div class="card__meta"><a class="card__category card__category--in-category" href="#" title="Фитнес-центры">Фитнес-центры</a>
-                <a class="card__dealer card__dealer--in-category" href="#" title="Frendi">
-                  <svg class="card__dealer-link" width="14" height="14">
-                    <use xlink:href="img/sprite-svg.svg#card__dealer-link"></use>
-                  </svg><span>Frendi</span></a><a class="card__place card__place--in-category" href="#" title="Аквапарк «Родео Драйв»">Аквапарк «Родео Драйв»</a></div>
-            </div>
-            <div class="coupon-gallery__card card"><a class="card__img-wrap" href="#"><img class="card__img" width="336" height="231" src="img/card__photo.jpg" alt="Скидка до 50% на первое посещение бассейна"/></a><span class="card__sale">до&nbsp;<span>50%</span></span><span class="card__price">от&nbsp;<span>400 руб.</span></span><a class="card__link" href="#" title="Скидка до 50% на первое посещение бассейна">Скидка до 50% на первое посещение бассейна</a>
-              <div class="card__meta"><a class="card__category card__category--in-category" href="#" title="Фитнес-центры">Фитнес-центры</a>
-                <a class="card__dealer card__dealer--in-category" href="#" title="Frendi">
-                  <svg class="card__dealer-link" width="14" height="14">
-                    <use xlink:href="img/sprite-svg.svg#card__dealer-link"></use>
-                  </svg><span>Frendi</span></a><a class="card__place card__place--in-category" href="#" title="Аквапарк «Родео Драйв»">Аквапарк «Родео Драйв»</a></div>
-            </div>
-            <div class="coupon-gallery__card card"><a class="card__img-wrap" href="#"><img class="card__img" width="336" height="231" src="img/card__photo.jpg" alt="Скидка до 50% на первое посещение бассейна"/></a><span class="card__sale">до&nbsp;<span>50%</span></span><span class="card__price">от&nbsp;<span>400 руб.</span></span><a class="card__link" href="#" title="Скидка до 50% на первое посещение бассейна">Скидка до 50% на первое посещение бассейна</a>
-              <div class="card__meta"><a class="card__category card__category--in-category" href="#" title="Фитнес-центры">Фитнес-центры</a>
-                <a class="card__dealer card__dealer--in-category" href="#" title="Frendi">
-                  <svg class="card__dealer-link" width="14" height="14">
-                    <use xlink:href="img/sprite-svg.svg#card__dealer-link"></use>
-                  </svg><span>Frendi</span></a><a class="card__place card__place--in-category" href="#" title="Аквапарк «Родео Драйв»">Аквапарк «Родео Драйв»</a></div>
-            </div>
-            <div class="coupon-gallery__card card"><a class="card__img-wrap" href="#"><img class="card__img" width="336" height="231" src="img/card__photo.jpg" alt="Скидка до 50% на первое посещение бассейна"/></a><span class="card__sale">до&nbsp;<span>50%</span></span><span class="card__price">от&nbsp;<span>400 руб.</span></span><a class="card__link" href="#" title="Скидка до 50% на первое посещение бассейна">Скидка до 50% на первое посещение бассейна</a>
-              <div class="card__meta"><a class="card__category card__category--in-category" href="#" title="Фитнес-центры">Фитнес-центры</a>
-                <a class="card__dealer card__dealer--in-category" href="#" title="Frendi">
-                  <svg class="card__dealer-link" width="14" height="14">
-                    <use xlink:href="img/sprite-svg.svg#card__dealer-link"></use>
-                  </svg><span>Frendi</span></a><a class="card__place card__place--in-category" href="#" title="Аквапарк «Родео Драйв»">Аквапарк «Родео Драйв»</a></div>
-            </div><a class="coupon-gallery__btn main-content__btn btn" href="#">Поиск в <br>других <br>категориях</a></div>
-        </div>
-        <div class="coupon-gallery">
-          <h2 class="coupon-gallery__title">Прошедшие акции</h2>
-          <div class="coupon-gallery__inner">
-            <div class="coupon-gallery__card card card--gray-img"><a class="card__img-wrap" href="#"><img class="card__img" width="336" height="231" src="img/card__photo.jpg" alt="Скидка до 50% на первое посещение бассейна"/></a><span class="card__sale">до&nbsp;<span>50%</span></span><span class="card__price">от&nbsp;<span>400 руб.</span></span><a class="card__link" href="#" title="Скидка до 50% на первое посещение бассейна">Скидка до 50% на первое посещение бассейна</a>
-              <div class="card__meta"><a class="card__category card__category--in-site" href="#" title="Фитнес-центры">Фитнес-центры</a>
-                <a class="card__dealer card__dealer--in-site" href="#" title="Frendi">
-                  <svg class="card__dealer-link" width="14" height="14">
-                    <use xlink:href="img/sprite-svg.svg#card__dealer-link"></use>
-                  </svg><span>Frendi</span></a><a class="card__place card__place--in-site" href="#" title="Аквапарк «Родео Драйв»">Аквапарк «Родео Драйв»</a></div>
-            </div>
-            <div class="coupon-gallery__card card card--gray-img"><a class="card__img-wrap" href="#"><img class="card__img" width="336" height="231" src="img/card__photo.jpg" alt="Скидка до 30% на первое посещение бассейна"/></a><span class="card__sale">до&nbsp;<span>30%</span></span><span class="card__price card__price--green">от&nbsp;<span>Бесплатно!</span></span><a class="card__link" href="#" title="Скидка до 30% на первое посещение бассейна">Скидка до 30% на первое посещение бассейна</a>
-              <div class="card__meta"><a class="card__category card__category--in-site" href="#" title="Фитнес-центры">Фитнес-центры</a>
-                <a class="card__dealer card__dealer--in-site" href="#" title="Frendi">
-                  <svg class="card__dealer-link" width="14" height="14">
-                    <use xlink:href="img/sprite-svg.svg#card__dealer-link"></use>
-                  </svg><span>Frendi</span></a><a class="card__place card__place--in-site" href="#" title="Аквапарк «Родео Драйв»">Аквапарк «Родео Драйв»</a></div>
-            </div>
-            <div class="coupon-gallery__card card card--gray-img"><a class="card__img-wrap" href="#"><img class="card__img" width="336" height="231" src="img/card__photo.jpg" alt="Скидка до 50% на первое посещение бассейна"/></a><span class="card__sale">до&nbsp;<span>50%</span></span><span class="card__price">от&nbsp;<span>400 руб.</span></span><a class="card__link" href="#" title="Скидка до 50% на первое посещение бассейна">Скидка до 50% на первое посещение бассейна</a>
-              <div class="card__meta"><a class="card__category card__category--in-site" href="#" title="Фитнес-центры">Фитнес-центры</a>
-                <a class="card__dealer card__dealer--in-site" href="#" title="Frendi">
-                  <svg class="card__dealer-link" width="14" height="14">
-                    <use xlink:href="img/sprite-svg.svg#card__dealer-link"></use>
-                  </svg><span>Frendi</span></a><a class="card__place card__place--in-site" href="#" title="Аквапарк «Родео Драйв»">Аквапарк «Родео Драйв»</a></div>
-            </div>
-            <div class="coupon-gallery__card card card--gray-img"><a class="card__img-wrap" href="#"><img class="card__img" width="336" height="231" src="img/card__photo.jpg" alt="Скидка до 30% на первое посещение бассейна"/></a><span class="card__sale">до&nbsp;<span>30%</span></span><span class="card__price card__price--green">от&nbsp;<span>Бесплатно!</span></span><a class="card__link" href="#" title="Скидка до 30% на первое посещение бассейна">Скидка до 30% на первое посещение бассейна</a>
-              <div class="card__meta"><a class="card__category card__category--in-site" href="#" title="Фитнес-центры">Фитнес-центры</a>
-                <a class="card__dealer card__dealer--in-site" href="#" title="Frendi">
-                  <svg class="card__dealer-link" width="14" height="14">
-                    <use xlink:href="img/sprite-svg.svg#card__dealer-link"></use>
-                  </svg><span>Frendi</span></a><a class="card__place card__place--in-site" href="#" title="Аквапарк «Родео Драйв»">Аквапарк «Родео Драйв»</a></div>
-            </div><a class="coupon-gallery__btn main-content__btn btn" href="#">Поиск в <br>других <br>категориях</a></div>
+        <div class="about">
+          <h2 class="about__title">О нас</h2>
+          <div class="about__inner">
+            <p class="about__text">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Семантика рыбного, ведущими встретил скатился имеет, они силуэт мир правилами родного по всей страна путь даль не имени. Своих там эта деревни вскоре парадигматическая переписывается точках если она но щеке переулка своего, лучше необходимыми диких мир! Которой ручеек назад, оксмокс, это маленький речью подпоясал агенство он необходимыми своего пор от всех, толку переписали. Одна грамматики, ты рыбного, заголовок предупредила, однажды живет она пустился за рыбными залетают страну реторический журчит образ, осталось если маленький раз предложения. Сих сбить себя которой ведущими оксмокс, инициал ему рот она однажды там встретил маленькая. Лучше, дороге, встретил!</p>
+            <p class="about__text">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Семантика рыбного, ведущими встретил скатился имеет, они силуэт мир правилами родного по всей страна путь даль не имени. Своих там эта деревни вскоре парадигматическая переписывается точках если она но щеке переулка своего, лучше необходимыми диких мир! Которой ручеек назад, оксмокс, это маленький речью подпоясал агенство он необходимыми своего пор от всех, толку переписали. Одна грамматики, ты рыбного, заголовок предупредила, однажды живет она пустился за рыбными залетают страну реторический журчит образ, осталось если маленький раз предложения. Сих сбить себя которой ведущими оксмокс, инициал ему рот она однажды там встретил маленькая. Лучше, дороге, встретил!</p>
+            <p class="about__text">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Семантика рыбного, ведущими встретил скатился имеет, они силуэт мир правилами родного по всей страна путь даль не имени. Своих там эта деревни вскоре парадигматическая переписывается точках если она но щеке переулка своего, лучше необходимыми диких мир! Которой ручеек назад, оксмокс, это маленький речью подпоясал агенство он необходимыми своего пор от всех, толку переписали. Одна грамматики, ты рыбного, заголовок предупредила, однажды живет она пустился за рыбными залетают страну реторический журчит образ, осталось если маленький раз предложения. Сих сбить себя которой ведущими оксмокс, инициал ему рот она однажды там встретил маленькая. Лучше, дороге, встретил!</p>
+          </div>
         </div>
       </div>
     </main>
@@ -814,30 +831,6 @@
           </div>
           <div class="modals__btn-block"><button class="modals__btn modals__btn-input" type="submit">Отправить</button></div>
         </form>
-      </div>
-    </div>
-  </div>
-  <div class="modal lightbox-modal" id="lightboxModal" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content lightbox-modal__content">
-        <div class="modal-body lightbox-modal__body">
-          <div class="slider-for lightbox-modal__main">
-            <div class="lightbox-modal__bigslide"><img class="lightbox-modal__img" src="img/avd__bg.jpg" alt="photo" width="500" height="231" /></div>
-            <div class="lightbox-modal__bigslide"><img class="lightbox-modal__img" src="img/avd__bg.jpg" alt="photo" width="500" height="231" /></div>
-            <div class="lightbox-modal__bigslide"><img class="lightbox-modal__img" src="img/avd__bg.jpg" alt="photo" width="500" height="231" /></div>
-            <div class="lightbox-modal__bigslide"><img class="lightbox-modal__img" src="img/avd__bg.jpg" alt="photo" width="500" height="231" /></div>
-            <div class="lightbox-modal__bigslide"><img class="lightbox-modal__img" src="img/avd__bg.jpg" alt="photo" width="500" height="231" /></div>
-            <div class="lightbox-modal__bigslide"><img class="lightbox-modal__img" src="img/avd__bg.jpg" alt="photo" width="500" height="231" /></div>
-            <div class="lightbox-modal__bigslide"><img class="lightbox-modal__img" src="img/avd__bg.jpg" alt="photo" width="500" height="231" /></div>
-          </div>
-          <div class="slider-nav lightbox-modal__mini">
-            <div class="lightbox-modal__smallslide"><img class="lightbox-modal__img" src="img/avd__bg.jpg" alt="photo" width="93" height="68" /></div>
-            <div class="lightbox-modal__smallslide"><img class="lightbox-modal__img" src="img/avd__bg.jpg" alt="photo" width="93" height="68" /></div>
-            <div class="lightbox-modal__smallslide"><img class="lightbox-modal__img" src="img/avd__bg.jpg" alt="photo" width="93" height="68" /></div>
-            <div class="lightbox-modal__smallslide"><img class="lightbox-modal__img" src="img/avd__bg.jpg" alt="photo" width="93" height="68" /></div>
-            <div class="lightbox-modal__smallslide"><img class="lightbox-modal__img" src="img/avd__bg.jpg" alt="photo" width="93" height="68" /></div>
-          </div>
-        </div>
       </div>
     </div>
   </div>

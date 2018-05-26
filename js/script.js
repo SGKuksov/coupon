@@ -152,10 +152,9 @@ $(document).ready(function() {
   $('.slider-for').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
-    // arrows: false ,
     prevArrow: '<button type="button" class="lightbox-modal__prev"></button>',
     nextArrow: '<button type="button" class="lightbox-modal__next"></button>',
-    // fade: true,
+    fade: true,
     asNavFor: '.slider-nav'
   });
   $('.slider-nav').slick({
@@ -163,9 +162,11 @@ $(document).ready(function() {
     slidesToScroll: 1,
     asNavFor: '.slider-for',
     arrows: false,
-    // dots: true,
-    // centerMode: true,
-    focusOnSelect: true
+    centerMode: true,
+    focusOnSelect: true,
+    variableWidth: true,
+    infinite: false,
+    initialSlide: 2
   });
 
   // рейтинг на запись

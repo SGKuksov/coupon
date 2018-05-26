@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no, maximum-scale=1">
   <meta name="robots" content="noindex, nofollow">
-  <title>Place page</title>
+  <title>Coupon page</title>
   <meta name="description" content="">
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
@@ -67,9 +67,7 @@
         </ul>
       </div>
       <div class="page-header__btn"><a class="btn" href="#">Подписаться</a></div>
-      <div class="page-header__login"><a class="page-header__login-link" id="dropdownMenuLink" href="#" title="Админ" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="page-header__login-name">Админ</span><div class="page-header__avatar-wrap page-header__avatar-wrap--red-border"><img class="page-header__avatar" width="26" height="26" src="img/page-header__avatar-admin.svg" alt="Админ"/></div><svg class="page-header__login-dropdown" width="12" height="7"><use xlink:href="img/sprite-svg.svg#page-header__login-dropdown"></use></svg></a>
-        <div class="dropdown-menu page-header__login-menu login-menu" id="pageHeaderLoginMenu"><a class="dropdown-item login-menu__item" href="#">Настройки</a><a class="dropdown-item login-menu__item" href="#">Подписки</a><a class="dropdown-item login-menu__item" href="#">Избранное</a><a class="dropdown-item login-menu__item" href="#">Ваши отзывы</a><a class="dropdown-item login-menu__item login-menu__log-out-item" href="#">Выйти<svg class="page-header__log_out" width="14" height="13"><use xlink:href="img/sprite-svg.svg#page-header__log_out"></use></svg></a></div>
-      </div>
+      <div class="page-header__login"><a class="page-header__login-link" id="callAuthModal" href="#" title="Войти" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="page-header__login-name">Войти</span><div class="page-header__avatar-wrap page-header__avatar-wrap--gray-border"><svg class="page-header__log_in" width="26" height="26"><use xlink:href="img/sprite-svg.svg#page-header__log_in"></use></svg></div></a></div>
     </div>
   </header>
   <div class="page-container">
@@ -258,27 +256,9 @@
         <div class="tag-panel">
           <div class="tag-panel__header">
             <div class="tag-panel__labels">
-              <div class="label"><a class="label__title" href="#" title="Фитнес-центры">Фитнес-центры</a>
-                <a class="label__remove" href="#" title="Убрать">
-                  <svg class="label__remove-icon" width="18" height="18">
-                    <use xlink:href="img/sprite-svg.svg#label__remove"></use>
-                  </svg>
-                </a>
-              </div>
-              <div class="label"><a class="label__title" href="#" title="Подарки">Подарки</a>
-                <a class="label__remove" href="#" title="Убрать">
-                  <svg class="label__remove-icon" width="18" height="18">
-                    <use xlink:href="img/sprite-svg.svg#label__remove"></use>
-                  </svg>
-                </a>
-              </div>
-              <div class="label"><a class="label__title" href="#" title="Барбершопы">Барбершопы</a>
-                <a class="label__remove" href="#" title="Убрать">
-                  <svg class="label__remove-icon" width="18" height="18">
-                    <use xlink:href="img/sprite-svg.svg#label__remove"></use>
-                  </svg>
-                </a>
-              </div>
+              <div class="label"><a class="label__title" href="#" title="Фитнес-центры">Фитнес-центры</a></div>
+              <div class="label"><a class="label__title" href="#" title="Подарки">Подарки</a></div>
+              <div class="label"><a class="label__title" href="#" title="Барбершопы">Барбершопы</a></div>
             </div>
           </div>
           <div class="tag-panel__body">
@@ -290,14 +270,14 @@
                   </div>
                 </div>
               </div>
-              <h1 class="tag-panel__title">Все акции, купоны и скидки сети итальянских ресторанов Il Patio</h1>
+              <h1 class="tag-panel__title">Купон на бесплатное посещение бассейна</h1>
               <p class="tag-panel__subtitle">При покупке любого абонемента - одно занятие бесплатно!</p>
             </div>
-            <div class="tag-panel__footer">
-              <a class="tag-panel__footer-rss rss" href="#" title="Подписаться на обновления">
-                <svg class="tag-panel__btn-rss" width="14" height="14">
-                  <use xlink:href="img/sprite-svg.svg#top-panel__rss"></use>
-                </svg><span>Подписаться на обновления</span></a>
+            <div class="tag-panel__btn-wrap">
+              <div class="tag-panel__sold">
+                <svg class="tag-panel__coupon-sold-icon" width="26" height="26">
+                  <use xlink:href="img/sprite-svg.svg#tag-panel__coupon-sold-icon"></use>
+                </svg><span class="tag-panel__sold-count">95</span><span class="tag-panel__sold-title">купонов уже получено</span></div>
               <a class="tag-panel__favorite favorite" href="#" title="Добавить в избранное">
                 <svg class="tag-panel__btn-favorite" width="16" height="14">
                   <use xlink:href="img/sprite-svg.svg#tag-panel__favorite-icon"></use>
@@ -311,23 +291,45 @@
               <li class="nav-item coupon__tab"><a class="nav-link coupon__tab-link active" id="descriptionTab" data-toggle="tab" href="#description" role="tab" aria-controls="description" aria-selected="true">Условия</a></li>
               <li class="nav-item coupon__tab"><a class="nav-link coupon__tab-link" id="reviewTab" data-toggle="tab" href="#review" role="tab" aria-controls="review" aria-selected="false">Отзывы&nbsp;<span class="coupon__tab-count" id="couponTabCount">3</span></a></li>
               <li class="nav-item coupon__tab"><a class="nav-link coupon__tab-link" id="addressTab" data-toggle="tab" href="#address" role="tab" aria-controls="address" aria-selected="false">Адреса</a></li>
-            </ul><label class="el-switch coupon__editor-label"><span class="coupon__editor-label-title">Отображение на сайте</span><input type="checkbox" name="switch"/><span class="el-switch-style"></span></label></nav>
+            </ul>
+          </nav>
           <div class="tab-content">
             <div class="tab-pane fade active" id="description" role="tabpanel" aria-labelledby="descriptionTab">
               <div class="coupon__body coupon__description-tab">
                 <div class="coupon__info">
-                  <div class="coupon__img-wrap" id="placeGallery" href="#"><img class="coupon__img" src="img/card__photo.jpg" alt="photo" width="336" height="231" /><span class="coupon__gallery"><svg class="coupon__gallery-icon" width="18" height="14"><use xlink:href="img/sprite-svg.svg#coupon__gallery"></use></svg><span>19 фото</span></span>
+                  <div class="coupon__img-wrap"><img class="coupon__img" src="img/card__photo.jpg" alt="photo" width="336" height="231" /><span class="coupon__sale">до&nbsp;<span>50%</span></span>
                   </div><span class="coupon__take-price coupon__take-price--on-top">Бесплатно</span><a class="coupon__take-btn coupon__take-btn--on-top btn" href="#" title="Получить купон">Получить купон</a>
-                  <p class="coupon__text">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Семантика рыбного, ведущими встретил скатился имеет, они силуэт мир правилами родного по всей страна путь даль не имени. Своих там эта деревни вскоре парадигматическая переписывается точках если она но щеке переулка своего, лучше необходимыми диких мир! Которой ручеек назад, оксмокс, это маленький речью подпоясал агенство он необходимыми своего пор от всех, толку переписали. Одна грамматики, ты рыбного, заголовок предупредила, однажды живет она пустился за рыбными залетают страну реторический журчит образ, осталось если маленький раз предложения. Сих сбить себя которой ведущими оксмокс, инициал ему рот она однажды там встретил маленькая. Лучше, дороге, встретил!<span class="coupon__text coupon__text--hide"> Далеко--далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Семантика рыбного, ведущими встретил скатился имеет, они силуэт мир правилами родного по всей страна путь даль не имени. Своих там эта деревни вскоре парадигматическая переписывается точках если она но щеке переулка своего, лучше необходимыми диких мир! Которой ручеек назад, оксмокс, это маленький речью подпоясал агенство он необходимыми своего пор от всех, толку переписали. Одна грамматики, ты рыбного, заголовок предупредила, однажды живет она пустился за рыбными залетают страну реторический журчит образ, осталось если маленький раз предложения. Сих сбить себя которой ведущими оксмокс, инициал ему рот она однажды там встретил маленькая. Лучше, дороге, встретил! Далеко--далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Семантика рыбного, ведущими встретил скатился имеет, они силуэт мир правилами родного по всей страна путь даль не имени. Своих там эта деревни вскоре парадигматическая переписывается точках если она но щеке переулка своего, лучше необходимыми диких мир! Которой ручеек назад, оксмокс, это маленький речью подпоясал агенство он необходимыми своего пор от всех, толку переписали. Одна грамматики, ты рыбного, заголовок предупредила, однажды живет она пустился за рыбными залетают страну реторический журчит образ, осталось если маленький раз предложения. Сих сбить себя которой ведущими оксмокс, инициал ему рот она однажды там встретил маленькая. Лучше, дороге, встретил! Далеко--далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Семантика рыбного, ведущими встретил скатился имеет, они силуэт мир правилами родного по всей страна путь даль не имени. Своих там эта деревни вскоре парадигматическая переписывается точках если она но щеке переулка своего, лучше необходимыми диких мир! Которой ручеек назад, оксмокс, это маленький речью подпоясал агенство он необходимыми своего пор от всех, толку переписали. Одна грамматики, ты рыбного, заголовок предупредила, однажды живет она пустился за рыбными залетают страну реторический журчит образ, осталось если маленький раз предложения. Сих сбить себя которой ведущими оксмокс, инициал ему рот она однажды там встретил маленькая. Лучше, дороге, встретил! Далеко--далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Семантика рыбного, ведущими встретил скатился имеет, они силуэт мир правилами родного по всей страна путь даль не имени. Своих там эта деревни вскоре парадигматическая переписывается точках если она но щеке переулка своего, лучше необходимыми диких мир! Которой ручеек назад, оксмокс, это маленький речью подпоясал агенство он необходимыми своего пор от всех, толку переписали. Одна грамматики, ты рыбного, заголовок предупредила, однажды живет она пустился за рыбными залетают страну реторический журчит образ, осталось если маленький раз предложения. Сих сбить себя которой ведущими оксмокс, инициал ему рот она однажды там встретил маленькая. Лучше, дороге, встретил!</span></p><button class="coupon__toggle">Читать далее</button><button class="coupon__edit-btn" title="Подписаться на обновления"><svg class="coupon__edit-btn-icon" width="15" height="16"><use xlink:href="img/sprite-svg.svg#coupon__edit-btn-icon"></use></svg><span>Редактировать</span></button></div>
+                  <p class="coupon__text">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Семантика рыбного, ведущими встретил скатился имеет, они силуэт мир правилами родного по всей страна путь даль не имени. Своих там эта деревни вскоре парадигматическая переписывается точках если она но щеке переулка своего, лучше необходимыми диких мир! Которой ручеек назад, оксмокс, это маленький речью подпоясал агенство он необходимыми своего пор от всех, толку переписали. Одна грамматики, ты рыбного, заголовок предупредила, однажды живет она пустился за рыбными залетают страну реторический журчит образ, осталось если маленький раз предложения. Сих сбить себя которой ведущими оксмокс, инициал ему рот она однажды там встретил маленькая. Лучше, дороге, встретил!<span class="coupon__text coupon__text--hide"> Далеко--далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Семантика рыбного, ведущими встретил скатился имеет, они силуэт мир правилами родного по всей страна путь даль не имени. Своих там эта деревни вскоре парадигматическая переписывается точках если она но щеке переулка своего, лучше необходимыми диких мир! Которой ручеек назад, оксмокс, это маленький речью подпоясал агенство он необходимыми своего пор от всех, толку переписали. Одна грамматики, ты рыбного, заголовок предупредила, однажды живет она пустился за рыбными залетают страну реторический журчит образ, осталось если маленький раз предложения. Сих сбить себя которой ведущими оксмокс, инициал ему рот она однажды там встретил маленькая. Лучше, дороге, встретил! Далеко--далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Семантика рыбного, ведущими встретил скатился имеет, они силуэт мир правилами родного по всей страна путь даль не имени. Своих там эта деревни вскоре парадигматическая переписывается точках если она но щеке переулка своего, лучше необходимыми диких мир! Которой ручеек назад, оксмокс, это маленький речью подпоясал агенство он необходимыми своего пор от всех, толку переписали. Одна грамматики, ты рыбного, заголовок предупредила, однажды живет она пустился за рыбными залетают страну реторический журчит образ, осталось если маленький раз предложения. Сих сбить себя которой ведущими оксмокс, инициал ему рот она однажды там встретил маленькая. Лучше, дороге, встретил! Далеко--далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Семантика рыбного, ведущими встретил скатился имеет, они силуэт мир правилами родного по всей страна путь даль не имени. Своих там эта деревни вскоре парадигматическая переписывается точках если она но щеке переулка своего, лучше необходимыми диких мир! Которой ручеек назад, оксмокс, это маленький речью подпоясал агенство он необходимыми своего пор от всех, толку переписали. Одна грамматики, ты рыбного, заголовок предупредила, однажды живет она пустился за рыбными залетают страну реторический журчит образ, осталось если маленький раз предложения. Сих сбить себя которой ведущими оксмокс, инициал ему рот она однажды там встретил маленькая. Лучше, дороге, встретил! Далеко--далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Семантика рыбного, ведущими встретил скатился имеет, они силуэт мир правилами родного по всей страна путь даль не имени. Своих там эта деревни вскоре парадигматическая переписывается точках если она но щеке переулка своего, лучше необходимыми диких мир! Которой ручеек назад, оксмокс, это маленький речью подпоясал агенство он необходимыми своего пор от всех, толку переписали. Одна грамматики, ты рыбного, заголовок предупредила, однажды живет она пустился за рыбными залетают страну реторический журчит образ, осталось если маленький раз предложения. Сих сбить себя которой ведущими оксмокс, инициал ему рот она однажды там встретил маленькая. Лучше, дороге, встретил!</span></p><button class="coupon__toggle">Читать далее</button></div>
                 <div class="coupon__aside">
+                  <div class="coupon__take-block"><span class="coupon__take-price">Бесплатно</span><a class="coupon__take-btn btn" href="#" title="Получить купон">Получить купон</a>
+                    <div class="coupon__take-review">
+                      <h3 class="coupon__take-review-title">Купон сработал?</h3>
+                    </div>
+                    <div class="coupon__take-score-wrap">
+                      <div class="coupon__take-score">
+                        <svg class="coupon__take-score-icon" width="15" height="10">
+                          <use xlink:href="img/sprite-svg.svg#coupon__take-score-yes"></use>
+                        </svg><span class="coupon__take-score-count">12</span></div>
+                      <div class="coupon__take-score">
+                        <svg class="coupon__take-score-icon" width="12" height="12">
+                          <use xlink:href="img/sprite-svg.svg#coupon__take-score-no"></use>
+                        </svg><span class="coupon__take-score-count">0</span></div>
+                    </div>
+                    <div class="coupon__take-review-btn-wrap"><button class="coupon__take-review-btn coupon__take-review-btn--green" title="Да">Да</button><button class="coupon__take-review-btn coupon__take-review-btn--red" id="callErrorModal" title="Нет">Нет</button></div>
+                  </div>
                   <div class="coupon__get-rating">
-                    <h3 class="coupon__get-rating-title">Оцените место</h3>
+                    <h3 class="coupon__get-rating-title">Оцените купон</h3>
                     <div class="stars stars-example-fontawesome rating">
                       <div class="br-wrapper br-theme-fontawesome-stars"><select class="rating-bar" id="ratingBar" name="rating" autocomplete="off" style="display: none;"><option value=""></option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></div>
                     </div>
                   </div>
                   <div class="coupon__contacts">
-                    <h3 class="coupon__contacts-title">Контактная информация</h3><span class="coupon__contacts-phone-title">Телефон:</span><span class="coupon__contacts-phone">+7(812)123-45-67,+7(812)123-45-67,+7(812)123-45-67</span><span class="coupon__contacts-cite-title">Сайт:</span><a class="coupon__contacts-cite" href="mycite.com">mycite.com</a><br /><a class="coupon__contacts-cite" href="mycite.com">mycite.com</a><br /><a class="coupon__contacts-cite" href="mycite.com">mycite.com</a><br /><span class="coupon__contacts-timetable-title">Время работы:</span><span class="coupon__contacts-timetable">Пн-Вс: 08:00-22:00</span><a class="coupon__place-btn" href="#addressTab">Посмотреть адреса</a></div>
+                    <h3 class="coupon__contacts-title">Контактная информация</h3><a class="coupon__contacts-place" href="#" title="Аквапарк «Родео Драйв»">Аквапарк «Родео Драйв»</a>
+                    <div class="coupon__contacts-rating">
+                      <div class="stars stars-example-fontawesome rating">
+                        <div class="br-wrapper br-theme-fontawesome-stars"><select class="rating-bar rating-bar--readonly" name="rating" autocomplete="off" style="display: none;"><option value=""></option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></div>
+                      </div>
+                    </div><span class="coupon__contacts-phone-title">Телефон:</span><span class="coupon__contacts-phone">+7(812)123-45-67,+7(812)123-45-67,+7(812)123-45-67</span><span class="coupon__contacts-cite-title">Сайт:</span><a class="coupon__contacts-cite" href="mycite.com">mycite.com</a><br /><a class="coupon__contacts-cite" href="mycite.com">mycite.com</a><br /><a class="coupon__contacts-cite" href="mycite.com">mycite.com</a><br /><span class="coupon__contacts-timetable-title">Время работы:</span><span class="coupon__contacts-timetable">Пн-Вс: 08:00-22:00</span><a class="coupon__place-btn" href="#addressTab">Посмотреть адреса</a></div>
                   <div class="coupon__sharing">
                     <h3 class="coupon__sharing-title">Понравилась акция?</h3>
                     <p class="coupon__sharing-desc">Расскажите о ней своим друзьям!</p>
@@ -439,7 +441,7 @@
           </div>
         </div>
         <div class="coupon-gallery">
-          <h2 class="coupon-gallery__title">Текущие акции</h2>
+          <h2 class="coupon-gallery__title">Здесь так же проходят другие акции</h2>
           <div class="coupon-gallery__inner">
             <div class="coupon-gallery__card card"><a class="card__img-wrap" href="#"><img class="card__img" width="336" height="231" src="img/card__photo.jpg" alt="Скидка до 50% на первое посещение бассейна"/></a><span class="card__sale">до&nbsp;<span>50%</span></span><span class="card__price">от&nbsp;<span>400 руб.</span></span><a class="card__link" href="#" title="Скидка до 50% на первое посещение бассейна">Скидка до 50% на первое посещение бассейна</a>
               <div class="card__meta"><a class="card__category card__category--in-category" href="#" title="Фитнес-центры">Фитнес-центры</a>
@@ -471,35 +473,35 @@
             </div><a class="coupon-gallery__btn main-content__btn btn" href="#">Поиск в <br>других <br>категориях</a></div>
         </div>
         <div class="coupon-gallery">
-          <h2 class="coupon-gallery__title">Прошедшие акции</h2>
+          <h2 class="coupon-gallery__title">Похожие предложения</h2>
           <div class="coupon-gallery__inner">
-            <div class="coupon-gallery__card card card--gray-img"><a class="card__img-wrap" href="#"><img class="card__img" width="336" height="231" src="img/card__photo.jpg" alt="Скидка до 50% на первое посещение бассейна"/></a><span class="card__sale">до&nbsp;<span>50%</span></span><span class="card__price">от&nbsp;<span>400 руб.</span></span><a class="card__link" href="#" title="Скидка до 50% на первое посещение бассейна">Скидка до 50% на первое посещение бассейна</a>
-              <div class="card__meta"><a class="card__category card__category--in-site" href="#" title="Фитнес-центры">Фитнес-центры</a>
-                <a class="card__dealer card__dealer--in-site" href="#" title="Frendi">
+            <div class="coupon-gallery__card card"><a class="card__img-wrap" href="#"><img class="card__img" width="336" height="231" src="img/card__photo.jpg" alt="Скидка до 50% на первое посещение бассейна"/></a><span class="card__sale">до&nbsp;<span>50%</span></span><span class="card__price">от&nbsp;<span>400 руб.</span></span><a class="card__link" href="#" title="Скидка до 50% на первое посещение бассейна">Скидка до 50% на первое посещение бассейна</a>
+              <div class="card__meta"><a class="card__category card__category--in-category" href="#" title="Фитнес-центры">Фитнес-центры</a>
+                <a class="card__dealer card__dealer--in-category" href="#" title="Frendi">
                   <svg class="card__dealer-link" width="14" height="14">
                     <use xlink:href="img/sprite-svg.svg#card__dealer-link"></use>
-                  </svg><span>Frendi</span></a><a class="card__place card__place--in-site" href="#" title="Аквапарк «Родео Драйв»">Аквапарк «Родео Драйв»</a></div>
+                  </svg><span>Frendi</span></a><a class="card__place card__place--in-category" href="#" title="Аквапарк «Родео Драйв»">Аквапарк «Родео Драйв»</a></div>
             </div>
-            <div class="coupon-gallery__card card card--gray-img"><a class="card__img-wrap" href="#"><img class="card__img" width="336" height="231" src="img/card__photo.jpg" alt="Скидка до 30% на первое посещение бассейна"/></a><span class="card__sale">до&nbsp;<span>30%</span></span><span class="card__price card__price--green">от&nbsp;<span>Бесплатно!</span></span><a class="card__link" href="#" title="Скидка до 30% на первое посещение бассейна">Скидка до 30% на первое посещение бассейна</a>
-              <div class="card__meta"><a class="card__category card__category--in-site" href="#" title="Фитнес-центры">Фитнес-центры</a>
-                <a class="card__dealer card__dealer--in-site" href="#" title="Frendi">
+            <div class="coupon-gallery__card card"><a class="card__img-wrap" href="#"><img class="card__img" width="336" height="231" src="img/card__photo.jpg" alt="Скидка до 50% на первое посещение бассейна"/></a><span class="card__sale">до&nbsp;<span>50%</span></span><span class="card__price">от&nbsp;<span>400 руб.</span></span><a class="card__link" href="#" title="Скидка до 50% на первое посещение бассейна">Скидка до 50% на первое посещение бассейна</a>
+              <div class="card__meta"><a class="card__category card__category--in-category" href="#" title="Фитнес-центры">Фитнес-центры</a>
+                <a class="card__dealer card__dealer--in-category" href="#" title="Frendi">
                   <svg class="card__dealer-link" width="14" height="14">
                     <use xlink:href="img/sprite-svg.svg#card__dealer-link"></use>
-                  </svg><span>Frendi</span></a><a class="card__place card__place--in-site" href="#" title="Аквапарк «Родео Драйв»">Аквапарк «Родео Драйв»</a></div>
+                  </svg><span>Frendi</span></a><a class="card__place card__place--in-category" href="#" title="Аквапарк «Родео Драйв»">Аквапарк «Родео Драйв»</a></div>
             </div>
-            <div class="coupon-gallery__card card card--gray-img"><a class="card__img-wrap" href="#"><img class="card__img" width="336" height="231" src="img/card__photo.jpg" alt="Скидка до 50% на первое посещение бассейна"/></a><span class="card__sale">до&nbsp;<span>50%</span></span><span class="card__price">от&nbsp;<span>400 руб.</span></span><a class="card__link" href="#" title="Скидка до 50% на первое посещение бассейна">Скидка до 50% на первое посещение бассейна</a>
-              <div class="card__meta"><a class="card__category card__category--in-site" href="#" title="Фитнес-центры">Фитнес-центры</a>
-                <a class="card__dealer card__dealer--in-site" href="#" title="Frendi">
+            <div class="coupon-gallery__card card"><a class="card__img-wrap" href="#"><img class="card__img" width="336" height="231" src="img/card__photo.jpg" alt="Скидка до 50% на первое посещение бассейна"/></a><span class="card__sale">до&nbsp;<span>50%</span></span><span class="card__price">от&nbsp;<span>400 руб.</span></span><a class="card__link" href="#" title="Скидка до 50% на первое посещение бассейна">Скидка до 50% на первое посещение бассейна</a>
+              <div class="card__meta"><a class="card__category card__category--in-category" href="#" title="Фитнес-центры">Фитнес-центры</a>
+                <a class="card__dealer card__dealer--in-category" href="#" title="Frendi">
                   <svg class="card__dealer-link" width="14" height="14">
                     <use xlink:href="img/sprite-svg.svg#card__dealer-link"></use>
-                  </svg><span>Frendi</span></a><a class="card__place card__place--in-site" href="#" title="Аквапарк «Родео Драйв»">Аквапарк «Родео Драйв»</a></div>
+                  </svg><span>Frendi</span></a><a class="card__place card__place--in-category" href="#" title="Аквапарк «Родео Драйв»">Аквапарк «Родео Драйв»</a></div>
             </div>
-            <div class="coupon-gallery__card card card--gray-img"><a class="card__img-wrap" href="#"><img class="card__img" width="336" height="231" src="img/card__photo.jpg" alt="Скидка до 30% на первое посещение бассейна"/></a><span class="card__sale">до&nbsp;<span>30%</span></span><span class="card__price card__price--green">от&nbsp;<span>Бесплатно!</span></span><a class="card__link" href="#" title="Скидка до 30% на первое посещение бассейна">Скидка до 30% на первое посещение бассейна</a>
-              <div class="card__meta"><a class="card__category card__category--in-site" href="#" title="Фитнес-центры">Фитнес-центры</a>
-                <a class="card__dealer card__dealer--in-site" href="#" title="Frendi">
+            <div class="coupon-gallery__card card"><a class="card__img-wrap" href="#"><img class="card__img" width="336" height="231" src="img/card__photo.jpg" alt="Скидка до 50% на первое посещение бассейна"/></a><span class="card__sale">до&nbsp;<span>50%</span></span><span class="card__price">от&nbsp;<span>400 руб.</span></span><a class="card__link" href="#" title="Скидка до 50% на первое посещение бассейна">Скидка до 50% на первое посещение бассейна</a>
+              <div class="card__meta"><a class="card__category card__category--in-category" href="#" title="Фитнес-центры">Фитнес-центры</a>
+                <a class="card__dealer card__dealer--in-category" href="#" title="Frendi">
                   <svg class="card__dealer-link" width="14" height="14">
                     <use xlink:href="img/sprite-svg.svg#card__dealer-link"></use>
-                  </svg><span>Frendi</span></a><a class="card__place card__place--in-site" href="#" title="Аквапарк «Родео Драйв»">Аквапарк «Родео Драйв»</a></div>
+                  </svg><span>Frendi</span></a><a class="card__place card__place--in-category" href="#" title="Аквапарк «Родео Драйв»">Аквапарк «Родео Драйв»</a></div>
             </div><a class="coupon-gallery__btn main-content__btn btn" href="#">Поиск в <br>других <br>категориях</a></div>
         </div>
       </div>
@@ -837,6 +839,94 @@
             <div class="lightbox-modal__smallslide"><img class="lightbox-modal__img" src="img/avd__bg.jpg" alt="photo" width="93" height="68" /></div>
             <div class="lightbox-modal__smallslide"><img class="lightbox-modal__img" src="img/avd__bg.jpg" alt="photo" width="93" height="68" /></div>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal modals" id="autorizModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modals__dialog modals__dialog--widescreen">
+      <div class="modal-content modals__content modals__content--widescreen">
+        <div class="modal-header modals__header modals__header--widescreen">
+          <h5 class="modal-title modals__title">Авторизация</h5>
+          <a class="close modals__close" href="#" data-dismiss="modal" aria-label="Close">
+            <svg class="modals__close-icon" width="14" height="14">
+              <use xlink:href="img/sprite-svg.svg#modals__close"></use>
+            </svg>
+          </a>
+        </div>
+        <form class="modal-body modals__body" action="">
+          <div class="modals__input-block"><label class="modals__input-label" for="login">Логин</label><input class="modals__input-txt" id="login" type="text" name="login" required="required" placeholder="harold1" /></div>
+          <div class="modals__input-block"><label class="modals__input-label" for="pass">Пароль</label><input class="modals__input-pass" id="pass" type="password" name="pass" required="required" placeholder="********" /></div>
+          <div class="modals__btn-block modals__btn-block--column"><button class="modals__input-btn btn" type="submit">Войти</button>
+            <p class="modals__desc">или</p><button class="modals__btn modals__btn--gray" id="callRegisterModal" type="button">Зарегистрироваться</button></div>
+        </form>
+        <div class="modal-body modals__footer">
+          <p class="modals__desc">Авторизация через</p>
+          <div class="modals__input-btn-block"><button class="modals__btn"><svg class="modals__fb-icon" width="14" height="14"><use xlink:href="img/sprite-svg.svg#modals__fb"></use></svg><span>Facebook</span></button><button class="modals__btn"><svg class="modals__vk-icon" width="20" height="10"><use xlink:href="img/sprite-svg.svg#modals__vk"></use></svg><span>Вконтакте</span></button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal modals" id="registerModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modals__dialog modals__dialog--widescreen">
+      <div class="modal-content modals__content modals__content--widescreen">
+        <div class="modal-header modals__header modals__header--widescreen">
+          <h5 class="modal-title modals__title">Регистрация</h5>
+          <a class="close modals__close" href="#" data-dismiss="modal" aria-label="Close">
+            <svg class="modals__close-icon" width="14" height="14">
+              <use xlink:href="img/sprite-svg.svg#modals__close"></use>
+            </svg>
+          </a>
+        </div>
+        <form class="modal-body modals__body" action="">
+          <div class="modals__input-block"><label class="modals__input-label" for="mail">Электронная почта</label><input class="modals__input-txt" id="mail" type="email" name="mail" required="required" placeholder="personal@hotkupon.ru" /></div>
+          <div class="modals__input-block"><label class="modals__input-label" for="login">Логин</label><input class="modals__input-txt" id="login" type="text" name="login" required="required" placeholder="harold1" /></div>
+          <div class="modals__input-block"><label class="modals__input-label" for="pass">Пароль</label><input class="modals__input-pass" id="pass" type="password" name="pass" required="required" placeholder="********" /></div>
+          <div class="modals__input-btn-block"><button class="modals__input-btn btn" id="callRegisterAfterModal" type="submit">Регистрация</button></div>
+        </form>
+        <div class="modal-body modals__footer">
+          <p class="modals__desc">Зарегистрироваться через<br/> соцсети</p>
+          <div class="modals__input-btn-block"><button class="modals__btn"><svg class="modals__fb-icon" width="14" height="14"><use xlink:href="img/sprite-svg.svg#modals__fb"></use></svg><span>Facebook</span></button><button class="modals__btn"><svg class="modals__vk-icon" width="20" height="10"><use xlink:href="img/sprite-svg.svg#modals__vk"></use></svg><span>Вконтакте</span></button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal modals" id="registerAfterModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modals__dialog modals__dialog--lg">
+      <div class="modal-content modals__content">
+        <div class="modal-header modals__header">
+          <h5 class="modal-title modals__title">Спасибо за регистрацию!</h5>
+          <a class="close modals__close" href="#" data-dismiss="modal" aria-label="Close">
+            <svg class="modals__close-icon" width="14" height="14">
+              <use xlink:href="img/sprite-svg.svg#modals__close"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="modal-body modals__body">
+          <p class="modals__text">В течение 3 минут вам на почту будет выслано письмо для подтверждения регистрации после чего вы сможете авторизоваться на сайте</p>
+          <div class="modals__input-btn-block"><button class="modals__btn modals__btn--red" data-dismiss="modal" aria-label="Close">Продолжить поиск купонов</button>
+            <a class="modals__btn" href="https://mail.google.com/">
+              <svg class="modals__fb-icon" width="19" height="13">
+                <use xlink:href="img/sprite-svg.svg#modals__mail-icon"></use>
+              </svg><span>Проверить почту</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal modals" id="warnAuthModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modals__dialog modals__dialog--md">
+      <div class="modal-content modals__content">
+        <div class="modal-header modals__header">
+          <h5 class="modal-title modals__title">Для продолжения вам необходимо авторизоваться</h5>
+          <a class="close modals__close" href="#" data-dismiss="modal" aria-label="Close">
+            <svg class="modals__close-icon" width="14" height="14">
+              <use xlink:href="img/sprite-svg.svg#modals__close"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="modal-body modals__body">
+          <div class="modals__btn-block"><button class="callAuthModal modals__btn">Войти</button><button class="callRegisterModal modals__btn modals__btn--gray">Регистрация</button></div>
         </div>
       </div>
     </div>
