@@ -44,10 +44,18 @@
       top: 50%;
       transform: translateY(-50%);
       left: 25px;
-      background-color: #fff;
       border-radius: 50%;
       display: inline-block;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      background-color: #eeeeee;
+
+      &:hover {
+        background-color: #dadada;
+      }
+
+      &:active {
+        background-color: #c5c5c5;
+      }
     }
 
     &:before {
@@ -82,10 +90,18 @@
       transform: translateY(-50%);
       height: 40px;
       width: 40px;
-      background-color: #fff;
       border-radius: 50%;
       display: inline-block;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      background-color: #eeeeee;
+
+      &:hover {
+        background-color: #dadada;
+      }
+
+      &:active {
+        background-color: #c5c5c5;
+      }
     }
 
     &:before {

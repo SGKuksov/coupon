@@ -1,6 +1,5 @@
 .card_places {
   background-color: #ffffff;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   padding-left: 18px;
   padding-top: 19px;
@@ -12,12 +11,16 @@
   position: relative;
   height: 300px;
   width: 300px !important;
-
   display: flex !important;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.4);
+  }
 
   @media (min-width: $screen-md) {
     width: 245px !important;
@@ -83,9 +86,15 @@
       display: inline-block;
       font-size: 14px;
       padding: 6px 13px 7px 13px;
-      border: 1px solid #969696;
       border-radius: 4px;
       white-space: nowrap;
+      border: 1px solid #969696;
+      color: #969696;
+
+      &:hover {
+        color: #787878;
+        border: 1px solid #7c7c7c;
+      }
     }
   }
 }

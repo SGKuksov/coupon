@@ -53,14 +53,21 @@
     transform: translateY(-50%);
     z-index: 1;
     border-radius: 50%;
-    background-color: #f00;
     box-shadow: none;
     border: none;
     width: 60px;
     height: 60px;
     font-size: 0;
     outline: none;
-    -moz-outline-radius: 50%;
+    background-color: #f00;
+
+    &:hover {
+      background-color: #d80000;
+    }
+
+    &:active {
+      background-color: #da0000;
+    }
 
     &:after {
       content: "";
@@ -75,21 +82,28 @@
     }
   }
 
-    .slick-next {
+  .slick-next {
     position: absolute;
     top: 40%;
     right: 0;
     transform: translateY(-50%);
     z-index: 1;
     border-radius: 50%;
-    background-color: #f00;
     box-shadow: none;
     border: none;
     width: 60px;
     height: 60px;
     font-size: 0;
     outline: none;
-    -moz-outline-radius: 50%;
+    background-color: #f00;
+
+    &:hover {
+      background-color: #d80000;
+    }
+
+    &:active {
+      background-color: #da0000;
+    }
 
     &:after {
       content: "";

@@ -49,6 +49,15 @@
     font-size: 18px;
     line-height: 24px;
     padding-top: 10px;
+    color: #969696;
+
+    &:hover {
+      color: #ff0000;
+    }
+
+    &:active {
+      color: #ff0000;
+    }
 
     @media (min-width: $screen-md) {
       font-size: 14px;

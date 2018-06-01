@@ -3,7 +3,6 @@
   background-image: url(../img/subscribe__bg.jpg);
   // background-size: cover;
   background-repeat: no-repeat;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   margin-left: 4px;
   margin-right: 4px;
@@ -19,6 +18,11 @@
   padding-top: 18px;
   padding-bottom: 18px;
   padding-right: 18px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.4);
+  }
 
   @media (min-width: $screen-md) {
     width: 245px;

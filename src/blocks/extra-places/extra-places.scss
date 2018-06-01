@@ -53,5 +53,14 @@
 
   &__text {
     line-height: 16px;
+    color: #969696;
+
+    &:hover {
+      color: #ff0000;
+    }
+
+    &:active {
+      color: #ff0000;
+    }
   }
 }
