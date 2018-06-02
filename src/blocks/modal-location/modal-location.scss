@@ -241,6 +241,10 @@
     padding: 6px 15px 8px 15px;
     width: 100%;
 
+    &:focus {
+      background-color: #fff;
+    }
+
     @media (min-width: $screen-md) {
       width: 462px;
     }
@@ -249,26 +253,27 @@
   &__btn {
     display: inline-block;
     border-radius: 4px;
-    border: 1px solid #dedede;
-    color: #787878;
-    background-color: #fff;
     line-height: 17px;
     height: 32px;
     font-weight: normal;
-
-    @media (min-width: $screen-md) {
-      margin-left: 15px;
-    }
+    color: #787878;
+    border: 1px solid #dedede;
+    background-color: #ffffff;
 
     &:hover {
       color: #787878;
       font-weight: normal;
-      background-color: #fff;
+      background-color: #eeeeee;
     }
 
     &:active {
       color: #787878;
-      background-color: #fff;
+      font-weight: normal;
+      background-color: #dcdcdc;
+    }
+
+    @media (min-width: $screen-md) {
+      margin-left: 15px;
     }
   }
 }
