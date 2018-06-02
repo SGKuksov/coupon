@@ -17,6 +17,23 @@
 <body>
   <header class="page-header">
     <div class="page-header__container">
+      <div class="modal-select" id="modalSelect">
+        <div class="modal-select__header">
+          <h5 class="modal-select__title">Выбран ваш город ?</h5>
+          <a class="modal-select__close" href="#" data-dismiss="modal" aria-label="Close">
+            <svg class="close-icon" width="14" height="14">
+              <use xlink:href="img/sprite-svg.svg#modals__close"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="modal-select__body">
+          <div class="modal-select__location">
+            <svg class="modal-select__location-icon" width="11" height="16">
+              <use xlink:href="img/sprite-svg.svg#page-header__location"></use>
+            </svg><span class="modal-select__location-info">Город</span><a class="modal-select__location-city callModalLocation" href="#">Москва</a></div>
+          <div class="modal-select__btn-block"><button class="modal-select__btn btn" data-dismiss="modal" aria-label="Close">Да</button><button class="modal-select__btn btn btn--gray" id="modalsBtnCancel">Нет</button></div>
+        </div>
+      </div>
       <div class="page-header__menu">
         <div class="menu-btn"><span></span><span></span><span></span></div><button class="page-header__search-icon"><svg class="page-header__submit-icon" width="14" height="14"><use xlink:href="img/sprite-svg.svg#page-header__submit-icon"></use></svg></button></div>
       <div class="page-header__logo-wrap">
@@ -552,23 +569,6 @@
       <p class="page-footer__copy-text">&copy; HotKupon.ru <br>Все сайты скидок</p>
     </div>
   </footer>
-  <div class="modal-select" id="modalSelect">
-    <div class="modal-select__header">
-      <h5 class="modal-select__title">Выбран ваш город ?</h5>
-      <a class="modal-select__close" href="#" data-dismiss="modal" aria-label="Close">
-        <svg class="close-icon" width="14" height="14">
-          <use xlink:href="img/sprite-svg.svg#modals__close"></use>
-        </svg>
-      </a>
-    </div>
-    <div class="modal-select__body">
-      <div class="modal-select__location">
-        <svg class="modal-select__location-icon" width="11" height="16">
-          <use xlink:href="img/sprite-svg.svg#page-header__location"></use>
-        </svg><span class="modal-select__location-info">Город</span><a class="modal-select__location-city callModalLocation" href="#">Москва</a></div>
-      <div class="modal-select__btn-block"><button class="modal-select__btn btn" data-dismiss="modal" aria-label="Close">Да</button><button class="modal-select__btn btn btn--gray" id="modalsBtnCancel">Нет</button></div>
-    </div>
-  </div>
   <div class="modal modal-location" id="modalLocation" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content modal-location__content">
@@ -863,8 +863,8 @@
     </div>
   </div>
   <script src="js/jquery.min.js"></script>
-  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
   <script src="js/svg4everybody.min.js"></script>
   <script src="js/ofi.min.js"></script>
   <script src="js/pushy.min.js"></script>
