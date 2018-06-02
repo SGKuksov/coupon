@@ -214,47 +214,40 @@
     padding-left: 20px;
     padding-right: 17px;
     font-weight: bold;
-    color: #9b9b9b;
-    margin-left: 7px;
     border-radius: 4px;
     vertical-align: bottom;
-    display: inline-block;
+    display: block;
+    margin: 0 auto;
     min-width: 130px;
+    color: #787878;
+    background-color: #e9e9e9;
+    font-weight: normal;
 
     &:hover {
       background-color: #f3f1f1;
+      font-weight: normal;
     }
 
     &:active {
       background-color: #dcdcdc;
+      font-weight: normal;
     }
   }
 
   &__edit-btn {
     border-radius: 4px;
-    border: 1px solid #dedede;
-    background-color: #fff;
-    color: #787878;
     font-size: 14px;
     line-height: 34px;
     height: 34px;
     padding-left: 20px;
     padding-right: 17px;
     display: none;
-    margin-left: 20px;
-
+    margin-top: 20px;
     align-items: center;
     margin-bottom: 15px;
-
-    svg {
-      fill: #b5b5b5;
-    }
-
-    @media (min-width: $screen-md) {
-      margin-bottom: 0;
-      display: inline-block;
-      vertical-align: bottom;
-    }
+    color: #787878;
+    border: 1px solid #dedede;
+    background-color: #ffffff;
 
     span {
       display: inline-flex;
@@ -262,10 +255,14 @@
       line-height: 1;
     }
 
+    svg {
+      fill: #b5b5b5;
+    }
+
     &:hover {
       color: #787878;
-      border: 1px solid #969696;
-      background-color: #fff;
+      background-color: #eeeeee;
+      border: 1px solid #dedede;
 
       svg {
         fill: #b5b5b5;
@@ -273,7 +270,15 @@
     }
 
     &:active {
+      color: #787878;
+      background-color: #dcdcdc;
       border: 1px solid #dedede;
+    }
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 0;
+      display: block;
+      vertical-align: bottom;
     }
   }
 

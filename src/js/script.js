@@ -23,6 +23,7 @@ $(document).ready(function() {
 
   // Подстановка разметки в номера телефонов
   $(".coupon__contacts-phone").splitText();
+  $(".coupon__address-meta-phone").splitText();
 
   // подключение автопоиск
   $('#pageHeaderSearch').autoSearch(0);
