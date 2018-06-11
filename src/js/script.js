@@ -147,28 +147,32 @@ $(document).ready(function() {
 
   // лайтбокс
   $("#placeGallery").click(function() {
-    $("#lightboxModal").modal('show');
+    var doc_w = $(window).width();
+
+    if (doc_w >= 768) {
+      $("#lightboxModal").modal('show');
+
+      $('.slider-for').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        dots: false,
+        fade: true,
+        asNavFor: '.slider-nav'
+      });
+
+      $('.slider-nav').slick({
+        slidesToShow: 8,
+        slidesToScroll: 1,
+        asNavFor: '.slider-for',
+        dots: false,
+        arrows: false,
+        focusOnSelect: true,
+        infinite: false
+      });
+    }
   });
 
-  $('.slider-for').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    prevArrow: '<button type="button" class="lightbox-modal__prev"></button>',
-    nextArrow: '<button type="button" class="lightbox-modal__next"></button>',
-    fade: true,
-    asNavFor: '.slider-nav'
-  });
-  $('.slider-nav').slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    asNavFor: '.slider-for',
-    arrows: false,
-    centerMode: true,
-    focusOnSelect: true,
-    variableWidth: true,
-    infinite: false,
-    initialSlide: 2
-  });
 
   // рейтинг на запись
   // https://github.com/antennaio/jquery-bar-rating

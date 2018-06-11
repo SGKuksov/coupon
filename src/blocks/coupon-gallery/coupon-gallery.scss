@@ -95,14 +95,14 @@
     height: 60px;
     font-size: 0;
     outline: none;
-    background-color: #f00;
+    background-color: #ff0000;
 
     &:hover {
-      background-color: #d80000;
+      background-color: #db0000;
     }
 
     &:active {
-      background-color: #da0000;
+      background-color: #ba0000;
     }
 
     &:after {
@@ -116,6 +116,10 @@
       width: 15px;
       height: 15px;
     }
+  }
+
+  .slick-disabled {
+    display: none !important;
   }
 
   &__btn {

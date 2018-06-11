@@ -100,7 +100,19 @@
     line-height: 20px;
 
     &:hover {
-      color: #323232;
+      color: #ff0000;
+    }
+
+    &:active {
+      color: #ff0000;
+    }
+
+    &:visited {
+      color: #551e99;
+    }
+
+    &:visited:hover {
+      color: #ff0000;
     }
   }
 
