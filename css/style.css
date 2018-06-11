@@ -2018,21 +2018,21 @@ button {
 }
 
 .rating__star-empty {
-  background-image: url(../img/sprite-08682675267557283.png);
+  background-image: url(../img/sprite-00588587198301227.png);
   background-position: 0px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-fill {
-  background-image: url(../img/sprite-08682675267557283.png);
+  background-image: url(../img/sprite-00588587198301227.png);
   background-position: -26px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-hover {
-  background-image: url(../img/sprite-08682675267557283.png);
+  background-image: url(../img/sprite-00588587198301227.png);
   background-position: 0px -26px;
   width: 22px;
   height: 22px;
@@ -5745,8 +5745,7 @@ button {
 }
 
 .coupon__contacts-cite {
-  color: #ff0000;
-  border-bottom: 1px dotted transparent;
+  border-bottom: 1px dotted #969696;
 }
 
 .coupon__contacts-cite:hover {
@@ -6123,15 +6122,15 @@ button {
   height: 60px;
   font-size: 0;
   outline: none;
-  background-color: #f00;
+  background-color: #ff0000;
 }
 
 .coupon-gallery .slick-next:hover {
-  background-color: #d80000;
+  background-color: #db0000;
 }
 
 .coupon-gallery .slick-next:active {
-  background-color: #da0000;
+  background-color: #ba0000;
 }
 
 .coupon-gallery .slick-next:after {
@@ -6145,6 +6144,10 @@ button {
   right: 40%;
   width: 15px;
   height: 15px;
+}
+
+.coupon-gallery .slick-disabled {
+  display: none !important;
 }
 
 .coupon-gallery__btn {
@@ -6581,7 +6584,19 @@ label.el-checkbox {
 }
 
 .list-of-places__subcategory-link:hover {
-  color: #323232;
+  color: #ff0000;
+}
+
+.list-of-places__subcategory-link:active {
+  color: #ff0000;
+}
+
+.list-of-places__subcategory-link:visited {
+  color: #551e99;
+}
+
+.list-of-places__subcategory-link:visited:hover {
+  color: #ff0000;
 }
 
 .list-of-places__subcategory-count {
@@ -7849,11 +7864,13 @@ label.el-checkbox {
   width: 260px;
 }
 
+.lightbox-modal {
+  padding-left: 0;
+}
+
 .lightbox-modal .modal-dialog {
-  padding: 50px;
-  max-width: 100%;
-  text-align: center;
-  margin: 0;
+  width: 100%;
+  max-width: 700px;
 }
 
 .lightbox-modal__content {
@@ -7868,19 +7885,9 @@ label.el-checkbox {
   padding: 0;
 }
 
-.lightbox-modal__main {
-  position: relative;
-}
-
-.lightbox-modal__prev {
-  padding: 0;
-  border: none;
-  z-index: 0;
-}
-
-.lightbox-modal__prev:after {
-  content: "";
+.lightbox-modal .slick-prev {
   position: absolute;
+  font-size: 0;
   height: 40px;
   width: 40px;
   top: 50%;
@@ -7892,21 +7899,22 @@ label.el-checkbox {
   -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   background-color: #eeeeee;
+  z-index: 1;
 }
 
-.lightbox-modal__prev:after:hover {
+.lightbox-modal .slick-prev:hover {
   background-color: #dadada;
 }
 
-.lightbox-modal__prev:after:active {
+.lightbox-modal .slick-prev:active {
   background-color: #c5c5c5;
 }
 
-.lightbox-modal__prev:before {
+.lightbox-modal .slick-prev:before {
   content: "";
   position: absolute;
-  top: 49%;
-  left: 40px;
+  top: 16px;
+  left: 18px;
   height: 9px;
   width: 9px;
   display: inline-block;
@@ -7917,19 +7925,15 @@ label.el-checkbox {
   z-index: 1;
 }
 
-.lightbox-modal__prev:focus {
+.lightbox-modal .slick-prev:focus {
   outline: 0;
 }
 
-.lightbox-modal__next {
+.lightbox-modal .slick-next {
   padding: 0;
   border: none;
   font-size: 0;
   z-index: 0;
-}
-
-.lightbox-modal__next:after {
-  content: "";
   position: absolute;
   right: 25px;
   top: 50%;
@@ -7944,15 +7948,15 @@ label.el-checkbox {
   background-color: #eeeeee;
 }
 
-.lightbox-modal__next:after:hover {
+.lightbox-modal .slick-next:hover {
   background-color: #dadada;
 }
 
-.lightbox-modal__next:after:active {
+.lightbox-modal .slick-next:active {
   background-color: #c5c5c5;
 }
 
-.lightbox-modal__next:before {
+.lightbox-modal .slick-next:before {
   content: "";
   position: absolute;
   height: 9px;
@@ -7963,22 +7967,22 @@ label.el-checkbox {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   z-index: 1;
-  right: 40px;
-  top: 49%;
+  right: 18px;
+  top: 16px;
 }
 
-.lightbox-modal__next:focus {
+.lightbox-modal .slick-next:focus {
   outline: 0;
 }
 
 .lightbox-modal__bigslide {
-  max-width: 483px !important;
   width: 100%;
-  text-align: center;
+  margin: 0 auto;
+  display: block;
 }
 
 .lightbox-modal__smallslide {
-  width: 93px !important;
+  width: 93px;
   height: 68px;
   padding-left: 7px;
   padding-right: 7px;
@@ -7986,6 +7990,7 @@ label.el-checkbox {
 }
 
 .lightbox-modal__img {
+  margin: 0 auto;
   width: auto;
 }
 
