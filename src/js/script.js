@@ -16,6 +16,7 @@ svg4everybody(); // иницализация полифила для IE
 }(jQuery));
 
 $(document).ready(function() {
+  var isAuthorize = $("body").hasClass("non-authorize");
 
   // вызов обрезания текста
   $('.card__link').truncateText();
@@ -35,33 +36,52 @@ $(document).ready(function() {
     $(this).parent().hide();
   });
 
+  // Приобрести купон без авторизации
+  if (isAuthorize) {
+    $(".coupon__take-btn").click(function() {
+      $("#warnAuthModal").modal("show");
+    });
+  }
+
   // rss
-  $(".rss").click(function() {
-    var subscribedText = "Вы подписаны";
-    var subscribeText = "Подписаться на обновления";
+  if (!isAuthorize) {
+    $(".rss").click(function() {
+      var subscribedText = "Вы подписаны";
+      var subscribeText = "Подписаться на обновления";
 
-    $(this).toggleClass("rss--checked");
+      $(this).toggleClass("rss--checked");
 
-    if ($(this).hasClass("rss--checked")) {
-      $(this).find("span").html(subscribedText)
-    } else {
-      $(this).find("span").html(subscribeText)
-    }
-  });
+      if ($(this).hasClass("rss--checked")) {
+        $(this).find("span").html(subscribedText)
+      } else {
+        $(this).find("span").html(subscribeText)
+      }
+    });
+  } else {
+    $("#rss, .rss").click(function() {
+      $("#warnAuthModal").modal("show");
+    });
+  }
 
   // favorite
-  $(".favorite").click(function() {
-    var favoritedText = "Добавлено в избранное";
-    var favoriteText = "Добавить в избранное";
+  if (!isAuthorize) {
+    $(".favorite").click(function() {
+      var favoritedText = "Добавлено в избранное";
+      var favoriteText = "Добавить в избранное";
 
-    $(this).toggleClass("favorite--checked");
+      $(this).toggleClass("favorite--checked");
 
-    if ($(this).hasClass("favorite--checked")) {
-      $(this).find("span").html(favoritedText)
-    } else {
-      $(this).find("span").html(favoriteText)
-    }
-  });
+      if ($(this).hasClass("favorite--checked")) {
+        $(this).find("span").html(favoritedText)
+      } else {
+        $(this).find("span").html(favoriteText)
+      }
+    });
+  } else {
+    $(".favorite").click(function() {
+      $("#warnAuthModal").modal("show");
+    });
+  }
 
   // открытие и закрытие меню
   $(".menu-btn").click(function(event) {
@@ -194,6 +214,10 @@ $(document).ready(function() {
     }
   });
 
+  $("#ratingBar").on("change", function() {
+    $("#ratingModal").modal("show");
+  });
+
   // #byListTab
   $('#byListTab').on('shown.bs.tab', function() {
     if ($(document).width() >= 480) {
@@ -225,6 +249,13 @@ $(document).ready(function() {
       scrollTop: top
     }, 50);
   });
+
+  // модальное окно "спасибо за отзыв"
+  $(".coupon__footer-submit, #errorModal .modals__btn-input").on("click", function() {
+    $("#errorModal").modal("hide");
+    $("#reviewModal").modal("show");
+  });
+
 //  рпааааааааааааааааааааааааааааааа
   var cur;
 
@@ -395,6 +426,13 @@ $(document).ready(function() {
   $("#callRegisterAfterModal").click(function() {
     $("#registerModal").modal("hide");
     $("#registerAfterModal").modal("show");
+
+    $.ajax({
+      url: "js/ok.json"
+    }).done(function(data) {
+        console.log(data.status);
+    }).fail();
+
   });
 
   // warnAuthModal
@@ -407,11 +445,16 @@ $(document).ready(function() {
     $("#errorModal").modal("show");
   });
 
-  // #ratingModal
-  // $("#ratingModal").modal("show");
-  // $("#reviewModal").modal("show");
   // $("#warnDelModal").modal("show");
 
   // конец скрипта
   $("#hideAside").hide();
+
+  // $.ajax({
+  //   url: "js/data.json"
+  // }).done(function(data) {
+  //     objectManager.add(data);
+  // }).fail();
+
+
 });
