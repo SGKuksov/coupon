@@ -161,7 +161,7 @@ $(document).ready(function() {
   $('.coupon-gallery__inner').slick({
     infinite: false,
     slidesToShow: 3,
-    slidesToScroll: 2,
+    slidesToScroll: 1,
     variableWidth: true
   });
 
@@ -214,7 +214,11 @@ $(document).ready(function() {
     }
   });
 
+  // Спасибо за вашу оценку
   $("#ratingBar").on("change", function() {
+    $("#ratingModal").modal("show");
+  });
+  $(".coupon__take-review-btn--green").click(function() {
     $("#ratingModal").modal("show");
   });
 
@@ -256,7 +260,7 @@ $(document).ready(function() {
     $("#reviewModal").modal("show");
   });
 
-//  рпааааааааааааааааааааааааааааааа
+  //  рпааааааааааааааааааааааааааааааа
   var cur;
 
   var enableTab = function(id) {
@@ -415,6 +419,22 @@ $(document).ready(function() {
     $("#autorizModal").modal("show");
   });
 
+  // отправка окна авторизации
+  $("#autorizModal").find("form").submit(function() {
+    $.ajax({
+      url: "js/ok.json",
+      type: "POST",
+      data: $(this).serialize()
+    }).done(function(data) {
+      console.log("done!")
+
+    }).fail(function(data) {
+      console.log("fail!")
+
+    });
+    return false;
+  });
+
   // вызов окна регистрации по клику на регистрация в модальном окне
   $("#callRegisterModal, .callRegisterModal").click(function() {
     $("#warnAuthModal").modal("hide");
@@ -430,8 +450,10 @@ $(document).ready(function() {
     $.ajax({
       url: "js/ok.json"
     }).done(function(data) {
-        console.log(data.status);
-    }).fail();
+      console.log(data.status);
+    }).fail(function() {
+      console.log("fail");
+    });
 
   });
 
@@ -449,12 +471,5 @@ $(document).ready(function() {
 
   // конец скрипта
   $("#hideAside").hide();
-
-  // $.ajax({
-  //   url: "js/data.json"
-  // }).done(function(data) {
-  //     objectManager.add(data);
-  // }).fail();
-
 
 });
