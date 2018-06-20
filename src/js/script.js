@@ -13,7 +13,7 @@ svg4everybody(); // иницализация полифила для IE
           spliter($(this));
       });
   };
-}(jQuery));
+} (jQuery));
 
 $(document).ready(function() {
   var isAuthorize = $("body").hasClass("non-authorize");
@@ -422,7 +422,7 @@ $(document).ready(function() {
   // отправка окна авторизации
   $("#autorizModal").find("form").submit(function() {
     $.ajax({
-      url: "js/ok.json",
+      url: "js/data.json",
       type: "POST",
       data: $(this).serialize()
     }).done(function(data) {
