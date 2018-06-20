@@ -35,6 +35,17 @@ $(document).ready(function() {
   $(".subscribe__close").click(function() {
     $(this).parent().hide();
   });
+  $(".subscribe__form").submit(function() {
+    $.ajax({
+      url: "js/ok.json",
+      data: $(this).serialize()
+    }).done(function(data) {
+      console.log("done!")
+    }).fail(function(data) {
+      console.log("fail!")
+    });
+    return false;
+  });
 
   // Приобрести купон без авторизации
   if (isAuthorize) {
@@ -422,15 +433,12 @@ $(document).ready(function() {
   // отправка окна авторизации
   $("#autorizModal").find("form").submit(function() {
     $.ajax({
-      url: "js/data.json",
-      type: "POST",
+      url: "js/ok.json",
       data: $(this).serialize()
     }).done(function(data) {
       console.log("done!")
-
     }).fail(function(data) {
       console.log("fail!")
-
     });
     return false;
   });
@@ -447,13 +455,13 @@ $(document).ready(function() {
     $("#registerModal").modal("hide");
     $("#registerAfterModal").modal("show");
 
-    $.ajax({
-      url: "js/ok.json"
-    }).done(function(data) {
-      console.log(data.status);
-    }).fail(function() {
-      console.log("fail");
-    });
+    // $.ajax({
+    //   url: "js/ok.json"
+    // }).done(function(data) {
+    //   console.log(data.status);
+    // }).fail(function() {
+    //   console.log("fail");
+    // });
 
   });
 
