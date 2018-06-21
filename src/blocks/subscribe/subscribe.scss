@@ -1,22 +1,23 @@
 .subscribe {
   background-color: #ffffff;
   background-image: url(../img/subscribe__bg.jpg);
-  // background-size: cover;
   background-repeat: no-repeat;
   border-radius: 10px;
   margin-left: 4px;
   margin-right: 4px;
   margin-bottom: 11px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+  // display: flex;
+  // flex-wrap: wrap;
+  // align-items: ;
+  // align-items: flex-start;
+  // align-items: flex-end;
+  // justify-content: center;
   position: relative;
-  height: 300px;
+  // height: 300px;
   width: 300px;
   padding-left: 18px;
   padding-top: 18px;
-  padding-bottom: 18px;
+  padding-bottom: 12px;
   padding-right: 18px;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
 
@@ -26,19 +27,19 @@
 
   @media (min-width: $screen-md) {
     width: 245px;
-    height: 246px;
+    // height: 246px;
     padding-left: 18px;
     padding-top: 18px;
-    padding-bottom: 18px;
+    padding-bottom: 12px;
     padding-right: 18px;
   }
 
   @media (min-width: $screen-lg) {
-    height: 330px;
+    // height: 330px;
     width: 336px;
     padding-left: 18px;
     padding-top: 75px;
-    padding-bottom: 20px;
+    padding-bottom: 12px;
     padding-right: 18px;
   }
 
@@ -64,6 +65,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
+
+    @media (min-width: $screen-lg) {
+      margin-bottom: 18px;
+    }
   }
 
   &__name {
@@ -106,10 +112,6 @@
     color: #fefefe;
     padding: 10px 25px 7px 25px;
     border-radius: 4px;
-
-    @media (min-width: $screen-lg) {
-      margin-bottom: 18px;
-    }
   }
 
   &__about {
@@ -133,5 +135,9 @@
       font-size: 20px;
       color: #979797;
     }
+  }
+
+  &__error {
+    color: #ff0000;
   }
 }
