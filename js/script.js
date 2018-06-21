@@ -35,6 +35,20 @@ $(document).ready(function() {
   $(".subscribe__close").click(function() {
     $(this).parent().hide();
   });
+  // обработка формы подписки
+  $(".subscribe__form").submit(function() {
+    $(".error").remove();
+
+    $.ajax({
+      url: "js/ok.json",
+      data: $(this).serialize()
+    }).done(function(data) {
+      console.log("done!");
+    }).fail(function(data) {
+      $(".subscribe__form").append("<span class='error'>Что-то пошло не так. Попробуйте еще раз через пару минут</span>");
+    });
+    return false;
+  });
 
   // Приобрести купон без авторизации
   if (isAuthorize) {
@@ -193,7 +207,6 @@ $(document).ready(function() {
     }
   });
 
-
   // рейтинг на запись
   // https://github.com/antennaio/jquery-bar-rating
   $('.rating-bar').barrating({
@@ -206,6 +219,22 @@ $(document).ready(function() {
   // рейтинг на чтение
   $('.rating-bar--readonly').barrating('readonly', true).barrating('set', 4); //только чтение
 
+  // Спасибо за вашу оценку
+  $("#ratingBar").on("change", function() {
+    $("#ratingModal").modal("show");
+
+    setTimeout(function() {
+      $("#ratingModal").modal("hide");
+    }, 5000);
+  });
+  $(".coupon__take-review-btn--green").click(function() {
+    $("#ratingModal").modal("show");
+
+    setTimeout(function() {
+      $("#ratingModal").modal("hide");
+    }, 5000);
+  });
+
   // #onMapTab
   $('#onMapTab').on('shown.bs.tab', function() {
     if ($(document).width() >= 480) {
@@ -213,15 +242,6 @@ $(document).ready(function() {
       $('.filter__sort').toggle();
     }
   });
-
-  // Спасибо за вашу оценку
-  $("#ratingBar").on("change", function() {
-    $("#ratingModal").modal("show");
-  });
-  $(".coupon__take-review-btn--green").click(function() {
-    $("#ratingModal").modal("show");
-  });
-
   // #byListTab
   $('#byListTab').on('shown.bs.tab', function() {
     if ($(document).width() >= 480) {
@@ -252,42 +272,6 @@ $(document).ready(function() {
     $('body,html').animate({
       scrollTop: top
     }, 50);
-  });
-
-  // модальное окно "спасибо за отзыв"
-  $(".coupon__footer-submit, #errorModal .modals__btn-input").on("click", function() {
-    $("#errorModal").modal("hide");
-    $("#reviewModal").modal("show");
-  });
-
-  //  рпааааааааааааааааааааааааааааааа
-  var cur;
-
-  var enableTab = function(id) {
-    $('#tabs .tab').removeClass('active').eq(id).addClass('active');
-      $('#content div').removeClass('active').eq(id).addClass('active');
-  };
-
-  var params = location.search;
-  params = params.slice(1, location.search.length);
-  params = params.split('&').map(function(el) {
-    el = el.split('=');
-      if(el[0] == 'tab') cur = el[1];
-  });
-
-  switch(cur * 1) {
-      case 1:
-          enableTab(1);
-          break;
-      case 2:
-          enableTab(2);
-          break;
-      default:
-          enableTab(0);
-  }
-
-  $('#tabs .tab').click(function() {
-    enableTab($(this).index());
   });
 
   // filter-near скрытие блока
@@ -321,7 +305,6 @@ $(document).ready(function() {
     e.preventDefault();
 
     if ( !$(this).hasClass("collections__toggle--active") ) {
-
       $(this).html("Свернуть").addClass("collections__toggle--active");
       $(".collections__list--hide").slideToggle();
     } else {
@@ -355,10 +338,7 @@ $(document).ready(function() {
   }, 1000);
 
   // скрытие modal-select
-  $(".modal-select__close").click(function() {
-    $("#modalSelect").hide();
-  });
-  $(".modal-select__btn").click(function() {
+  $(".modal-select__close, .modal-select__btn").click(function() {
     $("#modalSelect").hide();
   });
 
@@ -421,16 +401,15 @@ $(document).ready(function() {
 
   // отправка окна авторизации
   $("#autorizModal").find("form").submit(function() {
+    $(".error").remove();
+
     $.ajax({
-      url: "js/data.json",
-      type: "POST",
+      url: "js/ok.json",
       data: $(this).serialize()
     }).done(function(data) {
-      console.log("done!")
-
+      console.log("done!");
     }).fail(function(data) {
-      console.log("fail!")
-
+      $("#autorizModal").find("form").append("<span class='error'>Что-то пошло не так. Попробуйте еще раз через пару минут</span>");
     });
     return false;
   });
@@ -442,19 +421,25 @@ $(document).ready(function() {
     $("#registerModal").modal("show");
   });
 
-  // вызов окна после регистрации по клику на регистрация в модальном окне
-  $("#callRegisterAfterModal").click(function() {
-    $("#registerModal").modal("hide");
-    $("#registerAfterModal").modal("show");
+  // отправка окна регистрации
+  $("#registerModal").find("form").submit(function() {
+    $(".error").remove();
 
     $.ajax({
-      url: "js/ok.json"
+      url: "js/ok.json",
+      data: $(this).serialize()
     }).done(function(data) {
-      console.log(data.status);
-    }).fail(function() {
-      console.log("fail");
-    });
+      console.log("done!");
 
+      // вызов окна после регистрации по клику на регистрация в модальном окне
+      $("#callRegisterAfterModal").click(function() {
+        $("#registerModal").modal("hide");
+        $("#registerAfterModal").modal("show");
+      });
+    }).fail(function(data) {
+      $("#registerModal").find("form").append("<span class='error'>Что-то пошло не так. Попробуйте еще раз через пару минут</span>");
+    });
+    return false;
   });
 
   // warnAuthModal
@@ -467,6 +452,54 @@ $(document).ready(function() {
     $("#errorModal").modal("show");
   });
 
+  // отправка окна ошибки
+  $("#errorModal").find("form").submit(function() {
+    $(".error").remove();
+
+    $.ajax({
+      url: "js/ok.json",
+      data: $(this).serialize()
+    }).done(function(data) {
+      console.log("done!");
+
+      // модальное окно "спасибо за отзыв"
+      $("#errorModal").modal("hide");
+      $("#reviewModal").modal("show");
+      setTimeout(function() {
+        $("#reviewModal").modal("hide");
+      }, 5000);
+    }).fail(function(data) {
+      $("#errorModal").find("form").append("<span class='error'>Что-то пошло не так. Попробуйте еще раз через пару минут</span>");
+    });
+    return false;
+  });
+
+  // отправка поля отзыва
+  $(".coupon__footer-form").submit(function() {
+    $(".error").remove();
+
+    $.ajax({
+      url: "js/ok.json",
+      data: $(this).serialize()
+    }).done(function(data) {
+      console.log("done!");
+
+      // модальное окно "спасибо за отзыв"
+      $("#errorModal").modal("hide");
+      $("#reviewModal").modal("show");
+      setTimeout(function() {
+        $("#reviewModal").modal("hide");
+      }, 5000);
+    }).fail(function(data) {
+      $("#errorModal").find("form").append("<span class='error'>Что-то пошло не так. Попробуйте еще раз через пару минут</span>");
+    });
+    return false;
+  });
+
+  // модальное окно "спасибо за отзыв"
+  $(".coupon__footer-submit").click(function() {
+
+  });
   // $("#warnDelModal").modal("show");
 
   // конец скрипта

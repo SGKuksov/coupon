@@ -1633,6 +1633,11 @@ button {
   border: none;
 }
 
+.error {
+  color: #ff0000;
+  line-height: 20px;
+}
+
 /*! Pushy - v1.1.0 - 2017-1-30
 * Pushy is a responsive off-canvas navigation menu using CSS transforms & transitions.
 * https://github.com/christophery/pushy/
@@ -1745,8 +1750,8 @@ button {
 
 .pushy-submenu ul {
   padding-left: 15px;
-  -webkit-transition: max-height 0.2s ease-in-out, visibility 0.2s ease-in-out;
-  transition: max-height 0.2s ease-in-out, visibility 0.2s ease-in-out;
+  -webkit-transition: max-height 0.2s ease-in-out, visibility 0.2s ease-in-out;
+  transition: max-height 0.2s ease-in-out, visibility 0.2s ease-in-out;
 }
 
 .pushy-submenu ul .pushy-link {
@@ -2018,21 +2023,21 @@ button {
 }
 
 .rating__star-empty {
-  background-image: url(../img/sprite-027036715820998647.png);
+  background-image: url(../img/sprite-039623468803651973.png);
   background-position: 0px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-fill {
-  background-image: url(../img/sprite-027036715820998647.png);
+  background-image: url(../img/sprite-039623468803651973.png);
   background-position: -26px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-hover {
-  background-image: url(../img/sprite-027036715820998647.png);
+  background-image: url(../img/sprite-039623468803651973.png);
   background-position: 0px -26px;
   width: 22px;
   height: 22px;
@@ -4214,25 +4219,11 @@ button {
   margin-left: 4px;
   margin-right: 4px;
   margin-bottom: 11px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   position: relative;
-  height: 300px;
   width: 300px;
   padding-left: 18px;
   padding-top: 18px;
-  padding-bottom: 18px;
+  padding-bottom: 12px;
   padding-right: 18px;
   -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
           box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
@@ -4262,6 +4253,9 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .subscribe__name {
@@ -4311,6 +4305,10 @@ button {
 .subscribe__close span {
   font-size: 20px;
   color: #979797;
+}
+
+.subscribe__error {
+  color: #ff0000;
 }
 
 .about {
@@ -8770,10 +8768,9 @@ label.el-checkbox {
   }
   .subscribe {
     width: 245px;
-    height: 246px;
     padding-left: 18px;
     padding-top: 18px;
-    padding-bottom: 18px;
+    padding-bottom: 12px;
     padding-right: 18px;
   }
   .subscribe__title {
@@ -9559,25 +9556,24 @@ label.el-checkbox {
     width: 336px;
   }
   .subscribe {
-    height: 330px;
     width: 336px;
     padding-left: 18px;
     padding-top: 75px;
-    padding-bottom: 20px;
+    padding-bottom: 12px;
     padding-right: 18px;
   }
   .subscribe__title {
     margin-bottom: 20px;
     font-size: 20px;
   }
+  .subscribe__form {
+    margin-bottom: 18px;
+  }
   .subscribe__name {
     margin-bottom: 12px;
   }
   .subscribe__email {
     margin-bottom: 12px;
-  }
-  .subscribe__submit {
-    margin-bottom: 18px;
   }
   .about__inner {
     padding-bottom: 98px;
