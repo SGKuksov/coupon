@@ -2023,21 +2023,21 @@ button {
 }
 
 .rating__star-empty {
-  background-image: url(../img/sprite-039623468803651973.png);
+  background-image: url(../img/sprite-07999065880020206.png);
   background-position: 0px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-fill {
-  background-image: url(../img/sprite-039623468803651973.png);
+  background-image: url(../img/sprite-07999065880020206.png);
   background-position: -26px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-hover {
-  background-image: url(../img/sprite-039623468803651973.png);
+  background-image: url(../img/sprite-07999065880020206.png);
   background-position: 0px -26px;
   width: 22px;
   height: 22px;
@@ -4430,7 +4430,6 @@ button {
 }
 
 .modal-location__city-item {
-  line-height: 34px;
   border-bottom: 1px solid #d8d8d8;
 }
 
@@ -4438,7 +4437,6 @@ button {
   font-size: 14px;
   font-weight: bold;
   color: #969696;
-  line-height: 30px;
   padding-left: 40px;
   padding-right: 16px;
   display: block;
@@ -5225,7 +5223,6 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  display: none;
 }
 
 .modal-select__location-icon {
@@ -5764,10 +5761,10 @@ button {
 .coupon__contacts-timetable {
   display: block;
   color: #969696;
-  margin-bottom: 19px;
 }
 
 .coupon__place-btn {
+  margin-top: 19px;
   font-size: 14px;
   color: #787878;
   border-radius: 4px;
@@ -6824,10 +6821,15 @@ label.el-checkbox {
 .pagination__item-prev {
   position: relative;
   height: 32px;
+  border-right: 1px solid #c9c8c8;
 }
 
 .pagination__item-prev .pagination__link {
   width: 32px;
+}
+
+.pagination__item-prev .disabled {
+  display: none;
 }
 
 .pagination__item-prev:after {
@@ -6846,10 +6848,15 @@ label.el-checkbox {
 .pagination__item-next {
   position: relative;
   height: 32px;
+  border-right: 1px solid #c9c8c8;
 }
 
 .pagination__item-next .pagination__link {
   width: 32px;
+}
+
+.pagination__item-next .disabled {
+  display: none;
 }
 
 .pagination__item-next:after {
@@ -8835,8 +8842,8 @@ label.el-checkbox {
     padding-bottom: 20px;
   }
   .modal-location__city-char-list {
-    -webkit-column-count: 5;
-            column-count: 5;
+    -webkit-column-count: 4;
+            column-count: 4;
     -webkit-column-gap: 3px;
             column-gap: 3px;
   }
@@ -8850,6 +8857,8 @@ label.el-checkbox {
     border: none;
     padding-left: 16px;
     padding-right: 16px;
+    padding-top: 7px;
+    padding-bottom: 7px;
   }
   .modal-location__city-link {
     border: none;
@@ -8942,6 +8951,12 @@ label.el-checkbox {
     margin: -1rem -1rem !important;
     -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
             box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  .modal-select__location {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 10px;
   }
   .modal-select__location-city {
     margin-left: 19px;

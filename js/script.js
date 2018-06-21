@@ -18,9 +18,25 @@ svg4everybody(); // иницализация полифила для IE
 $(document).ready(function() {
   var isAuthorize = $("body").hasClass("non-authorize");
 
+  // Пересчет количества колонок modal-location
+  // .modal-location__city-char-list
+  var modalLocationCityLink = $(".modal-location__city-link"),
+  modalLocationCityCharList = $(".modal-location__city-char-list");
+
+  if ( modalLocationCityLink.length >= 40 ) {
+    modalLocationCityCharList.css("column-count", 5);
+  } else if ( modalLocationCityLink >= 30 ) {
+    modalLocationCityCharList.css("column-count", 4);
+  } else {
+    modalLocationCityCharList.css("column-count", 3);
+  }
+
   // вызов обрезания текста
-  $('.card__link').truncateText();
-  $('.card__place').truncateText();
+  $('.card__link, .card__place').truncateText();
+
+  $(".main-content__btn").click(function() {
+    $('.card__link, .card__place').truncateText();
+  });
 
   // Подстановка разметки в номера телефонов
   $(".coupon__contacts-phone").splitText();
