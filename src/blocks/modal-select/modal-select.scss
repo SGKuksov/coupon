@@ -74,9 +74,11 @@
 
   &__location {
     display: flex;
-    display: none;
+    // display: none;
 
     @media (min-width: $screen-md) {
+      justify-content: center;
+      margin-bottom: 10px;
     }
   }
 

@@ -22,9 +22,14 @@
   &__item-prev {
     position: relative;
     height: 32px;
+    border-right: 1px solid #c9c8c8;
 
     .pagination__link {
       width: 32px;
+    }
+
+    .disabled {
+      display: none;
     }
 
     &:after {
@@ -43,9 +48,14 @@
   &__item-next {
     position: relative;
     height: 32px;
+    border-right: 1px solid #c9c8c8;
 
     .pagination__link {
       width: 32px;
+    }
+
+    .disabled {
+      display: none;
     }
 
     &:after {
