@@ -15,10 +15,25 @@
     top: 50px;
 
     @media (min-width: $screen-md) {
-      max-width: 997px;
       height: 568px;
       margin: 1.75rem auto;
       top: 0;
+    }
+
+    &.large {
+      @media (min-width: $screen-md) {
+        max-width: 997px;
+      }
+    }
+    &.medium {
+      @media (min-width: $screen-md) {
+        max-width: 900px;
+      }
+    }
+    &.small {
+      @media (min-width: $screen-md) {
+        max-width: 768px;
+      }
     }
   }
 
