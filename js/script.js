@@ -19,16 +19,18 @@ $(document).ready(function() {
   var isAuthorize = $("body").hasClass("non-authorize");
 
   // Пересчет количества колонок modal-location
-  // .modal-location__city-char-list
   var modalLocationCityLink = $(".modal-location__city-link"),
   modalLocationCityCharList = $(".modal-location__city-char-list");
 
   if ( modalLocationCityLink.length >= 40 ) {
     modalLocationCityCharList.css("column-count", 5);
-  } else if ( modalLocationCityLink >= 30 ) {
+    $(".modal-location .modal-dialog").addClass("large");
+  } else if ( modalLocationCityLink.length >= 30 && modalLocationCityLink.length < 40  ) {
     modalLocationCityCharList.css("column-count", 4);
+    $(".modal-location .modal-dialog").addClass("medium");
   } else {
     modalLocationCityCharList.css("column-count", 3);
+    $(".modal-location .modal-dialog").addClass("small");
   }
 
   // вызов обрезания текста
