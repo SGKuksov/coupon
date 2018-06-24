@@ -1,0 +1,24 @@
+<svg width="79" height="79" viewBox="0 0 79 79" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="Canvas" fill="none">
+<g id="cluster_big">
+<path id="Oval" fill-rule="evenodd" clip-rule="evenodd" d="M 39.5 79C 49.4047 79 58.458 75.3544 65.3912 69.3319C 73.7284 62.0898 79 51.4105 79 39.5C 79 17.6848 61.3152 0 39.5 0C 17.6848 0 0 17.6848 0 39.5C 0 61.3152 17.6848 79 39.5 79Z" fill="#FF3333" fill-opacity="0.2"/>
+<g id="Group 2 Copy" filter="url(#filter0_d)">
+<g id="Oval Copy" transform="translate(16 17)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M 22.5 45C 34.9264 45 45 34.9264 45 22.5C 45 10.0736 34.9264 0 22.5 0C 10.0736 0 0 10.0736 0 22.5C 0 34.9264 10.0736 45 22.5 45Z" fill="white"/>
+<path d="M 22.5 45C 34.9264 45 45 34.9264 45 22.5C 45 10.0736 34.9264 0 22.5 0C 10.0736 0 0 10.0736 0 22.5C 0 34.9264 10.0736 45 22.5 45Z" stroke="#FF1E1E" stroke-width="4"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<filter id="filter0_d" x="7" y="15" width="63" height="64" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 255 0"/>
+<feOffset dy="8"/>
+<feGaussianBlur stdDeviation="3.5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+</filter>
+</defs>
+</svg>

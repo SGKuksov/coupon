@@ -2023,21 +2023,21 @@ button {
 }
 
 .rating__star-empty {
-  background-image: url(../img/sprite-07999065880020206.png);
+  background-image: url(../img/sprite-027564915994637484.png);
   background-position: 0px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-fill {
-  background-image: url(../img/sprite-07999065880020206.png);
+  background-image: url(../img/sprite-027564915994637484.png);
   background-position: -26px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-hover {
-  background-image: url(../img/sprite-07999065880020206.png);
+  background-image: url(../img/sprite-027564915994637484.png);
   background-position: 0px -26px;
   width: 22px;
   height: 22px;
@@ -6828,7 +6828,7 @@ label.el-checkbox {
   width: 32px;
 }
 
-.pagination__item-prev .disabled {
+.pagination__item-prev.disabled {
   display: none;
 }
 
@@ -6855,7 +6855,7 @@ label.el-checkbox {
   width: 32px;
 }
 
-.pagination__item-next .disabled {
+.pagination__item-next.disabled {
   display: none;
 }
 
@@ -7301,7 +7301,6 @@ label.el-checkbox {
 }
 
 .place-mark {
-  position: relative;
   width: 45px;
   height: 45px;
   display: inline-block;
@@ -7310,52 +7309,19 @@ label.el-checkbox {
   border-radius: 50%;
 }
 
-.place-mark:hover {
+.cluster {
+  width: 56px;
+  height: 56px;
+  display: inline-block;
   background-color: #fff;
-  width: 45px;
-  height: 45px;
-  border: 4px solid #FF1E1E;
-}
-
-.place-mark:hover:after {
-  content: '';
-  position: absolute;
-  z-index: 0;
-  top: -56%;
-  left: -56%;
-  width: 45px;
-  height: 45px;
-  border: 17px solid rgba(255, 51, 51, 0.2);
+  border: 5px solid #FF1E1E;
   border-radius: 50%;
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  position: relative;
+  left: -28px;
+  top: -28px;
 }
 
-.place-mark:hover .place-mark__count {
-  font-weight: 700;
-  color: #FF1E1E;
-}
-
-.place-mark__sale-icon {
-  width: 25px;
-  height: 25px;
-  position: absolute;
-  left: 8px;
-  top: 8px;
-  fill: #969696;
-}
-
-.place-mark:active .place-mark__count {
-  font-weight: 700;
-  color: #FF1E1E;
-}
-
-.place-mark.active .place-mark__count {
-  font-weight: 700;
-  color: #FF1E1E;
-}
-
-.place-mark__count {
+.cluster__count {
   font-family: Arial;
   font-size: 18px;
   font-weight: normal;
