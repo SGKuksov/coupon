@@ -101,6 +101,7 @@
 
   &__address-tab {
     position: relative;
+    flex-direction: column !important;
   }
 
   &__address-block {
@@ -191,6 +192,41 @@
 
     @media (min-width: $screen-md) {
       height: 560px;
+    }
+  }
+
+  &__address-menu {
+    padding: 20px;
+
+    .menu {
+      column-count: 1;
+
+      @media (min-width: $screen-md) {
+        column-count: 2;
+        column-gap: 3px;
+      }
+
+      ul {}
+      li {}
+      a {
+        font-size: 18px;
+        line-height: 24px;
+        padding-top: 10px;
+        color: #969696;
+
+        &:hover {
+          color: #ff0000;
+        }
+
+        &:active {
+          color: #ff0000;
+        }
+
+        @media (min-width: $screen-md) {
+          font-size: 14px;
+          padding-top: 0;
+        }
+      }
     }
   }
 }

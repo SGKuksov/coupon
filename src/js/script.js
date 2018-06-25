@@ -280,6 +280,10 @@ $(document).ready(function() {
   });
 
   // address tab
+  $('#addressTab').on('shown.bs.tab', function() {
+    // Инициальзация карты
+    ymaps.ready(init);
+  });
   $('.coupon__place-btn').click(function() {
     var addressTab = $('#addressTab');
 
@@ -554,13 +558,13 @@ $(document).ready(function() {
       MyIconContentLayoutHovered = ymaps.templateLayoutFactory.createClass(
         '<span style="color: #ff1e1e; font-weight: bold;">{{ properties.geoObjects.length }}</span>'
       ),
-      // Создаем собственный макет с информацией о выбранном геообъекте.
-      customItemContentLayout = ymaps.templateLayoutFactory.createClass(
-        // Флаг "raw" означает, что данные вставляют "как есть" без экранирования html.
-        '<h2 class=ballon_header>{{ properties.balloonContentHeader|raw }}</h2>' +
-        '<div class=ballon_body>{{ properties.balloonContentBody|raw }}</div>' +
-        '<div class=ballon_footer>{{ properties.balloonContentFooter|raw }}</div>'
-      ),
+      // // Создаем собственный макет с информацией о выбранном геообъекте.
+      // customItemContentLayout = ymaps.templateLayoutFactory.createClass(
+      //   // Флаг "raw" означает, что данные вставляют "как есть" без экранирования html.
+      //   '<h2 class=ballon_header>{{ properties.balloonContentHeader|raw }}</h2>' +
+      //   '<div class=ballon_body>{{ properties.balloonContentBody|raw }}</div>' +
+      //   '<div class=ballon_footer>{{ properties.balloonContentFooter|raw }}</div>'
+      // ),
       // Добавим кластеризацию и зададим опции
       myClusterer = new ymaps.Clusterer({
         clusterIcons: [{
@@ -573,28 +577,28 @@ $(document).ready(function() {
         geoObjectHideIconOnBalloonOpen: false,
         clusterIconContentLayout: MyIconContentLayout,
 
-        clusterOpenBalloonOnClick: true,
+        clusterOpenBalloonOnClick: true
         // Устанавливаем режим открытия балуна.
         // В данном примере балун никогда не будет открываться в режиме панели.
-        clusterBalloonPanelMaxMapArea: 0,
+        // clusterBalloonPanelMaxMapArea: 0,
         // Устанавливаем размер макета контента балуна (в пикселях).
-        clusterBalloonContentLayoutWidth: 350,
+        // clusterBalloonContentLayoutWidth: 350,
         // Устанавливаем собственный макет.
-        clusterBalloonItemContentLayout: customItemContentLayout,
+        // clusterBalloonItemContentLayout: customItemContentLayout,
         // Устанавливаем ширину левой колонки, в которой располагается список всех геообъектов кластера.
-        clusterBalloonLeftColumnWidth: 120
+        // clusterBalloonLeftColumnWidth: 120
       }),
       // Опции placemark
       myPlacemark = {
         'iconLayout': 'default#image',
         'iconImageHref': '../img/map__placemark.svg',
         'iconImageSize': [45, 45],
-        'iconImageOffset': [-22, -22],
+        'iconImageOffset': [-22, -22]
 
         // Устаналиваем данные, которые будут отображаться в балуне.
-        balloonContentHeader: 'Метка №' + (i + 1),
+        // balloonContentHeader: 'Метка №',
         // balloonContentBody: getContentBody(i),
-        balloonContentFooter: 'Мацуо Басё'
+        // balloonContentFooter: 'Мацуо Басё'
       },
       myPlacemarkHovered = {
         'iconLayout': 'default#image',
@@ -644,16 +648,149 @@ $(document).ready(function() {
       }
     }
 
-    // Загружаем GeoJSON файл с описанием объектов.
-    // $.getJSON('js/geoJson.json').done(function(geoJson) {
+    // Группы объектов
+    var groups = [
+      {
+          name: "Известные памятники",
+          style: "islands#redIcon",
+          items: [
+              {
+                  center: [50.426472, 30.563022],
+                  name: "Монумент &quot;Родина-Мать&quot;"
+              },
+              {
+                  center: [50.45351, 30.516489],
+                  name: "Памятник &quot;Богдану Хмельницкому&quot;"
+              },
+              {
+                  center: [50.454433, 30.529874],
+                  name: "Арка Дружбы народов"
+              }
+          ]},
+      {
+          name: "Покушайки",
+          style: "islands#greenIcon",
+          items: [
+              {
+                  center: [50.50955, 30.60791],
+                  name: "Ресторан &quot;Калинка-Малинка&quot;"
+              },
+              {
+                  center: [50.429083, 30.521708],
+                  name: "Бар &quot;Сало-бар&quot;"
+              },
+              {
+                  center: [50.450843, 30.498271],
+                  name: "Абсент-бар &quot;Палата №6&quot;"
+              },
+              {
+                  center: [50.454834, 30.516498],
+                  name: "Ресторан &quot;Спотыкач&quot;"
+              }
+          ]},
+      {
+          name: "Оригинальные музейчики",
+          style: "islands#orangeIcon",
+          items: [
+              {
+                  center: [50.443334, 30.520163],
+                  name: "Музей грамзаписи и старинных музыкальных инструментов"
+              },
+              {
+                  center: [50.446977, 30.505269],
+                  name: "Музей истории медицины или Анатомический театр"
+              },
+              {
+                  center: [50.452512, 30.530889],
+                  name: "Музей воды. Водно-информационный центр"
+              }
+          ]},
+      {
+          name: "Красивости",
+          style: "islands#blueIcon",
+          items: [
+              {
+                  center: [50.45987, 30.516174],
+                  name: "Замок Ричарда-Львиное сердце"
+              },
+              {
+                  center: [50.445049, 30.528598],
+                  name: "&quot;Дом с химерами&quot;"
+              },
+              {
+                  center: [50.449156, 30.511809],
+                  name: "Дом Рыцаря"
+              }
+          ]}
+    ];
 
-    // });
+    var menu = $('<ul class="menu"></ul>');
+
+    if ($(".main-content__address-menu .menu").length == 0) {
+      menu.appendTo($('.main-content__address-menu'));
+    }
+
+    for (var i = 0, l = groups.length; i < l; i++) {
+        createMenuGroup(groups[i]);
+    }
+
+    function createMenuGroup (group) {
+      // Пункт меню.
+      var menuItem = $('<li><a href="#">' + group.name + '</a></li>'),
+      // Коллекция для геообъектов группы.
+      collection = new ymaps.GeoObjectCollection(null, { preset: group.style }),
+      // Контейнер для подменю.
+      submenu = $('<ul class="submenu"></ul>');
+
+      // Добавляем коллекцию на карту.
+      myMap.geoObjects.add(collection);
+
+      // Добавляем подменю.
+      menuItem
+        .append(submenu)
+        // Добавляем пункт в меню.
+        .appendTo(menu)
+
+      for (var j = 0, m = group.items.length; j < m; j++) {
+        createSubMenu(group.items[j], collection, submenu);
+      }
+    }
+
+    function createSubMenu (item, collection, submenu) {
+      // Пункт подменю.
+      var submenuItem = $('<li><a href="#">' + item.name + '</a></li>'),
+      // Создаем метку.
+      placemark = new ymaps.Placemark(item.center, { balloonContent: item.name });
+
+      // Добавляем метку в коллекцию.
+      collection.add(placemark);
+
+      // Добавляем пункт в подменю.
+      submenuItem
+        .appendTo(submenu)
+        // При клике по пункту подменю открываем/закрываем баллун у метки.
+        .find('a')
+        .bind('click', function () {
+          if (!placemark.balloon.isOpen()) {
+            placemark.balloon.open();
+          } else {
+            placemark.balloon.close();
+          }
+          return false;
+        });
+    }
+
+    // Загружаем GeoJSON файл с описанием объектов.
+    $.getJSON('../js/geoJson.json').done(function(geoJson) {
+
+    });
+
     var coords = [[55.8, 37.8],
                   [55.75, 37.0],
                   [55.5, 37.8]];
     var myGeoObjects = [];
 
-    // Добавляем геообъекты в массив объектов
+    // Добавляем геообъекты в массив
     for (var i = 0; i<coords.length; i++) {
       myGeoObjects[i] = new ymaps.GeoObject({
         geometry: {

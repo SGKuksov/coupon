@@ -757,6 +757,7 @@
 
   &__address-tab {
     position: relative;
+    flex-direction: column !important;
   }
 
   &__address-block {
