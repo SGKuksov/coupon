@@ -2023,21 +2023,21 @@ button {
 }
 
 .rating__star-empty {
-  background-image: url(../img/sprite-041920877871457995.png);
+  background-image: url(../img/sprite-056047149595344.png);
   background-position: 0px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-fill {
-  background-image: url(../img/sprite-041920877871457995.png);
+  background-image: url(../img/sprite-056047149595344.png);
   background-position: -26px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-hover {
-  background-image: url(../img/sprite-041920877871457995.png);
+  background-image: url(../img/sprite-056047149595344.png);
   background-position: 0px -26px;
   width: 22px;
   height: 22px;
@@ -3802,6 +3802,10 @@ button {
 
 .main-content__address-tab {
   position: relative;
+  -webkit-box-orient: vertical !important;
+  -webkit-box-direction: normal !important;
+      -ms-flex-direction: column !important;
+          flex-direction: column !important;
 }
 
 .main-content__address-block {
@@ -3871,6 +3875,30 @@ button {
   height: 288px;
   width: 100%;
   border: none;
+}
+
+.main-content__address-menu {
+  padding: 20px;
+}
+
+.main-content__address-menu .menu {
+  -webkit-column-count: 1;
+          column-count: 1;
+}
+
+.main-content__address-menu .menu a {
+  font-size: 18px;
+  line-height: 24px;
+  padding-top: 10px;
+  color: #969696;
+}
+
+.main-content__address-menu .menu a:hover {
+  color: #ff0000;
+}
+
+.main-content__address-menu .menu a:active {
+  color: #ff0000;
 }
 
 .wrap {
@@ -5954,6 +5982,10 @@ button {
 
 .coupon__address-tab {
   position: relative;
+  -webkit-box-orient: vertical !important;
+  -webkit-box-direction: normal !important;
+      -ms-flex-direction: column !important;
+          flex-direction: column !important;
 }
 
 .coupon__address-block {
@@ -8702,6 +8734,16 @@ label.el-checkbox {
   }
   .main-content__address-map {
     height: 560px;
+  }
+  .main-content__address-menu .menu {
+    -webkit-column-count: 2;
+            column-count: 2;
+    -webkit-column-gap: 3px;
+            column-gap: 3px;
+  }
+  .main-content__address-menu .menu a {
+    font-size: 14px;
+    padding-top: 0;
   }
   .card {
     width: 245px !important;
