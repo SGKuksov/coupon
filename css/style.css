@@ -2023,21 +2023,21 @@ button {
 }
 
 .rating__star-empty {
-  background-image: url(../img/sprite-05940922816997585.png);
+  background-image: url(../img/sprite-03587184743011973.png);
   background-position: 0px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-fill {
-  background-image: url(../img/sprite-05940922816997585.png);
+  background-image: url(../img/sprite-03587184743011973.png);
   background-position: -26px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-hover {
-  background-image: url(../img/sprite-05940922816997585.png);
+  background-image: url(../img/sprite-03587184743011973.png);
   background-position: 0px -26px;
   width: 22px;
   height: 22px;
@@ -7415,7 +7415,197 @@ label.el-checkbox {
   color: #f00;
 }
 
-.profile-main,
+.profile-main {
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  width: 100%;
+  margin-top: -15px;
+}
+
+.profile-main__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.profile-main__lcol {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.profile-main__rcol {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.profile-main__rcol .profile-main__label {
+  margin: 0;
+  margin-top: 13px;
+}
+
+.profile-main__header {
+  display: block;
+  padding-left: 26px;
+  padding-top: 22px;
+  padding-right: 26px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #dcdcdc;
+  max-width: 700px;
+}
+
+.profile-main__title {
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  color: #323232;
+}
+
+.profile-main__body {
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.profile-main__body .profile-main__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.profile-main__footer {
+  padding-right: 16px;
+  padding-left: 16px;
+  padding-bottom: 15px;
+  padding-top: 20px;
+  text-align: right;
+}
+
+.profile-main__label {
+  width: 150px;
+  display: inline-block;
+  margin-left: 32px;
+  color: #323232;
+  font-size: 14px;
+}
+
+.profile-main__input, .profile-main__input-pass, .profile-main__input-mail, .profile-main__select {
+  border: 1px solid #dedede;
+  padding: 6px 10px 8px;
+  border-radius: 4px;
+  line-height: 18px;
+  height: 32px;
+  font-size: 14px;
+  margin-right: 8px;
+  margin-bottom: 13px;
+}
+
+.profile-main__input--gender, .profile-main__input-pass--gender, .profile-main__input-mail--gender, .profile-main__select--gender {
+  width: 78px !important;
+}
+
+.profile-main__input--dd, .profile-main__input--mm, .profile-main__input--yyyy, .profile-main__input-pass--dd, .profile-main__input-pass--mm, .profile-main__input-pass--yyyy, .profile-main__input-mail--dd, .profile-main__input-mail--mm, .profile-main__input-mail--yyyy, .profile-main__select--dd, .profile-main__select--mm, .profile-main__select--yyyy {
+  width: 65px !important;
+}
+
+.profile-main__input-mail {
+  margin-bottom: 31px;
+}
+
+.profile-main__input-pass {
+  background-color: #eeeeee;
+  margin-bottom: 0;
+}
+
+.profile-main__input-pass:focus {
+  background-color: #fff;
+}
+
+.profile-main__input-file {
+  display: none;
+}
+
+.profile-main__label-file {
+  line-height: 34px;
+  height: 34px;
+  background-color: #eeeeee;
+  border-radius: 4px;
+  display: inline-block;
+  padding-left: 17px;
+  padding-right: 17px;
+  cursor: pointer;
+}
+
+.profile-main__profile-photo {
+  width: 103px;
+  height: 126px;
+}
+
+.profile-main__btn {
+  background-color: #ffffff;
+  border: 1px solid #dedede;
+  color: #787878;
+  line-height: 19px;
+  height: 34px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.profile-main__btn--gray {
+  background-color: #eeeeee;
+}
+
+.profile-main__btn--gray:hover {
+  color: #787878;
+  background-color: #eeeeee;
+}
+
+.profile-main__btn--gray:active {
+  color: #787878;
+  background-color: #eeeeee;
+}
+
+.profile-main__btn:hover {
+  color: #787878;
+  background-color: #fff;
+}
+
+.profile-main__btn:active {
+  color: #787878;
+  background-color: #fff;
+}
+
+.profile-main__mail-icon {
+  margin-right: 10px;
+}
+
 .profile-favorite,
 .profile-reviews,
 .profile-subscribe {
@@ -7426,7 +7616,6 @@ label.el-checkbox {
   margin-top: -15px;
 }
 
-.profile-main__inner,
 .profile-favorite__inner,
 .profile-reviews__inner,
 .profile-subscribe__inner {
@@ -7439,7 +7628,6 @@ label.el-checkbox {
           flex-direction: column;
 }
 
-.profile-main__lcol,
 .profile-favorite__lcol,
 .profile-reviews__lcol,
 .profile-subscribe__lcol {
@@ -7452,7 +7640,6 @@ label.el-checkbox {
           flex-direction: column;
 }
 
-.profile-main__rcol,
 .profile-favorite__rcol,
 .profile-reviews__rcol,
 .profile-subscribe__rcol {
@@ -7465,7 +7652,6 @@ label.el-checkbox {
           flex-direction: column;
 }
 
-.profile-main__header,
 .profile-favorite__header,
 .profile-reviews__header,
 .profile-subscribe__header {
@@ -7478,7 +7664,6 @@ label.el-checkbox {
   max-width: 700px;
 }
 
-.profile-main__title,
 .profile-favorite__title,
 .profile-reviews__title,
 .profile-subscribe__title {
@@ -7489,14 +7674,12 @@ label.el-checkbox {
   color: #323232;
 }
 
-.profile-main__body,
 .profile-favorite__body,
 .profile-reviews__body,
 .profile-subscribe__body {
   border-bottom: 1px solid #dcdcdc;
 }
 
-.profile-main__footer,
 .profile-favorite__footer,
 .profile-reviews__footer,
 .profile-subscribe__footer {
@@ -7507,7 +7690,6 @@ label.el-checkbox {
   text-align: right;
 }
 
-.profile-main__label,
 .profile-favorite__label,
 .profile-reviews__label,
 .profile-subscribe__label {
@@ -7518,11 +7700,7 @@ label.el-checkbox {
   font-size: 14px;
 }
 
-.profile-main__input, .profile-main__input-pass, .profile-main__input-mail, .profile-main__select,
-.profile-favorite__input,
-.profile-favorite__input-pass,
-.profile-favorite__input-mail,
-.profile-favorite__select,
+.profile-favorite__input, .profile-favorite__input-pass, .profile-favorite__input-mail, .profile-favorite__select,
 .profile-reviews__input,
 .profile-reviews__input-pass,
 .profile-reviews__input-mail,
@@ -7542,14 +7720,12 @@ label.el-checkbox {
   margin-bottom: 13px;
 }
 
-.profile-main__input-mail,
 .profile-favorite__input-mail,
 .profile-reviews__input-mail,
 .profile-subscribe__input-mail {
   margin-bottom: 31px;
 }
 
-.profile-main__input-pass,
 .profile-favorite__input-pass,
 .profile-reviews__input-pass,
 .profile-subscribe__input-pass {
@@ -7557,21 +7733,18 @@ label.el-checkbox {
   margin-bottom: 0;
 }
 
-.profile-main__input-pass:focus,
 .profile-favorite__input-pass:focus,
 .profile-reviews__input-pass:focus,
 .profile-subscribe__input-pass:focus {
   background-color: #fff;
 }
 
-.profile-main__input-file,
 .profile-favorite__input-file,
 .profile-reviews__input-file,
 .profile-subscribe__input-file {
   display: none;
 }
 
-.profile-main__label-file,
 .profile-favorite__label-file,
 .profile-reviews__label-file,
 .profile-subscribe__label-file {
@@ -7585,7 +7758,6 @@ label.el-checkbox {
   cursor: pointer;
 }
 
-.profile-main__profile-photo,
 .profile-favorite__profile-photo,
 .profile-reviews__profile-photo,
 .profile-subscribe__profile-photo {
@@ -7593,7 +7765,6 @@ label.el-checkbox {
   height: 126px;
 }
 
-.profile-main__btn,
 .profile-favorite__btn,
 .profile-reviews__btn,
 .profile-subscribe__btn {
@@ -7610,14 +7781,12 @@ label.el-checkbox {
           align-items: baseline;
 }
 
-.profile-main__btn--gray,
 .profile-favorite__btn--gray,
 .profile-reviews__btn--gray,
 .profile-subscribe__btn--gray {
   background-color: #eeeeee;
 }
 
-.profile-main__btn--gray:hover,
 .profile-favorite__btn--gray:hover,
 .profile-reviews__btn--gray:hover,
 .profile-subscribe__btn--gray:hover {
@@ -7625,7 +7794,6 @@ label.el-checkbox {
   background-color: #eeeeee;
 }
 
-.profile-main__btn--gray:active,
 .profile-favorite__btn--gray:active,
 .profile-reviews__btn--gray:active,
 .profile-subscribe__btn--gray:active {
@@ -7633,7 +7801,6 @@ label.el-checkbox {
   background-color: #eeeeee;
 }
 
-.profile-main__btn:hover,
 .profile-favorite__btn:hover,
 .profile-reviews__btn:hover,
 .profile-subscribe__btn:hover {
@@ -7641,7 +7808,6 @@ label.el-checkbox {
   background-color: #fff;
 }
 
-.profile-main__btn:active,
 .profile-favorite__btn:active,
 .profile-reviews__btn:active,
 .profile-subscribe__btn:active {
@@ -8038,7 +8204,10 @@ label.el-checkbox {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .profile-main,
+  .profile-main {
+    border-radius: 10px;
+    margin-top: 0;
+  }
   .profile-favorite,
   .profile-reviews,
   .profile-subscribe {
@@ -8302,6 +8471,15 @@ label.el-checkbox {
     display: inline-block;
     padding-left: 40px;
     padding-right: 40px;
+  }
+  .profile-main__body {
+    padding-bottom: 50px;
+    padding-left: 35px;
+    padding-top: 25px;
+    padding-right: 32px;
+  }
+  .profile-main__input, .profile-main__input-pass, .profile-main__input-mail, .profile-main__select {
+    width: 210px !important;
   }
   .page-not-found {
     -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
@@ -9255,13 +9433,20 @@ label.el-checkbox {
   .profile-nav__link--active:hover {
     font-size: 14px;
   }
-  .profile-main,
+  .profile-main {
+    display: block;
+  }
+  .profile-main__input, .profile-main__input-pass, .profile-main__input-mail, .profile-main__select {
+    width: 250px !important;
+  }
+  .profile-main__input--dd, .profile-main__input--mm, .profile-main__input--yyyy, .profile-main__input-pass--dd, .profile-main__input-pass--mm, .profile-main__input-pass--yyyy, .profile-main__input-mail--dd, .profile-main__input-mail--mm, .profile-main__input-mail--yyyy, .profile-main__select--dd, .profile-main__select--mm, .profile-main__select--yyyy {
+    width: 78px !important;
+  }
   .profile-favorite,
   .profile-reviews,
   .profile-subscribe {
     display: block;
   }
-  .profile-main__body,
   .profile-favorite__body,
   .profile-reviews__body,
   .profile-subscribe__body {
@@ -9647,7 +9832,12 @@ label.el-checkbox {
     font-size: 28px;
     margin-bottom: 0;
   }
-  .profile-main__body,
+  .profile-main__body {
+    padding-bottom: 53px;
+    padding-left: 26px;
+    padding-top: 25px;
+    padding-right: 309px;
+  }
   .profile-favorite__body,
   .profile-reviews__body,
   .profile-subscribe__body {
