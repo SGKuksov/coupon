@@ -15,6 +15,21 @@ svg4everybody(); // иницализация полифила для IE
   };
 } (jQuery));
 
+  // скрытие modal-select
+  $(".modal-select__close, .modal-select__btn").click(function() {
+    $("#modalSelect").hide();
+  });
+
+  //вызов большого модального окна при клике на "Нет"
+  $("#modalsBtnCancel").click(function() {
+    // var doc_w = $(window).width();
+
+    // if (doc_w > 768 ) {
+    $("#selectCityModal").modal('hide');
+    $("#modalLocation").modal('show');
+    // }
+  });
+
 $(document).ready(function() {
   var isAuthorize = $("body").hasClass("non-authorize");
 
@@ -369,21 +384,6 @@ $(document).ready(function() {
       $("#modalSelect").show();
     }
   }, 1000);
-
-  // скрытие modal-select
-  $(".modal-select__close, .modal-select__btn").click(function() {
-    $("#modalSelect").hide();
-  });
-
-  //вызов большого модального окна при клике на "Нет"
-  $("#modalsBtnCancel").click(function() {
-    // var doc_w = $(window).width();
-
-    // if (doc_w > 768 ) {
-    $("#selectCityModal").modal('hide');
-    $("#modalLocation").modal('show');
-    // }
-  });
 
   //вызов большого модального окна выбора города при клике на городе
   $(".callModalLocation").click(function(e) {
