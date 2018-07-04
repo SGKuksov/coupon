@@ -136,22 +136,23 @@ gulp.task('style', function () {
 // gulp.task('styleguide', ['styleguide:generate', 'styleguide:applystyles']);
 
 // Компиляция pug
-// gulp.task('pug', function() {
-//   return gulp.src([
-//       dirs.source + '/*.pug',
-//       '!' + dirs.source + '/mixins.pug',
-//     ])
-//     .pipe(plumber())
-//     .pipe(pug())
-//     .pipe(htmlbeautify())
-//     .pipe(gulp.dest(dirs.build));
-// });
-// Копирование html
-gulp.task('copy:html', function () {
-  return gulp.src(dirs.source + '/*.html')
-    .pipe(plumber({ errorHandler: onError }))             // не останавливаем автоматику при ошибках
+gulp.task('pug', function() {
+  return gulp.src([
+      dirs.source + '/*.pug',
+      '!' + dirs.source + '/mixins.pug',
+    ])
+    .pipe(plumber())
+    .pipe(pug())
+    .pipe(htmlbeautify())
     .pipe(gulp.dest(dirs.build));
 });
+
+// Копирование html
+// gulp.task('copy:html', function () {
+//   return gulp.src(dirs.source + '/*.html')
+//     .pipe(plumber({ errorHandler: onError }))             // не останавливаем автоматику при ошибках
+//     .pipe(gulp.dest(dirs.build));
+// });
 
 // Копирование изображений
 gulp.task('copy:img', function () {
@@ -272,8 +273,8 @@ gulp.task('build', function (callback) {
     ['sprite:svg', 'sprite:png'],
     ['style', 'copy:js', 'copy:img', 'copy:fonts'],
     // 'styleguide',
-    // 'pug',
-    'copy:html',
+    'pug',
+    // 'copy:html',
     callback
   );
 });
@@ -297,14 +298,14 @@ gulp.task('serve', ['build'], function() {
   ], ['watch:style']);
 
   // Слежение за pug
-  // gulp.watch([
-  //   dirs.source + '/**/*.pug',
-  // ], ['watch:pug']);
+  gulp.watch([
+    dirs.source + '/**/*.pug',
+  ], ['watch:pug']);
 
   // Слежение за html
-  gulp.watch([
-    dirs.source + '/*.html',
-  ], ['watch:html']);
+  // gulp.watch([
+  //   dirs.source + '/*.html',
+  // ], ['watch:html']);
 
   // Слежение за изображениями
   if(images.length) {
@@ -327,8 +328,8 @@ gulp.task('serve', ['build'], function() {
 });
 
 // Браузерсинк с 3-м галпом — такой браузерсинк...
-// gulp.task('watch:pug', ['pug'], reload);
-gulp.task('watch:html', ['copy:html'], reload);
+gulp.task('watch:pug', ['pug'], reload);
+// gulp.task('watch:html', ['copy:html'], reload);
 gulp.task('watch:style', ['style'], reload);
 // gulp.task('watch:style', ['style', 'styleguide'], reload); // Слежение за стилями и пересборка styleguide
 gulp.task('watch:img', ['copy:img'], reload);

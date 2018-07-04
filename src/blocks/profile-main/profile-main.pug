@@ -3,7 +3,7 @@ mixin profile-main()
   .profile-main
     form#profileData.profile-main__form(action="")
       fieldset.profile-main__header
-        legend.profile-main__title
+        h2.profile-main__title
           | Основные данные
 
         .profile-main__inner
@@ -34,7 +34,7 @@ mixin profile-main()
               | Сменить пароль
 
       fieldset.profile-main__body
-        legend.profile-main__title
+        h2.profile-main__title
           | Личные данные
 
         .profile-main__inner
@@ -42,7 +42,7 @@ mixin profile-main()
             .profile-main__input-group
               label.profile-main__label(for="gender")
                 | Пол
-              select#gender.profile-main__select.custom-select(name="gender")
+              select#gender.profile-main__select.profile-main__select--gender.custom-select(name="gender")
                 option(value="муж") Муж.
                 option(value="жен") Жен.
 
@@ -55,7 +55,7 @@ mixin profile-main()
             .profile-main__input-group
               label.profile-main__label(for="dd")
                 | Дата рождения
-              select#dd.profile-main__select.custom-select(name="dd")
+              select#dd.profile-main__select.profile-main__select--dd.custom-select(name="dd")
                 option(value="01") 01
                 option(value="02") 02
                 option(value="03") 03
@@ -88,7 +88,7 @@ mixin profile-main()
                 option(value="30") 30
                 option(value="31") 31
 
-              select#mm.profile-main__select.custom-select(name="mm")
+              select#mm.profile-main__select.profile-main__select--mm.custom-select(name="mm")
                 option(value="01") 01
                 option(value="02") 02
                 option(value="03") 03
@@ -102,7 +102,7 @@ mixin profile-main()
                 option(value="11") 11
                 option(value="12") 12
 
-              select#yyyy.profile-main__select.custom-select(name="yyyy")
+              select#yyyy.profile-main__select.profile-main__select--yyyy.custom-select(name="yyyy")
                 option(value="1920") 1920
                 option(value="1921") 1921
                 option(value="1922") 1922

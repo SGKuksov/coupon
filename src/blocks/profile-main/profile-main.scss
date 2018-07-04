@@ -1,7 +1,4 @@
-.profile-main,
-.profile-favorite,
-.profile-reviews,
-.profile-subscribe {
+.profile-main {
   background-color: #ffffff;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   width: 100%;
@@ -28,6 +25,12 @@
   &__rcol {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+
+    .profile-main__label {
+      margin: 0;
+      margin-top: 13px;
+    }
   }
 
   &__header {
@@ -37,7 +40,6 @@
     padding-right: 26px;
     padding-bottom: 20px;
     border-bottom: 1px solid #dcdcdc;
-
     max-width: 700px;
   }
 
@@ -52,7 +54,13 @@
   &__body {
     border-bottom: 1px solid #dcdcdc;
 
-    @media (min-width: $screen-md) {
+    .profile-main__inner {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    @media (min-width: $screen-sm) {
       padding-bottom: 50px;
       padding-left: 35px;
       padding-top: 25px;
@@ -63,7 +71,7 @@
       padding-bottom: 53px;
       padding-left: 26px;
       padding-top: 25px;
-      padding-right: 26px;
+      padding-right: 309px;
     }
   }
 
@@ -97,9 +105,30 @@
     line-height: 18px;
     height: 32px;
     font-size: 14px;
-    width: 250px !important;
     margin-right: 8px;
     margin-bottom: 13px;
+
+    @media (min-width: $screen-sm) {
+      width: 210px !important;
+    }
+
+    @media (min-width: $screen-md) {
+      width: 250px !important;
+    }
+
+    &--gender {
+      width: 78px !important;
+    }
+
+    &--dd,
+    &--mm,
+    &--yyyy {
+      width: 65px !important;
+
+      @media (min-width: $screen-md) {
+        width: 78px !important;
+      }
+    }
   }
 
   &__input-mail {
@@ -142,7 +171,7 @@
     line-height: 19px;
     height: 34px;
     display: inline-flex;
-    align-items: baseline;
+    align-items: center;
 
     &--gray {
       background-color: #eeeeee;
@@ -167,5 +196,9 @@
       color: #787878;
       background-color: #fff;
     }
+  }
+
+  &__mail-icon {
+    margin-right: 10px;
   }
 }
