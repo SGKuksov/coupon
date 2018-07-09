@@ -49,9 +49,8 @@
   }
 
   &__header {
-    display: block;
     border-bottom: 1px solid #dcdcdc;
-    max-width: 700px;
+    display: block;
     padding-left: 35px;
     padding-top: 39px;
     padding-right: 42px;
@@ -121,6 +120,7 @@
       padding-left: 16px;
       padding-bottom: 15px;
       padding-top: 20px;
+      text-align: right;
     }
   }
 
