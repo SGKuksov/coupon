@@ -2023,21 +2023,21 @@ button {
 }
 
 .rating__star-empty {
-  background-image: url(../img/sprite-03271737852331129.png);
+  background-image: url(../img/sprite-05664627408003546.png);
   background-position: 0px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-fill {
-  background-image: url(../img/sprite-03271737852331129.png);
+  background-image: url(../img/sprite-05664627408003546.png);
   background-position: -26px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-hover {
-  background-image: url(../img/sprite-03271737852331129.png);
+  background-image: url(../img/sprite-05664627408003546.png);
   background-position: 0px -26px;
   width: 22px;
   height: 22px;
@@ -7466,9 +7466,8 @@ label.el-checkbox {
 }
 
 .profile-main__header {
-  display: block;
   border-bottom: 1px solid #dcdcdc;
-  max-width: 700px;
+  display: block;
   padding-left: 35px;
   padding-top: 39px;
   padding-right: 42px;
@@ -7649,8 +7648,6 @@ label.el-checkbox {
   margin-right: 10px;
 }
 
-.profile-favorite,
-.profile-reviews,
 .profile-subscribe {
   background-color: #ffffff;
   -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
@@ -7659,8 +7656,6 @@ label.el-checkbox {
   margin-top: -15px;
 }
 
-.profile-favorite__inner,
-.profile-reviews__inner,
 .profile-subscribe__inner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7671,8 +7666,6 @@ label.el-checkbox {
           flex-direction: column;
 }
 
-.profile-favorite__lcol,
-.profile-reviews__lcol,
 .profile-subscribe__lcol {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7683,8 +7676,6 @@ label.el-checkbox {
           flex-direction: column;
 }
 
-.profile-favorite__rcol,
-.profile-reviews__rcol,
 .profile-subscribe__rcol {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7695,20 +7686,15 @@ label.el-checkbox {
           flex-direction: column;
 }
 
-.profile-favorite__header,
-.profile-reviews__header,
 .profile-subscribe__header {
-  display: block;
-  padding-left: 26px;
-  padding-top: 22px;
-  padding-right: 26px;
-  padding-bottom: 20px;
   border-bottom: 1px solid #dcdcdc;
-  max-width: 700px;
+  display: block;
+  padding-left: 35px;
+  padding-top: 39px;
+  padding-right: 42px;
+  padding-bottom: 35px;
 }
 
-.profile-favorite__title,
-.profile-reviews__title,
 .profile-subscribe__title {
   display: block;
   font-size: 20px;
@@ -7717,145 +7703,146 @@ label.el-checkbox {
   color: #323232;
 }
 
-.profile-favorite__body,
-.profile-reviews__body,
-.profile-subscribe__body {
-  border-bottom: 1px solid #dcdcdc;
-}
-
-.profile-favorite__footer,
-.profile-reviews__footer,
-.profile-subscribe__footer {
-  padding-right: 16px;
-  padding-left: 16px;
-  padding-bottom: 15px;
-  padding-top: 20px;
-  text-align: right;
-}
-
-.profile-favorite__label,
-.profile-reviews__label,
-.profile-subscribe__label {
-  width: 150px;
-  display: inline-block;
+.profile-subscribe__subtitle {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 25px;
   margin-left: 32px;
+  display: inline-block;
+  color: #323232;
+  width: 250px;
+}
+
+.profile-subscribe__footer {
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-bottom: 10px;
+  padding-top: 12px;
+  text-align: left;
+}
+
+.profile-subscribe__label {
+  width: 250px;
+  display: inline-block;
+  margin-left: 52px;
   color: #323232;
   font-size: 14px;
 }
 
-.profile-favorite__input, .profile-favorite__input-pass, .profile-favorite__input-mail, .profile-favorite__select,
-.profile-reviews__input,
-.profile-reviews__input-pass,
-.profile-reviews__input-mail,
-.profile-reviews__select,
-.profile-subscribe__input,
-.profile-subscribe__input-pass,
-.profile-subscribe__input-mail,
-.profile-subscribe__select {
+.profile-subscribe__input, .profile-subscribe__select {
   border: 1px solid #dedede;
   padding: 6px 10px 8px;
   border-radius: 4px;
   line-height: 18px;
   height: 32px;
   font-size: 14px;
-  width: 250px !important;
-  margin-right: 8px;
+  margin-right: 20px;
+  margin-left: 12px;
   margin-bottom: 13px;
+  width: 190px !important;
 }
 
-.profile-favorite__input-mail,
-.profile-reviews__input-mail,
-.profile-subscribe__input-mail {
-  margin-bottom: 31px;
+.profile-subscribe__input--add-item, .profile-subscribe__select--add-item {
+  margin: 0;
+  margin-top: 12px;
+  display: block;
 }
 
-.profile-favorite__input-pass,
-.profile-reviews__input-pass,
-.profile-subscribe__input-pass {
+.profile-subscribe__subscription-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.profile-subscribe__form-inner {
   background-color: #eeeeee;
-  margin-bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 14px;
+  padding-left: 18px;
+  padding-bottom: 17px;
+  padding-right: 18px;
+  margin-left: 20px;
+  border-radius: 5px;
 }
 
-.profile-favorite__input-pass:focus,
-.profile-reviews__input-pass:focus,
-.profile-subscribe__input-pass:focus {
-  background-color: #fff;
+.profile-subscribe__form-inner .profile-subscribe__label,
+.profile-subscribe__form-inner .profile-subscribe__label-search {
+  width: 220px;
+  color: #323232;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0;
 }
 
-.profile-favorite__input-file,
-.profile-reviews__input-file,
-.profile-subscribe__input-file {
-  display: none;
+.profile-subscribe__form-inner .profile-subscribe__label-search {
+  width: 250px;
 }
 
-.profile-favorite__label-file,
-.profile-reviews__label-file,
-.profile-subscribe__label-file {
-  line-height: 34px;
-  height: 34px;
-  background-color: #eeeeee;
-  border-radius: 4px;
-  display: inline-block;
-  padding-left: 17px;
-  padding-right: 17px;
-  cursor: pointer;
-}
-
-.profile-favorite__profile-photo,
-.profile-reviews__profile-photo,
-.profile-subscribe__profile-photo {
-  width: 103px;
-  height: 126px;
-}
-
-.profile-favorite__btn,
-.profile-reviews__btn,
-.profile-subscribe__btn {
-  background-color: #ffffff;
+.profile-subscribe__form-inner .profile-subscribe__input,
+.profile-subscribe__form-inner .profile-subscribe__select {
   border: 1px solid #dedede;
-  color: #787878;
+  padding: 6px 10px 8px;
+  border-radius: 4px;
+  line-height: 18px;
+  height: 32px;
+  font-size: 14px;
+  width: 190px !important;
+  display: block;
+  margin: 0;
+  margin-top: 12px;
+}
+
+.profile-subscribe__form-inner .profile-subscribe__input[disabled="disabled"],
+.profile-subscribe__form-inner .profile-subscribe__select[disabled="disabled"] {
+  opacity: 0.5;
+}
+
+.profile-subscribe__btn {
   line-height: 19px;
   height: 34px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-}
-
-.profile-favorite__btn--gray,
-.profile-reviews__btn--gray,
-.profile-subscribe__btn--gray {
-  background-color: #eeeeee;
-}
-
-.profile-favorite__btn--gray:hover,
-.profile-reviews__btn--gray:hover,
-.profile-subscribe__btn--gray:hover {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 400;
   color: #787878;
-  background-color: #eeeeee;
+  border: 1px solid #dedede;
+  background-color: #ffffff;
 }
 
-.profile-favorite__btn--gray:active,
-.profile-reviews__btn--gray:active,
-.profile-subscribe__btn--gray:active {
-  color: #787878;
-  background-color: #eeeeee;
-}
-
-.profile-favorite__btn:hover,
-.profile-reviews__btn:hover,
 .profile-subscribe__btn:hover {
   color: #787878;
-  background-color: #fff;
+  background-color: #eeeeee;
+  font-weight: 400;
 }
 
-.profile-favorite__btn:active,
-.profile-reviews__btn:active,
 .profile-subscribe__btn:active {
   color: #787878;
-  background-color: #fff;
+  background-color: #dcdcdc;
+}
+
+.profile-subscribe__btn--gray {
+  color: #787878;
+  background-color: #e9e9e9;
+  border: 1px solid #dedede;
+}
+
+.profile-subscribe__btn--gray:hover {
+  color: #787878;
+  background-color: #f3f2f2;
+}
+
+.profile-subscribe__btn--gray:active {
+  color: #787878;
+  background-color: #dcdcdc;
 }
 
 .profile-reviews {
@@ -8259,8 +8246,6 @@ label.el-checkbox {
   .profile-main__label {
     display: inline-block;
   }
-  .profile-favorite,
-  .profile-reviews,
   .profile-subscribe {
     border-radius: 10px;
     margin-top: 0;
@@ -8561,6 +8546,7 @@ label.el-checkbox {
     padding-left: 16px;
     padding-bottom: 15px;
     padding-top: 20px;
+    text-align: right;
   }
   .profile-main__label {
     margin: 0;
@@ -8586,6 +8572,19 @@ label.el-checkbox {
   }
   .profile-main__input-pass {
     margin-bottom: 0;
+  }
+  .profile-subscribe__header {
+    padding-left: 26px;
+    padding-top: 22px;
+    padding-right: 26px;
+    padding-bottom: 20px;
+  }
+  .profile-subscribe__footer {
+    padding-right: 26px;
+    padding-left: 16px;
+    padding-bottom: 15px;
+    padding-top: 14px;
+    text-align: right;
   }
   .page-not-found {
     -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
@@ -9551,13 +9550,9 @@ label.el-checkbox {
   .profile-main__select-city {
     width: 250px !important;
   }
-  .profile-favorite,
-  .profile-reviews,
   .profile-subscribe {
     display: block;
   }
-  .profile-favorite__body,
-  .profile-reviews__body,
   .profile-subscribe__body {
     padding-bottom: 50px;
     padding-left: 35px;
@@ -9947,10 +9942,8 @@ label.el-checkbox {
     padding-top: 25px;
     padding-right: 309px;
   }
-  .profile-favorite__body,
-  .profile-reviews__body,
   .profile-subscribe__body {
-    padding-bottom: 53px;
+    padding-bottom: 0;
     padding-left: 26px;
     padding-top: 25px;
     padding-right: 26px;
