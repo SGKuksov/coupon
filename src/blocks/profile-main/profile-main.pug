@@ -11,7 +11,7 @@ mixin profile-main()
             label.profile-main__label(for="mail")
               | Электронная почта
             input#mail.profile-main__input-mail(type="mail" placeholder="personal@hotkupon.ru" name="mail")
-            button.profile-main__btn.btn
+            button.profile-main__mail-btn.btn
               svg.profile-main__mail-icon(width="17" height="13")
                 use(xlink:href="img/sprite-svg.svg#modals__mail-icon")
               | Проверить почту
@@ -49,7 +49,11 @@ mixin profile-main()
             .profile-main__input-group
               label.profile-main__label(for="city")
                 | Город
-              select#city.profile-main__select.custom-select(name="city")
+              select#city.profile-main__select-city.custom-select(name="city")
+                option(value="Москва") Москва
+                option(value="Москва") Москва
+                option(value="Москва") Москва
+                option(value="Москва") Москва
                 option(value="Москва") Москва
 
             .profile-main__input-group
