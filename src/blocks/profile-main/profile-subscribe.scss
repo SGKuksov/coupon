@@ -201,7 +201,11 @@
       margin-bottom: 26px;
 
       @media (min-width: $screen-sm) {
-        padding-bottom: 17px;
+        padding-bottom: 0;
+        margin-bottom: 17px;
+      }
+      @media (min-width: $screen-md) {
+        margin-bottom: 0;
       }
 
     }
