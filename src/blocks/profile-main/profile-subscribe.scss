@@ -7,33 +7,19 @@
   @media (min-width: $screen-xs) {
     border-radius: 10px;
     margin-top: 0;
+    width: auto;
   }
   @media (min-width: $screen-md) {
     display: block;
   }
 
-  &__inner {
-    display: flex;
-    flex-direction: column;
-  }
-
-  &__lcol {
-    display: flex;
-    flex-direction: column;
-  }
-
-  &__rcol {
-    display: flex;
-    flex-direction: column;
-  }
-
   &__header {
     border-bottom: 1px solid #dcdcdc;
     display: block;
-    padding-left: 35px;
-    padding-top: 39px;
+    padding-left: 44px;
+    padding-top: 34px;
     padding-right: 42px;
-    padding-bottom: 35px;
+    padding-bottom: 10px;
 
     @media (min-width: $screen-sm) {
       padding-left: 26px;
@@ -51,21 +37,37 @@
     color: #323232;
   }
 
-  &__subtitle {
+  &__subtitle,
+  &__periodicaly {
     display: block;
     font-size: 14px;
     font-weight: bold;
     margin-bottom: 25px;
-    margin-left: 32px;
+    margin-left: 0;
     display: inline-block;
     color: #323232;
     width: 250px;
+
+    @media (min-width: $screen-lg) {
+      margin-left: 32px;
+    }
+  }
+  &__periodicaly {
+    display: none;
+
+    @media (min-width: $screen-sm) {
+      display: inline-block;
+    }
   }
 
   &__body {
+    padding-bottom: 0;
+    padding-left: 44px;
+    padding-top: 24px;
+    padding-right: 35px;
 
     @media (min-width: $screen-md) {
-      padding-bottom: 50px;
+      padding-bottom: 0;
       padding-left: 35px;
       padding-top: 25px;
       padding-right: 32px;
@@ -80,10 +82,10 @@
   }
 
   &__footer {
-    padding-left: 35px;
-    padding-right: 35px;
-    padding-bottom: 10px;
-    padding-top: 12px;
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-bottom: 15px;
+    padding-top: 16px;
     text-align: left;
 
     @media (min-width: $screen-sm) {
@@ -100,9 +102,34 @@
   &__label {
     width: 250px;
     display: inline-block;
-    margin-left: 52px;
-    color: #323232;
+    color: #969696;
     font-size: 14px;
+    margin-bottom: 8px;
+
+    @media (min-width: $screen-sm) {
+      margin-left: 22px;
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $screen-lg) {
+      margin-left: 52px;
+    }
+
+    &:hover {
+      color: #ff0000;
+    }
+
+    &:active {
+      color: #ff0000;
+    }
+
+    &:visited {
+      color: #551e99;
+    }
+
+    &:visited:hover {
+      color: #ff0000;
+    }
   }
 
   &__input,
@@ -114,9 +141,13 @@
     height: 32px;
     font-size: 14px;
     margin-right: 20px;
-    margin-left: 12px;
-    margin-bottom: 13px;
+    margin-bottom: 8px;
     width: 190px !important;
+
+    @media (min-width: $screen-sm) {
+      margin-left: 12px;
+      margin-bottom: 0;
+    }
 
     &--add-item {
       margin: 0;
@@ -130,29 +161,57 @@
   }
   &__subscription-item {
     display: flex;
-    align-items: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 26px;
+
+    @media (min-width: $screen-sm) {
+      margin-bottom: 13px;
+    }
   }
   &__form-inner {
     background-color: #eeeeee;
     display: flex;
-    padding-top: 14px;
-    padding-left: 18px;
-    padding-bottom: 17px;
-    padding-right: 18px;
-    margin-left: 20px;
+    flex-wrap: wrap;
     border-radius: 5px;
+    padding-top: 15px;
+    padding-left: 26px;
+    padding-bottom: 11px;
+    padding-right: 18px;
+
+    @media (min-width: $screen-sm) {
+      padding-top: 14px;
+      padding-left: 18px;
+      padding-bottom: 17px;
+      padding-right: 18px;
+    }
+
+    @media (min-width: $screen-lg) {
+      margin-left: 20px;
+    }
 
     .profile-subscribe__label,
     .profile-subscribe__label-search {
-      width: 220px;
+      width: 210px;
       color: #323232;
       font-size: 14px;
       font-weight: 700;
       margin: 0;
+      position: relative;
+      margin-bottom: 26px;
+
+      @media (min-width: $screen-sm) {
+        padding-bottom: 17px;
+      }
+
     }
 
     .profile-subscribe__label-search {
-      width: 250px;
+      width: 210px;
+
+      @media (min-width: $screen-lg) {
+        width: 250px;
+      }
     }
 
     .profile-subscribe__input,
@@ -209,6 +268,25 @@
         color: #787878;
         background-color: #dcdcdc;
       }
+    }
+  }
+
+  &__reset {
+    position: absolute;
+    right: 30px;
+    bottom: 9px;
+    padding: 0;
+    background-color: transparent;
+    border-radius: 14px;
+    display: inline-flex;
+
+    @media (min-width: $screen-lg) {
+      right: 70px;
+    }
+
+    &:focus {
+      outline: none;
+      // box-shadow: 0 0 0 2px rgb(77, 144, 254)
     }
   }
 }

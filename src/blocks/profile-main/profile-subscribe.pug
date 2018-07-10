@@ -8,14 +8,14 @@ mixin profile-subscribe()
 
         span.profile-subscribe__subtitle
           | Место, подборка, категория
-        span.profile-subscribe__subtitle
+        span.profile-subscribe__periodicaly
           | Частота рассылки
 
         ul.profile-subscribe__subscription-list
           li.profile-subscribe__subscription-item
-            label.profile-subscribe__label(for="subscriptionItem")
+            a.profile-subscribe__label(href="#")
               | Аквапарк Мореон
-            select#subscriptionItem.profile-subscribe__select.custom-select(name="subscriptionItem")
+            select.profile-subscribe__select.custom-select(name="subscriptionItem")
               option(value="Каждый день")
                 | Каждый день
               option(value="Раз в неделю")
@@ -27,9 +27,9 @@ mixin profile-subscribe()
               | Удалить
 
           li.profile-subscribe__subscription-item
-            label.profile-subscribe__label(for="subscriptionItem")
+            a.profile-subscribe__label(href="#")
               | Аквапарк Мореон
-            select#subscriptionItem.profile-subscribe__select.custom-select(name="subscriptionItem")
+            select.profile-subscribe__select.custom-select(name="subscriptionItem")
               option(value="Каждый день")
                 | Каждый день
               option(value="Раз в неделю")
@@ -41,9 +41,9 @@ mixin profile-subscribe()
               | Удалить
 
           li.profile-subscribe__subscription-item
-            label.profile-subscribe__label(for="subscriptionItem")
+            a.profile-subscribe__label(href="#")
               | Аквапарк Мореон
-            select#subscriptionItem.profile-subscribe__select.custom-select(name="subscriptionItem")
+            select.profile-subscribe__select.custom-select(name="subscriptionItem")
               option(value="Каждый день")
                 | Каждый день
               option(value="Раз в неделю")
@@ -59,16 +59,16 @@ mixin profile-subscribe()
           | Новая подписка
 
         .profile-subscribe__form-inner
-          label.profile-subscribe__label-search(for="subscriptionInput")
+          label.profile-subscribe__label-search(for="searchInput")
             | Место
-            input#subscriptionInput.profile-subscribe__input(type="search" name="subscriptionInput")
+            input#searchInput.profile-subscribe__input(type="search" name="search_input")
             button.profile-subscribe__reset(type="reset")
               svg.profile-subscribe__reset-icon(width="14" height="14")
                 use(xlink:href="img/sprite-svg.svg#profile-main__reset-icon")
 
           label.profile-subscribe__label(for="subscriptionCategory")
             | Категория/подкатегория
-            select#subscriptionCategory.custom-select.profile-subscribe__select.disabled(name="", disabled)
+            select#subscriptionCategory.custom-select.profile-subscribe__select.disabled(name="category", disabled)
               option(value="Одежда для детей")
                 | Одежда для детей
               option(value="Одежда для детей")
@@ -78,9 +78,9 @@ mixin profile-subscribe()
               option(value="Одежда для детей")
                 | Одежда для детей
 
-          label.profile-subscribe__label(for="gender")
-            | Категория/подкатегория
-            select#subscriptionInput.profile-subscribe__select.custom-select(name="")
+          label.profile-subscribe__label(for="periodicity")
+            | Частота рассылки
+            select#periodicity.profile-subscribe__select.custom-select(name="periodicity")
               option(value="Каждый день")
                 | Каждый день
               option(value="Раз в неделю")
@@ -90,6 +90,6 @@ mixin profile-subscribe()
 
       .profile-subscribe__footer
         button.profile-subscribe__btn.btn
-          | Сохранить
+          | Добавить подписку
 
 
