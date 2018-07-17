@@ -1,0 +1,14 @@
+extends templates/layout.pug
+
+block meta
+  title Верстка балунов
+  meta(name='description', content='')
+
+//- block append head
+  //- link(rel="stylesheet", href="style.min.css")
+
+block main-content
+  +balloons()
+
+//- block append page-bottom
+  //- script(src='some.js')
