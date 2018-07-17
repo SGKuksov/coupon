@@ -1,3 +1,65 @@
 .profile-favorite {
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  margin-top: -15px;
 
+  @media (min-width: $screen-xs) {
+    border-radius: 10px;
+    margin-top: 0;
+    width: auto;
+  }
+  @media (min-width: $screen-md) {
+    display: block;
+  }
+
+  &__title {
+    margin-left: 30px;
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: #323232;
+
+    @media (min-width: $screen-md) {
+      margin-left: 0;
+    }
+  }
+
+  &__btn {
+    line-height: 19px;
+    height: 34px;
+    display: inline-flex;
+    align-items: center;
+    font-weight: 400;
+    color: #787878;
+    border: 1px solid #dedede;
+    background-color: #ffffff;
+
+    &:hover {
+      color: #787878;
+      background-color: #eeeeee;
+      font-weight: 400;
+    }
+
+    &:active {
+      color: #787878;
+      background-color: #dcdcdc;
+    }
+
+    &--gray {
+      color: #787878;
+      background-color: #e9e9e9;
+      border: 1px solid #dedede;
+
+      &:hover {
+        color: #787878;
+        background-color: #f3f2f2;
+      }
+
+      &:active {
+        color: #787878;
+        background-color: #dcdcdc;
+      }
+    }
+  }
 }

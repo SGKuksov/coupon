@@ -18,21 +18,14 @@
   }
 
   &__lcol {
-    display: flex;
-    flex-direction: column;
-
-    @media (min-width: $screen-sm) {
-      order: 0;
-    }
+    order: 0;
   }
 
   &__rcol {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    width: 150px;
     order: -1;
 
-    @media (min-width: $screen-xs) {
+    @media (min-width: $screen-sm) {
       order: 0;
     }
 
@@ -80,7 +73,7 @@
     border-bottom: 1px solid #dcdcdc;
     padding-left: 35px;
     padding-top: 37px;
-    padding-right: 42px;
+    padding-right: 27px;
     padding-bottom: 32px;
 
     .profile-main__inner {

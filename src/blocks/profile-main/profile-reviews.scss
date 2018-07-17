@@ -1,13 +1,38 @@
 .profile-reviews {
-  padding: 20px;
-  border: none;
-  padding-bottom: 45px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  // width: 100%;
+  margin-top: -15px;
+  padding: 42px;
+
+  @media (min-width: $screen-xs) {
+    border-radius: 10px;
+    margin-top: 0;
+    padding: 20px;
+  }
+  @media (min-width: $screen-md) {
+    display: block;
+    padding: 23px;
+  }
 
   &__title {
-    margin-bottom: 15px;
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #323232;
+
+    @media (min-width: $screen-sm) {
+      margin-bottom: 15px;
+    }
   }
   &__inner {
-    padding-left: 35px;
+    @media (min-width: $screen-xs) {
+      padding-left: 30px;
+    }
+    @media (min-width: $screen-md) {
+      padding-left: 35px;
+    }
   }
 }
 

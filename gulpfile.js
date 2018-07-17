@@ -35,6 +35,8 @@ const buffer = require('vinyl-buffer');
 const merge = require('merge-stream');
 const wait = require('gulp-wait');
 const htmlbeautify = require('gulp-html-beautify');
+const newer = require('gulp-newer');
+const debug = require('gulp-debug');
 // var styleguide = require('sc5-styleguide');
 
 // Перечисление и настройки плагинов postCSS, которыми обрабатываются стилевые файлы
@@ -139,6 +141,7 @@ gulp.task('pug', function() {
       dirs.source + '/*.pug',
       '!' + dirs.source + '/mixins.pug',
     ])
+    .pipe(newer(dirs.build))
     .pipe(plumber())
     .pipe(pug())
     .pipe(htmlbeautify())

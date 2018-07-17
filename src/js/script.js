@@ -358,13 +358,12 @@ $(document).ready(function() {
   });
 
   // вызов modal-select при открытии страницы
+  var win_w = $(window).width();
+  if (win_w >= 992) {
   setTimeout(function() {
-    var doc_w = $(window).width();
-
-    if (doc_w >=768) {
       $("#modalSelect").show();
-    }
-  }, 1000);
+    }, 1000);
+  }
 
   // вызов modal-select при клике по кнопкам
   $(".modal-select__btn, .modal-select__close").click(function() {
