@@ -15,11 +15,6 @@ svg4everybody(); // иницализация полифила для IE
   };
 } (jQuery));
 
-  // скрытие modal-select
-  $(".modal-select__close, .modal-select__btn").click(function() {
-    $("#modalSelect").hide();
-  });
-
   //вызов большого модального окна при клике на "Нет"
   $("#modalsBtnCancel").click(function() {
     // var doc_w = $(window).width();
@@ -270,8 +265,6 @@ $(document).ready(function() {
 
   // #onMapTab
   $('#onMapTab').on('shown.bs.tab', function() {
-    // Инициальзация карты
-    ymaps.ready(init);
 
     if ($(document).width() >= 480) {
       $('.list-of-places__header').show();
@@ -280,25 +273,13 @@ $(document).ready(function() {
   });
   // #byListTab
   $('#byListTab').on('shown.bs.tab', function() {
-    // удаление карты при закрытии вкладки
-    // myMap.destroy();
 
     if ($(document).width() >= 480) {
       $('.list-of-places__header').hide();
       $('.filter__sort').toggle();
     }
   });
-  // #byPlitkaTab
-  $('#byListTab').on('shown.bs.tab', function() {
-    // удаление карты при закрытии вкладки
-    // myMap.destroy();
-  });
 
-  // address tab
-  $('#addressTab').on('shown.bs.tab', function() {
-    // Инициальзация карты
-    ymaps.ready(init);
-  });
   $('.coupon__place-btn').click(function() {
     var addressTab = $('#addressTab');
 
@@ -384,6 +365,11 @@ $(document).ready(function() {
       $("#modalSelect").show();
     }
   }, 1000);
+
+  // вызов modal-select при клике по кнопкам
+  $(".modal-select__btn, .modal-select__close").click(function() {
+    $("#modalSelect").hide();
+  });
 
   //вызов большого модального окна выбора города при клике на городе
   $(".callModalLocation").click(function(e) {
@@ -533,282 +519,4 @@ $(document).ready(function() {
 
   // скрытие бокового меню на 404
   $("#hideAside").hide();
-
-  // карта
-  function init() {
-    var myMap = new ymaps.Map('map', {
-        center: [55.76, 37.64],
-        zoom: 10,
-        controls: []
-      }),
-      // Настраиваем контролы на карте
-      zoomControl = new ymaps.control.ZoomControl({
-        options: {
-          position: {
-            bottom: 55,
-            left: 'auto',
-            right: 20,
-            top: 'auto'
-          }
-        }
-      }),
-      MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-        '<span style="color: #969696;">{{ properties.geoObjects.length }}</span>'
-      ),
-      MyIconContentLayoutHovered = ymaps.templateLayoutFactory.createClass(
-        '<span style="color: #ff1e1e; font-weight: bold;">{{ properties.geoObjects.length }}</span>'
-      ),
-      // // Создаем собственный макет с информацией о выбранном геообъекте.
-      // customItemContentLayout = ymaps.templateLayoutFactory.createClass(
-      //   // Флаг "raw" означает, что данные вставляют "как есть" без экранирования html.
-      //   '<h2 class=ballon_header>{{ properties.balloonContentHeader|raw }}</h2>' +
-      //   '<div class=ballon_body>{{ properties.balloonContentBody|raw }}</div>' +
-      //   '<div class=ballon_footer>{{ properties.balloonContentFooter|raw }}</div>'
-      // ),
-      // Добавим кластеризацию и зададим опции
-      myClusterer = new ymaps.Clusterer({
-        clusterIcons: [{
-          href: '../img/map__cluster.svg',
-          size: [60, 60],
-          offset: [-30, -30]
-        }],
-        clusterDisableClickZoom: true,
-        clusterHideIconOnBalloonOpen: false,
-        geoObjectHideIconOnBalloonOpen: false,
-        clusterIconContentLayout: MyIconContentLayout,
-
-        clusterOpenBalloonOnClick: true
-        // Устанавливаем режим открытия балуна.
-        // В данном примере балун никогда не будет открываться в режиме панели.
-        // clusterBalloonPanelMaxMapArea: 0,
-        // Устанавливаем размер макета контента балуна (в пикселях).
-        // clusterBalloonContentLayoutWidth: 350,
-        // Устанавливаем собственный макет.
-        // clusterBalloonItemContentLayout: customItemContentLayout,
-        // Устанавливаем ширину левой колонки, в которой располагается список всех геообъектов кластера.
-        // clusterBalloonLeftColumnWidth: 120
-      }),
-      // Опции placemark
-      myPlacemark = {
-        'iconLayout': 'default#image',
-        'iconImageHref': '../img/map__placemark.svg',
-        'iconImageSize': [45, 45],
-        'iconImageOffset': [-22, -22]
-
-        // Устаналиваем данные, которые будут отображаться в балуне.
-        // balloonContentHeader: 'Метка №',
-        // balloonContentBody: getContentBody(i),
-        // balloonContentFooter: 'Мацуо Басё'
-      },
-      myPlacemarkHovered = {
-        'iconLayout': 'default#image',
-        'iconImageHref': '../img/map__placemark_hovered.svg',
-        'iconImageSize': [80, 80],
-        'iconImageOffset': [-40, -40]
-      },
-      // Опции cluster
-      myCluster = {
-        'clusterIcons': [{
-          href: '../img/map__cluster.svg',
-          size: [60, 60],
-          offset: [-30, -30]
-        }],
-        'clusterIconContentLayout': MyIconContentLayout
-      },
-      myClusterHovered = {
-        'clusterIcons': [{
-          href: '../img/map__cluster_hovered.svg',
-          size: [80, 80],
-          offset: [-40, -40]
-        }],
-        'clusterIconContentLayout': MyIconContentLayoutHovered
-      };
-
-    // Событие произошло на геообъекте
-    function onObjectEvent(e) {
-      var target = e.get('target'),
-            type = e.get('type');
-
-      if (e.get('type') == 'mouseenter') {
-        target.options.set(myPlacemarkHovered);
-      } else {
-        target.options.set(myPlacemark);
-      }
-    }
-
-    // Событие произошло на кластере
-    function onClusterEvent(e) {
-      var target = e.get('target'),
-      type = e.get('type');
-
-      if (e.get('type') == 'mouseenter') {
-        target.options.set(myClusterHovered);
-      } else {
-        target.options.set(myCluster);
-      }
-    }
-
-    // Группы объектов
-    var groups = [
-      {
-          name: "Известные памятники",
-          style: "islands#redIcon",
-          items: [
-              {
-                  center: [50.426472, 30.563022],
-                  name: "Монумент &quot;Родина-Мать&quot;"
-              },
-              {
-                  center: [50.45351, 30.516489],
-                  name: "Памятник &quot;Богдану Хмельницкому&quot;"
-              },
-              {
-                  center: [50.454433, 30.529874],
-                  name: "Арка Дружбы народов"
-              }
-          ]},
-      {
-          name: "Покушайки",
-          style: "islands#greenIcon",
-          items: [
-              {
-                  center: [50.50955, 30.60791],
-                  name: "Ресторан &quot;Калинка-Малинка&quot;"
-              },
-              {
-                  center: [50.429083, 30.521708],
-                  name: "Бар &quot;Сало-бар&quot;"
-              },
-              {
-                  center: [50.450843, 30.498271],
-                  name: "Абсент-бар &quot;Палата №6&quot;"
-              },
-              {
-                  center: [50.454834, 30.516498],
-                  name: "Ресторан &quot;Спотыкач&quot;"
-              }
-          ]},
-      {
-          name: "Оригинальные музейчики",
-          style: "islands#orangeIcon",
-          items: [
-              {
-                  center: [50.443334, 30.520163],
-                  name: "Музей грамзаписи и старинных музыкальных инструментов"
-              },
-              {
-                  center: [50.446977, 30.505269],
-                  name: "Музей истории медицины или Анатомический театр"
-              },
-              {
-                  center: [50.452512, 30.530889],
-                  name: "Музей воды. Водно-информационный центр"
-              }
-          ]},
-      {
-          name: "Красивости",
-          style: "islands#blueIcon",
-          items: [
-              {
-                  center: [50.45987, 30.516174],
-                  name: "Замок Ричарда-Львиное сердце"
-              },
-              {
-                  center: [50.445049, 30.528598],
-                  name: "&quot;Дом с химерами&quot;"
-              },
-              {
-                  center: [50.449156, 30.511809],
-                  name: "Дом Рыцаря"
-              }
-          ]}
-    ];
-
-    var menu = $('<ul class="menu"></ul>');
-
-    if ($(".main-content__address-menu .menu").length == 0) {
-      menu.appendTo($('.main-content__address-menu'));
-    }
-
-    for (var i = 0, l = groups.length; i < l; i++) {
-        createMenuGroup(groups[i]);
-    }
-
-    function createMenuGroup (group) {
-      // Пункт меню.
-      var menuItem = $('<li><a href="#">' + group.name + '</a></li>'),
-      // Коллекция для геообъектов группы.
-      collection = new ymaps.GeoObjectCollection(null, { preset: group.style }),
-      // Контейнер для подменю.
-      submenu = $('<ul class="submenu"></ul>');
-
-      // Добавляем коллекцию на карту.
-      myMap.geoObjects.add(collection);
-
-      // Добавляем подменю.
-      menuItem
-        .append(submenu)
-        // Добавляем пункт в меню.
-        .appendTo(menu)
-
-      for (var j = 0, m = group.items.length; j < m; j++) {
-        createSubMenu(group.items[j], collection, submenu);
-      }
-    }
-
-    function createSubMenu (item, collection, submenu) {
-      // Пункт подменю.
-      var submenuItem = $('<li><a href="#">' + item.name + '</a></li>'),
-      // Создаем метку.
-      placemark = new ymaps.Placemark(item.center, { balloonContent: item.name });
-
-      // Добавляем метку в коллекцию.
-      collection.add(placemark);
-
-      // Добавляем пункт в подменю.
-      submenuItem
-        .appendTo(submenu)
-        // При клике по пункту подменю открываем/закрываем баллун у метки.
-        .find('a')
-        .bind('click', function () {
-          if (!placemark.balloon.isOpen()) {
-            placemark.balloon.open();
-          } else {
-            placemark.balloon.close();
-          }
-          return false;
-        });
-    }
-
-    // Загружаем GeoJSON файл с описанием объектов.
-    $.getJSON('../js/geoJson.json').done(function(geoJson) {
-
-    });
-
-    var coords = [[55.8, 37.8],
-                  [55.75, 37.0],
-                  [55.5, 37.8]];
-    var myGeoObjects = [];
-
-    // Добавляем геообъекты в массив
-    for (var i = 0; i<coords.length; i++) {
-      myGeoObjects[i] = new ymaps.GeoObject({
-        geometry: {
-          type: "Point",
-          coordinates: coords[i]
-        }
-      }, myPlacemark);
-      myGeoObjects[i].events.add(['mouseenter', 'mouseleave'], onObjectEvent);
-    }
-
-    // Добавляем контролы на карту
-    myMap.controls.add(zoomControl);
-    // Добавляем геообъекты в кластеры
-    myClusterer.add(myGeoObjects);
-    myClusterer.events.add(['mouseenter', 'mouseleave'], onClusterEvent);
-
-    // Добавляем кластеры на карту
-    myMap.geoObjects.add(myClusterer);
-  }
-
 });

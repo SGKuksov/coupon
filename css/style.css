@@ -2023,21 +2023,21 @@ button {
 }
 
 .rating__star-empty {
-  background-image: url(../img/sprite-06323098789901112.png);
+  background-image: url(../img/sprite-07572471347154326.png);
   background-position: 0px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-fill {
-  background-image: url(../img/sprite-06323098789901112.png);
+  background-image: url(../img/sprite-07572471347154326.png);
   background-position: -26px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-hover {
-  background-image: url(../img/sprite-06323098789901112.png);
+  background-image: url(../img/sprite-07572471347154326.png);
   background-position: 0px -26px;
   width: 22px;
   height: 22px;
@@ -3818,6 +3818,22 @@ button {
   padding-right: 13px;
 }
 
+.main-content__address-item {
+  font-size: 14px;
+  color: #787878;
+  font-weight: bold;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: block;
+}
+
+.main-content__address-item.active {
+  background-color: #d8d8d8;
+  border-radius: 4px;
+  padding-left: 9px;
+  padding-right: 9px;
+}
+
 .main-content__address-img-wrap {
   width: 212px;
   height: 88px;
@@ -3878,11 +3894,8 @@ button {
   border: none;
 }
 
-.main-content__address-menu {
-  padding: 20px;
-}
-
 .main-content__address-menu .menu {
+  padding: 20px;
   -webkit-column-count: 1;
           column-count: 1;
 }
@@ -8216,6 +8229,14 @@ label.el-checkbox {
   opacity: 1;
 }
 
+.balloons {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 @media (min-width: 380px) {
   .top-panel {
     width: 100%;
@@ -9043,7 +9064,6 @@ label.el-checkbox {
             flex-direction: row;
   }
   .main-content__address-block {
-    position: absolute;
     left: 18px;
     top: 18px;
     width: 242px;
@@ -9064,8 +9084,8 @@ label.el-checkbox {
     height: 560px;
   }
   .main-content__address-menu .menu {
-    -webkit-column-count: 2;
-            column-count: 2;
+    -webkit-column-count: 3;
+            column-count: 3;
     -webkit-column-gap: 3px;
             column-gap: 3px;
   }
@@ -9269,7 +9289,6 @@ label.el-checkbox {
     display: none;
   }
   .modal-select {
-    display: block;
     z-index: 2000;
     background-color: #fff;
     width: 248px;
