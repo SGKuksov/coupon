@@ -113,13 +113,31 @@
     padding-right: 13px;
 
     @media (min-width: $screen-md) {
-      display: none;
+      // display: none;
       // position: absolute;
-      // left: 18px;
-      // top: 18px;
-      // width: 242px;
-      // border-radius: 6px;
-      // box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+      left: 18px;
+      top: 18px;
+      width: 242px;
+      border-radius: 6px;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  &__address-list {}
+
+  &__address-item {
+    font-size: 14px;
+    color: #787878;
+    font-weight: bold;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+
+    &.active {
+      background-color: #d8d8d8;
+      border-radius: 4px;
+      padding-left: 9px;
+      padding-right: 9px;
     }
   }
 
@@ -197,17 +215,16 @@
   }
 
   &__address-menu {
-    padding: 20px;
 
     .menu {
+      padding: 20px;
       column-count: 1;
 
       @media (min-width: $screen-md) {
-        column-count: 2;
+        column-count: 3;
         column-gap: 3px;
       }
 
-      ul {}
       li {}
       a {
         font-size: 18px;

@@ -34,26 +34,26 @@ $(document).ready(function() {
   // карта
   function init() {
 
-
     var myMap1 = new ymaps.Map('map', {
       center: [55.76, 37.64],
       zoom: 10,
         controls: []
-      }),
+      });
 
-    var myMap2 = new ymaps.Map('map2', {
-        center: [55.76, 37.64],
-        zoom: 10,
-          controls: []
-      }),
+    // var myMap2 = new ymaps.Map('map2', {
+    //     center: [55.76, 37.64],
+    //     zoom: 10,
+    //       controls: []
+    //   });
 
-    var myMap3 = new ymaps.Map('map3', {
-        center: [55.76, 37.64],
-        zoom: 10,
-          controls: []
-      }),
+    // var myMap3 = new ymaps.Map('map3', {
+    //     center: [55.76, 37.64],
+    //     zoom: 10,
+    //       controls: []
+    //   });
 
-      // Настраиваем контролы на карте
+    // Настраиваем контролы на карте
+
     var zoomControl = new ymaps.control.ZoomControl({
         options: {
           position: {
@@ -135,7 +135,11 @@ $(document).ready(function() {
           offset: [-40, -40]
         }],
         'clusterIconContentLayout': MyIconContentLayoutHovered
-      };
+      },
+      objectManager = new ymaps.ObjectManager({
+        clusterize: true,
+        clusterDisableClickZoom: true
+      });
 
     // Событие произошло на геообъекте
     function onObjectEvent(e) {
@@ -160,41 +164,74 @@ $(document).ready(function() {
       }
     }
 
-    // Загружаем GeoJSON файл с описанием объектов.
+    // Загружаем JSON файл с описанием объектов.
     // https://api.myjson.com/bins/1gggfi
-    $.getJSON('https://api.myjson.com/bins/1gggfi').done(function(data) {
-      console.log(data);
+    // https://api.myjson.com/bins/ghvhq
+
+    var groups =[];
+    $.ajax({
+      url: "https://api.myjson.com/bins/ghvhq"
+    }).done(function(data) {
+      objectManager.add(data)
+
+      groups = data.features;
+
+
+      for (var i = 0, l = groups.length; i < l; i++) {
+        createMenu(groups[i]);
+        // console.log(groups[i].geometry.coordinates);
+      }
     });
 
-    var coords = [[55.8, 37.8],
-                  [55.75, 37.0],
-                  [55.5, 37.8]];
-                  var myGeoObjects = [];
+    // создаем текстовое меню
+    var menu = $('<ul class="menu"></ul>');
 
-    // Добавляем геообъекты в массив
-    for (var i = 0; i<coords.length; i++) {
-      myGeoObjects[i] = new ymaps.GeoObject({
-        geometry: {
-          type: "Point",
-          coordinates: coords[i]
-        }
-      }, myPlacemark);
-      myGeoObjects[i].events.add(['mouseenter', 'mouseleave'], onObjectEvent);
+    if ($(".main-content__address-menu .menu").length == 0) {
+      menu.appendTo($('.main-content__address-menu'));
+    }
+    if ($('.menu ul').length ==0 ) {
+      // $('.menu').hide();
+    }
+
+    function createMenu (item) {
+      // Пункт меню.
+      var menuItem = $('<li><a href="#">' + item.properties.clusterCaption + '</a></li>');
+
+      // Добавляем подменю.
+      menuItem
+        // Добавляем пункт в меню.
+        .appendTo(menu)
+        // При клике по пункту подменю открываем/закрываем баллун у метки.
+        .find('a')
+        .bind('click', function () {
+          // if (!placemark.balloon.isOpen()) {
+          //   placemark.balloon.open();
+          // } else {
+          //   placemark.balloon.close();
+          // }
+
+          myMap1.setCenter(
+            item.geometry.coordinates
+          );
+          return false;
+        });
     }
 
     // Добавляем контролы на карту
     myMap1.controls.add(zoomControl);
-    myMap2.controls.add(zoomControl);
-    myMap3.controls.add(zoomControl);
+    // myMap2.controls.add(zoomControl);
+    // myMap3.controls.add(zoomControl);
 
-    // Добавляем геообъекты в кластеры
-    myClusterer.add(myGeoObjects);
-    myClusterer.events.add(['mouseenter', 'mouseleave'], onClusterEvent);
+    objectManager.objects.options.set(myPlacemark);
+    objectManager.clusters.options.set('preset', 'islands#redClusterIcons');
 
-    // Добавляем кластеры на карту
-    myMap1.geoObjects.add(myClusterer);
-    myMap2.geoObjects.add(myClusterer);
-    myMap3.geoObjects.add(myClusterer);
+    // Добавить события на карту
+    // myGeoObjects.events.add(['mouseenter', 'mouseleave'], onObjectEvent);
+    // myClusterer.events.add(['mouseenter', 'mouseleave'], onClusterEvent);
+
+    myMap1.geoObjects.add(objectManager);
+    // myMap2.geoObjects.add(objectManager);
+    // myMap3.geoObjects.add(objectManager);
   }
 
 });
