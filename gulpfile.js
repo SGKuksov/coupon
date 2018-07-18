@@ -141,9 +141,12 @@ gulp.task('pug', function() {
       dirs.source + '/*.pug',
       '!' + dirs.source + '/mixins.pug',
     ])
-    .pipe(newer(dirs.build))
+    // .pipe(newer(dirs.build))
     .pipe(plumber())
     .pipe(pug())
+    // .pipe(debug({
+      // title:"html"
+    // }))
     .pipe(htmlbeautify())
     .pipe(gulp.dest(dirs.build));
 });
