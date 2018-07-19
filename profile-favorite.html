@@ -105,7 +105,154 @@
       <div class="site-overlay"></div>
       <div class="overlay"></div>
       <div class="main__container" id="container">
-        <div class="profile-favorite"></div>
+        <div class="profile-favorite">
+          <h2 class="profile-favorite__title">Избранное</h2>
+          <nav class="profile-favorite__header">
+            <ul class="nav profile-favorite__nav-tabs" role="tablist">
+              <li class="nav-item profile-favorite__tab"><a class="nav-link profile-favorite__tab-link active" id="couponsTab" data-toggle="tab" href="#coupons" role="tab" aria-controls="coupons" aria-selected="true">Купоны<span class="profile-favorite__tab-count">3</span></a></li>
+              <li class="nav-item profile-favorite__tab"><a class="nav-link profile-favorite__tab-link" id="placesTab" data-toggle="tab" href="#places" role="tab" aria-controls="places" aria-selected="false">Места<span class="profile-favorite__tab-count">3</span></a></li>
+            </ul>
+          </nav>
+          <div class="tab-content">
+            <div class="tab-pane fade active" id="coupons" role="tabpanel" aria-labelledby="couponsTab">
+              <div class="profile-favorite__body">
+                <div class="profile-favorite__tab-panel">
+                  <ul class="nav profile-favorite__tabs" role="tablist">
+                    <li class="nav-item">
+                      <a class="profile-favorite__btn profile-favorite__btn--left btn nav-link active" id="couponsByPlitkaTab" data-toggle="tab" href="#couponsByPlitka" role="tab" aria-controls="couponsByPlitka" aria-selected="true">
+                        <svg class="profile-favorite__by_plitka" width="14" height="12">
+                          <use xlink:href="img/sprite-svg.svg#filter__by_plitka"></use>
+                        </svg><span>Плиткой</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="profile-favorite__btn profile-favorite__btn--right btn nav-link" id="couponsOnMapTab" data-toggle="tab" href="#couponsOnMap" role="tab" aria-controls="couponsOnMap" aria-selected="false">
+                        <svg class="profile-favorite__on_map" width="16" height="14">
+                          <use xlink:href="img/sprite-svg.svg#filter__on_map"></use>
+                        </svg><span>На карте</span></a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="tab-content">
+                  <div class="profile-favorite__tab-content tab-pane fade active" id="couponsByPlitka" role="tabpanel" aria-labelledby="couponsByPlitkaTab">
+                    <div class="profile-favorite__inner">
+                      <div class="coupon-item disabled">
+                        <a class="coupon-item__close" href="#" data-dismiss="modal" aria-label="Close">
+                          <svg class="close-icon" width="9" height="9">
+                            <use xlink:href="img/sprite-svg.svg#modals__close"></use>
+                          </svg>
+                        </a>
+                        <div class="coupon-item__sale-info"><span class="coupon-item__sale">до<span>50%</span></span><span class="coupon-item__price">от<span>400 руб.</span></span>
+                        </div><span class="coupon-item__place">Аквапарк «Родео Драйв»</span>
+                        <h3 class="coupon-item__title">Скидка до 50% на первое посещение бассейна</h3>
+                        <div class="coupon-item__category-info"><span class="coupon-item__category">Фитнес-центры</span><a class="coupon-item__link" href="#">Искать похожие</a></div>
+                      </div>
+                      <div class="coupon-item">
+                        <a class="coupon-item__close" href="#" data-dismiss="modal" aria-label="Close">
+                          <svg class="close-icon" width="9" height="9">
+                            <use xlink:href="img/sprite-svg.svg#modals__close"></use>
+                          </svg>
+                        </a>
+                        <div class="coupon-item__sale-info"><span class="coupon-item__sale">до<span>50%</span></span><span class="coupon-item__price">от<span>400 руб.</span></span>
+                        </div><span class="coupon-item__place">Аквапарк «Родео Драйв»</span>
+                        <h3 class="coupon-item__title">Скидка до 50% на первое посещение бассейна Скидка до 50% на первое посещение бассейна Скидка до 50% на первое посещение бассейна</h3><span class="coupon-item__category">Фитнес-центры</span><a class="coupon-item__link" href="#">Искать похожие</a></div>
+                      <div class="coupon-item disabled">
+                        <a class="coupon-item__close" href="#" data-dismiss="modal" aria-label="Close">
+                          <svg class="close-icon" width="9" height="9">
+                            <use xlink:href="img/sprite-svg.svg#modals__close"></use>
+                          </svg>
+                        </a>
+                        <div class="coupon-item__sale-info"><span class="coupon-item__sale">до<span>50%</span></span><span class="coupon-item__price">от<span>400 руб.</span></span>
+                        </div><span class="coupon-item__place">Аквапарк «Родео Драйв»</span>
+                        <h3 class="coupon-item__title">Скидка до 50% на первое посещение бассейна</h3>
+                        <div class="coupon-item__category-info"><span class="coupon-item__category">Фитнес-центры</span><a class="coupon-item__link" href="#">Искать похожие</a></div>
+                      </div>
+                      <div class="coupon-item disabled">
+                        <a class="coupon-item__close" href="#" data-dismiss="modal" aria-label="Close">
+                          <svg class="close-icon" width="9" height="9">
+                            <use xlink:href="img/sprite-svg.svg#modals__close"></use>
+                          </svg>
+                        </a>
+                        <div class="coupon-item__sale-info"><span class="coupon-item__sale">до<span>50%</span></span><span class="coupon-item__price">от<span>400 руб.</span></span>
+                        </div><span class="coupon-item__place">Аквапарк «Родео Драйв»</span>
+                        <h3 class="coupon-item__title">Скидка до 50% на первое посещение бассейна</h3>
+                        <div class="coupon-item__category-info"><span class="coupon-item__category">Фитнес-центры</span><a class="coupon-item__link" href="#">Искать похожие</a></div>
+                      </div><a class="profile-favorite__more-btn btn" href="#">Искать больше купонов</a></div>
+                    <div class="profile-favorite__pagination">
+                      <div class="pagination">
+                        <ul class="pagination__list">
+                          <li class="pagination__item-prev"><a class="pagination__link" href="#"></a></li>
+                          <li class="pagination__item"><a class="pagination__link pagination__link--active" href="#">1</a></li>
+                          <li class="pagination__item"><a class="pagination__link" href="#">2</a></li>
+                          <li class="pagination__item"><a class="pagination__link" href="#">3</a></li>
+                          <li class="pagination__item"><a class="pagination__link" href="#">4</a></li>
+                          <li class="pagination__item"><a class="pagination__link" href="#">5</a></li>
+                          <li class="pagination__item-next"><a class="pagination__link" href="#"></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="profile-favorite__tab-content tab-pane fade" id="couponsOnMap" role="tabpanel" aria-labelledby="couponsOnMapTab">
+                    <div class="profile-favorite__address-map" id="placeMap"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="places" role="tabpanel" aria-labelledby="placesTab">
+              <div class="profile-favorite__body">
+                <div class="profile-favorite__tab-panel">
+                  <ul class="nav profile-favorite__tabs" role="tablist">
+                    <li class="nav-item">
+                      <a class="profile-favorite__btn profile-favorite__btn--left btn nav-link active" id="placesByPlitkaTab" data-toggle="tab" href="#placesByPlitka" role="tab" aria-controls="placesByPlitka" aria-selected="true">
+                        <svg class="profile-favorite__by_plitka" width="14" height="12">
+                          <use xlink:href="img/sprite-svg.svg#filter__by_plitka"></use>
+                        </svg><span>Плиткой</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="profile-favorite__btn profile-favorite__btn--right btn nav-link" id="placesOnMapTab" data-toggle="tab" href="#placesOnMap" role="tab" aria-controls="placesOnMap" aria-selected="false">
+                        <svg class="profile-favorite__on_map" width="16" height="14">
+                          <use xlink:href="img/sprite-svg.svg#filter__on_map"></use>
+                        </svg><span>На карте</span></a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="tab-content">
+                  <div class="profile-favorite__tab-content tab-pane fade active" id="placesByPlitka" role="tabpanel" aria-labelledby="placesByPlitkaTab">
+                    <div class="profile-favorite__inner">
+                      <div class="place-item"><span class="place-item__close"></span><span class="place-item__category">Развлечения</span>
+                        <h3 class="place-item__title">Аквапарк «Родео Драйв»</h3><span class="place-item__meta">Адрес</span><span class="place-item__meta-address">пр. Культуры, 1, Москва</span><span class="place-item__meta">Телефон</span><span class="place-item__meta-phone">+7 (812) 123-45-67</span><span class="place-item__meta">Время работы</span><span class="place-item__meta-phone">Пн-Вс: 08:00-22:00</span><a class="place-item__link" href="#">Подробнее</a></div>
+                      <div class="place-item"><span class="place-item__close"></span><span class="place-item__category">Развлечения</span>
+                        <h3 class="place-item__title">Аквапарк «Родео Драйв»</h3><span class="place-item__meta">Адрес</span><span class="place-item__meta-address">пр. Культуры, 1, Москва</span><span class="place-item__meta">Телефон</span><span class="place-item__meta-phone">+7 (812) 123-45-67</span><span class="place-item__meta">Время работы</span><span class="place-item__meta-phone">Пн-Вс: 08:00-22:00</span><a class="place-item__link" href="#">Подробнее</a></div>
+                      <div class="place-item"><span class="place-item__close"></span><span class="place-item__category">Развлечения</span>
+                        <h3 class="place-item__title">Аквапарк «Родео Драйв»</h3><span class="place-item__meta">Адрес</span><span class="place-item__meta-address">пр. Культуры, 1, Москва</span><span class="place-item__meta">Телефон</span><span class="place-item__meta-phone">+7 (812) 123-45-67</span><span class="place-item__meta">Время работы</span><span class="place-item__meta-phone">Пн-Вс: 08:00-22:00</span><a class="place-item__link" href="#">Подробнее</a></div>
+                      <div class="place-item"><span class="place-item__close"></span><span class="place-item__category">Развлечения</span>
+                        <h3 class="place-item__title">Аквапарк «Родео Драйв»</h3><span class="place-item__meta">Адрес</span><span class="place-item__meta-address">пр. Культуры, 1, Москва</span><span class="place-item__meta">Телефон</span><span class="place-item__meta-phone">+7 (812) 123-45-67</span><span class="place-item__meta">Время работы</span><span class="place-item__meta-phone">Пн-Вс: 08:00-22:00</span><a class="place-item__link" href="#">Подробнее</a></div>
+                      <div class="place-item"><span class="place-item__close"></span><span class="place-item__category">Развлечения</span>
+                        <h3 class="place-item__title">Аквапарк «Родео Драйв»</h3><span class="place-item__meta">Адрес</span><span class="place-item__meta-address">пр. Культуры, 1, Москва</span><span class="place-item__meta">Телефон</span><span class="place-item__meta-phone">+7 (812) 123-45-67</span><span class="place-item__meta">Время работы</span><span class="place-item__meta-phone">Пн-Вс: 08:00-22:00</span><a class="place-item__link" href="#">Подробнее</a></div>
+                      <div class="place-item"><span class="place-item__close"></span><span class="place-item__category">Развлечения</span>
+                        <h3 class="place-item__title">Аквапарк «Родео Драйв»</h3><span class="place-item__meta">Адрес</span><span class="place-item__meta-address">пр. Культуры, 1, Москва</span><span class="place-item__meta">Телефон</span><span class="place-item__meta-phone">+7 (812) 123-45-67</span><span class="place-item__meta">Время работы</span><span class="place-item__meta-phone">Пн-Вс: 08:00-22:00</span><a class="place-item__link" href="#">Подробнее</a></div>
+                    </div>
+                    <div class="profile-favorite__pagination">
+                      <div class="pagination">
+                        <ul class="pagination__list">
+                          <li class="pagination__item-prev"><a class="pagination__link" href="#"></a></li>
+                          <li class="pagination__item"><a class="pagination__link pagination__link--active" href="#">1</a></li>
+                          <li class="pagination__item"><a class="pagination__link" href="#">2</a></li>
+                          <li class="pagination__item"><a class="pagination__link" href="#">3</a></li>
+                          <li class="pagination__item"><a class="pagination__link" href="#">4</a></li>
+                          <li class="pagination__item"><a class="pagination__link" href="#">5</a></li>
+                          <li class="pagination__item-next"><a class="pagination__link" href="#"></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="profile-favorite__tab-content tab-pane fade" id="placesOnMap" role="tabpanel" aria-labelledby="placesOnMapTab">
+                    <div class="profile-favorite__address-map" id="placeMap"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
   </div>
