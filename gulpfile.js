@@ -141,22 +141,22 @@ gulp.task('pug', function() {
       dirs.source + '/*.pug',
       '!' + dirs.source + '/mixins.pug',
     ])
-    // .pipe(newer(dirs.build))
     .pipe(plumber())
-    .pipe(pug())
+    // .pipe(newer(dirs.build))
     // .pipe(debug({
       // title:"html"
     // }))
+    .pipe(pug())
     .pipe(htmlbeautify())
     .pipe(gulp.dest(dirs.build));
 });
 
 // Копирование html
-// gulp.task('copy:html', function () {
-//   return gulp.src(dirs.source + '/*.html')
-//     .pipe(plumber({ errorHandler: onError }))             // не останавливаем автоматику при ошибках
-//     .pipe(gulp.dest(dirs.build));
-// });
+gulp.task('copy:html', function () {
+  return gulp.src(dirs.source + '/*.html')
+    .pipe(plumber({ errorHandler: onError }))             // не останавливаем автоматику при ошибках
+    .pipe(gulp.dest(dirs.build));
+});
 
 // Копирование изображений
 gulp.task('copy:img', function () {
@@ -278,7 +278,7 @@ gulp.task('build', function (callback) {
     ['style', 'copy:js', 'copy:img', 'copy:fonts'],
     // 'styleguide',
     'pug',
-    // 'copy:html',
+    'copy:html',
     callback
   );
 });
@@ -307,9 +307,9 @@ gulp.task('serve', ['build'], function() {
   ], ['watch:pug']);
 
   // Слежение за html
-  // gulp.watch([
-  //   dirs.source + '/*.html',
-  // ], ['watch:html']);
+  gulp.watch([
+    dirs.source + '/*.html',
+  ], ['watch:html']);
 
   // Слежение за изображениями
   if(images.length) {
@@ -333,7 +333,7 @@ gulp.task('serve', ['build'], function() {
 
 // Браузерсинк с 3-м галпом — такой браузерсинк...
 gulp.task('watch:pug', ['pug'], reload);
-// gulp.task('watch:html', ['copy:html'], reload);
+gulp.task('watch:html', ['copy:html'], reload);
 gulp.task('watch:style', ['style'], reload);
 // gulp.task('watch:style', ['style', 'styleguide'], reload); // Слежение за стилями и пересборка styleguide
 gulp.task('watch:img', ['copy:img'], reload);

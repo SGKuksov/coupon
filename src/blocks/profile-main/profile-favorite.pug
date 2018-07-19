@@ -4,99 +4,97 @@ mixin profile-favorite()
     h2.profile-favorite__title
       | Избранное
 
-  //- ТАБЫ Купоны-Места
-  .profile-favorite__header
-    .profile-favorite__tab-panel
-      ul.nav.filter__tabs(role="tablist")
-        li.nav-item
-          a#byPlitkaTab.filter__btn.filter__btn--left.btn.nav-link.active(data-toggle="tab" href="#byPlitka" role="tab" aria-controls="byPlitka" aria-selected="true")
-            span
-              | Купоны
-            span
+    //- ТАБЫ Купоны-Места
+    nav.profile-favorite__header
+      ul.nav.profile-favorite__nav-tabs(role="tablist")
+        li.nav-item.profile-favorite__tab
+          a#couponsTab.nav-link.profile-favorite__tab-link.active(data-toggle="tab" href="#coupons" role="tab" aria-controls="coupons" aria-selected="true")
+            | Купоны
+            span.profile-favorite__tab-count
               | 3
 
-        li.nav-item
-          a#onMapTab.filter__btn.filter__btn--right.btn.nav-link(data-toggle="tab" href="#onMap" role="tab" aria-controls="onMap" aria-selected="false")
-            span
-              | Места
-            span
-              | 7
+        li.nav-item.profile-favorite__tab
+          a#placesTab.nav-link.profile-favorite__tab-link(data-toggle="tab" href="#places" role="tab" aria-controls="places" aria-selected="false")
+            | Места
+            span.profile-favorite__tab-count
+              | 3
 
-  .tab-content
-    //- Вкладка Купоны
-    .main-content#byPlitka.tab-pane.fade.active(role="tabpanel" aria-labelledby="byPlitkaTab")
-      .profile-favorite__body
+    .tab-content
+      //- Вкладка Купоны
+      #coupons.tab-pane.fade.active(role="tabpanel" aria-labelledby="couponsTab")
+        .profile-favorite__body
 
-        //- ТАБЫ Купоны Плитка-Карта
-        .profile-favorite__tab-panel
-          ul.nav.filter__tabs(role="tablist")
-            li.nav-item
-              a#byPlitkaTab.filter__btn.filter__btn--left.btn.nav-link.active(data-toggle="tab" href="#byPlitka" role="tab" aria-controls="byPlitka" aria-selected="true")
-                svg.filter__by_plitka(width="14" height="12")
-                  use(xlink:href="img/sprite-svg.svg#filter__by_plitka")
-                span
-                  | Плиткой
+          //- ТАБЫ Купоны Плитка-Карта
+          .profile-favorite__tab-panel
+            ul.nav.profile-favorite__tabs(role="tablist")
+              li.nav-item
+                a#couponsByPlitkaTab.profile-favorite__btn.profile-favorite__btn--left.btn.nav-link.active(data-toggle="tab" href="#couponsByPlitka" role="tab" aria-controls="couponsByPlitka" aria-selected="true")
+                  svg.profile-favorite__by_plitka(width="14" height="12")
+                    use(xlink:href="img/sprite-svg.svg#filter__by_plitka")
+                  span
+                    | Плиткой
 
-            li.nav-item
-              a#onMapTab.filter__btn.filter__btn--right.btn.nav-link(data-toggle="tab" href="#onMap" role="tab" aria-controls="onMap" aria-selected="false")
-                svg.filter__on_map(width="16" height="14")
-                  use(xlink:href="img/sprite-svg.svg#filter__on_map")
-                span
-                  | На карте
+              li.nav-item
+                a#couponsOnMapTab.profile-favorite__btn.profile-favorite__btn--right.btn.nav-link(data-toggle="tab" href="#couponsOnMap" role="tab" aria-controls="couponsOnMap" aria-selected="false")
+                  svg.profile-favorite__on_map(width="16" height="14")
+                    use(xlink:href="img/sprite-svg.svg#filter__on_map")
+                  span
+                    | На карте
 
-        .tab-content
-          //- Вкладка Купоны карточки
-          .main-content#byPlitka.tab-pane.fade.active(role="tabpanel" aria-labelledby="byPlitkaTab")
-            .profile-favorite__inner
-              +place-item()
-              +place-item()
-              +place-item()
-              +place-item()
-              +place-item()
-              +place-item()
+          .tab-content
+            //- Вкладка Купоны карточки
+            #couponsByPlitka.profile-favorite__tab-content.tab-pane.fade.active(role="tabpanel" aria-labelledby="couponsByPlitkaTab")
+              .profile-favorite__inner
+                +coupon-item(true)
+                +coupon-item(false)
+                +coupon-item(true)
+                +coupon-item(true)
 
-            .profile-favorite__pagination
-              +pagination()
+                a.profile-favorite__more-btn.btn(href="#")
+                  | Искать больше купонов
 
-          //- Вкладка Купоны карта
-          .main-content#onMap.tab-pane.fade(role="tabpanel" aria-labelledby="onMapTab")
-            #placeMap.profile-favorite__address-map
+              .profile-favorite__pagination
+                +pagination()
 
-    //- Вкладка Места
-    .main-content#byPlitka.tab-pane.fade.active(role="tabpanel" aria-labelledby="byPlitkaTab")
-      .profile-favorite__body
+            //- Вкладка Купоны карта
+            #couponsOnMap.profile-favorite__tab-content.tab-pane.fade(role="tabpanel" aria-labelledby="couponsOnMapTab")
+              #placeMap.profile-favorite__address-map
 
-        //- ТАБЫ Места Плитка-Карта
-        .profile-favorite__tab-panel
-          ul.nav.filter__tabs(role="tablist")
-            li.nav-item
-              a#byPlitkaTab.filter__btn.filter__btn--left.btn.nav-link.active(data-toggle="tab" href="#byPlitka" role="tab" aria-controls="byPlitka" aria-selected="true")
-                svg.filter__by_plitka(width="14" height="12")
-                  use(xlink:href="img/sprite-svg.svg#filter__by_plitka")
-                span
-                  | Плиткой
+      //- Вкладка Места
+      #places.tab-pane.fade(role="tabpanel" aria-labelledby="placesTab")
+        .profile-favorite__body
 
-            li.nav-item
-              a#onMapTab.filter__btn.filter__btn--right.btn.nav-link(data-toggle="tab" href="#onMap" role="tab" aria-controls="onMap" aria-selected="false")
-                svg.filter__on_map(width="16" height="14")
-                  use(xlink:href="img/sprite-svg.svg#filter__on_map")
-                span
-                  | На карте
+          //- ТАБЫ Места Плитка-Карта
+          .profile-favorite__tab-panel
+            ul.nav.profile-favorite__tabs(role="tablist")
+              li.nav-item
+                a#placesByPlitkaTab.profile-favorite__btn.profile-favorite__btn--left.btn.nav-link.active(data-toggle="tab" href="#placesByPlitka" role="tab" aria-controls="placesByPlitka" aria-selected="true")
+                  svg.profile-favorite__by_plitka(width="14" height="12")
+                    use(xlink:href="img/sprite-svg.svg#filter__by_plitka")
+                  span
+                    | Плиткой
 
-        .tab-content
-          //- Вкладка Места карточки
-          .main-content#byPlitka.tab-pane.fade.active(role="tabpanel" aria-labelledby="byPlitkaTab")
-            .profile-favorite__inner
-              +place-item()
-              +place-item()
-              +place-item()
-              +place-item()
-              +place-item()
-              +place-item()
+              li.nav-item
+                a#placesOnMapTab.profile-favorite__btn.profile-favorite__btn--right.btn.nav-link(data-toggle="tab" href="#placesOnMap" role="tab" aria-controls="placesOnMap" aria-selected="false")
+                  svg.profile-favorite__on_map(width="16" height="14")
+                    use(xlink:href="img/sprite-svg.svg#filter__on_map")
+                  span
+                    | На карте
 
-            .profile-favorite__pagination
-              +pagination()
+          .tab-content
+            //- Вкладка Места карточки
+            #placesByPlitka.profile-favorite__tab-content.tab-pane.fade.active(role="tabpanel" aria-labelledby="placesByPlitkaTab")
+              .profile-favorite__inner
+                +place-item()
+                +place-item()
+                +place-item()
+                +place-item()
+                +place-item()
+                +place-item()
 
-          //- Вкладка Места карта
-          .main-content#onMap.tab-pane.fade(role="tabpanel" aria-labelledby="onMapTab")
-            #placeMap.profile-favorite__address-map
+              .profile-favorite__pagination
+                +pagination()
+
+            //- Вкладка Места карта
+            #placesOnMap.profile-favorite__tab-content.tab-pane.fade(role="tabpanel" aria-labelledby="placesOnMapTab")
+              #placeMap.profile-favorite__address-map

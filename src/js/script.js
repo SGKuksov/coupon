@@ -45,9 +45,11 @@ $(document).ready(function() {
 
   // вызов обрезания текста
   $('.card__link, .card__place').truncateText();
+  // вызов обрезания текста
+  $('.coupon-item__title').truncateText();
 
-  $(".main-content__btn").click(function() {
-    $('.card__link, .card__place').truncateText();
+  $(".main-content__btn, .profile-favorite__more-btn").click(function() {
+    $('.card__link, .card__place, .coupon-item__title, .coupon-item__place').truncateText();
   });
 
   // Подстановка разметки в номера телефонов
