@@ -1,12 +1,42 @@
 .coupon-item {
   position: relative;
-  width: 336px;
-  height: 140px;
-  margin-bottom: 23px;
-  margin-right: 34px;
+  width: 250px;
+  height: 172px;
   background-color: #f0f0f0;
   border-radius: 6px;
   padding: 13px 20px;
+  margin-bottom: 20px;
+  // margin-right: 30px;
+  // margin-left: -10px;
+
+  @media (min-width: $screen-sm) {
+    width: 336px;
+    height: 140px;
+    margin-right: 30px;
+    margin-left: -10px;
+  }
+
+  @media (min-width: $screen-md) {
+    margin-right: 44px;
+    margin-bottom: 23px;
+  }
+
+  @media (min-width: $screen-lg) {
+    margin-bottom: 23px;
+    margin-right: 34px;
+  }
+
+  &:nth-child(2n) {
+    margin-right: 34px;
+
+    @media (min-width: $screen-md) {
+      margin-right: 0;
+    }
+
+    @media (min-width: $screen-lg) {
+      margin-right: 34px;
+    }
+  }
 
   &.disabled {
     background-color: #e2e2e2;
@@ -45,11 +75,15 @@
     height: 50px;
     width: 50px;
     background-color: #fff;
-    display: inline-block;
     position: absolute;
     right: -40px;
     top: 50%;
     transform: translateY(-50%);
+    display: none;
+
+    @media (min-width: $screen-sm) {
+      display: inline-block;
+    }
   }
   &:before {
     content:'';
@@ -57,11 +91,15 @@
     height: 50px;
     width: 50px;
     background-color: #fff;
-    display: inline-block;
     position: absolute;
     left: -40px;
     top: 50%;
     transform: translateY(-50%);
+    display: none;
+
+    @media (min-width: $screen-sm) {
+      display: inline-block;
+    }
   }
 
   &__sale-info,
@@ -69,6 +107,16 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 7px;
+  }
+
+  &__sale-info {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    @media (min-width: $screen-sm) {
+      flex-wrap: nowrap;
+      justify-content: space-between;
+    }
   }
 
   &__sale {
@@ -81,8 +129,8 @@
     color: #ffffff;
     font-size: 14px;
     font-weight: bold;
-    display: inline-block;
     border-radius: 26px;
+    display: inline-block;
 
     span {
       color: #ffffff;
@@ -97,7 +145,16 @@
     height: 26px;
     color: #323232;
     font-size: 16px;
-    display: inline-block;
+    margin-top: 0;
+    display: block;
+    width: 100%;
+
+    @media (min-width: $screen-sm) {
+      display: inline-block;
+      width: auto;
+      line-height: 26px;
+      height: 26px;
+    }
 
     span {
       color: #323232;
@@ -122,7 +179,6 @@
   &__category,
   &__link {
     font-size: 12px;
-    // padding: 6px 13px 7px 13px;
     padding-left: 13px;
     padding-right: 13px;
     line-height: 26px;
@@ -153,6 +209,11 @@
     font-size: 14px;
     margin-right: 23px;
     position: relative;
+    display: none;
+
+    @media (min-width: $screen-md) {
+      display: inline;
+    }
 
     &:hover {
       border: 0;
@@ -173,24 +234,18 @@
   }
 
   &__close {
-    display: none;
     position: absolute;
-    top: 20px;
-    right: 20px;
-
-    @media (min-width: $screen-md) {
-      display: inline-block;
-      width: 20px;
-      height: 20px;
-      min-height: 0;
-      top: 0;
-      right: 0;
-      background-color: #fff;
-      border-radius: 50%;
-      border: 1px solid #f0f0f0;
-      padding: 1px 4px !important;
-      margin: -10px -10px !important;
-    }
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    min-height: 0;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 1px solid #f0f0f0;
+    padding: 1px 4px !important;
+    margin: -10px -10px !important;
   }
 
   .close-icon {

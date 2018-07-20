@@ -35,10 +35,23 @@
   }
 
   &__body {
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-bottom: 22px;
-    padding-top: 22px;
+    padding-left: 28px;
+    padding-right: 16px;
+    padding-bottom: 27px;
+    padding-top: 21px;
+    overflow-x: hidden;
+
+    @media (min-width: $screen-sm) {
+      padding-bottom: 27px;
+      padding-top: 20px;
+    }
+
+    @media (min-width: $screen-lg) {
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-bottom: 22px;
+      padding-top: 22px;
+    }
   }
 
   &__nav-tabs {
@@ -114,12 +127,8 @@
     }
 
     & span {
-      display: none;
-
-      @media (min-width: $screen-sm) {
-        display: inline;
-        margin-left: 10px;
-      }
+      display: inline;
+      margin-left: 10px;
     }
   }
 

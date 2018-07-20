@@ -1,41 +1,119 @@
 .place-item {
   position: relative;
-  width: 336px;
-  height: 140px;
-  margin-bottom: 23px;
-  margin-right: 34px;
+  width: 250px;
+  min-height: 140px;
+  margin-right: 15px;
+  margin-bottom: 19px;
   background-color: #f0f0f0;
   border-radius: 6px;
-  padding: 13px 20px;
+  padding: 13px 15px;
+
+  @media (min-width: $screen-sm) {
+    width: 339px;
+    min-height: 140px;
+  }
+
+  @media (min-width: $screen-lg) {
+    margin-bottom: 22px;
+    margin-right: 35px;
+  }
 
   &.disabled {
     background-color: #e2e2e2;
   }
 
   &__close {
-    display: none;
     position: absolute;
-    top: 20px;
-    right: 20px;
-
-    @media (min-width: $screen-md) {
-      display: inline-block;
-      width: 20px;
-      height: 20px;
-      min-height: 0;
-      top: 0;
-      right: 0;
-      background-color: #fff;
-      border-radius: 50%;
-      border: 1px solid #f0f0f0;
-      padding: 1px 5px !important;
-      margin: -1rem -1rem!important;
-      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-    }
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    min-height: 0;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 1px solid #f0f0f0;
+    padding: 1px 4px !important;
+    margin: -10px -10px !important;
   }
 
   .close-icon {
     width: 9px;
     height: 9px;
+  }
+
+  &__category {
+    font-size: 12px;
+    display: block;
+    color: #969696;
+  }
+
+  &__title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #323232;
+  }
+
+  &__meta-block {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__meta {
+    width: 100%;
+    margin-bottom: 10px;
+
+    @media (min-width: $screen-sm) {
+      width: 50%;
+    }
+  }
+  &__meta-title {
+    font-size: 12px;
+    color: #323232;
+    display: block;
+  }
+
+  &__meta-address,
+  &__meta-phone,
+  &__meta-time {
+    color: #969696;
+    font-size: 12px;
+  }
+
+  &__link {
+    color: #6a6a6a;
+    font-size: 14px;
+    background-color: #e1e1e1;
+    border-radius: 4px;
+    position: relative;
+    line-height: 30px;
+    height: 30px;
+    padding-left: 31px;
+    padding-right: 31px;
+    width: 142px;
+
+    @media (min-width: $screen-sm) {
+      width: 50%;
+      font-weight: 700;
+    }
+
+    &:hover {
+
+      @media (min-width: $screen-sm) {
+        font-weight: 700;
+      }
+    }
+
+    &:after {
+      content: "";
+      border-right: 1px solid #9b9b9b;
+      border-bottom: 1px solid #9b9b9b;
+      transform: rotate(-45deg);
+      height: 9px;
+      width: 9px;
+      display: inline-block;
+      right: 25px;
+      top: 10px;
+      position: absolute;
+    }
   }
 }
