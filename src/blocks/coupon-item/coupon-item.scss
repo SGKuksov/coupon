@@ -6,8 +6,6 @@
   border-radius: 6px;
   padding: 13px 20px;
   margin-bottom: 20px;
-  // margin-right: 30px;
-  // margin-left: -10px;
 
   @media (min-width: $screen-sm) {
     width: 336px;
@@ -19,6 +17,7 @@
   @media (min-width: $screen-md) {
     margin-right: 44px;
     margin-bottom: 23px;
+    margin-left: 0;
   }
 
   @media (min-width: $screen-lg) {
