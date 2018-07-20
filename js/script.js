@@ -516,7 +516,31 @@ $(document).ready(function() {
     return false;
   });
 
-  // $("#warnDelModal").modal("show");
+  // Модальное окно #warnDelModal
+  $(".coupon-item__close, .place-item__close").click(function() {
+    $("#warnDelModal").modal("show");
+  });
+
+  // Подтверждение удаления купона из избранного
+  $("#couponDelConfirm").click(function() {
+    $(".error").remove();
+
+    $.ajax({
+      url: "js/ok.json",
+      data: $(this).serialize()
+    }).done(function(data) {
+      console.log("done!");
+      $("#warnDelModal").modal("hide");
+    }).fail(function(data) {
+      $("#warnDelModal").find(".modals__body").append("<span class='error'>Что-то пошло не так. Попробуйте еще раз через пару минут</span>");
+
+      setTimeout(function() {
+        $("#warnDelModal").modal("hide");
+      }, 3000);
+      console.log("fail!");
+    });
+    return false;
+  });
 
   // скрытие бокового меню на 404
   $("#hideAside").hide();
