@@ -61,7 +61,7 @@ let images = [
 // Cписок обрабатываемых файлов в указанной последовательности
 let jsList = [
   dirs.source + '/js/jquery.min.js',
-  dirs.source + '/js/jquery-migrate.min.js',
+  // dirs.source + '/js/jquery-migrate.min.js',
   // dirs.source + '/js/jquery-ui.min.js',
   dirs.source + '/js/bootstrap.bundle.min.js',
   dirs.source + '/js/svg4everybody.min.js',
@@ -73,6 +73,7 @@ let jsList = [
   dirs.source + '/js/auto-search.js',
   dirs.source + '/js/map.js',
   dirs.source + '/js/ok.json',
+  dirs.source + '/js/jquery-ias.min.js',
   dirs.source + '/js/modals.js',
   dirs.source + '/js/script.js'
 ];

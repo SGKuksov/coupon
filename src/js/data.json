@@ -1,0 +1,36 @@
+{
+    "type": "FeatureCollection",
+    "features": [{
+            "type": "Feature", 
+            "id": 0, 
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [55.831903, 37.411961]
+                }, 
+                "properties": {
+                    "balloonContentHeader": "<font size=3><b><a target='_blank' href='https://yandex.ru'>Заголовок</a></b></font>", 
+                    "balloonContentBody": "<p>Содержимое, описание, цена и картинка</p>", 
+                    "balloonContentFooter": "<font size=1>Информация предоставлена: </font> <strong>этим балуном</strong>", 
+                    "clusterCaption": "<strong><s>Еще</s> одна</strong> метка", 
+                    "hintContent": "<strong>Текст  <s>подсказки</s></strong>"
+                }
+    }]
+}
+
+{
+    "type":"FeatureCollection",
+    "features": [{
+            "type":"Feature",
+            "id":0,"geometry":
+            {
+                "type":"Point",
+                "coordinates": [55.831903,37.411961]
+                },
+                "properties": {
+                    "balloonContentHeader":"",
+                    "balloonContentBody":"\u003cdiv class='main-content__address-block'\u003e\u003cdiv class='main-content__address-img-wrap'\u003e\u003cimg class='main-content__address-img' src='http://via.placeholder.com/212x88' alt='img' width='212' height='88' /\u003e\u003c/div\u003e\u003cspan class='main-content__address-info'\u003e\u003c/span\u003e\u003ch2 class='main-content__address-title'\u003eИтальянский ресторан Il Patio\u003c/h2\u003e\u003ca class='btn main-content__address-btn' href='#'\u003eПодробнее о месте\u003c/a\u003e\u003cdiv class='main-content__address-meta'\u003e\u003csvg class='main-content__address-meta-icon' width='14' height='14'\u003e\u003cuse xlink:href='img/sprite-svg.svg#coupon__address-clock-icon'\u003e\u003c/use\u003e\u003c/svg\u003e\u003cspan class='main-content__address-meta-desc'\u003eПн-Вс, 08:00-22:00\u003c/span\u003e\u003c/div\u003e\u003cdiv class='main-content__address-meta'\u003e\u003csvg class='main-content__address-meta-icon' width='14' height='14'\u003e\u003cuse xlink:href='img/sprite-svg.svg#coupon__address-phone-icon'\u003e\u003c/use\u003e\u003c/svg\u003e\u003ca class='main-content__address-meta-desc' href='tel:+78121234567'\u003e+7 (812) 123-45-67\u003c/a\u003e\u003c/div\u003e\u003cdiv class='main-content__address-meta'\u003e\u003csvg class='main-content__address-meta-icon' width='13' height='18'\u003e\u003cuse xlink:href='img/sprite-svg.svg#coupon__address-map-icon'\u003e\u003c/use\u003e\u003c/svg\u003e\u003cspan class='main-content__address-meta-desc'\u003eпр. Культуры, 1, Москва\u003c/span\u003e\u003c/div\u003e\u003c/div\u003e",
+                    "balloonContentFooter":"",
+                    "clusterCaption":"\u003cspan class='main-content__address-item'\u003eРесторан Патио\u003c/span\u003e"
+                }
+    }]
+}
