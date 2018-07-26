@@ -23,9 +23,30 @@ body {
   font-weight: normal;
   line-height: normal;
   font-size: 14px;
-
   display: flex;
   flex-direction: column;
+
+  &.bg-grey {
+    background-image: url(../img/back_grey.jpg);
+  }
+  &.bg-orange-1 {
+    background-image: url(../img/back_orange_1.jpg);
+  }
+  &.bg-orange-2 {
+    background-image: url(../img/back_orange_2.jpg);
+  }
+  &.bg-red-1 {
+    background-image: url(../img/back_red_1.jpg);
+  }
+  &.bg-red-2 {
+    background-image: url(../img/back_red_2.jpg);
+  }
+  &.bg-red-3 {
+    background-image: url(../img/back_red_3.jpg);
+  }
+  &.bg-yellow {
+    background-image: url(../img/back_yellow.jpg);
+  }
 }
 
 a {
