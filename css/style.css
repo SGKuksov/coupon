@@ -1618,6 +1618,34 @@ body {
           flex-direction: column;
 }
 
+body.bg-grey {
+  background-image: url(../img/back_grey.jpg);
+}
+
+body.bg-orange-1 {
+  background-image: url(../img/back_orange_1.jpg);
+}
+
+body.bg-orange-2 {
+  background-image: url(../img/back_orange_2.jpg);
+}
+
+body.bg-red-1 {
+  background-image: url(../img/back_red_1.jpg);
+}
+
+body.bg-red-2 {
+  background-image: url(../img/back_red_2.jpg);
+}
+
+body.bg-red-3 {
+  background-image: url(../img/back_red_3.jpg);
+}
+
+body.bg-yellow {
+  background-image: url(../img/back_yellow.jpg);
+}
+
 a {
   text-decoration: none;
   color: #969696;
@@ -2049,21 +2077,21 @@ button {
 }
 
 .rating__star-empty {
-  background-image: url(../img/sprite-0111491046047685.png);
+  background-image: url(../img/sprite-009074665591869957.png);
   background-position: 0px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-fill {
-  background-image: url(../img/sprite-0111491046047685.png);
+  background-image: url(../img/sprite-009074665591869957.png);
   background-position: -26px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-hover {
-  background-image: url(../img/sprite-0111491046047685.png);
+  background-image: url(../img/sprite-009074665591869957.png);
   background-position: 0px -26px;
   width: 22px;
   height: 22px;
