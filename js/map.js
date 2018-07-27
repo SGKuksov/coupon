@@ -59,14 +59,6 @@ $(document).ready(function() {
         '<span style="color: #ff1e1e; font-weight: bold;">{{ properties.geoObjects.length }}</span>'
       ),
 
-      // Создаем собственный макет с информацией о выбранном геообъекте.
-      // customItemContentLayout = ymaps.templateLayoutFactory.createClass(
-        //   // Флаг "raw" означает, что данные вставляют "как есть" без экранирования html.
-      //   '<h2 class=ballon_header>{{ properties.balloonContentHeader|raw }}</h2>' +
-      //   '<div class=ballon_body>{{ properties.balloonContentBody|raw }}</div>' +
-      //   '<div class=ballon_footer>{{ properties.balloonContentFooter|raw }}</div>'
-      // ),
-
       // Добавим кластеризацию и зададим опции
       myClusterer = new ymaps.Clusterer({
         clusterIcons: [{
