@@ -3,21 +3,21 @@
   &__link {
     display: flex;
     justify-content: flex-end;
+  }
 
-    span {
-      margin-right: 15px;
-      overflow: hidden;
-      width: 300px;
-      text-align: right;
-      white-space: nowrap;
-      text-overflow: ellipsis;
+  &__title {
+    margin-right: 15px;
+    overflow: hidden;
+    width: 300px;
+    text-align: right;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 
-      @media (min-width: $screen-sm) {
-        width: 150px;
-      }
-      @media (min-width: $screen-lg) {
-        width: 250px;
-      }
+    @media (min-width: $screen-sm) {
+      width: 150px;
+    }
+    @media (min-width: $screen-lg) {
+      width: 250px;
     }
   }
 

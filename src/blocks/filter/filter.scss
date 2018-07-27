@@ -84,7 +84,8 @@
     padding: 0 10px 0 18px;
     font-weight: normal;
     color: #787878;
-    opacity: 0.5;
+    background-color: rgba($color: #ffffff, $alpha: 0.5);
+    border: 1px solid rgba($color: #a3a3a3, $alpha: 0.5);
 
     &:hover {
       color: #787878;
@@ -99,11 +100,12 @@
     }
 
     &.active {
-      opacity: 1;
+      background-color: rgba($color: #ffffff, $alpha: 1);
+      border: 1px solid rgba($color: #a3a3a3, $alpha: 1);
     }
 
     &--left {
-    border-radius: 4px 0 0 4px;
+      border-radius: 4px 0 0 4px;
     }
 
     &--right {
@@ -118,6 +120,10 @@
         display: inline;
         margin-left: 10px;
       }
+    }
+
+    svg {
+      fill: #a3a3a3;
     }
   }
 
@@ -163,6 +169,10 @@
     @media (min-width: $screen-lg) {
       padding: 7px 98px 8px 14px;
     }
+
+    &:focus {
+      outline: none;
+    }
   }
 
   &__option {}
@@ -181,6 +191,7 @@
 
     svg {
       fill: #323232;
+      stroke: #323232;
     }
 
     &:hover {
