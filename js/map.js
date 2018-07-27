@@ -35,6 +35,7 @@ $(document).ready(function() {
       zoom: 10,
         controls: []
     });
+
     var couponMap = new ymaps.Map('couponMap', {
       center: [55.76, 37.64],
       zoom: 10,
@@ -129,27 +130,27 @@ $(document).ready(function() {
       });
 
     // Событие произошло на геообъекте
-    function onObjectEvent(e) {
-      var target = e.get('target'),
-      type = e.get('type');
+    // function onObjectEvent(e) {
+    //   var target = e.get('target'),
+    //   type = e.get('type');
 
-      if (e.get('type') == 'mouseenter') {
-        target.options.set(myPlacemarkHovered);
-      } else {
-        target.options.set(myPlacemark);
-      }
-    }
+    //   if (e.get('type') == 'mouseenter') {
+    //     target.options.set(myPlacemarkHovered);
+    //   } else {
+    //     target.options.set(myPlacemark);
+    //   }
+    // }
     // Событие произошло на кластере
-    function onClusterEvent(e) {
-      var target = e.get('target'),
-      type = e.get('type');
+    // function onClusterEvent(e) {
+    //   var target = e.get('target'),
+    //   type = e.get('type');
 
-      if (e.get('type') == 'mouseenter') {
-        target.options.set(myClusterHovered);
-      } else {
-        target.options.set(myCluster);
-      }
-    }
+    //   if (e.get('type') == 'mouseenter') {
+    //     target.options.set(myClusterHovered);
+    //   } else {
+    //     target.options.set(myCluster);
+    //   }
+    // }
 
     // Загружаем JSON файл с описанием объектов.
     // https://api.myjson.com/bins/1gggfi
@@ -161,51 +162,50 @@ $(document).ready(function() {
     }).done(function(data) {
       placeObjectManager.add(data)
 
-      place_groups = data.features;
+      // place_groups = data.features;
 
 
-      for (var i = 0, l = place_groups.length; i < l; i++) {
-        createMenu(place_groups[i]);
-      }
+      // for (var i = 0, l = place_groups.length; i < l; i++) {
+      //   createMenu(place_groups[i]);
+      // }
     });
 
     // создаем текстовое меню
-    var menu = $('<ul class="menu"></ul>');
+    // var menu = $('<ul class="menu"></ul>');
 
-    if ($(".main-content__address-menu .menu").length == 0) {
-      menu.appendTo($('.main-content__address-menu'));
-    }
-    if ($('.menu ul').length ==0 ) {
-      // $('.menu').hide();
-    }
+    // if ($(".main-content__address-menu .menu").length == 0) {
+    //   menu.appendTo($('.main-content__address-menu'));
+    // }
+    // if ($('.menu ul').length ==0 ) {
+    //   // $('.menu').hide();
+    // }
 
-    function createMenu (item) {
-      // Пункт меню.
-      var menuItem = $('<li><a href="#">' + item.properties.clusterCaption + '</a></li>');
+    // function createMenu (item) {
+    //   // Пункт меню.
+    //   var menuItem = $('<li><a href="#">' + item.properties.clusterCaption + '</a></li>');
 
-      // Добавляем подменю.
-      menuItem
-        // Добавляем пункт в меню.
-        .appendTo(menu)
-        // При клике по пункту подменю открываем/закрываем баллун у метки.
-        .find('a')
-        .bind('click', function () {
-          // if (!placemark.balloon.isOpen()) {
-          //   placemark.balloon.open();
-          // } else {
-          //   placemark.balloon.close();
-          // }
+    //   // Добавляем подменю.
+    //   menuItem
+    //     // Добавляем пункт в меню.
+    //     .appendTo(menu)
+    //     // При клике по пункту подменю открываем/закрываем баллун у метки.
+    //     .find('a')
+    //     .bind('click', function () {
+    //       // if (!placemark.balloon.isOpen()) {
+    //       //   placemark.balloon.open();
+    //       // } else {
+    //       //   placemark.balloon.close();
+    //       // }
 
-          placeMap.setCenter(
-            item.geometry.coordinates
-          );
-          return false;
-        });
-    }
+    //       placeMap.setCenter(
+    //         item.geometry.coordinates
+    //       );
+    //       return false;
+    //     });
+    // }
 
     // Добавляем контролы на карту
     placeMap.controls.add(zoomControl);
-    couponMap.controls.add(zoomControl);
 
     placeObjectManager.objects.options.set(myPlacemark);
     placeObjectManager.clusters.options.set('preset', 'islands#redClusterIcons');
@@ -220,48 +220,50 @@ $(document).ready(function() {
     $.ajax({
       url: "https://api.myjson.com/bins/ghvhq"
     }).done(function(data) {
-      // objectManager.add(data)
+      couponObjectManager.add(data)
 
-      groups1 = data.features;
+      coupon_groups = data.features;
 
-      for (var i = 0, l = groups1.length; i < l; i++) {
-        createMenu(groups1[i]);
-      }
+      // for (var i = 0, l = coupon_groups.length; i < l; i++) {
+      //   createMenu(coupon_groups[i]);
+      // }
     });
 
-    // создаем текстовое меню
-    var menu = $('<ul class="menu"></ul>');
+    // // создаем текстовое меню
+    // var menu = $('<ul class="menu"></ul>');
 
-    if ($(".main-content__address-menu .menu").length == 0) {
-      menu.appendTo($('.main-content__address-menu'));
-    }
-    if ($('.menu ul').length ==0 ) {
-      // $('.menu').hide();
-    }
+    // if ($(".main-content__address-menu .menu").length == 0) {
+    //   menu.appendTo($('.main-content__address-menu'));
+    // }
+    // if ($('.menu ul').length ==0 ) {
+    //   // $('.menu').hide();
+    // }
 
-    function createMenu (item) {
-      // Пункт меню.
-      var menuItem = $('<li><a href="#">' + item.properties.clusterCaption + '</a></li>');
+    // function createMenu (item) {
+    //   // Пункт меню.
+    //   var menuItem = $('<li><a href="#">' + item.properties.clusterCaption + '</a></li>');
 
-      // Добавляем подменю.
-      menuItem
-        // Добавляем пункт в меню.
-        .appendTo(menu)
-        // При клике по пункту подменю открываем/закрываем баллун у метки.
-        .find('a')
-        .bind('click', function () {
-          // if (!placemark.balloon.isOpen()) {
-          //   placemark.balloon.open();
-          // } else {
-          //   placemark.balloon.close();
-          // }
+    //   // Добавляем подменю.
+    //   menuItem
+    //     // Добавляем пункт в меню.
+    //     .appendTo(menu)
+    //     // При клике по пункту подменю открываем/закрываем баллун у метки.
+    //     .find('a')
+    //     .bind('click', function () {
+    //       // if (!placemark.balloon.isOpen()) {
+    //       //   placemark.balloon.open();
+    //       // } else {
+    //       //   placemark.balloon.close();
+    //       // }
 
-          couponMap.setCenter(
-            item.geometry.coordinates
-          );
-          return false;
-        });
-    }
+    //       couponMap.setCenter(
+    //         item.geometry.coordinates
+    //       );
+    //       return false;
+    //     });
+    // }
+
+    couponMap.controls.add(zoomControl);
 
     // Добавить события на карту
     // myGeoObjects.events.add(['mouseenter', 'mouseleave'], onObjectEvent);
