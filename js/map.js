@@ -1,31 +1,18 @@
 $(document).ready(function() {
 
-  // на разные типы страниц вызываем карты по их id
-
-  // типы карт
-  // 1тип
-  // index, category, Список мест, Категория мест
-  // много точек + кластеры.
-  // балун со скроллом
-  //
-
-  // 2тип страница купона, места,
-  // много точек + кластеры.
-  // нет скролла
-  //
   ymaps.ready(init);
 
   // #onMapTab
-  $('#onMapTab').on('shown.bs.tab', function() {
+  // $('#onMapTab').on('shown.bs.tab', function() {
     // Инициализация карты
     // ymaps.ready(init);
-  });
+  // });
 
   // #addressTab
-  $('#addressTab').on('shown.bs.tab', function() {
+  // $('#addressTab').on('shown.bs.tab', function() {
     // Инициальзация карты
     // ymaps.ready(init);
-  });
+  // });
 
   // карта init
   function init() {
@@ -59,7 +46,6 @@ $(document).ready(function() {
       MyIconContentLayoutHovered = ymaps.templateLayoutFactory.createClass(
         '<span style="color: #ff1e1e; font-weight: bold;">{{ properties.geoObjects.length }}</span>'
       ),
-
       // Добавим кластеризацию и зададим опции
       myClusterer = new ymaps.Clusterer({
         clusterIcons: [{
@@ -90,11 +76,6 @@ $(document).ready(function() {
         'iconImageHref': '../img/map__placemark.svg',
         'iconImageSize': [45, 45],
         'iconImageOffset': [-22, -22]
-
-        // Устаналиваем данные, которые будут отображаться в балуне.
-        // balloonContentHeader: 'Метка №',
-        // balloonContentBody: getContentBody(i),
-        // balloonContentFooter: 'Мацуо Басё'
       },
       myPlacemarkHovered = {
         'iconLayout': 'default#image',
@@ -130,27 +111,27 @@ $(document).ready(function() {
       });
 
     // Событие произошло на геообъекте
-    // function onObjectEvent(e) {
-    //   var target = e.get('target'),
-    //   type = e.get('type');
+    function onObjectEvent(e) {
+      var target = e.get('target'),
+      type = e.get('type');
 
-    //   if (e.get('type') == 'mouseenter') {
-    //     target.options.set(myPlacemarkHovered);
-    //   } else {
-    //     target.options.set(myPlacemark);
-    //   }
-    // }
+      if (e.get('type') == 'mouseenter') {
+        target.options.set(myPlacemarkHovered);
+      } else {
+        target.options.set(myPlacemark);
+      }
+    }
     // Событие произошло на кластере
-    // function onClusterEvent(e) {
-    //   var target = e.get('target'),
-    //   type = e.get('type');
+    function onClusterEvent(e) {
+      var target = e.get('target'),
+      type = e.get('type');
 
-    //   if (e.get('type') == 'mouseenter') {
-    //     target.options.set(myClusterHovered);
-    //   } else {
-    //     target.options.set(myCluster);
-    //   }
-    // }
+      if (e.get('type') == 'mouseenter') {
+        target.options.set(myClusterHovered);
+      } else {
+        target.options.set(myCluster);
+      }
+    }
 
     // Загружаем JSON файл с описанием объектов.
     // https://api.myjson.com/bins/1gggfi
