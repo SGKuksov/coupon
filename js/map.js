@@ -216,7 +216,7 @@ $(document).ready(function() {
 
     placeMap.geoObjects.add(placeObjectManager);
 
-    var groups1 =[];
+    var coupon_groups =[];
     $.ajax({
       url: "https://api.myjson.com/bins/ghvhq"
     }).done(function(data) {
@@ -273,9 +273,9 @@ $(document).ready(function() {
     couponObjectManager.clusters.options.set('preset', 'islands#redClusterIcons');
 
     // Добавить события на карту
-    // myGeoObjects.events.add(['mouseenter', 'mouseleave'], onObjectEvent);
-    // myClusterer.events.add(['mouseenter', 'mouseleave'], onClusterEvent);
-
+    couponObjectManager.objects.events.add(['mouseenter', 'mouseleave'], onObjectEvent);
+    couponObjectManager.clusters.events.add(['mouseenter', 'mouseleave'], onClusterEvent);
+    
     // выводим точки на карту
     couponMap.geoObjects.add(couponObjectManager);
   }
