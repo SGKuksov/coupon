@@ -248,7 +248,7 @@ $(document).ready(function() {
     // myGeoObjects.events.add(['mouseenter', 'mouseleave'], onObjectEvent);
     // myClusterer.events.add(['mouseenter', 'mouseleave'], onClusterEvent);
 
-    couponObjectManager.objects.options.set(myPlacemark);
+    // couponObjectManager.objects.options.set(myPlacemark);
     couponObjectManager.clusters.options.set('preset', 'islands#redClusterIcons');
 
     // Добавить события на карту
