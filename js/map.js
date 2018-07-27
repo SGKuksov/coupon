@@ -73,7 +73,7 @@ $(document).ready(function() {
       // Опции placemark
       myPlacemark = {
         'iconLayout': 'default#image',
-        'iconImageHref': '../img/map__placemark.svg',
+        'iconImageHref': '../img/map__placemark.png',
         'iconImageSize': [45, 45],
         'iconImageOffset': [-22, -22]
       },
@@ -105,7 +105,6 @@ $(document).ready(function() {
         clusterize: true,
         clusterDisableClickZoom: true
       }),
-
       couponObjectManager = new ymaps.ObjectManager({
         clusterize: true,
         clusterDisableClickZoom: true
@@ -249,11 +248,12 @@ $(document).ready(function() {
     // myGeoObjects.events.add(['mouseenter', 'mouseleave'], onObjectEvent);
     // myClusterer.events.add(['mouseenter', 'mouseleave'], onClusterEvent);
 
+    // couponObjectManager.objects.options.set(myPlacemark);
     couponObjectManager.objects.options.set(myPlacemark);
     couponObjectManager.clusters.options.set('preset', 'islands#redClusterIcons');
 
     // Добавить события на карту
-    // couponObjectManager.objects.events.add(['mouseenter', 'mouseleave'], onObjectEvent);
+    couponObjectManager.objects.events.add(['mouseenter', 'mouseleave'], onObjectEvent);
     // couponObjectManager.clusters.events.add(['mouseenter', 'mouseleave'], onClusterEvent);
     
     // выводим точки на карту
