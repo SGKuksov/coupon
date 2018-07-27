@@ -13,12 +13,12 @@
   position: fixed;
 
   @media (min-width: $screen-md) {
+    position: static;
     padding-left: 0;
     padding-right: 0;
   }
 
   @media (min-width: $screen-lg) {
-    position: static;
     min-height: 110px;
     padding-top: 19px;
     padding-bottom: 20px;

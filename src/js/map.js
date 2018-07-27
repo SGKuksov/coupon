@@ -1,31 +1,18 @@
 $(document).ready(function() {
 
-  // на разные типы страниц вызываем карты по их id
-
-  // типы карт
-  // 1тип
-  // index, category, Список мест, Категория мест
-  // много точек + кластеры.
-  // балун со скроллом
-  //
-
-  // 2тип страница купона, места,
-  // много точек + кластеры.
-  // нет скролла
-  //
   ymaps.ready(init);
 
   // #onMapTab
-  $('#onMapTab').on('shown.bs.tab', function() {
+  // $('#onMapTab').on('shown.bs.tab', function() {
     // Инициализация карты
     // ymaps.ready(init);
-  });
+  // });
 
   // #addressTab
-  $('#addressTab').on('shown.bs.tab', function() {
+  // $('#addressTab').on('shown.bs.tab', function() {
     // Инициальзация карты
     // ymaps.ready(init);
-  });
+  // });
 
   // карта init
   function init() {
@@ -35,6 +22,7 @@ $(document).ready(function() {
       zoom: 10,
         controls: []
     });
+
     var couponMap = new ymaps.Map('couponMap', {
       center: [55.76, 37.64],
       zoom: 10,
@@ -58,15 +46,6 @@ $(document).ready(function() {
       MyIconContentLayoutHovered = ymaps.templateLayoutFactory.createClass(
         '<span style="color: #ff1e1e; font-weight: bold;">{{ properties.geoObjects.length }}</span>'
       ),
-
-      // Создаем собственный макет с информацией о выбранном геообъекте.
-      // customItemContentLayout = ymaps.templateLayoutFactory.createClass(
-        //   // Флаг "raw" означает, что данные вставляют "как есть" без экранирования html.
-      //   '<h2 class=ballon_header>{{ properties.balloonContentHeader|raw }}</h2>' +
-      //   '<div class=ballon_body>{{ properties.balloonContentBody|raw }}</div>' +
-      //   '<div class=ballon_footer>{{ properties.balloonContentFooter|raw }}</div>'
-      // ),
-
       // Добавим кластеризацию и зададим опции
       myClusterer = new ymaps.Clusterer({
         clusterIcons: [{
@@ -94,14 +73,9 @@ $(document).ready(function() {
       // Опции placemark
       myPlacemark = {
         'iconLayout': 'default#image',
-        'iconImageHref': '../img/map__placemark.svg',
+        'iconImageHref': '../img/map__placemark.png',
         'iconImageSize': [45, 45],
         'iconImageOffset': [-22, -22]
-
-        // Устаналиваем данные, которые будут отображаться в балуне.
-        // balloonContentHeader: 'Метка №',
-        // balloonContentBody: getContentBody(i),
-        // balloonContentFooter: 'Мацуо Басё'
       },
       myPlacemarkHovered = {
         'iconLayout': 'default#image',
@@ -169,51 +143,50 @@ $(document).ready(function() {
     }).done(function(data) {
       placeObjectManager.add(data)
 
-      place_groups = data.features;
+      // place_groups = data.features;
 
 
-      for (var i = 0, l = place_groups.length; i < l; i++) {
-        createMenu(place_groups[i]);
-      }
+      // for (var i = 0, l = place_groups.length; i < l; i++) {
+      //   createMenu(place_groups[i]);
+      // }
     });
 
     // создаем текстовое меню
-    var menu = $('<ul class="menu"></ul>');
+    // var menu = $('<ul class="menu"></ul>');
 
-    if ($(".main-content__address-menu .menu").length == 0) {
-      menu.appendTo($('.main-content__address-menu'));
-    }
-    if ($('.menu ul').length ==0 ) {
-      // $('.menu').hide();
-    }
+    // if ($(".main-content__address-menu .menu").length == 0) {
+    //   menu.appendTo($('.main-content__address-menu'));
+    // }
+    // if ($('.menu ul').length ==0 ) {
+    //   // $('.menu').hide();
+    // }
 
-    function createMenu (item) {
-      // Пункт меню.
-      var menuItem = $('<li><a href="#">' + item.properties.clusterCaption + '</a></li>');
+    // function createMenu (item) {
+    //   // Пункт меню.
+    //   var menuItem = $('<li><a href="#">' + item.properties.clusterCaption + '</a></li>');
 
-      // Добавляем подменю.
-      menuItem
-        // Добавляем пункт в меню.
-        .appendTo(menu)
-        // При клике по пункту подменю открываем/закрываем баллун у метки.
-        .find('a')
-        .bind('click', function () {
-          // if (!placemark.balloon.isOpen()) {
-          //   placemark.balloon.open();
-          // } else {
-          //   placemark.balloon.close();
-          // }
+    //   // Добавляем подменю.
+    //   menuItem
+    //     // Добавляем пункт в меню.
+    //     .appendTo(menu)
+    //     // При клике по пункту подменю открываем/закрываем баллун у метки.
+    //     .find('a')
+    //     .bind('click', function () {
+    //       // if (!placemark.balloon.isOpen()) {
+    //       //   placemark.balloon.open();
+    //       // } else {
+    //       //   placemark.balloon.close();
+    //       // }
 
-          placeMap.setCenter(
-            item.geometry.coordinates
-          );
-          return false;
-        });
-    }
+    //       placeMap.setCenter(
+    //         item.geometry.coordinates
+    //       );
+    //       return false;
+    //     });
+    // }
 
     // Добавляем контролы на карту
     placeMap.controls.add(zoomControl);
-    couponMap.controls.add(zoomControl);
 
     placeObjectManager.objects.options.set(myPlacemark);
     placeObjectManager.clusters.options.set('preset', 'islands#redClusterIcons');
@@ -224,65 +197,67 @@ $(document).ready(function() {
 
     placeMap.geoObjects.add(placeObjectManager);
 
-    var groups1 =[];
+    var coupon_groups =[];
     $.ajax({
       url: "https://api.myjson.com/bins/ghvhq"
     }).done(function(data) {
-      // objectManager.add(data)
+      couponObjectManager.add(data)
 
-      groups1 = data.features;
+      coupon_groups = data.features;
 
-      for (var i = 0, l = groups1.length; i < l; i++) {
-        createMenu(groups1[i]);
-      }
+      // for (var i = 0, l = coupon_groups.length; i < l; i++) {
+      //   createMenu(coupon_groups[i]);
+      // }
     });
 
-    // создаем текстовое меню
-    var menu = $('<ul class="menu"></ul>');
+    // // создаем текстовое меню
+    // var menu = $('<ul class="menu"></ul>');
 
-    if ($(".main-content__address-menu .menu").length == 0) {
-      menu.appendTo($('.main-content__address-menu'));
-    }
-    if ($('.menu ul').length ==0 ) {
-      // $('.menu').hide();
-    }
+    // if ($(".main-content__address-menu .menu").length == 0) {
+    //   menu.appendTo($('.main-content__address-menu'));
+    // }
+    // if ($('.menu ul').length ==0 ) {
+    //   // $('.menu').hide();
+    // }
 
-    function createMenu (item) {
-      // Пункт меню.
-      var menuItem = $('<li><a href="#">' + item.properties.clusterCaption + '</a></li>');
+    // function createMenu (item) {
+    //   // Пункт меню.
+    //   var menuItem = $('<li><a href="#">' + item.properties.clusterCaption + '</a></li>');
 
-      // Добавляем подменю.
-      menuItem
-        // Добавляем пункт в меню.
-        .appendTo(menu)
-        // При клике по пункту подменю открываем/закрываем баллун у метки.
-        .find('a')
-        .bind('click', function () {
-          // if (!placemark.balloon.isOpen()) {
-          //   placemark.balloon.open();
-          // } else {
-          //   placemark.balloon.close();
-          // }
+    //   // Добавляем подменю.
+    //   menuItem
+    //     // Добавляем пункт в меню.
+    //     .appendTo(menu)
+    //     // При клике по пункту подменю открываем/закрываем баллун у метки.
+    //     .find('a')
+    //     .bind('click', function () {
+    //       // if (!placemark.balloon.isOpen()) {
+    //       //   placemark.balloon.open();
+    //       // } else {
+    //       //   placemark.balloon.close();
+    //       // }
 
-          couponMap.setCenter(
-            item.geometry.coordinates
-          );
-          return false;
-        });
-    }
+    //       couponMap.setCenter(
+    //         item.geometry.coordinates
+    //       );
+    //       return false;
+    //     });
+    // }
 
     // Добавить события на карту
     // myGeoObjects.events.add(['mouseenter', 'mouseleave'], onObjectEvent);
     // myClusterer.events.add(['mouseenter', 'mouseleave'], onClusterEvent);
 
+    // couponObjectManager.objects.options.set(myPlacemark);
     couponObjectManager.objects.options.set(myPlacemark);
     couponObjectManager.clusters.options.set('preset', 'islands#redClusterIcons');
 
     // Добавить события на карту
-    // myGeoObjects.events.add(['mouseenter', 'mouseleave'], onObjectEvent);
-    // myClusterer.events.add(['mouseenter', 'mouseleave'], onClusterEvent);
+    couponObjectManager.objects.events.add(['mouseenter', 'mouseleave'], onObjectEvent);
+    // couponObjectManager.clusters.events.add(['mouseenter', 'mouseleave'], onClusterEvent);
 
     // выводим точки на карту
     couponMap.geoObjects.add(couponObjectManager);
+    couponMap.controls.add(zoomControl);
   }
 });
