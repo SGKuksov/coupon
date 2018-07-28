@@ -197,9 +197,10 @@ $(document).ready(function() {
 
     placeMap.geoObjects.add(placeObjectManager);
 
+    // https://api.myjson.com/bins/13uqei
     var coupon_groups =[];
     $.ajax({
-      url: "https://api.myjson.com/bins/ghvhq"
+      url: "https://api.myjson.com/bins/13uqei"
     }).done(function(data) {
       couponObjectManager.add(data)
 

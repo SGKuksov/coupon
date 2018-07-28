@@ -145,6 +145,7 @@
     border-radius: 4px;
     margin-bottom: 14px;
     display: none;
+    position: relative;
 
     @media (min-width: $screen-md) {
       display: block;
@@ -161,6 +162,7 @@
     font-weight: bold;
     color: #323232;
     margin-bottom: 10px;
+    display: block;
 
     @media (min-width: $screen-md) {
       font-size: 12px;
@@ -171,7 +173,7 @@
     color: #fff;
     font-size: 14px;
     font-weight: bold;
-    margin-bottom: 17px;
+    margin-bottom: 14px;
     width: 100%;
     height: 32px;
     line-height: 18px;
@@ -253,9 +255,9 @@
     color: #fff;
     font-weight: normal;
     font-weight: 700;
-    padding: 5px 15px 10px;
-    left: 14px;
-    top: 0;
+    padding: 5px;
+    left: 24px;
+    top: 15px;
 
     span {
       font-weight: 700;
@@ -274,16 +276,8 @@
     color: #fff;
     font-weight: normal;
     padding: 5px 15px 8px;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-    right: 15px;
-    top: 184px;
-
-    @media (min-width: $screen-md) {
-      top: 128px;
-    }
-    @media (min-width: $screen-lg) {
-      top: 216px;
-    }
+    right: 23px;
+    top: 88px;
 
     span {
       font-weight: 700;
