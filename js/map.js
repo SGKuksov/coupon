@@ -73,7 +73,7 @@ $(document).ready(function() {
       // Опции placemark
       myPlacemark = {
         'iconLayout': 'default#image',
-        'iconImageHref': '../img/map__placemark.png',
+        'iconImageHref': '../img/map__placemark.svg',
         'iconImageSize': [45, 45],
         'iconImageOffset': [-22, -22]
       },
@@ -110,7 +110,7 @@ $(document).ready(function() {
         clusterDisableClickZoom: true
       });
 
-    // Событие произошло на геообъекте
+    // Событие произошло на точке
     function onObjectEvent(e) {
       var target = e.get('target'),
       type = e.get('type');
@@ -197,9 +197,10 @@ $(document).ready(function() {
 
     placeMap.geoObjects.add(placeObjectManager);
 
+    // https://api.myjson.com/bins/13uqei
     var coupon_groups =[];
     $.ajax({
-      url: "https://api.myjson.com/bins/ghvhq"
+      url: "https://api.myjson.com/bins/13uqei"
     }).done(function(data) {
       couponObjectManager.add(data)
 
