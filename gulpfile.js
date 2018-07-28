@@ -19,7 +19,7 @@ const objectFitImages = require('postcss-object-fit-images');
 const replace = require('gulp-replace');
 const del = require('del');
 const browserSync = require('browser-sync').create();
-const ghPages = require('gulp-gh-pages');
+// const ghPages = require('gulp-gh-pages');
 const imagemin = require('gulp-imagemin');
 const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
@@ -35,8 +35,8 @@ const buffer = require('vinyl-buffer');
 const merge = require('merge-stream');
 const wait = require('gulp-wait');
 const htmlbeautify = require('gulp-html-beautify');
-const newer = require('gulp-newer');
-const debug = require('gulp-debug');
+// const newer = require('gulp-newer');
+// const debug = require('gulp-debug');
 // var styleguide = require('sc5-styleguide');
 
 // Перечисление и настройки плагинов postCSS, которыми обрабатываются стилевые файлы
@@ -344,13 +344,13 @@ gulp.task('watch:sprite:png', ['sprite:png'], reload);
 gulp.task('watch:js', ['copy:js'], reload);
 
 // Отправка в GH pages (ветку gh-pages репозитория)
-gulp.task('deploy', function() {
-  return gulp.src(dirs.build + '/**/*')
-    .pipe(ghPages({
-      // origin: "upstream"
-      // remoteUrl:
-    }));
-});
+// gulp.task('deploy', function() {
+//   return gulp.src(dirs.build + '/**/*')
+//     .pipe(ghPages({
+//       // origin: "upstream"
+//       // remoteUrl:
+//     }));
+// });
 
 // Перезагрузка браузера
 function reload (done) {
