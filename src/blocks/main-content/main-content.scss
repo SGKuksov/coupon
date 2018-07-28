@@ -113,10 +113,7 @@
     padding-right: 13px;
 
     @media (min-width: $screen-md) {
-      // display: none;
-      // position: absolute;
-      left: 18px;
-      top: 18px;
+      position: relative;
       width: 242px;
       border-radius: 6px;
       box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
@@ -245,6 +242,51 @@
           padding-top: 0;
         }
       }
+    }
+  }
+
+  &__price {
+    position: absolute;
+    border-radius: 0 0 5px 5px;
+    background-color: #313131;
+    opacity: 0.8;
+    color: #fff;
+    font-weight: normal;
+    font-weight: 700;
+    padding: 5px 15px 10px;
+    left: 14px;
+    top: 0;
+
+    span {
+      font-weight: 700;
+    }
+
+    &--green {
+      background-color: #1a912b;
+      opacity: 0.8;
+    }
+  }
+
+  &__sale {
+    position: absolute;
+    border-radius: 20px;
+    background-color: #f00;
+    color: #fff;
+    font-weight: normal;
+    padding: 5px 15px 8px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    right: 15px;
+    top: 184px;
+
+    @media (min-width: $screen-md) {
+      top: 128px;
+    }
+    @media (min-width: $screen-lg) {
+      top: 216px;
+    }
+
+    span {
+      font-weight: 700;
     }
   }
 }

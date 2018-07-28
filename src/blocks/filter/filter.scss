@@ -153,6 +153,13 @@
     @media (min-width: $screen-sm) {
       order: 0;
     }
+    @media (min-width: $screen-md) {
+      display: none;
+    }
+    @media (min-width: $screen-lg) {
+      order: 0;
+      display: block;
+    }
   }
 
   &__select {
