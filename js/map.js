@@ -255,7 +255,7 @@ $(document).ready(function() {
     // Добавить события на карту
     couponObjectManager.objects.events.add(['mouseenter', 'mouseleave'], onObjectEvent);
     // couponObjectManager.clusters.events.add(['mouseenter', 'mouseleave'], onClusterEvent);
-    
+
     // выводим точки на карту
     couponMap.geoObjects.add(couponObjectManager);
     couponMap.controls.add(zoomControl);
