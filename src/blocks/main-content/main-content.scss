@@ -164,6 +164,12 @@
     margin-bottom: 10px;
     display: block;
 
+    &:hover {
+      font-size: 14px;
+      font-weight: bold;
+      color: #323232;
+    }
+
     @media (min-width: $screen-md) {
       font-size: 12px;
     }

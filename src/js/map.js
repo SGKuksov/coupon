@@ -1,16 +1,84 @@
 ymaps.ready(function () {
 
-  var myMap = new ymaps.Map("couponMap", {
-        center: [55.76, 37.64],
-        zoom: 10,
-        controls: []
-      }),
-      objectManager = new ymaps.ObjectManager({
-        clusterize: true,
-        gridSize: 32,
-        clusterDisableClickZoom: true,
-        clusterHideIconOnBalloonOpen: false,
-        geoObjectHideIconOnBalloonOpen: false,
+  // инициализируем экземпляры карт
+  var mapSetup = {
+    center: [55.76, 37.64],
+    zoom: 10,
+    controls: []
+  },
+  couponMap = new ymaps.Map('couponMap', mapSetup),
+  placeMap  = new ymaps.Map('placeMap', mapSetup);
+
+
+  // задаем параметры контролов карты
+  var zoomControl = new ymaps.control.ZoomControl({
+    options: {
+      position: {
+        bottom: 55,
+        left: 'auto',
+        right: 20,
+        top: 'auto'
+      }
+    }
+  });
+  couponMap.controls.add(zoomControl);
+  placeMap.controls.add(zoomControl);
+
+
+  // Задаем настройки менеджеров объектов
+  var objectManagerSetup = {
+    clusterize: true,
+    gridSize: 32,
+    clusterDisableClickZoom: true,
+    clusterHideIconOnBalloonOpen: false,
+    geoObjectHideIconOnBalloonOpen: false,
+    clusterIcons: [{
+      href: '../img/map__cluster.svg',
+      size: [44, 44],
+      offset: [-22, -22]
+    }],
+    clusterIconContentLayout: ymaps.templateLayoutFactory.createClass(
+      '<span style="color: #969696;">{{ properties.geoObjects.length }}</span>'
+    ),
+    balloonContentLayoutHeight: 400,
+    balloonContentLayoutWidth: 400
+  },
+  couponObjectManager = new ymaps.ObjectManager(objectManagerSetup);
+  placeObjectManager  = new ymaps.ObjectManager(objectManagerSetup);
+
+
+  // вывод точек для couponMap на карту из json
+  $.ajax({
+    url: "https://api.myjson.com/bins/13uqei"
+  }).done(function(data) {
+    couponObjectManager.add(data);
+  });
+  couponMap.geoObjects.add(couponObjectManager);
+
+
+  // вывод точек для placeMap на карту из json
+  $.ajax({
+    url: "https://api.myjson.com/bins/ghvhq"
+  }).done(function(data) {
+    placeObjectManager.add(data);
+  });
+  placeMap.geoObjects.add(placeObjectManager);
+
+
+  // задаем стили точкам и кластерам
+  var pointSetup = {
+        'iconLayout': 'default#image',
+        'iconImageHref': '../img/map__placemark.svg',
+        'iconImageSize': [44, 44],
+        'iconImageOffset': [-22, -22]
+      },
+      pointHoverSetup = {
+        'iconLayout': 'default#image',
+        'iconImageHref': '../img/map__placemark_hovered.svg',
+        'iconImageSize': [80, 80],
+        'iconImageOffset': [-40, -40]
+      },
+      clusterSetup = {
         clusterIcons: [{
           href: '../img/map__cluster.svg',
           size: [44, 44],
@@ -18,41 +86,20 @@ ymaps.ready(function () {
         }],
         clusterIconContentLayout: ymaps.templateLayoutFactory.createClass(
           '<span style="color: #969696;">{{ properties.geoObjects.length }}</span>'
-        ),
-        balloonContentLayoutHeight: 300,
-        balloonContentLayoutWidth: 500
-      }),
-      zoomControl = new ymaps.control.ZoomControl({
-        options: {
-          position: {
-            bottom: 55,
-            left: 'auto',
-            right: 20,
-            top: 'auto'
-          }
-        }
-      });
-
-  myMap.controls.add(zoomControl);
-
-
-  // вывод точек на карту из json
-  $.ajax({
-    url: "https://api.myjson.com/bins/13uqei"
-  }).done(function(data) {
-    objectManager.add(data);
-  });
-  myMap.geoObjects.add(objectManager);
-
-
-  // задаем стили точкам и кластерам
-  objectManager.objects.options.set({
-    'iconLayout': 'default#image',
-    'iconImageHref': '../img/map__placemark.svg',
-    'iconImageSize': [44, 44],
-    'iconImageOffset': [-22, -22],
-    balloonContentLayoutWidth: 300
-  });
+        )
+      },
+      clusterHoverSetup = {
+        clusterIcons: [{
+          href: '../img/map__cluster_hovered.svg',
+          size: [80, 80],
+          offset: [-40, -40]
+        }],
+        clusterIconContentLayout: ymaps.templateLayoutFactory.createClass(
+          '<span style="color: #ff1e1e; font-weight: bold;">{{ properties.geoObjects.length }}</span>'
+        )
+      };
+  couponObjectManager.objects.options.set(pointSetup);
+  placeObjectManager.objects.options.set(pointSetup);
 
 
   // навешиваем события на точки и кластеры
@@ -60,50 +107,42 @@ ymaps.ready(function () {
     var objectId = e.get('objectId');
 
     if (e.get('type') == 'mouseenter') {
-      objectManager.objects.setObjectOptions(objectId, {
+      couponObjectManager.objects.setObjectOptions(objectId, {
         'iconLayout': 'default#image',
         'iconImageHref': '../img/map__placemark_hovered.svg',
         'iconImageSize': [80, 80],
         'iconImageOffset': [-40, -40]
       });
+      console.log(objectId);
     } else {
-      objectManager.objects.setObjectOptions(objectId, {
+      couponObjectManager.objects.setObjectOptions(objectId, {
         'iconLayout': 'default#image',
         'iconImageHref': '../img/map__placemark.svg',
         'iconImageSize': [44, 44],
         'iconImageOffset': [-22, -22]
       });
     }
+
+    if (e.get('type') == 'click') {
+      console.log('click');
+    }
   }
   function onClusterEvent (e) {
     var objectId = e.get('objectId');
 
     if (e.get('type') == 'mouseenter') {
-      objectManager.clusters.setClusterOptions(objectId, {
-        'clusterIcons': [{
-          href: '../img/map__cluster_hovered.svg',
-          size: [80, 80],
-          offset: [-40, -40]
-        }],
-        'clusterIconContentLayout': ymaps.templateLayoutFactory.createClass(
-          '<span style="color: #ff1e1e; font-weight: bold;">{{ properties.geoObjects.length }}</span>'
-        )
-      });
+      couponObjectManager.clusters.setClusterOptions(objectId, clusterHoverSetup);
+      console.log(objectId);
     } else {
-      objectManager.clusters.setClusterOptions(objectId, {
-        'clusterIcons': [{
-          href: '../img/map__cluster.svg',
-          size: [44, 44],
-          offset: [-22, -22]
-        }],
-        'clusterIconContentLayout': ymaps.templateLayoutFactory.createClass(
-          '<span style="color: #969696;">{{ properties.geoObjects.length }}</span>'
-        )
-      });
+      couponObjectManager.clusters.setClusterOptions(objectId, clusterSetup);
+    }
+
+    if (e.get('type') == 'click') {
+      console.log('click');
     }
   }
-  objectManager.objects.events.add(['mouseenter', 'mouseleave'], onObjectEvent);
-  objectManager.clusters.events.add(['mouseenter', 'mouseleave'], onClusterEvent);
+  couponObjectManager.objects.events.add(['mouseenter', 'mouseleave', 'click'], onObjectEvent);
+  couponObjectManager.clusters.events.add(['mouseenter', 'mouseleave', 'click'], onClusterEvent);
 
 
 
