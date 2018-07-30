@@ -1,3 +1,15 @@
+// #onMapTab
+// $('#onMapTab').on('shown.bs.tab', function() {
+  // Инициализация карты
+  // ymaps.ready(init);
+// });
+// #addressTab
+// $('#addressTab').on('shown.bs.tab', function() {
+  // Инициальзация карты
+  // ymaps.ready(init);
+// });
+
+
 ymaps.ready(function () {
 
   // инициализируем экземпляры карт
@@ -29,7 +41,6 @@ ymaps.ready(function () {
   var objectManagerSetup = {
     clusterize: true,
     gridSize: 32,
-    clusterDisableClickZoom: true,
     clusterHideIconOnBalloonOpen: false,
     geoObjectHideIconOnBalloonOpen: false,
     clusterIcons: [{
@@ -48,18 +59,28 @@ ymaps.ready(function () {
 
 
   // создаем текстовое меню
-  var menu = $('<ul class="menu"></ul>');
+  var menuCoupon = $('#couponMenu');
 
-  if ($(".main-content__address-menu .menu").length == 0) {
-    menu.appendTo($('.main-content__address-menu'));
-  }
-  function createMenu(item) {
+  function createMenuCoupon(item) {
     var menuItem = $('<li><a class="menu__item" href="#" data-id="' + item.id + '">' + item.properties.clusterCaption + '</a></li>');
-    menuItem.appendTo(menu);
+    menuItem.appendTo(menuCoupon);
 
     menuItem.click(function(e) {
       var objectId = e.target.parentNode.dataset.id;
       couponObjectManager.objects.balloon.open(objectId);
+    });
+  }
+
+
+  var menuPlace = $('#placeMenu');
+
+  function createMenuPlace(item) {
+    var menuItem = $('<li><a class="menu__item" href="#" data-id="' + item.id + '">' + item.properties.clusterCaption + '</a></li>');
+    menuItem.appendTo(menuPlace);
+
+    menuItem.click(function(e) {
+      var objectId = e.target.parentNode.dataset.id;
+      placeObjectManager.objects.balloon.open(objectId);
     });
   }
 
@@ -74,7 +95,7 @@ ymaps.ready(function () {
     coupon_groups = data.features;
 
     for (var i = 0, l = coupon_groups.length; i < l; i++) {
-      createMenu(coupon_groups[i]);
+      createMenuCoupon(coupon_groups[i]);
     }
   });
   couponMap.geoObjects.add(couponObjectManager);
@@ -86,11 +107,11 @@ ymaps.ready(function () {
   }).done(function(data) {
     placeObjectManager.add(data);
 
-    // place_groups = data.features;
+    place_groups = data.features;
 
-    // for (var i = 0, l = place_groups.length; i < l; i++) {
-    //   createMenu(place_groups[i]);
-    // }
+    for (var i = 0, l = place_groups.length; i < l; i++) {
+      createMenuPlace(place_groups[i]);
+    }
   });
   placeMap.geoObjects.add(placeObjectManager);
 
@@ -175,38 +196,45 @@ ymaps.ready(function () {
   couponObjectManager.clusters.events.add(['mouseenter', 'mouseleave', 'click'], onClusterEvent);
 
 
+  // навешиваем события на точки и кластеры
+  function onObjectEvent (e) {
+    var objectId = e.get('objectId');
 
+    if (e.get('type') == 'mouseenter') {
+      placeObjectManager.objects.setObjectOptions(objectId, {
+        'iconLayout': 'default#image',
+        'iconImageHref': '../img/map__placemark_hovered.svg',
+        'iconImageSize': [80, 80],
+        'iconImageOffset': [-40, -40]
+      });
+      console.log(objectId);
+    } else {
+      placeObjectManager.objects.setObjectOptions(objectId, {
+        'iconLayout': 'default#image',
+        'iconImageHref': '../img/map__placemark.svg',
+        'iconImageSize': [44, 44],
+        'iconImageOffset': [-22, -22]
+      });
+    }
 
+    if (e.get('type') == 'click') {
+      console.log('click');
+    }
+  }
+  function onClusterEvent (e) {
+    var objectId = e.get('objectId');
 
+    if (e.get('type') == 'mouseenter') {
+      placeObjectManager.clusters.setClusterOptions(objectId, clusterHoverSetup);
+      console.log(objectId);
+    } else {
+      placeObjectManager.clusters.setClusterOptions(objectId, clusterSetup);
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    if (e.get('type') == 'click') {
+      console.log('click');
+    }
+  }
+  placeObjectManager.objects.events.add(['mouseenter', 'mouseleave', 'click'], onObjectEvent);
+  placeObjectManager.clusters.events.add(['mouseenter', 'mouseleave', 'click'], onClusterEvent);
 });
