@@ -47,20 +47,50 @@ ymaps.ready(function () {
   placeObjectManager  = new ymaps.ObjectManager(objectManagerSetup);
 
 
+  // создаем текстовое меню
+  var menu = $('<ul class="menu"></ul>');
+
+  if ($(".main-content__address-menu .menu").length == 0) {
+    menu.appendTo($('.main-content__address-menu'));
+  }
+  function createMenu(item) {
+    var menuItem = $('<li><a class="menu__item" href="#" data-id="' + item.id + '">' + item.properties.clusterCaption + '</a></li>');
+    menuItem.appendTo(menu);
+
+    menuItem.click(function(e) {
+      var objectId = e.target.parentNode.dataset.id;
+      couponObjectManager.objects.balloon.open(objectId);
+    });
+  }
+
+
   // вывод точек для couponMap на карту из json
+  var coupon_groups = [];
   $.ajax({
     url: "https://api.myjson.com/bins/13uqei"
   }).done(function(data) {
     couponObjectManager.add(data);
+
+    coupon_groups = data.features;
+
+    for (var i = 0, l = coupon_groups.length; i < l; i++) {
+      createMenu(coupon_groups[i]);
+    }
   });
   couponMap.geoObjects.add(couponObjectManager);
 
-
   // вывод точек для placeMap на карту из json
+  var place_groups = [];
   $.ajax({
     url: "https://api.myjson.com/bins/ghvhq"
   }).done(function(data) {
     placeObjectManager.add(data);
+
+    // place_groups = data.features;
+
+    // for (var i = 0, l = place_groups.length; i < l; i++) {
+    //   createMenu(place_groups[i]);
+    // }
   });
   placeMap.geoObjects.add(placeObjectManager);
 
