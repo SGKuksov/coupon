@@ -270,7 +270,14 @@ $(document).ready(function() {
 
     if ($(document).width() >= 480) {
       $('.list-of-places__header').show();
-      $('.filter__sort').toggle();
+      $('.filter__sort').hide();
+    }
+  });
+  // #byPlitkaTab
+  $('#byPlitkaTab').on('shown.bs.tab', function() {
+
+    if ($(document).width() >= 480) {
+      $('.filter__sort').show();
     }
   });
   // #byListTab
@@ -278,7 +285,7 @@ $(document).ready(function() {
 
     if ($(document).width() >= 480) {
       $('.list-of-places__header').hide();
-      $('.filter__sort').toggle();
+      $('.filter__sort').show();
     }
   });
 
