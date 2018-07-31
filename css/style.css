@@ -2398,21 +2398,21 @@ button {
 }
 
 .rating__star-empty {
-  background-image: url(../img/sprite-07645643436958387.png);
+  background-image: url(../img/sprite-02689896194564736.png);
   background-position: 0px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-fill {
-  background-image: url(../img/sprite-07645643436958387.png);
+  background-image: url(../img/sprite-02689896194564736.png);
   background-position: -26px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-hover {
-  background-image: url(../img/sprite-07645643436958387.png);
+  background-image: url(../img/sprite-02689896194564736.png);
   background-position: 0px -26px;
   width: 22px;
   height: 22px;
@@ -4208,6 +4208,7 @@ button {
   padding-bottom: 15px;
   padding-left: 13px;
   padding-right: 13px;
+  border-top: 1px solid #979797;
 }
 
 .main-content__address-item {
@@ -4316,16 +4317,10 @@ button {
 }
 
 .main-content__price {
-  position: absolute;
-  border-radius: 0 0 5px 5px;
-  background-color: #313131;
-  opacity: 0.8;
-  color: #fff;
+  color: #323232;
   font-weight: normal;
   font-weight: 700;
   padding: 5px;
-  left: 24px;
-  top: 15px;
 }
 
 .main-content__price span {
@@ -4338,18 +4333,46 @@ button {
 }
 
 .main-content__sale {
-  position: absolute;
   border-radius: 20px;
   background-color: #f00;
   color: #fff;
   font-weight: normal;
   padding: 5px 15px 8px;
-  right: 23px;
-  top: 88px;
+  display: inline-block;
 }
 
 .main-content__sale span {
   font-weight: 700;
+}
+
+.main-content__address-info {
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main-content__label {
+  width: 150px;
+  color: #323232;
+  font-size: 14px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.main-content__select {
+  border: 1px solid #dedede;
+  padding: 6px 10px 8px;
+  border-radius: 4px;
+  line-height: 18px;
+  height: 32px;
+  font-size: 14px;
+  margin-bottom: 32px;
+  margin-right: 8px;
+  width: auto !important;
 }
 
 .wrap {
@@ -5959,6 +5982,8 @@ button {
 }
 
 .coupon__text--hide {
+  padding-left: 0;
+  padding-right: 0;
   display: none;
 }
 
@@ -6043,6 +6068,7 @@ button {
 
 .coupon__aside {
   position: relative;
+  padding-top: 10px;
 }
 
 .coupon__take-block {
@@ -6267,6 +6293,7 @@ button {
   padding-right: 17px;
   border: 1px solid #dedede;
   display: inline-block;
+  margin-right: 50px;
 }
 
 .coupon__sharing {
@@ -7605,6 +7632,9 @@ label.el-checkbox {
 .coupon-modal__info {
   height: 230px;
   max-width: 625px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .coupon-modal__info:after {
@@ -7654,12 +7684,30 @@ label.el-checkbox {
 .coupon-modal__text {
   color: #323232;
   font-size: 14px;
-  padding-left: 30px;
-  padding-right: 25px;
   margin: 0;
   overflow: hidden;
   height: 240px;
   width: auto;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding-left: 0;
+  padding-right: 0;
+  position: relative;
+}
+
+.coupon-modal__text:after {
+  content: "...";
+  bottom: 0;
+  right: 0;
+  display: inline-block;
+  background-color: #fff;
+  position: absolute;
+  width: 50px;
+  line-height: 1;
+  height: 15px;
+  color: #323232;
+  font-size: 14px;
 }
 
 .coupon-modal__aside {
@@ -9174,9 +9222,7 @@ label.el-checkbox {
 
 @media (min-width: 380px) {
   .top-panel {
-    width: 100%;
-    margin-left: 30px;
-    margin-right: 20px;
+    width: 90%;
   }
   .tag-panel {
     width: auto;
@@ -9207,6 +9253,9 @@ label.el-checkbox {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+  .main-content__label {
+    display: inline-block;
   }
   .profile-main {
     border-radius: 10px;
@@ -9374,6 +9423,7 @@ label.el-checkbox {
     padding: 0px 67px;
   }
   .top-panel {
+    width: 100%;
     margin-left: 0;
     margin-right: 0;
   }
@@ -9458,9 +9508,18 @@ label.el-checkbox {
     width: 242px;
     position: relative;
     border-radius: 6px;
+    border-top: 0;
   }
   .main-content__address-img-wrap {
     display: block;
+  }
+  .main-content__label {
+    margin: 0;
+    margin-left: 32px;
+  }
+  .main-content__select {
+    margin-bottom: 13px;
+    width: 210px;
   }
   .filter-near__title {
     width: 150px;
@@ -10099,6 +10158,28 @@ label.el-checkbox {
     font-size: 14px;
     padding-top: 0;
   }
+  .main-content__price {
+    position: absolute;
+    border-radius: 0 0 5px 5px;
+    background-color: #313131;
+    opacity: 0.8;
+    color: #fff;
+    left: 24px;
+    top: 15px;
+  }
+  .main-content__sale {
+    display: inline;
+    position: absolute;
+    right: 23px;
+    top: 88px;
+  }
+  .main-content__address-info {
+    display: block;
+    margin-bottom: 0;
+  }
+  .main-content__select {
+    width: 250px;
+  }
   .card {
     width: 245px !important;
     height: 246px;
@@ -10361,6 +10442,7 @@ label.el-checkbox {
   }
   .coupon__aside {
     width: 330px;
+    padding-top: 0;
     padding-left: 30px;
   }
   .coupon__aside:before {
@@ -10557,10 +10639,6 @@ label.el-checkbox {
     margin-right: 22px;
     margin-left: 0;
     width: 336px;
-  }
-  .coupon-modal__text {
-    padding-left: 0;
-    padding-right: 0;
   }
   .coupon-modal__take-block {
     border-radius: 6px;
