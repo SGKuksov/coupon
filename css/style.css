@@ -2398,21 +2398,21 @@ button {
 }
 
 .rating__star-empty {
-  background-image: url(../img/sprite-03858711151055685.png);
+  background-image: url(../img/sprite-07645643436958387.png);
   background-position: 0px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-fill {
-  background-image: url(../img/sprite-03858711151055685.png);
+  background-image: url(../img/sprite-07645643436958387.png);
   background-position: -26px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-hover {
-  background-image: url(../img/sprite-03858711151055685.png);
+  background-image: url(../img/sprite-07645643436958387.png);
   background-position: 0px -26px;
   width: 22px;
   height: 22px;
@@ -8417,7 +8417,7 @@ label.el-checkbox {
 }
 
 .profile-favorite__title {
-  margin-left: 30px;
+  padding-left: 30px;
   display: block;
   font-size: 20px;
   font-weight: bold;
@@ -8968,10 +8968,8 @@ label.el-checkbox {
   border-radius: 6px;
   padding: 13px 20px;
   margin-bottom: 20px;
-}
-
-.coupon-item:nth-child(2n) {
-  margin-right: 34px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .coupon-item.disabled {
@@ -9445,6 +9443,11 @@ label.el-checkbox {
         -ms-flex-order: 0;
             order: 0;
   }
+  .main-content__inner {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
   .main-content__header {
     border-radius: 10px 10px 0 0;
   }
@@ -9641,6 +9644,9 @@ label.el-checkbox {
     height: 140px;
     margin-right: 30px;
     margin-left: -10px;
+  }
+  .coupon-item:nth-child(2n) {
+    margin-right: 34px;
   }
   .coupon-item:after {
     display: inline-block;
@@ -10634,6 +10640,9 @@ label.el-checkbox {
   .profile-favorite__title {
     margin-left: 26px;
   }
+  .profile-favorite__more-btn {
+    margin-left: 10px;
+  }
   .profile-favorite__address-map {
     height: 560px;
   }
@@ -10667,7 +10676,7 @@ label.el-checkbox {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1300px) {
   .page-container {
     width: 1260px;
     padding-top: 17px;
@@ -10903,11 +10912,6 @@ label.el-checkbox {
     padding-top: 20px;
     padding-bottom: 40px;
   }
-  .main-content__inner {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-  }
   .main-content__btn {
     margin-top: 17px;
   }
@@ -11062,6 +11066,9 @@ label.el-checkbox {
     padding-right: 50px;
     padding-bottom: 22px;
     padding-top: 22px;
+  }
+  .profile-favorite__more-btn {
+    margin-left: 0;
   }
   .place-item {
     margin-bottom: 22px;
