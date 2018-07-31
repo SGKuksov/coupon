@@ -188,6 +188,7 @@
   &__info {
     height: 230px;
     max-width: 625px;
+    display: flex;
   }
 
   &__info:after {
@@ -248,16 +249,27 @@
   &__text {
     color: #323232;
     font-size: 14px;
-    padding-left: 30px;
-    padding-right: 25px;
     margin: 0;
     overflow: hidden;
     height: 240px;
     width: auto;
+    flex: 1;
+    padding-left: 0;
+    padding-right: 0;
+    position: relative;
 
-    @media (min-width: $screen-md) {
-      padding-left: 0;
-      padding-right: 0;
+    &:after {
+      content: "...";
+      bottom: 0;
+      right: 0;
+      display: inline-block;
+      background-color: #fff;
+      position: absolute;
+      width: 50px;
+      line-height: 1;
+      height: 15px;
+      color: #323232;
+      font-size: 14px;
     }
   }
 

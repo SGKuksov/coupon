@@ -111,11 +111,13 @@
     padding-bottom: 15px;
     padding-left: 13px;
     padding-right: 13px;
+    border-top: 1px solid #979797;
 
     @media (min-width: $screen-sm) {
       width: 242px;
       position: relative;
       border-radius: 6px;
+      border-top: 0;
       // box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
     }
   }
@@ -258,16 +260,21 @@
   }
 
   &__price {
-    position: absolute;
-    border-radius: 0 0 5px 5px;
-    background-color: #313131;
-    opacity: 0.8;
-    color: #fff;
+    color: #323232;
     font-weight: normal;
     font-weight: 700;
     padding: 5px;
-    left: 24px;
-    top: 15px;
+
+
+    @media (min-width: $screen-md) {
+      position: absolute;
+      border-radius: 0 0 5px 5px;
+      background-color: #313131;
+      opacity: 0.8;
+      color: #fff;
+      left: 24px;
+      top: 15px;
+    }
 
     span {
       font-weight: 700;
@@ -280,17 +287,71 @@
   }
 
   &__sale {
-    position: absolute;
     border-radius: 20px;
     background-color: #f00;
     color: #fff;
     font-weight: normal;
     padding: 5px 15px 8px;
-    right: 23px;
-    top: 88px;
+    display: inline-block;
+
+    @media (min-width: $screen-md) {
+      display: inline;
+      position: absolute;
+      right: 23px;
+      top: 88px;
+    }
 
     span {
       font-weight: 700;
+    }
+  }
+
+  &__address-info {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+
+    @media (min-width: $screen-md) {
+      display: block;
+      margin-bottom: 0;
+    }
+  }
+
+  &__label {
+    width: 150px;
+    color: #323232;
+    font-size: 14px;
+    margin-bottom: 8px;
+    display: block;
+
+    @media (min-width: $screen-xs) {
+      display: inline-block;
+    }
+
+    @media (min-width: $screen-sm) {
+      margin: 0;
+      margin-left: 32px;
+    }
+  }
+
+  &__select {
+    border: 1px solid #dedede;
+    padding: 6px 10px 8px;
+    border-radius: 4px;
+    line-height: 18px;
+    height: 32px;
+    font-size: 14px;
+    margin-bottom: 32px;
+    margin-right: 8px;
+    width: auto !important;
+
+    @media (min-width: $screen-sm) {
+      margin-bottom: 13px;
+      width: 210px;
+    }
+
+    @media (min-width: $screen-md) {
+      width: 250px;
     }
   }
 }

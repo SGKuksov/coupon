@@ -200,6 +200,8 @@
     margin-bottom: 40px;
 
     &--hide {
+      padding-left: 0;
+      padding-right: 0;
       display: none;
     }
 
@@ -293,9 +295,11 @@
 
   &__aside {
     position: relative;
+    padding-top: 10px;
 
     @media (min-width: $screen-md) {
       width: 330px;
+      padding-top: 0;
       padding-left: 30px;
     }
 
@@ -568,6 +572,7 @@
     padding-right: 17px;
     border: 1px solid #dedede;
     display: inline-block;
+    margin-right: 50px;
   }
 
   &__sharing {
