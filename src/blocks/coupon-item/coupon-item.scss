@@ -6,6 +6,8 @@
   border-radius: 6px;
   padding: 13px 20px;
   margin-bottom: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
 
   @media (min-width: $screen-sm) {
     width: 336px;
@@ -26,7 +28,10 @@
   }
 
   &:nth-child(2n) {
-    margin-right: 34px;
+
+    @media (min-width: $screen-sm) {
+      margin-right: 34px;
+    }
 
     @media (min-width: $screen-md) {
       margin-right: 0;

@@ -48,10 +48,6 @@ $(document).ready(function() {
   // вызов обрезания текста
   $('.coupon-item__title').truncateText();
 
-  $(".main-content__btn, .profile-favorite__more-btn").click(function() {
-    $('.card__link, .card__place, .coupon-item__title, .coupon-item__place').truncateText();
-  });
-
   // Подстановка разметки в номера телефонов
   $(".coupon__contacts-phone").splitText();
   $(".coupon__address-meta-phone").splitText();
@@ -549,6 +545,37 @@ $(document).ready(function() {
     return false;
   });
 
-  // скрытие бокового меню на 404
-  $("#hideAside").hide();
+  // обрезание заголовков при ресайзе страницы
+  $(window).bind('resize', function() {
+    $('.card__link, .card__place, .coupon-item__title, .coupon-item__place').truncateText();
+    console.log("resize");
+  });
+
+  // бесконечный скролл
+  var ias = jQuery.ias({
+    container:  '.main-content__inner',
+    item:       '.js-card',
+    pagination: '.pagination',
+    next:       '.pagination a.next',
+    delay:      600,
+    negativeMargin: 200
+  });
+
+  ias.extension(new IASSpinnerExtension());
+  ias.extension(new IASTriggerExtension({offset: 2}));
+  ias.extension(new IASNoneLeftExtension({text: "You reached the end"}));
+  ias.extension(new IASPagingExtension());
+  ias.extension(new IASHistoryExtension({prev: '#pagination a.prev'}));
+
+  $(".main-content__btn").click(function() {
+    jQuery.ias().next();
+  });
+  $(".profile-favorite__more-btn").click(function() {
+    jQuery.ias().next();
+  });
+  ias.on('rendered', function() {
+    $('.card__link, .card__place, .coupon-item__title, .coupon-item__place').truncateText();
+  });
+
+
 });

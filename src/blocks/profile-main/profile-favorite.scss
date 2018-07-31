@@ -14,7 +14,7 @@
   }
 
   &__title {
-    margin-left: 30px;
+    padding-left: 30px;
     display: block;
     font-size: 20px;
     font-weight: bold;
@@ -151,6 +151,14 @@
     margin-bottom: 23px;
     color: #9b9b9b;
     position: relative;
+
+    @media (min-width: $screen-md) {
+      margin-left: 10px;
+    }
+
+    @media (min-width: $screen-lg) {
+      margin-left: 0;
+    }
 
     &:hover {
       background-color: #f3f1f1;

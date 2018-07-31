@@ -1,14 +1,28 @@
 (function($) {
   var truncate = function(el) {
-      var text = el.text(),
+    var text = el.text(),
           height = el.height(),
           clone = el.clone();
+          // original = el.clone();
+          // originalClass = original.className;
 
-  clone.css({
+          // if ( el.nextAll().hasClass(originalClass) !=  clone.className ) {
+          //   original.css ({
+          //     position: 'absolute',
+          //     visibility: 'hidden',
+          //     display: 'none',
+          //     height: 'auto'
+          //   });
+          //   el.after(original);
+          // }
+
+    clone.css({
           position: 'absolute',
           visibility: 'hidden',
           height: 'auto'
-      });
+        });
+
+
       el.after(clone);
 
       var l = text.length - 1;

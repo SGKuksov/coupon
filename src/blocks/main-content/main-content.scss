@@ -17,7 +17,7 @@
     flex-wrap: wrap;
     justify-content: center;
 
-    @media (min-width: $screen-lg) {
+    @media (min-width: $screen-sm) {
       justify-content: flex-start;
     }
   }
@@ -252,7 +252,7 @@
       }
 
       .main-content__address-item {
-        
+
       }
     }
   }
