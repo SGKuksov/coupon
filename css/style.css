@@ -2398,21 +2398,21 @@ button {
 }
 
 .rating__star-empty {
-  background-image: url(../img/sprite-044650903350939086.png);
+  background-image: url(../img/sprite-022789106532950476.png);
   background-position: 0px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-fill {
-  background-image: url(../img/sprite-044650903350939086.png);
+  background-image: url(../img/sprite-022789106532950476.png);
   background-position: -26px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-hover {
-  background-image: url(../img/sprite-044650903350939086.png);
+  background-image: url(../img/sprite-022789106532950476.png);
   background-position: 0px -26px;
   width: 22px;
   height: 22px;

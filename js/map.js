@@ -74,76 +74,130 @@ ymaps.ready(function () {
   }
 
 
-  // Селект в мобильном представлении
-  function createSelectMenuCoupon(items) {
-    var select = []
-    for (i=0; i<items.length; i++) {
+  // Подготовка данных для передачу в карту
+  function coverCouponData(data) {
 
+    var cloneData =  JSON.stringify(data);
+    cloneData =  JSON.parse(cloneData);
+
+    var select = '';
+    var options = '';
+
+    for (var i=0; i < cloneData.features.length; i++) {
+
+      cloneData.features[i].properties.balloonContentBody = `
+        <div class='main-content__address-block'>
+          <div class='main-content__address-img-wrap'>
+            <img class='main-content__address-img' src='`+ cloneData.features[i].properties.data.imgUrl + `' alt='img' width='212' height='88' />
+          </div>
+          <span class='main-content__sale'>до <span>`+ cloneData.features[i].properties.data.sale + ` %</span></span>
+          <span class='main-content__price'>от <span>` + cloneData.features[i].properties.data.price + ` руб.</span></span>
+          <h2 class='main-content__address-title'>` + cloneData.features[i].properties.data.title + `</h2>
+          <a class='btn main-content__address-btn' href='#'>Подробнее о купоне</a>
+          <a href='#' class='main-content__address-title'>` + cloneData.features[i].properties.data.category + `</a>
+          <div class='main-content__address-meta'>
+            <svg class='main-content__address-meta-icon' width='14' height='14'><use xlink:href='img/sprite-svg.svg#coupon__address-clock-icon'></use></svg>
+            <span class='main-content__address-meta-desc'>` + cloneData.features[i].properties.data.time + `</span>
+          </div>
+          <div class='main-content__address-meta'>
+            <svg class='main-content__address-meta-icon' width='14' height='14'><use xlink:href='img/sprite-svg.svg#coupon__address-phone-icon'></use></svg>
+            <span class='main-content__address-meta-desc'>` + cloneData.features[i].properties.data.phone + `</span>
+          </div>
+          <div class='main-content__address-meta'>
+            <svg class='main-content__address-meta-icon' width='13' height='18'><use xlink:href='img/sprite-svg.svg#coupon__address-map-icon'></use></svg>
+            <span class='main-content__address-meta-desc'>` + cloneData.features[i].properties.data.address + `
+          </div>
+        </div>`;
+
+      options += '<option value="' + '">' + cloneData.features[i].properties.clusterCaption + '</option>'
+
+      cloneData.features[i].properties.clusterCaption = "<span class='main-content__address-item'>" + cloneData.features[i].properties.clusterCaption + "</span>";
     }
 
-    var select = $(`
-    <div class='main-content__address-block'>
+    select = `
       <div class="main-content__input-group">
-        <label class="main-content__label" for="point"></label>
-        <select class="main-content__select custom-select" id="point" name="point">
-          <option value="муж">Муж.</option>
-          <option value="жен">Жен.</option>
-        </select>
-      </div>
-      <div class='main-content__address-img-wrap'>
-        <img class='main-content__address-img' src='http://via.placeholder.com/212x88' alt='img' width='212' height='88' />
-      </div>
-      <h2 class='main-content__address-title'>Купон на бесплатное посещение бассейна</h2>
-      <div class="main-content__address-info">
-        <span class='main-content__price'>от <span>400 руб.</span></span>
-        <span class='main-content__sale'>до <span>50%</span></span>
-      </div>
-      <a class='btn main-content__address-btn' href='#'>Подробнее о месте</a>
-      <a href='#' class='main-content__address-title'>Все акции, купоны и скидки сети итальянских ресторанов Il Patio</a>
-      <div class='main-content__address-meta'>
-        <svg class='main-content__address-meta-icon' width='14' height='14'><use xlink:href='img/sprite-svg.svg#coupon__address-clock-icon'></use></svg>
-        <span class='main-content__address-meta-desc'>Пн-Вс, 08:00-22:00</span>
-      </div>
-      <div class='main-content__address-meta'>
-        <svg class='main-content__address-meta-icon' width='14' height='14'><use xlink:href='img/sprite-svg.svg#coupon__address-phone-icon'></use></svg>
-        <a class='main-content__address-meta-desc' href='tel:+78121234567'>+7 (812) 123-45-67</a>
-      </div>
-      <div class='main-content__address-meta'>
-        <svg class='main-content__address-meta-icon' width='13' height='18'><use xlink:href='img/sprite-svg.svg#coupon__address-map-icon'></use></svg>
-        <span class='main-content__address-meta-desc'>пр. Культуры, 1, Москва</span>
-      </div>
-    </div>`);
+      <label class="main-content__label" for="point">` + `</label>
+      <select class="main-content__select custom-select" id="point" name="point">` + options + `</select>
+      </div>`;
+
+    return cloneData;
+  }
+
+
+  function coverPlaceData(data) {
+
+    var cloneData =  JSON.stringify(data);
+    cloneData =  JSON.parse(cloneData);
+
+    var select = '';
+    var options = '';
+
+    for (var i=0; i < cloneData.features.length; i++) {
+
+      cloneData.features[i].properties.balloonContentBody = `
+        <div class='main-content__address-block'>
+          <div class='main-content__address-img-wrap'>
+            <img class='main-content__address-img' src='`+ cloneData.features[i].properties.data.imgUrl + `' alt='img' width='212' height='88' />
+          </div>
+          <h2 class='main-content__address-title'>` + cloneData.features[i].properties.data.title + `</h2>
+          <a class='btn main-content__address-btn' href='#'>Подробнее о месте</a>
+          <div class='main-content__address-meta'>
+            <svg class='main-content__address-meta-icon' width='14' height='14'><use xlink:href='img/sprite-svg.svg#coupon__address-clock-icon'></use></svg>
+            <span class='main-content__address-meta-desc'>` + cloneData.features[i].properties.data.time + `</span>
+          </div>
+          <div class='main-content__address-meta'>
+            <svg class='main-content__address-meta-icon' width='14' height='14'><use xlink:href='img/sprite-svg.svg#coupon__address-phone-icon'></use></svg>
+            <span class='main-content__address-meta-desc'>` + cloneData.features[i].properties.data.phone + `</span>
+          </div>
+          <div class='main-content__address-meta'>
+            <svg class='main-content__address-meta-icon' width='13' height='18'><use xlink:href='img/sprite-svg.svg#coupon__address-map-icon'></use></svg>
+            <span class='main-content__address-meta-desc'>` + cloneData.features[i].properties.data.address + `
+          </div>
+        </div>`;
+
+      options += '<option value="' + '">' + cloneData.features[i].properties.clusterCaption + '</option>'
+
+      cloneData.features[i].properties.clusterCaption = "<span class='main-content__address-item'>" + cloneData.features[i].properties.clusterCaption + "</span>";
+    }
+
+    select = `
+      <div class="main-content__input-group">
+      <label class="main-content__label" for="point">` + `</label>
+      <select class="main-content__select custom-select" id="point" name="point">` + options + `</select>
+      </div>`;
+
+    return cloneData;
   }
 
 
   // вывод точек для couponMap на карту из json
   var coupon_groups = [];
   $.ajax({
-    url: "https://api.myjson.com/bins/13uqei"
+    url: "https://api.myjson.com/bins/vvfw8"
+    // url: "js/coupon.json"
   }).done(function(data) {
-    couponObjectManager.add(data);
 
-    coupon_groups = data.features;
+    couponObjectManager.add(coverCouponData(data));
+    coupon_groups = coverCouponData(data);
 
-    for (var i = 0, l = coupon_groups.length; i < l; i++) {
-      createMenuCoupon(coupon_groups[i]);
+    for (var i = 0, l = coupon_groups.features.length; i < l; i++) {
+      createMenuCoupon(coupon_groups.features[i]);
     }
-    createSelectMenuCoupon(coupon_groups);
-
   });
   couponMap.geoObjects.add(couponObjectManager);
 
   // вывод точек для placeMap на карту из json
   var place_groups = [];
   $.ajax({
-    url: "https://api.myjson.com/bins/ghvhq"
+    url: "https://api.myjson.com/bins/bkk60"
+    // url: "js/place.json"
   }).done(function(data) {
-    placeObjectManager.add(data);
 
-    place_groups = data.features;
+    placeObjectManager.add(coverPlaceData(data));
+    place_groups = coverPlaceData(data);
 
-    for (var i = 0, l = place_groups.length; i < l; i++) {
-      createMenuPlace(place_groups[i]);
+    for (var i = 0, l = place_groups.features.length; i < l; i++) {
+      createMenuPlace(place_groups.features[i]);
     }
   });
   placeMap.geoObjects.add(placeObjectManager);
