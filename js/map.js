@@ -1,15 +1,3 @@
-// #onMapTab
-// $('#onMapTab').on('shown.bs.tab', function() {
-  // Инициализация карты
-  // ymaps.ready(init);
-// });
-// #addressTab
-// $('#addressTab').on('shown.bs.tab', function() {
-  // Инициальзация карты
-  // ymaps.ready(init);
-// });
-
-
 ymaps.ready(function () {
 
   // инициализируем экземпляры карт
@@ -40,7 +28,7 @@ ymaps.ready(function () {
   // Задаем настройки менеджеров объектов
   var objectManagerSetup = {
     clusterize: true,
-    gridSize: 32,
+    gridSize: 50,
     clusterHideIconOnBalloonOpen: false,
     geoObjectHideIconOnBalloonOpen: false,
     clusterDisableClickZoom: false,
@@ -86,6 +74,48 @@ ymaps.ready(function () {
   }
 
 
+  // Селект в мобильном представлении
+  function createSelectMenuCoupon(items) {
+    var select = []
+    for (i=0; i<items.length; i++) {
+
+    }
+
+    var select = $(`
+    <div class='main-content__address-block'>
+      <div class="main-content__input-group">
+        <label class="main-content__label" for="point"></label>
+        <select class="main-content__select custom-select" id="point" name="point">
+          <option value="муж">Муж.</option>
+          <option value="жен">Жен.</option>
+        </select>
+      </div>
+      <div class='main-content__address-img-wrap'>
+        <img class='main-content__address-img' src='http://via.placeholder.com/212x88' alt='img' width='212' height='88' />
+      </div>
+      <h2 class='main-content__address-title'>Купон на бесплатное посещение бассейна</h2>
+      <div class="main-content__address-info">
+        <span class='main-content__price'>от <span>400 руб.</span></span>
+        <span class='main-content__sale'>до <span>50%</span></span>
+      </div>
+      <a class='btn main-content__address-btn' href='#'>Подробнее о месте</a>
+      <a href='#' class='main-content__address-title'>Все акции, купоны и скидки сети итальянских ресторанов Il Patio</a>
+      <div class='main-content__address-meta'>
+        <svg class='main-content__address-meta-icon' width='14' height='14'><use xlink:href='img/sprite-svg.svg#coupon__address-clock-icon'></use></svg>
+        <span class='main-content__address-meta-desc'>Пн-Вс, 08:00-22:00</span>
+      </div>
+      <div class='main-content__address-meta'>
+        <svg class='main-content__address-meta-icon' width='14' height='14'><use xlink:href='img/sprite-svg.svg#coupon__address-phone-icon'></use></svg>
+        <a class='main-content__address-meta-desc' href='tel:+78121234567'>+7 (812) 123-45-67</a>
+      </div>
+      <div class='main-content__address-meta'>
+        <svg class='main-content__address-meta-icon' width='13' height='18'><use xlink:href='img/sprite-svg.svg#coupon__address-map-icon'></use></svg>
+        <span class='main-content__address-meta-desc'>пр. Культуры, 1, Москва</span>
+      </div>
+    </div>`);
+  }
+
+
   // вывод точек для couponMap на карту из json
   var coupon_groups = [];
   $.ajax({
@@ -98,6 +128,8 @@ ymaps.ready(function () {
     for (var i = 0, l = coupon_groups.length; i < l; i++) {
       createMenuCoupon(coupon_groups[i]);
     }
+    createSelectMenuCoupon(coupon_groups);
+
   });
   couponMap.geoObjects.add(couponObjectManager);
 
@@ -238,35 +270,15 @@ ymaps.ready(function () {
   }
   placeObjectManager.objects.events.add(['mouseenter', 'mouseleave', 'click'], onObjectEvent);
   placeObjectManager.clusters.events.add(['mouseenter', 'mouseleave', 'click'], onClusterEvent);
-});
 
-/* <div class='main-content__address-block'>
-  <div class="main-content__input-group">
-    <label class="main-content__label" for="point">Пол</label>
-    <select class="main-content__select custom-select" id="point" name="point">
-      <option value="муж">Муж.</option>
-      <option value="жен">Жен.</option>
-    </select>
-  </div>
-  <div class='main-content__address-img-wrap'>
-    <img class='main-content__address-img' src='http://via.placeholder.com/212x88' alt='img' width='212' height='88' />
-  </div>
-  <h2 class='main-content__address-title'>Купон на бесплатное посещение бассейна</h2>
-  <div class="main-content__address-info">
-    <span class='main-content__price'>от <span>400 руб.</span></span>
-    <span class='main-content__sale'>до <span>50%</span></span>
-  </div>
-  <a class='btn main-content__address-btn' href='#'>Подробнее о месте</a>
-  <a href='#' class='main-content__address-title'>Все акции, купоны и скидки сети итальянских ресторанов Il Patio</a>
-  <div class='main-content__address-meta'>
-    <svg class='main-content__address-meta-icon' width='14' height='14'><use xlink:href='img/sprite-svg.svg#coupon__address-clock-icon'></use></svg>
-    <span class='main-content__address-meta-desc'>Пн-Вс, 08:00-22:00</span>
-  </div>
-  <div class='main-content__address-meta'>
-    <svg class='main-content__address-meta-icon' width='14' height='14'><use xlink:href='img/sprite-svg.svg#coupon__address-phone-icon'></use></svg>
-    <a class='main-content__address-meta-desc' href='tel:+78121234567'>+7 (812) 123-45-67</a>
-  </div>
-  <div class='main-content__address-meta'><svg class='main-content__address-meta-icon' width='13' height='18'><use xlink:href='img/sprite-svg.svg#coupon__address-map-icon'></use></svg>
-    <span class='main-content__address-meta-desc'>пр. Культуры, 1, Москва</span>
-  </div>
-</div> */
+  var doc_w = $(window).width();
+  $(window).bind('resize', function() {
+    if (doc_w <= 576) {
+      placeObjectManager.options.set('geoObjectOpenBalloonOnClick', false);
+      couponObjectManager.options.set('geoObjectOpenBalloonOnClick', false);
+    } else {
+      placeObjectManager.options.set('geoObjectOpenBalloonOnClick', true);
+      couponObjectManager.options.set('geoObjectOpenBalloonOnClick', true);
+    }
+  });
+});
