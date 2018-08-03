@@ -1958,7 +1958,7 @@ body.bg-yellow .filter__select {
   min-height: 45px;
   width: 100%;
   text-align: center;
-  display: block;
+  display: none;
 }
 
 .banner__title {
@@ -2398,21 +2398,21 @@ button {
 }
 
 .rating__star-empty {
-  background-image: url(../img/sprite-022789106532950476.png);
+  background-image: url(../img/sprite-022320795734344534.png);
   background-position: 0px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-fill {
-  background-image: url(../img/sprite-022789106532950476.png);
+  background-image: url(../img/sprite-022320795734344534.png);
   background-position: -26px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-hover {
-  background-image: url(../img/sprite-022789106532950476.png);
+  background-image: url(../img/sprite-022320795734344534.png);
   background-position: 0px -26px;
   width: 22px;
   height: 22px;
@@ -3968,9 +3968,9 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
@@ -3981,10 +3981,11 @@ button {
       -ms-flex-order: 0;
           order: 0;
   font-size: 0;
+  margin-left: 34px;
 }
 
 .filter__view span {
-  display: none;
+  display: block;
 }
 
 .filter__desc {
@@ -9476,10 +9477,8 @@ label.el-checkbox {
             justify-content: flex-start;
   }
   .filter__view {
-    margin-right: 34px;
-  }
-  .filter__view span {
-    display: block;
+    margin-left: 0;
+    margin-right: 25px;
   }
   .filter__desc {
     margin-right: 10px;
@@ -9492,11 +9491,6 @@ label.el-checkbox {
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
             order: 0;
-  }
-  .main-content__inner {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
   }
   .main-content__header {
     border-radius: 10px 10px 0 0;
@@ -9731,6 +9725,9 @@ label.el-checkbox {
 @media (min-width: 992px) {
   .modal-lg {
     max-width: 800px;
+  }
+  .banner {
+    display: block;
   }
   .pushy {
     position: static;
@@ -10119,9 +10116,6 @@ label.el-checkbox {
   .filter__desc {
     display: inline;
   }
-  .filter__sort {
-    display: none;
-  }
   .filter__near {
     margin-top: 0;
   }
@@ -10129,6 +10123,11 @@ label.el-checkbox {
     padding-bottom: 16px;
     margin-left: -4px;
     margin-right: -4px;
+  }
+  .main-content__inner {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
   .main-content__btn {
     margin-top: 8px;
@@ -10977,11 +10976,13 @@ label.el-checkbox {
   .bread--is-place {
     display: block;
   }
+  .filter__view {
+    margin-right: 34px;
+  }
   .filter__sort {
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
             order: 0;
-    display: block;
   }
   .filter__select {
     padding: 7px 98px 8px 14px;
