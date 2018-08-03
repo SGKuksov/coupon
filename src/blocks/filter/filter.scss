@@ -21,7 +21,7 @@
   &__settings {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: flex-end;
 
     @media (min-width: $screen-sm) {
@@ -34,22 +34,27 @@
   &__view {
     order: 0;
     font-size: 0;
+    margin-left: 34px;
 
     @media (min-width: $screen-sm) {
-      margin-right: 34px;
+      margin-left: 0;
+      margin-right: 25px;
     }
 
     @media (min-width: $screen-md) {
       display: flex;
       align-items: baseline;
     }
+    @media (min-width: $screen-lg) {
+      margin-right: 34px;
+    }
 
     span {
-      display: none;
+      // display: none;
 
-      @media (min-width: $screen-sm) {
+      // @media (min-width: $screen-sm) {
         display: block;
-      }
+      // }
     }
   }
 
@@ -154,11 +159,11 @@
       order: 0;
     }
     @media (min-width: $screen-md) {
-      display: none;
+      // display: none;
     }
     @media (min-width: $screen-lg) {
       order: 0;
-      display: block;
+      // display: block;
     }
   }
 

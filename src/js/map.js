@@ -47,6 +47,129 @@ ymaps.ready(function () {
   placeObjectManager  = new ymaps.ObjectManager(objectManagerSetup);
 
 
+  // задаем стили точкам и кластерам
+  var pointSetup = {
+        'iconLayout': 'default#image',
+        'iconImageHref': '../img/map__placemark.svg',
+        'iconImageSize': [44, 44],
+        'iconImageOffset': [-22, -22]
+      },
+      pointHoverSetup = {
+        'iconLayout': 'default#image',
+        'iconImageHref': '../img/map__placemark_hovered.svg',
+        'iconImageSize': [80, 80],
+        'iconImageOffset': [-40, -40]
+      },
+      clusterSetup = {
+        clusterIcons: [{
+          href: '../img/map__cluster.svg',
+          size: [44, 44],
+          offset: [-22, -22]
+        }],
+        clusterIconContentLayout: ymaps.templateLayoutFactory.createClass(
+          '<span style="color: #969696;">{{ properties.geoObjects.length }}</span>'
+        )
+      },
+      clusterHoverSetup = {
+        clusterIcons: [{
+          href: '../img/map__cluster_hovered.svg',
+          size: [80, 80],
+          offset: [-40, -40]
+        }],
+        clusterIconContentLayout: ymaps.templateLayoutFactory.createClass(
+          '<span style="color: #ff1e1e; font-weight: bold;">{{ properties.geoObjects.length }}</span>'
+        )
+      };
+  couponObjectManager.objects.options.set(pointSetup);
+  placeObjectManager.objects.options.set(pointSetup);
+
+
+  // навешиваем события на точки и кластеры
+  function onObjectEvent (e) {
+    var objectId = e.get('objectId');
+
+    if (e.get('type') == 'mouseenter') {
+      couponObjectManager.objects.setObjectOptions(objectId, {
+        'iconLayout': 'default#image',
+        'iconImageHref': '../img/map__placemark_hovered.svg',
+        'iconImageSize': [80, 80],
+        'iconImageOffset': [-40, -40]
+      });
+      console.log(objectId);
+    } else {
+      couponObjectManager.objects.setObjectOptions(objectId, {
+        'iconLayout': 'default#image',
+        'iconImageHref': '../img/map__placemark.svg',
+        'iconImageSize': [44, 44],
+        'iconImageOffset': [-22, -22]
+      });
+    }
+
+    if (e.get('type') == 'click') {
+      console.log('click');
+    }
+  }
+  function onClusterEvent (e) {
+    var objectId = e.get('objectId');
+
+    if (e.get('type') == 'mouseenter') {
+      couponObjectManager.clusters.setClusterOptions(objectId, clusterHoverSetup);
+      console.log(objectId);
+    } else {
+      couponObjectManager.clusters.setClusterOptions(objectId, clusterSetup);
+    }
+
+    if (e.get('type') == 'click') {
+      console.log('click');
+    }
+  }
+  couponObjectManager.objects.events.add(['mouseenter', 'mouseleave', 'click'], onObjectEvent);
+  couponObjectManager.clusters.events.add(['mouseenter', 'mouseleave', 'click'], onClusterEvent);
+
+
+  // навешиваем события на точки и кластеры
+  function onObjectEvent (e) {
+    var objectId = e.get('objectId');
+
+    if (e.get('type') == 'mouseenter') {
+      placeObjectManager.objects.setObjectOptions(objectId, {
+        'iconLayout': 'default#image',
+        'iconImageHref': '../img/map__placemark_hovered.svg',
+        'iconImageSize': [80, 80],
+        'iconImageOffset': [-40, -40]
+      });
+      console.log(objectId);
+    } else {
+      placeObjectManager.objects.setObjectOptions(objectId, {
+        'iconLayout': 'default#image',
+        'iconImageHref': '../img/map__placemark.svg',
+        'iconImageSize': [44, 44],
+        'iconImageOffset': [-22, -22]
+      });
+    }
+
+    if (e.get('type') == 'click') {
+      console.log('click');
+    }
+  }
+  function onClusterEvent (e) {
+    var objectId = e.get('objectId');
+
+    if (e.get('type') == 'mouseenter') {
+      placeObjectManager.clusters.setClusterOptions(objectId, clusterHoverSetup);
+      console.log(objectId);
+    } else {
+      placeObjectManager.clusters.setClusterOptions(objectId, clusterSetup);
+    }
+
+    if (e.get('type') == 'click') {
+      console.log('click');
+    }
+  }
+  placeObjectManager.objects.events.add(['mouseenter', 'mouseleave', 'click'], onObjectEvent);
+  placeObjectManager.clusters.events.add(['mouseenter', 'mouseleave', 'click'], onClusterEvent);
+
+
   // создаем текстовое меню
   var menuCoupon = $('#couponMenu');
 
@@ -203,128 +326,7 @@ ymaps.ready(function () {
   placeMap.geoObjects.add(placeObjectManager);
 
 
-  // задаем стили точкам и кластерам
-  var pointSetup = {
-        'iconLayout': 'default#image',
-        'iconImageHref': '../img/map__placemark.svg',
-        'iconImageSize': [44, 44],
-        'iconImageOffset': [-22, -22]
-      },
-      pointHoverSetup = {
-        'iconLayout': 'default#image',
-        'iconImageHref': '../img/map__placemark_hovered.svg',
-        'iconImageSize': [80, 80],
-        'iconImageOffset': [-40, -40]
-      },
-      clusterSetup = {
-        clusterIcons: [{
-          href: '../img/map__cluster.svg',
-          size: [44, 44],
-          offset: [-22, -22]
-        }],
-        clusterIconContentLayout: ymaps.templateLayoutFactory.createClass(
-          '<span style="color: #969696;">{{ properties.geoObjects.length }}</span>'
-        )
-      },
-      clusterHoverSetup = {
-        clusterIcons: [{
-          href: '../img/map__cluster_hovered.svg',
-          size: [80, 80],
-          offset: [-40, -40]
-        }],
-        clusterIconContentLayout: ymaps.templateLayoutFactory.createClass(
-          '<span style="color: #ff1e1e; font-weight: bold;">{{ properties.geoObjects.length }}</span>'
-        )
-      };
-  couponObjectManager.objects.options.set(pointSetup);
-  placeObjectManager.objects.options.set(pointSetup);
-
-
-  // навешиваем события на точки и кластеры
-  function onObjectEvent (e) {
-    var objectId = e.get('objectId');
-
-    if (e.get('type') == 'mouseenter') {
-      couponObjectManager.objects.setObjectOptions(objectId, {
-        'iconLayout': 'default#image',
-        'iconImageHref': '../img/map__placemark_hovered.svg',
-        'iconImageSize': [80, 80],
-        'iconImageOffset': [-40, -40]
-      });
-      console.log(objectId);
-    } else {
-      couponObjectManager.objects.setObjectOptions(objectId, {
-        'iconLayout': 'default#image',
-        'iconImageHref': '../img/map__placemark.svg',
-        'iconImageSize': [44, 44],
-        'iconImageOffset': [-22, -22]
-      });
-    }
-
-    if (e.get('type') == 'click') {
-      console.log('click');
-    }
-  }
-  function onClusterEvent (e) {
-    var objectId = e.get('objectId');
-
-    if (e.get('type') == 'mouseenter') {
-      couponObjectManager.clusters.setClusterOptions(objectId, clusterHoverSetup);
-      console.log(objectId);
-    } else {
-      couponObjectManager.clusters.setClusterOptions(objectId, clusterSetup);
-    }
-
-    if (e.get('type') == 'click') {
-      console.log('click');
-    }
-  }
-  couponObjectManager.objects.events.add(['mouseenter', 'mouseleave', 'click'], onObjectEvent);
-  couponObjectManager.clusters.events.add(['mouseenter', 'mouseleave', 'click'], onClusterEvent);
-
-
-  // навешиваем события на точки и кластеры
-  function onObjectEvent (e) {
-    var objectId = e.get('objectId');
-
-    if (e.get('type') == 'mouseenter') {
-      placeObjectManager.objects.setObjectOptions(objectId, {
-        'iconLayout': 'default#image',
-        'iconImageHref': '../img/map__placemark_hovered.svg',
-        'iconImageSize': [80, 80],
-        'iconImageOffset': [-40, -40]
-      });
-      console.log(objectId);
-    } else {
-      placeObjectManager.objects.setObjectOptions(objectId, {
-        'iconLayout': 'default#image',
-        'iconImageHref': '../img/map__placemark.svg',
-        'iconImageSize': [44, 44],
-        'iconImageOffset': [-22, -22]
-      });
-    }
-
-    if (e.get('type') == 'click') {
-      console.log('click');
-    }
-  }
-  function onClusterEvent (e) {
-    var objectId = e.get('objectId');
-
-    if (e.get('type') == 'mouseenter') {
-      placeObjectManager.clusters.setClusterOptions(objectId, clusterHoverSetup);
-      console.log(objectId);
-    } else {
-      placeObjectManager.clusters.setClusterOptions(objectId, clusterSetup);
-    }
-
-    if (e.get('type') == 'click') {
-      console.log('click');
-    }
-  }
-  placeObjectManager.objects.events.add(['mouseenter', 'mouseleave', 'click'], onObjectEvent);
-  placeObjectManager.clusters.events.add(['mouseenter', 'mouseleave', 'click'], onClusterEvent);
-
+  // запрет на открытие балунов
   var doc_w = $(window).width();
   $(window).bind('resize', function() {
     if (doc_w <= 576) {

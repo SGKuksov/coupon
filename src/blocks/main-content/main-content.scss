@@ -17,7 +17,7 @@
     flex-wrap: wrap;
     justify-content: center;
 
-    @media (min-width: $screen-sm) {
+    @media (min-width: $screen-md) {
       justify-content: flex-start;
     }
   }
