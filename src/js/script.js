@@ -553,24 +553,24 @@ $(document).ready(function() {
 
   // бесконечный скролл
   var ias = jQuery.ias({
-    container:  '.main-content__inner',
+    container:  '.js-scroll',
     item:       '.js-card',
     pagination: '.pagination',
     next:       '.pagination a.next',
-    delay:      600,
-    negativeMargin: 200
+    delay:      300,
+    negativeMargin: 300
   });
 
   ias.extension(new IASSpinnerExtension());
-  ias.extension(new IASTriggerExtension({offset: 2}));
+  ias.extension(new IASTriggerExtension({
+    offset: 0,
+    text: "<a class='main-content__btn btn' href='#'>Показать еще...</a>"
+  }));
   ias.extension(new IASNoneLeftExtension({text: "You reached the end"}));
   ias.extension(new IASPagingExtension());
   ias.extension(new IASHistoryExtension({prev: '#pagination a.prev'}));
 
   $(".main-content__btn").click(function() {
-    jQuery.ias().next();
-  });
-  $(".profile-favorite__more-btn").click(function() {
     jQuery.ias().next();
   });
   ias.on('rendered', function() {

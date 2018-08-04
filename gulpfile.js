@@ -76,7 +76,6 @@ let jsList = [
   dirs.source + '/js/coupon.json',
   dirs.source + '/js/place.json',
   dirs.source + '/js/jquery-ias.min.js',
-  dirs.source + '/js/modals.js',
   dirs.source + '/js/script.js'
 ];
 
