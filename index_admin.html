@@ -384,7 +384,7 @@
         </div>
         <div class="tab-content">
           <div class="main-content tab-pane fade active" id="byPlitka" role="tabpanel" aria-labelledby="byPlitkaTab">
-            <div class="main-content__inner">
+            <div class="main-content__inner js-scroll">
               <div class="card js-card"><a class="card__img-wrap" href="#"><img class="card__img" width="336" height="231" src="img/card__photo.jpg" alt="Скидка до 50% на первое посещение бассейна Скидка до 50% на первое посещение бассейна"/></a><span class="card__sale">до <span>50%</span></span><span class="card__price">от <span>400 руб.</span></span><a class="card__link" href="coupon_admin.html" title="Скидка до 50% на первое посещение бассейна Скидка до 50% на первое посещение бассейна">Скидка до 50% на первое посещение бассейна Скидка до 50% на первое посещение бассейна</a>
                 <div class="card__meta"><a class="card__category" href="category_admin.html" title="Фитнес-центры">Фитнес-центры</a>
                   <a class="card__dealer" href="site_admin.html" title="Frendi">
@@ -432,7 +432,10 @@
                   <a class="card__dealer" href="site_admin.html" title="Frendi">
                     <svg class="card__dealer-link" width="14" height="14">
                       <use xlink:href="img/sprite-svg.svg#card__dealer-link"></use>
-                    </svg><span>Frendi</span></a><a class="card__place" href="place_admin.html" title="Аквапарк «Родео Драйв»">Аквапарк «Родео Драйв»</a></div>
+                    </svg>
+                    <span>Frendi</span>
+                  </a>
+                  <a class="card__place" href="place_admin.html" title="Аквапарк «Родео Драйв»">Аквапарк «Родео Драйв»</a></div>
               </div>
             </div>
             <div class="main-content__btn-block"><a class="main-content__btn btn" href="#">Показать еще...</a></div>
@@ -458,8 +461,38 @@
               <div class="main-content__address-map" id="couponMap"></div>
               <div class="main-content__address-map" id="placeMap" style="display: none"></div>
 
-              <div class="main-content__address-menu">
+              <div class='main-content__address-block'>
+                <div class="main-content__input-group">
+                  <label class="main-content__label" for="point"></label>
+                  <select class="main-content__select custom-select" id="point" name="point">
+                    <!-- options -->
+                  </select>
+                </div>
 
+                <div class='main-content__address-img-wrap'>
+                  <img class='main-content__address-img' src='' alt='img' width='212' height='88' />
+                  <!-- cloneData.features[i].properties.data.imgUrl -->
+                </div>
+
+                <span class='main-content__sale'>до <span> %</span></span><!-- cloneData.features[i].properties.data.sale -->
+                <span class='main-content__price'>от <span> руб.</span></span><!-- cloneData.features[i].properties.data.price -->
+
+                <h2 class='main-content__address-title'></h2><!-- cloneData.features[i].properties.data.title -->
+                <a class='btn main-content__address-btn' href='#'>Подробнее о купоне</a>
+                <a href='#' class='main-content__address-title'></a><!-- cloneData.features[i].properties.data.category -->
+
+                <div class='main-content__address-meta'>
+                  <svg class='main-content__address-meta-icon' width='14' height='14'><use xlink:href='img/sprite-svg.svg#coupon__address-clock-icon'></use></svg>
+                  <span class='main-content__address-meta-desc'></span><!-- cloneData.features[i].properties.data.time -->
+                </div>
+                <div class='main-content__address-meta'>
+                  <svg class='main-content__address-meta-icon' width='14' height='14'><use xlink:href='img/sprite-svg.svg#coupon__address-phone-icon'></use></svg>
+                  <span class='main-content__address-meta-desc'></span><!--cloneData.features[i].properties.data.phone-->
+                </div>
+                <div class='main-content__address-meta'>
+                  <svg class='main-content__address-meta-icon' width='13' height='18'><use xlink:href='img/sprite-svg.svg#coupon__address-map-icon'></use></svg>
+                  <span class='main-content__address-meta-desc'></span><!-- cloneData.features[i].properties.data.address -->
+                </div>
               </div>
             </div>
           </div>

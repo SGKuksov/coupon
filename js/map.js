@@ -171,157 +171,159 @@ ymaps.ready(function () {
 
 
   // создаем текстовое меню
-  var menuCoupon = $('#couponMenu');
 
   function createMenuCoupon(item) {
-    var menuItem = $('<li><a class="menu__item" href="#" data-id="' + item.id + '">' + item.properties.clusterCaption + '</a></li>');
-    menuItem.appendTo(menuCoupon);
+    var menuCoupon = $('#couponMenu');
 
-    menuItem.click(function(e) {
-      var objectId = e.target.parentNode.dataset.id;
-      couponObjectManager.objects.balloon.open(objectId);
-    });
+    for (var i = 0, l = item.features.length; i < l; i++) {
+      var menuItem = $('<li><a class="menu__item" href="#" data-id="' + item.features[i].id + '">' + item.features[i].properties.clusterCaption + '</a></li>');
+
+      menuItem.appendTo(menuCoupon);
+
+      menuItem.click(function(e) {
+        var objectId = e.target.parentNode.dataset.id;
+        couponObjectManager.objects.balloon.open(objectId);
+      });
+    }
   }
 
 
-  var menuPlace = $('#placeMenu');
-
   function createMenuPlace(item) {
-    var menuItem = $('<li><a class="menu__item" href="#" data-id="' + item.id + '">' + item.properties.clusterCaption + '</a></li>');
-    menuItem.appendTo(menuPlace);
+    var menuPlace = $('#placeMenu');
 
-    menuItem.click(function(e) {
-      var objectId = e.target.parentNode.dataset.id;
-      placeObjectManager.objects.balloon.open(objectId);
-    });
+    for (var i = 0, l = item.features.length; i < l; i++) {
+      var menuItem = $('<li><a class="menu__item" href="#" data-id="' + item.features[i].id + '">' + item.features[i].properties.clusterCaption + '</a></li>');
+
+      menuItem.appendTo(menuPlace);
+
+      menuItem.click(function(e) {
+        var objectId = e.target.parentNode.dataset.id;
+        placeObjectManager.objects.balloon.open(objectId);
+      });
+    }
   }
 
 
   // Подготовка данных для передачу в карту
   function coverCouponData(data) {
 
-    var cloneData =  JSON.stringify(data);
-    cloneData =  JSON.parse(cloneData);
+    for (var i=0; i < data.features.length; i++) {
 
-    var select = '';
-    var options = '';
-
-    for (var i=0; i < cloneData.features.length; i++) {
-
-      cloneData.features[i].properties.balloonContentBody = `
+      data.features[i].properties.balloonContentBody = `
         <div class='main-content__address-block'>
           <div class='main-content__address-img-wrap'>
-            <img class='main-content__address-img' src='`+ cloneData.features[i].properties.data.imgUrl + `' alt='img' width='212' height='88' />
+            <img class='main-content__address-img' src='`+ data.features[i].properties.data.imgUrl + `' alt='img' width='212' height='88' />
           </div>
-          <span class='main-content__sale'>до <span>`+ cloneData.features[i].properties.data.sale + ` %</span></span>
-          <span class='main-content__price'>от <span>` + cloneData.features[i].properties.data.price + ` руб.</span></span>
-          <h2 class='main-content__address-title'>` + cloneData.features[i].properties.data.title + `</h2>
+          <span class='main-content__sale'>до <span>`+ data.features[i].properties.data.sale + ` %</span></span>
+          <span class='main-content__price'>от <span>` + data.features[i].properties.data.price + ` руб.</span></span>
+          <h2 class='main-content__address-title'>` + data.features[i].properties.data.title + `</h2>
           <a class='btn main-content__address-btn' href='#'>Подробнее о купоне</a>
-          <a href='#' class='main-content__address-title'>` + cloneData.features[i].properties.data.category + `</a>
+          <a href='#' class='main-content__address-title'>` + data.features[i].properties.data.category + `</a>
           <div class='main-content__address-meta'>
             <svg class='main-content__address-meta-icon' width='14' height='14'><use xlink:href='img/sprite-svg.svg#coupon__address-clock-icon'></use></svg>
-            <span class='main-content__address-meta-desc'>` + cloneData.features[i].properties.data.time + `</span>
+            <span class='main-content__address-meta-desc'>` + data.features[i].properties.data.time + `</span>
           </div>
           <div class='main-content__address-meta'>
             <svg class='main-content__address-meta-icon' width='14' height='14'><use xlink:href='img/sprite-svg.svg#coupon__address-phone-icon'></use></svg>
-            <span class='main-content__address-meta-desc'>` + cloneData.features[i].properties.data.phone + `</span>
+            <span class='main-content__address-meta-desc'>` + data.features[i].properties.data.phone + `</span>
           </div>
           <div class='main-content__address-meta'>
             <svg class='main-content__address-meta-icon' width='13' height='18'><use xlink:href='img/sprite-svg.svg#coupon__address-map-icon'></use></svg>
-            <span class='main-content__address-meta-desc'>` + cloneData.features[i].properties.data.address + `
+            <span class='main-content__address-meta-desc'>` + data.features[i].properties.data.address + `</span>
           </div>
         </div>`;
 
-      options += '<option value="' + '">' + cloneData.features[i].properties.clusterCaption + '</option>'
+        data.features[i].properties.clusterCaption = "<span class='main-content__address-item'>" + data.features[i].properties.clusterCaption + "</span>";
+      }
 
-      cloneData.features[i].properties.clusterCaption = "<span class='main-content__address-item'>" + cloneData.features[i].properties.clusterCaption + "</span>";
-    }
-
-    select = `
-      <div class="main-content__input-group">
-      <label class="main-content__label" for="point">` + `</label>
-      <select class="main-content__select custom-select" id="point" name="point">` + options + `</select>
-      </div>`;
-
-    return cloneData;
+    return data;
   }
 
 
   function coverPlaceData(data) {
-
-    var cloneData =  JSON.stringify(data);
-    cloneData =  JSON.parse(cloneData);
-
-    var select = '';
     var options = '';
 
-    for (var i=0; i < cloneData.features.length; i++) {
+    for (var i=0; i < data.features.length; i++) {
 
-      cloneData.features[i].properties.balloonContentBody = `
+      data.features[i].properties.balloonContentBody = `
         <div class='main-content__address-block'>
           <div class='main-content__address-img-wrap'>
-            <img class='main-content__address-img' src='`+ cloneData.features[i].properties.data.imgUrl + `' alt='img' width='212' height='88' />
+            <img class='main-content__address-img' src='`+ data.features[i].properties.data.imgUrl + `' alt='img' width='212' height='88' />
           </div>
-          <h2 class='main-content__address-title'>` + cloneData.features[i].properties.data.title + `</h2>
+          <h2 class='main-content__address-title'>` + data.features[i].properties.data.title + `</h2>
           <a class='btn main-content__address-btn' href='#'>Подробнее о месте</a>
           <div class='main-content__address-meta'>
             <svg class='main-content__address-meta-icon' width='14' height='14'><use xlink:href='img/sprite-svg.svg#coupon__address-clock-icon'></use></svg>
-            <span class='main-content__address-meta-desc'>` + cloneData.features[i].properties.data.time + `</span>
+            <span class='main-content__address-meta-desc'>` + data.features[i].properties.data.time + `</span>
           </div>
           <div class='main-content__address-meta'>
             <svg class='main-content__address-meta-icon' width='14' height='14'><use xlink:href='img/sprite-svg.svg#coupon__address-phone-icon'></use></svg>
-            <span class='main-content__address-meta-desc'>` + cloneData.features[i].properties.data.phone + `</span>
+            <span class='main-content__address-meta-desc'>` + data.features[i].properties.data.phone + `</span>
           </div>
           <div class='main-content__address-meta'>
             <svg class='main-content__address-meta-icon' width='13' height='18'><use xlink:href='img/sprite-svg.svg#coupon__address-map-icon'></use></svg>
-            <span class='main-content__address-meta-desc'>` + cloneData.features[i].properties.data.address + `
+            <span class='main-content__address-meta-desc'>` + data.features[i].properties.data.address + `</span>
           </div>
         </div>`;
 
-      options += '<option value="' + '">' + cloneData.features[i].properties.clusterCaption + '</option>'
-
-      cloneData.features[i].properties.clusterCaption = "<span class='main-content__address-item'>" + cloneData.features[i].properties.clusterCaption + "</span>";
+      data.features[i].properties.clusterCaption = "<span class='main-content__address-item'>" + data.features[i].properties.clusterCaption + "</span>";
     }
 
-    select = `
-      <div class="main-content__input-group">
-      <label class="main-content__label" for="point">` + `</label>
-      <select class="main-content__select custom-select" id="point" name="point">` + options + `</select>
-      </div>`;
+    return data;
+  }
 
-    return cloneData;
+
+  // Создание и заполнение селекта
+  function options(data) {
+    var options = '';
+    var selectBar = $('.main-content__select');
+
+    for (var i=0; i < data.features.length; i++) {
+      options += '<option value="' + data.features[i].id + '">' + data.features[i].properties.clusterCaption + '</option>'
+    }
+
+    $(options).appendTo(selectBar);
+
+    selectBar.change(function() {
+      console.log(selectBar.val());
+
+      var objectId = selectBar.val()
+
+      couponObjectManager.objects.balloon.open(objectId);
+      placeObjectManager.objects.balloon.open(objectId);
+    });
   }
 
 
   // вывод точек для couponMap на карту из json
-  var coupon_groups = [];
   $.ajax({
     url: "https://api.myjson.com/bins/vvfw8"
     // url: "js/coupon.json"
   }).done(function(data) {
+    var couponGroups = coverCouponData(data);
+    couponObjectManager.add(couponGroups);
 
-    couponObjectManager.add(coverCouponData(data));
-    coupon_groups = coverCouponData(data);
+    // создаем и заполняем меню над картой
+    createMenuCoupon(couponGroups);
 
-    for (var i = 0, l = coupon_groups.features.length; i < l; i++) {
-      createMenuCoupon(coupon_groups.features[i]);
-    }
+    // создаем и заполняет селект точками
+    options(data);
   });
   couponMap.geoObjects.add(couponObjectManager);
 
   // вывод точек для placeMap на карту из json
-  var place_groups = [];
   $.ajax({
     url: "https://api.myjson.com/bins/bkk60"
     // url: "js/place.json"
   }).done(function(data) {
+    var placeGroups = coverPlaceData(data);
+    placeObjectManager.add(placeGroups);
 
-    placeObjectManager.add(coverPlaceData(data));
-    place_groups = coverPlaceData(data);
+    // создаем и заполняем меню над картой
+    createMenuPlace(placeGroups);
 
-    for (var i = 0, l = place_groups.features.length; i < l; i++) {
-      createMenuPlace(place_groups.features[i]);
-    }
+    // создаем и заполняет селект точками
+    options(data);
   });
   placeMap.geoObjects.add(placeObjectManager);
 
