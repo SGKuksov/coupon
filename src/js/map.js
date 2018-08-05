@@ -95,7 +95,7 @@ ymaps.ready(function () {
         'iconImageSize': [80, 80],
         'iconImageOffset': [-40, -40]
       });
-      console.log(objectId);
+      // console.log(objectId);
     } else {
       couponObjectManager.objects.setObjectOptions(objectId, {
         'iconLayout': 'default#image',
@@ -104,24 +104,15 @@ ymaps.ready(function () {
         'iconImageOffset': [-22, -22]
       });
     }
-
-    if (e.get('type') == 'click') {
-      console.log('click');
-    }
   }
   function onClusterEvent (e) {
     var objectId = e.get('objectId');
 
     if (e.get('type') == 'mouseenter') {
       couponObjectManager.clusters.setClusterOptions(objectId, clusterHoverSetup);
-      console.log(objectId);
+      // console.log(objectId);
     } else {
       couponObjectManager.clusters.setClusterOptions(objectId, clusterSetup);
-    }
-
-    if (e.get('type') == 'click') {
-      console.log('click');
-      couponMap.setCenter();
     }
   }
   couponObjectManager.objects.events.add(['mouseenter', 'mouseleave', 'click'], onObjectEvent);
@@ -139,7 +130,7 @@ ymaps.ready(function () {
         'iconImageSize': [80, 80],
         'iconImageOffset': [-40, -40]
       });
-      console.log(objectId);
+      // console.log(objectId);
     } else {
       placeObjectManager.objects.setObjectOptions(objectId, {
         'iconLayout': 'default#image',
@@ -148,23 +139,15 @@ ymaps.ready(function () {
         'iconImageOffset': [-22, -22]
       });
     }
-
-    if (e.get('type') == 'click') {
-      console.log('click');
-    }
   }
   function onClusterEvent (e) {
     var objectId = e.get('objectId');
 
     if (e.get('type') == 'mouseenter') {
       placeObjectManager.clusters.setClusterOptions(objectId, clusterHoverSetup);
-      console.log(objectId);
+      // console.log(objectId);
     } else {
       placeObjectManager.clusters.setClusterOptions(objectId, clusterSetup);
-    }
-
-    if (e.get('type') == 'click') {
-      console.log('click');
     }
   }
   placeObjectManager.objects.events.add(['mouseenter', 'mouseleave', 'click'], onObjectEvent);
@@ -172,7 +155,6 @@ ymaps.ready(function () {
 
 
   // создаем текстовое меню
-
   function createMenuCoupon(item) {
     var menuCoupon = $('#couponMenu');
 
@@ -291,15 +273,15 @@ ymaps.ready(function () {
     $("#selectBlock .js-time").html(data.features[0].properties.data.time);
     $("#selectBlock .js-phone").html(data.features[0].properties.data.phone);
     $("#selectBlock .js-address").html(data.features[0].properties.data.address);
-    // couponObjectManager.objects.balloon.open(0);
 
+    // Заполняем блок по изменению селекта
     selectBar.change(function() {
       var objectId = Number( selectBar.val() )
-
 
       for (var i=0; i < data.features.length; i++) {
 
         if ( data.features[i].id === objectId) {
+          // Заполняем блок селекта
           $("#selectBlock .main-content__sale span").html(data.features[i].properties.data.sale);
           $("#selectBlock .main-content__price span").html(data.features[i].properties.data.price);
           $("#selectBlock h2.main-content__address-title").html(data.features[i].properties.data.title);
@@ -307,10 +289,13 @@ ymaps.ready(function () {
           $("#selectBlock .js-time").html(data.features[i].properties.data.time);
           $("#selectBlock .js-phone").html(data.features[i].properties.data.phone);
           $("#selectBlock .js-address").html(data.features[i].properties.data.address);
+
+          // центруем карту
+          couponMap.setCenter(data.features[i].geometry.coordinates, 12, {
+            checkZoomRange: true
+          });
         }
       }
-
-      couponObjectManager.objects.balloon.open(objectId);
     });
   }
 
@@ -331,7 +316,6 @@ ymaps.ready(function () {
     $("#selectBlock .js-time").html(data.features[0].properties.data.time);
     $("#selectBlock .js-phone").html(data.features[0].properties.data.phone);
     $("#selectBlock .js-address").html(data.features[0].properties.data.address);
-    // placeObjectManager.objects.balloon.open(0);
 
     selectBar.change(function() {
       var objectId = Number( selectBar.val() )
@@ -343,10 +327,13 @@ ymaps.ready(function () {
           $("#selectBlock .js-time").html(data.features[i].properties.data.time);
           $("#selectBlock .js-phone").html(data.features[i].properties.data.phone);
           $("#selectBlock .js-address").html(data.features[i].properties.data.address);
+
+          // центруем карту
+          placeMap.setCenter(data.features[i].geometry.coordinates, 12, {
+            checkZoomRange: true
+          });
         }
       }
-
-      // placeObjectManager.objects.balloon.open(objectId);
     });
   }
 
@@ -360,7 +347,6 @@ ymaps.ready(function () {
     createMenuCoupon(couponGroups);
     selectBlockCoupon(data);
   });
-  couponMap.geoObjects.add(couponObjectManager);
 
 
   // вывод точек для placeMap на карту из json
@@ -376,6 +362,13 @@ ymaps.ready(function () {
   placeMap.geoObjects.add(placeObjectManager);
 
 
+  if (doc_w <= 576) {
+    placeObjectManager.options.set('geoObjectOpenBalloonOnClick', false);
+    couponObjectManager.options.set('geoObjectOpenBalloonOnClick', false);
+  } else {
+    placeObjectManager.options.set('geoObjectOpenBalloonOnClick', true);
+    couponObjectManager.options.set('geoObjectOpenBalloonOnClick', true);
+  }
   // запрет на открытие балунов
   var doc_w = $(window).width();
   $(window).bind('resize', function() {
