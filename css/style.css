@@ -2398,21 +2398,21 @@ button {
 }
 
 .rating__star-empty {
-  background-image: url(../img/sprite-04417073115949235.png);
+  background-image: url(../img/sprite-08375699776944314.png);
   background-position: 0px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-fill {
-  background-image: url(../img/sprite-04417073115949235.png);
+  background-image: url(../img/sprite-08375699776944314.png);
   background-position: -26px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-hover {
-  background-image: url(../img/sprite-04417073115949235.png);
+  background-image: url(../img/sprite-08375699776944314.png);
   background-position: 0px -26px;
   width: 22px;
   height: 22px;
@@ -4243,7 +4243,7 @@ button {
   width: 100%;
 }
 
-.main-content__address-title {
+.main-content__address-title, .main-content__address-item {
   font-size: 14px;
   font-weight: bold;
   color: #323232;
@@ -4251,7 +4251,7 @@ button {
   display: block;
 }
 
-.main-content__address-title:hover {
+.main-content__address-title:hover, .main-content__address-item:hover {
   font-size: 14px;
   font-weight: bold;
   color: #323232;
@@ -4317,15 +4317,27 @@ button {
   color: #ff0000;
 }
 
+.main-content__sale-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 11px;
+}
+
 .main-content__price {
   color: #323232;
   font-weight: normal;
-  font-weight: 700;
+  font-weight: 400;
   padding: 5px;
+  font-size: 16px;
 }
 
 .main-content__price span {
-  font-weight: 700;
+  font-weight: 400;
+  font-size: 16px;
 }
 
 .main-content__price--green {
@@ -4337,7 +4349,7 @@ button {
   border-radius: 20px;
   background-color: #f00;
   color: #fff;
-  font-weight: normal;
+  font-weight: 700;
   padding: 5px 15px 8px;
   display: inline-block;
 }
@@ -4373,6 +4385,10 @@ button {
   font-size: 14px;
   margin-bottom: 32px;
   width: 100% !important;
+}
+
+#selectBlock {
+  display: block;
 }
 
 .wrap {
@@ -9506,6 +9522,10 @@ label.el-checkbox {
   .main-content__address-img-wrap {
     display: block;
   }
+  .main-content__address-menu .menu {
+    -webkit-column-count: 2;
+            column-count: 2;
+  }
   .main-content__label {
     margin: 0;
     margin-left: 32px;
@@ -9513,6 +9533,9 @@ label.el-checkbox {
   .main-content__select {
     margin-bottom: 13px;
     width: 210px;
+  }
+  #selectBlock {
+    display: none;
   }
   .filter-near__title {
     width: 150px;
@@ -10137,11 +10160,11 @@ label.el-checkbox {
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  .main-content__address-title {
+  .main-content__address-title, .main-content__address-item {
     font-size: 12px;
     font-weight: bold;
   }
-  .main-content__address-title:hover {
+  .main-content__address-title:hover, .main-content__address-item:hover {
     font-size: 12px;
     font-weight: bold;
     color: #323232;

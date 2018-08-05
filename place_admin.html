@@ -438,17 +438,13 @@
                 <div class="coupon__address-map" id="placeMap"></div>
                 <div class="coupon__address-map" id="couponMap" style="display: none"></div>
 
-                <div class='main-content__address-block'>
-                  <div class="main-content__input-group">
-                    <label class="main-content__label" for="point"></label>
-                    <select class="main-content__select custom-select" id="point" name="point">
+                <div class='main-content__address-block'  id='selectBlock'>
+                  <span class='main-content__address-item'>Места <span></span></span>
+                  <div class='main-content__input-group'>
+                    <label class='main-content__label' for='point'></label>
+                    <select class='main-content__select custom-select js-place-select' id='point' name='point'>
                       <!-- options -->
                     </select>
-                  </div>
-
-                  <div class='main-content__address-img-wrap'>
-                    <img class='main-content__address-img' src='' alt='img' width='212' height='88' />
-                    <!-- cloneData.features[i].properties.data.imgUrl -->
                   </div>
 
                   <h2 class='main-content__address-title'></h2><!-- cloneData.features[i].properties.data.title -->
@@ -457,15 +453,15 @@
 
                   <div class='main-content__address-meta'>
                     <svg class='main-content__address-meta-icon' width='14' height='14'><use xlink:href='img/sprite-svg.svg#coupon__address-clock-icon'></use></svg>
-                    <span class='main-content__address-meta-desc'></span><!-- cloneData.features[i].properties.data.time -->
+                    <span class='main-content__address-meta-desc js-time'></span><!-- cloneData.features[i].properties.data.time -->
                   </div>
                   <div class='main-content__address-meta'>
                     <svg class='main-content__address-meta-icon' width='14' height='14'><use xlink:href='img/sprite-svg.svg#coupon__address-phone-icon'></use></svg>
-                    <span class='main-content__address-meta-desc'></span><!--cloneData.features[i].properties.data.phone-->
+                    <span class='main-content__address-meta-desc js-phone'></span><!--cloneData.features[i].properties.data.phone-->
                   </div>
                   <div class='main-content__address-meta'>
                     <svg class='main-content__address-meta-icon' width='13' height='18'><use xlink:href='img/sprite-svg.svg#coupon__address-map-icon'></use></svg>
-                    <span class='main-content__address-meta-desc'></span><!-- cloneData.features[i].properties.data.address -->
+                    <span class='main-content__address-meta-desc js-address'></span><!-- cloneData.features[i].properties.data.address -->
                   </div>
                 </div>
               </div>
