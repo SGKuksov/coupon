@@ -313,14 +313,16 @@
           <p class="top-panel__subtitle">Популярные категории</p>
           <div class="top-panel__inner">
             <div class="top-panel__labels">
-              <div class="label"><a class="label__title" href="#" title="Фитнес-центры">Фитнес-центры</a>
+              <div class="label">
+                <a class="label__title" href="#" title="Фитнес-центры">Фитнес-центры</a>
                 <a class="label__remove" href="#" title="Убрать">
                   <svg class="label__remove-icon" width="18" height="18">
                     <use xlink:href="img/sprite-svg.svg#label__remove"></use>
                   </svg>
                 </a>
               </div>
-              <div class="label"><a class="label__title" href="#" title="Подарки">Подарки</a>
+              <div class="label">
+                <a class="label__title" href="#" title="Подарки">Подарки</a>
                 <a class="label__remove" href="#" title="Убрать">
                   <svg class="label__remove-icon" width="18" height="18">
                     <use xlink:href="img/sprite-svg.svg#label__remove"></use>
@@ -382,7 +384,7 @@
         </div>
         <div class="tab-content">
           <div class="main-content tab-pane fade active" id="byPlitka" role="tabpanel" aria-labelledby="byPlitkaTab">
-            <div class="main-content__inner">
+            <div class="main-content__inner js-scroll">
               <div class="card js-card"><a class="card__img-wrap" href="#"><img class="card__img" width="336" height="231" src="img/card__photo.jpg" alt="Скидка до 50% на первое посещение бассейна Скидка до 50% на первое посещение бассейна"/></a><span class="card__sale">до <span>50%</span></span><span class="card__price">от <span>400 руб.</span></span><a class="card__link" href="coupon_admin.html" title="Скидка до 50% на первое посещение бассейна Скидка до 50% на первое посещение бассейна">Скидка до 50% на первое посещение бассейна Скидка до 50% на первое посещение бассейна</a>
                 <div class="card__meta"><a class="card__category" href="category_admin.html" title="Фитнес-центры">Фитнес-центры</a>
                   <a class="card__dealer" href="site_admin.html" title="Frendi">
@@ -404,7 +406,7 @@
                 <h2 class="subscribe__title">Подпишитесь <br>на лучшие предложения</h2>
                 <form class="subscribe__form" action=""><input class="subscribe__name" type="text" name="name" placeholder="Введите имя" /><input class="subscribe__email" type="email" name="email" placeholder="Введите email" /><input class="subscribe__submit btn" type="submit" value="Подписаться" /></form>
                 <p class="subscribe__about">Нажимая кнопку "Подписаться", вы даете согласие на <a class="subscribe__link" href="#" title="обработку персональных данных">обработку персональных данных</a></p><a class="subscribe__close" href="#" title="Закрыть"><span>×</span></a></div>
-              <div class="card js-card"><a class="card__img-wrap" href="#"><img class="card__img" width="336" height="231" src="img/card__photo.jpg" alt="Скидка до 50% на первое посещение бассейна Скидка до 50% на первое посещение бассейна"/></a><span class="card__sale">до <span>50%</span></span><span class="card__price">от <span>400 руб.</span></span><a class="card__link" href="coupon_admin.html" title="Скидка до 50% на первое посещение бассейна Скидка до 50% на первое посещение бассейна">Скидка до 50% на первое посещение бассейна Скидка до 50% на первое посещение бассейна</a>
+              <div class="card"><a class="card__img-wrap" href="#"><img class="card__img" width="336" height="231" src="img/card__photo.jpg" alt="Скидка до 50% на первое посещение бассейна Скидка до 50% на первое посещение бассейна"/></a><span class="card__sale">до <span>50%</span></span><span class="card__price">от <span>400 руб.</span></span><a class="card__link" href="coupon_admin.html" title="Скидка до 50% на первое посещение бассейна Скидка до 50% на первое посещение бассейна">Скидка до 50% на первое посещение бассейна Скидка до 50% на первое посещение бассейна</a>
                 <div class="card__meta"><a class="card__category" href="category_admin.html" title="Фитнес-центры">Фитнес-центры</a>
                   <a class="card__dealer" href="site_admin.html" title="Frendi">
                     <svg class="card__dealer-link" width="14" height="14">
@@ -418,8 +420,27 @@
                       <use xlink:href="img/sprite-svg.svg#card__dealer-link"></use>
                     </svg><span>Frendi</span></a><a class="card__place" href="place_admin.html" title="Аквапарк «Родео Драйв»">Аквапарк «Родео Драйв»</a></div>
               </div>
+              <div class="card js-card"><a class="card__img-wrap" href="#"><img class="card__img" width="336" height="231" src="img/card__photo.jpg" alt="Скидка до 30% на первое посещение бассейна"/></a><span class="card__sale">до <span>30%</span></span><span class="card__price card__price--green">от <span>Бесплатно!</span></span><a class="card__link" href="coupon_admin.html" title="Скидка до 30% на первое посещение бассейна">Скидка до 30% на первое посещение бассейна</a>
+                <div class="card__meta"><a class="card__category" href="category_admin.html" title="Фитнес-центры">Фитнес-центры</a>
+                  <a class="card__dealer" href="site_admin.html" title="Frendi">
+                    <svg class="card__dealer-link" width="14" height="14">
+                      <use xlink:href="img/sprite-svg.svg#card__dealer-link"></use>
+                    </svg><span>Frendi</span></a><a class="card__place" href="place_admin.html" title="Аквапарк «Родео Драйв»">Аквапарк «Родео Драйв»</a></div>
+              </div>
+              <div class="card js-card"><a class="card__img-wrap" href="#"><img class="card__img" width="336" height="231" src="img/card__photo.jpg" alt="Скидка до 30% на первое посещение бассейна"/></a><span class="card__sale">до <span>30%</span></span><span class="card__price card__price--green">от <span>Бесплатно!</span></span><a class="card__link" href="coupon_admin.html" title="Скидка до 30% на первое посещение бассейна">Скидка до 30% на первое посещение бассейна</a>
+                <div class="card__meta"><a class="card__category" href="category_admin.html" title="Фитнес-центры">Фитнес-центры</a>
+                  <a class="card__dealer" href="site_admin.html" title="Frendi">
+                    <svg class="card__dealer-link" width="14" height="14">
+                      <use xlink:href="img/sprite-svg.svg#card__dealer-link"></use>
+                    </svg>
+                    <span>Frendi</span>
+                  </a>
+                  <a class="card__place" href="place_admin.html" title="Аквапарк «Родео Драйв»">Аквапарк «Родео Драйв»</a></div>
+              </div>
             </div>
-            <div class="main-content__btn-block"><a class="main-content__btn btn" href="#">Показать еще...</a></div>
+            <div class="main-content__btn-block">
+              <a class="main-content__btn btn load_posts_btn" href="#">Показать ещё ...</a>
+            </div>
             <div class="main-content__pagination-block">
               <div class="main-content__pagination">
                 <div class="pagination">
@@ -430,7 +451,7 @@
                     <li class="pagination__item"><a class="pagination__link" href="#">3</a></li>
                     <li class="pagination__item"><a class="pagination__link" href="#">4</a></li>
                     <li class="pagination__item"><a class="pagination__link" href="#">5</a></li>
-                    <li class="pagination__item-next"><a class="pagination__link next" href="index-2.html"></a></li>
+                    <li class="pagination__item-next"><a class="pagination__link" href="#"></a></li>
                   </ul>
                 </div>
               </div>
@@ -438,40 +459,41 @@
           </div>
           <div class="main-content tab-pane fade" id="onMap" role="tabpanel" aria-labelledby="onMapTab">
             <div class="main-content__body main-content__address-tab">
+
               <div class="main-content__address-map" id="couponMap"></div>
               <div class="main-content__address-map" id="placeMap" style="display: none"></div>
 
               <div class='main-content__address-block' id='selectBlock'>
-                  <span class='main-content__address-item'>Купоны <span></span></span>
-                  <div class='main-content__input-group'>
-                    <label class='main-content__label' for='point'></label>
-                    <select class='main-content__select custom-select js-coupon-select' id='point' name='point'>
-                      <!-- options -->
-                    </select>
-                  </div>
-
-                  <h2 class='main-content__address-title'></h2><!-- cloneData.features[i].properties.data.title -->
-                  <div class="main-content__sale-info">
-                    <span class='main-content__price'>от <span></span> руб.</span><!-- cloneData.features[i].properties.data.price -->
-                    <span class='main-content__sale'>до <span></span>%</span><!-- cloneData.features[i].properties.data.sale -->
-                  </div>
-
-                  <a class='btn main-content__address-btn' href='#'>Подробнее о купоне</a>
-                  <a href='#' class='main-content__address-title'></a><!-- cloneData.features[i].properties.data.category -->
-
-                  <div class='main-content__address-meta'>
-                    <svg class='main-content__address-meta-icon' width='14' height='14'><use xlink:href='img/sprite-svg.svg#coupon__address-clock-icon'></use></svg>
-                    <span class='main-content__address-meta-desc js-time'></span><!-- cloneData.features[i].properties.data.time -->
-                  </div>
-                  <div class='main-content__address-meta'>
-                    <svg class='main-content__address-meta-icon' width='14' height='14'><use xlink:href='img/sprite-svg.svg#coupon__address-phone-icon'></use></svg>
-                    <span class='main-content__address-meta-desc js-phone'></span><!--cloneData.features[i].properties.data.phone-->
-                  </div>
-                  <div class='main-content__address-meta'>
-                    <svg class='main-content__address-meta-icon' width='13' height='18'><use xlink:href='img/sprite-svg.svg#coupon__address-map-icon'></use></svg>
-                    <span class='main-content__address-meta-desc js-address'></span><!-- cloneData.features[i].properties.data.address -->
-                  </div>
+                <span class='main-content__address-item'>Купоны <span></span></span>
+                <div class='main-content__input-group'>
+                  <label class='main-content__label' for='point'></label>
+                  <select class='main-content__select custom-select js-coupon-select' id='point' name='point'>
+                    <!-- options -->
+                  </select>
                 </div>
+
+                <h2 class='main-content__address-title'></h2><!-- cloneData.features[i].properties.data.title -->
+                <div class="main-content__sale-info">
+                  <span class='main-content__price'>от <span></span> руб.</span><!-- cloneData.features[i].properties.data.price -->
+                  <span class='main-content__sale'>до <span></span>%</span><!-- cloneData.features[i].properties.data.sale -->
+                </div>
+
+                <a class='btn main-content__address-btn' href='#'>Подробнее о купоне</a>
+                <a href='#' class='main-content__address-title'></a><!-- cloneData.features[i].properties.data.category -->
+
+                <div class='main-content__address-meta'>
+                  <svg class='main-content__address-meta-icon' width='14' height='14'><use xlink:href='img/sprite-svg.svg#coupon__address-clock-icon'></use></svg>
+                  <span class='main-content__address-meta-desc js-time'></span><!-- cloneData.features[i].properties.data.time -->
+                </div>
+                <div class='main-content__address-meta'>
+                  <svg class='main-content__address-meta-icon' width='14' height='14'><use xlink:href='img/sprite-svg.svg#coupon__address-phone-icon'></use></svg>
+                  <span class='main-content__address-meta-desc js-phone'></span><!--cloneData.features[i].properties.data.phone-->
+                </div>
+                <div class='main-content__address-meta'>
+                  <svg class='main-content__address-meta-icon' width='13' height='18'><use xlink:href='img/sprite-svg.svg#coupon__address-map-icon'></use></svg>
+                  <span class='main-content__address-meta-desc js-address'></span><!-- cloneData.features[i].properties.data.address -->
+                </div>
+              </div>
             </div>
           </div>
         </div>

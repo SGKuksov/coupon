@@ -310,7 +310,7 @@ ymaps.ready(function () {
         }
       }
 
-      // couponObjectManager.objects.balloon.open(objectId);
+      couponObjectManager.objects.balloon.open(objectId);
     });
   }
 

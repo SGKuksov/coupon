@@ -556,26 +556,24 @@ $(document).ready(function() {
     container:  '.js-scroll',
     item:       '.js-card',
     pagination: '.pagination',
-    next:       '.pagination a.next',
-    delay:      300,
-    negativeMargin: 300
+    next:       '.pagination a.next'
   });
 
-  ias.extension(new IASSpinnerExtension());
-  ias.extension(new IASTriggerExtension({
-    offset: 0,
-    text: "<a class='main-content__btn btn' href='#'>Показать еще...</a>"
-  }));
-  ias.extension(new IASNoneLeftExtension({text: "You reached the end"}));
   ias.extension(new IASPagingExtension());
-  ias.extension(new IASHistoryExtension({prev: '#pagination a.prev'}));
+  ias.extension(new IASNoneLeftExtension());
+  ias.extension(new IASHistoryExtension({
+    prev: '.pagination a.prev'
+  }));
 
-  $(".main-content__btn").click(function() {
-    jQuery.ias().next();
+  $('.load_posts_btn').on('click', function() {
+    $.ias().next();
   });
+
   ias.on('rendered', function() {
     $('.card__link, .card__place, .coupon-item__title, .coupon-item__place').truncateText();
   });
 
-
+  ias.on('noneLeft', function() {
+    $('.load_posts_btn').hide();
+  });
 });
