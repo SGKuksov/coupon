@@ -2398,21 +2398,21 @@ button {
 }
 
 .rating__star-empty {
-  background-image: url(../img/sprite-008128599043913298.png);
+  background-image: url(../img/sprite-044604207906603555.png);
   background-position: 0px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-fill {
-  background-image: url(../img/sprite-008128599043913298.png);
+  background-image: url(../img/sprite-044604207906603555.png);
   background-position: -26px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-hover {
-  background-image: url(../img/sprite-008128599043913298.png);
+  background-image: url(../img/sprite-044604207906603555.png);
   background-position: 0px -26px;
   width: 22px;
   height: 22px;
@@ -4081,7 +4081,7 @@ button {
   color: #787878;
   font-size: 14px;
   font-size: 14px;
-  margin-right: 23px;
+  margin-right: 14px;
   padding: 6px 24px 7px 14px;
   height: auto;
   line-height: 1;
@@ -4297,9 +4297,7 @@ button {
 }
 
 .main-content__address-menu .menu {
-  padding: 20px;
-  -webkit-column-count: 1;
-          column-count: 1;
+  display: none;
 }
 
 .main-content__address-menu .menu a {
@@ -5857,6 +5855,7 @@ button {
 
 .coupon__nav-tabs {
   border-bottom: none;
+  list-style: none !important;
 }
 
 .coupon__tab-link {
@@ -6003,6 +6002,7 @@ button {
   padding-left: 30px;
   padding-right: 25px;
   margin-bottom: 40px;
+  list-style: disc;
 }
 
 .coupon__text--hide {
@@ -7449,6 +7449,10 @@ label.el-checkbox {
 
 .pagination__link--active:active {
   background-color: #da0000;
+}
+
+.coupon-modal ul {
+  list-style: disc;
 }
 
 .coupon-modal .modal-dialog {
@@ -9531,6 +9535,8 @@ label.el-checkbox {
     display: block;
   }
   .main-content__address-menu .menu {
+    display: block;
+    padding: 20px;
     -webkit-column-count: 2;
             column-count: 2;
   }

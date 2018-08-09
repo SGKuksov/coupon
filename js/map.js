@@ -347,6 +347,7 @@ ymaps.ready(function () {
     createMenuCoupon(couponGroups);
     selectBlockCoupon(data);
   });
+  couponMap.geoObjects.add(couponObjectManager);
 
 
   // вывод точек для placeMap на карту из json

@@ -422,40 +422,42 @@
           </div>
           <div class="main-content tab-pane fade" id="onMap" role="tabpanel" aria-labelledby="onMapTab">
             <div class="main-content__body main-content__address-tab">
+
               <div class="main-content__address-map" id="couponMap"></div>
               <div class="main-content__address-map" id="placeMap" style="display: none"></div>
 
               <div class='main-content__address-block' id='selectBlock'>
-                  <span class='main-content__address-item'>Купоны <span></span></span>
-                  <div class='main-content__input-group'>
-                    <label class='main-content__label' for='point'></label>
-                    <select class='main-content__select custom-select js-coupon-select' id='point' name='point'>
-                      <!-- options -->
-                    </select>
-                  </div>
-
-                  <h2 class='main-content__address-title'></h2><!-- cloneData.features[i].properties.data.title -->
-                  <div class="main-content__sale-info">
-                    <span class='main-content__price'>от <span></span> руб.</span><!-- cloneData.features[i].properties.data.price -->
-                    <span class='main-content__sale'>до <span></span>%</span><!-- cloneData.features[i].properties.data.sale -->
-                  </div>
-
-                  <a class='btn main-content__address-btn' href='#'>Подробнее о купоне</a>
-                  <a href='#' class='main-content__address-title'></a><!-- cloneData.features[i].properties.data.category -->
-
-                  <div class='main-content__address-meta'>
-                    <svg class='main-content__address-meta-icon' width='14' height='14'><use xlink:href='img/sprite-svg.svg#coupon__address-clock-icon'></use></svg>
-                    <span class='main-content__address-meta-desc js-time'></span><!-- cloneData.features[i].properties.data.time -->
-                  </div>
-                  <div class='main-content__address-meta'>
-                    <svg class='main-content__address-meta-icon' width='14' height='14'><use xlink:href='img/sprite-svg.svg#coupon__address-phone-icon'></use></svg>
-                    <span class='main-content__address-meta-desc js-phone'></span><!--cloneData.features[i].properties.data.phone-->
-                  </div>
-                  <div class='main-content__address-meta'>
-                    <svg class='main-content__address-meta-icon' width='13' height='18'><use xlink:href='img/sprite-svg.svg#coupon__address-map-icon'></use></svg>
-                    <span class='main-content__address-meta-desc js-address'></span><!-- cloneData.features[i].properties.data.address -->
-                  </div>
+                <span class='main-content__address-item'>Купоны <span></span></span>
+                <div class='main-content__input-group'>
+                  <label class='main-content__label' for='point'></label>
+                  <select class='main-content__select custom-select js-coupon-select' id='point' name='point'>
+                    <!-- options -->
+                  </select>
                 </div>
+
+                <h2 class='main-content__address-title'></h2><!-- cloneData.features[i].properties.data.title -->
+                <div class="main-content__sale-info">
+                  <span class='main-content__price'>от <span></span> руб.</span><!-- cloneData.features[i].properties.data.price -->
+                  <span class='main-content__sale'>до <span></span>%</span><!-- cloneData.features[i].properties.data.sale -->
+                </div>
+
+                <a class='btn main-content__address-btn' href='#'>Подробнее о купоне</a>
+                <a href='#' class='main-content__address-title'></a><!-- cloneData.features[i].properties.data.category -->
+
+                <div class='main-content__address-meta'>
+                  <svg class='main-content__address-meta-icon' width='14' height='14'><use xlink:href='img/sprite-svg.svg#coupon__address-clock-icon'></use></svg>
+                  <span class='main-content__address-meta-desc js-time'></span><!-- cloneData.features[i].properties.data.time -->
+                </div>
+                <div class='main-content__address-meta'>
+                  <svg class='main-content__address-meta-icon' width='14' height='14'><use xlink:href='img/sprite-svg.svg#coupon__address-phone-icon'></use></svg>
+                  <span class='main-content__address-meta-desc js-phone'></span><!--cloneData.features[i].properties.data.phone-->
+                </div>
+                <div class='main-content__address-meta'>
+                  <svg class='main-content__address-meta-icon' width='13' height='18'><use xlink:href='img/sprite-svg.svg#coupon__address-map-icon'></use></svg>
+                  <span class='main-content__address-meta-desc js-address'></span><!-- cloneData.features[i].properties.data.address -->
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
