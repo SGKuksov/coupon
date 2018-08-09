@@ -232,10 +232,11 @@
   &__address-menu {
 
     .menu {
-      padding: 20px;
-      column-count: 1;
+      display: none;
 
       @media (min-width: $screen-sm) {
+        display: block;
+        padding: 20px;
         column-count: 2;
       }
       @media (min-width: $screen-md) {

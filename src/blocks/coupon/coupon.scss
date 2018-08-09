@@ -29,6 +29,7 @@
 
   &__nav-tabs {
     border-bottom: none;
+    list-style: none !important;
   }
 
   &__tab-link {
@@ -198,6 +199,7 @@
     padding-left: 30px;
     padding-right: 25px;
     margin-bottom: 40px;
+    list-style: disc;
 
     &--hide {
       padding-left: 0;
