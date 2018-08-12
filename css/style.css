@@ -2398,21 +2398,21 @@ button {
 }
 
 .rating__star-empty {
-  background-image: url(../img/sprite-044604207906603555.png);
+  background-image: url(../img/sprite-040011921155541996.png);
   background-position: 0px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-fill {
-  background-image: url(../img/sprite-044604207906603555.png);
+  background-image: url(../img/sprite-040011921155541996.png);
   background-position: -26px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-hover {
-  background-image: url(../img/sprite-044604207906603555.png);
+  background-image: url(../img/sprite-040011921155541996.png);
   background-position: 0px -26px;
   width: 22px;
   height: 22px;
@@ -4842,6 +4842,12 @@ button {
   border-radius: 10px;
   width: 100%;
   display: none;
+}
+
+.about ul {
+  list-style: disc;
+  margin-bottom: 1rem;
+  margin-left: 20px;
 }
 
 .about__title {
@@ -9248,6 +9254,49 @@ label.el-checkbox {
   height: 9px;
 }
 
+.feedback {
+  background-color: #ffffff;
+}
+
+.feedback__title {
+  font-size: 28px;
+  padding-bottom: 15px;
+  padding-left: 28px;
+  padding-top: 19px;
+  padding-right: 28px;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.feedback__inner {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.feedback__input {
+  width: 80%;
+  max-width: 400px;
+  display: block;
+  height: calc(2.25rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+}
+
+.help-block-error {
+  color: #ff0000;
+}
+
 @media (min-width: 380px) {
   .top-panel {
     width: 90%;
@@ -10793,6 +10842,18 @@ label.el-checkbox {
   .coupon-item__link {
     display: inline;
   }
+  .feedback {
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    width: 100%;
+    border-radius: 10px;
+  }
+  .feedback__inner {
+    padding-bottom: 50px;
+    padding-left: 35px;
+    padding-top: 44px;
+    padding-right: 32px;
+  }
 }
 
 @media (min-width: 1300px) {
@@ -11202,6 +11263,12 @@ label.el-checkbox {
   }
   .coupon-item:nth-child(2n) {
     margin-right: 34px;
+  }
+  .feedback__inner {
+    padding-bottom: 98px;
+    padding-left: 36px;
+    padding-top: 49px;
+    padding-right: 36px;
   }
 }
 
