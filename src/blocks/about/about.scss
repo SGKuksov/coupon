@@ -30,16 +30,16 @@
     padding-bottom: 20px;
 
     @media (min-width: $screen-md) {
-      padding-bottom: 50px;
+      padding-bottom: 40px;
       padding-left: 35px;
-      padding-top: 44px;
+      padding-top: 24px;
       padding-right: 32px;
     }
 
     @media (min-width: $screen-lg) {
-      padding-bottom: 98px;
+      padding-bottom: 68px;
       padding-left: 36px;
-      padding-top: 49px;
+      padding-top: 24px;
       padding-right: 36px;
     }
   }
@@ -50,7 +50,7 @@
 }
 
 .site-contact {
-  padding-top: 50px;
+  padding-top: 20px;
 }
 
 .form-control {
@@ -78,4 +78,12 @@
 .help-block-error {
   margin-top: 3px;
   color: #ff0000;
+}
+
+.has-error {
+  color: #ff0000;
+
+  input {
+    border: 1px solid #ff0000;
+  }
 }
