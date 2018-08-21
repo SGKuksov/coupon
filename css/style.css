@@ -2538,21 +2538,21 @@ button {
 }
 
 .rating__star-empty {
-  background-image: url(../img/sprite-0605343565194822.png);
+  background-image: url(../img/sprite-08560087211890026.png);
   background-position: 0px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-fill {
-  background-image: url(../img/sprite-0605343565194822.png);
+  background-image: url(../img/sprite-08560087211890026.png);
   background-position: -26px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-hover {
-  background-image: url(../img/sprite-0605343565194822.png);
+  background-image: url(../img/sprite-08560087211890026.png);
   background-position: 0px -26px;
   width: 22px;
   height: 22px;
@@ -4080,6 +4080,7 @@ button {
   color: #969696;
   font-weight: bold;
   font-size: 14px;
+  white-space: nowrap;
 }
 
 .bread__link:hover,
@@ -6277,6 +6278,7 @@ button {
 .coupon__aside {
   position: relative;
   padding-top: 10px;
+  padding-bottom: 20px;
 }
 
 .coupon__take-block {
@@ -9476,15 +9478,8 @@ label.el-checkbox {
 }
 
 @media (min-width: 380px) {
-  .top-panel {
-    width: 90%;
-  }
   .tag-panel {
-    width: auto;
-    display: block;
     margin-bottom: 15px;
-    margin-left: 30px;
-    margin-right: 20px;
   }
   .coupon__img-wrap {
     margin-left: 30px;
@@ -9689,6 +9684,8 @@ label.el-checkbox {
     display: none;
   }
   .tag-panel {
+    width: 100%;
+    display: block;
     margin-left: 0;
     margin-right: 0;
   }
@@ -10552,7 +10549,7 @@ label.el-checkbox {
     background-color: #fff;
     border-radius: 50%;
     border: 1px solid #f0f0f0;
-    padding: 6px !important;
+    padding: 4px !important;
     margin: -1rem -1rem !important;
     -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
             box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
@@ -10715,6 +10712,7 @@ label.el-checkbox {
     width: 330px;
     padding-top: 0;
     padding-left: 30px;
+    padding-bottom: 0;
   }
   .coupon__aside:before {
     content: "";
