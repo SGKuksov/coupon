@@ -298,11 +298,13 @@
   &__aside {
     position: relative;
     padding-top: 10px;
+    padding-bottom: 20px;
 
     @media (min-width: $screen-md) {
       width: 330px;
       padding-top: 0;
       padding-left: 30px;
+      padding-bottom: 0;
     }
 
     &:before {

@@ -14,10 +14,6 @@
   padding-top: 7px;
   margin-bottom: 15px;
 
-  @media (min-width: 380px) {
-    width: 90%;
-  }
-
   @media (min-width: $screen-sm) {
     width: 100%;
     margin-left: 0;
