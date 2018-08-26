@@ -37,7 +37,12 @@
     background-color: transparent !important;
     border: none !important;
     padding-top: 0;
+    padding-bottom: 18px;
     line-height: 19px;
+
+    @media (min-width: $screen-md) {
+      padding-bottom: 8px;
+    }
   }
 
   &__tab-link:hover {

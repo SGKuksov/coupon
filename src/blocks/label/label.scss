@@ -51,6 +51,8 @@
     @media (min-width: $screen-md) {
       height: 15px;
       width: 15px;
+      position: relative;
+      top: -1px;
     }
     @media (min-width: $screen-lg) {
       height: 18px;

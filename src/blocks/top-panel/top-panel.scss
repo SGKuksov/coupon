@@ -159,6 +159,12 @@
 
     svg {
       fill: #ff0000;
+      position: relative;
+      top: -2px;
+
+      @media (min-width: $screen-lg) {
+        position: relative;
+      }
     }
 
     &:hover {
@@ -267,7 +273,6 @@
       width: 16px;
       height: 15px;
       margin-left: 0;
-      margin-bottom: 5px;
     }
   }
 
