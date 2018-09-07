@@ -7,7 +7,7 @@ $("#modalsBtnCancel").click(function() {
 $(document).ready(function() {
   const aside = $("aside");
   const body = $("body");
-  const doc_w = $(window).width();
+  let doc_w = $(window).width();
   const errorBlock = $(".error"); // Сообщение об ошибке
 
   const modalSelect =   $("#modalSelect");   // Малое модальное окно вызова города
@@ -19,6 +19,10 @@ $(document).ready(function() {
   const couponModal =   $("#couponModal");   // Вызов окна купона
   const errorModal =    $("#errorModal");    // Окно ошибки купона
   const reviewModal =   $("#reviewModal");   // модальное окно "спасибо за отзыв"
+
+  $(window).resize(function() {
+    doc_w = $(window).width();
+  });
 
   // открытие и закрытие меню
   $(".menu-btn").click(function(event) {
@@ -54,6 +58,22 @@ $(document).ready(function() {
 
       aside.show();
       modalLocationBtn.html("Это мой город");
+
+      // Пересчет количества колонок modal-location
+      const modalLocationCityLink = $(".modal-location__city-link");
+      const modalLocationCityCharList = $(".modal-location__city-char-list");
+      const modalDialog = $(".modal-location .modal-dialog");
+
+      if ( modalLocationCityLink.length >= 40 ) {
+        modalLocationCityCharList.css("column-count", 5);
+        modalDialog.addClass("large");
+      } else if ( modalLocationCityLink.length >= 30 && modalLocationCityLink.length < 40  ) {
+        modalLocationCityCharList.css("column-count", 4);
+        modalDialog.addClass("medium");
+      } else {
+        modalLocationCityCharList.css("column-count", 3);
+        modalDialog.addClass("small");
+      }
     } else {
 
       // боковое меню выбора города
@@ -76,25 +96,9 @@ $(document).ready(function() {
   });
 
 
-  // Пересчет количества колонок modal-location
-  const modalLocationCityLink = $(".modal-location__city-link");
-  const modalLocationCityCharList = $(".modal-location__city-char-list");
-  const modalDialog = $(".modal-location .modal-dialog");
-
-  if ( modalLocationCityLink.length >= 40 ) {
-    modalLocationCityCharList.css("column-count", 5);
-    modalDialog.addClass("large");
-  } else if ( modalLocationCityLink.length >= 30 && modalLocationCityLink.length < 40  ) {
-    modalLocationCityCharList.css("column-count", 4);
-    modalDialog.addClass("medium");
-  } else {
-    modalLocationCityCharList.css("column-count", 3);
-    modalDialog.addClass("small");
-  }
-
-
   const isAuthorize = body.hasClass("non-authorize");
   if (!isAuthorize) {
+
     // Кнопка подписаться
     $(".rss").click(function() {
       const that = $(this);
@@ -207,10 +211,15 @@ $(document).ready(function() {
 
   /* вызов купона по клику на фото */
   $(".card__img-wrap").click(function() {
-    couponModal.modal("show");
-    couponModal
-      .find('.coupon-modal__text')
-      .truncateText();
+
+    if (doc_w >= 992) {
+      couponModal
+        .modal("show")
+        .css("z-index", 2000);
+      couponModal
+        .find('.coupon-modal__text')
+        .truncateText();
+    }
   });
 
   /* скрытие окна при изменении ширины */
@@ -219,8 +228,11 @@ $(document).ready(function() {
     if (doc_w <= 992) {
       couponModal.modal("hide");
     }
-  });
+    if (doc_w <= 575) {
+      modalSelect.modal("hide");
+    }
 
+  });
 
 
   // вызов окна авторизации по иконке в шапке

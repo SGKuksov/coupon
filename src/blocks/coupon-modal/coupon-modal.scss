@@ -262,19 +262,19 @@
     padding-right: 0;
     position: relative;
 
-    &:after {
-      content: "...";
-      bottom: 0;
-      right: 0;
-      display: inline-block;
-      background-color: #fff;
-      position: absolute;
-      width: 50px;
-      line-height: 1;
-      height: 15px;
-      color: #323232;
-      font-size: 14px;
-    }
+    // &:after {
+    //   content: "...";
+    //   bottom: 0;
+    //   right: 0;
+    //   display: inline-block;
+    //   background-color: #fff;
+    //   position: absolute;
+    //   width: 50px;
+    //   line-height: 1;
+    //   height: 15px;
+    //   color: #323232;
+    //   font-size: 14px;
+    // }
   }
 
   &__aside {
