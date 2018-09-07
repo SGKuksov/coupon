@@ -2538,21 +2538,21 @@ button {
 }
 
 .rating__star-empty {
-  background-image: url(../img/sprite-08560087211890026.png);
+  background-image: url(../img/sprite-009651035452383283.png);
   background-position: 0px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-fill {
-  background-image: url(../img/sprite-08560087211890026.png);
+  background-image: url(../img/sprite-009651035452383283.png);
   background-position: -26px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-hover {
-  background-image: url(../img/sprite-08560087211890026.png);
+  background-image: url(../img/sprite-009651035452383283.png);
   background-position: 0px -26px;
   width: 22px;
   height: 22px;
@@ -3648,6 +3648,8 @@ button {
 
 .top-panel__star svg {
   fill: #ff0000;
+  position: relative;
+  top: -2px;
 }
 
 .top-panel__star:hover {
@@ -4060,6 +4062,8 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-bottom: 10px;
 }
 
@@ -4188,6 +4192,9 @@ button {
 
 .filter__btn svg {
   fill: #a3a3a3;
+  position: relative;
+  top: -2px;
+  left: -4px;
 }
 
 .filter__btn-title {
@@ -4978,6 +4985,7 @@ button {
 
 .about {
   background-color: #ffffff;
+  margin-top: 10px;
 }
 
 .about ul {
@@ -6048,6 +6056,7 @@ button {
   background-color: transparent !important;
   border: none !important;
   padding-top: 0;
+  padding-bottom: 18px;
   line-height: 19px;
 }
 
@@ -10370,6 +10379,8 @@ label.el-checkbox {
   .label__remove-icon {
     height: 15px;
     width: 15px;
+    position: relative;
+    top: -1px;
   }
   .filter__view {
     display: -webkit-box;
@@ -10669,6 +10680,9 @@ label.el-checkbox {
   }
   .coupon {
     width: 754px;
+  }
+  .coupon__tab-link {
+    padding-bottom: 8px;
   }
   .coupon__editor-label {
     display: -webkit-box !important;
@@ -11175,6 +11189,9 @@ label.el-checkbox {
     display: block;
     margin-top: 11px;
   }
+  .top-panel__star svg {
+    position: relative;
+  }
   .top-panel__star {
     height: 30px;
     line-height: 30px;
@@ -11194,7 +11211,6 @@ label.el-checkbox {
     width: 16px;
     height: 15px;
     margin-left: 0;
-    margin-bottom: 5px;
   }
   .top-panel__coupon {
     width: 175px;

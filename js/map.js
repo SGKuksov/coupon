@@ -191,29 +191,68 @@ ymaps.ready(function () {
   function coverCouponData(data) {
 
     for (var i=0; i < data.features.length; i++) {
+      let saleContent,
+          priceContent,
+          timeContent,
+          phoneContent,
+          addressContent = '';
+      let dataFeatures = data.features[i].properties.data;
+
+      if (dataFeatures.sale && dataFeatures.sale !== undefined) {
+        saleContent = `<span class='main-content__sale'>до <span>${dataFeatures.sale} %</span></span>`;
+      } else {
+        saleContent = '';
+      }
+
+      if (dataFeatures.price && dataFeatures.price !== undefined) {
+        priceContent =`<span class='main-content__price'>от <span>${dataFeatures.price} руб.</span></span>`;
+      } else {
+        priceContent = '';
+      }
+
+      if (dataFeatures.time && dataFeatures.time !== undefined) {
+        timeContent = `
+          <div class='main-content__address-meta'>
+            <svg class='main-content__address-meta-icon' width='14' height='14'><use xlink:href='img/sprite-svg.svg#coupon__address-clock-icon'></use></svg>
+            <span class='main-content__address-meta-desc'>${dataFeatures.time}</span>
+          </div>`;
+      } else {
+        timeContent = '';
+      }
+
+      if (dataFeatures.phone && dataFeatures.phone !== undefined) {
+        phoneContent = `
+          <div class='main-content__address-meta'>
+            <svg class='main-content__address-meta-icon' width='14' height='14'><use xlink:href='img/sprite-svg.svg#coupon__address-phone-icon'></use></svg>
+            <span class='main-content__address-meta-desc'>${dataFeatures.phone}</span>
+          </div>`;
+      } else {
+        phoneContent = '';
+      }
+
+      if (dataFeatures.address && dataFeatures.address !== undefined) {
+        addressContent = `
+          <div class='main-content__address-meta'>
+            <svg class='main-content__address-meta-icon' width='13' height='18'><use xlink:href='img/sprite-svg.svg#coupon__address-map-icon'></use></svg>
+            <span class='main-content__address-meta-desc'>${dataFeatures.address}</span>
+          </div>`;
+      } else {
+        addressContent = '';
+      }
 
       data.features[i].properties.balloonContentBody = `
         <div class='main-content__address-block'>
           <div class='main-content__address-img-wrap'>
-            <img class='main-content__address-img' src='`+ data.features[i].properties.data.imgUrl + `' alt='img' width='212' height='88' />
+            <img class='main-content__address-img' src='${dataFeatures.imgUrl}' alt='img' width='212' height='88' />
           </div>
-          <span class='main-content__sale'>до <span>`+ data.features[i].properties.data.sale + ` %</span></span>
-          <span class='main-content__price'>от <span>` + data.features[i].properties.data.price + ` руб.</span></span>
-          <h2 class='main-content__address-title'>` + data.features[i].properties.data.title + `</h2>
+          ${saleContent}
+          ${priceContent}
+          <h2 class='main-content__address-title'>${dataFeatures.title}</h2>
           <a class='btn main-content__address-btn' href='#'>Подробнее о купоне</a>
-          <a href='#' class='main-content__address-title'>` + data.features[i].properties.data.category + `</a>
-          <div class='main-content__address-meta'>
-            <svg class='main-content__address-meta-icon' width='14' height='14'><use xlink:href='img/sprite-svg.svg#coupon__address-clock-icon'></use></svg>
-            <span class='main-content__address-meta-desc'>` + data.features[i].properties.data.time + `</span>
-          </div>
-          <div class='main-content__address-meta'>
-            <svg class='main-content__address-meta-icon' width='14' height='14'><use xlink:href='img/sprite-svg.svg#coupon__address-phone-icon'></use></svg>
-            <span class='main-content__address-meta-desc'>` + data.features[i].properties.data.phone + `</span>
-          </div>
-          <div class='main-content__address-meta'>
-            <svg class='main-content__address-meta-icon' width='13' height='18'><use xlink:href='img/sprite-svg.svg#coupon__address-map-icon'></use></svg>
-            <span class='main-content__address-meta-desc'>` + data.features[i].properties.data.address + `</span>
-          </div>
+          <a href='#' class='main-content__address-title'>${dataFeatures.category}</a>
+          ${timeContent}
+          ${phoneContent}
+          ${addressContent}
         </div>`;
 
         data.features[i].properties.clusterCaption = "<span class='main-content__address-item'>" + data.features[i].properties.clusterCaption + "</span>";
@@ -226,26 +265,51 @@ ymaps.ready(function () {
   function coverPlaceData(data) {
 
     for (var i=0; i < data.features.length; i++) {
+      let timeContent,
+          phoneContent,
+          addressContent = '';
+      let dataFeatures = data.features[i].properties.data;
+
+      if (dataFeatures.time) {
+        timeContent =`
+          <div class='main-content__address-meta'>
+            <svg class='main-content__address-meta-icon' width='14' height='14'><use xlink:href='img/sprite-svg.svg#coupon__address-clock-icon'></use></svg>
+            <span class='main-content__address-meta-desc'>${dataFeatures.time}</span>
+          </div>`;
+      } else {
+        timeContent = '';
+      }
+
+      if (dataFeatures.phone) {
+        phoneContent =`
+          <div class='main-content__address-meta'>
+            <svg class='main-content__address-meta-icon' width='14' height='14'><use xlink:href='img/sprite-svg.svg#coupon__address-phone-icon'></use></svg>
+            <span class='main-content__address-meta-desc'>${dataFeatures.phone}</span>
+          </div>`;
+      } else {
+        phoneContent = '';
+      }
+
+      if (dataFeatures.address) {
+        addressContent =`
+          <div class='main-content__address-meta'>
+            <svg class='main-content__address-meta-icon' width='13' height='18'><use xlink:href='img/sprite-svg.svg#coupon__address-map-icon'></use></svg>
+            <span class='main-content__address-meta-desc'>${dataFeatures.address}</span>
+          </div>`;
+      } else {
+        addressContent = '';
+      }
 
       data.features[i].properties.balloonContentBody = `
         <div class='main-content__address-block'>
           <div class='main-content__address-img-wrap'>
-            <img class='main-content__address-img' src='`+ data.features[i].properties.data.imgUrl + `' alt='img' width='212' height='88' />
+            <img class='main-content__address-img' src='${dataFeatures.imgUrl}' alt='img' width='212' height='88' />
           </div>
-          <h2 class='main-content__address-title'>` + data.features[i].properties.data.title + `</h2>
+          <h2 class='main-content__address-title'>${dataFeatures.title}</h2>
           <a class='btn main-content__address-btn' href='#'>Подробнее о месте</a>
-          <div class='main-content__address-meta'>
-            <svg class='main-content__address-meta-icon' width='14' height='14'><use xlink:href='img/sprite-svg.svg#coupon__address-clock-icon'></use></svg>
-            <span class='main-content__address-meta-desc'>` + data.features[i].properties.data.time + `</span>
-          </div>
-          <div class='main-content__address-meta'>
-            <svg class='main-content__address-meta-icon' width='14' height='14'><use xlink:href='img/sprite-svg.svg#coupon__address-phone-icon'></use></svg>
-            <span class='main-content__address-meta-desc'>` + data.features[i].properties.data.phone + `</span>
-          </div>
-          <div class='main-content__address-meta'>
-            <svg class='main-content__address-meta-icon' width='13' height='18'><use xlink:href='img/sprite-svg.svg#coupon__address-map-icon'></use></svg>
-            <span class='main-content__address-meta-desc'>` + data.features[i].properties.data.address + `</span>
-          </div>
+          ${timeContent}
+          ${phoneContent}
+          ${addressContent}
         </div>`;
 
       data.features[i].properties.clusterCaption = "<span class='main-content__address-item'>" + data.features[i].properties.clusterCaption + "</span>";
@@ -257,22 +321,48 @@ ymaps.ready(function () {
 
   // Создание и заполнение селекта купона
   function selectBlockCoupon(data) {
-    var options = '';
-    var selectBar = $('.js-coupon-select');
+    let options = '';
+    let selectBar = $('.js-coupon-select');
+    let selectBlockCouponContent = '';
+    let selectBar = $('.js-coupon-select');
 
-    for (var i=0; i < data.features.length; i++) {
+
+    for (let i=0; i < data.features.length; i++) {
       options += '<option value="' + data.features[i].id + '">' + data.features[i].properties.clusterCaption + '</option>'
     }
     $(options).appendTo(selectBar);
 
     $("#selectBlock .main-content__address-item span").html(data.features.length);
-    $("#selectBlock .main-content__sale span").html(data.features[0].properties.data.sale);
-    $("#selectBlock .main-content__price span").html(data.features[0].properties.data.price);
-    $("#selectBlock h2.main-content__address-title").html(data.features[0].properties.data.title);
-    $("#selectBlock a.main-content__address-title").html(data.features[0].properties.data.category);
-    $("#selectBlock .js-time").html(data.features[0].properties.data.time);
-    $("#selectBlock .js-phone").html(data.features[0].properties.data.phone);
-    $("#selectBlock .js-address").html(data.features[0].properties.data.address);
+
+    if (data.features[0].properties.data.sale) {
+      $("#selectBlock .main-content__sale span").html(data.features[0].properties.data.sale);
+    }
+
+    if (data.features[0].properties.data.price) {
+      $("#selectBlock .main-content__price span").html(data.features[0].properties.data.price);
+    }
+
+    if (data.features[0].properties.data.title) {
+      $("#selectBlock h2.main-content__address-title").html(data.features[0].properties.data.title);
+    }
+
+    if (data.features[0].properties.data.category) {
+      $("#selectBlock a.main-content__address-title").html(data.features[0].properties.data.category);
+    }
+
+    if (data.features[0].properties.data.time) {
+      $("#selectBlock .js-time").html(data.features[0].properties.data.time);
+    }
+
+    if (data.features[0].properties.data.phone) {
+      $("#selectBlock .js-phone").html(data.features[0].properties.data.phone);
+    }
+
+    if (data.features[0].properties.data.address) {
+      $("#selectBlock .js-address").html(data.features[0].properties.data.address);
+    }
+
+    // $(selectBlockCouponContent).appendTo(selectBar);
 
     // Заполняем блок по изменению селекта
     selectBar.change(function() {
@@ -339,8 +429,8 @@ ymaps.ready(function () {
 
   // вывод точек для couponMap на карту из json
   $.ajax({
-    url: "https://api.myjson.com/bins/vvfw8"
-    // url: "js/coupon.json"
+    // url: "https://api.myjson.com/bins/vvfw8"
+    url: "js/coupon.json"
   }).done(function(data) {
     var couponGroups = coverCouponData(data);
     couponObjectManager.add(couponGroups);
@@ -352,8 +442,8 @@ ymaps.ready(function () {
 
   // вывод точек для placeMap на карту из json
   $.ajax({
-    url: "https://api.myjson.com/bins/bkk60"
-    // url: "js/place.json"
+    // url: "https://api.myjson.com/bins/bkk60"
+    url: "js/place.json"
   }).done(function(data) {
     var placeGroups = coverPlaceData(data);
     placeObjectManager.add(placeGroups);
