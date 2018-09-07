@@ -195,7 +195,7 @@ $(document).ready(function() {
   /* слайдер купонов */
   $('.coupon-gallery__inner').slick({
     infinite: false,
-    slidesToShow: 3,
+    slidesToShow: 2,
     slidesToScroll: 1,
     variableWidth: true
   });
@@ -206,7 +206,7 @@ $(document).ready(function() {
     let doc_w = $(window).width();
 
     if (doc_w >= 768) {
-      $("#lightboxModal").modal('show');
+      $("#lightboxModal").modal('show').css("z-index", 2000);
 
       $('.slider-for').slick({
         slidesToShow: 1,

@@ -1,7 +1,7 @@
 ymaps.ready(function () {
 
   // инициализируем экземпляры карт
-  var mapSetup = {
+  const mapSetup = {
     center: [55.76, 37.64],
     zoom: 10,
     controls: []
@@ -11,7 +11,7 @@ ymaps.ready(function () {
 
 
   // задаем параметры контролов карты
-  var zoomControl = new ymaps.control.ZoomControl({
+  const zoomControl = new ymaps.control.ZoomControl({
     options: {
       position: {
         bottom: 55,
@@ -26,7 +26,7 @@ ymaps.ready(function () {
 
 
   // Задаем настройки менеджеров объектов
-  var objectManagerSetup = {
+  const objectManagerSetup = {
     clusterize: true,
     gridSize: 50,
     clusterHideIconOnBalloonOpen: false,
@@ -48,7 +48,7 @@ ymaps.ready(function () {
 
 
   // задаем стили точкам и кластерам
-  var pointSetup = {
+  const pointSetup = {
         'iconLayout': 'default#image',
         'iconImageHref': '../img/map__placemark.svg',
         'iconImageSize': [44, 44],
@@ -86,7 +86,7 @@ ymaps.ready(function () {
 
   // навешиваем события на точки и кластеры
   function onObjectEvent (e) {
-    var objectId = e.get('objectId');
+    let objectId = e.get('objectId');
 
     if (e.get('type') == 'mouseenter') {
       couponObjectManager.objects.setObjectOptions(objectId, {
@@ -106,7 +106,7 @@ ymaps.ready(function () {
     }
   }
   function onClusterEvent (e) {
-    var objectId = e.get('objectId');
+    let objectId = e.get('objectId');
 
     if (e.get('type') == 'mouseenter') {
       couponObjectManager.clusters.setClusterOptions(objectId, clusterHoverSetup);
@@ -121,7 +121,7 @@ ymaps.ready(function () {
 
   // навешиваем события на точки и кластеры
   function onObjectEvent (e) {
-    var objectId = e.get('objectId');
+    let objectId = e.get('objectId');
 
     if (e.get('type') == 'mouseenter') {
       placeObjectManager.objects.setObjectOptions(objectId, {
@@ -141,7 +141,7 @@ ymaps.ready(function () {
     }
   }
   function onClusterEvent (e) {
-    var objectId = e.get('objectId');
+    let objectId = e.get('objectId');
 
     if (e.get('type') == 'mouseenter') {
       placeObjectManager.clusters.setClusterOptions(objectId, clusterHoverSetup);
@@ -156,15 +156,15 @@ ymaps.ready(function () {
 
   // создаем текстовое меню
   function createMenuCoupon(item) {
-    var menuCoupon = $('#couponMenu');
+    const menuCoupon = $('#couponMenu');
 
-    for (var i = 0, l = item.features.length; i < l; i++) {
-      var menuItem = $('<li><a class="menu__item" href="#" data-id="' + item.features[i].id + '">' + item.features[i].properties.clusterCaption + '</a></li>');
+    for (let i = 0, l = item.features.length; i < l; i++) {
+      let menuItem = $('<li><a class="menu__item" href="#" data-id="' + item.features[i].id + '">' + item.features[i].properties.clusterCaption + '</a></li>');
 
       menuItem.appendTo(menuCoupon);
 
       menuItem.click(function(e) {
-        var objectId = e.target.parentNode.dataset.id;
+        let objectId = e.target.parentNode.dataset.id;
         couponObjectManager.objects.balloon.open(objectId);
       });
     }
@@ -172,15 +172,15 @@ ymaps.ready(function () {
 
 
   function createMenuPlace(item) {
-    var menuPlace = $('#placeMenu');
+    const menuPlace = $('#placeMenu');
 
-    for (var i = 0, l = item.features.length; i < l; i++) {
-      var menuItem = $('<li><a class="menu__item" href="#" data-id="' + item.features[i].id + '">' + item.features[i].properties.clusterCaption + '</a></li>');
+    for (let i = 0, l = item.features.length; i < l; i++) {
+      let menuItem = $('<li><a class="menu__item" href="#" data-id="' + item.features[i].id + '">' + item.features[i].properties.clusterCaption + '</a></li>');
 
       menuItem.appendTo(menuPlace);
 
       menuItem.click(function(e) {
-        var objectId = e.target.parentNode.dataset.id;
+        let objectId = e.target.parentNode.dataset.id;
         placeObjectManager.objects.balloon.open(objectId);
       });
     }
@@ -190,7 +190,7 @@ ymaps.ready(function () {
   // Подготовка данных для передачу в карту
   function coverCouponData(data) {
 
-    for (var i=0; i < data.features.length; i++) {
+    for (let i=0; i < data.features.length; i++) {
       let saleContent,
           priceContent,
           timeContent,
@@ -264,7 +264,7 @@ ymaps.ready(function () {
 
   function coverPlaceData(data) {
 
-    for (var i=0; i < data.features.length; i++) {
+    for (let i=0; i < data.features.length; i++) {
       let timeContent,
           phoneContent,
           addressContent = '';
@@ -322,10 +322,8 @@ ymaps.ready(function () {
   // Создание и заполнение селекта купона
   function selectBlockCoupon(data) {
     let options = '';
-    let selectBar = $('.js-coupon-select');
     let selectBlockCouponContent = '';
-    let selectBar = $('.js-coupon-select');
-
+    const selectBar = $('.js-coupon-select');
 
     for (let i=0; i < data.features.length; i++) {
       options += '<option value="' + data.features[i].id + '">' + data.features[i].properties.clusterCaption + '</option>'
@@ -366,9 +364,9 @@ ymaps.ready(function () {
 
     // Заполняем блок по изменению селекта
     selectBar.change(function() {
-      var objectId = Number( selectBar.val() )
+      const objectId = Number( selectBar.val() )
 
-      for (var i=0; i < data.features.length; i++) {
+      for (let i=0; i < data.features.length; i++) {
 
         if ( data.features[i].id === objectId) {
           // Заполняем блок селекта
@@ -392,10 +390,10 @@ ymaps.ready(function () {
 
   // Создание и заполнение селекта места
   function selectBlockPlace(data) {
-    var options = '';
-    var selectBar = $('.js-place-select');
+    let options = '';
+    const selectBar = $('.js-place-select');
 
-    for (var i=0; i < data.features.length; i++) {
+    for (let i=0; i < data.features.length; i++) {
       options += '<option value="' + data.features[i].id + '">' + data.features[i].properties.clusterCaption + '</option>'
     }
 
@@ -408,9 +406,9 @@ ymaps.ready(function () {
     $("#selectBlock .js-address").html(data.features[0].properties.data.address);
 
     selectBar.change(function() {
-      var objectId = Number( selectBar.val() )
+      const objectId = Number( selectBar.val() )
 
-      for (var i=0; i < data.features.length; i++) {
+      for (let i=0; i < data.features.length; i++) {
 
         if ( data.features[i].id === objectId) {
           $("#selectBlock h2.main-content__address-title").html(data.features[i].properties.data.title);
@@ -432,7 +430,7 @@ ymaps.ready(function () {
     // url: "https://api.myjson.com/bins/vvfw8"
     url: "js/coupon.json"
   }).done(function(data) {
-    var couponGroups = coverCouponData(data);
+    const couponGroups = coverCouponData(data);
     couponObjectManager.add(couponGroups);
     createMenuCoupon(couponGroups);
     selectBlockCoupon(data);
@@ -445,14 +443,14 @@ ymaps.ready(function () {
     // url: "https://api.myjson.com/bins/bkk60"
     url: "js/place.json"
   }).done(function(data) {
-    var placeGroups = coverPlaceData(data);
+    const placeGroups = coverPlaceData(data);
     placeObjectManager.add(placeGroups);
     createMenuPlace(placeGroups);
     selectBlockPlace(data);
   });
   placeMap.geoObjects.add(placeObjectManager);
 
-
+  const doc_w = $(window).width();
   if (doc_w <= 576) {
     placeObjectManager.options.set('geoObjectOpenBalloonOnClick', false);
     couponObjectManager.options.set('geoObjectOpenBalloonOnClick', false);
@@ -460,8 +458,8 @@ ymaps.ready(function () {
     placeObjectManager.options.set('geoObjectOpenBalloonOnClick', true);
     couponObjectManager.options.set('geoObjectOpenBalloonOnClick', true);
   }
+  
   // запрет на открытие балунов
-  var doc_w = $(window).width();
   $(window).bind('resize', function() {
     if (doc_w <= 576) {
       placeObjectManager.options.set('geoObjectOpenBalloonOnClick', false);
