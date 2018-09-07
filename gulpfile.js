@@ -70,12 +70,15 @@ let jsList = [
   dirs.source + '/js/slick.min.js',
   dirs.source + '/js/jquery.barrating.min.js',
   dirs.source + '/js/truncate.js',
+  dirs.source + '/js/splite.js',
   dirs.source + '/js/auto-search.js',
   dirs.source + '/js/map.js',
   dirs.source + '/js/ok.json',
   dirs.source + '/js/coupon.json',
   dirs.source + '/js/place.json',
   dirs.source + '/js/jquery-ias.min.js',
+  dirs.source + '/js/modals.js',
+  dirs.source + '/js/subscribe.js',
   dirs.source + '/js/script.js'
 ];
 

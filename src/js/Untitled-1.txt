@@ -1,0 +1,84 @@
+<div class="main-content__address-block" id="selectBlock">
+  <span class="main-content__address-item">Купоны <span>50</span></span>
+
+  <div class="main-content__input-group">
+    <label class="main-content__label" for="point"></label>
+    <select class="main-content__select custom-select js-coupon-select" id="point" name="point">
+      <!-- options -->
+      <option value="0">Купон №1</option>
+      <option value="1">Купон №2</option>
+      <option value="2">Купон №3</option>
+      <option value="3">Купон №4</option>
+      <option value="4">Купон №5</option>
+      <option value="5">Купон №6</option>
+      <option value="6">Купон №7</option>
+      <option value="7">Купон №8</option>
+      <option value="8">Купон №9</option>
+      <option value="9">Купон №10</option>
+      <option value="10">Купон №11</option>
+      <option value="11">Купон №12</option>
+      <option value="12">Купон №13</option>
+      <option value="13">Купон №14</option>
+      <option value="14">Купон №15</option>
+      <option value="15">Купон №16</option>
+      <option value="16">Купон №17</option>
+      <option value="17">Купон №111</option>
+      <option value="18">Купон №111</option>
+      <option value="19">Купон №111</option>
+      <option value="20">Купон №111</option>
+      <option value="21">Купон №111</option>
+      <option value="22">Купон №111</option>
+      <option value="23">Купон №111</option>
+      <option value="24">Купон №111</option>
+      <option value="25">Купон №111</option>
+      <option value="26">Купон №111</option>
+      <option value="27">Купон №111</option>
+      <option value="28">Купон №111</option>
+      <option value="29">Купон №111</option>
+      <option value="30">Купон №111</option>
+      <option value="31">Купон №111</option>
+      <option value="32">Купон №111</option>
+      <option value="33">Купон №111</option>
+      <option value="34">Купон №111</option>
+      <option value="35">Купон №111</option>
+      <option value="36">Купон №111</option>
+      <option value="37">Купон №111</option>
+      <option value="38">Купон №111</option>
+      <option value="39">Купон №111</option>
+      <option value="40">Купон №111</option>
+      <option value="41">Купон №111</option>
+      <option value="42">Купон №111</option>
+      <option value="43">Купон №111</option>
+      <option value="44">Купон №111</option>
+      <option value="45">Купон №111</option>
+      <option value="46">Купон №111</option>
+      <option value="47">Купон №111</option>
+      <option value="48">Купон №111</option>
+      <option value="49">Купон №111</option>
+    </select>
+  </div>
+
+  <h2 class="main-content__address-title">Итальянский ресторан Il Patio</h2><!-- cloneData.features[i].properties.data.title -->
+
+  <div class="main-content__sale-info">
+    <span class="main-content__price">от <span>401</span> руб.</span><!-- cloneData.features[i].properties.data.price -->
+
+    <span class="main-content__sale">до <span>50</span>%</span><!-- cloneData.features[i].properties.data.sale -->
+  </div>
+
+  <a class="btn main-content__address-btn" href="#">Подробнее о купоне</a>
+  <a href="#" class="main-content__address-title">Все акции, купоны и скидки сети итальянских ресторанов Il Patio</a><!-- cloneData.features[i].properties.data.category -->
+
+  <div class="main-content__address-meta">
+    <svg class="main-content__address-meta-icon" width="14" height="14"><use xlink:href="img/sprite-svg.svg#coupon__address-clock-icon"></use></svg>
+    <span class="main-content__address-meta-desc js-time">Пн-Вс, 08:00-22:00</span><!-- cloneData.features[i].properties.data.time -->
+  </div>
+  <div class="main-content__address-meta">
+    <svg class="main-content__address-meta-icon" width="14" height="14"><use xlink:href="img/sprite-svg.svg#coupon__address-phone-icon"></use></svg>
+    <span class="main-content__address-meta-desc js-phone">+7 (812) 123-45-67</span><!--cloneData.features[i].properties.data.phone-->
+  </div>
+  <div class="main-content__address-meta">
+    <svg class="main-content__address-meta-icon" width="13" height="18"><use xlink:href="img/sprite-svg.svg#coupon__address-map-icon"></use></svg>
+    <span class="main-content__address-meta-desc js-address">пр. Культуры, 1, Москва</span><!-- cloneData.features[i].properties.data.address -->
+  </div>
+</div>

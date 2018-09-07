@@ -1,0 +1,68 @@
+  function selectBlockCoupon(data) {
+    let options = '';
+    let selectBar = $('.js-coupon-select');
+    let selectBlockCouponContent = ''
+
+    for (let i=0; i < data.features.length; i++) {
+      options += '<option value="' + data.features[i].id + '">' + data.features[i].properties.clusterCaption + '</option>'
+    }
+    $(options).appendTo(selectBar);
+
+    // `<span class='main-content__address-item'>Купоны ${data.features.length}</span>`
+
+    $("#selectBlock .main-content__address-item span").html(data.features.length);
+
+    if (data.features[0].properties.data.sale) {
+      $("#selectBlock .main-content__sale span").html(data.features[0].properties.data.sale);
+    }
+
+    if (data.features[0].properties.data.price) {
+      $("#selectBlock .main-content__price span").html(data.features[0].properties.data.price);
+    }
+
+    if (data.features[0].properties.data.title) {
+      $("#selectBlock h2.main-content__address-title").html(data.features[0].properties.data.title);
+    }
+
+    if (data.features[0].properties.data.category) {
+      $("#selectBlock a.main-content__address-title").html(data.features[0].properties.data.category);
+    }
+
+    if (data.features[0].properties.data.time) {
+      $("#selectBlock .js-time").html(data.features[0].properties.data.time);
+    }
+
+    if (data.features[0].properties.data.phone) {
+      $("#selectBlock .js-phone").html(data.features[0].properties.data.phone);
+    }
+
+    if (data.features[0].properties.data.address) {
+      $("#selectBlock .js-address").html(data.features[0].properties.data.address);
+    }
+
+    // $(selectBlockCouponContent).appendTo(selectBar);
+
+    // Заполняем блок по изменению селекта
+    selectBar.change(function() {
+      var objectId = Number( selectBar.val() )
+
+      for (var i=0; i < data.features.length; i++) {
+
+        if ( data.features[i].id === objectId) {
+          // Заполняем блок селекта
+          $("#selectBlock .main-content__sale span").html(data.features[i].properties.data.sale);
+          $("#selectBlock .main-content__price span").html(data.features[i].properties.data.price);
+          $("#selectBlock h2.main-content__address-title").html(data.features[i].properties.data.title);
+          $("#selectBlock a.main-content__address-title").html(data.features[i].properties.data.category);
+          $("#selectBlock .js-time").html(data.features[i].properties.data.time);
+          $("#selectBlock .js-phone").html(data.features[i].properties.data.phone);
+          $("#selectBlock .js-address").html(data.features[i].properties.data.address);
+
+          // центруем карту
+          couponMap.setCenter(data.features[i].geometry.coordinates, 12, {
+            checkZoomRange: true
+          });
+        }
+      }
+    });
+  }
