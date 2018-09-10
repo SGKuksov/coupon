@@ -117,8 +117,6 @@
   }
 
   &__img-wrap {
-
-
     width: 320px;
     height: 230px;
     overflow: hidden;
@@ -126,6 +124,16 @@
     position: relative;
     margin-left: auto;
     margin-right: auto;
+
+    &.expired img {
+      filter: grayscale(100%);
+      -webkit-filter: grayscale(100%);
+      -moz-filter: grayscale(100%);
+      -ms-filter: grayscale(100%);
+      -o-filter: grayscale(100%);
+      filter: gray;
+      -webkit-filter: grayscale(1);
+    }
 
     @media (min-width: 380px) {
       margin-left: 30px;
@@ -373,6 +381,17 @@
     margin-bottom: 17px;
     display: block;
 
+    &[disabled="disabled"],
+    &.disabled {
+      background-color: #969696;
+
+      &:hover,
+      &:active {
+        background-color: #969696;
+        cursor: not-allowed;
+      }
+    }
+
     @media (min-width: $screen-sm) {
       display: inline-block;
       padding-left: 40px;
@@ -393,6 +412,19 @@
         display: none;
       }
     }
+  }
+
+  &__take-dealer {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    padding-bottom: 10px;
+  }
+
+  &__take-link {
+    width: 14px;
+    height: 14px;
+    margin-right: 5px;
   }
 
   &__take-review {}
