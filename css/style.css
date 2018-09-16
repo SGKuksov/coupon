@@ -2538,21 +2538,21 @@ button {
 }
 
 .rating__star-empty {
-  background-image: url(../img/sprite-0543619965335288.png);
+  background-image: url(../img/sprite-008065086354474138.png);
   background-position: 0px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-fill {
-  background-image: url(../img/sprite-0543619965335288.png);
+  background-image: url(../img/sprite-008065086354474138.png);
   background-position: -26px 0px;
   width: 22px;
   height: 22px;
 }
 
 .rating__star-hover {
-  background-image: url(../img/sprite-0543619965335288.png);
+  background-image: url(../img/sprite-008065086354474138.png);
   background-position: 0px -26px;
   width: 22px;
   height: 22px;
@@ -2725,6 +2725,10 @@ button {
 }
 
 .page-header__input {
+  border: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-color: transparent;
   background-color: #ffffff;
   width: 100%;
   height: 50px;
