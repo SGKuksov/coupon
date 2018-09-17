@@ -343,4 +343,39 @@ $(document).ready(function() {
     return false;
   });
 
+  /* лайтбокс */
+  // $('.js-place-gallery').magnificPopup({
+  //   open: function() {
+  //     console.log(111);
+
+  //   }
+  // });
+
+  if (doc_w >= 768) {
+    $('.js-place-gallery').magnificPopup({
+      callbacks: {
+        open: function() {
+          $('.slider-for').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: true,
+            dots: false,
+            fade: true,
+            asNavFor: '.slider-nav'
+          });
+
+          $('.slider-nav').slick({
+            slidesToShow: 8,
+            slidesToScroll: 1,
+            asNavFor: '.slider-for',
+            dots: false,
+            arrows: false,
+            focusOnSelect: true,
+            infinite: false
+          });
+        },
+      }
+    });
+  }
+
 });

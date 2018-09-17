@@ -68,6 +68,7 @@ let jsList = [
   dirs.source + '/js/ofi.min.js',
   dirs.source + '/js/pushy.min.js',
   dirs.source + '/js/slick.min.js',
+  dirs.source + '/js/magnific-popup.min.js',
   dirs.source + '/js/jquery.barrating.min.js',
   dirs.source + '/js/truncate.js',
   dirs.source + '/js/splite.js',

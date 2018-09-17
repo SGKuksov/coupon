@@ -200,36 +200,6 @@ $(document).ready(function() {
     variableWidth: true
   });
 
-
-  /* лайтбокс */
-  $("#placeGallery").click(function() {
-    let doc_w = $(window).width();
-
-    if (doc_w >= 768) {
-      $("#lightboxModal").modal('show').css("z-index", 2000);
-
-      $('.slider-for').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: true,
-        dots: false,
-        fade: true,
-        asNavFor: '.slider-nav'
-      });
-
-      $('.slider-nav').slick({
-        slidesToShow: 8,
-        slidesToScroll: 1,
-        asNavFor: '.slider-for',
-        dots: false,
-        arrows: false,
-        focusOnSelect: true,
-        infinite: false
-      });
-    }
-  });
-
-
   /* Бесконечный скролл */
   const ias = jQuery.ias({
     container:  '.js-scroll',
