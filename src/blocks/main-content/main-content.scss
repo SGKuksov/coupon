@@ -244,7 +244,15 @@
         column-gap: 3px;
       }
 
-      li {}
+      li {
+        @media (min-width: $screen-sm) {
+          width: 50%;
+        }
+        @media (min-width: $screen-md) {
+          width: 33%;
+        }
+      }
+      
       a {
         font-size: 18px;
         line-height: 24px;

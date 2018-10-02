@@ -1,13 +1,13 @@
-ymaps.ready(function () {
+ymaps.ready(function() {
 
   // инициализируем экземпляры карт
   const mapSetup = {
-    center: [55.76, 37.64],
-    zoom: 10,
-    controls: []
-  },
-  couponMap = new ymaps.Map('couponMap', mapSetup),
-  placeMap  = new ymaps.Map('placeMap', mapSetup);
+      center: [55.76, 37.64],
+      zoom: 10,
+      controls: []
+    },
+    couponMap = new ymaps.Map('couponMap', mapSetup),
+    placeMap = new ymaps.Map('placeMap', mapSetup);
 
 
   // задаем параметры контролов карты
@@ -27,65 +27,65 @@ ymaps.ready(function () {
 
   // Задаем настройки менеджеров объектов
   const objectManagerSetup = {
-    clusterize: true,
-    gridSize: 50,
-    clusterHideIconOnBalloonOpen: false,
-    geoObjectHideIconOnBalloonOpen: false,
-    clusterDisableClickZoom: false,
-    clusterIcons: [{
-      href: '../img/map__cluster.svg',
-      size: [44, 44],
-      offset: [-22, -22]
-    }],
-    clusterIconContentLayout: ymaps.templateLayoutFactory.createClass(
-      '<span style="color: #969696;">{{ properties.geoObjects.length }}</span>'
-    ),
-    balloonContentLayoutHeight: 400,
-    balloonContentLayoutWidth: 400
-  },
-  couponObjectManager = new ymaps.ObjectManager(objectManagerSetup);
-  placeObjectManager  = new ymaps.ObjectManager(objectManagerSetup);
+      clusterize: true,
+      gridSize: 50,
+      clusterHideIconOnBalloonOpen: false,
+      geoObjectHideIconOnBalloonOpen: false,
+      clusterDisableClickZoom: false,
+      clusterIcons: [{
+        href: '../img/map__cluster.svg',
+        size: [44, 44],
+        offset: [-22, -22]
+      }],
+      clusterIconContentLayout: ymaps.templateLayoutFactory.createClass(
+        '<span style="color: #969696;">{{ properties.geoObjects.length }}</span>'
+      ),
+      balloonContentLayoutHeight: 400,
+      balloonContentLayoutWidth: 400
+    },
+    couponObjectManager = new ymaps.ObjectManager(objectManagerSetup);
+  placeObjectManager = new ymaps.ObjectManager(objectManagerSetup);
 
 
   // задаем стили точкам и кластерам
   const pointSetup = {
-        'iconLayout': 'default#image',
-        'iconImageHref': '../img/map__placemark.svg',
-        'iconImageSize': [44, 44],
-        'iconImageOffset': [-22, -22]
-      },
-      pointHoverSetup = {
-        'iconLayout': 'default#image',
-        'iconImageHref': '../img/map__placemark_hovered.svg',
-        'iconImageSize': [80, 80],
-        'iconImageOffset': [-40, -40]
-      },
-      clusterSetup = {
-        clusterIcons: [{
-          href: '../img/map__cluster.svg',
-          size: [44, 44],
-          offset: [-22, -22]
-        }],
-        clusterIconContentLayout: ymaps.templateLayoutFactory.createClass(
-          '<span style="color: #969696;">{{ properties.geoObjects.length }}</span>'
-        )
-      },
-      clusterHoverSetup = {
-        clusterIcons: [{
-          href: '../img/map__cluster_hovered.svg',
-          size: [80, 80],
-          offset: [-40, -40]
-        }],
-        clusterIconContentLayout: ymaps.templateLayoutFactory.createClass(
-          '<span style="color: #ff1e1e; font-weight: bold;">{{ properties.geoObjects.length }}</span>'
-        )
-      };
+      'iconLayout': 'default#image',
+      'iconImageHref': '../img/map__placemark.svg',
+      'iconImageSize': [44, 44],
+      'iconImageOffset': [-22, -22]
+    },
+    pointHoverSetup = {
+      'iconLayout': 'default#image',
+      'iconImageHref': '../img/map__placemark_hovered.svg',
+      'iconImageSize': [80, 80],
+      'iconImageOffset': [-40, -40]
+    },
+    clusterSetup = {
+      clusterIcons: [{
+        href: '../img/map__cluster.svg',
+        size: [44, 44],
+        offset: [-22, -22]
+      }],
+      clusterIconContentLayout: ymaps.templateLayoutFactory.createClass(
+        '<span style="color: #969696;">{{ properties.geoObjects.length }}</span>'
+      )
+    },
+    clusterHoverSetup = {
+      clusterIcons: [{
+        href: '../img/map__cluster_hovered.svg',
+        size: [80, 80],
+        offset: [-40, -40]
+      }],
+      clusterIconContentLayout: ymaps.templateLayoutFactory.createClass(
+        '<span style="color: #ff1e1e; font-weight: bold;">{{ properties.geoObjects.length }}</span>'
+      )
+    };
   couponObjectManager.objects.options.set(pointSetup);
   placeObjectManager.objects.options.set(pointSetup);
 
 
   // навешиваем события на точки и кластеры
-  function onObjectEvent (e) {
+  function onObjectEvent(e) {
     let objectId = e.get('objectId');
 
     if (e.get('type') == 'mouseenter') {
@@ -105,7 +105,8 @@ ymaps.ready(function () {
       });
     }
   }
-  function onClusterEvent (e) {
+
+  function onClusterEvent(e) {
     let objectId = e.get('objectId');
 
     if (e.get('type') == 'mouseenter') {
@@ -120,7 +121,7 @@ ymaps.ready(function () {
 
 
   // навешиваем события на точки и кластеры
-  function onObjectEvent (e) {
+  function onObjectEvent(e) {
     let objectId = e.get('objectId');
 
     if (e.get('type') == 'mouseenter') {
@@ -140,7 +141,8 @@ ymaps.ready(function () {
       });
     }
   }
-  function onClusterEvent (e) {
+
+  function onClusterEvent(e) {
     let objectId = e.get('objectId');
 
     if (e.get('type') == 'mouseenter') {
@@ -190,12 +192,12 @@ ymaps.ready(function () {
   // Подготовка данных для передачу в карту
   function coverCouponData(data) {
 
-    for (let i=0; i < data.features.length; i++) {
+    for (let i = 0; i < data.features.length; i++) {
       let saleContent,
-          priceContent,
-          timeContent,
-          phoneContent,
-          addressContent = '';
+        priceContent,
+        timeContent,
+        phoneContent,
+        addressContent = '';
       let dataFeatures = data.features[i].properties.data;
 
       if (dataFeatures.sale && dataFeatures.sale !== undefined) {
@@ -205,7 +207,7 @@ ymaps.ready(function () {
       }
 
       if (dataFeatures.price && dataFeatures.price !== undefined) {
-        priceContent =`<span class='main-content__price'>от <span>${dataFeatures.price} руб.</span></span>`;
+        priceContent = `<span class='main-content__price'>от <span>${dataFeatures.price} руб.</span></span>`;
       } else {
         priceContent = '';
       }
@@ -255,8 +257,8 @@ ymaps.ready(function () {
           ${addressContent}
         </div>`;
 
-        data.features[i].properties.clusterCaption = "<span class='main-content__address-item'>" + data.features[i].properties.clusterCaption + "</span>";
-      }
+      data.features[i].properties.clusterCaption = "<span class='main-content__address-item'>" + data.features[i].properties.clusterCaption + "</span>";
+    }
 
     return data;
   }
@@ -264,14 +266,14 @@ ymaps.ready(function () {
 
   function coverPlaceData(data) {
 
-    for (let i=0; i < data.features.length; i++) {
+    for (let i = 0; i < data.features.length; i++) {
       let timeContent,
-          phoneContent,
-          addressContent = '';
+        phoneContent,
+        addressContent = '';
       let dataFeatures = data.features[i].properties.data;
 
       if (dataFeatures.time) {
-        timeContent =`
+        timeContent = `
           <div class='main-content__address-meta'>
             <svg class='main-content__address-meta-icon' width='14' height='14'><use xlink:href='img/sprite-svg.svg#coupon__address-clock-icon'></use></svg>
             <span class='main-content__address-meta-desc'>${dataFeatures.time}</span>
@@ -281,7 +283,7 @@ ymaps.ready(function () {
       }
 
       if (dataFeatures.phone) {
-        phoneContent =`
+        phoneContent = `
           <div class='main-content__address-meta'>
             <svg class='main-content__address-meta-icon' width='14' height='14'><use xlink:href='img/sprite-svg.svg#coupon__address-phone-icon'></use></svg>
             <span class='main-content__address-meta-desc'>${dataFeatures.phone}</span>
@@ -291,7 +293,7 @@ ymaps.ready(function () {
       }
 
       if (dataFeatures.address) {
-        addressContent =`
+        addressContent = `
           <div class='main-content__address-meta'>
             <svg class='main-content__address-meta-icon' width='13' height='18'><use xlink:href='img/sprite-svg.svg#coupon__address-map-icon'></use></svg>
             <span class='main-content__address-meta-desc'>${dataFeatures.address}</span>
@@ -321,54 +323,84 @@ ymaps.ready(function () {
 
   // Создание и заполнение селекта купона
   function selectBlockCoupon(data) {
+    let selectBlock = $('#selectBlock')
     let options = '';
     let selectBlockCouponContent = '';
-    const selectBar = $('.js-coupon-select');
+    let dataFeatures = data.features[0].properties.data;
+    let timeContent,
+        phoneContent,
+        addressContent = '';
 
-    for (let i=0; i < data.features.length; i++) {
+    for (let i = 0; i < data.features.length; i++) {
       options += '<option value="' + data.features[i].id + '">' + data.features[i].properties.clusterCaption + '</option>'
     }
-    $(options).appendTo(selectBar);
 
-    $("#selectBlock .main-content__address-item span").html(data.features.length);
 
-    if (data.features[0].properties.data.sale) {
-      $("#selectBlock .main-content__sale span").html(data.features[0].properties.data.sale);
+    // time
+    if (dataFeatures.time) {
+      timeContent = `
+        <div class='main-content__address-meta'>
+          <svg class='main-content__address-meta-icon' width='14' height='14'><use xlink:href='img/sprite-svg.svg#coupon__address-clock-icon'></use></svg>
+          <span class='main-content__address-meta-desc'>${dataFeatures.time}</span>
+        </div>`;
+    } else {
+      timeContent = '';
     }
 
-    if (data.features[0].properties.data.price) {
-      $("#selectBlock .main-content__price span").html(data.features[0].properties.data.price);
+    // phone
+    if (dataFeatures.phone) {
+      phoneContent = `
+        <div class='main-content__address-meta'>
+          <svg class='main-content__address-meta-icon' width='14' height='14'><use xlink:href='img/sprite-svg.svg#coupon__address-phone-icon'></use></svg>
+          <span class='main-content__address-meta-desc'>${dataFeatures.phone}</span>
+        </div>`;
+    } else {
+      phoneContent = '';
     }
 
-    if (data.features[0].properties.data.title) {
-      $("#selectBlock h2.main-content__address-title").html(data.features[0].properties.data.title);
+    // address
+    if (dataFeatures.address) {
+      addressContent = `
+        <div class='main-content__address-meta'>
+          <svg class='main-content__address-meta-icon' width='13' height='18'><use xlink:href='img/sprite-svg.svg#coupon__address-map-icon'></use></svg>
+          <span class='main-content__address-meta-desc'>${dataFeatures.address}</span>
+        </div>`;
+    } else {
+      addressContent = '';
     }
 
-    if (data.features[0].properties.data.category) {
-      $("#selectBlock a.main-content__address-title").html(data.features[0].properties.data.category);
-    }
+    selectBlockCouponContent = `<span class='main-content__address-item'>Купоны <span>${data.features.length}</span></span>
 
-    if (data.features[0].properties.data.time) {
-      $("#selectBlock .js-time").html(data.features[0].properties.data.time);
-    }
+    <div class='main-content__input-group'>
+      <label class='main-content__label' for='point'></label>
+      <select class='main-content__select custom-select js-coupon-select' id='point' name='point'>
+        ${options}
+      </select>
+    </div>
 
-    if (data.features[0].properties.data.phone) {
-      $("#selectBlock .js-phone").html(data.features[0].properties.data.phone);
-    }
+    <h2 class='main-content__address-title'>${dataFeatures.title}</h2>
+    <div class="main-content__sale-info">
+      <span class='main-content__price'>от <span>${dataFeatures.price}</span> руб.</span>
+      <span class='main-content__sale'>до ${dataFeatures.sale}%</span>
+    </div>
 
-    if (data.features[0].properties.data.address) {
-      $("#selectBlock .js-address").html(data.features[0].properties.data.address);
-    }
+    <a class='btn main-content__address-btn' href='#'>Подробнее о купоне</a>
+    <a href='#' class='main-content__address-title'>${dataFeatures.category}</a>
+    ${timeContent}
+    ${phoneContent}
+    ${addressContent}
+    `;
 
-    // $(selectBlockCouponContent).appendTo(selectBar);
+    $(selectBlockCouponContent).appendTo(selectBlock);
+
 
     // Заполняем блок по изменению селекта
-    selectBar.change(function() {
-      const objectId = Number( selectBar.val() )
+    $(".js-coupon-select").change(function() {
+      const objectId = Number($(".js-coupon-select").val())
 
-      for (let i=0; i < data.features.length; i++) {
+      for (let i = 0; i < data.features.length; i++) {
 
-        if ( data.features[i].id === objectId) {
+        if (data.features[i].id === objectId) {
           // Заполняем блок селекта
           $("#selectBlock .main-content__sale span").html(data.features[i].properties.data.sale);
           $("#selectBlock .main-content__price span").html(data.features[i].properties.data.price);
@@ -393,7 +425,7 @@ ymaps.ready(function () {
     let options = '';
     const selectBar = $('.js-place-select');
 
-    for (let i=0; i < data.features.length; i++) {
+    for (let i = 0; i < data.features.length; i++) {
       options += '<option value="' + data.features[i].id + '">' + data.features[i].properties.clusterCaption + '</option>'
     }
 
@@ -406,11 +438,11 @@ ymaps.ready(function () {
     $("#selectBlock .js-address").html(data.features[0].properties.data.address);
 
     selectBar.change(function() {
-      const objectId = Number( selectBar.val() )
+      const objectId = Number(selectBar.val())
 
-      for (let i=0; i < data.features.length; i++) {
+      for (let i = 0; i < data.features.length; i++) {
 
-        if ( data.features[i].id === objectId) {
+        if (data.features[i].id === objectId) {
           $("#selectBlock h2.main-content__address-title").html(data.features[i].properties.data.title);
           $("#selectBlock .js-time").html(data.features[i].properties.data.time);
           $("#selectBlock .js-phone").html(data.features[i].properties.data.phone);
@@ -431,6 +463,7 @@ ymaps.ready(function () {
     url: "js/coupon.json"
   }).done(function(data) {
     const couponGroups = coverCouponData(data);
+
     couponObjectManager.add(couponGroups);
     createMenuCoupon(couponGroups);
     selectBlockCoupon(data);
@@ -444,6 +477,7 @@ ymaps.ready(function () {
     url: "js/place.json"
   }).done(function(data) {
     const placeGroups = coverPlaceData(data);
+
     placeObjectManager.add(placeGroups);
     createMenuPlace(placeGroups);
     selectBlockPlace(data);
@@ -458,7 +492,7 @@ ymaps.ready(function () {
     placeObjectManager.options.set('geoObjectOpenBalloonOnClick', true);
     couponObjectManager.options.set('geoObjectOpenBalloonOnClick', true);
   }
-  
+
   // запрет на открытие балунов
   $(window).bind('resize', function() {
     if (doc_w <= 576) {

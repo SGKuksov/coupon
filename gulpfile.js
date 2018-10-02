@@ -113,34 +113,6 @@ gulp.task('style', function () {
     .pipe(gulp.dest(dirs.build + '/css/'));                // записываем CSS-файл
 });
 
-// Первый таск - генерация стайлгайда:
-// gulp.task('styleguide:generate', function() {
-//   return gulp.src(dirs.source + 'scss/**/*.scss')
-//     .pipe(plumber())
-//     .pipe(styleguide.generate({
-//       title: 'Your styleguide title',
-//       server: true,
-//       rootPath: styleguidePath,
-//       overviewPath: overviewPath,
-//       extraHead: [
-//         '<style>html {font-size:10px} body {font-size:16px}</style>'
-//       ]
-//     }))
-//     .pipe(gulp.dest(styleguidePath));
-// });
-// Следующий таск - применение стилей внутри стайлгайда:
-// gulp.task('styleguide:applystyles', function() {
-//   return gulp.src(scssRoot)
-//     .pipe(plumber())
-//     .pipe(sass({
-//       errLogToConsole: true
-//     }))
-//     .pipe(styleguide.applyStyles())
-//     .pipe(gulp.dest(styleguidePath));
-// });
-// Объединение тасков
-// gulp.task('styleguide', ['styleguide:generate', 'styleguide:applystyles']);
-
 // Компиляция pug
 gulp.task('pug', function() {
   return gulp.src([
@@ -282,7 +254,6 @@ gulp.task('build', function (callback) {
     'clean',
     ['sprite:svg', 'sprite:png'],
     ['style', 'copy:js', 'copy:img', 'copy:fonts'],
-    // 'styleguide',
     'pug',
     'copy:html',
     callback

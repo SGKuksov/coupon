@@ -353,6 +353,8 @@ $(document).ready(function() {
 
   if (doc_w >= 768) {
     $('.js-place-gallery').magnificPopup({
+      closeOnBgClick: true,
+      preloader: true,
       callbacks: {
         open: function() {
           $('.slider-for').slick({
@@ -374,6 +376,14 @@ $(document).ready(function() {
             infinite: false
           });
         },
+      }
+    });
+
+    $(document).mouseup(function (e){
+      var div = $("#lightboxModal");
+      if (! $("#lightboxModal").is(e.target)
+          &&  $("#lightboxModal").has(e.target).length === 0) {
+        $.magnificPopup.close();
       }
     });
   }
