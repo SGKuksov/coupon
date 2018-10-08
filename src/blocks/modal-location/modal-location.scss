@@ -148,6 +148,7 @@
 
   &__city-char-item {
     display: flex;
+    display: block;
     position: relative;
   }
 
@@ -162,7 +163,8 @@
     left: 0;
 
     @media (min-width: $screen-md) {
-      position: static;
+      left: -10px;
+      // position: static;
     }
   }
 
@@ -183,8 +185,8 @@
       border: none;
       padding-left: 16px;
       padding-right: 16px;
-      padding-top: 7px;
-      padding-bottom: 7px;
+      // padding-top: 7px;
+      // padding-bottom: 7px;
     }
   }
 
@@ -198,7 +200,7 @@
     display: block;
 
     @media (min-width: $screen-md) {
-      line-height: 1;
+      line-height: 30px;
       border: none;
       padding: 0;
     }

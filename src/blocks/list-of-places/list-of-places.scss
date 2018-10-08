@@ -59,22 +59,25 @@
   }
 
   &__category-list {
+    column-count: 1;
 
     @media (min-width: $screen-sm) {
       column-count: 2;
-      column-gap: 3px;
+      column-gap: 1%;
+      column-width: 48%;
     }
 
     @media (min-width: $screen-lg) {
       column-count: 3;
-      column-gap: 3px;
+      column-gap: 1%;
+      column-width: 31%;
     }
   }
 
   &__category-item {
     display: flex;
     flex-direction: column;
-    display: inline-block;
+    // display: inline-block;
     vertical-align: top;
   }
 
@@ -84,6 +87,16 @@
     font-weight: bold;
     display: inline-block;
     margin-bottom: 15px;
+    // border-bottom: 1px dotted transparent;
+
+    &:hover {
+      font-weight: bold;
+      color: #ff0000;
+      // border-bottom: 1px dotted #ff0000;
+    }
+    &:visited {
+      color: #551e99;
+    }
   }
 
   &__subcategory-list {

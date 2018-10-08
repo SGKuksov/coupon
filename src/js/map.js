@@ -2,12 +2,12 @@ ymaps.ready(function() {
 
   // инициализируем экземпляры карт
   const mapSetup = {
-      center: [55.76, 37.64],
-      zoom: 10,
+      center:   [55.76, 37.64],
+      zoom:     10,
       controls: []
     },
     couponMap = new ymaps.Map('couponMap', mapSetup),
-    placeMap = new ymaps.Map('placeMap', mapSetup);
+    placeMap =  new ymaps.Map('placeMap', mapSetup);
 
 
   // задаем параметры контролов карты
@@ -15,9 +15,9 @@ ymaps.ready(function() {
     options: {
       position: {
         bottom: 55,
-        left: 'auto',
-        right: 20,
-        top: 'auto'
+        left:   'auto',
+        right:  20,
+        top:    'auto'
       }
     }
   });
@@ -28,57 +28,51 @@ ymaps.ready(function() {
   // Задаем настройки менеджеров объектов
   const objectManagerSetup = {
       clusterize: true,
-      gridSize: 50,
+      gridSize:   50,
       clusterHideIconOnBalloonOpen: false,
       geoObjectHideIconOnBalloonOpen: false,
       clusterDisableClickZoom: false,
       clusterIcons: [{
-        href: '../img/map__cluster.svg',
-        size: [44, 44],
+        href:   '../img/map__cluster.svg',
+        size:   [44, 44],
         offset: [-22, -22]
       }],
-      clusterIconContentLayout: ymaps.templateLayoutFactory.createClass(
-        '<span style="color: #969696;">{{ properties.geoObjects.length }}</span>'
-      ),
+      clusterIconContentLayout: ymaps.templateLayoutFactory.createClass('<span style="color: #969696;">{{ properties.geoObjects.length }}</span>'),
       balloonContentLayoutHeight: 400,
-      balloonContentLayoutWidth: 400
+      balloonContentLayoutWidth:  400
     },
-    couponObjectManager = new ymaps.ObjectManager(objectManagerSetup);
-  placeObjectManager = new ymaps.ObjectManager(objectManagerSetup);
+  couponObjectManager = new ymaps.ObjectManager(objectManagerSetup);
+  placeObjectManager =  new ymaps.ObjectManager(objectManagerSetup);
 
 
   // задаем стили точкам и кластерам
   const pointSetup = {
-      'iconLayout': 'default#image',
-      'iconImageHref': '../img/map__placemark.svg',
-      'iconImageSize': [44, 44],
+      'iconLayout':      'default#image',
+      'iconImageHref':   '../img/map__placemark.svg',
+      'iconImageSize':   [44, 44],
       'iconImageOffset': [-22, -22]
     },
     pointHoverSetup = {
-      'iconLayout': 'default#image',
-      'iconImageHref': '../img/map__placemark_hovered.svg',
-      'iconImageSize': [80, 80],
+      'iconLayout':      'default#image',
+      'iconImageHref':   '../img/map__placemark_hovered.svg',
+      'iconImageSize':   [80, 80],
       'iconImageOffset': [-40, -40]
     },
     clusterSetup = {
       clusterIcons: [{
-        href: '../img/map__cluster.svg',
-        size: [44, 44],
+        href:   '../img/map__cluster.svg',
+        size:   [44, 44],
         offset: [-22, -22]
       }],
-      clusterIconContentLayout: ymaps.templateLayoutFactory.createClass(
-        '<span style="color: #969696;">{{ properties.geoObjects.length }}</span>'
-      )
+      clusterIconContentLayout: ymaps.templateLayoutFactory.createClass('<span style="color: #969696;">{{ properties.geoObjects.length }}</span>')
     },
     clusterHoverSetup = {
       clusterIcons: [{
-        href: '../img/map__cluster_hovered.svg',
-        size: [80, 80],
+        href:   '../img/map__cluster_hovered.svg',
+        size:   [80, 80],
         offset: [-40, -40]
       }],
-      clusterIconContentLayout: ymaps.templateLayoutFactory.createClass(
-        '<span style="color: #ff1e1e; font-weight: bold;">{{ properties.geoObjects.length }}</span>'
-      )
+      clusterIconContentLayout: ymaps.templateLayoutFactory.createClass('<span style="color: #ff1e1e; font-weight: bold;">{{ properties.geoObjects.length }}</span>')
     };
   couponObjectManager.objects.options.set(pointSetup);
   placeObjectManager.objects.options.set(pointSetup);
@@ -88,20 +82,19 @@ ymaps.ready(function() {
   function onObjectEvent(e) {
     let objectId = e.get('objectId');
 
-    if (e.get('type') == 'mouseenter') {
+    if ( e.get('type') == 'mouseenter' ) {
       couponObjectManager.objects.setObjectOptions(objectId, {
-        'iconLayout': 'default#image',
-        'iconImageHref': '../img/map__placemark_hovered.svg',
-        'iconImageSize': [80, 80],
-        'iconImageOffset': [-40, -40]
+        'iconLayout':       'default#image',
+        'iconImageHref':    '../img/map__placemark_hovered.svg',
+        'iconImageSize':    [80, 80],
+        'iconImageOffset':  [-40, -40]
       });
-      // console.log(objectId);
     } else {
       couponObjectManager.objects.setObjectOptions(objectId, {
-        'iconLayout': 'default#image',
-        'iconImageHref': '../img/map__placemark.svg',
-        'iconImageSize': [44, 44],
-        'iconImageOffset': [-22, -22]
+        'iconLayout':       'default#image',
+        'iconImageHref':    '../img/map__placemark.svg',
+        'iconImageSize':    [44, 44],
+        'iconImageOffset':  [-22, -22]
       });
     }
   }
@@ -109,9 +102,8 @@ ymaps.ready(function() {
   function onClusterEvent(e) {
     let objectId = e.get('objectId');
 
-    if (e.get('type') == 'mouseenter') {
+    if ( e.get('type') == 'mouseenter' ) {
       couponObjectManager.clusters.setClusterOptions(objectId, clusterHoverSetup);
-      // console.log(objectId);
     } else {
       couponObjectManager.clusters.setClusterOptions(objectId, clusterSetup);
     }
@@ -124,20 +116,19 @@ ymaps.ready(function() {
   function onObjectEvent(e) {
     let objectId = e.get('objectId');
 
-    if (e.get('type') == 'mouseenter') {
+    if ( e.get('type') == 'mouseenter' ) {
       placeObjectManager.objects.setObjectOptions(objectId, {
-        'iconLayout': 'default#image',
-        'iconImageHref': '../img/map__placemark_hovered.svg',
-        'iconImageSize': [80, 80],
-        'iconImageOffset': [-40, -40]
+        'iconLayout':       'default#image',
+        'iconImageHref':    '../img/map__placemark_hovered.svg',
+        'iconImageSize':    [80, 80],
+        'iconImageOffset':  [-40, -40]
       });
-      // console.log(objectId);
     } else {
       placeObjectManager.objects.setObjectOptions(objectId, {
-        'iconLayout': 'default#image',
-        'iconImageHref': '../img/map__placemark.svg',
-        'iconImageSize': [44, 44],
-        'iconImageOffset': [-22, -22]
+        'iconLayout':       'default#image',
+        'iconImageHref':    '../img/map__placemark.svg',
+        'iconImageSize':    [44, 44],
+        'iconImageOffset':  [-22, -22]
       });
     }
   }
@@ -145,9 +136,8 @@ ymaps.ready(function() {
   function onClusterEvent(e) {
     let objectId = e.get('objectId');
 
-    if (e.get('type') == 'mouseenter') {
+    if ( e.get('type') == 'mouseenter' ) {
       placeObjectManager.clusters.setClusterOptions(objectId, clusterHoverSetup);
-      // console.log(objectId);
     } else {
       placeObjectManager.clusters.setClusterOptions(objectId, clusterSetup);
     }
@@ -160,8 +150,8 @@ ymaps.ready(function() {
   function createMenuCoupon(item) {
     const menuCoupon = $('#couponMenu');
 
-    for (let i = 0, l = item.features.length; i < l; i++) {
-      let menuItem = $('<li><a class="menu__item" href="#" data-id="' + item.features[i].id + '">' + item.features[i].properties.clusterCaption + '</a></li>');
+    item.features.forEach(item => {
+      let menuItem = $(`<li><a class="menu__item" href="#" data-id="${item.id}">${item.properties.clusterCaption}</a></li>`);
 
       menuItem.appendTo(menuCoupon);
 
@@ -169,15 +159,15 @@ ymaps.ready(function() {
         let objectId = e.target.parentNode.dataset.id;
         couponObjectManager.objects.balloon.open(objectId);
       });
-    }
+    });
   }
 
 
   function createMenuPlace(item) {
     const menuPlace = $('#placeMenu');
 
-    for (let i = 0, l = item.features.length; i < l; i++) {
-      let menuItem = $('<li><a class="menu__item" href="#" data-id="' + item.features[i].id + '">' + item.features[i].properties.clusterCaption + '</a></li>');
+    item.features.forEach(item => {
+      let menuItem = $(`<li><a class="menu__item" href="#" data-id="${item.id}">${item.properties.clusterCaption}</a></li>`);
 
       menuItem.appendTo(menuPlace);
 
@@ -185,34 +175,35 @@ ymaps.ready(function() {
         let objectId = e.target.parentNode.dataset.id;
         placeObjectManager.objects.balloon.open(objectId);
       });
-    }
+    });
   }
 
 
   // Подготовка данных для передачу в карту
   function coverCouponData(data) {
 
-    for (let i = 0; i < data.features.length; i++) {
-      let saleContent,
-        priceContent,
-        timeContent,
-        phoneContent,
-        addressContent = '';
-      let dataFeatures = data.features[i].properties.data;
+    data.features.forEach(item => {
 
-      if (dataFeatures.sale && dataFeatures.sale !== undefined) {
+      let saleContent,
+          priceContent,
+          timeContent,
+          phoneContent,
+          addressContent = '';
+      let dataFeatures = item.properties.data;
+
+      if ( dataFeatures.sale && dataFeatures.sale !== undefined ) {
         saleContent = `<span class='main-content__sale'>до <span>${dataFeatures.sale} %</span></span>`;
       } else {
         saleContent = '';
       }
 
-      if (dataFeatures.price && dataFeatures.price !== undefined) {
+      if ( dataFeatures.price && dataFeatures.price !== undefined ) {
         priceContent = `<span class='main-content__price'>от <span>${dataFeatures.price} руб.</span></span>`;
       } else {
         priceContent = '';
       }
 
-      if (dataFeatures.time && dataFeatures.time !== undefined) {
+      if ( dataFeatures.time && dataFeatures.time !== undefined ) {
         timeContent = `
           <div class='main-content__address-meta'>
             <svg class='main-content__address-meta-icon' width='14' height='14'><use xlink:href='img/sprite-svg.svg#coupon__address-clock-icon'></use></svg>
@@ -222,7 +213,7 @@ ymaps.ready(function() {
         timeContent = '';
       }
 
-      if (dataFeatures.phone && dataFeatures.phone !== undefined) {
+      if ( dataFeatures.phone && dataFeatures.phone !== undefined ) {
         phoneContent = `
           <div class='main-content__address-meta'>
             <svg class='main-content__address-meta-icon' width='14' height='14'><use xlink:href='img/sprite-svg.svg#coupon__address-phone-icon'></use></svg>
@@ -232,7 +223,7 @@ ymaps.ready(function() {
         phoneContent = '';
       }
 
-      if (dataFeatures.address && dataFeatures.address !== undefined) {
+      if ( dataFeatures.address && dataFeatures.address !== undefined ) {
         addressContent = `
           <div class='main-content__address-meta'>
             <svg class='main-content__address-meta-icon' width='13' height='18'><use xlink:href='img/sprite-svg.svg#coupon__address-map-icon'></use></svg>
@@ -242,7 +233,7 @@ ymaps.ready(function() {
         addressContent = '';
       }
 
-      data.features[i].properties.balloonContentBody = `
+      item.properties.balloonContentBody = `
         <div class='main-content__address-block'>
           <div class='main-content__address-img-wrap'>
             <img class='main-content__address-img' src='${dataFeatures.imgUrl}' alt='img' width='212' height='88' />
@@ -257,8 +248,8 @@ ymaps.ready(function() {
           ${addressContent}
         </div>`;
 
-      data.features[i].properties.clusterCaption = "<span class='main-content__address-item'>" + data.features[i].properties.clusterCaption + "</span>";
-    }
+      item.properties.clusterCaption = `<span class='main-content__address-item'>${item.properties.clusterCaption}</span>`;
+    });
 
     return data;
   }
@@ -266,13 +257,13 @@ ymaps.ready(function() {
 
   function coverPlaceData(data) {
 
-    for (let i = 0; i < data.features.length; i++) {
+    data.features.forEach(item => {
       let timeContent,
-        phoneContent,
-        addressContent = '';
-      let dataFeatures = data.features[i].properties.data;
+          phoneContent,
+          addressContent = '';
+      let dataFeatures = item.properties.data;
 
-      if (dataFeatures.time) {
+      if ( dataFeatures.time ) {
         timeContent = `
           <div class='main-content__address-meta'>
             <svg class='main-content__address-meta-icon' width='14' height='14'><use xlink:href='img/sprite-svg.svg#coupon__address-clock-icon'></use></svg>
@@ -282,7 +273,7 @@ ymaps.ready(function() {
         timeContent = '';
       }
 
-      if (dataFeatures.phone) {
+      if ( dataFeatures.phone ) {
         phoneContent = `
           <div class='main-content__address-meta'>
             <svg class='main-content__address-meta-icon' width='14' height='14'><use xlink:href='img/sprite-svg.svg#coupon__address-phone-icon'></use></svg>
@@ -292,7 +283,7 @@ ymaps.ready(function() {
         phoneContent = '';
       }
 
-      if (dataFeatures.address) {
+      if ( dataFeatures.address ) {
         addressContent = `
           <div class='main-content__address-meta'>
             <svg class='main-content__address-meta-icon' width='13' height='18'><use xlink:href='img/sprite-svg.svg#coupon__address-map-icon'></use></svg>
@@ -302,7 +293,7 @@ ymaps.ready(function() {
         addressContent = '';
       }
 
-      data.features[i].properties.balloonContentBody = `
+      item.properties.balloonContentBody = `
         <div class='main-content__address-block'>
           <div class='main-content__address-img-wrap'>
             <img class='main-content__address-img' src='${dataFeatures.imgUrl}' alt='img' width='212' height='88' />
@@ -314,8 +305,8 @@ ymaps.ready(function() {
           ${addressContent}
         </div>`;
 
-      data.features[i].properties.clusterCaption = "<span class='main-content__address-item'>" + data.features[i].properties.clusterCaption + "</span>";
-    }
+      item.properties.clusterCaption = `<span class='main-content__address-item'>${item.properties.clusterCaption}</span>`;
+    });
 
     return data;
   }
@@ -323,7 +314,7 @@ ymaps.ready(function() {
 
   // Создание и заполнение селекта купона
   function selectBlockCoupon(data) {
-    let selectBlock = $('#selectBlock')
+    let selectBlock = $('#couponSelectBlock');
     let options = '';
     let selectBlockCouponContent = '';
     let dataFeatures = data.features[0].properties.data;
@@ -331,13 +322,12 @@ ymaps.ready(function() {
         phoneContent,
         addressContent = '';
 
-    for (let i = 0; i < data.features.length; i++) {
-      options += '<option value="' + data.features[i].id + '">' + data.features[i].properties.clusterCaption + '</option>'
-    }
-
+    data.features.forEach(item => {
+      options += `<option value="${item.id}">${item.properties.clusterCaption}</option>`
+    });
 
     // time
-    if (dataFeatures.time) {
+    if ( dataFeatures.time ) {
       timeContent = `
         <div class='main-content__address-meta'>
           <svg class='main-content__address-meta-icon' width='14' height='14'><use xlink:href='img/sprite-svg.svg#coupon__address-clock-icon'></use></svg>
@@ -348,7 +338,7 @@ ymaps.ready(function() {
     }
 
     // phone
-    if (dataFeatures.phone) {
+    if ( dataFeatures.phone ) {
       phoneContent = `
         <div class='main-content__address-meta'>
           <svg class='main-content__address-meta-icon' width='14' height='14'><use xlink:href='img/sprite-svg.svg#coupon__address-phone-icon'></use></svg>
@@ -359,7 +349,7 @@ ymaps.ready(function() {
     }
 
     // address
-    if (dataFeatures.address) {
+    if ( dataFeatures.address ) {
       addressContent = `
         <div class='main-content__address-meta'>
           <svg class='main-content__address-meta-icon' width='13' height='18'><use xlink:href='img/sprite-svg.svg#coupon__address-map-icon'></use></svg>
@@ -388,8 +378,7 @@ ymaps.ready(function() {
     <a href='#' class='main-content__address-title'>${dataFeatures.category}</a>
     ${timeContent}
     ${phoneContent}
-    ${addressContent}
-    `;
+    ${addressContent}`;
 
     $(selectBlockCouponContent).appendTo(selectBlock);
 
@@ -398,62 +387,114 @@ ymaps.ready(function() {
     $(".js-coupon-select").change(function() {
       const objectId = Number($(".js-coupon-select").val())
 
-      for (let i = 0; i < data.features.length; i++) {
+      data.features.forEach(item => {
 
-        if (data.features[i].id === objectId) {
+        if ( item.id === objectId ) {
           // Заполняем блок селекта
-          $("#selectBlock .main-content__sale span").html(data.features[i].properties.data.sale);
-          $("#selectBlock .main-content__price span").html(data.features[i].properties.data.price);
-          $("#selectBlock h2.main-content__address-title").html(data.features[i].properties.data.title);
-          $("#selectBlock a.main-content__address-title").html(data.features[i].properties.data.category);
-          $("#selectBlock .js-time").html(data.features[i].properties.data.time);
-          $("#selectBlock .js-phone").html(data.features[i].properties.data.phone);
-          $("#selectBlock .js-address").html(data.features[i].properties.data.address);
+          $("#selectBlock .main-content__sale span").html(item.properties.data.sale);
+          $("#selectBlock .main-content__price span").html(item.properties.data.price);
+          $("#selectBlock h2.main-content__address-title").html(item.properties.data.title);
+          $("#selectBlock a.main-content__address-title").html(item.properties.data.category);
+          $("#selectBlock .js-time").html(item.properties.data.time);
+          $("#selectBlock .js-phone").html(item.properties.data.phone);
+          $("#selectBlock .js-address").html(item.properties.data.address);
 
           // центруем карту
-          couponMap.setCenter(data.features[i].geometry.coordinates, 12, {
+          couponMap.setCenter(item.geometry.coordinates, 12, {
             checkZoomRange: true
           });
         }
-      }
+
+      });
     });
   }
 
 
   // Создание и заполнение селекта места
   function selectBlockPlace(data) {
-    let options = '';
-    const selectBar = $('.js-place-select');
 
-    for (let i = 0; i < data.features.length; i++) {
-      options += '<option value="' + data.features[i].id + '">' + data.features[i].properties.clusterCaption + '</option>'
+    let selectBlock = $('#placeSelectBlock');
+    let options = '';
+    let selectBlockPlaceContent = '';
+    let dataFeatures = data.features[0].properties.data;
+    let timeContent,
+        phoneContent,
+        addressContent = '';
+
+    data.features.forEach(item => {
+      options += `<option value="${item.id}">${item.properties.clusterCaption}</option>`
+    });
+
+    // time
+    if ( dataFeatures.time ) {
+      timeContent = `
+        <div class='main-content__address-meta'>
+          <svg class='main-content__address-meta-icon' width='14' height='14'><use xlink:href='img/sprite-svg.svg#coupon__address-clock-icon'></use></svg>
+          <span class='main-content__address-meta-desc'>${dataFeatures.time}</span>
+        </div>`;
+    } else {
+      timeContent = '';
     }
 
-    $(options).appendTo(selectBar);
+    // phone
+    if ( dataFeatures.phone ) {
+      phoneContent = `
+        <div class='main-content__address-meta'>
+          <svg class='main-content__address-meta-icon' width='14' height='14'><use xlink:href='img/sprite-svg.svg#coupon__address-phone-icon'></use></svg>
+          <span class='main-content__address-meta-desc'>${dataFeatures.phone}</span>
+        </div>`;
+    } else {
+      phoneContent = '';
+    }
 
-    $("#selectBlock .main-content__address-item span").html(data.features.length);
-    $("#selectBlock h2.main-content__address-title").html(data.features[0].properties.data.title);
-    $("#selectBlock .js-time").html(data.features[0].properties.data.time);
-    $("#selectBlock .js-phone").html(data.features[0].properties.data.phone);
-    $("#selectBlock .js-address").html(data.features[0].properties.data.address);
+    // address
+    if ( dataFeatures.address ) {
+      addressContent = `
+        <div class='main-content__address-meta'>
+          <svg class='main-content__address-meta-icon' width='13' height='18'><use xlink:href='img/sprite-svg.svg#coupon__address-map-icon'></use></svg>
+          <span class='main-content__address-meta-desc'>${dataFeatures.address}</span>
+        </div>`;
+    } else {
+      addressContent = '';
+    }
 
-    selectBar.change(function() {
-      const objectId = Number(selectBar.val())
+    selectBlockPlaceContent = `<span class='main-content__address-item'>Купоны <span>${data.features.length}</span></span>
 
-      for (let i = 0; i < data.features.length; i++) {
+    <div class='main-content__input-group'>
+      <label class='main-content__label' for='point'></label>
+      <select class='main-content__select custom-select js-place-select' id='point' name='point'>
+        ${options}
+      </select>
+    </div>
 
-        if (data.features[i].id === objectId) {
-          $("#selectBlock h2.main-content__address-title").html(data.features[i].properties.data.title);
-          $("#selectBlock .js-time").html(data.features[i].properties.data.time);
-          $("#selectBlock .js-phone").html(data.features[i].properties.data.phone);
-          $("#selectBlock .js-address").html(data.features[i].properties.data.address);
+    <h2 class='main-content__address-title'>${dataFeatures.title}</h2>
+
+    <a class='btn main-content__address-btn' href='#'>Подробнее о месте</a>
+    ${timeContent}
+    ${phoneContent}
+    ${addressContent}`;
+
+    $(selectBlockPlaceContent).appendTo(selectBlock);
+
+    // Заполняем блок по изменению селекта
+    $('.js-place-select').change(function() {
+      const objectId = Number($('.js-place-select').val())
+
+      data.features.forEach(item => {
+
+        if ( item.id === objectId ) {
+          $("#selectBlock h2.main-content__address-title").html(item.properties.data.title);
+          $("#selectBlock .js-time").html(item.properties.data.time);
+          $("#selectBlock .js-phone").html(item.properties.data.phone);
+          $("#selectBlock .js-address").html(item.properties.data.address);
 
           // центруем карту
-          placeMap.setCenter(data.features[i].geometry.coordinates, 12, {
+          placeMap.setCenter(item.geometry.coordinates, 12, {
             checkZoomRange: true
           });
         }
-      }
+
+      });
     });
   }
 
@@ -474,7 +515,8 @@ ymaps.ready(function() {
   // вывод точек для placeMap на карту из json
   $.ajax({
     // url: "https://api.myjson.com/bins/bkk60"
-    url: "js/place.json"
+    url: "https://api.myjson.com/bins/1gy4xo"
+    // url: "js/place.json"
   }).done(function(data) {
     const placeGroups = coverPlaceData(data);
 
@@ -485,7 +527,7 @@ ymaps.ready(function() {
   placeMap.geoObjects.add(placeObjectManager);
 
   const doc_w = $(window).width();
-  if (doc_w <= 576) {
+  if ( doc_w <= 576 ) {
     placeObjectManager.options.set('geoObjectOpenBalloonOnClick', false);
     couponObjectManager.options.set('geoObjectOpenBalloonOnClick', false);
   } else {
@@ -495,7 +537,7 @@ ymaps.ready(function() {
 
   // запрет на открытие балунов
   $(window).bind('resize', function() {
-    if (doc_w <= 576) {
+    if ( doc_w <= 576 ) {
       placeObjectManager.options.set('geoObjectOpenBalloonOnClick', false);
       couponObjectManager.options.set('geoObjectOpenBalloonOnClick', false);
     } else {

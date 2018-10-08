@@ -238,18 +238,20 @@
         display: block;
         padding: 20px;
         column-count: 2;
+        column-gap: 20px;
       }
-      @media (min-width: $screen-md) {
+      @media (min-width: $screen-lg) {
         column-count: 3;
-        column-gap: 3px;
       }
 
       li {
+
         @media (min-width: $screen-sm) {
-          width: 50%;
+          display: block;
+          // column-width: 50%;
         }
         @media (min-width: $screen-md) {
-          width: 33%;
+          // column-width: 33%;
         }
       }
       
@@ -382,7 +384,9 @@
   }
 }
 
-#selectBlock {
+#selectBlock,
+#couponSelectBlock,
+#placeSelectBlock {
   display: block;
 
   @media (min-width: $screen-sm) {
